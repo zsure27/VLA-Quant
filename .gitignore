@@ -1,0 +1,28 @@
+# Python 与本地环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# 模型、数据和量化产物：使用对象存储、Release 或 Git LFS 管理
+models/
+calib/
+profiles/
+logs/
+eval/
+artifacts/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.npz
+
+# 本地工具与临时文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak

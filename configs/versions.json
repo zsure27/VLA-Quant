@@ -1,0 +1,29 @@
+{
+  "packaged_at": "2026-09-04",
+  "qvla": {
+    "repository": "https://github.com/AutoLab-SAI-SJTU/QVLA.git",
+    "commit": "26cc4821a3be4c003d09d3c7997b38db2a347982",
+    "historical_match": true
+  },
+  "libero": {
+    "repository": "https://github.com/Lifelong-Robot-Learning/LIBERO.git",
+    "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "historical_match": false,
+    "note": "历史日志未保存原实验 commit；此值仅是封装日 master 提交"
+  },
+  "llm_awq": {
+    "repository": "https://github.com/mit-han-lab/llm-awq.git",
+    "commit": "d6e797a42b9ef7778de8ee2352116e0f48a78d61",
+    "source_files_verified": true
+  },
+  "smoothquant": {
+    "repository": "https://github.com/mit-han-lab/smoothquant.git",
+    "commit": "c61476d728e42ae0d8a35e7e78494edcac3237b5",
+    "source_files_verified": true
+  },
+  "model": {
+    "repository": "moojink/openvla-7b-oft-finetuned-libero-spatial",
+    "revision": null,
+    "note": "历史日志未记录不可变 Hugging Face revision；新下载后必须补录"
+  }
+}

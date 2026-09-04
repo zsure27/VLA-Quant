@@ -1,0 +1,39 @@
+{
+  "generated_from": "Codex 历史日志与本地工作区",
+  "generated_at": "2026-09-04",
+  "server_online": false,
+  "objects": [
+    {
+      "kind": "model",
+      "historical_path": "models/openvla-7b-oft-finetuned-libero-spatial",
+      "available_in_backup": false,
+      "sha256": null,
+      "recoverable": true
+    },
+    {
+      "kind": "calibration_samples",
+      "historical_path": "calib/action-space-balanced/libero-512",
+      "count_expected": 512,
+      "available_in_backup": false,
+      "sha256_manifest": null,
+      "recoverable": true
+    },
+    {
+      "kind": "quant_profiles",
+      "historical_path": "qvla/spatial/official-w4-vl",
+      "methods": ["awq", "smoothquant"],
+      "shards_per_method": 9,
+      "available_in_backup": false,
+      "sha256_manifest": null,
+      "recoverable": true
+    },
+    {
+      "kind": "raw_logs",
+      "historical_path": "logs/official-quant-validation",
+      "available_in_backup": false,
+      "sha256_manifest": null,
+      "recoverable": false,
+      "note": "原始日志不可从汇总结果无损重建"
+    }
+  ]
+}

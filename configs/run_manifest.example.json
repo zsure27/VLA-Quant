@@ -1,0 +1,22 @@
+{
+  "run_id": "METHOD-SUITE-SEED-YYYYMMDD-HHMMSS",
+  "implementation": "填写具体实现，不要只写 AWQ 或 SQ",
+  "fake_or_packed": "fake",
+  "checkpoint_path": "绝对路径",
+  "model_revision": "Hugging Face commit SHA",
+  "qvla_commit": "26cc4821a3be4c003d09d3c7997b38db2a347982",
+  "libero_commit": "重新安装后填写",
+  "adapter_commit": "本仓库 commit SHA",
+  "calibration_manifest_sha256": "填写",
+  "profile_sha256": [],
+  "task_suite": "libero_spatial",
+  "trials_per_task": 2,
+  "seed": 7,
+  "center_crop": true,
+  "attention_backend": "运行时填写",
+  "weight_bits": 4,
+  "activation_bits": 4,
+  "quantized_targets": 422,
+  "gpu": "运行时填写",
+  "notes": ""
+}
