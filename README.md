@@ -1,5 +1,14 @@
 # VLA 快速量化与微调实验备份
 
+## 2026-09-08 更新：先验证基线，再做可视化
+
+当前为审计后的候选基线，尚未完成新 GPU 验证。请先看：
+
+- [本轮基线审计、种子修复、AutoDL 运行入口](docs/BASELINE_AUDIT_20260908_CN.md)
+- [可视化矩阵、attention/模态/projector 修复决策](docs/VISUAL_DIAGNOSIS_PLAN_CN.md)
+
+正式入口改为 `scripts/run_audit.sh`（controls → sq / awq），profile 升级 v3，旧 v2 不可直接复用。LLM 使用官方 AWQ block 搜索并支持 W2，视觉仍明确标记为自定义适配。固定 OFT Transformers fork + SDPA；不能为了画 attention 直接切 eager。以下原有成绩与说明是历史记录，不是本轮修复后的实验结果；旧运行命令以新文档为准。
+
 本仓库是独立的 VLA 快速量化与微调实验工程，依据截至 2026-09-04 的本地代码和 Codex 历史实验日志整理。目标是在更换 AutoDL 算力后，从 GitHub 重新获得实验代码、固定依赖、重建校准数据并继续 AWQ W2A16 与 SmoothQuant W4A4 研究。Triton 不属于本仓库的仿真验证依赖；只有量化方案完整验证通过并进入真机部署时，才从独立 Triton 算子仓库接入 packed 低比特内核。
 
 ## 重要边界

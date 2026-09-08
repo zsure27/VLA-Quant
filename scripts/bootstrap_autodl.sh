@@ -10,6 +10,7 @@ QVLA_COMMIT=26cc4821a3be4c003d09d3c7997b38db2a347982
 LIBERO_COMMIT=8f1084e3132a39270c3a13ebe37270a43ece2a01
 AWQ_COMMIT=d6e797a42b9ef7778de8ee2352116e0f48a78d61
 SQ_COMMIT=c61476d728e42ae0d8a35e7e78494edcac3237b5
+TRANSFORMERS_COMMIT=bc339d9ad707454c0c115970db43c260067c61ab
 
 mkdir -p "$ROOT"/{src,models,data,calib,qvla,logs,artifacts,eval}
 
@@ -18,6 +19,10 @@ clone_at() {
   if [[ ! -d "$destination/.git" ]]; then
     git clone "$url" "$destination"
   fi
+  test -z "$(git -C "$destination" status --short)" || {
+    echo "源码有未提交修改，请使用新的 ROOT；不会清理或覆盖：$destination" >&2
+    exit 1
+  }
   git -C "$destination" fetch --tags origin
   git -C "$destination" checkout --detach "$commit"
   test -z "$(git -C "$destination" status --short)" || {
@@ -30,6 +35,7 @@ clone_at https://github.com/AutoLab-SAI-SJTU/QVLA.git "$ROOT/src/QVLA" "$QVLA_CO
 clone_at https://github.com/Lifelong-Robot-Learning/LIBERO.git "$ROOT/src/LIBERO" "$LIBERO_COMMIT"
 clone_at https://github.com/mit-han-lab/llm-awq.git "$ROOT/src/official-quantization/llm-awq" "$AWQ_COMMIT"
 clone_at https://github.com/mit-han-lab/smoothquant.git "$ROOT/src/official-quantization/smoothquant" "$SQ_COMMIT"
+clone_at https://github.com/moojink/transformers-openvla-oft.git "$ROOT/src/transformers-openvla-oft" "$TRANSFORMERS_COMMIT"
 
 if [[ "$INSTALL_ENV" == 1 ]]; then
   # 环境创建较耗时，默认关闭。需要 conda 已可用。
@@ -43,8 +49,10 @@ if [[ "$INSTALL_ENV" == 1 ]]; then
   python -m pip install -e "$ROOT/src/QVLA/openvla-oft"
   python -m pip install -e "$ROOT/src/LIBERO"
   python -m pip install -r "$ROOT/src/QVLA/openvla-oft/experiments/robot/libero/libero_requirements.txt"
+  # 最后安装固定 fork，不能仅凭版本号 4.40.1 判断双向 attention 正确。
+  python -m pip install --no-deps "$ROOT/src/transformers-openvla-oft"
   # FlashAttention 对 CUDA/编译器敏感，失败时保留日志，不静默换版本。
-  python -m pip install flash-attn==2.5.5 --no-build-isolation
+  # 本轮使用 SDPA，不需要额外安装 FlashAttention。切换后端是单独实验。
 fi
 
 bash "$HERE/scripts/install_adapter.sh"

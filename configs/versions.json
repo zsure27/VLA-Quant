@@ -1,5 +1,13 @@
 {
-  "packaged_at": "2026-09-04",
+  "packaged_at": "2026-09-08",
+  "transformers_oft": {
+    "repository": "https://github.com/moojink/transformers-openvla-oft.git",
+    "commit": "bc339d9ad707454c0c115970db43c260067c61ab",
+    "modeling_llama_lf_sha256": "3aac24cec583a6ef5f60b6ec634a8bd3c8377784c5c63c8cc14cb6790554c52e",
+    "backend": "sdpa",
+    "historical_match": false,
+    "note": "本轮固定的 OFT 双向 SDPA 实现；不能声称已证明历史服务器使用此提交。eager fallback 仍为因果语义。"
+  },
   "qvla": {
     "repository": "https://github.com/AutoLab-SAI-SJTU/QVLA.git",
     "commit": "26cc4821a3be4c003d09d3c7997b38db2a347982",

@@ -1,5 +1,6 @@
 """只绘制探针实测结果，不生成合成数据，也不输出拟合结论。"""
 import argparse
+import csv
 import json
 import re
 from pathlib import Path
@@ -44,6 +45,39 @@ def main():
         fig.savefig(out / (name + "-llm-depth.png"), dpi=150)
         plt.close(fig)
 
+        attention_layers = sorted({int(k) for row in data for k in row.get("attention", {})})
+        if attention_layers:
+            fig, axes = plt.subplots(1, 2, figsize=(11, 4), constrained_layout=True)
+            js = [np.mean([row["attention"][str(i)]["js_mean"] for row in data]) for i in attention_layers]
+            axes[0].plot(attention_layers, js, marker="o")
+            axes[0].set(xlabel="LLM block", ylabel="Attention JS (nats)", title="Actual SDPA context, sampled action queries")
+            groups = ["image_main", "image_wrist", "text", "proprio", "action_readout"]
+            delta = [[np.mean([row["attention"][str(i)]["modality_mass"][g]["candidate"] -
+                              row["attention"][str(i)]["modality_mass"][g]["teacher"] for row in data])
+                      for g in groups] for i in attention_layers]
+            im = axes[1].imshow(delta, cmap="coolwarm", vmin=-1, vmax=1, aspect="auto")
+            axes[1].set_xticks(range(len(groups)), groups, rotation=40, ha="right")
+            axes[1].set_yticks(range(len(attention_layers)), attention_layers)
+            axes[1].set(title="Candidate - teacher attention mass", ylabel="LLM block")
+            fig.colorbar(im, ax=axes[1])
+            fig.savefig(out / (name + "-attention.png"), dpi=150)
+            plt.close(fig)
+
+        activation = {}
+        for row in data:
+            for target, values in row.get("activation_local_error", {}).items():
+                activation.setdefault(target, []).append(values)
+        if activation:
+            ranked = sorted(activation, key=lambda k: np.mean([
+                v["nonzero_to_zero_fraction"] for v in activation[k]]), reverse=True)[:20]
+            fig, ax = plt.subplots(figsize=(12, 7), constrained_layout=True)
+            ax.barh(range(len(ranked)), [np.mean([v["nonzero_to_zero_fraction"] for v in activation[k]]) for k in ranked])
+            ax.set_yticks(range(len(ranked)), [k.replace("language_model.model.", "LLM.").replace("vision_backbone.", "V.") for k in ranked], fontsize=7)
+            ax.invert_yaxis()
+            ax.set(xlabel="Nonzero input -> zero fraction (token sampled)", title=name + " | local activation collapse, not causal sensitivity")
+            fig.savefig(out / (name + "-activation-zeroing.png"), dpi=150)
+            plt.close(fig)
+
         fig, axes = plt.subplots(2, 2, figsize=(11, 7), constrained_layout=True)
         for ax, (branch, call) in zip(axes.flat, (("featurizer", 0), ("featurizer", 1), ("fused_featurizer", 0), ("fused_featurizer", 1))):
             pairs = []
@@ -76,6 +110,12 @@ def main():
     fig.colorbar(im, ax=ax, label="RMSE in normalized action units")
     fig.savefig(out / "action-coordinate-rmse.png", dpi=150)
     plt.close(fig)
+    with (out / "summary.csv").open("w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.writer(f)
+        writer.writerow(["用例", "样本数", "归一化动作MSE均值", "夹爪分歧率", "仅离线一致性非成功率"])
+        for name, data in cases.items():
+            writer.writerow([name, len(data), np.mean([d["normalized_action"]["mse"] for d in data]),
+                             np.mean([d["raw_gripper_disagreement"] for d in data]), True])
     print(out)
 
 

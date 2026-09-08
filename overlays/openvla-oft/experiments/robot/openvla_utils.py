@@ -275,13 +275,13 @@ def get_vla(cfg: Any) -> torch.nn.Module:
         AutoModelForVision2Seq.register(OpenVLAConfig, OpenVLAForActionPrediction)
 
         # Update config.json and sync model files
-        update_auto_map(cfg.pretrained_checkpoint)
-        check_model_logic_mismatch(cfg.pretrained_checkpoint)
+        # 不改写检查点；本地模型使用已注册的维护类。
 
     # Load the model
-    vla = AutoModelForVision2Seq.from_pretrained(
+    model_class = AutoModelForVision2Seq if model_is_on_hf_hub(cfg.pretrained_checkpoint) else OpenVLAForActionPrediction
+    vla = model_class.from_pretrained(
         cfg.pretrained_checkpoint,
-        # attn_implementation="flash_attention_2",
+        attn_implementation=getattr(cfg, "attn_implementation", "sdpa"),
         torch_dtype=torch.bfloat16,
         load_in_8bit=cfg.load_in_8bit,
         load_in_4bit=cfg.load_in_4bit,

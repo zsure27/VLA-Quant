@@ -48,6 +48,8 @@ from experiments.robot.robot_utils import (
     set_seed_everywhere,
 )
 from prismatic.vla.constants import NUM_ACTIONS_CHUNK
+from qvla.reproducibility import seed_all, episode_seeds
+from qvla.baseline_contract import file_hash
 
 
 # Define task suite constants
@@ -126,6 +128,10 @@ class GenerateConfig:
     wandb_project: str = "your-wandb-project"        # Name of WandB project
 
     seed: int = 7                                    # Random Seed (for reproducibility)
+    env_seed: int = 0                                # 上游环境协议默认值；不与模型种子混淆
+    attn_implementation: str = "sdpa"                # OFT 固定分支的双向注意力路径
+    seed_protocol: str = "upstream"                 # upstream 或 paired；不同协议不可混报
+    strict_determinism: bool = False                 # 不支持确定性算子时显式失败
 
     # fmt: on
 
@@ -141,6 +147,12 @@ def validate_config(cfg: GenerateConfig) -> None:
 
     # Validate task suite
     assert cfg.task_suite_name in [suite.value for suite in TaskSuite], f"Invalid task suite: {cfg.task_suite_name}"
+    if cfg.seed_protocol not in ("upstream", "paired"):
+        raise ValueError("seed_protocol 必须为 upstream 或 paired")
+    if cfg.num_trials_per_task < 1:
+        raise ValueError("num_trials_per_task 必须为正数")
+    if cfg.seed_protocol == "upstream" and cfg.env_seed != 0:
+        raise ValueError("upstream 协议固定 env_seed=0；环境种子消融请使用 paired")
 
 
 def initialize_model(cfg: GenerateConfig):
@@ -382,6 +394,9 @@ def run_task(
 
     # Initialize environment and get task description
     env, task_description = get_libero_env(task, cfg.model_family, resolution=cfg.env_img_res)
+    if cfg.initial_states_path == "DEFAULT" and cfg.num_trials_per_task > len(initial_states):
+        env.close()
+        raise ValueError("请求回合数超过官方初始状态数量；禁止取模重复统计")
 
     # Start episodes
     task_episodes, task_successes = 0, 0
@@ -406,6 +421,21 @@ def run_task(
             initial_state = np.array(all_initial_states[initial_states_task_key][episode_key]["initial_state"])
 
         log_message(f"Starting episode {task_episodes + 1}...", log_file)
+        model_seed, environment_seed = cfg.seed, 0
+        if cfg.seed_protocol == "paired":
+            model_seed, environment_seed = episode_seeds(
+                cfg.seed, cfg.env_seed, cfg.task_suite_name, task_id, episode_idx)
+            # env.seed 可能修改全局 NumPy；先设置环境，再恢复独立模型随机流。
+            env.seed(environment_seed)
+            seed_all(model_seed, strict=cfg.strict_determinism, tensorflow=True)
+        import hashlib
+        state_array = np.asarray(initial_state)
+        log_message("EPISODE_MANIFEST " + json.dumps({
+            "protocol": cfg.seed_protocol, "model_seed": model_seed,
+            "env_seed": environment_seed, "task_id": task_id, "init_state_index": episode_idx,
+            "init_state_sha256": hashlib.sha256(state_array.tobytes()).hexdigest(),
+            "init_state_dtype": str(state_array.dtype), "init_state_shape": list(state_array.shape),
+        }, sort_keys=True), log_file)
 
         # Run episode
         success, replay_images = run_episode(
@@ -455,6 +485,7 @@ def run_task(
             }
         )
 
+    env.close()
     return total_episodes, total_successes
 
 
@@ -466,6 +497,9 @@ def eval_libero(cfg: GenerateConfig) -> float:
 
     # Set random seed
     set_seed_everywhere(cfg.seed)
+    # 上游协议保留历史随机流；paired 模式才补齐 TensorFlow / 严格数值开关。
+    if cfg.seed_protocol == "paired":
+        seed_all(cfg.seed, strict=cfg.strict_determinism, tensorflow=True)
 
     # Initialize model and components
     model, action_head, proprio_projector, noisy_action_projector, processor = initialize_model(cfg)
@@ -475,6 +509,11 @@ def eval_libero(cfg: GenerateConfig) -> float:
 
     # Setup logging
     log_file, local_log_filepath, run_id = setup_logging(cfg)
+    log_message("SEED_PROTOCOL " + json.dumps({
+        "protocol": cfg.seed_protocol, "model_seed": cfg.seed, "env_seed": cfg.env_seed,
+        "strict": cfg.strict_determinism, "pythonhashseed_at_launch": os.environ.get("PYTHONHASHSEED"),
+        "runner_sha256": file_hash(__file__),
+    }, sort_keys=True), log_file)
 
     # Initialize LIBERO task suite
     benchmark_dict = benchmark.get_benchmark_dict()

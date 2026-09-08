@@ -12,7 +12,7 @@ import torch
 import torch.nn.functional as F
 
 
-PROFILE_FORMAT = 2
+PROFILE_FORMAT = 3
 AWQ_GROUP_SIZE = 128
 
 
@@ -29,6 +29,17 @@ def _source_parent(root: Path, package: str, repository: str) -> Path:
 def load_official_functions(official_root: Path) -> dict[str, Any]:
     awq_parent = _source_parent(official_root, "awq", "llm-awq")
     smooth_parent = _source_parent(official_root, "smoothquant", "smoothquant")
+    # 内容与固定官方提交逐文件对应；忽略 Windows 换行，不允许修改公式后仍冒称官方。
+    expected_sources = {
+        awq_parent / "awq/quantize/quantizer.py": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+        awq_parent / "awq/quantize/auto_scale.py": "b6cf9bc5c7de67a03f56366046d473c1f6633ee6df3f59748b4559d47df858e8",
+        awq_parent / "awq/quantize/auto_clip.py": "fca53998885661c4930c7a373f52d9dc25e58fb15ad74c87678673ed5209157d",
+        smooth_parent / "smoothquant/smooth.py": "74daf140e0efd00082ec536200aa1d18d7b1ca516b6aa70a3cb96439f4d4e88b",
+        smooth_parent / "smoothquant/fake_quant.py": "d0979f66c1bc38f4146db8365a162c5b356401f864636076395a978a9d569787",
+    }
+    for path, expected in expected_sources.items():
+        if hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest() != expected:
+            raise RuntimeError(f"官方核心文件与固定提交不符：{path}")
     for path in (smooth_parent, awq_parent):
         value = str(path)
         if value not in sys.path:
@@ -38,7 +49,7 @@ def load_official_functions(official_root: Path) -> dict[str, Any]:
     sys.modules.setdefault("awq_inference_engine", types.ModuleType("awq_inference_engine"))
 
     from awq.quantize.auto_clip import auto_clip_layer
-    from awq.quantize.auto_scale import get_act_scale
+    from awq.quantize.auto_scale import get_act_scale, auto_scale_block, scale_ln_fcs, scale_fc_fc
     from awq.quantize.quantizer import pseudo_quantize_tensor
     from smoothquant.fake_quant import (
         quantize_activation_per_token_absmax,
@@ -51,6 +62,9 @@ def load_official_functions(official_root: Path) -> dict[str, Any]:
         "smoothquant_parent": smooth_parent,
         "awq_quantize": pseudo_quantize_tensor,
         "awq_act_scale": get_act_scale,
+        "awq_auto_scale_block": auto_scale_block,
+        "awq_scale_ln_fcs": scale_ln_fcs,
+        "awq_scale_fc_fc": scale_fc_fc,
         "awq_auto_clip": auto_clip_layer,
         "smooth_weight_quantize": quantize_weight_per_channel_absmax,
         "smooth_activation_quantize": quantize_activation_per_token_absmax,
@@ -155,6 +169,8 @@ def input_absmax(module: torch.nn.Module, value: torch.Tensor) -> torch.Tensor:
 
 
 def pad_columns(value: torch.Tensor, multiple: int = AWQ_GROUP_SIZE) -> tuple[torch.Tensor, int]:
+    if multiple < 1:
+        raise ValueError("group_size 必须为正整数")
     columns = value.shape[-1]
     padded = math.ceil(columns / multiple) * multiple
     if padded == columns:
@@ -168,6 +184,8 @@ def awq_fake_quantize(
     bits: int = 4,
     group_size: int = AWQ_GROUP_SIZE,
 ) -> torch.Tensor:
+    if bits not in (2, 4, 8):
+        raise ValueError("AWQ 仅支持本项目审计的 W2/W4/W8")
     padded, columns = pad_columns(weight, group_size)
     quantized = official["awq_quantize"](
         padded,
@@ -284,6 +302,7 @@ def calibrate_awq_entry(
     )
 
     return {
+        "recipe": "vision_linear_adapter_v1" if name.startswith("vision_backbone.") else "linear_diagnostic_NOT_official_block",
         "module_type": type(module).__name__,
         "shape": list(module.weight.shape),
         "input_scale": scale.cpu().float(),
@@ -307,6 +326,8 @@ def apply_awq_entry(
     scale = entry["input_scale"].to(weight.device, torch.float32)
     if scale.numel() != weight.shape[1]:
         raise RuntimeError(f"AWQ scale mismatch: {scale.numel()} != {weight.shape[1]}")
+    if not torch.isfinite(scale).all() or (scale <= 0).any():
+        raise ValueError("AWQ input_scale 必须为有限正值")
     scaled = weight * scale.view(1, -1)
     padded, columns = pad_columns(scaled, group_size)
     clip_max = entry.get("clip_max")
@@ -366,6 +387,10 @@ def apply_smoothquant_smoothing(
         norm = modules[norm_name]
         targets = [modules[name] for name in target_names]
         act_scale = entries[scale_name]["activation_absmax"].float()
+        if act_scale.ndim != 1 or act_scale.numel() != targets[0].in_features:
+            raise ValueError(f"SQ activation_absmax 维度不符：{scale_name}")
+        if not torch.isfinite(act_scale).all() or (act_scale < 0).any():
+            raise ValueError(f"SQ activation_absmax 必须有限非负：{scale_name}")
         if norm.__class__.__name__.endswith("RMSNorm"):
             official["smooth_ln_fcs_llama_like"](norm, targets, act_scale, alpha)
         else:
@@ -390,6 +415,8 @@ def make_smoothquant_activation_hook(
         if not args:
             raise RuntimeError("Quantized module received no positional input")
         value = args[0]
+        if torch.is_grad_enabled() and value.requires_grad:
+            raise RuntimeError("PTQ 量化钩子不支持训练反传；必须另外实现并验证 STE，不能静默截断 projector 梯度")
         if isinstance(module, torch.nn.Linear):
             quantized = quantize(value.detach().clone(), n_bits=bits)
         elif isinstance(module, torch.nn.Conv2d):

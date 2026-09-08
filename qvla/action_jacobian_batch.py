@@ -167,6 +167,10 @@ def load_sample(path: Path) -> dict[str, Any]:
 
 
 def initialize(checkpoint: str, seed: int):
+    from qvla.runtime_contract import assert_oft_runtime
+    assert_oft_runtime()
+    from qvla.reproducibility import seed_all
+    seed_all(seed, tensorflow=True)
     cfg = GenerateConfig(
         pretrained_checkpoint=checkpoint,
         task_suite_name="libero_spatial",
@@ -179,6 +183,7 @@ def initialize(checkpoint: str, seed: int):
         seed=seed,
     )
     model, action_head, proprio_projector, _, processor = initialize_model(cfg)
+    model.language_model.config.use_cache = False
     for module in (model, action_head, proprio_projector):
         module.requires_grad_(False)
         module.eval()

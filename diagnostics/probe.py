@@ -85,13 +85,17 @@ def official_functions(root):
 
 def profiles(directory, target_file, checkpoint, sources):
     from qvla.official_quant_adapter import read_targets
+    from qvla.run_eval_official_quant import load_profiles
+    # 统一正式入口的格式、源码和范围验证，不能让诊断绕过基线合同。
+    load_profiles(sorted(directory.glob("*.pt")), "smoothquant")
     entries, first, manifest = {}, None, []
     common = ("format_version", "method", "bits", "checkpoint", "num_samples",
-              "sample_names", "group_size", "smooth_alpha", "official_sources")
+              "sample_names", "group_size", "smooth_alpha", "official_sources",
+              "checkpoint_identity", "sample_sha256", "seed", "algorithm", "llm_attention")
     for path in sorted(directory.glob("*.pt")):
         item = load_trusted(path)
-        if item.get("format_version") != 2 or item.get("method") != "smoothquant":
-            raise ValueError(f"Not a v2 SmoothQuant profile: {path}")
+        if item.get("format_version") != 3 or item.get("method") != "smoothquant":
+            raise ValueError(f"Not a v3 SmoothQuant profile; recalibrate: {path}")
         if first is None:
             first = item
         for key in common:
@@ -108,8 +112,9 @@ def profiles(directory, target_file, checkpoint, sources):
         manifest.append({"file": str(path), "sha256": digest(path)})
     if first is None:
         raise ValueError(f"No profiles in {directory}")
-    if Path(first["checkpoint"]).resolve() != Path(checkpoint).resolve():
-        raise ValueError("Profile checkpoint path differs; verify provenance, do not silently reuse it")
+    from qvla.baseline_contract import checkpoint_identity
+    if first["checkpoint_identity"] != checkpoint_identity(checkpoint):
+        raise ValueError("Profile checkpoint contents differ")
     if set(entries) != set(read_targets(target_file)):
         raise ValueError("Profile target names differ from the complete target file")
     for saved, loaded in (("smoothquant_smooth", "smooth_ln_fcs"),
@@ -334,13 +339,15 @@ def main():
     p.add_argument("--official-root", required=True, type=Path)
     p.add_argument("--targets-file", required=True, type=Path)
     p.add_argument("--output", required=True, type=Path)
-    p.add_argument("--mode", choices=("teacher", "smoothquant", "awq-micro"), required=True)
+    p.add_argument("--mode", choices=("teacher", "repeat", "smoothquant", "awq", "awq-micro"), required=True)
+    p.add_argument("--awq-profile", type=Path)
+    p.add_argument("--attention-layers", default="", help="例如 7,15,23,31；不切换 attention 后端")
     p.add_argument("--teacher-dir", type=Path)
     p.add_argument("--profile-dir", type=Path)
     p.add_argument("--offset", type=int, default=64)
     p.add_argument("--num-samples", type=int, default=8)
     p.add_argument("--seed", type=int, default=7)
-    p.add_argument("--weight-bits", type=int, choices=(4, 8, 16), default=4)
+    p.add_argument("--weight-bits", type=int, choices=(2, 4, 8, 16), default=4)
     p.add_argument("--activation-bits", type=int, choices=(4, 8, 16), default=4)
     scopes = ("all", "none", "vision", "language", "primary", "fused", "attention", "mlp",
               "patch", "no-patch", "smoothed", "unsmoothed")
@@ -359,6 +366,9 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
+    attention_layers = sorted(set(int(x) for x in args.attention_layers.split(",") if x))
+    if any(i < 0 or i >= 32 for i in attention_layers):
+        raise ValueError("attention 层号必须为 0..31")
     if args.alpha is not None and not 0 <= args.alpha <= 1:
         raise ValueError("alpha must be between 0 and 1")
     if args.output.exists():
@@ -375,12 +385,27 @@ def main():
     official, sources = official_functions(args.official_root)
     entries, meta, profile_manifest = {}, {}, []
     if args.mode == "smoothquant":
+        if args.weight_bits == 2:
+            raise ValueError("SQ W2 不在本轮基线范围")
         if args.profile_dir is None or args.teacher_dir is None:
             raise ValueError("SmoothQuant requires --profile-dir and --teacher-dir")
         entries, meta, profile_manifest = profiles(args.profile_dir, args.targets_file, args.checkpoint, sources)
         overlap = set(meta["sample_names"]) & {s.name for s in args.samples}
         if overlap:
             raise ValueError(f"Probe/calibration sample overlap: {overlap}")
+    if args.mode == "awq":
+        if args.awq_profile is None or args.teacher_dir is None:
+            raise ValueError("AWQ 需要 --awq-profile 与 --teacher-dir")
+        from qvla.run_eval_official_quant import load_profiles
+        from qvla.baseline_contract import checkpoint_identity
+        entries, meta = load_profiles([args.awq_profile], "awq")
+        if meta["checkpoint_identity"] != checkpoint_identity(args.checkpoint):
+            raise ValueError("AWQ checkpoint 指纹不符")
+        if set(meta["sample_names"]) & {s.name for s in args.samples}:
+            raise ValueError("AWQ 校准与探针帧重叠")
+        if args.weight_scope not in ("all", "vision", "language") or args.activation_scope != "all":
+            raise ValueError("AWQ 首轮只支持 all/vision/language；细粒度恢复另做受控实验")
+        profile_manifest = [{"file": str(args.awq_profile), "sha256": digest(args.awq_profile)}]
     bundle = initialize_readonly(args.checkpoint, args.seed)
     cfg, model, head, proprio, processor = bundle
     import transformers
@@ -388,6 +413,11 @@ def main():
     import qvla.official_quant_adapter as adapter_module
     import qvla.action_jacobian_batch as helper_module
     model_source = Path(inspect.getsourcefile(type(model)))
+    from qvla.baseline_contract import checkpoint_identity
+    full_identity = meta.get("checkpoint_identity") or checkpoint_identity(args.checkpoint)
+    if meta and (meta["model_source_sha256"] != digest(model_source) or
+                 meta["llm_attention"] != model.language_model.config._attn_implementation):
+        raise ValueError("校准/探针模型源码或 attention 后端不同")
     checkpoint_meta = {str(f.relative_to(args.checkpoint)): digest(f) for f in Path(args.checkpoint).glob("*.json")}
     manifest = {
         "torch": torch.__version__, "transformers": transformers.__version__, "timm": timm.__version__,
@@ -397,10 +427,13 @@ def main():
         "llm_attention": getattr(model.language_model.config, "_attn_implementation", None),
         "vision_fused_attention": {n: bool(m.fused_attn) for n, m in model.named_modules() if hasattr(m, "fused_attn")},
         "checkpoint_json_sha256": checkpoint_meta, "checkpoint": str(Path(args.checkpoint).resolve()),
+        "checkpoint_identity": full_identity,
+        "attention_layers": attention_layers,
+        "seed": args.seed,
         "sources": sources, "profiles": profile_manifest,
         "samples": {s.name: digest(s) for s in args.samples},
         "arguments": {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items() if k != "samples"},
-        "limits": "未计算检查点全部权重字节的哈希；文件名相同不能证明权重内容未变化。",
+        "limits": "已校验完整权重内容；离线特征一致性不能替代闭环成功率。",
     }
     save_json(args.output / "manifest.json", manifest)
     if args.mode == "awq-micro":
@@ -408,11 +441,31 @@ def main():
         return
     handles = []
     activation_stats, activation_calls = {}, {}
-    if args.mode == "smoothquant":
+    if args.mode in ("smoothquant", "awq", "repeat"):
+        if args.teacher_dir is None:
+            raise ValueError("候选用例需要 --teacher-dir")
         teacher_manifest = json.loads((args.teacher_dir / "manifest.json").read_text())
-        for key in ("model_source_sha256", "adapter_sha256", "helper_sha256", "llm_attention", "vision_fused_attention", "checkpoint_json_sha256", "checkpoint", "samples"):
+        if teacher_manifest["attention_layers"] != attention_layers:
+            raise ValueError("教师与候选必须选择相同的 attention 采样层")
+        for key in ("torch", "transformers", "timm", "seed", "model_source_sha256", "adapter_sha256", "helper_sha256", "llm_attention", "vision_fused_attention", "checkpoint_json_sha256", "checkpoint_identity", "checkpoint", "samples"):
             if manifest[key] != teacher_manifest[key]:
                 raise ValueError(f"Teacher/candidate mismatch: {key}")
+    if args.mode == "awq":
+        from qvla.awq_block import apply_block_scales, apply_llama_entry
+        from qvla.official_quant_adapter import apply_awq_entry
+        if meta["bits"] != args.weight_bits or args.activation_bits != 16:
+            raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
+        modules = dict(model.named_modules())
+        w_names = [n for n in entries if select_scope(n, args.weight_scope, set())]
+        if args.weight_scope != "vision":
+            for prefix, scales in meta["block_scales"].items():
+                apply_block_scales(modules[prefix], scales, official)
+        for name in w_names:
+            fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
+            fn(modules[name], entries[name], official, args.weight_bits, meta["group_size"])
+        save_json(args.output / "scope.json", {"weight_targets": w_names, "activation_targets": [],
+            "recipe": meta["algorithm"], "warning": "vision 为显式适配；范围消融不是完整论文基线"})
+    if args.mode == "smoothquant":
         from qvla.official_quant_adapter import apply_smoothquant_smoothing, smooth_groups
         from qvla.official_quant_adapter import smoothquant_weight, make_smoothquant_activation_hook, module_rows
         modules = dict(model.named_modules())
@@ -454,6 +507,8 @@ def main():
         save_json(args.output / "scope.json", {"smoothing_groups": count, "smoothed_inputs": sorted(smoothed),
                   "weight_targets": w_names, "activation_targets": a_names, "alpha": alpha})
     recorder = Recorder(model)
+    from attention_probe import AttentionTap
+    tap = AttentionTap(model, recorder, attention_layers) if attention_layers else None
     results = []
     try:
         for path in args.samples:
@@ -461,11 +516,14 @@ def main():
             activation_calls.clear()
             reference = None if args.mode == "teacher" else load_trusted(args.teacher_dir / (path.stem + ".pt"))
             recorder.reset(reference["projector"] if args.oracle_projector and reference else None)
+            if tap:
+                tap.reset()
             raw, normalized, input_hashes = predict(path, cfg, model, head, proprio, processor)
             if recorder.projector is None:
                 raise RuntimeError("Projector did not execute")
             if args.mode == "teacher":
                 torch.save({"raw": raw, "normalized": normalized, "traces": recorder.traces,
+                            "attention": tap.data if tap else {},
                             "projector": recorder.projector, "input_hashes": input_hashes}, args.output / (path.stem + ".pt"))
             else:
                 if reference["input_hashes"] != input_hashes:
@@ -473,12 +531,14 @@ def main():
                 if set(reference["traces"]) != set(recorder.traces):
                     raise ValueError("Teacher/candidate trace keys differ")
                 results.append({"sample": path.name,
+                    "attention": tap.compare(reference["attention"]) if tap else {},
                     "normalized_action": metric(reference["normalized"], normalized),
                     "raw_action": metric(reference["raw"], raw),
                     "normalized_rmse_per_dim": (normalized - reference["normalized"]).square().mean(0).sqrt().tolist(),
                     "raw_rmse_per_dim": (raw - reference["raw"]).square().mean(0).sqrt().tolist(),
                     "normalized_rmse_per_step": (normalized - reference["normalized"]).square().mean(1).sqrt().tolist(),
-                    "raw_gripper_disagreement": (raw[:, -1] != reference["raw"][:, -1]).float().mean().item(),
+                    # 与 rollout 的 sign(2*x-1) 相同，不能将连续值不相等当作开合分歧。
+                    "raw_gripper_disagreement": (torch.sign(2 * raw[:, -1] - 1) != torch.sign(2 * reference["raw"][:, -1] - 1)).float().mean().item(),
                     "activation_local_error": dict(activation_stats),
                     "features": {k: metric(reference["traces"][k], v) for k, v in recorder.traces.items()}})
                 if len(results) == 1:
@@ -492,6 +552,8 @@ def main():
                 save_json(args.output / "metrics.json", results)
             print(f"[probe] {path.name}", flush=True)
     finally:
+        if tap:
+            tap.close()
         recorder.close()
         for handle in handles:
             handle.remove()

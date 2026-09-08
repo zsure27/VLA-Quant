@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import inspect
 import json
 import os
 import sys
@@ -12,6 +13,9 @@ import torch
 REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
+
+from qvla.baseline_contract import CONTRACT_ID, check_scope, checkpoint_identity
+from qvla.reproducibility import seed_all
 
 from qvla.official_quant_adapter import (
     PROFILE_FORMAT,
@@ -31,7 +35,7 @@ def parse_args() -> argparse.Namespace:
         description="Evaluate official-source AWQ or SmoothQuant on OpenVLA."
     )
     parser.add_argument("--method", required=True, choices=("awq", "smoothquant"))
-    parser.add_argument("--weight-bits", required=True, type=int, choices=(4, 8))
+    parser.add_argument("--weight-bits", required=True, type=int, choices=(2, 4, 8, 16))
     parser.add_argument("--activation-bits", required=True, type=int, choices=(4, 8, 16))
     parser.add_argument("--pretrained_checkpoint", required=True)
     parser.add_argument("--profile", required=True, type=Path, action="append")
@@ -41,6 +45,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--local_log_dir", required=True)
     parser.add_argument("--libero_root", default=os.environ.get("LIBERO_ROOT", ""))
     parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--env-seed", type=int, default=0)
+    parser.add_argument("--seed-protocol", choices=("upstream", "paired"), default="upstream")
     return parser.parse_args()
 
 
@@ -50,15 +56,21 @@ def load_profiles(paths: list[Path], method: str) -> tuple[dict[str, Any], dict[
     common_fields = (
         "format_version", "method", "bits", "activation_bits", "checkpoint",
         "num_samples", "sample_names", "group_size", "smooth_alpha", "official_sources",
+        "contract_id", "checkpoint_identity", "sample_sha256", "seed", "algorithm", "llm_attention",
+        "implementation_sources", "model_source_sha256", "calibration_manifest",
     )
     for path in paths:
-        payload = torch.load(path, map_location="cpu")
+        payload = torch.load(path, map_location="cpu", weights_only=True)
         if payload.get("format_version") != PROFILE_FORMAT:
             raise RuntimeError(f"Unsupported profile format in {path}")
         if payload.get("method") != method:
             raise RuntimeError(f"Profile method mismatch in {path}")
-        if method == "awq" and payload.get("bits") != 4:
-            raise RuntimeError(f"Expected AWQ W4 profile in {path}")
+        if payload.get("contract_id") != CONTRACT_ID or not payload.get("checkpoint_identity") or not payload.get("sample_sha256"):
+            raise RuntimeError("缺少检查点/样本指纹，请重新校准，不能仅修改旧 metadata 冒充新 profile")
+        if method == "awq" and payload.get("algorithm") != "awq_official_llama_vision_adapter_v1":
+            raise RuntimeError("逐 Linear 实验不是官方 Llama block AWQ，禁止用于正式基线")
+        if method == "awq" and len(paths) != 1:
+            raise RuntimeError("block AWQ 使用一个完整 profile，禁止拼接独立搜索的 shard")
         overlap = set(entries).intersection(payload["entries"])
         if overlap:
             raise RuntimeError(f"Duplicate profile targets: {sorted(overlap)[:5]}")
@@ -71,6 +83,11 @@ def load_profiles(paths: list[Path], method: str) -> tuple[dict[str, Any], dict[
                     raise RuntimeError(f"Profile metadata mismatch for {field} in {path}")
     if metadata is None or not entries:
         raise RuntimeError("No quantization profiles loaded")
+    for name in ("official_quant_adapter.py", "awq_block.py", "action_jacobian_batch.py", "runtime_contract.py"):
+        expected = metadata.get("implementation_sources", {}).get(name)
+        if expected != source_sha256(Path(__file__).with_name(name)):
+            raise RuntimeError(f"适配代码已变化，请重新校准：{name}")
+    check_scope(entries)
     return entries, metadata
 
 
@@ -85,6 +102,7 @@ def apply_quantization(
     activation_bits: int,
 ) -> list[Any]:
     names = list(entries)
+    check_scope(names)
     modules = validate_targets(model, names)
     for name, module in modules.items():
         entry = entries[name]
@@ -96,10 +114,20 @@ def apply_quantization(
                 raise RuntimeError(f"Non-finite profile tensor for {name}")
     handles = []
     if method == "awq":
-        if (weight_bits, activation_bits) != (4, 16):
-            raise ValueError("The AWQ baseline must use W4A16")
+        if weight_bits not in (2, 4, 8) or activation_bits != 16 or metadata["bits"] != weight_bits:
+            raise ValueError("AWQ 仅 W2/W4/W8 A16；必须按当前位宽重新搜索 scale/clip")
+        from qvla.awq_block import apply_block_scales, apply_llama_entry
+        all_modules = dict(model.named_modules())
+        expected_blocks = {f"language_model.model.layers.{i}" for i in range(32)}
+        if set(metadata.get("block_scales", {})) != expected_blocks:
+            raise ValueError("官方 block scale 不完整，禁止隐式退化到 RTN")
+        for prefix, scales in metadata["block_scales"].items():
+            apply_block_scales(all_modules[prefix], scales, official)
         for index, name in enumerate(names):
-            apply_awq_entry(
+            apply_entry = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
+            if name.startswith("language_model.") and entries[name].get("recipe") != "official_llama_block_v1":
+                raise ValueError("LLM profile 不是官方 block 搜索")
+            apply_entry(
                 modules[name],
                 entries[name],
                 official,
@@ -108,6 +136,8 @@ def apply_quantization(
             )
             print(f"[official-awq] {index + 1}/{len(names)} {name}")
     else:
+        if weight_bits not in (4, 8, 16) or activation_bits not in (4, 8, 16):
+            raise ValueError("SQ 仅支持已定义的 W4/W8/W16、A4/A8/A16 控制组")
         groups = apply_smoothquant_smoothing(
             model,
             entries,
@@ -116,7 +146,8 @@ def apply_quantization(
         )
         for index, name in enumerate(names):
             module = modules[name]
-            smoothquant_weight(module, official, bits=weight_bits)
+            if weight_bits < 16:
+                smoothquant_weight(module, official, bits=weight_bits)
             if activation_bits == 16:
                 print(f"[official-smoothquant] activation fake quant disabled for {name}")
                 continue
@@ -136,6 +167,9 @@ def apply_quantization(
 
 def main() -> None:
     args = parse_args()
+    from qvla.runtime_contract import assert_oft_runtime
+    assert_oft_runtime()
+    seed_all(args.seed, tensorflow=True)
     here = Path(__file__).resolve().parent
     repo_root = here.parent
     if str(repo_root) not in sys.path:
@@ -158,9 +192,11 @@ def main() -> None:
 
     official = load_official_functions(args.official_root)
     entries, metadata = load_profiles(args.profile, args.method)
-    if Path(metadata.get("checkpoint", "")).resolve() != Path(args.pretrained_checkpoint).resolve():
-        raise RuntimeError("Profile checkpoint does not match --pretrained_checkpoint")
+    if checkpoint_identity(args.pretrained_checkpoint) != metadata["checkpoint_identity"]:
+        raise RuntimeError("Profile 检查点内容指纹不符（允许迁移路径，不允许换权重）")
     current_sources = {
+        "awq_auto_scale": official["awq_parent"] / "awq/quantize/auto_scale.py",
+        "awq_auto_clip": official["awq_parent"] / "awq/quantize/auto_clip.py",
         "awq_quantizer": official["awq_parent"] / "awq/quantize/quantizer.py",
         "smoothquant_smooth": official["smoothquant_parent"] / "smoothquant/smooth.py",
         "smoothquant_fake_quant": official["smoothquant_parent"] / "smoothquant/fake_quant.py",
@@ -182,13 +218,17 @@ def main() -> None:
         raise RuntimeError(f"Expected exact QVLA connected scope, got {counts}")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = AutoModelForVision2Seq.from_pretrained(
+    model = OpenVLAForActionPrediction.from_pretrained(
         args.pretrained_checkpoint,
         torch_dtype=torch.bfloat16 if device.type == "cuda" else torch.float32,
         low_cpu_mem_usage=True,
         trust_remote_code=True,
+        attn_implementation=metadata["llm_attention"],
     ).to(device)
     model.eval()
+    if source_sha256(Path(inspect.getsourcefile(type(model)))) != metadata["model_source_sha256"]:
+        raise RuntimeError("校准/评估实际模型类源码不一致")
+    model.language_model.config.use_cache = False
     model.vision_backbone.set_num_images_in_input(2)
     statistics = Path(args.pretrained_checkpoint) / "dataset_statistics.json"
     if statistics.is_file():
@@ -230,6 +270,9 @@ def main() -> None:
             "--local_log_dir", args.local_log_dir,
             "--center_crop", "True",
             "--seed", str(args.seed),
+            "--env_seed", str(args.env_seed),
+            "--seed_protocol", args.seed_protocol,
+            "--attn_implementation", metadata["llm_attention"],
         ]
         os.makedirs(args.local_log_dir, exist_ok=True)
         eval_libero()

@@ -1,5 +1,25 @@
 # 实验代码与文件总说明
 
+## 2026-09-08 新增维护入口
+
+| 文件 | 用途 |
+|---|---|
+| `docs/BASELINE_AUDIT_20260908_CN.md` | 本轮证据、对齐边界、修复与 AutoDL 命令；覆盖下文的旧版本运行状态 |
+| `docs/VISUAL_DIAGNOSIS_PLAN_CN.md` | 分阶段可视化、因果消融、修复决策和训练注意事项 |
+| `qvla/awq_block.py` | 官方 Llama block 搜索/缩放重放、真实每帧 attention 上下文；需要 GPU 验证 |
+| `qvla/baseline_contract.py` | 精确模块范围、可迁移检查点内容指纹、样本哈希 |
+| `qvla/runtime_contract.py` | 实际导入的 OFT 双向注意力源码校验 |
+| `qvla/reproducibility.py` | 模型/数据/环境随机流与回合种子派生 |
+| `qvla/finetune_seeded.py` | 单 GPU 确定性训练启动保护；不是已完成的量化感知训练实现 |
+| `scripts/check_runtime.py` | 用小 Llama 测真正的双向依赖，版本号相同也不能跳过 |
+| `scripts/activate_oft.sh` | 兼容历史虚拟环境、新 conda 环境，设置启动前随机环境变量 |
+| `scripts/run_audit.sh` | controls / sq / awq 分阶段运行，不自动训练或跑 500 回合 |
+| `diagnostics/gates.py` | 轨迹级隔离和 BF16/仅平滑门槛 |
+| `diagnostics/attention_probe.py` | 从真实 SDPA Q/K 重建少量 action queries 的概率，不切 eager |
+| `tests/test_contracts.py` | CPU 回归测试，不能替代完整 GPU 模型验证 |
+
+旧 `run_first_batch.sh`、`run-official-w4-smoke20.sh`、`run-official-quant-validation.sh` 保留历史内容但已停止执行。下文旧“可运行”描述仅代表历史状态。
+
 ## 1. 当前维护代码 `qvla/`
 
 | 文件 | 用途 | 当前状态 |
