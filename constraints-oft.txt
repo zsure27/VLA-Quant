@@ -1,0 +1,12 @@
+# 所有安装阶段共同使用，避免后装的仿真依赖升级 NumPy。
+# 这是一组兼容约束，不是已经证明与历史服务器逐包一致的 lockfile。
+numpy==1.26.4
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+opencv-contrib-python==4.10.0.84
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+tensorflow==2.15.0
+tokenizers==0.19.1
+timm==0.9.10

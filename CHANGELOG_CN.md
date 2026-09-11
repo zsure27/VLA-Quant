@@ -1,5 +1,12 @@
 # 封装审计与修复记录
 
+## 2026-09-11
+
+- 修复跨平台 overlay 哈希错误：旧 expected 来自 Windows CRLF；按固定 QVLA git blob 验证 LF 后统一换行再比较。
+- 覆盖安装改为全量预检→备份→复制；重复安装与半安装可恢复，未知修改仍拒绝覆盖。3 项安装器回归测试通过。
+- 增加各 pip 安装阶段共用的约束文件，防止 OpenCV 5 再次升级到 NumPy 2，破坏 TensorFlow 2.15。
+- 提供不重克隆、不删除模型/数据的修复入口，包含依赖、导入与 OFT runtime 检查。目标服务器结果仍待用户执行回传。
+
 ## 2026-09-08
 
 - 固定 OFT 专用 Transformers commit、真实源码 hash 与双向 SDPA 语义检查，避免 eager/普通 Transformers 改变基线。

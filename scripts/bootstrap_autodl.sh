@@ -44,6 +44,8 @@ if [[ "$INSTALL_ENV" == 1 ]]; then
     conda create -n qvla-oft python=3.10.14 -y
   fi
   conda activate qvla-oft
+  # 约束必须覆盖每次安装；仅第一次 requirements 固定 NumPy 不足以阻止后续升级。
+  export PIP_CONSTRAINT="$HERE/constraints-oft.txt"
   python -m pip install --upgrade pip setuptools wheel
   python -m pip install -r "$HERE/requirements-known.txt"
   python -m pip install -e "$ROOT/src/QVLA/openvla-oft"
@@ -51,6 +53,8 @@ if [[ "$INSTALL_ENV" == 1 ]]; then
   python -m pip install -r "$ROOT/src/QVLA/openvla-oft/experiments/robot/libero/libero_requirements.txt"
   # 最后安装固定 fork，不能仅凭版本号 4.40.1 判断双向 attention 正确。
   python -m pip install --no-deps "$ROOT/src/transformers-openvla-oft"
+  python -m pip check
+  python "$HERE/scripts/check_runtime.py"
   # FlashAttention 对 CUDA/编译器敏感，失败时保留日志，不静默换版本。
   # 本轮使用 SDPA，不需要额外安装 FlashAttention。切换后端是单独实验。
 fi

@@ -1,5 +1,7 @@
 # VLA 快速量化与微调实验备份
 
+安装中遇到 NumPy 2.x 冲突或 `openvla_utils.py SHA256` 不符，请先看 [2026-09-11 安装修复](docs/INSTALL_REPAIR_20260911_CN.md)。在本仓库更新后运行 `bash scripts/repair_install_20260911.sh`，无需删除原环境/数据，也不要绕过校验。
+
 ## 2026-09-08 更新：先验证基线，再做可视化
 
 当前为审计后的候选基线，尚未完成新 GPU 验证。请先看：
