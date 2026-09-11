@@ -355,6 +355,9 @@ def main():
     p.add_argument("--activation-scope", choices=scopes, default="all")
     p.add_argument("--activation-math-fp32", action="store_true")
     p.add_argument("--oracle-projector", action="store_true")
+    from smoothing_selection import CHOICES, excluded_norm
+    p.add_argument("--smoothing-selection", choices=CHOICES, default="all",
+                   help="W16A16 因果消融；整组关闭第 23–31 层的平滑，不改变 attention 本身")
     p.add_argument("--alpha", type=float)
     p.add_argument("--micro-targets", default=",".join((
         "vision_backbone.featurizer.patch_embed.proj",
@@ -366,6 +369,10 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
+    if args.smoothing_selection != "all" and (
+        args.mode != "smoothquant" or args.weight_bits != 16 or args.activation_bits != 16
+    ):
+        p.error("平滑范围消融仅允许 smoothquant W16A16")
     attention_layers = sorted(set(int(x) for x in args.attention_layers.split(",") if x))
     if any(i < 0 or i >= 32 for i in attention_layers):
         raise ValueError("attention 层号必须为 0..31")
@@ -430,6 +437,8 @@ def main():
         "checkpoint_identity": full_identity,
         "attention_layers": attention_layers,
         "seed": args.seed,
+        "diagnostic_source_sha256": digest(Path(__file__)),
+        "smoothing_selection_source_sha256": digest(Path(__file__).with_name("smoothing_selection.py")),
         "sources": sources, "profiles": profile_manifest,
         "samples": {s.name: digest(s) for s in args.samples},
         "arguments": {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items() if k != "samples"},
@@ -473,8 +482,12 @@ def main():
             if list(modules[name].weight.shape) != entry["shape"]:
                 raise ValueError(f"Profile shape mismatch: {name}")
         alpha = meta["smooth_alpha"] if args.alpha is None else args.alpha
-        count = apply_smoothquant_smoothing(model, entries, official, alpha)
-        smoothed = {n for _, names, _ in smooth_groups(set(entries)) for n in names}
+        groups = smooth_groups(set(entries))
+        skipped = [g for g in groups if excluded_norm(g[0], args.smoothing_selection)]
+        omitted = {n for _, names, _ in skipped for n in names}
+        smoothing_entries = {n: e for n, e in entries.items() if n not in omitted}
+        count = apply_smoothquant_smoothing(model, smoothing_entries, official, alpha)
+        smoothed = {n for _, names, _ in smooth_groups(set(smoothing_entries)) for n in names}
         w_names, a_names = [], []
         quantize = official["smooth_activation_quantize"]
         if args.activation_math_fp32:
@@ -505,6 +518,8 @@ def main():
                 a_names.append(name)
         # 始终保留全部平滑组，与 W/A 消融范围解耦，避免混入额外变量。
         save_json(args.output / "scope.json", {"smoothing_groups": count, "smoothed_inputs": sorted(smoothed),
+                  "smoothing_selection": args.smoothing_selection,
+                  "skipped_smoothing_groups": [g[0] for g in skipped],
                   "weight_targets": w_names, "activation_targets": a_names, "alpha": alpha})
     recorder = Recorder(model)
     from attention_probe import AttentionTap
@@ -539,6 +554,15 @@ def main():
                     "normalized_rmse_per_step": (normalized - reference["normalized"]).square().mean(1).sqrt().tolist(),
                     # 与 rollout 的 sign(2*x-1) 相同，不能将连续值不相等当作开合分歧。
                     "raw_gripper_disagreement": (torch.sign(2 * raw[:, -1] - 1) != torch.sign(2 * reference["raw"][:, -1] - 1)).float().mean().item(),
+                    "gripper_steps": {
+                        "teacher_raw": reference["raw"][:, -1].tolist(),
+                        "candidate_raw": raw[:, -1].tolist(),
+                        "teacher_normalized": reference["normalized"][:, -1].tolist(),
+                        "candidate_normalized": normalized[:, -1].tolist(),
+                        "teacher_signed_margin": (2 * reference["raw"][:, -1] - 1).tolist(),
+                        "candidate_signed_margin": (2 * raw[:, -1] - 1).tolist(),
+                        "note": "按现有 rollout 的 sign(2*x-1) 记录；归一化值另行保留",
+                    },
                     "activation_local_error": dict(activation_stats),
                     "features": {k: metric(reference["traces"][k], v) for k, v in recorder.traces.items()}})
                 if len(results) == 1:

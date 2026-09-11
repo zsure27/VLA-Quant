@@ -18,6 +18,9 @@ if [[ "$STAGE" == controls ]]; then
   mkdir -p "$OUT" "$OUT/profiles/sq"
 elif [[ "$STAGE" == sq || "$STAGE" == awq ]]; then
   test -f "$OUT/controls.pass.json" || { echo "先完成 controls，设置 OUT 为其输出目录"; exit 1; }
+  # 不以文件存在为成功：旧 tee 可能遗留空文件。重新验证真实指标。
+  python "$HERE/diagnostics/gates.py" control --metrics "$OUT/repeat/metrics.json" --threshold 1e-10
+  python "$HERE/diagnostics/gates.py" control --metrics "$OUT/smooth-only/metrics.json" --threshold 1e-4
 else
   echo "STAGE 只能为 controls/sq/awq"; exit 1
 fi
@@ -46,9 +49,11 @@ if [[ "$STAGE" == controls ]]; then
   calibrate smoothquant 4 "$OUT/profiles/sq/calibration"
   probe teacher teacher
   probe repeat repeat
-  python "$HERE/diagnostics/gates.py" control --metrics "$OUT/repeat/metrics.json" --threshold 1e-10 | tee "$OUT/repeat.pass.json"
+  python "$HERE/diagnostics/gates.py" control --metrics "$OUT/repeat/metrics.json" --threshold 1e-10 | tee "$OUT/repeat.pass.pending"
+  mv "$OUT/repeat.pass.pending" "$OUT/repeat.pass.json"
   sq smooth-only --weight-bits 16 --activation-bits 16
-  python "$HERE/diagnostics/gates.py" control --metrics "$OUT/smooth-only/metrics.json" --threshold 1e-4 | tee "$OUT/controls.pass.json"
+  python "$HERE/diagnostics/gates.py" control --metrics "$OUT/smooth-only/metrics.json" --threshold 1e-4 | tee "$OUT/controls.pass.pending"
+  mv "$OUT/controls.pass.pending" "$OUT/controls.pass.json"
 elif [[ "$STAGE" == sq ]]; then
   sq sq-w4a16 --activation-bits 16
   sq sq-w16a4 --weight-bits 16
