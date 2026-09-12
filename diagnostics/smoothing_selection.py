@@ -1,12 +1,14 @@
 """仅用于 W16A16 定位：整组取消平滑，不能只取消 Q/K/V 的一个分支。"""
 import re
 
-CHOICES = ("all", "no-late-attention", "no-late-mlp", "no-late-both")
+CHOICES = ("all", "no-late-attention", "no-late-mlp", "no-late-both", "no-language")
 
 
 def excluded_norm(name, selection):
     if selection not in CHOICES:
         raise ValueError(selection)
+    if selection == "no-language":
+        return name.startswith("language_model.")
     match = re.fullmatch(
         r"language_model\.model\.layers\.(\d+)\.(input_layernorm|post_attention_layernorm)", name
     )

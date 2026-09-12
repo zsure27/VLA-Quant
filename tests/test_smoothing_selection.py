@@ -12,11 +12,12 @@ class SelectionTest(unittest.TestCase):
         names = [f"language_model.model.layers.{i}.{kind}" for i in range(32)
                  for kind in ("input_layernorm", "post_attention_layernorm")]
         for selection, expected in (("all", 0), ("no-late-attention", 9),
-                                    ("no-late-mlp", 9), ("no-late-both", 18)):
+                                    ("no-late-mlp", 9), ("no-late-both", 18), ("no-language", 64)):
             self.assertEqual(sum(excluded_norm(n, selection) for n in names), expected)
 
     def test_vision_untouched(self):
         self.assertFalse(excluded_norm("vision_backbone.featurizer.blocks.23.norm1", "no-late-both"))
+        self.assertFalse(excluded_norm("vision_backbone.featurizer.blocks.23.norm1", "no-language"))
 
     def test_invalid(self):
         with self.assertRaises(ValueError):
