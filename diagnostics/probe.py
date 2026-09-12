@@ -341,6 +341,9 @@ def main():
     p.add_argument("--output", required=True, type=Path)
     p.add_argument("--mode", choices=("teacher", "repeat", "smoothquant", "awq", "awq-micro"), required=True)
     p.add_argument("--awq-profile", type=Path)
+    p.add_argument("--awq-disable-clip", choices=("none", "all", "attention", "mlp"), default="none")
+    p.add_argument("--awq-w4-layers", default="")
+    p.add_argument("--awq-w4-profile", type=Path)
     p.add_argument("--attention-layers", default="", help="例如 7,15,23,31；不切换 attention 后端")
     p.add_argument("--teacher-dir", type=Path)
     p.add_argument("--profile-dir", type=Path)
@@ -369,6 +372,14 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
+    from awq_interventions import parse_layers, plan
+    w4_layers = parse_layers(args.awq_w4_layers)
+    intervention = args.awq_disable_clip != "none" or bool(w4_layers) or args.awq_w4_profile is not None
+    if intervention and (args.mode != "awq" or args.weight_scope != "language" or
+                         args.weight_bits != 2 or args.activation_bits != 16 or args.oracle_projector):
+        p.error("AWQ 干预只允许语言 W2A16，视觉 BF16，不使用 oracle")
+    if bool(w4_layers) != (args.awq_w4_profile is not None) or (w4_layers and args.awq_disable_clip != "none"):
+        p.error("W4 层和独立 profile 必须配对，不能同时关闭裁剪")
     if args.smoothing_selection != "all" and (
         args.mode != "smoothquant" or args.weight_bits != 16 or args.activation_bits != 16
     ):
@@ -413,6 +424,16 @@ def main():
         if args.weight_scope not in ("all", "vision", "language") or args.activation_scope != "all":
             raise ValueError("AWQ 首轮只支持 all/vision/language；细粒度恢复另做受控实验")
         profile_manifest = [{"file": str(args.awq_profile), "sha256": digest(args.awq_profile)}]
+        if intervention:
+            w4 = load_profiles([args.awq_w4_profile], "awq") if w4_layers else None
+            intervention_plan = plan(entries, meta, args.awq_disable_clip, w4_layers, w4)
+            if w4:
+                profile_manifest.append({"file": str(args.awq_w4_profile), "sha256": digest(args.awq_w4_profile)})
+        # profile 文件不变也要核对实际加载的官方源码。
+        for saved, loaded in (("awq_auto_scale", "awq_auto_scale_block"),
+                              ("awq_auto_clip", "awq_auto_clip"), ("awq_quantizer", "awq_quantize")):
+            if meta["official_sources"][saved]["sha256"] != sources[loaded]["sha256"]:
+                raise ValueError("AWQ 官方源码与校准时不同")
     bundle = initialize_readonly(args.checkpoint, args.seed)
     cfg, model, head, proprio, processor = bundle
     import transformers
@@ -438,6 +459,7 @@ def main():
         "attention_layers": attention_layers,
         "seed": args.seed,
         "diagnostic_source_sha256": digest(Path(__file__)),
+        "awq_intervention_source_sha256": digest(Path(__file__).with_name("awq_interventions.py")),
         "smoothing_selection_source_sha256": digest(Path(__file__).with_name("smoothing_selection.py")),
         "sources": sources, "profiles": profile_manifest,
         "samples": {s.name: digest(s) for s in args.samples},
@@ -466,13 +488,25 @@ def main():
             raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
         modules = dict(model.named_modules())
         w_names = [n for n in entries if select_scope(n, args.weight_scope, set())]
-        if args.weight_scope != "vision":
+        if intervention:
+            scale_plan, target_plan, removed = intervention_plan
+            for prefix, scales in scale_plan.items():
+                apply_block_scales(modules[prefix], scales, official)
+            for name, (entry, bits, group_size) in target_plan.items():
+                if list(modules[name].weight.shape) != entry["shape"]:
+                    raise ValueError("干预 profile 参数形状不符")
+                apply_llama_entry(modules[name], entry, official, bits, group_size)
+        elif args.weight_scope != "vision":
             for prefix, scales in meta["block_scales"].items():
                 apply_block_scales(modules[prefix], scales, official)
-        for name in w_names:
+        for name in ([] if intervention else w_names):
             fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
             fn(modules[name], entries[name], official, args.weight_bits, meta["group_size"])
         save_json(args.output / "scope.json", {"weight_targets": w_names, "activation_targets": [],
+            "intervention": intervention, "disable_clip": args.awq_disable_clip,
+            "removed_clip_targets": removed if intervention else [],
+            "w4_layers": sorted(w4_layers),
+            "weight_bits_by_target": {n: target_plan[n][1] if intervention else args.weight_bits for n in w_names},
             "recipe": meta["algorithm"], "warning": "vision 为显式适配；范围消融不是完整论文基线"})
     if args.mode == "smoothquant":
         from qvla.official_quant_adapter import apply_smoothquant_smoothing, smooth_groups
