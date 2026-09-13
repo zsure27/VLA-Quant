@@ -347,6 +347,7 @@ def main():
     p.add_argument("--awq-vision-bits", type=int, choices=(2, 4, 16), default=16)
     p.add_argument("--awq-vision-profile", type=Path)
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
+    p.add_argument("--awq-primary-no-clip", action="store_true")
     p.add_argument("--attention-layers", default="", help="例如 7,15,23,31；不切换 attention 后端")
     p.add_argument("--teacher-dir", type=Path)
     p.add_argument("--profile-dir", type=Path)
@@ -375,9 +376,11 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
-    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch
+    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips
     w4_layers = parse_layers(args.awq_w4_layers)
     vision_composition = args.awq_vision_bits != 16
+    if args.awq_primary_no_clip and (args.awq_vision_bits != 2 or args.awq_vision_branch != "primary"):
+        p.error("主视觉无裁剪仅允许primary分支W2")
     if args.awq_vision_branch != "all" and not vision_composition:
         p.error("分支选择仅用于显式视觉量化组合")
     if (args.awq_vision_bits == 4) != (args.awq_vision_profile is not None):
@@ -441,7 +444,11 @@ def main():
                 profile_manifest.append({"file": str(args.awq_w4_profile), "sha256": digest(args.awq_w4_profile)})
             if vision_composition:
                 peer = load_profiles([args.awq_vision_profile], "awq") if args.awq_vision_bits == 4 else None
-                intervention_plan[1].update(vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch))
+                visual_targets = vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch)
+                visual_removed = []
+                if args.awq_primary_no_clip:
+                    visual_targets, visual_removed = remove_primary_clips(visual_targets)
+                intervention_plan[1].update(visual_targets)
                 if peer:
                     profile_manifest.append({"file": str(args.awq_vision_profile), "sha256": digest(args.awq_vision_profile)})
         # profile 文件不变也要核对实际加载的官方源码。
@@ -529,7 +536,9 @@ def main():
             "vision_composition": vision_composition,
             "vision_weight_bits": args.awq_vision_bits if vision_composition else None,
             "vision_branch": args.awq_vision_branch if vision_composition else None,
-            "clip_intervention_scope": "language_only" if intervention else None,
+            "primary_no_clip": args.awq_primary_no_clip,
+            "removed_visual_clip_targets": visual_removed if vision_composition else [],
+            "clip_intervention_scope": ("language_and_primary" if args.awq_primary_no_clip else "language_only") if intervention else None,
             "weight_bits_by_target": {n: target_plan[n][1] if intervention else args.weight_bits for n in w_names},
             "recipe": meta["algorithm"], "warning": "vision 为显式适配；范围消融不是完整论文基线"})
     if args.mode == "smoothquant":

@@ -56,6 +56,22 @@ def vision_plan(entries, meta, bits, peer=None, branch="all"):
     return targets
 
 
+def remove_primary_clips(targets):
+    """复制主视觉条目；只移除clip，不修改原profile或input_scale。"""
+    if len(targets) != 93 or any(not in_vision_branch(n, "primary") or v[1] != 2 for n, v in targets.items()):
+        raise ValueError("仅允许93个主视觉W2目标")
+    result, removed = {}, []
+    for name, (entry, bits, group) in targets.items():
+        copied = dict(entry)
+        if copied.get("clip_max") is not None:
+            removed.append(name)
+        copied["clip_max"] = None
+        result[name] = (copied, bits, group)
+    if not removed:
+        raise ValueError("没有可移除裁剪，拒绝无效对照")
+    return result, removed
+
+
 def plan(entries, meta, clip_scope, w4_layers, w4=None):
     """返回每块缩放来源、每个 Linear 的参数与实际位宽；仅用于语言 W2 干预。"""
     if meta["bits"] != 2 or clip_scope not in ("none", "all", "attention", "mlp"):

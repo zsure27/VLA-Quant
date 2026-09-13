@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "diagnostics"))
-from awq_interventions import plan, parse_layers, vision_plan
+from awq_interventions import plan, parse_layers, vision_plan, remove_primary_clips
 
 
 def fixture(bits):
@@ -22,6 +22,21 @@ def fixture(bits):
 
 
 class InterventionTest(unittest.TestCase):
+    def test_primary_no_clip_preserves_source(self):
+        targets = {f"vision_backbone.featurizer.fixture{i}":
+                   ({"clip_max": i if i else None, "input_scale": [1, 2]}, 2, 128) for i in range(93)}
+        result, removed = remove_primary_clips(targets)
+        self.assertEqual(len(removed), 92)
+        self.assertTrue(all(v[0]["clip_max"] is None for v in result.values()))
+        name = "vision_backbone.featurizer.fixture1"
+        self.assertEqual(targets[name][0]["clip_max"], 1)
+        self.assertEqual(result[name][0]["input_scale"], [1, 2])
+        self.assertEqual(result[name][1:], (2, 128))
+        with self.assertRaises(ValueError):
+            remove_primary_clips({name: targets[name]})
+        with self.assertRaises(ValueError):
+            remove_primary_clips(result)
+
     def test_visual_branch_partition(self):
         entries, meta = fixture(2)
         for prefix, count in (("featurizer", 93), ("fused_featurizer", 105)):
