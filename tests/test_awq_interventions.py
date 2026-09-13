@@ -22,6 +22,21 @@ def fixture(bits):
 
 
 class InterventionTest(unittest.TestCase):
+    def test_visual_branch_partition(self):
+        entries, meta = fixture(2)
+        for prefix, count in (("featurizer", 93), ("fused_featurizer", 105)):
+            for i in range(count):
+                entries[f"vision_backbone.{prefix}.fixture{i}"] = {"clip_max": 2}
+        primary = vision_plan(entries, meta, 2, branch="primary")
+        fused = vision_plan(entries, meta, 2, branch="fused")
+        self.assertEqual(len(primary), 93)
+        self.assertEqual(len(fused), 105)
+        self.assertFalse(set(primary) & set(fused))
+        self.assertEqual(set(primary) | set(fused), set(vision_plan(entries, meta, 2)))
+        self.assertTrue(all(v[0]["clip_max"] == 2 for v in primary.values()))
+        with self.assertRaises(ValueError):
+            vision_plan(entries, meta, 2, branch="camera")
+
     def test_vision_keeps_clipping_and_own_bits(self):
         e2, m2 = fixture(2)
         e4, m4 = fixture(4)

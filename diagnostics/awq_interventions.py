@@ -28,7 +28,15 @@ def check_peer(entries, meta, other_entries, other_meta):
             raise ValueError(f"两个 profile 的校准条件不同：{key}")
 
 
-def vision_plan(entries, meta, bits, peer=None):
+def in_vision_branch(name, branch):
+    prefixes = {"all": "vision_backbone.", "primary": "vision_backbone.featurizer.",
+                "fused": "vision_backbone.fused_featurizer."}
+    if branch not in prefixes:
+        raise ValueError("未知视觉编码器分支")
+    return name.startswith(prefixes[branch])
+
+
+def vision_plan(entries, meta, bits, peer=None, branch="all"):
     """视觉保持原适配器的 scale/clip；语言不裁剪不能传播为视觉不裁剪。"""
     if bits not in (2, 4) or meta["bits"] != 2:
         raise ValueError("视觉组合只支持 W2/W4，基础语言 profile 必须 W2")
@@ -42,6 +50,9 @@ def vision_plan(entries, meta, bits, peer=None):
                if n.startswith("vision_backbone.")}
     if len(targets) != 198:
         raise ValueError("视觉范围必须包含198个目标")
+    targets = {n: v for n, v in targets.items() if in_vision_branch(n, branch)}
+    if len(targets) != {"all": 198, "primary": 93, "fused": 105}[branch]:
+        raise ValueError("视觉分支目标数不符")
     return targets
 
 

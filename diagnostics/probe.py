@@ -346,6 +346,7 @@ def main():
     p.add_argument("--awq-w4-profile", type=Path)
     p.add_argument("--awq-vision-bits", type=int, choices=(2, 4, 16), default=16)
     p.add_argument("--awq-vision-profile", type=Path)
+    p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
     p.add_argument("--attention-layers", default="", help="例如 7,15,23,31；不切换 attention 后端")
     p.add_argument("--teacher-dir", type=Path)
     p.add_argument("--profile-dir", type=Path)
@@ -374,9 +375,11 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
-    from awq_interventions import parse_layers, plan, vision_plan
+    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch
     w4_layers = parse_layers(args.awq_w4_layers)
     vision_composition = args.awq_vision_bits != 16
+    if args.awq_vision_branch != "all" and not vision_composition:
+        p.error("分支选择仅用于显式视觉量化组合")
     if (args.awq_vision_bits == 4) != (args.awq_vision_profile is not None):
         p.error("视觉 W4 必须提供独立 profile，其他视觉位宽不提供该参数")
     if vision_composition and (args.awq_disable_clip != "all" or w4_layers):
@@ -438,7 +441,7 @@ def main():
                 profile_manifest.append({"file": str(args.awq_w4_profile), "sha256": digest(args.awq_w4_profile)})
             if vision_composition:
                 peer = load_profiles([args.awq_vision_profile], "awq") if args.awq_vision_bits == 4 else None
-                intervention_plan[1].update(vision_plan(entries, meta, args.awq_vision_bits, peer))
+                intervention_plan[1].update(vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch))
                 if peer:
                     profile_manifest.append({"file": str(args.awq_vision_profile), "sha256": digest(args.awq_vision_profile)})
         # profile 文件不变也要核对实际加载的官方源码。
@@ -500,6 +503,8 @@ def main():
             raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
         modules = dict(model.named_modules())
         w_names = [n for n in entries if select_scope(n, args.weight_scope, set())]
+        if vision_composition:
+            w_names = [n for n in w_names if n.startswith("language_model.") or in_vision_branch(n, args.awq_vision_branch)]
         if intervention:
             scale_plan, target_plan, removed = intervention_plan
             if set(w_names) != set(target_plan):
@@ -523,6 +528,7 @@ def main():
             "w4_layers": sorted(w4_layers),
             "vision_composition": vision_composition,
             "vision_weight_bits": args.awq_vision_bits if vision_composition else None,
+            "vision_branch": args.awq_vision_branch if vision_composition else None,
             "clip_intervention_scope": "language_only" if intervention else None,
             "weight_bits_by_target": {n: target_plan[n][1] if intervention else args.weight_bits for n in w_names},
             "recipe": meta["algorithm"], "warning": "vision 为显式适配；范围消融不是完整论文基线"})
