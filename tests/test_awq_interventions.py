@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "diagnostics"))
-from awq_interventions import plan, parse_layers, vision_plan, remove_primary_clips
+from awq_interventions import plan, parse_layers, vision_plan, remove_primary_clips, primary_group_plan
 
 
 def fixture(bits):
@@ -22,6 +22,22 @@ def fixture(bits):
 
 
 class InterventionTest(unittest.TestCase):
+    def test_primary_group_only(self):
+        a, m = fixture(2)
+        b, n = fixture(2)
+        n['group_size'] = 64
+        for i in range(93):
+            a[f'vision_backbone.featurizer.{i}'] = {'clip_max': 1}
+            b[f'vision_backbone.featurizer.{i}'] = {'clip_max': 2}
+        targets = primary_group_plan(a, m, (b, n))
+        self.assertEqual(len(targets), 93)
+        self.assertTrue(all(v[1:] == (2,64) and v[0]['clip_max'] == 2 for v in targets.values()))
+        self.assertEqual(m['group_size'], 128)
+        self.assertEqual(n['group_size'], 64)
+        n['seed'] = 'wrong'
+        with self.assertRaises(ValueError):
+            primary_group_plan(a,m,(b,n))
+
     def test_primary_no_clip_preserves_source(self):
         targets = {f"vision_backbone.featurizer.fixture{i}":
                    ({"clip_max": i if i else None, "input_scale": [1, 2]}, 2, 128) for i in range(93)}

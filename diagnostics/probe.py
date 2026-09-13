@@ -348,6 +348,7 @@ def main():
     p.add_argument("--awq-vision-profile", type=Path)
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
     p.add_argument("--awq-primary-no-clip", action="store_true")
+    p.add_argument("--awq-primary-group64-profile", type=Path)
     p.add_argument("--attention-layers", default="", help="例如 7,15,23,31；不切换 attention 后端")
     p.add_argument("--teacher-dir", type=Path)
     p.add_argument("--profile-dir", type=Path)
@@ -376,9 +377,11 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
-    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips
+    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan
     w4_layers = parse_layers(args.awq_w4_layers)
     vision_composition = args.awq_vision_bits != 16
+    if args.awq_primary_group64_profile and (args.awq_vision_bits != 2 or args.awq_vision_branch != 'primary' or args.awq_primary_no_clip):
+        p.error('G64对照仅允许主视觉W2保留裁剪')
     if args.awq_primary_no_clip and (args.awq_vision_bits != 2 or args.awq_vision_branch != "primary"):
         p.error("主视觉无裁剪仅允许primary分支W2")
     if args.awq_vision_branch != "all" and not vision_composition:
@@ -445,6 +448,9 @@ def main():
             if vision_composition:
                 peer = load_profiles([args.awq_vision_profile], "awq") if args.awq_vision_bits == 4 else None
                 visual_targets = vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch)
+                if args.awq_primary_group64_profile:
+                    visual_targets = primary_group_plan(entries, meta, load_profiles([args.awq_primary_group64_profile], 'awq'))
+                    profile_manifest.append({'file': str(args.awq_primary_group64_profile), 'sha256': digest(args.awq_primary_group64_profile)})
                 visual_removed = []
                 if args.awq_primary_no_clip:
                     visual_targets, visual_removed = remove_primary_clips(visual_targets)
@@ -537,6 +543,7 @@ def main():
             "vision_weight_bits": args.awq_vision_bits if vision_composition else None,
             "vision_branch": args.awq_vision_branch if vision_composition else None,
             "primary_no_clip": args.awq_primary_no_clip,
+            "group_size_by_target": {n: target_plan[n][2] if intervention else meta['group_size'] for n in w_names},
             "removed_visual_clip_targets": visual_removed if vision_composition else [],
             "clip_intervention_scope": ("language_and_primary" if args.awq_primary_no_clip else "language_only") if intervention else None,
             "weight_bits_by_target": {n: target_plan[n][1] if intervention else args.weight_bits for n in w_names},

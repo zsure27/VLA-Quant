@@ -72,6 +72,19 @@ def remove_primary_clips(targets):
     return result, removed
 
 
+def primary_group_plan(entries, meta, peer):
+    """只路由独立G64 profile的主视觉；语言必须继续使用原G128。"""
+    selected, other = peer
+    if meta['bits'] != 2 or other['bits'] != 2 or meta['group_size'] != 128 or other['group_size'] != 64:
+        raise ValueError('只支持主视觉W2 G128到G64对照')
+    comparison = dict(other, group_size=128)
+    check_peer(entries, meta, selected, comparison)
+    targets = {n: (dict(e), 2, 64) for n, e in selected.items() if in_vision_branch(n, 'primary')}
+    if len(targets) != 93:
+        raise ValueError('主视觉必须93个目标')
+    return targets
+
+
 def plan(entries, meta, clip_scope, w4_layers, w4=None):
     """返回每块缩放来源、每个 Linear 的参数与实际位宽；仅用于语言 W2 干预。"""
     if meta["bits"] != 2 or clip_scope not in ("none", "all", "attention", "mlp"):
