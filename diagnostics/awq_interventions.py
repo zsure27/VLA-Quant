@@ -18,6 +18,33 @@ def disable_clip(name, scope):
         scope == "mlp" and ".mlp." in name)
 
 
+def check_peer(entries, meta, other_entries, other_meta):
+    if set(entries) != set(other_entries):
+        raise ValueError("两个 profile 的目标范围不同")
+    for key in ("checkpoint_identity", "sample_names", "sample_sha256", "group_size",
+                "seed", "model_source_sha256", "llm_attention", "official_sources",
+                "implementation_sources"):
+        if meta[key] != other_meta[key]:
+            raise ValueError(f"两个 profile 的校准条件不同：{key}")
+
+
+def vision_plan(entries, meta, bits, peer=None):
+    """视觉保持原适配器的 scale/clip；语言不裁剪不能传播为视觉不裁剪。"""
+    if bits not in (2, 4) or meta["bits"] != 2:
+        raise ValueError("视觉组合只支持 W2/W4，基础语言 profile 必须 W2")
+    if (bits == 4) != (peer is not None):
+        raise ValueError("视觉 W4 必须独立 profile；视觉 W2 复用基础 profile")
+    selected, metadata = peer if peer else (entries, meta)
+    check_peer(entries, meta, selected, metadata)
+    if metadata["bits"] != bits:
+        raise ValueError("视觉 profile 位宽不符")
+    targets = {n: (dict(e), bits, metadata["group_size"]) for n, e in selected.items()
+               if n.startswith("vision_backbone.")}
+    if len(targets) != 198:
+        raise ValueError("视觉范围必须包含198个目标")
+    return targets
+
+
 def plan(entries, meta, clip_scope, w4_layers, w4=None):
     """返回每块缩放来源、每个 Linear 的参数与实际位宽；仅用于语言 W2 干预。"""
     if meta["bits"] != 2 or clip_scope not in ("none", "all", "attention", "mlp"):
