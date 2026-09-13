@@ -380,8 +380,8 @@ def main():
     from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan
     w4_layers = parse_layers(args.awq_w4_layers)
     vision_composition = args.awq_vision_bits != 16
-    if args.awq_primary_group64_profile and (args.awq_vision_bits != 2 or args.awq_vision_branch != 'primary' or args.awq_primary_no_clip):
-        p.error('G64对照仅允许主视觉W2保留裁剪')
+    if args.awq_primary_group64_profile and (args.awq_vision_bits != 2 or args.awq_vision_branch not in ('primary', 'all') or args.awq_primary_no_clip):
+        p.error('G64对照仅允许primary/all分支W2保留裁剪')
     if args.awq_primary_no_clip and (args.awq_vision_bits != 2 or args.awq_vision_branch != "primary"):
         p.error("主视觉无裁剪仅允许primary分支W2")
     if args.awq_vision_branch != "all" and not vision_composition:
@@ -449,7 +449,7 @@ def main():
                 peer = load_profiles([args.awq_vision_profile], "awq") if args.awq_vision_bits == 4 else None
                 visual_targets = vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch)
                 if args.awq_primary_group64_profile:
-                    visual_targets = primary_group_plan(entries, meta, load_profiles([args.awq_primary_group64_profile], 'awq'))
+                    visual_targets.update(primary_group_plan(entries, meta, load_profiles([args.awq_primary_group64_profile], 'awq')))
                     profile_manifest.append({'file': str(args.awq_primary_group64_profile), 'sha256': digest(args.awq_primary_group64_profile)})
                 visual_removed = []
                 if args.awq_primary_no_clip:

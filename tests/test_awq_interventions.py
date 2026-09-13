@@ -22,6 +22,23 @@ def fixture(bits):
 
 
 class InterventionTest(unittest.TestCase):
+    def test_group_composition_preserves_fused(self):
+        a, m = fixture(2)
+        b, n = fixture(2)
+        n['group_size'] = 64
+        for prefix, count in [('featurizer',93), ('fused_featurizer',105)]:
+            for i in range(count):
+                key=f'vision_backbone.{prefix}.{i}'
+                a[key]={'clip_max':1}
+                b[key]={'clip_max':2}
+        targets=vision_plan(a,m,2)
+        targets.update(primary_group_plan(a,m,(b,n)))
+        self.assertEqual(len(targets),198)
+        self.assertEqual(sum(v[2]==64 for v in targets.values()),93)
+        for key,value in targets.items():
+            if 'fused_featurizer' in key:
+                self.assertEqual(value,({'clip_max':1},2,128))
+
     def test_primary_group_only(self):
         a, m = fixture(2)
         b, n = fixture(2)
