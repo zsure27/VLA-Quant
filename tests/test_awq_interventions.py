@@ -4,7 +4,8 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "diagnostics"))
-from awq_interventions import plan, parse_layers, vision_plan, remove_primary_clips, primary_group_plan
+from awq_interventions import (current_w2_candidate_plan, plan, parse_layers,
+                               vision_plan, remove_primary_clips, primary_group_plan)
 
 
 def fixture(bits):
@@ -22,6 +23,25 @@ def fixture(bits):
 
 
 class InterventionTest(unittest.TestCase):
+    def test_current_w2_candidate_is_exact_composition(self):
+        base, meta = fixture(2)
+        g64, meta64 = fixture(2)
+        meta64["group_size"] = 64
+        for prefix, count in (("featurizer", 93), ("fused_featurizer", 105)):
+            for i in range(count):
+                name = f"vision_backbone.{prefix}.fixture{i}"
+                base[name] = {"clip_max": 2}
+                g64[name] = {"clip_max": 3}
+        scales, targets, removed = current_w2_candidate_plan(base, meta, (g64, meta64))
+        self.assertEqual(len(scales), 32)
+        self.assertEqual(len(targets), 422)
+        self.assertEqual(len(removed), 160)
+        self.assertEqual(sum(value[2] == 64 for value in targets.values()), 93)
+        self.assertTrue(all(value[0]["clip_max"] is None for name, value in targets.items()
+                            if name.startswith("language_model.")))
+        self.assertTrue(all(value[0]["clip_max"] is not None for name, value in targets.items()
+                            if name.startswith("vision_backbone.")))
+
     def test_group_composition_preserves_fused(self):
         a, m = fixture(2)
         b, n = fixture(2)

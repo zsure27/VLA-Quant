@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "targets": 422,
+  "language_removed_clips": 160,
+  "group_counts": {
+    "64": 93,
+    "128": 329
+  },
+  "primary_g64": 93,
+  "fused_g128": 105,
+  "language_g128": 224,
+  "visual_clipped": 149,
+  "profiles": [
+    {
+      "path": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+      "sha256": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc"
+    },
+    {
+      "path": "/root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt",
+      "sha256": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8"
+    }
+  ]
+}

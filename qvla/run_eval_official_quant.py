@@ -47,7 +47,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--env-seed", type=int, default=0)
     parser.add_argument("--seed-protocol", choices=("upstream", "paired"), default="upstream")
-    return parser.parse_args()
+    parser.add_argument(
+        "--awq-candidate",
+        choices=("profile", "w2-no-clip-primary-g64"),
+        default="profile",
+        help="AWQ rollout recipe; the tuned W2 candidate uses language no-clip, primary vision G64, fused vision G128",
+    )
+    parser.add_argument(
+        "--awq-primary-group64-profile",
+        type=Path,
+        help="independent W2/G64 profile required by --awq-candidate w2-no-clip-primary-g64",
+    )
+    args = parser.parse_args()
+    if args.awq_candidate == "profile" and args.awq_primary_group64_profile is not None:
+        parser.error("--awq-primary-group64-profile requires --awq-candidate w2-no-clip-primary-g64")
+    return args
 
 
 def load_profiles(paths: list[Path], method: str) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -100,12 +114,13 @@ def apply_quantization(
     official: dict[str, Any],
     weight_bits: int,
     activation_bits: int,
+    awq_plan: tuple[dict[str, Any], dict[str, tuple[dict[str, Any], int, int]], list[str]] | None = None,
 ) -> list[Any]:
-    names = list(entries)
+    names = list(awq_plan[1] if awq_plan is not None else entries)
     check_scope(names)
     modules = validate_targets(model, names)
     for name, module in modules.items():
-        entry = entries[name]
+        entry = awq_plan[1][name][0] if awq_plan is not None else entries[name]
         if tuple(entry.get("shape", ())) != tuple(module.weight.shape):
             raise RuntimeError(f"Profile weight shape mismatch for {name}")
         tensors = [entry.get("input_scale"), entry.get("clip_max"), entry.get("activation_absmax")]
@@ -119,20 +134,26 @@ def apply_quantization(
         from qvla.awq_block import apply_block_scales, apply_llama_entry
         all_modules = dict(model.named_modules())
         expected_blocks = {f"language_model.model.layers.{i}" for i in range(32)}
-        if set(metadata.get("block_scales", {})) != expected_blocks:
+        block_scales = awq_plan[0] if awq_plan is not None else metadata.get("block_scales", {})
+        if set(block_scales) != expected_blocks:
             raise ValueError("官方 block scale 不完整，禁止隐式退化到 RTN")
-        for prefix, scales in metadata["block_scales"].items():
+        for prefix, scales in block_scales.items():
             apply_block_scales(all_modules[prefix], scales, official)
         for index, name in enumerate(names):
+            entry, target_bits, target_group = (
+                awq_plan[1][name]
+                if awq_plan is not None
+                else (entries[name], weight_bits, int(metadata.get("group_size", 128)))
+            )
             apply_entry = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
-            if name.startswith("language_model.") and entries[name].get("recipe") != "official_llama_block_v1":
+            if name.startswith("language_model.") and entry.get("recipe") != "official_llama_block_v1":
                 raise ValueError("LLM profile 不是官方 block 搜索")
             apply_entry(
                 modules[name],
-                entries[name],
+                entry,
                 official,
-                bits=weight_bits,
-                group_size=int(metadata.get("group_size", 128)),
+                bits=target_bits,
+                group_size=target_group,
             )
             print(f"[official-awq] {index + 1}/{len(names)} {name}")
     else:
@@ -192,6 +213,22 @@ def main() -> None:
 
     official = load_official_functions(args.official_root)
     entries, metadata = load_profiles(args.profile, args.method)
+    awq_plan = None
+    profile_manifest = [
+        {"path": str(path), "sha256": source_sha256(path)} for path in args.profile
+    ]
+    if args.awq_candidate != "profile":
+        if args.method != "awq" or args.weight_bits != 2 or args.activation_bits != 16 or len(args.profile) != 1:
+            raise ValueError("w2-no-clip-primary-g64 requires one AWQ W2A16 base profile")
+        if args.awq_primary_group64_profile is None:
+            raise ValueError("w2-no-clip-primary-g64 requires --awq-primary-group64-profile")
+        from diagnostics.awq_interventions import current_w2_candidate_plan
+        peer = load_profiles([args.awq_primary_group64_profile], "awq")
+        awq_plan = current_w2_candidate_plan(entries, metadata, peer)
+        profile_manifest.append({
+            "path": str(args.awq_primary_group64_profile),
+            "sha256": source_sha256(args.awq_primary_group64_profile),
+        })
     if checkpoint_identity(args.pretrained_checkpoint) != metadata["checkpoint_identity"]:
         raise RuntimeError("Profile 检查点内容指纹不符（允许迁移路径，不允许换权重）")
     current_sources = {
@@ -242,12 +279,23 @@ def main() -> None:
         official,
         args.weight_bits,
         args.activation_bits,
+        awq_plan=awq_plan,
     )
     print(
         f"[official-quant] method={args.method} weight_bits={args.weight_bits} "
         f"activation_bits={args.activation_bits} targets={len(entries)}"
     )
     print("[official-quant] BF16 exclusions=projector,proprio_projector,action_head,embeddings,norms")
+    print("[official-quant] candidate=" + json.dumps({
+        "name": args.awq_candidate,
+        "profiles": profile_manifest,
+        "removed_language_clips": len(awq_plan[2]) if awq_plan is not None else 0,
+        "target_group_counts": (
+            {str(group): sum(1 for _entry, _bits, value_group in awq_plan[1].values() if value_group == group)
+             for group in sorted({value_group for _entry, _bits, value_group in awq_plan[1].values()})}
+            if awq_plan is not None else {str(metadata.get("group_size", 128)): len(entries)}
+        ),
+    }, sort_keys=True))
 
     original_get_model = R.get_model
     original_libero_get_model = getattr(L, "get_model", None)

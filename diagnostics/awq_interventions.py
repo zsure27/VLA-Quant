@@ -118,3 +118,14 @@ def plan(entries, meta, clip_scope, w4_layers, w4=None):
                 entry["clip_max"] = None
             targets[name] = (entry, metadata["bits"], metadata["group_size"])
     return scales, targets, removed
+
+
+def current_w2_candidate_plan(entries, meta, primary_group64_peer):
+    """共享的正式 W2 候选：语言 no-clip，DINO G64，SigLIP G128，视觉保留 clip。"""
+    scales, targets, removed = plan(entries, meta, "all", set())
+    visual = vision_plan(entries, meta, 2)
+    visual.update(primary_group_plan(entries, meta, primary_group64_peer))
+    targets.update(visual)
+    if len(targets) != 422 or len(removed) != 160:
+        raise ValueError("当前 W2 候选必须是422目标并移除160个语言裁剪")
+    return scales, targets, removed
