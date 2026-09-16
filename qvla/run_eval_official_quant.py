@@ -47,6 +47,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--env-seed", type=int, default=0)
     parser.add_argument("--seed-protocol", choices=("upstream", "paired"), default="upstream")
+    parser.add_argument("--awq-scope", choices=("all", "language", "vision", "none"), default="all",
+                        help="Diagnostic ablation only; none is the same-loader BF16 control")
+    parser.add_argument("--trace-actions", action="store_true", help="Save raw policy chunks and query-time proprio for diagnostics")
     parser.add_argument(
         "--awq-candidate",
         choices=("profile", "w2-no-clip-primary-g64"),
@@ -59,6 +62,8 @@ def parse_args() -> argparse.Namespace:
         help="independent W2/G64 profile required by --awq-candidate w2-no-clip-primary-g64",
     )
     args = parser.parse_args()
+    if args.awq_scope != "all" and args.method != "awq":
+        parser.error("Scoped diagnostics are currently supported only for AWQ")
     if args.awq_candidate == "profile" and args.awq_primary_group64_profile is not None:
         parser.error("--awq-primary-group64-profile requires --awq-candidate w2-no-clip-primary-g64")
     return args
@@ -105,6 +110,17 @@ def load_profiles(paths: list[Path], method: str) -> tuple[dict[str, Any], dict[
     return entries, metadata
 
 
+def select_awq_scope(names: list[str], scope: str) -> list[str]:
+    check_scope(names)
+    if scope == "all":
+        return names
+    if scope == "none":
+        return []
+    if scope not in ("language", "vision"):
+        raise ValueError(f"Unknown AWQ diagnostic scope: {scope}")
+    return [name for name in names if name.startswith("language_model.") == (scope == "language")]
+
+
 @torch.no_grad()
 def apply_quantization(
     model: torch.nn.Module,
@@ -115,9 +131,17 @@ def apply_quantization(
     weight_bits: int,
     activation_bits: int,
     awq_plan: tuple[dict[str, Any], dict[str, tuple[dict[str, Any], int, int]], list[str]] | None = None,
+    awq_scope: str = "all",
 ) -> list[Any]:
     names = list(awq_plan[1] if awq_plan is not None else entries)
     check_scope(names)
+    if method != "awq" and awq_scope != "all":
+        raise ValueError("Scoped diagnostics are supported only for AWQ")
+    if method == "awq":
+        names = select_awq_scope(names, awq_scope)
+        if not names:
+            print("[diagnostic] same-loader BF16 control: no scales, clipping or weight quantization applied")
+            return []
     modules = validate_targets(model, names)
     for name, module in modules.items():
         entry = awq_plan[1][name][0] if awq_plan is not None else entries[name]
@@ -137,8 +161,9 @@ def apply_quantization(
         block_scales = awq_plan[0] if awq_plan is not None else metadata.get("block_scales", {})
         if set(block_scales) != expected_blocks:
             raise ValueError("官方 block scale 不完整，禁止隐式退化到 RTN")
-        for prefix, scales in block_scales.items():
-            apply_block_scales(all_modules[prefix], scales, official)
+        if awq_scope != "vision":
+            for prefix, scales in block_scales.items():
+                apply_block_scales(all_modules[prefix], scales, official)
         for index, name in enumerate(names):
             entry, target_bits, target_group = (
                 awq_plan[1][name]
@@ -280,14 +305,17 @@ def main() -> None:
         args.weight_bits,
         args.activation_bits,
         awq_plan=awq_plan,
+        awq_scope=args.awq_scope,
     )
     print(
         f"[official-quant] method={args.method} weight_bits={args.weight_bits} "
-        f"activation_bits={args.activation_bits} targets={len(entries)}"
+        f"activation_bits={args.activation_bits} profile_targets={len(entries)} scope={args.awq_scope}"
     )
     print("[official-quant] BF16 exclusions=projector,proprio_projector,action_head,embeddings,norms")
     print("[official-quant] candidate=" + json.dumps({
         "name": args.awq_candidate,
+        "scope": args.awq_scope,
+        "applied_targets": len(select_awq_scope(list(entries), args.awq_scope)) if args.method == "awq" else len(entries),
         "profiles": profile_manifest,
         "removed_language_clips": len(awq_plan[2]) if awq_plan is not None else 0,
         "target_group_counts": (
@@ -308,6 +336,27 @@ def main() -> None:
     if original_libero_get_model is not None:
         L.get_model = patched_get_model
     argv_backup = list(sys.argv)
+    original_get_action = L.get_action
+    trace_file = None
+    if args.trace_actions:
+        import numpy as np
+        os.makedirs(args.local_log_dir, exist_ok=True)
+        trace_file = open(Path(args.local_log_dir) / "policy-queries.jsonl", "x", encoding="utf-8")
+
+        def traced_get_action(cfg, model, obs, task_label, **kwargs):
+            state_before_action = np.asarray(obs["state"]).copy()
+            actions = original_get_action(cfg, model, obs, task_label, **kwargs)
+            chunk = np.asarray(actions).copy()
+            trace_file.write(json.dumps({
+                "task": task_label, "state": state_before_action.tolist(),
+                "state_space": "raw_proprio_before_get_action",
+                "raw_policy_chunk": chunk.tolist(), "finite": bool(np.isfinite(chunk).all()),
+                "note": "query-time observation; raw chunk before gripper processing; later closed-loop states diverge",
+            }) + "\n")
+            trace_file.flush()
+            return actions
+
+        L.get_action = traced_get_action
     try:
         sys.argv = [
             sys.argv[0],
@@ -325,6 +374,9 @@ def main() -> None:
         os.makedirs(args.local_log_dir, exist_ok=True)
         eval_libero()
     finally:
+        L.get_action = original_get_action
+        if trace_file is not None:
+            trace_file.close()
         sys.argv = argv_backup
         R.get_model = original_get_model
         if original_libero_get_model is not None:

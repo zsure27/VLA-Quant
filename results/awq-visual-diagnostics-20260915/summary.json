@@ -1,0 +1,152 @@
+{
+  "BF16": {
+    "successes": 9,
+    "episodes": 10,
+    "per_task": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/bf16-paired-smoke10-20260915-201949",
+    "paired_manifests_equal": true
+  },
+  "AWQ W4": {
+    "successes": 8,
+    "episodes": 10,
+    "per_task": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/awq-w4-paired-smoke10-20260915-203534",
+    "paired_manifests_equal": true
+  },
+  "AWQ W2 tuned": {
+    "successes": 0,
+    "episodes": 10,
+    "per_task": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/awq-current-smoke10-20260915-194658",
+    "paired_manifests_equal": true
+  },
+  "BF16 same loader": {
+    "successes": 9,
+    "episodes": 10,
+    "per_task": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/diagnostic-20260915-215923/bf16",
+    "paired_manifests_equal": true,
+    "nonfinite_queries": 0,
+    "first_query_action_l1_vs_bf16": 0.0,
+    "first_query_action_rmse": {
+      "0": 0.0,
+      "9": 0.0
+    }
+  },
+  "W4 repeat + trace": {
+    "successes": 8,
+    "episodes": 10,
+    "per_task": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/diagnostic-20260915-215923/w4",
+    "paired_manifests_equal": true,
+    "nonfinite_queries": 0,
+    "first_query_action_l1_vs_bf16": 0.01171778124495153,
+    "first_query_action_rmse": {
+      "0": 0.01599610183026953,
+      "9": 0.016051559544509444
+    }
+  },
+  "W2 language only": {
+    "successes": 1,
+    "episodes": 10,
+    "per_task": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/diagnostic-20260915-215923/language",
+    "paired_manifests_equal": true,
+    "nonfinite_queries": 0,
+    "first_query_action_l1_vs_bf16": 0.12680622402169747,
+    "first_query_action_rmse": {
+      "0": 0.19172223100856453,
+      "9": 0.28015256714057574
+    }
+  },
+  "W2 vision only": {
+    "successes": 10,
+    "episodes": 10,
+    "per_task": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "source": "/root/autodl-tmp/qvla-repro/eval/diagnostic-20260915-215923/vision",
+    "paired_manifests_equal": true,
+    "nonfinite_queries": 0,
+    "first_query_action_l1_vs_bf16": 0.06754694691336965,
+    "first_query_action_rmse": {
+      "0": 0.16461714324359095,
+      "9": 0.1079444418980958
+    }
+  }
+}
