@@ -23,16 +23,3 @@ def promote_pairs(model, groups):
         promoted.append({"norm":norm_name,"linear":names[0],"output_dtype":str(dtype),
                          "fp32_parameter_elements":sum(p.numel() for m in (norm,fc) for p in m.parameters())})
     return handles,promoted
-
-def promote_vision(model):
-    """Keep the full vision backbone FP32; cast once before BF16 projector."""
-    dtype=next(model.projector.parameters()).dtype
-    model.vision_backbone.float()
-    def input_float(_module,args): return (args[0].float(),)+args[1:]
-    def output_cast(_module,_args,output):
-        if not isinstance(output,torch.Tensor): raise TypeError("vision backbone must return a tensor")
-        return output.to(dtype)
-    handles=[model.vision_backbone.register_forward_pre_hook(input_float),
-             model.vision_backbone.register_forward_hook(output_cast)]
-    return handles,{"parameter_elements":sum(p.numel() for p in model.vision_backbone.parameters()),
-                    "projector_input_dtype":str(dtype)}

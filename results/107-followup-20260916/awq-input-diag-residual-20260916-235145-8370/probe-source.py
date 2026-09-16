@@ -351,9 +351,7 @@ def main():
     p.add_argument("--awq-residual-layers", default="")
     p.add_argument("--awq-residual-calibration-dir", type=Path)
     p.add_argument("--awq-residual-token-scope", choices=("all", "action"), default="all")
-    p.add_argument("--awq-residual-response-svd", action="store_true")
     p.add_argument("--smoothing-pairs-fp32", action="store_true")
-    p.add_argument("--smoothing-vision-fp32", action="store_true")
     p.add_argument("--smoothing-bypass", action="store_true")
     p.add_argument("--export-candidate-teacher", action="store_true")
     p.add_argument("--teacher-fp32-reference", action="store_true")
@@ -390,14 +388,10 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
-    numerical_fp32=args.smoothing_pairs_fp32 or args.smoothing_vision_fp32
-    if args.smoothing_vision_fp32 and (args.smoothing_pairs_fp32 or args.mode != "smoothquant" or
-        args.weight_bits != 16 or args.activation_bits != 16 or args.smoothing_selection != "no-language"):
-        p.error("Whole-vision FP32 control requires W16A16, no-language smoothing, and no pair flag")
     if args.smoothing_pairs_fp32 and (args.mode != "smoothquant" or args.weight_bits != 16 or args.activation_bits != 16 or
         args.smoothing_selection not in ("no-language", "only-primary-vision", "only-fused-vision")):
         p.error("FP32 pairs are vision-only smoothing W16A16 numerical diagnostics")
-    if (args.smoothing_bypass or args.export_candidate_teacher or args.teacher_fp32_reference) and not numerical_fp32:
+    if (args.smoothing_bypass or args.export_candidate_teacher or args.teacher_fp32_reference) and not args.smoothing_pairs_fp32:
         p.error("Numerical reference flags require FP32 vision pairs")
     from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan, family_precision_plan
     w4_layers = parse_layers(args.awq_w4_layers)
@@ -409,8 +403,6 @@ def main():
         p.error("Residual input statistics require a residual branch")
     if args.awq_residual_token_scope == "action" and args.awq_residual_calibration_dir is None:
         p.error("Action-token residual statistics require calibration inputs")
-    if args.awq_residual_response_svd and (args.awq_residual_calibration_dir is None or args.awq_residual_token_scope != "action"):
-        p.error("Response SVD requires independent action-token calibration")
     if residual_layers and (args.awq_residual_rank not in (4,8,16) or args.mode != "awq" or
             args.weight_bits != 2 or args.activation_bits != 16 or args.weight_scope != "language" or
             args.awq_disable_clip != "all" or rescue_layers or w4_layers or args.awq_w4_profile or args.awq_vision_bits != 16):
@@ -518,8 +510,7 @@ def main():
     checkpoint_meta = {str(f.relative_to(args.checkpoint)): digest(f) for f in Path(args.checkpoint).glob("*.json")}
     manifest = {
         "fp32_smoothing_pairs": args.smoothing_pairs_fp32,
-        "fp32_vision_backbone": args.smoothing_vision_fp32,
-        "fp32_smoothing_selection": args.smoothing_selection if numerical_fp32 else None,
+        "fp32_smoothing_selection": args.smoothing_selection if args.smoothing_pairs_fp32 else None,
         "smoothing_bypassed": args.smoothing_bypass,
         "torch": torch.__version__, "transformers": transformers.__version__, "timm": timm.__version__,
         "gpu": torch.cuda.get_device_name(),
@@ -549,13 +540,10 @@ def main():
         if args.teacher_dir is None:
             raise ValueError("候选用例需要 --teacher-dir")
         teacher_manifest = json.loads((args.teacher_dir / "manifest.json").read_text())
-        if bool(teacher_manifest.get("fp32_smoothing_pairs",False) or teacher_manifest.get("fp32_vision_backbone",False)) != args.teacher_fp32_reference:
+        if bool(teacher_manifest.get("fp32_smoothing_pairs",False)) != args.teacher_fp32_reference:
             raise ValueError("Teacher numerical path must be explicitly selected")
         if args.teacher_fp32_reference and teacher_manifest.get("fp32_smoothing_selection") != args.smoothing_selection:
             raise ValueError("FP32 teacher pair selection mismatch")
-        if args.teacher_fp32_reference and (bool(teacher_manifest.get("fp32_vision_backbone",False)) != args.smoothing_vision_fp32 or
-            bool(teacher_manifest.get("fp32_smoothing_pairs",False)) != args.smoothing_pairs_fp32):
-            raise ValueError("Teacher whole-vision/pair numerical path mismatch")
         if teacher_manifest["attention_layers"] != attention_layers:
             raise ValueError("教师与候选必须选择相同的 attention 采样层")
         for key in ("torch", "transformers", "timm", "seed", "model_source_sha256", "adapter_sha256", "helper_sha256", "llm_attention", "vision_fused_attention", "checkpoint_json_sha256", "checkpoint_identity", "checkpoint", "samples"):
@@ -566,7 +554,6 @@ def main():
         from qvla.official_quant_adapter import apply_awq_entry
         residual_records = {}
         residual_input_rms = {}
-        residual_input_rows = {}
         residual_calibration_manifest = []
         if meta["bits"] != args.weight_bits or args.activation_bits != 16:
             raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
@@ -597,8 +584,6 @@ def main():
                                 raise ValueError("Action token indices unavailable for residual statistics")
                             x=x[:,start:start+count,:]
                         x=x.reshape(-1,x.shape[-1])
-                        if args.awq_residual_response_svd:
-                            residual_input_rows.setdefault(name,[]).append(x.cpu())
                         total=x.square().sum(0).cpu()
                         previous=stats.get(name)
                         stats[name]=(total+(previous[0] if previous else 0),x.shape[0]+(previous[1] if previous else 0),1+(previous[2] if previous else 0))
@@ -619,8 +604,6 @@ def main():
                 if set(stats)!=set(selected_names) or any(v[2]!=8 for v in stats.values()):
                     raise ValueError("Residual input calibration target/call coverage mismatch")
                 residual_input_rms={n:(s/c).sqrt() for n,(s,c,_) in stats.items()}
-                if args.awq_residual_response_svd:
-                    residual_input_rows={n:torch.cat(rows) for n,rows in residual_input_rows.items()}
                 save_json(args.output/"residual_input_statistics.json",{n:{"rows":stats[n][1],"rms":r.tolist()} for n,r in residual_input_rms.items()})
             for name, (entry, bits, group_size) in target_plan.items():
                 if list(modules[name].weight.shape) != entry["shape"]:
@@ -632,8 +615,7 @@ def main():
                 if residual_selected:
                     from low_rank_recovery import attach_residual
                     details=attach_residual(modules[name], original_weight, args.awq_residual_rank,
-                        int(hashlib.sha256(name.encode()).hexdigest()[:8],16),
-                        None if args.awq_residual_response_svd else residual_input_rms.get(name),residual_input_rows.get(name))
+                        int(hashlib.sha256(name.encode()).hexdigest()[:8],16),residual_input_rms.get(name))
                     residual_records[name]=details
                     print("RESIDUAL_ATTACHED",name,flush=True)
                     del original_weight
@@ -648,7 +630,6 @@ def main():
             "residual_adapter_parameters": sum(r["adapter_parameters"] for r in residual_records.values()),
             "residual_training_steps": 0,
             "residual_input_token_scope":args.awq_residual_token_scope,
-            "residual_response_svd":args.awq_residual_response_svd,
             "residual_calibration_manifest":residual_calibration_manifest,
             "intervention": intervention, "disable_clip": args.awq_disable_clip,
             "rescue_family": args.awq_rescue_family, "rescue_layers": sorted(rescue_layers),
@@ -677,11 +658,6 @@ def main():
         omitted = {n for _, names, _ in skipped for n in names}
         smoothing_entries = {n: e for n, e in entries.items() if n not in omitted}
         fp32_pairs=[]
-        fp32_vision=None
-        if args.smoothing_vision_fp32:
-            from fp32_smoothing_pairs import promote_vision
-            vision_handles,fp32_vision=promote_vision(model)
-            handles.extend(vision_handles)
         if args.smoothing_pairs_fp32:
             from fp32_smoothing_pairs import promote_pairs
             pair_handles,fp32_pairs=promote_pairs(model,smooth_groups(set(smoothing_entries)))
@@ -719,7 +695,6 @@ def main():
         # 始终保留全部平滑组，与 W/A 消融范围解耦，避免混入额外变量。
         save_json(args.output / "scope.json", {"smoothing_groups": count, "smoothed_inputs": sorted(smoothed),
             "fp32_pairs":fp32_pairs,"smoothing_bypassed":args.smoothing_bypass,
-            "fp32_vision":fp32_vision,
             "teacher_numerical_reference":"FP32_vision_pairs" if args.teacher_fp32_reference else "original_BF16",
                   "smoothing_selection": args.smoothing_selection,
                   "skipped_smoothing_groups": [g[0] for g in skipped],

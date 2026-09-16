@@ -1,0 +1,3 @@
+case,reference,frames,mean_action_mse,max_action_mse,gripper_disagreement_steps,smoothing_groups,within_original_1e4_gate
+fp32-repeat,original BF16,8,5.54434165636053e-05,0.00022873978014104068,2,0,False
+fp32-smooth,FP32 norm/Linear pairs unsmoothed,8,0.00023835645101399905,0.0017622450832277536,1,98,False

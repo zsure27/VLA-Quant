@@ -1,0 +1,362 @@
+[
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40961,
+    "sha256": "05be7aee9f0eac6a42f3b5cf42fda08436a8b07e30f4de6b3017d58c9c7f512b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 47385,
+    "sha256": "e123e1df09a004bb6fa5398f53080b13d9a1ce0ad7f8aa90280989c09553886b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47083,
+    "sha256": "5141b17ee97de2b2e01de8f112c38077d3e723257920085ca53ff46ba04dbc10",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 44674,
+    "sha256": "29968cb826811909fc6f3eaf2f6c21c396a87060724c5e6e14b9c26c0f8f4998",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=5--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 94729,
+    "sha256": "950f328340740278e413251553662f3d5749c3fd5485f1e0a9043d3416c1a889",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 80538,
+    "sha256": "ff7ba2e6bf0964a3894fb1729c137b27d11b860e306101816b405c19f0d1b297",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60396,
+    "sha256": "1e4cac6ddc407f7b9854df4b6ad05487f8aaded9fe8cb41c0945e8ccf26d8b95",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=8--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 82761,
+    "sha256": "2fff81add97eaf74ab4b32c9880a0bf7772416becd7f0f23ee5a4cee4cd22c8e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 55150,
+    "sha256": "c46183a94fcf3ce20d893a93e8a17f09db010c9f55986980063595911a1cfd61",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_23_25--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 54199,
+    "sha256": "96532b0bcc7e9e08c12058731d60e47e4ba0e232de7a5582d900272866f51192",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556/stage-08-15/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41418,
+    "sha256": "5d9677bda8dfc0ec9d935bfc16881f655699cd0adbd9fcb75fd41933a95f1e1b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40269,
+    "sha256": "d9724dad56e1a7b666b2bd9170081754f12a12fcd1d2ba51c7eed64654a6cbc0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42806,
+    "sha256": "4801c1594433a897698d939c43d86b14390265425e512eabf0c88d965aca5b10",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40705,
+    "sha256": "17cccbb513b9208894e803ac99bff59b7c2c408eebb2de88efbc2ba54d7b8fc3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38067,
+    "sha256": "a661a2d68c6358f5abcd20c6c412d7cbfda793e555929e123b58b40827b4cfeb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 45345,
+    "sha256": "bbd8bd34433e024678f50a239fbd3a27b054136eb0b3bd1d18bc29dd8ed7e67e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44746,
+    "sha256": "b46b050c01e82d60c05176423a8deac8b522acd75d08912372b7bf98afeebc2c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43810,
+    "sha256": "42776e4b1cc589c1e5d89e399e564d850df3dc1150fb97ca8b67f2d0d3074b46",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44367,
+    "sha256": "c844c425cea6da4eb0a393974a6d12a15d2d0ae2b7a99294abd85571e81c63fd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44488,
+    "sha256": "1b09a99f713517ec8a7e291fc6996eaa6f1e27ab5b24c66b72924e57f7740ea0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49086,
+    "sha256": "73a431f0db6a834b01483d175014b026ee3ee35e5bdc915c536cf7a39257dfb5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48311,
+    "sha256": "4ab7f2873fbfd914bacc083ae56e3e8c209dbf9dfb52a94d572f7c20fdb85eb5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47451,
+    "sha256": "21db4431a633bd520d803851c2a6964fd9f6ee0b9ba5e6e59d06b76f8dc612c0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 45337,
+    "sha256": "91881a673a096accfffccecac40be0b129fcda40085e394316269b796328ec17",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48026,
+    "sha256": "d45211138ad21ed3557aeed5eecc21154b5127f054933f44929f63bff0b3c216",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48127,
+    "sha256": "ee176e0636e7736ad03f6cfc0707bd4f8195043178b3703dee4d14067747c91a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 45199,
+    "sha256": "f610a87a62aa69d796a8eb4781a096e40fe8768c1bf1657b25c72cdbaba472b9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49407,
+    "sha256": "5ebbd713f22c26674625fe4fa2055568a1bccba2e93d09ead42474a3c377e308",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48015,
+    "sha256": "914820946b83a12c1d0891c1351fb972ca30520c859a3fc24e048d6477b314a4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47660,
+    "sha256": "57be11e7a706235577b3a61bac56b59bbbd3390bf6484e13c632d5bc2e3e3898",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=21--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 100179,
+    "sha256": "34ac1e341af3b1fefea5158a880cf393221680733dcecc368c55e58c755cc9a1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=22--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 99239,
+    "sha256": "0cd0787c57dee08f5042b66d6c916dabe6c6bf3f5cbf1407b0071b9926c1aae6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63514,
+    "sha256": "034c364b5f9b91d2ac3b27a58796a262a80a8709b6b2661cd2469971097bacbf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 64055,
+    "sha256": "7e081604835c589de920234b8ff5ef317cb5922ce51ba71edd7114b1ce8c8603",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 61138,
+    "sha256": "bf2592b51b0aae1d7fa4090f25a8afe8564140da379b556cf5b22ed48bb3c41e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 44638,
+    "sha256": "ca1d6bf7b66eb9696fe7062fe547ce290b1c83552584c33fd51d408790c3b9cf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41044,
+    "sha256": "99783b884e02adaba44dda5d929081cd70b9e53e559d243805c81fe0e672a56a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 43866,
+    "sha256": "ef0c77654826a87af6be899367c823d1c9cab1b943ef2e263ce7a26528238891",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38124,
+    "sha256": "86c4d51d2587909feddedecdda26f40f16b59c2ac8c90f9aec56b527b4a4bb89",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38959,
+    "sha256": "a360e54f009ed4fcedf09b56d91274bdd5711b508c7ec5109348093b657d2141",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 62962,
+    "sha256": "ee9e21b3a939e0265d530fb88bee68c8aff1d81d8cd5ed64082f8770937df6d3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 78011,
+    "sha256": "bdce31c6f9e3bd35e01ff7d548a413bba84de39cb62d1a25763a1af7319b645b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57115,
+    "sha256": "7345cb8083e3529b77497a6f58d82ac3884d3560a4859a1c652f46b720a6add4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 58251,
+    "sha256": "36e27304d027f472e216820451b5ea5d10c45ee54412259e9c1d9cde79e280cd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59432,
+    "sha256": "baa831eb06db7b335646f36cefa1e8d104826e584291a6e5e579164071812fbc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 51795,
+    "sha256": "d8bb8ed792e0b2b260aadc833b2737345f2871b108183713731cd9a40064946f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52432,
+    "sha256": "1c7a6533ef407233449849d40eccf2126e28915a0551739d12f2fdda43601157",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52321,
+    "sha256": "26c23eee78ab6fa4ca98f7481769858f7357d11a1b8ceaf3288cecbf45d71cbc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 51039,
+    "sha256": "d270fb5d9e61e09230274b533c05a0410f130e3d1949fb2f6032fa30593be9bd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 54638,
+    "sha256": "c0d6200bf9cfdb76935aa93f81841414fef39e4bf6a507ccd1b0ef9b2972f426",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 49830,
+    "sha256": "d1221811cdc87072341417f5a211e5de92fb929d48169b6dcba9bcb0ad341793",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 52130,
+    "sha256": "d3779cc7512c4af31ed0e86a0452229e84af3182f71235c64c0e26774f718b83",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 49936,
+    "sha256": "18d3951d760e19ce272bfd2162601412b7862bc259076083c7466581064df5b3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 52050,
+    "sha256": "71f7eec28e1d6ce0e7c2022c5695a766c586683374af5ffdcfffc3c7bfe7b008",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 49646,
+    "sha256": "b06c08604991e7a8da6748f8fdbfae9d3d344b8f6d2066419d602f601e1fd3b7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 53839,
+    "sha256": "03981a8c75116d4a619ff586a990e3d2322ae01e46d4b9eabc0ee228c7a78741",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51713,
+    "sha256": "9bf21ec5f9536e34c75eeb0ed3d18bc1a6434224cca868091fb92cd20a011293",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48258,
+    "sha256": "de8b837ebf1668816d672caa649cf0171c796d5ed2a66a12d73d3c107b3c0bfb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48423,
+    "sha256": "19b2d628ee2691bf5d2076379e4440f0c639451a6f415229f53cb1836bb430f3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_16/2026_09_16-23_30_26--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49380,
+    "sha256": "40c30a92fcc698d59b94579bd7b8f52b8d9f4466aee24657cbed515bea58bb5c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898/stage-08-23/console.log"
+  }
+]

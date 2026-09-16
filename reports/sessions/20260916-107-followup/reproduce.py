@@ -42,6 +42,7 @@ paths = {
     "W4 searched profile": OLD / "awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15/metrics.json",
 }
 records = {k: read(p) for k,p in paths.items()}
+source_paths=set(paths.values())
 names = list(records)
 samples = [[r["sample"] for r in records[n]] for n in names]
 assert samples[0] == samples[1] == samples[2] and len(samples[0]) == 32
@@ -69,6 +70,7 @@ if sq:
     specs = {"Vision both (previous)": OLD / "sq-controls-recheck-20260916-192316-6105/no-language/metrics.json",
              "DINO only": branch / "primary-only/metrics.json", "SigLIP only": branch / "fused-only/metrics.json"}
     rr = {n: read(p) for n,p in specs.items()}
+    source_paths.update(specs.values())
     ss = [[r["sample"] for r in records] for records in rr.values()]
     assert len(ss[0]) == 8 and all(s == ss[0] for s in ss)
     sr = [{"configuration": n, "frames": 8,
@@ -124,6 +126,7 @@ def rollout(path, expected):
     ff=list(path.glob("EVAL-*.txt"))
     assert len(ff)==1 and (path/"exit-code.txt").read_text().strip()=="0"
     text=ff[0].read_text(encoding="utf-8")
+    source_paths.add(ff[0])
     mm=[json.loads(x) for x in re.findall(r"^EPISODE_MANIFEST (.+)$",text,re.M)]
     ss=[x=="True" for x in re.findall(r"^Success: (True|False)$",text,re.M)]
     assert len(mm)==len(ss)==expected and "Episode error:" not in text
@@ -162,7 +165,54 @@ if fifty and (fifty/"exit-code.txt").exists():
     ax.set_xticks([5*i+2 for i in range(10)],range(10)); ax.set_xlabel("Spatial task ID; five initial states per task (0-4)")
     save(fig,"05_stage_08_23_closed_loop50","Exact paired manifests against previous BF16/W4 runs. Mixed precision, vision BF16; no PEFT or packed kernel.")
 
-files = list(RAW.rglob("*"))+list(DATA.rglob("*"))+list(FIG.rglob("*"))+list(paths.values())+[Path(__file__)]
+for prefix,label in (("sq-fp32-pairs-*","FP32 norm/Linear pairs"),("sq-fp32-vision-*","Whole vision FP32")):
+    directory=next(iter(RAW.glob(prefix)),None)
+    if directory and (directory/"complete.json").exists():
+        sr=[]
+        for case,ref in (("fp32-repeat","original BF16"),("fp32-smooth",label+" unsmoothed")):
+            rs=read(directory/case/"metrics.json")
+            assert len(rs)==8
+            scope=read(directory/case/"scope.json")
+            sr.append({"case":case,"reference":ref,"frames":8,
+                "mean_action_mse":float(np.mean([r["normalized_action"]["mse"] for r in rs])),
+                "max_action_mse":max(r["normalized_action"]["mse"] for r in rs),
+                "gripper_disagreement_steps":round(sum(r["raw_gripper_disagreement"]*8 for r in rs)),
+                "smoothing_groups":scope["smoothing_groups"],
+                "within_original_1e4_gate":max(r["normalized_action"]["mse"] for r in rs)<=1e-4})
+        tag="pairs" if "pairs" in prefix else "vision"
+        write(f"sq_fp32_{tag}_summary.csv",sr)
+        write(f"sq_fp32_{tag}_frames.csv",[{"case":case,"sample":r["sample"],"action_mse":r["normalized_action"]["mse"]} for case in ("fp32-repeat","fp32-smooth") for r in read(directory/case/"metrics.json")])
+        fig,ax=plt.subplots(figsize=(8,4))
+        for case in ("fp32-repeat","fp32-smooth"):
+            rs=read(directory/case/"metrics.json")
+            ax.plot(range(8),[r["normalized_action"]["mse"] for r in rs],"o-",label=case)
+        ax.axhline(1e-4,color="k",linestyle="--",label="Original engineering gate")
+        ax.set_xlabel("Control input index (samples64-71)"); ax.set_ylabel("Action MSE"); ax.legend()
+        save(fig,f"07_sq_fp32_{tag}",f"{label}. Repeat vs BF16; smooth vs its own FP32 repeat. Different references; not low-bit/PEFT results.")
+
+weighted=next(iter(RAW.glob("awq-input-diag-residual-*")),None)
+if weighted and (weighted/"complete.json").exists():
+    wr=[]; wf=[]
+    for case in ("all","action"):
+        rs=read(weighted/f"rank-{case}/metrics.json")
+        scope=read(weighted/f"rank-{case}/scope.json")
+        assert len(rs)==32 and [r["sample"] for r in rs]==samples[0]
+        assert len(scope["residual_calibration_manifest"])==8 and scope["residual_training_steps"]==0
+        wr.append({"initialization":case+" token diagonal RMS","rank":8,"frames":32,"calibration_frames":8,
+            "adapter_parameters":scope["residual_adapter_parameters"],"training_steps":0,
+            "mean_action_mse":float(np.mean([r["normalized_action"]["mse"] for r in rs])),
+            "gripper_disagreement_steps":round(sum(r["raw_gripper_disagreement"]*8 for r in rs)),
+            "mean_unexplained_weight_residual":float(np.mean([r["residual_frobenius_unexplained_fraction"] for r in scope["low_rank_residual"].values()])),
+            "mean_unexplained_input_diagonal_residual":float(np.mean([r["input_diagonal_unexplained_fraction"] for r in scope["low_rank_residual"].values()]))})
+        wf.extend({"initialization":case,"sample":r["sample"],"action_mse":r["normalized_action"]["mse"]} for r in rs)
+    write("input_diag_summary.csv",wr); write("input_diag_frames.csv",wf)
+    fig,ax=plt.subplots(figsize=(8,4))
+    ax.bar(["Weight SVD rank8","All-token RMS rank8","Action-token RMS rank8"],
+        [float(next(r for r in summaries if r["rank"]==8)["mean_action_mse"]),wr[0]["mean_action_mse"],wr[1]["mean_action_mse"]])
+    ax.set_ylabel("Mean action MSE vs BF16")
+    save(fig,"08_input_diag_residual","Same rank/parameter budget; 8 calibration, 32 development inputs; diagonal covariance approximation, zero training.")
+
+files = list(RAW.rglob("*"))+list(DATA.rglob("*"))+list(FIG.rglob("*"))+list(source_paths)+list((HERE/"backup").rglob("*"))+[Path(__file__),HERE/"README_CN.md",HERE/"closure.json"]
 manifest = {str(p.relative_to(REPO)).replace("\\", "/"): hashlib.sha256(p.read_bytes().replace(b"\r\n",b"\n") if p.suffix in (".json", ".py", ".svg", ".csv", ".txt", ".log", ".md", ".sh") else p.read_bytes()).hexdigest() for p in files if p.is_file()}
 (HERE / "manifest.json").write_text(json.dumps({"normalization": "LF for text; bytes otherwise", "files":manifest}, indent=2)+"\n", encoding="utf-8")
 print(json.dumps(rows, indent=2))

@@ -1,0 +1,22 @@
+{
+  "session": "20260916-107-followup",
+  "ssh_port": 31263,
+  "verified_hostname": "autodl-container-8b78499521-41be183e",
+  "completed_batches": 8,
+  "dispatch_blocked_by_automatic_approval": true,
+  "last_valid_quota_remaining": {"five_hour": 47, "weekly": 68},
+  "closure_reason": "Repeated automatic approval refusal despite fresh SSH online proof and user's current boot authorization; avoid idle billing, not quota exhaustion",
+  "server_backup": "/root/autodl-tmp/qvla-repro/backups/session107-followup-20260916-000600-852d350",
+  "local_backup": "results/pending-20260916-107-followup/session107-followup-20260916-000600-852d350",
+  "backup_sha256_verified_files": 10,
+  "backup_bytes": 263875140,
+  "original_videos_backed_up": 60,
+  "model_and_calibration_binaries_in_github": false,
+  "trained_adapter_checkpoint": null,
+  "initial_adapter_factor_checkpoint_saved": false,
+  "adapter_restore_note": "Reinitialize from recorded source/profile/calibration/seed and verify offline metrics before rollout; no trained optimizer or unique trained checkpoint exists",
+  "shutdown_request_executed": false,
+  "control_panel_off_verified": false,
+  "control_panel_blocker": "Login required; agent does not log in",
+  "instance_deleted": false
+}

@@ -7,6 +7,21 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"diagnostics"))
 from low_rank_recovery import attach_residual
 
 class RecoveryContractTest(unittest.TestCase):
+    def test_response_subspace_recovers_calibration_directions(self):
+        base=torch.nn.Linear(8,6,bias=False); base.weight.data.zero_()
+        teacher=torch.zeros(6,8); teacher[0,0]=1; teacher[1,1]=2
+        x=torch.zeros(2,8); x[0,0]=10; x[1,1]=.1
+        detail=attach_residual(base,teacher,1,7,input_rows=x)
+        self.assertLess(detail["response_unexplained_fraction"],.001)
+        self.assertEqual(base.weight.abs().sum(),0)
+    def test_input_weighting_prefers_output_relevant_residual(self):
+        base=torch.nn.Linear(8,6,bias=False); base.weight.data.zero_()
+        teacher=torch.zeros(6,8); teacher[0,0]=1; teacher[1,1]=2
+        rms=torch.ones(8); rms[0]=10; rms[1]=.1
+        detail=attach_residual(base,teacher,1,7,rms)
+        self.assertLess(detail["input_diagonal_unexplained_fraction"],.001)
+        self.assertGreater(detail["residual_frobenius_unexplained_fraction"],.7)
+        self.assertEqual(base.weight.abs().sum(),0)
     def test_frozen_grid_gradient_and_restore(self):
         torch.manual_seed(7)
         base=torch.nn.Linear(8,6,bias=False)

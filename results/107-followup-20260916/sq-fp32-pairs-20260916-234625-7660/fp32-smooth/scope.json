@@ -1,0 +1,765 @@
+{
+  "smoothing_groups": 98,
+  "smoothed_inputs": [
+    "vision_backbone.featurizer.blocks.0.attn.qkv",
+    "vision_backbone.featurizer.blocks.0.mlp.fc1",
+    "vision_backbone.featurizer.blocks.1.attn.qkv",
+    "vision_backbone.featurizer.blocks.1.mlp.fc1",
+    "vision_backbone.featurizer.blocks.10.attn.qkv",
+    "vision_backbone.featurizer.blocks.10.mlp.fc1",
+    "vision_backbone.featurizer.blocks.11.attn.qkv",
+    "vision_backbone.featurizer.blocks.11.mlp.fc1",
+    "vision_backbone.featurizer.blocks.12.attn.qkv",
+    "vision_backbone.featurizer.blocks.12.mlp.fc1",
+    "vision_backbone.featurizer.blocks.13.attn.qkv",
+    "vision_backbone.featurizer.blocks.13.mlp.fc1",
+    "vision_backbone.featurizer.blocks.14.attn.qkv",
+    "vision_backbone.featurizer.blocks.14.mlp.fc1",
+    "vision_backbone.featurizer.blocks.15.attn.qkv",
+    "vision_backbone.featurizer.blocks.15.mlp.fc1",
+    "vision_backbone.featurizer.blocks.16.attn.qkv",
+    "vision_backbone.featurizer.blocks.16.mlp.fc1",
+    "vision_backbone.featurizer.blocks.17.attn.qkv",
+    "vision_backbone.featurizer.blocks.17.mlp.fc1",
+    "vision_backbone.featurizer.blocks.18.attn.qkv",
+    "vision_backbone.featurizer.blocks.18.mlp.fc1",
+    "vision_backbone.featurizer.blocks.19.attn.qkv",
+    "vision_backbone.featurizer.blocks.19.mlp.fc1",
+    "vision_backbone.featurizer.blocks.2.attn.qkv",
+    "vision_backbone.featurizer.blocks.2.mlp.fc1",
+    "vision_backbone.featurizer.blocks.20.attn.qkv",
+    "vision_backbone.featurizer.blocks.20.mlp.fc1",
+    "vision_backbone.featurizer.blocks.21.attn.qkv",
+    "vision_backbone.featurizer.blocks.21.mlp.fc1",
+    "vision_backbone.featurizer.blocks.22.attn.qkv",
+    "vision_backbone.featurizer.blocks.22.mlp.fc1",
+    "vision_backbone.featurizer.blocks.3.attn.qkv",
+    "vision_backbone.featurizer.blocks.3.mlp.fc1",
+    "vision_backbone.featurizer.blocks.4.attn.qkv",
+    "vision_backbone.featurizer.blocks.4.mlp.fc1",
+    "vision_backbone.featurizer.blocks.5.attn.qkv",
+    "vision_backbone.featurizer.blocks.5.mlp.fc1",
+    "vision_backbone.featurizer.blocks.6.attn.qkv",
+    "vision_backbone.featurizer.blocks.6.mlp.fc1",
+    "vision_backbone.featurizer.blocks.7.attn.qkv",
+    "vision_backbone.featurizer.blocks.7.mlp.fc1",
+    "vision_backbone.featurizer.blocks.8.attn.qkv",
+    "vision_backbone.featurizer.blocks.8.mlp.fc1",
+    "vision_backbone.featurizer.blocks.9.attn.qkv",
+    "vision_backbone.featurizer.blocks.9.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.0.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.0.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.1.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.1.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.10.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.10.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.11.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.11.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.12.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.12.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.13.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.13.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.14.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.14.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.15.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.15.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.16.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.16.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.17.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.17.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.18.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.18.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.19.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.19.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.2.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.2.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.20.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.20.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.21.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.21.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.22.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.22.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.23.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.23.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.24.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.24.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.25.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.25.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.3.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.3.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.4.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.4.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.5.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.5.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.6.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.6.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.7.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.7.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.8.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.8.mlp.fc1",
+    "vision_backbone.fused_featurizer.blocks.9.attn.qkv",
+    "vision_backbone.fused_featurizer.blocks.9.mlp.fc1"
+  ],
+  "fp32_pairs": [
+    {
+      "norm": "vision_backbone.featurizer.blocks.0.norm1",
+      "linear": "vision_backbone.featurizer.blocks.0.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.0.norm2",
+      "linear": "vision_backbone.featurizer.blocks.0.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.1.norm1",
+      "linear": "vision_backbone.featurizer.blocks.1.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.1.norm2",
+      "linear": "vision_backbone.featurizer.blocks.1.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.10.norm1",
+      "linear": "vision_backbone.featurizer.blocks.10.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.10.norm2",
+      "linear": "vision_backbone.featurizer.blocks.10.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.11.norm1",
+      "linear": "vision_backbone.featurizer.blocks.11.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.11.norm2",
+      "linear": "vision_backbone.featurizer.blocks.11.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.12.norm1",
+      "linear": "vision_backbone.featurizer.blocks.12.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.12.norm2",
+      "linear": "vision_backbone.featurizer.blocks.12.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.13.norm1",
+      "linear": "vision_backbone.featurizer.blocks.13.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.13.norm2",
+      "linear": "vision_backbone.featurizer.blocks.13.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.14.norm1",
+      "linear": "vision_backbone.featurizer.blocks.14.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.14.norm2",
+      "linear": "vision_backbone.featurizer.blocks.14.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.15.norm1",
+      "linear": "vision_backbone.featurizer.blocks.15.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.15.norm2",
+      "linear": "vision_backbone.featurizer.blocks.15.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.16.norm1",
+      "linear": "vision_backbone.featurizer.blocks.16.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.16.norm2",
+      "linear": "vision_backbone.featurizer.blocks.16.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.17.norm1",
+      "linear": "vision_backbone.featurizer.blocks.17.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.17.norm2",
+      "linear": "vision_backbone.featurizer.blocks.17.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.18.norm1",
+      "linear": "vision_backbone.featurizer.blocks.18.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.18.norm2",
+      "linear": "vision_backbone.featurizer.blocks.18.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.19.norm1",
+      "linear": "vision_backbone.featurizer.blocks.19.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.19.norm2",
+      "linear": "vision_backbone.featurizer.blocks.19.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.2.norm1",
+      "linear": "vision_backbone.featurizer.blocks.2.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.2.norm2",
+      "linear": "vision_backbone.featurizer.blocks.2.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.20.norm1",
+      "linear": "vision_backbone.featurizer.blocks.20.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.20.norm2",
+      "linear": "vision_backbone.featurizer.blocks.20.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.21.norm1",
+      "linear": "vision_backbone.featurizer.blocks.21.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.21.norm2",
+      "linear": "vision_backbone.featurizer.blocks.21.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.22.norm1",
+      "linear": "vision_backbone.featurizer.blocks.22.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.22.norm2",
+      "linear": "vision_backbone.featurizer.blocks.22.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.3.norm1",
+      "linear": "vision_backbone.featurizer.blocks.3.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.3.norm2",
+      "linear": "vision_backbone.featurizer.blocks.3.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.4.norm1",
+      "linear": "vision_backbone.featurizer.blocks.4.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.4.norm2",
+      "linear": "vision_backbone.featurizer.blocks.4.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.5.norm1",
+      "linear": "vision_backbone.featurizer.blocks.5.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.5.norm2",
+      "linear": "vision_backbone.featurizer.blocks.5.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.6.norm1",
+      "linear": "vision_backbone.featurizer.blocks.6.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.6.norm2",
+      "linear": "vision_backbone.featurizer.blocks.6.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.7.norm1",
+      "linear": "vision_backbone.featurizer.blocks.7.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.7.norm2",
+      "linear": "vision_backbone.featurizer.blocks.7.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.8.norm1",
+      "linear": "vision_backbone.featurizer.blocks.8.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.8.norm2",
+      "linear": "vision_backbone.featurizer.blocks.8.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.9.norm1",
+      "linear": "vision_backbone.featurizer.blocks.9.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3150848
+    },
+    {
+      "norm": "vision_backbone.featurizer.blocks.9.norm2",
+      "linear": "vision_backbone.featurizer.blocks.9.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4200448
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.0.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.0.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.0.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.0.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.1.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.1.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.1.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.1.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.10.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.10.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.10.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.10.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.11.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.11.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.11.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.11.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.12.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.12.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.12.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.12.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.13.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.13.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.13.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.13.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.14.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.14.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.14.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.14.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.15.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.15.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.15.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.15.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.16.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.16.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.16.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.16.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.17.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.17.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.17.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.17.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.18.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.18.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.18.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.18.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.19.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.19.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.19.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.19.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.2.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.2.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.2.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.2.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.20.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.20.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.20.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.20.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.21.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.21.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.21.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.21.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.22.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.22.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.22.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.22.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.23.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.23.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.23.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.23.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.24.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.24.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.24.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.24.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.25.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.25.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.25.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.25.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.3.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.3.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.3.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.3.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.4.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.4.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.4.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.4.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.5.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.5.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.5.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.5.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.6.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.6.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.6.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.6.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.7.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.7.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.7.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.7.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.8.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.8.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.8.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.8.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.9.norm1",
+      "linear": "vision_backbone.fused_featurizer.blocks.9.attn.qkv",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 3987072
+    },
+    {
+      "norm": "vision_backbone.fused_featurizer.blocks.9.norm2",
+      "linear": "vision_backbone.fused_featurizer.blocks.9.mlp.fc1",
+      "output_dtype": "torch.bfloat16",
+      "fp32_parameter_elements": 4964816
+    }
+  ],
+  "smoothing_bypassed": false,
+  "teacher_numerical_reference": "FP32_vision_pairs",
+  "smoothing_selection": "no-language",
+  "skipped_smoothing_groups": [
+    "language_model.model.layers.0.post_attention_layernorm",
+    "language_model.model.layers.0.input_layernorm",
+    "language_model.model.layers.1.post_attention_layernorm",
+    "language_model.model.layers.1.input_layernorm",
+    "language_model.model.layers.10.post_attention_layernorm",
+    "language_model.model.layers.10.input_layernorm",
+    "language_model.model.layers.11.post_attention_layernorm",
+    "language_model.model.layers.11.input_layernorm",
+    "language_model.model.layers.12.post_attention_layernorm",
+    "language_model.model.layers.12.input_layernorm",
+    "language_model.model.layers.13.post_attention_layernorm",
+    "language_model.model.layers.13.input_layernorm",
+    "language_model.model.layers.14.post_attention_layernorm",
+    "language_model.model.layers.14.input_layernorm",
+    "language_model.model.layers.15.post_attention_layernorm",
+    "language_model.model.layers.15.input_layernorm",
+    "language_model.model.layers.16.post_attention_layernorm",
+    "language_model.model.layers.16.input_layernorm",
+    "language_model.model.layers.17.post_attention_layernorm",
+    "language_model.model.layers.17.input_layernorm",
+    "language_model.model.layers.18.post_attention_layernorm",
+    "language_model.model.layers.18.input_layernorm",
+    "language_model.model.layers.19.post_attention_layernorm",
+    "language_model.model.layers.19.input_layernorm",
+    "language_model.model.layers.2.post_attention_layernorm",
+    "language_model.model.layers.2.input_layernorm",
+    "language_model.model.layers.20.post_attention_layernorm",
+    "language_model.model.layers.20.input_layernorm",
+    "language_model.model.layers.21.post_attention_layernorm",
+    "language_model.model.layers.21.input_layernorm",
+    "language_model.model.layers.22.post_attention_layernorm",
+    "language_model.model.layers.22.input_layernorm",
+    "language_model.model.layers.23.post_attention_layernorm",
+    "language_model.model.layers.23.input_layernorm",
+    "language_model.model.layers.24.post_attention_layernorm",
+    "language_model.model.layers.24.input_layernorm",
+    "language_model.model.layers.25.post_attention_layernorm",
+    "language_model.model.layers.25.input_layernorm",
+    "language_model.model.layers.26.post_attention_layernorm",
+    "language_model.model.layers.26.input_layernorm",
+    "language_model.model.layers.27.post_attention_layernorm",
+    "language_model.model.layers.27.input_layernorm",
+    "language_model.model.layers.28.post_attention_layernorm",
+    "language_model.model.layers.28.input_layernorm",
+    "language_model.model.layers.29.post_attention_layernorm",
+    "language_model.model.layers.29.input_layernorm",
+    "language_model.model.layers.3.post_attention_layernorm",
+    "language_model.model.layers.3.input_layernorm",
+    "language_model.model.layers.30.post_attention_layernorm",
+    "language_model.model.layers.30.input_layernorm",
+    "language_model.model.layers.31.post_attention_layernorm",
+    "language_model.model.layers.31.input_layernorm",
+    "language_model.model.layers.4.post_attention_layernorm",
+    "language_model.model.layers.4.input_layernorm",
+    "language_model.model.layers.5.post_attention_layernorm",
+    "language_model.model.layers.5.input_layernorm",
+    "language_model.model.layers.6.post_attention_layernorm",
+    "language_model.model.layers.6.input_layernorm",
+    "language_model.model.layers.7.post_attention_layernorm",
+    "language_model.model.layers.7.input_layernorm",
+    "language_model.model.layers.8.post_attention_layernorm",
+    "language_model.model.layers.8.input_layernorm",
+    "language_model.model.layers.9.post_attention_layernorm",
+    "language_model.model.layers.9.input_layernorm"
+  ],
+  "weight_targets": [],
+  "activation_targets": [],
+  "alpha": 0.5
+}

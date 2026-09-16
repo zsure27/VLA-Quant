@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-09-16T16:06:35.239118+00:00",
+  "label": "session107-followup-20260916",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-family-precision-20260916-231456-1371",
+    "/root/autodl-tmp/qvla-repro/artifacts/sq-controls-recheck-20260916-231858-1844",
+    "/root/autodl-tmp/qvla-repro/artifacts/sq-local-equivalence-20260916-232709-3496",
+    "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue10-20260916-232303-2556",
+    "/root/autodl-tmp/qvla-repro/eval/language-stage-rescue50-20260916-232958-3898",
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-low-rank-residual-20260916-233954-6900",
+    "/root/autodl-tmp/qvla-repro/artifacts/sq-fp32-pairs-20260916-234625-7660",
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-input-diag-residual-20260916-235145-8370"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}
