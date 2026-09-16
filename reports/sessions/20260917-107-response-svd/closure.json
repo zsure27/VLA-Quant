@@ -10,7 +10,7 @@
   },
   "completed_gpu_tests": 3,
   "matched_rms_rank16_status": "COMPLETE_EXIT_0",
-  "shutdown_request_executed": false,
+  "shutdown_request_executed": true,
   "control_panel_off_verified": false,
   "instance_deleted": false,
   "training_steps": 0,
@@ -21,5 +21,20 @@
   "backup_verified_files": 10,
   "backup_bytes": 13079907,
   "closure_reason": "Three planned finite SVD tests complete; next meaningful training/rollout expected beyond remaining budget; reserve safe backup/shutdown",
-  "native_shutdown_planned": true
+  "native_shutdown_planned": false,
+  "shutdown_request_time_utc": "2026-09-16T16:50:14.957024+00:00",
+  "shutdown_request_time_beijing": "2026-09-17 00:50:14",
+  "shutdown_supervisor_pid": 838,
+  "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+  "ssh_closed_by_remote_host": true,
+  "verified_github_commit_before_shutdown": "8933d11434409c967d4613a2e6c9dff1c022a437",
+  "control_panel_note": "No platform login or page operation; native request plus SSH remote closure only",
+  "removed_verified_duplicate_historical_launch_logs": [
+    "results/107-response-svd-20260917/family-precision-launch.log",
+    "results/107-response-svd-20260917/language-stage-rescue-a-launch.log",
+    "results/107-response-svd-20260917/language-stage-rescue-a-retry1-launch.log",
+    "results/107-response-svd-20260917/language-stage-rescue-b-launch.log",
+    "results/107-response-svd-20260917/sq-controls-negative-launch.log",
+    "results/107-response-svd-20260917/sq-controls-recheck-launch.log"
+  ]
 }
