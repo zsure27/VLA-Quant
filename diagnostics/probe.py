@@ -348,6 +348,10 @@ def main():
     p.add_argument("--awq-rescue-layers", default="")
     p.add_argument("--awq-residual-rank", type=int, default=0)
     p.add_argument("--awq-residual-layers", default="")
+    p.add_argument("--smoothing-pairs-fp32", action="store_true")
+    p.add_argument("--smoothing-bypass", action="store_true")
+    p.add_argument("--export-candidate-teacher", action="store_true")
+    p.add_argument("--teacher-fp32-reference", action="store_true")
     p.add_argument("--awq-vision-bits", type=int, choices=(2, 4, 16), default=16)
     p.add_argument("--awq-vision-profile", type=Path)
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
@@ -381,6 +385,11 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
+    if args.smoothing_pairs_fp32 and (args.mode != "smoothquant" or args.weight_bits != 16 or args.activation_bits != 16 or
+        args.smoothing_selection not in ("no-language", "only-primary-vision", "only-fused-vision")):
+        p.error("FP32 pairs are vision-only smoothing W16A16 numerical diagnostics")
+    if (args.smoothing_bypass or args.export_candidate_teacher or args.teacher_fp32_reference) and not args.smoothing_pairs_fp32:
+        p.error("Numerical reference flags require FP32 vision pairs")
     from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan, family_precision_plan
     w4_layers = parse_layers(args.awq_w4_layers)
     rescue_layers = parse_layers(args.awq_rescue_layers)
@@ -493,6 +502,9 @@ def main():
         raise ValueError("校准/探针模型源码或 attention 后端不同")
     checkpoint_meta = {str(f.relative_to(args.checkpoint)): digest(f) for f in Path(args.checkpoint).glob("*.json")}
     manifest = {
+        "fp32_smoothing_pairs": args.smoothing_pairs_fp32,
+        "fp32_smoothing_selection": args.smoothing_selection if args.smoothing_pairs_fp32 else None,
+        "smoothing_bypassed": args.smoothing_bypass,
         "torch": torch.__version__, "transformers": transformers.__version__, "timm": timm.__version__,
         "gpu": torch.cuda.get_device_name(),
         "adapter_sha256": digest(adapter_module.__file__), "helper_sha256": digest(helper_module.__file__),
@@ -521,6 +533,10 @@ def main():
         if args.teacher_dir is None:
             raise ValueError("候选用例需要 --teacher-dir")
         teacher_manifest = json.loads((args.teacher_dir / "manifest.json").read_text())
+        if bool(teacher_manifest.get("fp32_smoothing_pairs",False)) != args.teacher_fp32_reference:
+            raise ValueError("Teacher numerical path must be explicitly selected")
+        if args.teacher_fp32_reference and teacher_manifest.get("fp32_smoothing_selection") != args.smoothing_selection:
+            raise ValueError("FP32 teacher pair selection mismatch")
         if teacher_manifest["attention_layers"] != attention_layers:
             raise ValueError("教师与候选必须选择相同的 attention 采样层")
         for key in ("torch", "transformers", "timm", "seed", "model_source_sha256", "adapter_sha256", "helper_sha256", "llm_attention", "vision_fused_attention", "checkpoint_json_sha256", "checkpoint_identity", "checkpoint", "samples"):
@@ -592,8 +608,13 @@ def main():
         skipped = [g for g in groups if excluded_norm(g[0], args.smoothing_selection)]
         omitted = {n for _, names, _ in skipped for n in names}
         smoothing_entries = {n: e for n, e in entries.items() if n not in omitted}
-        count = apply_smoothquant_smoothing(model, smoothing_entries, official, alpha)
-        smoothed = {n for _, names, _ in smooth_groups(set(smoothing_entries)) for n in names}
+        fp32_pairs=[]
+        if args.smoothing_pairs_fp32:
+            from fp32_smoothing_pairs import promote_pairs
+            pair_handles,fp32_pairs=promote_pairs(model,smooth_groups(set(smoothing_entries)))
+            handles.extend(pair_handles)
+        count = 0 if args.smoothing_bypass else apply_smoothquant_smoothing(model, smoothing_entries, official, alpha)
+        smoothed = set() if args.smoothing_bypass else {n for _, names, _ in smooth_groups(set(smoothing_entries)) for n in names}
         w_names, a_names = [], []
         quantize = official["smooth_activation_quantize"]
         if args.activation_math_fp32:
@@ -624,6 +645,8 @@ def main():
                 a_names.append(name)
         # 始终保留全部平滑组，与 W/A 消融范围解耦，避免混入额外变量。
         save_json(args.output / "scope.json", {"smoothing_groups": count, "smoothed_inputs": sorted(smoothed),
+            "fp32_pairs":fp32_pairs,"smoothing_bypassed":args.smoothing_bypass,
+            "teacher_numerical_reference":"FP32_vision_pairs" if args.teacher_fp32_reference else "original_BF16",
                   "smoothing_selection": args.smoothing_selection,
                   "skipped_smoothing_groups": [g[0] for g in skipped],
                   "weight_targets": w_names, "activation_targets": a_names, "alpha": alpha})
@@ -640,6 +663,10 @@ def main():
             if tap:
                 tap.reset()
             raw, normalized, input_hashes = predict(path, cfg, model, head, proprio, processor)
+            if args.export_candidate_teacher:
+                torch.save({"raw":raw,"normalized":normalized,"traces":recorder.traces,
+                    "attention":tap.data if tap else {},"projector":recorder.projector,"input_hashes":input_hashes},
+                    args.output/(path.stem+".pt"))
             if recorder.projector is None:
                 raise RuntimeError("Projector did not execute")
             if args.mode == "teacher":

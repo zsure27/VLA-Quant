@@ -85,6 +85,26 @@ if sq:
     ax.legend(fontsize=8)
     save(fig, "02_sq_vision_branches", "W16A16: smoothing only; language unsmoothed. Curves cannot be added as independent causes.")
 
+lowrank=next(iter(RAW.glob("awq-low-rank-residual-*")),None)
+if lowrank and (lowrank/"complete.json").exists():
+    summaries=[]; perframe=[]
+    for rank in (4,8):
+        rs=read(lowrank/f"rank-{rank}/metrics.json")
+        scope=read(lowrank/f"rank-{rank}/scope.json")
+        assert [r["sample"] for r in rs]==samples[0]
+        assert scope["residual_training_steps"]==0 and len(scope["low_rank_residual"])==56
+        summaries.append({"rank":rank,"frames":32,"mean_action_mse":float(np.mean([r["normalized_action"]["mse"] for r in rs])),
+            "gripper_disagreement_steps":round(sum(r["raw_gripper_disagreement"]*8 for r in rs)),
+            "adapter_parameters":scope["residual_adapter_parameters"],"training_steps":0,
+            "mean_unexplained_weight_residual":float(np.mean([r["residual_frobenius_unexplained_fraction"] for r in scope["low_rank_residual"].values()]))})
+        perframe.extend({"rank":rank,"sample":r["sample"],"action_mse":r["normalized_action"]["mse"]} for r in rs)
+    write("low_rank_summary.csv",summaries); write("low_rank_frames.csv",perframe)
+    fig,ax=plt.subplots(figsize=(8,4))
+    ax.bar(["W2 baseline","Residual rank 4","Residual rank 8","Stage 8-15 W4"],
+        [rows[0]["mean_action_mse"],summaries[0]["mean_action_mse"],summaries[1]["mean_action_mse"],rows[1]["mean_action_mse"]])
+    ax.set_ylabel("Mean action MSE vs BF16 teacher")
+    save(fig,"06_low_rank_residual","32 development inputs, layers 8-15, BF16 residual branch; SVD initialization, zero training steps. No closed-loop claim.")
+
 local = next(iter(RAW.glob("sq-local*/measurement/metrics.json")), None)
 if local:
     lr=read(local)
