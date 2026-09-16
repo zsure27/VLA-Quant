@@ -7,7 +7,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$instanceLabel = if ($SshPort -eq 19111) { '014 (3fbf46b812-2fdd6883)' } elseif ($SshPort -eq 16917) { '031 (full instance ID pending verification)' } else { "SSH port $SshPort" }
+$instanceLabel = if ($SshPort -eq 19111) { '014 (3fbf46b812-2fdd6883)' } elseif ($SshPort -eq 16917) { '031 (e20e41a3dd-28bdf913)' } else { "SSH port $SshPort" }
 $repo = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
 $remoteScript = '/root/autodl-tmp/qvla-repro/scripts/vla_fast_remote.sh'
 $remote = '{0}@{1}' -f $SshUser, $SshHost
@@ -16,7 +16,7 @@ if ($IdentityFile) {
     $sshArgs += @('-i',(Resolve-Path -LiteralPath $IdentityFile).Path)
 }
 
-if ((& git -C $repo remote get-url origin) -ne 'https://github.com/zsure27/VLA-Quant.git') {
+if ((& git -c "safe.directory=$repo" -C $repo remote get-url origin) -ne 'https://github.com/zsure27/VLA-Quant.git') {
     throw 'Git remote is not zsure27/VLA-Quant.'
 }
 
