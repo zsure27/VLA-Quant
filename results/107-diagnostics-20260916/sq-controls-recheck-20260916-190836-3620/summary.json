@@ -1,0 +1,18 @@
+{
+  "repeat": {
+    "frames": 8,
+    "mean_action_mse": 0.0,
+    "max_action_mse": 0.0,
+    "gripper_disagreement_steps": 0,
+    "engineering_threshold": 1e-10,
+    "within_threshold": true
+  },
+  "smooth-only": {
+    "frames": 8,
+    "mean_action_mse": 0.00015435650649919808,
+    "max_action_mse": 0.0010221635457128286,
+    "gripper_disagreement_steps": 1,
+    "engineering_threshold": 0.0001,
+    "within_threshold": false
+  }
+}

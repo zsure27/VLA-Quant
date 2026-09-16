@@ -168,7 +168,7 @@ SQ W4A4 可作为第二条验证线路：若 T1 等价性和梯度接口修好�
 
 ## 6. 后续执行与周末讨论
 
-详细顺序、每项对照与晋级条件见 [EXPERIMENT_PLAN_CN.md](EXPERIMENT_PLAN_CN.md)；PDF 与 Contextual Routing 的精读、公式和迁移边界见 [CONTEXTUAL_ROUTING_CN.md](CONTEXTUAL_ROUTING_CN.md)。现在无可用 GPU，先将配置、代码、图表规范准备完；不承诺周末前已完成尚未运行的训练。
+详细顺序、每项对照与晋级条件见 [EXPERIMENT_PLAN_CN.md](EXPERIMENT_PLAN_CN.md)；PDF 与 Contextual Routing 的精读、公式和迁移边界见 [CONTEXTUAL_ROUTING_CN.md](CONTEXTUAL_ROUTING_CN.md)。初始规划阶段无可用GPU；用户随后克隆到107，已开展有限诊断，新证据另附下一节。不承诺周末前完成尚未运行的训练。
 
 请优先与师兄讨论：主要贡献选 W2 恢复还是 A4 恢复？必须统一 W2 还是允许明确预算的少量 W4？首先需要 PTQ 还是允许有 teacher/训练数据的 PEFT？能否获得 OFT 原基础模型和准确 adapter 来源？论文必须包含哪种真实 kernel 与硬件测量？Contextual Routing 的互补性门槛是否足以支持额外复杂度？
 
@@ -185,3 +185,13 @@ python reports/2026-09-16-weekend-review/scripts/build_figures.py
 今后每轮备份建立 `reports/sessions/YYYYMMDD-SESSION/`，包含本轮结论、图、对应源数据、运行/分析 manifest、问题与下一条命令；原始 logs/configs/metrics 放 `results/SESSION/` 并互相引用。规范见 [sessions/README_CN.md](../sessions/README_CN.md)。大量 weights/profile/数据仅提交 hash 与持久盘恢复清单，不把普通 Git 当模型盘；仅存一个清单并不意味着大文件已异地备份。
 
 本輪不上传原 PDF 全文、私人文档全文、凭据和密钥。不删除待同步的唯一结果。若之后服务器开着而无法派发实验，先修连接/依赖/执行入口；确认不可恢复或无可用实验就快速保存并关机，不能留在“已准备但未派发”状态继续计费。
+
+## 8. 107机新证据附录：中段回退与SQ数值定位
+
+本报告前述六图保留为107开机前的历史证据快照。2026-09-16新运行、图表、逐帧/逐taskCSV及hash见[本轮session报告](../sessions/20260916-107-diagnostics/README_CN.md)。不将不同版本或历史重复控制累加为独立样本量。
+
+32帧语言W2/no-clip基线平均教师动作MSE为0.06972661；0–7、8–15、16–23、24–31整段使用W4profile分别为0.05122427、0.02968988、0.03583929、0.06314109。中段优先级得到全前向证据，而不是只由局部Linear重构MSE推断。
+
+配对十初态闭环，新语言8–15回退W4为7/10，8–23为9/10；与既有语言W2/no-clip 1/10、BF16 9/10的episode初态hash和全部种子完全一致。8–23恢复了这十个开发初态上的BF16成功集合，但保留半数语言blocks的W4权重且视觉BF16，**不是纯W2恢复、不是PEFT、不是最终测试成功率**。说明损伤具有可干预性，应缩小修复范围、比较静态低秩/冻结码尺度方案，并在未见初态检验，而非直接增加Router。
+
+SQ八帧repeat误差0；全组仅平滑W16A16最大动作MSE0.00102216，关闭语言平滑仍0.00056031，均未过原1e-4规则；后一配置用缓存BF16 projector输出替换后误差0。视觉路径的平滑数值差异已能传播成动作偏差，语言独立影响未排除。优先做视觉逐组旁路和FP32局部等价/BF16舍入检查，**不能把该差异归为A4量化损伤，也不能称当前SQ W4A4基线已跑通**。

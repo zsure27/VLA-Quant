@@ -344,6 +344,8 @@ def main():
     p.add_argument("--awq-disable-clip", choices=("none", "all", "attention", "mlp"), default="none")
     p.add_argument("--awq-w4-layers", default="")
     p.add_argument("--awq-w4-profile", type=Path)
+    p.add_argument("--awq-rescue-family", choices=("attention", "mlp"))
+    p.add_argument("--awq-rescue-layers", default="")
     p.add_argument("--awq-vision-bits", type=int, choices=(2, 4, 16), default=16)
     p.add_argument("--awq-vision-profile", type=Path)
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
@@ -377,8 +379,13 @@ def main():
         "language_model.model.layers.15.mlp.gate_proj",
         "language_model.model.layers.15.mlp.down_proj")))
     args = p.parse_args()
-    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan
+    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan, family_precision_plan
     w4_layers = parse_layers(args.awq_w4_layers)
+    rescue_layers = parse_layers(args.awq_rescue_layers)
+    if bool(rescue_layers) != bool(args.awq_rescue_family):
+        p.error("Family rescue requires both layer selection and family")
+    if rescue_layers and (w4_layers or args.awq_w4_profile or args.awq_vision_bits != 16 or args.awq_disable_clip != "all"):
+        p.error("Family precision rescue retains W2 scales, no clipping and BF16 vision; no W4 peer")
     vision_composition = args.awq_vision_bits != 16
     if args.awq_primary_group64_profile and (args.awq_vision_bits != 2 or args.awq_vision_branch not in ('primary', 'all') or args.awq_primary_no_clip):
         p.error('G64对照仅允许primary/all分支W2保留裁剪')
@@ -390,7 +397,7 @@ def main():
         p.error("视觉 W4 必须提供独立 profile，其他视觉位宽不提供该参数")
     if vision_composition and (args.awq_disable_clip != "all" or w4_layers):
         p.error("视觉组合固定语言 W2 全部取消裁剪，不叠加语言 W4 层保护")
-    intervention = args.awq_disable_clip != "none" or bool(w4_layers) or args.awq_w4_profile is not None or vision_composition
+    intervention = args.awq_disable_clip != "none" or bool(w4_layers) or args.awq_w4_profile is not None or vision_composition or bool(rescue_layers)
     if intervention and (args.mode != "awq" or args.weight_scope != ("all" if vision_composition else "language") or
                          args.weight_bits != 2 or args.activation_bits != 16 or args.oracle_projector):
         p.error("AWQ 干预要求语言 W2A16，无 oracle；视觉组合范围用 all，纯语言用 language")
@@ -442,7 +449,8 @@ def main():
         profile_manifest = [{"file": str(args.awq_profile), "sha256": digest(args.awq_profile)}]
         if intervention:
             w4 = load_profiles([args.awq_w4_profile], "awq") if w4_layers else None
-            intervention_plan = plan(entries, meta, args.awq_disable_clip, w4_layers, w4)
+            intervention_plan = (family_precision_plan(entries, meta, rescue_layers, args.awq_rescue_family)
+                                 if rescue_layers else plan(entries, meta, args.awq_disable_clip, w4_layers, w4))
             if w4:
                 profile_manifest.append({"file": str(args.awq_w4_profile), "sha256": digest(args.awq_w4_profile)})
             if vision_composition:
@@ -537,6 +545,8 @@ def main():
             fn(modules[name], entries[name], official, args.weight_bits, meta["group_size"])
         save_json(args.output / "scope.json", {"weight_targets": w_names, "activation_targets": [],
             "intervention": intervention, "disable_clip": args.awq_disable_clip,
+            "rescue_family": args.awq_rescue_family, "rescue_layers": sorted(rescue_layers),
+            "rescue_coordinates": "original_W2_no_clip" if rescue_layers else None,
             "removed_clip_targets": removed if intervention else [],
             "w4_layers": sorted(w4_layers),
             "vision_composition": vision_composition,

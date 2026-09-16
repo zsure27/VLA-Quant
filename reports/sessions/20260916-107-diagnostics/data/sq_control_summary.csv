@@ -1,0 +1,5 @@
+configuration,frames,mean_action_mse,max_action_mse,gripper_disagreements
+repeat,8,0.0,0.0,0
+smooth-only,8,0.00015435650649919808,0.0010221635457128286,1
+no-language,8,0.00010235659767943162,0.0005603093886747956,1
+no-language-oracle,8,0.0,0.0,0

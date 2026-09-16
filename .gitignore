@@ -26,3 +26,6 @@ artifacts/
 Thumbs.db
 *.tmp
 *.bak
+
+# 会话取回的原始归档保留本地，不进入普通Git
+results/pending-*/

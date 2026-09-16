@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
-# Diagnose which LLM stage merits PEFT by rescuing one 8-block stage to W4.
+# Diagnose which LLM stage merits PEFT. PART=A: 0-7/8-15; PART=B: 16-23/24-31.
 set -Eeuo pipefail
 ROOT=/root/autodl-tmp/qvla-repro
 REPO=/root/VLA-Quant
 OVERLAY=$ROOT/overlays/language-stage-rescue
 BASE=$ROOT/artifacts/awq-spatial-20260912-163735-1136
 VALIDATION=$ROOT/artifacts/awq-validation-20260913-132827-1162
-OUT=$ROOT/artifacts/awq-language-stage-rescue-a-$(date +%Y%m%d-%H%M%S)-$$
+PART=${PART:-A}
+case "$PART" in
+  A) names=(stage-00-07 stage-08-15); layer_sets=(0,1,2,3,4,5,6,7 8,9,10,11,12,13,14,15) ;;
+  B) names=(stage-16-23 stage-24-31); layer_sets=(16,17,18,19,20,21,22,23 24,25,26,27,28,29,30,31) ;;
+  *) printf 'PART must be A or B\n' >&2; exit 2 ;;
+esac
+OUT=$ROOT/artifacts/awq-language-stage-rescue-${PART,,}-$(date +%Y%m%d-%H%M%S)-$$
 source /root/miniconda3/bin/activate /root/miniconda3/envs/qvla-oft
 export PYTHONPATH="$OVERLAY/diagnostics:$REPO:$REPO/diagnostics:$ROOT/src/QVLA/openvla-oft:$ROOT/src/LIBERO"
 export CUDA_VISIBLE_DEVICES=0 PYTHONHASHSEED=7 WANDB_MODE=disabled
@@ -19,7 +25,7 @@ test -s "$BASE/profiles/w4.pt"
 test -s "$VALIDATION/w2-no-clip/metrics.json"
 test ! -e "$OUT"
 mkdir -p "$OUT"
-printf '%s\n' "$OUT" > "$ROOT/artifacts/LATEST_LANGUAGE_STAGE_RESCUE_A.txt"
+printf '%s\n' "$OUT" > "$ROOT/artifacts/LATEST_LANGUAGE_STAGE_RESCUE_$PART.txt"
 sha256sum "$OVERLAY/diagnostics/probe.py" "$OVERLAY/diagnostics/awq_interventions.py" "$OVERLAY/diagnostics/smoothing_selection.py" > "$OUT/OVERLAY_SHA256SUMS.txt"
 git -C "$REPO" rev-parse HEAD > "$OUT/base-commit.txt"
 git -C "$REPO" status --short > "$OUT/base-status.txt"
@@ -38,14 +44,14 @@ run() {
   python "$OVERLAY/diagnostics/probe.py" "${common[@]}" \
     --output "$OUT/$name" --awq-w4-layers "$layers" 2>&1 | tee "$OUT/$name.console.log"
 }
-run stage-00-07 0,1,2,3,4,5,6,7
-run stage-08-15 8,9,10,11,12,13,14,15
-python - "$VALIDATION/w2-no-clip/metrics.json" "$OUT" <<'PY'
+run "${names[0]}" "${layer_sets[0]}"
+run "${names[1]}" "${layer_sets[1]}"
+python - "$VALIDATION/w2-no-clip/metrics.json" "$OUT" "${names[@]}" <<'PY'
 import json, statistics, sys
 from pathlib import Path
 baseline_path, root = Path(sys.argv[1]), Path(sys.argv[2])
 rows = {"w2-no-clip": json.loads(baseline_path.read_text())}
-for name in ("stage-00-07", "stage-08-15"):
+for name in sys.argv[3:]:
     rows[name] = json.loads((root / name / "metrics.json").read_text())
 if any(len(value) != 32 for value in rows.values()):
     raise RuntimeError("Expected 32 matched validation samples per candidate")

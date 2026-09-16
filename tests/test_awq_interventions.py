@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "diagnostics"))
 from awq_interventions import (current_w2_candidate_plan, plan, parse_layers,
-                               vision_plan, remove_primary_clips, primary_group_plan)
+                               vision_plan, remove_primary_clips, primary_group_plan, family_precision_plan)
 
 
 def fixture(bits):
@@ -23,6 +23,18 @@ def fixture(bits):
 
 
 class InterventionTest(unittest.TestCase):
+    def test_family_precision_preserves_w2_coordinates_and_source(self):
+        entries, meta = fixture(2)
+        for family, expected in (("attention", 32), ("mlp", 24)):
+            scales, targets, removed = family_precision_plan(entries, meta, set(range(8, 16)), family)
+            self.assertEqual(sum(value[1] == 4 for value in targets.values()), expected)
+            self.assertEqual(scales, meta["block_scales"])
+            self.assertEqual(len(removed), 160)
+            self.assertTrue(all(value[0]["clip_max"] is None for value in targets.values()))
+        self.assertEqual(entries["language_model.model.layers.8.mlp.up_proj"]["clip_max"], 2)
+        with self.assertRaises(ValueError):
+            family_precision_plan(entries, meta, set(), "mlp")
+
     def test_current_w2_candidate_is_exact_composition(self):
         base, meta = fixture(2)
         g64, meta64 = fixture(2)

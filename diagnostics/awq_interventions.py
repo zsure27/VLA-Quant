@@ -131,3 +131,40 @@ def current_w2_candidate_plan(entries, meta, primary_group64_peer):
     if len(targets) != 422 or len(removed) != 160:
         raise ValueError("当前 W2 候选必须是422目标并移除160个语言裁剪")
     return scales, targets, removed
+
+
+def language_stage_rollout_plan(entries, meta, w4_layers, peer):
+    """Complete profile contract; rollout must select language-only scope.
+
+    Vision entries are retained for contract validation, but not applied by the
+    language-only evaluator. Rescued blocks keep their own W4 coordinates/clips.
+    """
+    if not w4_layers:
+        raise ValueError("Stage rescue requires at least one W4 block")
+    scales, targets, removed = plan(entries, meta, "all", w4_layers, peer)
+    targets.update(vision_plan(entries, meta, 2))
+    if len(targets) != 422:
+        raise ValueError("Stage rollout requires the complete 422-target profile")
+    return scales, targets, removed
+
+
+def family_precision_plan(entries, meta, layers, family):
+    """Isolate bit precision with every block retaining its original W2 coordinates.
+
+    Selected attention/MLP linears use four bits with no extra clipping; this
+    deliberately does not borrow a W4 profile or its differently scaled clips.
+    It is a precision diagnostic, not a searched W4 baseline or PEFT method.
+    """
+    if not layers or family not in ("attention", "mlp"):
+        raise ValueError("Family rescue requires layers and attention or mlp")
+    scales, targets, removed = plan(entries, meta, "all", set())
+    selected = []
+    marker = ".self_attn." if family == "attention" else ".mlp."
+    for name, (entry, bits, group) in targets.items():
+        layer = int(name.split(".layers.")[1].split(".")[0])
+        if layer in layers and marker in name:
+            targets[name] = (entry, 4, group)
+            selected.append(name)
+    if len(selected) != len(layers)*(4 if family == "attention" else 3):
+        raise ValueError("Incomplete precision rescue family")
+    return scales, targets, removed

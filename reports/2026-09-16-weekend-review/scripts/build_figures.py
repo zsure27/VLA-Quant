@@ -20,7 +20,8 @@ DATA = REPORT / "data"
 FIG = REPORT / "figures"
 FIG.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({"font.size": 10, "axes.spines.top": False,
-                     "axes.spines.right": False, "savefig.dpi": 180})
+                     "axes.spines.right": False, "savefig.dpi": 180,
+                     "svg.hashsalt": "vla-weekend-review-20260916"})
 SOURCE_FILES = set()
 
 
@@ -39,7 +40,7 @@ def read_csv(path):
 
 def write_csv(name, rows):
     with (DATA / name).open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -51,7 +52,7 @@ def save(fig, name, note):
         fig.axes[1].set_yticklabels([])
         fig.subplots_adjust(left=.23, wspace=.24)
     fig.savefig(FIG / (name + ".png"))
-    fig.savefig(FIG / (name + ".svg"))
+    fig.savefig(FIG / (name + ".svg"), metadata={"Date": None})
     plt.close(fig)
 
 
@@ -217,12 +218,13 @@ fig.suptitle("Selected-case block audit: local reconstruction differs from end-t
 # Manual spacing retains a separate colorbar gutter.
 fig.text(.02, .025, "Three deliberately selected frames; five blocks; medians describe local action-token hidden reconstruction.\nThis is not a complete layer ranking. A local rescue does not establish downstream or closed-loop recovery.", fontsize=8)
 fig.subplots_adjust(bottom=.28, top=.82, left=.07, right=.88, wspace=.20)
-fig.savefig(FIG / "06_selected_block_audit.png"); fig.savefig(FIG / "06_selected_block_audit.svg")
+fig.savefig(FIG / "06_selected_block_audit.png"); fig.savefig(FIG / "06_selected_block_audit.svg", metadata={"Date": None})
 plt.close(fig)
 
 manifest = {
     "report": "2026-09-16-weekend-review", "kind": "local_evidence_review_no_new_gpu_run",
-    "source_files": [{"path": p.relative_to(REPO).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+    "source_hash_format": "Text inputs use UTF-8 bytes with CRLF normalized to LF, matching Git canonical text. Generated files use exact bytes; CSV is written with LF.",
+    "source_files": [{"path": p.relative_to(REPO).as_posix(), "sha256": hashlib.sha256(p.read_bytes().replace(b'\r\n', b'\n')).hexdigest()}
                      for p in sorted(SOURCE_FILES)],
     "generated_files": [{"path": p.relative_to(REPORT).as_posix(), "size_bytes": p.stat().st_size,
                          "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
@@ -230,5 +232,6 @@ manifest = {
     "not_uploaded": ["source PDF/full extracted text", "model weights", "AWQ profile binaries", "full calibration/trajectory data"],
     "verification_limits": "Hashes bind local committed evidence and generated files. They do not prove semantic correctness of server profiles or identity of original paper results. See evidence classifications in the report."
 }
-(REPORT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+with (REPORT / "manifest.json").open("w", encoding="utf-8", newline="\n") as stream:
+    stream.write(json.dumps(manifest, ensure_ascii=False, indent=2)+"\n")
 print("Built 6 figures (PNG + SVG), 8 CSV sidecars and manifest; no GPU used.")

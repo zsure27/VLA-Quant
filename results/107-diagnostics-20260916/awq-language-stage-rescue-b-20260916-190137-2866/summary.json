@@ -1,0 +1,21 @@
+{
+  "w2-no-clip": {
+    "mean_action_mse": 0.06972660918836482,
+    "median_action_mse": 0.0631791464984417,
+    "gripper_disagreement_steps": 15
+  },
+  "stage-16-23": {
+    "mean_action_mse": 0.035839286698319484,
+    "median_action_mse": 0.029405303299427032,
+    "gripper_disagreement_steps": 7,
+    "improved_samples": 32,
+    "worsened_samples": 0
+  },
+  "stage-24-31": {
+    "mean_action_mse": 0.06314108581864275,
+    "median_action_mse": 0.053898515179753304,
+    "gripper_disagreement_steps": 12,
+    "improved_samples": 24,
+    "worsened_samples": 8
+  }
+}
