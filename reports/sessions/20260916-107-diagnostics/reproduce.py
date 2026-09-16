@@ -40,6 +40,8 @@ def save(fig, name, note):
     fig.tight_layout(rect=[0, .13, 1, .94])
     fig.savefig(FIG / (name + ".png"), dpi=180)
     fig.savefig(FIG / (name + ".svg"), metadata={"Date": None})
+    svg = FIG / (name + ".svg")
+    svg.write_bytes(svg.read_bytes().replace(b"\r\n", b"\n"))
     plt.close(fig)
 
 
@@ -227,7 +229,7 @@ if closed_batches:
         closed_summary.append(dict(configuration=name, successes=sum(successes), episodes=10,
             success_rate=sum(successes)/10, paired_manifest_equal=True,
             source=source.relative_to(REPO).as_posix(),
-            source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
+            source_sha256=hashlib.sha256(source.read_bytes().replace(b"\r\n", b"\n")).hexdigest(),
             evidence_class="actual_paired_development_screen_no_peft_no_packing"))
         for m, s in zip(manifests, successes):
             closed_rows.append(dict(configuration=name, **m, success=s))
@@ -244,13 +246,14 @@ if closed_batches:
     save(fig, "05_closed_loop_rescue", "Ten previously inspected development initial states; the historical controls are not additional independent trials.\nNew candidates keep vision BF16. Mixed precision sensitivity intervention, zero trained parameters; no uniform-W2 restoration claim.")
 
 manifest = {"session": "20260916-107-diagnostics", "kind": "gpu_offline_and_closed_loop_diagnostics",
+    "source_hash_format": "Committed text sources are hashed with CRLF normalized to LF; generated CSV/SVG use LF, binary images use exact bytes.",
     "analysis_source_sha256_lf": hashlib.sha256(Path(__file__).read_bytes().replace(b"\r\n", b"\n")).hexdigest(),
     "numpy": np.__version__, "matplotlib": matplotlib.__version__,
-    "raw_files": [{"path": p.relative_to(REPO).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+    "raw_files": [{"path": p.relative_to(REPO).as_posix(), "sha256": hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest()}
                   for p in sorted(RAW.rglob("*")) if p.is_file() and p.suffix != ".npz"],
     "generated_files": [{"path": p.relative_to(HERE).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
                         for p in sorted(list(DATA.glob("*.csv"))+list(FIG.glob("*"))+list((HERE / "video-analysis").glob("*")))],
-    "backup_metadata": [{"path": p.relative_to(HERE).as_posix(), "sha256": hashlib.sha256(p.read_bytes()).hexdigest()}
+    "backup_metadata": [{"path": p.relative_to(HERE).as_posix(), "sha256": hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest()}
                         for p in sorted((HERE / "backup").glob("*")) if p.is_file() and p.suffix != ".md"],
     "scope": "Actual offline teacher agreement and paired development closed-loop screening. No synthetic data, trained PEFT or packed kernel result.",
     "summary": summary_rows, "sq_summary": sq_summary, "closed_loop_summary": closed_summary,

@@ -1,7 +1,8 @@
 {
   "session": "20260916-107-diagnostics",
   "kind": "gpu_offline_and_closed_loop_diagnostics",
-  "analysis_source_sha256_lf": "b7eea53f1a025d1c1eae8528d1a262e86a6e388e60d9009776604be380a32193",
+  "source_hash_format": "Committed text sources are hashed with CRLF normalized to LF; generated CSV/SVG use LF, binary images use exact bytes.",
+  "analysis_source_sha256_lf": "51b9699ae286dad79e0b19e33921240df3c67379d5c3e4be3f644fe2895f44e9",
   "numpy": "1.26.4",
   "matplotlib": "3.11.1",
   "raw_files": [
@@ -445,7 +446,7 @@
     },
     {
       "path": "figures/01_stage_rescue.svg",
-      "sha256": "77aaadfe2ebb39fd2f1932faf9fe6442abf97fa263d470f2f3e0072610826262"
+      "sha256": "db071caf9cda2f300e640d3de5d4c51b92d6206c460952ad89ec46df2cd7a081"
     },
     {
       "path": "figures/02_paired_stage_frames.png",
@@ -453,7 +454,7 @@
     },
     {
       "path": "figures/02_paired_stage_frames.svg",
-      "sha256": "2736a75c64ef9bcd79917329691649542e1ec53bb1095ab7dc4ce9e126f6115e"
+      "sha256": "2e8f6a22364761c8615a68e47db3148a6b730f67f0489f864a628395ac4ab0c4"
     },
     {
       "path": "figures/03_sq_control.png",
@@ -461,7 +462,7 @@
     },
     {
       "path": "figures/03_sq_control.svg",
-      "sha256": "57b459109e63ee8e78f8451efa3153afb8f420e0af276d5de8f36a61a4091143"
+      "sha256": "60800835d1c4160ce0c28588d22e37d2b0f39da3f93a3f8b55b6327868a0cfff"
     },
     {
       "path": "figures/04_action_dimensions.png",
@@ -469,7 +470,7 @@
     },
     {
       "path": "figures/04_action_dimensions.svg",
-      "sha256": "d6c0f48c5560d2293c3747b01ab430e4ebbeddd087f87b4e78e6cbac43398d9a"
+      "sha256": "c1450900f79b5979e1a8ea752cc0b114992f43e5039d8f8a07d37e49c50dfeb3"
     },
     {
       "path": "figures/05_closed_loop_rescue.png",
@@ -477,7 +478,7 @@
     },
     {
       "path": "figures/05_closed_loop_rescue.svg",
-      "sha256": "01486f1715ae0625412a6dbcc81ebd0f5ce04a4719404c23f864cda25e147686"
+      "sha256": "0d8cf7dde16edad5565be65ddcfc456d87a5fbd0616a0502359c93464b1925c7"
     },
     {
       "path": "figures/06_sq_token_partition.png",
@@ -485,7 +486,7 @@
     },
     {
       "path": "figures/06_sq_token_partition.svg",
-      "sha256": "0deb51d0e5c4799dcdd351c1e8f227b4768693645a2840449457028659536e51"
+      "sha256": "7270b42274379003cb9ede120eb461ba223804645b75a9cbf70dad2c012ebe25"
     },
     {
       "path": "figures/07_family_precision.png",
@@ -493,7 +494,7 @@
     },
     {
       "path": "figures/07_family_precision.svg",
-      "sha256": "244b67e9ed6666f9944942cb12b49996e7d4ddb9d8dd646023a00b5513b4bb02"
+      "sha256": "3d40cf418bf9802ea43249302fe78345c3bba7df2e601b614021c5c8c4093d4a"
     },
     {
       "path": "video-analysis/task-5-stage-frames.png",
