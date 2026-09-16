@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-09-16T16:47:18.338070+00:00",
+  "label": "session107-response-svd-20260917",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-response-svd-20260917-003557-1297",
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-response-svd-rms16-20260917-004327-2145"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}

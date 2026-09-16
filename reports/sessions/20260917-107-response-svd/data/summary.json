@@ -1,0 +1,46 @@
+[
+  {
+    "case": "Action RMS rank8",
+    "frames": 32,
+    "calibration_frames": 8,
+    "parameters": 4997120,
+    "training_steps": 0,
+    "mean_action_mse": 0.06544164670049213,
+    "gripper_disagreement_steps": 13,
+    "mean_unexplained_weight_residual": 0.9941409517611776,
+    "mean_unexplained_calibration_response": null
+  },
+  {
+    "case": "Response SVD rank8",
+    "frames": 32,
+    "calibration_frames": 8,
+    "parameters": 4997120,
+    "training_steps": 0,
+    "mean_action_mse": 0.06361106166150421,
+    "gripper_disagreement_steps": 11,
+    "mean_unexplained_weight_residual": 0.9958988502621651,
+    "mean_unexplained_calibration_response": 0.15854692711894
+  },
+  {
+    "case": "Response SVD rank16",
+    "frames": 32,
+    "calibration_frames": 8,
+    "parameters": 9994240,
+    "training_steps": 0,
+    "mean_action_mse": 0.06399096385575831,
+    "gripper_disagreement_steps": 13,
+    "mean_unexplained_weight_residual": 0.9920996853283474,
+    "mean_unexplained_calibration_response": 0.04649541061371565
+  },
+  {
+    "case": "Action RMS rank16",
+    "frames": 32,
+    "calibration_frames": 8,
+    "parameters": 9994240,
+    "training_steps": 0,
+    "mean_action_mse": 0.06503257132135332,
+    "gripper_disagreement_steps": 13,
+    "mean_unexplained_weight_residual": 0.9893635351743016,
+    "mean_unexplained_calibration_response": null
+  }
+]

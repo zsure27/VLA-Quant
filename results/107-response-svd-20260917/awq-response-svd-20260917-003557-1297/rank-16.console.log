@@ -1,0 +1,132 @@
+2026-09-17 00:39:31.418644: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-17 00:39:31.456745: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-17 00:39:31.456771: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-17 00:39:31.458080: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-17 00:39:31.464121: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-17 00:39:32.315880: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+VILA is not installed. Multimodal features will not be available. To activate, please install VILA at https://github.com/NVlabs/VILA.
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+09/17 [00:39:47] WARNING  | >> No private macro file found!        __init__.py:7
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+                 WARNING  | >> It is recommended to use a private  __init__.py:8
+                          macro file                                            
+[robosuite WARNING] To setup, run: python /root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+                 WARNING  | >> To setup, run: python               __init__.py:9
+                          /root/miniconda3/envs/qvla-oft/lib/pytho              
+                          n3.10/site-packages/robosuite/scripts/se              
+                          tup_macros.py                                         
+                 INFO     | >> No OpenGL_accelerate      acceleratesupport.py:24
+                          module loaded: No module named                        
+                          'OpenGL_accelerate'                                   
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Instantiating pretrained VLA policy...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  3.96it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.45it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.62it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.74it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.61it/s]
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+Loaded model: <class 'prismatic.extern.hf.modeling_prismatic.OpenVLAForActionPrediction'>
+RESIDUAL_INPUT_CALIBRATED sample-0064.npz
+RESIDUAL_INPUT_CALIBRATED sample-0065.npz
+RESIDUAL_INPUT_CALIBRATED sample-0066.npz
+RESIDUAL_INPUT_CALIBRATED sample-0067.npz
+RESIDUAL_INPUT_CALIBRATED sample-0068.npz
+RESIDUAL_INPUT_CALIBRATED sample-0069.npz
+RESIDUAL_INPUT_CALIBRATED sample-0070.npz
+RESIDUAL_INPUT_CALIBRATED sample-0071.npz
+RESIDUAL_ATTACHED language_model.model.layers.8.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.8.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.8.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.8.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.8.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.8.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.8.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.9.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.10.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.11.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.12.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.13.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.14.mlp.down_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.self_attn.q_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.self_attn.k_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.self_attn.v_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.self_attn.o_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.mlp.gate_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.mlp.up_proj
+RESIDUAL_ATTACHED language_model.model.layers.15.mlp.down_proj
+[probe] sample-1000.npz
+[probe] sample-1001.npz
+[probe] sample-1002.npz
+[probe] sample-1003.npz
+[probe] sample-1004.npz
+[probe] sample-1005.npz
+[probe] sample-1006.npz
+[probe] sample-1007.npz
+[probe] sample-1008.npz
+[probe] sample-1009.npz
+[probe] sample-1010.npz
+[probe] sample-1011.npz
+[probe] sample-1012.npz
+[probe] sample-1013.npz
+[probe] sample-1014.npz
+[probe] sample-1015.npz
+[probe] sample-1016.npz
+[probe] sample-1017.npz
+[probe] sample-1018.npz
+[probe] sample-1019.npz
+[probe] sample-1020.npz
+[probe] sample-1021.npz
+[probe] sample-1022.npz
+[probe] sample-1023.npz
+[probe] sample-1024.npz
+[probe] sample-1025.npz
+[probe] sample-1026.npz
+[probe] sample-1027.npz
+[probe] sample-1028.npz
+[probe] sample-1029.npz
+[probe] sample-1030.npz
+[probe] sample-1031.npz
+PROBE COMPLETE (offline agreement only; not rollout success)

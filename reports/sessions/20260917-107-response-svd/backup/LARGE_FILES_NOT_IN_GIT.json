@@ -1,0 +1,23 @@
+{
+  "profiles": [
+    {
+      "path": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+      "bytes": 189539454,
+      "sha256": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc"
+    },
+    {
+      "path": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+      "bytes": 189539454,
+      "sha256": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4"
+    },
+    {
+      "path": "/root/autodl-tmp/qvla-repro/artifacts/controls-20260911-234754-1133/profiles/sq/calibration.pt",
+      "bytes": 6271692,
+      "sha256": "33bf528357f2d26e1439dc3db26ed642ef355b5ae89f71a26cb8b0c1b08af1cc"
+    }
+  ],
+  "model_root": "/root/autodl-tmp/qvla-repro/models",
+  "calibration_root": "/root/autodl-tmp/qvla-repro/calib",
+  "existing_validation_teacher": "/root/autodl-tmp/qvla-repro/artifacts/awq-validation-20260913-132827-1162/teacher",
+  "note": "These originals are not inside this archive or ordinary Git. Source clone is not independently audited here."
+}

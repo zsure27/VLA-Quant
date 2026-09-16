@@ -1,0 +1,25 @@
+{
+  "session": "20260917-107-response-svd",
+  "ssh_port": 31263,
+  "verified_hostname": "autodl-container-8b78499521-41be183e",
+  "user_reported_remaining_percent": 27,
+  "last_valid_quota_remaining": {
+    "five_hour": 17,
+    "weekly": 63,
+    "observed_at_utc": "2026-09-16T16:46:54.699Z"
+  },
+  "completed_gpu_tests": 3,
+  "matched_rms_rank16_status": "COMPLETE_EXIT_0",
+  "shutdown_request_executed": false,
+  "control_panel_off_verified": false,
+  "instance_deleted": false,
+  "training_steps": 0,
+  "initial_adapter_factor_checkpoint_saved": false,
+  "model_and_calibration_binaries_in_github": false,
+  "server_backup": "/root/autodl-tmp/qvla-repro/backups/session107-response-svd-20260917-004712-852d350",
+  "local_backup": "results/pending-20260917-107-response-svd/session107-response-svd-20260917-004712-852d350",
+  "backup_verified_files": 10,
+  "backup_bytes": 13079907,
+  "closure_reason": "Three planned finite SVD tests complete; next meaningful training/rollout expected beyond remaining budget; reserve safe backup/shutdown",
+  "native_shutdown_planned": true
+}

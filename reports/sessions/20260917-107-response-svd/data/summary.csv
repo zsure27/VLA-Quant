@@ -1,0 +1,5 @@
+case,frames,calibration_frames,parameters,training_steps,mean_action_mse,gripper_disagreement_steps,mean_unexplained_weight_residual,mean_unexplained_calibration_response
+Action RMS rank8,32,8,4997120,0,0.06544164670049213,13,0.9941409517611776,
+Response SVD rank8,32,8,4997120,0,0.06361106166150421,11,0.9958988502621651,0.15854692711894
+Response SVD rank16,32,8,9994240,0,0.06399096385575831,13,0.9920996853283474,0.04649541061371565
+Action RMS rank16,32,8,9994240,0,0.06503257132135332,13,0.9893635351743016,
