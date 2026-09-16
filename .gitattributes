@@ -5,3 +5,6 @@
 *.csv text eol=lf
 *.txt text eol=lf
 results/awq-visual-diagnostics-20260915/** -text
+results/awq-baseline-gate-20260916/** -text -eol
+results/awq-block-audit-20260916/** -text -eol
+results/awq-w2-language-clip10-20260916/** -text -eol

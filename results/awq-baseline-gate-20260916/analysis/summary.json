@@ -1,0 +1,122 @@
+{
+  "batch": "/root/autodl-tmp/qvla-repro/eval/baseline-gate-20260916-101857",
+  "manifest_equality": true,
+  "all_50": {
+    "episodes": 50,
+    "bf16_successes": 47,
+    "w4_successes": 47,
+    "bf16_success_rate": 0.94,
+    "w4_success_rate": 0.94,
+    "paired_difference_w4_minus_bf16": 0.0,
+    "bf16_only_success": 1,
+    "w4_only_success": 1,
+    "two_sided_exact_mcnemar_p": 1.0,
+    "conditional_stratified_bootstrap_95ci": [
+      -0.06,
+      0.06
+    ],
+    "ci_note": "10 fixed tasks; resample observed initial states within each task. Not proof of equivalence or a benchmark-wide confidence guarantee."
+  },
+  "new_initial_states_1_to_4": {
+    "episodes": 40,
+    "bf16_successes": 38,
+    "w4_successes": 39,
+    "bf16_success_rate": 0.95,
+    "w4_success_rate": 0.975,
+    "paired_difference_w4_minus_bf16": 0.025,
+    "bf16_only_success": 0,
+    "w4_only_success": 1,
+    "two_sided_exact_mcnemar_p": 1.0,
+    "conditional_stratified_bootstrap_95ci": [
+      0.0,
+      0.075
+    ],
+    "ci_note": "10 fixed tasks; resample observed initial states within each task. Not proof of equivalence or a benchmark-wide confidence guarantee."
+  },
+  "repeated_initial_state_0": {
+    "bf16": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "w4": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "per_task": [
+    {
+      "task_id": 0,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 1,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 2,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 3,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 4,
+      "bf16": 3,
+      "w4": 3
+    },
+    {
+      "task_id": 5,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 6,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 7,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 8,
+      "bf16": 5,
+      "w4": 5
+    },
+    {
+      "task_id": 9,
+      "bf16": 4,
+      "w4": 4
+    }
+  ],
+  "unmeasured": [
+    "GT action L1",
+    "ACT hidden cosine",
+    "peak VRAM",
+    "synchronized warmed latency",
+    "packed real quant parity"
+  ],
+  "scope": "BF16-carried simulated AWQ W4A16; no recovery training. Five initial states per task; index 0 overlaps the prior ten-state screening."
+}
