@@ -226,7 +226,7 @@ for svg_path in sorted(FIG.glob("*.svg")):
 
 manifest = {
     "report": "2026-09-16-weekend-review", "kind": "local_evidence_review_no_new_gpu_run",
-    "source_hash_format": "Text inputs use UTF-8 bytes with CRLF normalized to LF, matching Git canonical text. Generated files use exact bytes; CSV and SVG are written with LF.",
+    "source_hash_format": "Text inputs use UTF-8 bytes with CRLF normalized to LF; normalize text sources before verification, since some legacy Git blobs retain CRLF. Generated files use exact bytes; CSV and SVG are written with LF.",
     "source_files": [{"path": p.relative_to(REPO).as_posix(), "sha256": hashlib.sha256(p.read_bytes().replace(b'\r\n', b'\n')).hexdigest()}
                      for p in sorted(SOURCE_FILES)],
     "generated_files": [{"path": p.relative_to(REPORT).as_posix(), "size_bytes": p.stat().st_size,
