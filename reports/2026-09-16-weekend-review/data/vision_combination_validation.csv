@@ -1,0 +1,3 @@
+configuration,mean_action_mse,median_action_mse,max_action_mse,gripper_disagreements,evidence_class,frames,predictions
+Both W2 G128,0.11529426,0.09101834,0.24608317,31,archival_summary,32,256
+DINO G64 + SigLIP G128,0.10258518,0.09217261,0.20825283,26,archival_summary,32,256

@@ -1,0 +1,30 @@
+{
+  "evidence_class": "archival_summary",
+  "note": "Transcribed from the 2026-09-14 source review, which re-read server summaries. Original profiles and full per-frame vision/validation metrics have not been fetched in this local-only session. Rounded values remain rounded; no synthetic per-frame records or confidence intervals are generated.",
+  "language_validation": [
+    {"configuration": "W2 clipped", "mean_action_mse": 4.11054638, "gripper_disagreements": 167, "predictions": 256},
+    {"configuration": "W2 no extra clip", "mean_action_mse": 0.06972661, "gripper_disagreements": 15, "predictions": 256},
+    {"configuration": "W4", "mean_action_mse": 0.00027151, "gripper_disagreements": 0, "predictions": 256}
+  ],
+  "vision_diagnostic": [
+    {"configuration": "BF16 vision", "mean_action_mse": 0.05633, "gripper_disagreements": 10, "projector_relative_mse": 0.0},
+    {"configuration": "W4 both", "mean_action_mse": 0.05796, "gripper_disagreements": 11, "projector_relative_mse": 0.04033},
+    {"configuration": "DINO W2 G128", "mean_action_mse": 0.08953, "gripper_disagreements": 32, "projector_relative_mse": 0.71297},
+    {"configuration": "SigLIP W2 G128", "mean_action_mse": 0.06282, "gripper_disagreements": 20, "projector_relative_mse": 0.20046},
+    {"configuration": "Both W2 G128", "mean_action_mse": 0.10094, "gripper_disagreements": 48, "projector_relative_mse": 0.85243},
+    {"configuration": "DINO W2 G128 no clip", "mean_action_mse": 0.10641, "gripper_disagreements": 49, "projector_relative_mse": 0.86449},
+    {"configuration": "DINO W2 G64 recalibrated", "mean_action_mse": 0.07754, "gripper_disagreements": 25, "projector_relative_mse": 0.57131}
+  ],
+  "vision_combination_validation": [
+    {"configuration": "Both W2 G128", "mean_action_mse": 0.11529426, "median_action_mse": 0.09101834, "max_action_mse": 0.24608317, "gripper_disagreements": 31},
+    {"configuration": "DINO G64 + SigLIP G128", "mean_action_mse": 0.10258518, "median_action_mse": 0.09217261, "max_action_mse": 0.20825283, "gripper_disagreements": 26}
+  ],
+  "source_directories_on_persistent_disk": [
+    "artifacts/awq-validation-20260913-132827-1162",
+    "artifacts/awq-vision-composition-20260913-141517-1162",
+    "artifacts/awq-vision-branches-20260913-150727-1162",
+    "artifacts/awq-primary-clip-20260913-203607-1400",
+    "artifacts/awq-primary-group-20260913-213127-3342"
+  ],
+  "fixed_conditions": "32 frames from 32 trajectories; 8-step chunks; teacher-normalized action MSE, not ground-truth error. Vision diagnostic fixes language to W2 G128 without extra clipping; untargeted vision branch is BF16. Both validation sets were previously inspected and are development data, not blind final tests."
+}

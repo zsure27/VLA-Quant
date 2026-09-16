@@ -1,0 +1,7 @@
+method,weight_bits,activation_bits,episodes,successes,rate,wilson95_low,wilson95_high,exit_code,wall_seconds,evidence
+BF16 baseline,16,16,500,488,0.9760,0.9585,0.9862,0,,historical-log
+AWQ W4A16,4,16,500,491,0.9820,0.9661,0.9905,0,6613,historical-log
+SmoothQuant W4A16,4,16,20,19,0.9500,0.7639,0.9911,0,357,historical-log
+SmoothQuant W4A8,4,8,20,20,1.0000,0.8389,1.0000,0,368,historical-log
+SmoothQuant W8A8,8,8,20,20,1.0000,0.8389,1.0000,0,364,historical-log
+SmoothQuant W4A4,4,4,20,0,0.0000,0.0000,0.1611,0,556,historical-log

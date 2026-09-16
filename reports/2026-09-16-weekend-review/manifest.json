@@ -1,0 +1,147 @@
+{
+  "report": "2026-09-16-weekend-review",
+  "kind": "local_evidence_review_no_new_gpu_run",
+  "source_files": [
+    {
+      "path": "reports/2026-09-16-weekend-review/data/archival_offline.json",
+      "sha256": "5935e04bcdc3f6451012a483c12996252bd884ee8bb67db91a8a23204b0a8561"
+    },
+    {
+      "path": "results/awq-baseline-gate-20260916/analysis/paired_episodes.csv",
+      "sha256": "7b996ef8dcd83fa51c1d0364a7a5d2e403a932c50e9c72d355412db0ebf28498"
+    },
+    {
+      "path": "results/awq-baseline-gate-20260916/analysis/summary.json",
+      "sha256": "eef5f52ce21753d7d0b343c7587f994a860cbaf4400df3ad5ff527e31f7190fb"
+    },
+    {
+      "path": "results/awq-block-audit-20260916/block-error-summary.json",
+      "sha256": "03b3d3ba25e0ccf12b219615da44ce240c50f383ece13cea0c39ad0136ac28e7"
+    },
+    {
+      "path": "results/awq-block-audit-20260916/e2e-interventions-old-summary.json",
+      "sha256": "2cbc99256d6ba9b8164d40ddcbca01c91a1637fc39cca54adb4edca7644cb5b1"
+    },
+    {
+      "path": "results/awq-visual-diagnostics-20260915/summary.json",
+      "sha256": "7003860ef8b248bf03a961fd6a3de9bd8da49f5ff816d7fb556f2714a5f80db5"
+    },
+    {
+      "path": "results/awq-w2-language-clip10-20260916/paired_w2_clip_comparison.json",
+      "sha256": "8ad728aec610ee948f76428efcf33f93fe9ac63693adf0090d75bc69c0ee2725"
+    },
+    {
+      "path": "results/official_quant_validation.csv",
+      "sha256": "94ba447243e4f19d4ea3d91b3e7c34c4033cfb74003c01357ad80f89ba826a80"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "data/closed_loop.csv",
+      "size_bytes": 820,
+      "sha256": "9bed9cfaba89566e7ac6ef3906d6aed29ad8ee6921541bc1f48f9c49d273ccc0"
+    },
+    {
+      "path": "data/historical_sq.csv",
+      "size_bytes": 535,
+      "sha256": "5e888e7a1e896f6ee087a29fd229ff09ac13d074ce1270b4e80de413fd88c076"
+    },
+    {
+      "path": "data/language_diagnostic_per_frame.csv",
+      "size_bytes": 8658,
+      "sha256": "e7e5fc5ef4dece64deda87921dea34ac2a3346d5a919725c289ac71d344cbd8f"
+    },
+    {
+      "path": "data/language_offline.csv",
+      "size_bytes": 794,
+      "sha256": "25f50ad8101ca9d73ef8b020cb8bdb1f963f409af272a0138d5656f2fbdbf7d0"
+    },
+    {
+      "path": "data/paired_50.csv",
+      "size_bytes": 5467,
+      "sha256": "7b996ef8dcd83fa51c1d0364a7a5d2e403a932c50e9c72d355412db0ebf28498"
+    },
+    {
+      "path": "data/selected_block_error.csv",
+      "size_bytes": 3777,
+      "sha256": "7e57531ec7f1abd1f7076cdd6e0a148cd2fe1867eee2d75f0e2e1af7a1e94ef7"
+    },
+    {
+      "path": "data/vision_combination_validation.csv",
+      "size_bytes": 278,
+      "sha256": "73f63dae2300cd9347705e4e631c8d2c55f10976056e6c26cfc15f22f783f070"
+    },
+    {
+      "path": "data/vision_offline.csv",
+      "size_bytes": 684,
+      "sha256": "02ef528017cdfd595c23d3b7090cf07db6d366c4ff433e9f45ce108b7abafcdf"
+    },
+    {
+      "path": "figures/01_closed_loop.png",
+      "size_bytes": 109994,
+      "sha256": "beea246b47e9cc0f5bd6f3db90d9c2bf177a580f4b8931d5815364b0fe8faa1f"
+    },
+    {
+      "path": "figures/01_closed_loop.svg",
+      "size_bytes": 80795,
+      "sha256": "3b4c92ade46f8cea99b5e9bdcc43c82744aea9cf1cb882ecb034ce47242264fa"
+    },
+    {
+      "path": "figures/02_paired_w4.png",
+      "size_bytes": 91593,
+      "sha256": "ea5ec5a398e95d10058828f968267df6e55490dc09f055125ee0ccc5efd19ae9"
+    },
+    {
+      "path": "figures/02_paired_w4.svg",
+      "size_bytes": 91038,
+      "sha256": "f632636b89768a4dc4ee9cfe7503a822f56bde5f4d10fc4ccc2a14225d46f711"
+    },
+    {
+      "path": "figures/03_language_offline.png",
+      "size_bytes": 162509,
+      "sha256": "e89c0356ca32d69e01026cf0d2b83e3c9da312ce1f02e6c8ece9e7539309f286"
+    },
+    {
+      "path": "figures/03_language_offline.svg",
+      "size_bytes": 108732,
+      "sha256": "f439780bbe6196162501b82a92d821ead74102a3acb5244c149c8cc54ff89279"
+    },
+    {
+      "path": "figures/04_vision_offline.png",
+      "size_bytes": 120804,
+      "sha256": "2286e52c873294dd6b82891a7c642f6e26236cd1ff061359f43fa378a60a22ea"
+    },
+    {
+      "path": "figures/04_vision_offline.svg",
+      "size_bytes": 90395,
+      "sha256": "78f0aa73955d5142b044593e9957e95136f678126ba49f82131cdd31cc1871b5"
+    },
+    {
+      "path": "figures/05_sq_historical.png",
+      "size_bytes": 78218,
+      "sha256": "0061723dffd257da3827594d1ddc0f877f728df9e90ce1ffc6e059718cb0cc61"
+    },
+    {
+      "path": "figures/05_sq_historical.svg",
+      "size_bytes": 60493,
+      "sha256": "a2ba2616c521890f3a3e419293cfb8e980933008bdb59236341a057e651f0f81"
+    },
+    {
+      "path": "figures/06_selected_block_audit.png",
+      "size_bytes": 214044,
+      "sha256": "1958ed0299fcefce5f1b4db0b58a40f585d1eea112c782cdd7fbc19e3b094a93"
+    },
+    {
+      "path": "figures/06_selected_block_audit.svg",
+      "size_bytes": 143263,
+      "sha256": "fb1ae5edbfff144f755353d0208711aec8d2934833e253d28f1de8fde1d13bb8"
+    }
+  ],
+  "not_uploaded": [
+    "source PDF/full extracted text",
+    "model weights",
+    "AWQ profile binaries",
+    "full calibration/trajectory data"
+  ],
+  "verification_limits": "Hashes bind local committed evidence and generated files. They do not prove semantic correctness of server profiles or identity of original paper results. See evidence classifications in the report."
+}

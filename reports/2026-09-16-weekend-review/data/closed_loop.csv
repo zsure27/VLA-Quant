@@ -1,0 +1,9 @@
+cohort,method,successes,episodes,rate,wilson_low,wilson_high,evidence_class,repeated_states
+current_paired_50,BF16,47,50,0.94,0.8378290831116182,0.979385029651026,committed_run,10
+current_paired_50,AWQ W4A16,47,50,0.94,0.8378290831116182,0.979385029651026,committed_run,10
+current_screen_10,BF16,9,10,0.9,0.5958499732047615,0.9821237869049271,committed_run,10
+current_screen_10,W4,8,10,0.8,0.49016247153664183,0.9433178485456247,committed_run,10
+current_screen_10,Full W2 candidate,0,10,0.0,0,0.2775327998628892,committed_run,10
+current_screen_10,Language W2 no clip,1,10,0.1,0.017876213095072896,0.4041500267952385,committed_run,10
+current_screen_10,Vision W2,10,10,1.0,0.7224672001371107,0.9999999999999999,committed_run,10
+current_screen_10,Language W2 clipped,0,10,0.0,0,0.2775327998628892,committed_run,10

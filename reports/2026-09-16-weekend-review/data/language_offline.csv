@@ -1,0 +1,9 @@
+dataset,configuration,mean_action_mse,gripper_disagreements,predictions,evidence_class
+diagnostic_32,W2 clipped,4.025736707786564,149,256,committed_summary_with_per_frame_values
+diagnostic_32,W2 no extra clip,0.056330839201109484,10,256,committed_summary_with_per_frame_values
+diagnostic_32,Attention no clip,0.16724010254256427,15,256,committed_summary_with_per_frame_values
+diagnostic_32,MLP no clip,0.29420630948152393,73,256,committed_summary_with_per_frame_values
+diagnostic_32,W4 blocks 10-12; rest clipped,3.7075870912522078,157,256,committed_summary_with_per_frame_values
+previous_validation_32,W2 clipped,4.11054638,167,256,archival_summary
+previous_validation_32,W2 no extra clip,0.06972661,15,256,archival_summary
+previous_validation_32,W4,0.00027151,0,256,archival_summary

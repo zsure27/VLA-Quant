@@ -1,5 +1,11 @@
 # VLA 快速量化与微调实验备份
 
+## 2026-09-16 综合进展与后续研究安排
+
+[周末交流报告](reports/2026-09-16-weekend-review/README_CN.md)整合三条量化基线、已做干预、学术定位及证据边界，附6张图、CSV/JSON源数据与hash；[实验矩阵](reports/2026-09-16-weekend-review/EXPERIMENT_PLAN_CN.md)明确对照和晋级条件；[TSQ-MTC / Contextual Routing精读](reports/2026-09-16-weekend-review/CONTEXTUAL_ROUTING_CN.md)区分原论文与扩刊提案。
+
+当前Spatial开发检查BF16/W4均47/50；全W2候选0/10，仅语言W2无额外clip1/10、原clip0/10，仅视觉W2小样本10/10。SQ W4A4当前可比结果缺失。以上均不构成packed低比特效率验证。107机已继承014数据，后续通过SSH实验；每轮图/数据/分析独立归档到[reports/sessions](reports/sessions/README_CN.md)。以下早期段落保留为历史记录。
+
 安装中遇到 NumPy 2.x 冲突或 `openvla_utils.py SHA256` 不符，请先看 [2026-09-11 安装修复](docs/INSTALL_REPAIR_20260911_CN.md)。在本仓库更新后运行 `bash scripts/repair_install_20260911.sh`，无需删除原环境/数据，也不要绕过校验。
 
 ## 2026-09-08 更新：先验证基线，再做可视化
@@ -20,7 +26,7 @@
 - 模型和可再生数据应从原始来源重建；不可再生 profile/日志在旧服务器恢复后，应按 `data/README_CN.md` 补做离线对象存储或 GitHub Release/LFS 备份。
 - 当前 AWQ/SmoothQuant 都是 BF16 算子上的伪量化精度模拟，不是 packed INT2/INT4 推理，不用其运行时间证明低比特加速。
 
-## 当前实验结论
+## 历史实验结论（不与当前修复环境直接比较）
 
 | 方法 | 精度 | LIBERO-Spatial | 证据范围 |
 |---|---|---:|---|

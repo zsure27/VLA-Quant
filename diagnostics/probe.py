@@ -394,8 +394,8 @@ def main():
     if intervention and (args.mode != "awq" or args.weight_scope != ("all" if vision_composition else "language") or
                          args.weight_bits != 2 or args.activation_bits != 16 or args.oracle_projector):
         p.error("AWQ 干预要求语言 W2A16，无 oracle；视觉组合范围用 all，纯语言用 language")
-    if bool(w4_layers) != (args.awq_w4_profile is not None) or (w4_layers and args.awq_disable_clip != "none"):
-        p.error("W4 层和独立 profile 必须配对，不能同时关闭裁剪")
+    if bool(w4_layers) != (args.awq_w4_profile is not None):
+        p.error("W4 层和独立 profile 必须配对")
     if args.smoothing_selection != "all" and (
         args.mode != "smoothquant" or args.weight_bits != 16 or args.activation_bits != 16
     ):

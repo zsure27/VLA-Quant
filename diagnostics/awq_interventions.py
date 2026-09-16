@@ -89,8 +89,8 @@ def plan(entries, meta, clip_scope, w4_layers, w4=None):
     """返回每块缩放来源、每个 Linear 的参数与实际位宽；仅用于语言 W2 干预。"""
     if meta["bits"] != 2 or clip_scope not in ("none", "all", "attention", "mlp"):
         raise ValueError("要求 W2 基础 profile")
-    if bool(w4_layers) != (w4 is not None) or (w4_layers and clip_scope != "none"):
-        raise ValueError("W4 层与 profile 必须同时提供，且不同时取消裁剪")
+    if bool(w4_layers) != (w4 is not None):
+        raise ValueError("W4 层与 profile 必须同时提供")
     if w4:
         e4, m4 = w4
         if m4["bits"] != 4 or set(e4) != set(entries):
@@ -112,7 +112,9 @@ def plan(entries, meta, clip_scope, w4_layers, w4=None):
             if not re.fullmatch(r"language_model\.model\.layers\.\d+\.(self_attn\.(q|k|v|o)_proj|mlp\.(gate|up|down)_proj)", name):
                 raise ValueError(name)
             entry = dict(selected[name])
-            if disable_clip(name, clip_scope):
+            # clip_scope describes the W2 remainder. Rescued W4 blocks must keep
+            # the clipping searched together with their own scales/coordinates.
+            if layer not in w4_layers and disable_clip(name, clip_scope):
                 if entry.get("clip_max") is not None:
                     removed.append(name)
                 entry["clip_max"] = None

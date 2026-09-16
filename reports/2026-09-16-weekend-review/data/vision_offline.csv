@@ -1,0 +1,8 @@
+configuration,mean_action_mse,gripper_disagreements,projector_relative_mse,evidence_class,frames,predictions,language
+BF16 vision,0.05633,10,0.0,archival_summary,32,256,W2 G128 no extra clip
+W4 both,0.05796,11,0.04033,archival_summary,32,256,W2 G128 no extra clip
+DINO W2 G128,0.08953,32,0.71297,archival_summary,32,256,W2 G128 no extra clip
+SigLIP W2 G128,0.06282,20,0.20046,archival_summary,32,256,W2 G128 no extra clip
+Both W2 G128,0.10094,48,0.85243,archival_summary,32,256,W2 G128 no extra clip
+DINO W2 G128 no clip,0.10641,49,0.86449,archival_summary,32,256,W2 G128 no extra clip
+DINO W2 G64 recalibrated,0.07754,25,0.57131,archival_summary,32,256,W2 G128 no extra clip

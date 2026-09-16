@@ -143,10 +143,19 @@ class InterventionTest(unittest.TestCase):
         self.assertEqual(scales["language_model.model.layers.13"], "scale-2-13")
         self.assertEqual(removed, [])
 
+    def test_w4_rescue_keeps_own_clip_over_no_clip_w2_remainder(self):
+        entries, meta = fixture(2)
+        scales, targets, removed = plan(entries, meta, "all", {8, 9}, fixture(4))
+        self.assertEqual(sum(v[1] == 4 for v in targets.values()), 14)
+        self.assertEqual(len(removed), 150)
+        self.assertEqual(scales["language_model.model.layers.8"], "scale-4-8")
+        self.assertTrue(all(value[0]["clip_max"] in (None, 4) for name, value in targets.items()
+                            if ".layers.8." in name or ".layers.9." in name))
+        self.assertTrue(all(value[0]["clip_max"] is None for name, value in targets.items()
+                            if ".layers.8." not in name and ".layers.9." not in name))
+
     def test_invalid_pairing(self):
         entries, meta = fixture(2)
-        with self.assertRaises(ValueError):
-            plan(entries, meta, "all", {11}, fixture(4))
         with self.assertRaises(ValueError):
             plan(entries, meta, "none", {11})
         e4, m4 = fixture(4)
