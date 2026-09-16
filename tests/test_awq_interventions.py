@@ -25,7 +25,7 @@ def fixture(bits):
 class InterventionTest(unittest.TestCase):
     def test_family_precision_preserves_w2_coordinates_and_source(self):
         entries, meta = fixture(2)
-        for family, expected in (("attention", 32), ("mlp", 24)):
+        for family, expected in (("attention", 32), ("mlp", 24), ("all", 56)):
             scales, targets, removed = family_precision_plan(entries, meta, set(range(8, 16)), family)
             self.assertEqual(sum(value[1] == 4 for value in targets.values()), expected)
             self.assertEqual(scales, meta["block_scales"])

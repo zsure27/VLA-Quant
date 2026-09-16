@@ -48,7 +48,7 @@ def normalize(payload, source, expected_tag=None):
 
 def decision(snapshot, now=None, estimated_next=0, reserve=3):
     now = now or datetime.now(timezone.utc)
-    age = (now-datetime.fromisoformat(snapshot["observed_at_utc"])).total_seconds()
+    age = (now-datetime.fromisoformat(snapshot["observed_at_utc"].replace("Z", "+00:00"))).total_seconds()
     values = [w["remaining_percent"] for w in snapshot["windows"].values() if w is not None]
     # Missing either window cannot silently be treated as unlimited/zero usage.
     complete = all(snapshot["windows"].get(k) is not None for k in ("primary", "secondary"))
@@ -206,7 +206,7 @@ def main():
         print(json.dumps({"source": "fallback_failed", "error_category":
             str(error) if isinstance(error, ValueError) else type(error).__name__,
             "action": "UNKNOWN_DO_NOT_DISPATCH", "cached": ({**cached,
-             "age_seconds": round((datetime.now(timezone.utc)-datetime.fromisoformat(cached["observed_at_utc"])).total_seconds(),1)} if cached else None)}))
+             "age_seconds": round((datetime.now(timezone.utc)-datetime.fromisoformat(cached["observed_at_utc"].replace("Z", "+00:00"))).total_seconds(),1)} if cached else None)}))
         return 2
 
 

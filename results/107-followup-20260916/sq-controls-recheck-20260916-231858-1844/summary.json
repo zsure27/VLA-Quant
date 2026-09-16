@@ -1,0 +1,18 @@
+{
+  "primary-only": {
+    "frames": 8,
+    "mean_action_mse": 0.0001235198707405516,
+    "max_action_mse": 0.0008078422979451716,
+    "gripper_disagreement_steps": 1,
+    "engineering_threshold": 0.0001,
+    "within_threshold": false
+  },
+  "fused-only": {
+    "frames": 8,
+    "mean_action_mse": 0.00025106757155413106,
+    "max_action_mse": 0.001973883481696248,
+    "gripper_disagreement_steps": 2,
+    "engineering_threshold": 0.0001,
+    "within_threshold": false
+  }
+}

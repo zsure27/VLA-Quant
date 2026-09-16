@@ -1,0 +1,12 @@
+{
+  "sample": "sample-0065.npz",
+  "sample_sha256": "3eb657569289784e32c60464cfdfef68878072ab76191e0651b48105af3a0db2",
+  "profile_sha256": "33bf528357f2d26e1439dc3db26ed642ef355b5ae89f71a26cb8b0c1b08af1cc",
+  "source_sha256": "7f1694a892a25dc76406d402982ea53784c54374e9ec6375dc9fbc881651b240",
+  "alpha": 0.5,
+  "groups": 12,
+  "cases": 3,
+  "tf32": false,
+  "torch": "2.2.0+cu121",
+  "note": "Local smoothing equivalence only. No quantization, no PEFT, no end-to-end gate."
+}

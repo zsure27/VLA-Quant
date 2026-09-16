@@ -344,8 +344,10 @@ def main():
     p.add_argument("--awq-disable-clip", choices=("none", "all", "attention", "mlp"), default="none")
     p.add_argument("--awq-w4-layers", default="")
     p.add_argument("--awq-w4-profile", type=Path)
-    p.add_argument("--awq-rescue-family", choices=("attention", "mlp"))
+    p.add_argument("--awq-rescue-family", choices=("attention", "mlp", "all"))
     p.add_argument("--awq-rescue-layers", default="")
+    p.add_argument("--awq-residual-rank", type=int, default=0)
+    p.add_argument("--awq-residual-layers", default="")
     p.add_argument("--awq-vision-bits", type=int, choices=(2, 4, 16), default=16)
     p.add_argument("--awq-vision-profile", type=Path)
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
@@ -382,6 +384,13 @@ def main():
     from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan, family_precision_plan
     w4_layers = parse_layers(args.awq_w4_layers)
     rescue_layers = parse_layers(args.awq_rescue_layers)
+    residual_layers = parse_layers(args.awq_residual_layers)
+    if bool(residual_layers) != bool(args.awq_residual_rank):
+        p.error("Residual recovery requires rank and layers together")
+    if residual_layers and (args.awq_residual_rank not in (4,8,16) or args.mode != "awq" or
+            args.weight_bits != 2 or args.activation_bits != 16 or args.weight_scope != "language" or
+            args.awq_disable_clip != "all" or rescue_layers or w4_layers or args.awq_w4_profile or args.awq_vision_bits != 16):
+        p.error("Residual probe requires language W2 no-clip, BF16 vision, no mixed precision")
     if bool(rescue_layers) != bool(args.awq_rescue_family):
         p.error("Family rescue requires both layer selection and family")
     if rescue_layers and (w4_layers or args.awq_w4_profile or args.awq_vision_bits != 16 or args.awq_disable_clip != "all"):
@@ -520,6 +529,7 @@ def main():
     if args.mode == "awq":
         from qvla.awq_block import apply_block_scales, apply_llama_entry
         from qvla.official_quant_adapter import apply_awq_entry
+        residual_records = {}
         if meta["bits"] != args.weight_bits or args.activation_bits != 16:
             raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
         modules = dict(model.named_modules())
@@ -536,7 +546,16 @@ def main():
                 if list(modules[name].weight.shape) != entry["shape"]:
                     raise ValueError("干预 profile 参数形状不符")
                 fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
+                residual_selected = bool(residual_layers) and int(name.split(".layers.")[1].split(".")[0]) in residual_layers
+                original_weight = modules[name].weight.detach().clone() if residual_selected else None
                 fn(modules[name], entry, official, bits, group_size)
+                if residual_selected:
+                    from low_rank_recovery import attach_residual
+                    details=attach_residual(modules[name], original_weight, args.awq_residual_rank,
+                        int(hashlib.sha256(name.encode()).hexdigest()[:8],16))
+                    residual_records[name]=details
+                    print("RESIDUAL_ATTACHED",name,flush=True)
+                    del original_weight
         elif args.weight_scope != "vision":
             for prefix, scales in meta["block_scales"].items():
                 apply_block_scales(modules[prefix], scales, official)
@@ -544,6 +563,9 @@ def main():
             fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
             fn(modules[name], entries[name], official, args.weight_bits, meta["group_size"])
         save_json(args.output / "scope.json", {"weight_targets": w_names, "activation_targets": [],
+            "low_rank_residual": residual_records,
+            "residual_adapter_parameters": sum(r["adapter_parameters"] for r in residual_records.values()),
+            "residual_training_steps": 0,
             "intervention": intervention, "disable_clip": args.awq_disable_clip,
             "rescue_family": args.awq_rescue_family, "rescue_layers": sorted(rescue_layers),
             "rescue_coordinates": "original_W2_no_clip" if rescue_layers else None,

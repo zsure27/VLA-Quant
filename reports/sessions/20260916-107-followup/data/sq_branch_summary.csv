@@ -1,0 +1,4 @@
+configuration,frames,mean_action_mse,max_action_mse,gripper_disagreement_steps,within_original_1e4_gate
+Vision both (previous),8,0.00010235659767943162,0.0005603093886747956,1,False
+DINO only,8,0.0001235198707405516,0.0008078422979451716,1,False
+SigLIP only,8,0.00025106757155413106,0.001973883481696248,2,False

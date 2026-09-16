@@ -50,7 +50,7 @@ def main():
     (backup / "runtime-lock.txt").write_text(run("/root/miniconda3/envs/qvla-oft/bin/python", "-m", "pip", "freeze"))
     subprocess.check_call(["git", "-C", str(repo), "bundle", "create", str(backup / ("VLA-Quant-"+commit+".bundle")), "--all"])
     with tarfile.open(backup / "code-overlay.tar.gz", "w:gz") as tar:
-        for name in ("language-stage-rescue", "closed-loop-stage-rescue", "language-family-rescue"):
+        for name in ("language-stage-rescue", "closed-loop-stage-rescue", "language-family-rescue", "closed-loop-fixed-coordinates", "low-rank-recovery"):
             path = root / "overlays" / name
             if path.is_dir(): tar.add(path, arcname="overlays/"+name, filter=source_filter)
         for name in ("diagnostics/export_checkpoint_manifest.py", "diagnostics/plot_awq_rollouts.py", "tests/test_awq_eval_scope.py"):
@@ -68,8 +68,11 @@ def main():
         if directory.parent != root / "eval": continue
         for console in directory.glob("stage-*/console.log"):
             paths = re.findall(r"Saved rollout MP4 at path ([^\r\n]+)", console.read_text())
-            if len(paths) != 10:
-                raise SystemExit("Ten original videos required for completed stage rollout")
+            command=(console.parent / "command.txt").read_text()
+            trials=re.search(r"--num_trials_per_task\s+(\d+)",command)
+            expected=10*int(trials.group(1)) if trials else 10
+            if len(paths) != expected:
+                raise SystemExit(f"{expected} original videos required for completed stage rollout")
             for name in paths:
                 path = (Path("/root") / name).resolve()
                 if video_root not in path.parents or not path.is_file():

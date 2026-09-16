@@ -1,12 +1,15 @@
 """仅用于 W16A16 定位：整组取消平滑，不能只取消 Q/K/V 的一个分支。"""
 import re
 
-CHOICES = ("all", "no-late-attention", "no-late-mlp", "no-late-both", "no-language")
+CHOICES = ("all", "no-late-attention", "no-late-mlp", "no-late-both", "no-language", "only-primary-vision", "only-fused-vision")
 
 
 def excluded_norm(name, selection):
     if selection not in CHOICES:
         raise ValueError(selection)
+    if selection in ("only-primary-vision", "only-fused-vision"):
+        prefix = "vision_backbone.featurizer." if selection == "only-primary-vision" else "vision_backbone.fused_featurizer."
+        return not name.startswith(prefix)
     if selection == "no-language":
         return name.startswith("language_model.")
     match = re.fullmatch(
