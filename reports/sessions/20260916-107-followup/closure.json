@@ -4,7 +4,10 @@
   "verified_hostname": "autodl-container-8b78499521-41be183e",
   "completed_batches": 8,
   "dispatch_blocked_by_automatic_approval": true,
-  "last_valid_quota_remaining": {"five_hour": 47, "weekly": 68},
+  "last_valid_quota_remaining": {
+    "five_hour": 47,
+    "weekly": 68
+  },
   "closure_reason": "Repeated automatic approval refusal despite fresh SSH online proof and user's current boot authorization; avoid idle billing, not quota exhaustion",
   "server_backup": "/root/autodl-tmp/qvla-repro/backups/session107-followup-20260916-000600-852d350",
   "local_backup": "results/pending-20260916-107-followup/session107-followup-20260916-000600-852d350",
@@ -15,8 +18,15 @@
   "trained_adapter_checkpoint": null,
   "initial_adapter_factor_checkpoint_saved": false,
   "adapter_restore_note": "Reinitialize from recorded source/profile/calibration/seed and verify offline metrics before rollout; no trained optimizer or unique trained checkpoint exists",
-  "shutdown_request_executed": false,
+  "shutdown_request_executed": true,
   "control_panel_off_verified": false,
   "control_panel_blocker": "Login required; agent does not log in",
-  "instance_deleted": false
+  "instance_deleted": false,
+  "shutdown_request_time_utc": "2026-09-16T16:11:47.076426+00:00",
+  "shutdown_request_time_beijing": "2026-09-17 00:11:47",
+  "shutdown_supervisor_pid": 837,
+  "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+  "ssh_closed_by_remote_host": true,
+  "verified_github_commit_before_shutdown": "99d4bc11225e528ad808d13a7a0aab331f0a87ff",
+  "shutdown_receipt_source": "SSH tool output; platform OFF not independently verified"
 }
