@@ -14,4 +14,6 @@
 
 十状态“仅语言 W2 + 原始 W2 profile 剪裁”闭环对照已完成：**0/10**，与旧去剪裁语言-only **1/10** 相比并无改善。视觉保持 BF16、同一 422-target profile 合约、W2 G128 block scales 和固定种子；两种语言侧候选只改变 clip 的应用，先前视觉 G64 候选在语言-only 范围没有施加视觉 quant。十个状态不足以精确比较 0/10 与 1/10，但已能排除“剪裁局部 MSE 较小即闭环恢复”这一简单解释。逐状态 manifest、初始状态哈希和种子已核对相等，两条线路使用相同 W2 基础 profile，均应用 224 个语言目标；去剪裁候选移除了 160 项语言 clip。原始日志、命令、退出码、评估器 patch、哈希清单和逐任务对照位于 `results/awq-w2-language-clip10-20260916/`。去剪裁及视觉 G64 是 PTQ 搜索，不是 PEFT。进一步训练可以只优化冻结整数码的敏感组 log dequant scale（Scale-PEFT）或在冻结骨干上增加低秩 BF16 recovery LoRA；不同任务的 scale 专家是否互补必须先用交叉任务矩阵验证，之后才有理由测试 Contextual Routing。
 
+旧端到端 32 个诊断样本的离线动作 MSE 则从语言 W2 带剪裁的 4.0257 降到语言 W2 全去剪裁的 0.05633，8 步夹爪动作分歧计数从 149/256 降到 10/256；旧 `summary.json` 已复制到 `results/awq-block-audit-20260916/e2e-interventions-old-summary.json`，完整旧产物仍位于服务器持久目录 `artifacts/awq-e2e-interventions-20260912-173315-1136/`。这与新闭环 0/10 对 1/10 并不矛盾：离线样本并非这十条完整的交互轨迹，较小动作误差不足以保证状态反馈、抓取和释放成功。十状态差别只出现在任务 8 的状态 0，下一次选择 PEFT 候选不能只按隐藏层 MSE 排序，应先展示同观测动作、夹爪决策和失效阶段，再以独立初始状态做闭环门槛。
+
 仍未做的门槛包括 W4 相同观测的 GT/teacher action L1、动作 token hidden cosine、预热后的同步延迟和峰值显存；当前评价器的初始 trace 位置存在观测状态可能已被策略调用更改的问题，此轮图不使用该错误标签。W3 profile、真实打包 quant parity、OFT 原基座与 LoRA 合并身份均没有验证，不可将它们写成已完成结果。
