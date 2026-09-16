@@ -1,0 +1,33 @@
+{
+  "session": "20260916-107-diagnostics",
+  "instance_label": "107",
+  "ssh_port": 31263,
+  "container_hostname": "autodl-container-8b78499521-41be183e",
+  "full_platform_instance_id_verified": false,
+  "experiments_complete": 12,
+  "peft_training_performed": false,
+  "local_original_archive_verified": true,
+  "archive_manifest_files_verified": 10,
+  "original_rollout_videos_archived": 20,
+  "github_actual_login_verified": "zsure27",
+  "experiment_code_result_commit_verified": "a204a3a6f476dde80c8ab817ba07786c33d283b7",
+  "quota_latest_valid_remaining_percent": {"five_hour": 57, "weekly": 85},
+  "quota_current_reading_available": false,
+  "closure_reason": "All bounded diagnostics completed; repeated usage-read failures prevent confirming safe budget for another long test.",
+  "native_shutdown_request": {
+    "time_utc": "2026-09-16T11:44:20.727132+00:00",
+    "commit": "852d350",
+    "backup": "/root/autodl-tmp/qvla-repro/backups/session107-20260916-193735-852d350",
+    "supervisor_pid": 837,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "execute": true,
+    "control_panel_off_verified": false,
+    "note": "Uses native supervisor termination; omits native Trash deletion"
+  },
+  "ssh_observation": "Connection closed by remote host after executing the native request",
+  "control_panel_observation": "Existing session expired; login page still shown; user login requested",
+  "control_panel_off_verified": false,
+  "billing_stopped_verified": false,
+  "instance_or_data_deleted": false,
+  "next_action": "Verify 107 OFF in AutoDL after user login; never boot or close 014 as a substitute. Resume on user-named running instance with SSH."
+}
