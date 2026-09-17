@@ -18,6 +18,21 @@ Spatial对应OFT checkpoint、既有W4 G128 profile、seed0和paired种子协议
 
 完成片的原始小日志和配对JSON位于[results/107-baseline-validation-20260917](../../../results/107-baseline-validation-20260917/)。运行[reproduce.py](reproduce.py)生成真实已完成回合的CSV、汇总JSON和PNG/SVG图；没有完整配对片时不生成结果图。视频和逐步trace进入服务器持久盘及本地第二份压缩备份，Git保存清单/hash和小文件。
 
+## 已完成：官方初态5–14
+
+|配置|成功/回合|程序异常|
+|---|---:|---:|
+|BF16|97/100|0|
+|AWQ W4A16|100/100|0|
+
+100条episode manifest的初态hash、dtype/shape、模型和环境种子全部匹配，两配置及外层batch均exit0。两者共同成功97条，仅W4成功3条，没有仅BF16成功或共同失败；差异位于任务7初态10/13和任务9初态13。配对精确检验p=0.25只作描述，不证明统计优越或等价。这是500回合目标的第一片；初态15–24的第二片仍在运行，未进入汇总。
+
+![分任务结果](figures/01_per_task.png)
+
+![配对初态结果](figures/02_paired_outcomes.png)
+
+逐回合源数据见[data/paired_episodes.csv](data/paired_episodes.csv)，汇总见[data/summary.json](data/summary.json)。第一片小结果归档传输SHA256为`2e2a0cdae0631215058a51723332ec42b9393c3eaf284093f2fd200ac9376796`，两端已核对；这份小归档不含原始MP4，视频完整双份备份仍在收尾阶段执行。
+
 ## 存储
 
 只读盘点见[storage_snapshot.json](storage_snapshot.json)。本轮已有模型约15GB，数据盘剩余约20GB，足够现有模型的评测日志、视频与备份。其他suite若需额外完整checkpoint，应先核实大小与共用权重；多个约15GB模型可能需要扩容。历史视频大小只用于容量估算，不是未来上界。
