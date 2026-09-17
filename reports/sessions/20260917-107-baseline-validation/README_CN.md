@@ -6,7 +6,7 @@
 
 Spatial对应OFT checkpoint、既有W4 G128 profile、seed0和paired种子协议固定。双相机、proprio、L1 action head、8步chunk一致。BF16通过同入口scope none完全旁路；W4覆盖原422个目标。当前为BF16承载的fake quant，不代表实际INT4 kernel加速或显存压缩。
 
-分片依次覆盖官方初态5–14、15–24、25–34、35–44、45–49、0–4；每个初态包含10个任务，正式完成后每配置500次。旧开发集50次不直接拼入本轮。逐回合初态hash与模型/环境种子核验配对，程序异常与正常策略失败分别记录。
+预算分片已覆盖官方初态5–14、15–24、25–26；待补27–34、35–44、45–49、0–4；每个初态包含10个任务，正式完成后每配置500次。旧开发集50次不直接拼入本轮。逐回合初态hash与模型/环境种子核验配对，程序异常与正常策略失败分别记录。
 
 固定10个任务上的成绩可用于当前suite比较；不能仅凭有限分片或差异不显著宣称无损、统计等价或完整QVLA数值复现。源码、profile hash随每片保存；冻结协议与公开论文的重复seed细节仍有差异。
 
@@ -18,20 +18,24 @@ Spatial对应OFT checkpoint、既有W4 G128 profile、seed0和paired种子协议
 
 完成片的原始小日志和配对JSON位于[results/107-baseline-validation-20260917](../../../results/107-baseline-validation-20260917/)。运行[reproduce.py](reproduce.py)生成真实已完成回合的CSV、汇总JSON和PNG/SVG图；没有完整配对片时不生成结果图。视频和逐步trace进入服务器持久盘及本地第二份压缩备份，Git保存清单/hash和小文件。
 
-## 已完成：官方初态5–14
+## 本轮已完成220组配对
 
-|配置|成功/回合|程序异常|
-|---|---:|---:|
-|BF16|97/100|0|
-|AWQ W4A16|100/100|0|
+|配置|成功/回合|成功率|程序异常|
+|---|---:|---:|---:|
+|BF16|215/220|97.73%|0|
+|AWQ W4A16|214/220|97.27%|0|
 
-100条episode manifest的初态hash、dtype/shape、模型和环境种子全部匹配，两配置及外层batch均exit0。两者共同成功97条，仅W4成功3条，没有仅BF16成功或共同失败；差异位于任务7初态10/13和任务9初态13。配对精确检验p=0.25只作描述，不证明统计优越或等价。这是500回合目标的第一片；初态15–24的第二片仍在运行，未进入汇总。
+覆盖官方初态5–26，每初态10任务，三个分片分别为5–14、15–24、25–26。各片BF16/W4为97/100与100/100、98/100与94/100、20/20与20/20；全部exit0、220条完整manifest配对一致。共同成功210组、共同失败1组、仅BF16成功5组、仅W4成功4组；W4相对BF16为−0.455个百分点，精确配对检验p=1.0，不证明等价或非劣。第一片曾为W4全成功，第二片出现掉点，不能从局部高分外推完整suite。
+
+W4任务4有2次失败、任务7有3次失败，另任务5有1次共同失败；下一阶段先完成固定profile的500回合，再对失败视频作定位，不据本轮小差异启动微调选型。
 
 ![分任务结果](figures/01_per_task.png)
 
 ![配对初态结果](figures/02_paired_outcomes.png)
 
-逐回合源数据见[data/paired_episodes.csv](data/paired_episodes.csv)，汇总见[data/summary.json](data/summary.json)。第一片小结果归档传输SHA256为`2e2a0cdae0631215058a51723332ec42b9393c3eaf284093f2fd200ac9376796`，两端已核对；这份小归档不含原始MP4，视频完整双份备份仍在收尾阶段执行。
+逐回合数据见[data/paired_episodes.csv](data/paired_episodes.csv)，汇总见[data/summary.json](data/summary.json)，任务名称见[data/task_names.csv](data/task_names.csv)。仍缺280回合/配置：初态27–34（80）、35–44（100）、45–49（50）、0–4（50）。不能称Spatial500或四suite完整QVLA复现；没有新增SQ、PEFT训练或W2闭环结果。
+
+完整归档26,519,858 bytes，包含440条原始MP4和逐步trace，服务器持久盘及本地两份保存、10项SHA256通过。[备份核验](backup/LOCAL_VERIFICATION.json)及[视频清单](backup/VIDEO_MANIFEST.json)可追溯。模型/校准/profile原件仍在持久盘，不属于该归档的跨机器备份。
 
 ## 存储
 
@@ -43,4 +47,4 @@ Spatial对应OFT checkpoint、既有W4 G128 profile、seed0和paired种子协议
 
 ## 收尾状态
 
-本轮实验仍在运行；最终结果、Git远端提交、备份核验和关机回执待收尾时填写。
+五小时剩余9%时已停止派发并完成全部结果双份备份；Git同步后执行107原生关机请求，平台OFF/停止计费状态须另行核对。关机实际回执将在执行后补入。

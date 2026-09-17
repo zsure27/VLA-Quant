@@ -1,0 +1,2642 @@
+[
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40966,
+    "sha256": "7b52882dad83f9bef34c88a1d5c8886b6f8c9a66434dd7d4e71a941f86ab4bf5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39840,
+    "sha256": "c9114e7f237f0b6a75ce9807d6d8f654e373a72d3788a831984780e27253a4fd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 43124,
+    "sha256": "6fbaf3ca696e7496638806d77a1abce0e1ec3d4d967a4593578f3909ca593925",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39523,
+    "sha256": "8ea93721908f1239a95449a9b86515941dec7c52121bb4045370c174a88c5780",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41395,
+    "sha256": "ef86e6747d18f0025ce73c4a6d411c020eede15d713e0e0ac2c6efbd7c44be69",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41415,
+    "sha256": "447c7079eab4b30a879200036a4bb21946aff21867cddd249e24b9168b7ae241",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41135,
+    "sha256": "029aa58667726793820b4f4adaddb8721e0140e2d2a7ac950d0fc6102a2824c1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40724,
+    "sha256": "86f56253617b0b2e5ebe34df635d7f2684bc19bf2578832d587ba83bd66c3297",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42226,
+    "sha256": "87d027668c8728ae38c096652fee6e9b1624502bac1966351516633e2bd2a4b5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42102,
+    "sha256": "00757fecf440c28402223a95a72d85efba07f56fe12752bbcaa538418310ca17",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43295,
+    "sha256": "b191ffd23346b88b6f27daefe12c4ed953dad8aa88b39163da0d0e1e7d23157f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41596,
+    "sha256": "e7ced7f5c3a3be8f327dd62cc8450fac9e55db721cf7ed7320f3e0f90dfa322c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44765,
+    "sha256": "20374fa7c95b37dc12dc8a9f7fd8fecbec45f6f12cec5c4018701693c6bb6a69",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42985,
+    "sha256": "7432bdc7bec7cca3ffebb35ebd9ad2b9e96237071a4a94c948ffa793e797609d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42478,
+    "sha256": "08448477d4e4cc956257c1f7a9c4f3635a5e8ad8828580fab2e37946c32a2f7c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42018,
+    "sha256": "56ceaa019035dd0d3734b50da95f50862925f503c259a005b6a012c4e3e816c7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43490,
+    "sha256": "4c96a0444d4b832bc95d3b2c8ee5a83f8e09e77a423d94cec1873e39d1f8d3c3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44709,
+    "sha256": "e05027fed59b1d51f29b606153b9caaa854579f3d59e9a5a3dbc496ec30b6681",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 51739,
+    "sha256": "94202fc4a307382dc91764bc06383cdeab9564d6d687c5fee5820b7d5bf09c8e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43214,
+    "sha256": "d2e81fb1aaee937b6be264ce912b0c215be19ea00a71d8f4c0c800e11cbdfb57",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47214,
+    "sha256": "a0c6ece28522f4bba481dadc8de89fe1a6cabe6380176d12ba8bdabe4027062b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47180,
+    "sha256": "8a0ff8b532c4b5987a6aa51165117a80e91243195251ce12a2ebbf299a7266d2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48856,
+    "sha256": "1b7f0c2021050a134e458be3bdf993e2210a9f7d6d049d1805d83c117db4bf59",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 51098,
+    "sha256": "38dbc10adb214e744500cc9e95e471bf26482c4e0b0081047e74e4849da09e9a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47481,
+    "sha256": "6f21858903800e208e80ac2dd95ad8d7e2dc274effae7615ee649beb5e7503f4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46593,
+    "sha256": "67e122329ce31ed904c87aa63399129f64f4ebb61823d828646221f50702efb0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48385,
+    "sha256": "2b7f3c8700ac169327ae619313f5825d450f00e2ec88f492188e649a3246f7a6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48424,
+    "sha256": "04d10f51904d16b6f7c121e0805faa36fdd9a983b3eaa56a576132326199293c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47542,
+    "sha256": "7936efeaceacae111f5b6bb608dd22d1ac6f2a82528523ef30722926ebbe5f6f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48404,
+    "sha256": "53564469a6b9f38ad9194270d44f8ef039825937edad16984b1f8f24de6a2ae9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 51177,
+    "sha256": "e2766b7739a933f1a424f7ebb6876d6381200c4645ae65a927b94510babc4b58",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 51709,
+    "sha256": "7b32ad3a58ad370f74ba958be335e0c8d4d405f05cad66e50ee2588dfdf32ffe",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48472,
+    "sha256": "4ff16546d3198163390d41bb2159711902a967d6f45559e8ba524bd6154f3697",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49822,
+    "sha256": "dc7fce48dcad679e40ef0d86ab15c0a0847d140669066048f8fe63e3529765ae",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49310,
+    "sha256": "7303d1bae19b57cc97ae7ab1425e5b1fcd01187c41478f2533211b096dcdc3f4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48768,
+    "sha256": "dd507568daf57180f93b2696ad2d91dc5618f569802fd44b37b227652a2b0fdc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47946,
+    "sha256": "47021194f4588cd8f0020a3968cdb847ca92de84e8001d88781ca718243969bb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49181,
+    "sha256": "e3642746cbd3537c795e6b57479ff00e4ec4ae829232c3609b4984134a7868a8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 45911,
+    "sha256": "cad69dc350406bbf52e84dd1556c546101551f4e384b9165b58cca8acc9788f5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46267,
+    "sha256": "71c89a029f1ab0f07c54bd2800ad871fe53c5cea38bd6c780bbdfbda5bfc6471",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 67008,
+    "sha256": "58e63b5ed6aed496ad5d47dce2ff751d4979001b772496f7b82d8c1996d5a6e2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 66764,
+    "sha256": "45a5ae415b55abc820ff791a448b8166f3c8e52190567818824018ce2316673f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 67384,
+    "sha256": "ceb95b9e90dac55654908672f589637b483974e5e2d3b1d60907d1c78183f3ea",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65124,
+    "sha256": "9f96dd28e32c2044105004e5c72168169ade3edd24bae09d90c9aa58f0ea100b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65974,
+    "sha256": "6ecd25dc0f9dcdbb32ad0aaceadf3403dfe22d5ad8c1d996872da546a35a7b83",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 68621,
+    "sha256": "44097fe37ec05076369d622b75dc2924e69225ec0179db86dd0e4c649f6e08f5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65257,
+    "sha256": "4d25708dc948dd62b6b64b3eca9cab73ac4f61e33001b72b955b38c5e45de3c5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 68747,
+    "sha256": "9fcfa6bc842980050417d6fb2a2c0f438d952c3117f312caa37cc136a2544a4e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65894,
+    "sha256": "94fb4fd4dc243a48b8125e310fd62440b35e644905198d93cc42aa9ed1582b6e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 62258,
+    "sha256": "b00836c5de583a9d00636c69ca98a1905a38970308773a7347e7268416f7c197",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=51--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39638,
+    "sha256": "ccce86a2e00b939a529f6e22864f294ba4f6e358d85a9facc1f7c2d4facd67c3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=52--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38358,
+    "sha256": "e9c485ea817a2d2bbde3a07ca8c72c5a7c4cfb5fde9632bb4dec12ecd48ecad2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41323,
+    "sha256": "0b0b7dd9842825eab107276b26f131632c557a25e624d25b792f48e6ca934d62",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38869,
+    "sha256": "065edf2d1e605410225ee8ea955520232d1a3e8c504fc0f8d16f856f2ee69741",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42303,
+    "sha256": "89ed976c69279fa9f09232b852c6b33e86f148b9349bc2de975baf22015fcfb0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42821,
+    "sha256": "054b776c85f32770c3166bc7fda453d7dbb56a89d7a53c4237f9981c2583102e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 37428,
+    "sha256": "86298b9f4e40446a8a030443282c66765646d8211af828dc80bfab61bb1c9da2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=58--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42509,
+    "sha256": "f494b1dfa53e6542b58cdba148829ab7c4ee2225e565a30441f05ffb1b2ccec9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39971,
+    "sha256": "70c6898f6dd0aa6b2e2780669060116de94f5973e9b7332927a60506e8b46746",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42582,
+    "sha256": "1ddd3e0cb2f7abc8b98e4e80e136c2a123f6920b09df90ff0deab74d8f3d39aa",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59586,
+    "sha256": "c5b56230b4575531a5ced273ac6c77ad86510c05e3a84f9fa46881873107dbc0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 64506,
+    "sha256": "055bcb94b94fc4a5b6ab70bf8d459048712b9e76e8ada87af5b7b90b0556741a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57444,
+    "sha256": "c824d663e3ceedd260db601b6d86d3f78bdd5f64f9681b547620769c5a3a242a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60736,
+    "sha256": "e9b1ebf80ce7baa3859facdd96530b544759543e1ab92f6f5a66ef1d0896f9b9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 58964,
+    "sha256": "39441d05fd9e5824889c3aa12cbaffbccaf57a05bced9135e82fd322dcb1a431",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60840,
+    "sha256": "e57e14d171c893c26dea3aa252412d9df086061327129282448c7274fd8a946a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60897,
+    "sha256": "3e8476052044cd1f00ca67af90897fa15e250c3f0426be18f83b42558b127d40",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 66959,
+    "sha256": "7196565aa75080b28820e746a5d877807a82f410e97c25a6dc45ab4c73bc98ae",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59891,
+    "sha256": "92e34f5644a0340d9f0132fe1349d8fe5139ea06726233cf96386cfce29ccfd5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 62001,
+    "sha256": "05e522dc0a10d19b5a8000b7961abad30a058cd124e49a4f8724266f1fb53867",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50660,
+    "sha256": "660dfab8115a0c047e2819b336cde313fe6bd88d9d4870f254fb9b708429891c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52782,
+    "sha256": "4cec57924e5cee954ba19bebadce82f2cafb0c31338da890bcf31124b54660f7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52314,
+    "sha256": "77733f27571a94d1b0e176d56fb8498b0ca88baa056dbe1650d66963a173ede9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=74--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 57058,
+    "sha256": "7882729728f0152a8734be2b1a938a0e0a8e45568abd733ffcf37b61ff2a7021",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 51605,
+    "sha256": "222c0dfa7117fb90f08938a992a535b2208bcfc1f0021c72b3f16a666366b23d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=76--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 100294,
+    "sha256": "e804460d6ec8ad86f627e72e56e8bf6b7c7aedec5f98b36a6f22fcbd2f050bef",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=77--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 54897,
+    "sha256": "bd9f78f0afca2a52ab5f5ca62b015b3b65c483b5490ec61fc845b4979f84a7ce",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50105,
+    "sha256": "d9afa2f8046c5e34ad0ab95590827eba70203fefbc7776c8c4ca1ba06edd08f7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=79--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 93417,
+    "sha256": "f8b94184da67890682c0de648b4c95c7e76aab5f9021e83004a7f90a3fc646df",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50128,
+    "sha256": "811c6b66b04113f22173192084c889a86f7047b688bf4422db5d5e52d672a3c7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=81--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47787,
+    "sha256": "881140c455ec96d91bf8ec751ff2f9154d8cfac150a2986c0be9f8c2b65dee78",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47440,
+    "sha256": "7e8aef88652f617c93112684851e338cd56823ca4a9627f54fdbc0c7c433686f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51235,
+    "sha256": "53179c49c2196771f39673878d6ef57c4435ced82d4619fd2cea96dbc97458bc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 55129,
+    "sha256": "68ddb6043db8a7138288c9fe266a034ccb7af4f1ae6b76b1046b3a000eec186e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50197,
+    "sha256": "b8853abc7d4e4eb4ed7f01c9ed6c6eee4dbcdb5b23dc3599fbbad2030bb99c89",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50925,
+    "sha256": "336bd8af3a46d7d7b072e8106f69bd11470e631ed9f9925cecf7e47e8c35cac8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51142,
+    "sha256": "6e286f8a134ddaefe89fa5f9c42c9cec5fbc27e3bd70c4cd91eae96dd81014a5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 53525,
+    "sha256": "bfbf498627de0569e3f01178c4c817507e5c6bca999b75989a0464421d64ea88",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 52684,
+    "sha256": "3e355f404ba26c84f08144d3fce8963070841c46ba8deb8ab467dee8e807170c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 53567,
+    "sha256": "fa2bcc8a94480c382f4538bdf19b5d5dfb98f76a6ec54991d1c9c4b7bc0ee21a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=91--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 52695,
+    "sha256": "72a88454087ac6e1d7985bbeaced32becd7c8bf9da2fc6d17665c9fa2e2f5def",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48570,
+    "sha256": "ad2f6da756c35d4b9f5a9d53cc78bc109b4d9d45aa1a32efda41d1de7829d637",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=93--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50092,
+    "sha256": "721b1849bdded8d085f390d227be5ed0b718f5a0d0e377a50a5fef082852e84c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49520,
+    "sha256": "1bca64c41646ec341526b1f60d2d83ae17241b3a4b0716c4084be415c5abd554",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48721,
+    "sha256": "4c70e499033c48d352011dc07cc15a828305590cdcd141557eb50b8fd5bbb687",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50114,
+    "sha256": "ba5d54faa9daee0b4d30d353afdc828ee6651a547efd7240e4fb0f2c913096e9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49790,
+    "sha256": "53a56663c44403661a22fdccffd1c12279a4362578da17d5e7f1aee9e473c957",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51557,
+    "sha256": "7f46fb35980a24b0350fa0c5a006ffe28e2526661fb12cfa0bd9242f987c9c1c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=99--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 91951,
+    "sha256": "6804dd2152ef9fca12bec3aaeb5f867899881157ca9370172fa3692ebe345b3f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48737,
+    "sha256": "43d8440ee1a11890f13e8b2d2c1bb42d3c4299c4ed7d7ebed5779a2546a46c36",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41206,
+    "sha256": "c168cf587e752761c850b683471e8829fb8c5b584b18f23b46c197290fbdf427",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39604,
+    "sha256": "4a1871a34665adabdefe347ab5f2cc2af987e840d31cb337dbc662a50cb263f8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42226,
+    "sha256": "63ee6f894816d17968b21b1c76843c6e67b4db04685566fb0ccf114bb0f831bf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40894,
+    "sha256": "f0aa86251f5e134d8bb71c26a2b0bffd5b59f048f445ebea5f2d8ce715ae0722",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42359,
+    "sha256": "78982ba685016ba058609099a12bf8ddebbc02154c35d9d8dce6ba54b022a191",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40356,
+    "sha256": "c3b616aa022caa664b1deada124d1a063f1dac11a70ef167ef7a3549e5c74417",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40562,
+    "sha256": "3737a2ae659401bb14bb91d0a8dac338cb6c1da091d04901239190edc1c5cdf4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40006,
+    "sha256": "b5f23a92b548f8f8c27453cbb3c33d64c757651d6cb80984a06078fb4a386a30",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42063,
+    "sha256": "83bc29a6d893d265a287bd58ecd4a0ab9fd93fa89f06a8f54043e8d8125a602a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41293,
+    "sha256": "34349d93967efe237707f831d47b77b7b08449f63d436d29a279a02c214f9569",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 45299,
+    "sha256": "8ba4807f2ea9d59cf41d216e84eb307e3f709d21b7d2d002c7f87d80f2b5177b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42150,
+    "sha256": "59a7509fd070a8e5779172acda2825de9b4925c2e434a72e105cba0eb0cbf0ec",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 45274,
+    "sha256": "261301db7c31cf3a0a60049770bf04858ccf62516b0c9fb55b43feaaf3694a75",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41926,
+    "sha256": "aa34e74dcef4783a2bbabe405d82c372675329738e0b1fa5df35a7922fff4898",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43465,
+    "sha256": "dd4e7414652830d822d411550bf8a5a3fdb92280690830c5cc1337bb558a1acd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42163,
+    "sha256": "49d760ae213bece6472692f6b828df2774ddf32470baf33993afb81bcea5a385",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44826,
+    "sha256": "7db4399e8576f67d133eee6508f6089062aea1bfa01cf51d59dd2a44c7a7ebfa",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43796,
+    "sha256": "33d193b4e55b7d3fd3363d897c6fb2936f1375c4e4a7c49eafd77653aaf848ad",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42515,
+    "sha256": "9ee746f93e063d8056cf92ebf3395019329a4d684273e41935086fd9f6515ebf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42997,
+    "sha256": "cb6e95e589b107a223a2ca7f5534f1cb511fb8cc5999cf5b6e470226dc3b1d96",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49074,
+    "sha256": "b52cf6276fc4cf2718d0412b0225f772686321394cbe461eabe4c7038c5d6b65",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47018,
+    "sha256": "db18f93838a8a40fd8dfe221f03a23b226303ab3d084357ceecdfd862653bb07",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49986,
+    "sha256": "edd5959f0165102ff930514ff9296ba4bb7e9e85ba2aa5d982f0e1d13583fcf5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49581,
+    "sha256": "bd98b9f2123e38d133d7f0e8caf3a889da9664d8847e6b1468c1fe3b8aa52d7f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47559,
+    "sha256": "df9015d2eef067229acaa03b8fa86afb259f69e4858a08fd90351a0f5edf470e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47702,
+    "sha256": "8d3d482f044a5fb0b50da4e111d0e04d73ce3807f1d07a604a697e44934dba77",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49006,
+    "sha256": "739ca0989f5c4d21e2c3677656533268147f9a2d5a3821a32b25aa8a8802861a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46412,
+    "sha256": "27f81988cb9c351f0f9946fbcddb917ec9ff0d65495bc2ad240144a7ae1ed0e0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47611,
+    "sha256": "31805b67c7724f8ef4f2ea1e5149f50185999358d6b7943c34fa33c45ce8ebf4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46538,
+    "sha256": "8a078d5060cfd3dbf15a2cad129e4ce6ac9c639a1a16d6508354395034cac0b3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 50089,
+    "sha256": "8ba2bea1900f2605a672ec388cb3c343ba5db1b309179e7e100d645123d05191",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 51008,
+    "sha256": "92e5f434aae1b0a00f8ac163b4ce659391a0a5142285e953079045d5dcb38b9f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49282,
+    "sha256": "9db9db43f7e3c66ff3b4c321e9fe476c369989e1939c67780d1ee1e5797c2652",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48807,
+    "sha256": "695d5928c8e367a465a3484290c65ec93fd4ec825be358d204b262430d80c16e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49898,
+    "sha256": "f301ea1c8d81e779e0c1e08b55c8bb681e3cf78ab264a6969d1218f737ad5a65",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48527,
+    "sha256": "57bc0b2b60a115bd9a01c8a02933d944292e0f9ae998c647f56b250a52299ffd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47394,
+    "sha256": "a86e42340f7885db612d5f756e0c314f5d0775431de1757960ee60336918a8ec",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49255,
+    "sha256": "1121f98f7edcfbb0cffe5d0bd41ea4fe55698c0200848cc288ea9be639acf96e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 45666,
+    "sha256": "783baaf01cba86e9de31763e1e14273717a00e1c780acc518e755dcbc30f4841",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46693,
+    "sha256": "a36bbd78d7d0b1a43ec6c85bbd24f20920180f4cc5a16b8c60b8ca09e9b18959",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63720,
+    "sha256": "c73ca5f7669aaf7377eb453eb6af2192d647ddd528ca9e82c15a02d77fc68ac3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65002,
+    "sha256": "8785e8ae26bce3f141b04ee39dfdd0b302905c7576201a2c7ab6b23dc28246bb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65017,
+    "sha256": "b472d5182beff737f35e07b1061fef3091449cb70367862ad15d1bd287b1ced3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 62929,
+    "sha256": "1dfee238dfc10b8ce58c9e7f9814c9067fc37e82b30a4f4a078339e5e270c7a8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 64332,
+    "sha256": "9a21e15a2133c1873f9e74e2164b5c94f1563ecae3bdd6640b50f44db535fa8b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 66330,
+    "sha256": "9831c2959df2deeaa0e920fb3c7f3c2ee3cb795f92dae6dcf7f42ae4df88defa",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65233,
+    "sha256": "861c1b0e50b50ab41bf420a5b65ee9929d1d4a0a50381b5b16ce029195270946",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 68490,
+    "sha256": "d49a306e6a8562f811fcd906ac1e5a2afc692586cd1d24bee2e31c61bcbea3cc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 64179,
+    "sha256": "8c8c614e406923ccdc3adc2d386ce9e17cef5c5a1447e7f5b9e60e7925ad15c3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 60303,
+    "sha256": "c84bd7c8477dea0108e62bdb96dda87b273682a53b9b9d43bd3cb9a9fe1c5faf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=51--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39961,
+    "sha256": "6f7c0ec066f5c2271d70a34bb9bdfbb78ed959b9b2b34303b164f8e0a815fa45",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=52--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39018,
+    "sha256": "2b973b7ee0a47607b8aaeacd478e3bd41243b168536896dc8aaf4137a8c07ab5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39508,
+    "sha256": "5a97ceae01a32027ff3338a2b343a685375950341b276e6365de939486892989",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38669,
+    "sha256": "d6c403bf026a8242800249c5881e66b62a45de39993d4e9d4829ef08b836800b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 40997,
+    "sha256": "0e7b35e30eac488b92f714dfe1913088cdf32e87fe81f2d5bc7949d5542226a3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 40845,
+    "sha256": "7c6ad68e8491b0bdc2d2bc9ba8a64dfd0a8919b67476e25848b7bb4c1b186972",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39336,
+    "sha256": "d549c063b11b73044390ecc3859e8310164c975162f8cd6af34cfdd03504df46",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=58--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41713,
+    "sha256": "a980e261723336e589e245c99d621378c84597ea271a20e82ded23b5634c4335",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38979,
+    "sha256": "2e5ee4c68b824f1023ddfda8b086e24923b1942800d9d600c1733d5e822b919c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 43404,
+    "sha256": "23b1de4a26fd7c8d2432a2e19137f244bd8447680e5114be90eef94b0a2d15cf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59357,
+    "sha256": "2d0d251872afcd87166baf61a2c62236104d6d9dcd372e4475c6a272fd90955e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 63416,
+    "sha256": "063019cb863ba961eb7180c76c093650397c647a3f195223b0012b92aa5a6a40",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 58315,
+    "sha256": "8895bab2d9f5f639b46e6bd2e9dad2355aac0de36da3cad3252fe7638b2a2c94",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60735,
+    "sha256": "57f1a919dcb8cf30c2160041867882a12b9686976fb7e84f473829dc2c1c140c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57371,
+    "sha256": "d1689f23933f986b0ba28ffe9f7e45578aece449dfd34047c7fe59a2da714945",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59750,
+    "sha256": "5eb20f67c93d589973d3ef1f0d76ef1a16fed00edc48c5be99e728e31556107c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 61563,
+    "sha256": "5b660263f2f9e7a399eb9caaa62311ab6b607de1ecc98bb229226f21b9178f89",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 67446,
+    "sha256": "da9f6c0a2587f238072e242069d81c43f16bfd26660a80060a44c3db44a31a63",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59353,
+    "sha256": "f994e59d05cf0598de1cbe32124a416125e837eb607966d8d48a61fa3ce96ba7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59007,
+    "sha256": "3f1214cd7b4cc12f02c9109e1faaa3e47eb6fbefd2559a57efd62d91db03225c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50752,
+    "sha256": "7a7165e1c342d99d25ab229a4c24d8c7e7a3f4e1ed6ba80af950a24a242b5cfd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53218,
+    "sha256": "0dff2e06331d044c76d731e179fb75df31737c3551e8f80d964cbbc01138ac2b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53294,
+    "sha256": "95413ed8213ad703ece248ed36a76ea0ecce11c2838fbcadaabf40c7a586fa30",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=74--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 55763,
+    "sha256": "bdb101440ed64670cf8c01729a48ba1bbdc6c539cb4ec041fa382bcbac636619",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52626,
+    "sha256": "07c940cd36f7d977895e63f47d98006e811cbc8301f75f2bcfed6c800df07617",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=76--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 54474,
+    "sha256": "70fc969d018dd34102e8cf9b4186c57cc974722d64d966b1cdc908fbeb519a02",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=77--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 54923,
+    "sha256": "7e348eff3855f69d0e7e88c35ac4d8957c8183cd458c0951fedb961580f4532f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 48441,
+    "sha256": "e31293cf3cf3bde0b0a5082fb8e2716f6f3008bea4aba819ffeb25fa4acfd37f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=79--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53747,
+    "sha256": "7cf65acebbf29bcef147e6a440ef2040641911dc6533d851be68691d4733c9e6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50561,
+    "sha256": "57b82676729fc2b51bf878e48cc48fa130e7bf9bbed4f85ff0cd4cad1102b249",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=81--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 48187,
+    "sha256": "0be8521d19b67c7a357054b3d8863456fd95e8fd0ecb1267c7a41c780a803b92",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 46595,
+    "sha256": "a57bad50eab5d5d5145f719798384278fdef9915c741bf4d2017981f9c8b90d1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51927,
+    "sha256": "8956854c0172331f9361abdfa0ff9fe8871863b8fe37c2916613f01e69b7749d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 54467,
+    "sha256": "82aa6a5f805f5a30ebcd74f0f5615d38e0a7427a60e899331680404020ff569c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50157,
+    "sha256": "0a2b78db7a01729d25f8caa025ca547173d0925765b417e8271d29df5cbeda52",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 48607,
+    "sha256": "f74b5c54041e48a37c2f52237d302808e1fb611481efb317af1dbf814e2af014",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50937,
+    "sha256": "5d50268de0112963570f5faa355448c24888cb3fe64a9d5c27c40dcc732c42e3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 53754,
+    "sha256": "8d387eb71e283804a113603d9ee7a5a2a531ec54cd5acea47567c61c7757b3e5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51028,
+    "sha256": "69f05cd5ca086f032f76026f89be756bd0cc9ea00145dcbe96ac84678d089632",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50328,
+    "sha256": "bc6145ff878d862b24d469f368975763f0354fa1550900bd1ad832a7ece39bb0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=91--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50818,
+    "sha256": "a62f6ed3e94e53222b57df5e1e8e8eb9ab03ea49492a173195ea4e9b67c773b0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49614,
+    "sha256": "c16f16ffa872f8bb43f462a426e3d1f034c04c551e9622d54ca46e5be0540748",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=93--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48924,
+    "sha256": "9c0cf790273102487bea7389e85ef216cd224897061c8fa1e48d277d04ef9e5c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50993,
+    "sha256": "a999b3fd714413906dbccc5a5ef2569a39f07570629aef2430df46d3672afb1c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51322,
+    "sha256": "5855f5e1a96edd76feeb0572e58b2a2e0ddde8d9128e0e62fd722bcded3b17ae",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48506,
+    "sha256": "8624e467c7272d3d59e3a600cf37ae1a09e2e740197577527826776cfce5f59c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51178,
+    "sha256": "e3722c7eece1c0dd2ca2d58e2279bf9e96f061a656f8a986f24a622bc48f5a38",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49117,
+    "sha256": "bb94ca48656cef2559bf995807add13145f488b3b23cc19a48a3a994429a8f88",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=99--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51259,
+    "sha256": "fb0b8f638ec4930855f0179340a32753a66cceb9151ab95ac192947bba374a64",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_34_23--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48428,
+    "sha256": "4aeda62b7b7b829dc3ad588c81fb46b0719d9efca368ea61ab6d158cdaa0f9f9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41122,
+    "sha256": "0e0b5ac4a6d2d702b3f47f2dfa05b5a28f5ac913b9fb975af4dac334dc3b3923",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40090,
+    "sha256": "3239b3cebee6602215fe77cf842afa54b597aa056c438d022a6247f7061ac9aa",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38690,
+    "sha256": "03c1f97e9aac2ddfa2ca9a7d5b392d60ce67c089fc7e057c6f92624291d9a559",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41839,
+    "sha256": "473f8fff586d0a3ea941e609e4656a6c8f3b2d472fc4af2453195167b4f4466d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42602,
+    "sha256": "9c6d79ba8579e9d1da02d411a94575aa89eae5d25a7634c0fb052418518845ca",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42299,
+    "sha256": "84f13ea88069471b1204114e00f6b8dc36095d34a17bbc9669b5f73f44b016ff",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 37910,
+    "sha256": "721a64184d6d00e68b71fdb24cdd8feeda1d7be57c25b6b70268d2997aa0b37f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40885,
+    "sha256": "0e0ac21a931041522e64df1d98880017186e7300bd7d48d1b7294ac15a2c5b6b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39189,
+    "sha256": "d0b422e43622e340ee673a45a37dd33965ae3031059f7d1b0be65d90068e0341",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40793,
+    "sha256": "3a6a7a7cdfef0af50fd9bd1943e88478654c0c929804d834ec6f83b105853dd5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 45046,
+    "sha256": "041e378fe6de1c3651c8b646442bb43e054ca0e19521fc5bd6306762507b18ce",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43588,
+    "sha256": "911f1b414b4f3dc85e5e90a940d28d11c3443296b4fd9bda49f36afb7bbf64e7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43348,
+    "sha256": "100bcc54ee1c69bff53ff4945a62d265fdea36ae7a5ae6a014c1bb03aa8db905",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44218,
+    "sha256": "b7466d54b0555afcbedbaa365ff0f547ac8fb53bea4ed5efbc57037cbeccad29",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41966,
+    "sha256": "a0cea200b1f353570705e95ace7931be2b82402bc405d9c6620716c0df8349c3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44291,
+    "sha256": "eca5b6b231f4dbf162e2df6a2bedd41bcd5ebc6c260432c4cec6bf235c0b14ae",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43979,
+    "sha256": "86c47d66dc0a28656fa8be60b55ef2fd428761ba4fd2bc6bf890cc488a003fdb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44605,
+    "sha256": "0d36b1bb6d3cdd06b5d92505c12aae1ca25eea07e0e9a9ef8f36e6740943cee4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44632,
+    "sha256": "28ef28f1914374d028494cba22bed722f575590df157e24619a11ff6a6dfaf5d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44286,
+    "sha256": "7fc3608a557687448e89a175d16201cff70fb074a468415a8ee0f6d7fac0b773",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48350,
+    "sha256": "a373fbb3d38f5cf565bee88a03de7fdee112fd16ca6efcfbbd294513e72d03a7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 45147,
+    "sha256": "6f7d9b4af64ca501366d2af0b9cf847996c8b38dbb8f9b970de455997e44e1d4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49362,
+    "sha256": "9101101c1205ab08f54dcdc60a0082caeba0d28a6cbb1c000874d265255a35b9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49594,
+    "sha256": "2b538b64f8d8b6b96d48c75496c39df8ed23e6c49c5cd611e27b76192d795995",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 45527,
+    "sha256": "cab27bee959a9e3d11f5c493b8592afff745ca8aeb201258c7e9d294a330a9f0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47356,
+    "sha256": "3eac48ef2ab808c2b3f9ea71d06a8066a76fcc3457b840e275fcf9f8003ceef5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49392,
+    "sha256": "1ac0c88fad432f6a907574dfd561c99a308aadbff8b456b4276db20920141016",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47617,
+    "sha256": "90f825bb31ded08c3e135b5bc152aa6bf35166f179dc90782cdfed6635c32c7d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47199,
+    "sha256": "1f307a2dcbc79676c84f5d4dee0f39b035290e47778ca39571a81c99f493d3f1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 50158,
+    "sha256": "c7ec796f04f4220fefa9a7a603dfa71ad9d783a4c3f43f0147dc0ec5d67611ee",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47662,
+    "sha256": "16005361c055112d790051690511dee367b1dd01011ee3fd338e5732ae7e383f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46749,
+    "sha256": "2e55dd07f6b67e82693b0115bb06aad6a154fa986f3299e42ba21d75e9707f61",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49874,
+    "sha256": "23786224901a8b8b9ef4574a620a8fe79a801923911f74e1eda95077e84c0d7d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48102,
+    "sha256": "9604d4c91c09a874c5d542bf82877da24bc9c621dc36c0ea7ceae402f8da0394",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49310,
+    "sha256": "ec630325f42a4e51d3a9d9b128bd3f7e97ddcdc76b0cebf2a40a0a1ad5edecb6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49621,
+    "sha256": "597c7847a7cedfcff269a66456c9f97ffa1cda048f4ae201ba1d394bb79edc39",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46976,
+    "sha256": "9abdb1f6d24ad2e07fbeaac31ceb7b60b93a1861bfe7e009c59ff81fec809c34",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47418,
+    "sha256": "d77782c774e5acb0421ef32c7821a16a234621a6150c7e97a1f63a2057e5548a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48062,
+    "sha256": "026142bff9ab852099ecb2818dceebaf3b24b1114de6a59b0bbec266623439bc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46218,
+    "sha256": "67fccc496601aeeb3a9f1e7c102721df4a25f809462f02fb839474d45ac95e55",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 60891,
+    "sha256": "af7d715b6ea3914c15ccbdd4fea5781891aca27195a701c4e1e1b7ada4b162cb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 59406,
+    "sha256": "602dfcb77480095bce1e76b43ea2a666d3b3c5a231de0249554064864e5a5878",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63246,
+    "sha256": "13d150437c05925c055cb909beb69ca89a937d8d3a0863e6a14708995f18a23c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 66447,
+    "sha256": "1a357d85d9e1b2f76ffa372dfc6278145f39af1e0860c2d654c2e2f3e5fb49bb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63934,
+    "sha256": "2e74a128b50db4cad239425879f5cb5e7bd2fdb299e043475bc7d9cc468909c9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 69355,
+    "sha256": "f7647079767ac08805c504bd13e650a8ff3167d3de8b9ba571324a3f23c9ebb9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 64437,
+    "sha256": "9cc5422a5884f30d01ef2c7390556869b38bdb0df7cf9583a3d0daeb87c8ee15",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 60065,
+    "sha256": "06f442b96c2aceec9da32006b9a70718900048167fa529e974e559c04ae44044",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63090,
+    "sha256": "1632c2d8311ea389e9d46ffd7ba121c26c8681d4a6783c16c065ca5dbba3d90d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 62193,
+    "sha256": "5a597bbaff9fd2ae0cbe45f0958b74293fc6cf555702f573c01364b9e5643d09",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=51--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38749,
+    "sha256": "8828a3d4633c9fa67c9db94d648c83ea47114d765be879c73daa3a28ff6f5633",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=52--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 96734,
+    "sha256": "a8b126bd9f2d02fef0ce37f03f160837f3107ca8d1cee9935bb154102e882365",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39715,
+    "sha256": "dbda200e5e97a24ddaa0dc8077670fae283a68aed4199a71a0b80b065c9be34b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41021,
+    "sha256": "66a42f975fcc39f02a9dbb64c4b9e7e89b5467de2d5a77d888494b9d0c0cf0fc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 44323,
+    "sha256": "d1751c57d4b9b2230e70f0afb423d7c2f5adbbe9692e97512df8b774b469f5e1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 40742,
+    "sha256": "66b13cca324d4d771515486667965156c0b7e53d835673cb2ffbee1a38ac6b2b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41351,
+    "sha256": "65a54c53ccea15d42b084bdf98f3bebca891c21ff718f6e677255d2b862c2ee9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=58--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 83869,
+    "sha256": "a78a502ec70d693e1f3c9906150c9b74978090e3f97adf1e82d179c99c14545c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 40181,
+    "sha256": "28e958e83a31d9b5e2631134ac96d77075cbac8e6ed16f14ec8025d5df30b034",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39984,
+    "sha256": "686f3950d2cba7990252e560e198d5466b7500b353e9b0a17b6f514a5553fc0c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59839,
+    "sha256": "c726c82518692a5c514a7f3674d9386a4676f54cb4b55056e0ae29a25e9a3f17",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60084,
+    "sha256": "6c098a33b2133032c2b9000cf233d0a884cf375721cb9fc8ae3c0e26dc690bc0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 54829,
+    "sha256": "587df240a3b6a8467fc6968a9175c9d376527117e62c45acd2a1db04cd354b10",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60300,
+    "sha256": "a17744cd8ea686380bddc3eda6d7a50bf402f4790893c6d0b8ceff6e526bd718",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 55096,
+    "sha256": "b038e8fc886ccfb16f3ba0250cd8af5c834829638f028550c5eae8bc2a15016c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 61845,
+    "sha256": "186959854c03ea019d8c09e474d8940adb8911e15540fb33babc5cf9b92c973d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 66566,
+    "sha256": "d20d76f27ad43d03449c794a1b673795081ae4a253c5b4e73fb6e7c30907d930",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57724,
+    "sha256": "c209509de29513b09d18b1784cc404556a91f55a316e44d1885a06ca5d7a62c3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 65989,
+    "sha256": "b54ae3b85b7f5edda435ff986a4df186a10f6aefe71a95055eb56c45184ab9df",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 58361,
+    "sha256": "776e75d7a3cf89470848fb76921a2994245bc16eec9fe81abd30d1d003abb3bd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52316,
+    "sha256": "dad11f081cf2706bdc63be503abb514f2349bffc6edf37232fa693211c139dc8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 55428,
+    "sha256": "bfaa9708406dbbdd40831463d78195d8606c30abd6f0357741b132bd5b9a14b2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 56464,
+    "sha256": "58b3f6565e1d85182a744105c81c71a4991fdfd4c47765c646de0c8a5cb6cad3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=74--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50505,
+    "sha256": "0c266d000dcd2ab506b3498c92d33a681666d4085f9738962a451596b8953564",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 49293,
+    "sha256": "264dff9321148cb4cb0e8d2ca64fc367b2a8ce29151479fc2db4ccaed88ef6c3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=76--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53286,
+    "sha256": "ce0ca3b45bae030843d4b72acc658bc852ff9c94a4c9f3255aa58299f9be0374",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=77--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 49832,
+    "sha256": "c69ff1e1e4184b5ab2ae19df0039957f11c8b9df17c2eb54ef65bbd2aa2fa416",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 54097,
+    "sha256": "5d1e6285655673f6c44d1fc3c163905d59123e848b71932666b0a7f0bc98206c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=79--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52142,
+    "sha256": "b37d42784965b788227928cde5bb755316d2731f7467111d2aa0b44444e1c702",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52238,
+    "sha256": "54464deb36d0dabad998fbcfacf6c87034516eb78694d1c6d93b911ae0009668",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=81--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 73709,
+    "sha256": "9773e7bab21f8e31231d425d16272f0e5351eb50919e60e2122640c3f54e6dea",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 53856,
+    "sha256": "acc615c89b74b8c3abca0353fa83c50dedbdbe34a6ee839ef40c67da491cb9e3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 54647,
+    "sha256": "b1ec05835acd6a400a79dc02d05f77c70ed1840b92c05c6b8143cdf825a51811",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51159,
+    "sha256": "52e533f57c177225be3085a9969328fc72a920d26a30c4f2c25ff82d19a51004",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 57484,
+    "sha256": "8a79afdb91a5bc5fbd4e5a16b44bd289f8eeb864ab4a7ff8bd65abf67c108502",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50210,
+    "sha256": "2204eefd14b014bffb2f647551e300c75fab2c09cc4174c5b7bec3d2c1862198",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50714,
+    "sha256": "01dd1d7b2f6a7d00b996a764b752a02c11c84b8bdaffa7b9f6b6a3b0deb13bc4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 48633,
+    "sha256": "56bef4dae80d500f790c059795541bea269261d70b2d2dd1cd8c3e1103432485",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 54138,
+    "sha256": "53a6cafb510ab0df5c38e944001c761bbd48850c7323390f1d7678e6697c2064",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50649,
+    "sha256": "53acc8d867789f7eef2f234e929e3f84efb23a4b742c17421fe41f4478b16e3b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=91--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 64188,
+    "sha256": "babcfe2cd59a3971850d8c3810230c6cdf7c6cd2c26604c37db4f2f648b33ad3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 46354,
+    "sha256": "3e546ecf2a71a455f3f6d5b8a82db3b11d0e3044276ba51fb60820797fe47f98",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=93--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49407,
+    "sha256": "c2188676cad2eda4daf661462fb0c312f086f1fe3957b133a46d682c3970be52",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 59330,
+    "sha256": "2058487fb9850124c7164586c2656f1fd01dcb160215c9905bb0c31facf2db7e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50240,
+    "sha256": "a1710ab1690c73db46edeeff3eaa6aed233d4e9db641496463b25ef9cdb8451b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 47479,
+    "sha256": "b9f5acc5be42fefb5a7664269e1c7d7c776ac6b5d7c33d8e9e410847e77fecb0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 46976,
+    "sha256": "f302be67ef113fa23284fb457cd18d235b14aaa9341f8e79529dd8ded767ee46",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50123,
+    "sha256": "2c1e33919b54c152ff130619541ea8c6e0dada49f06d2205b45c5dcdd074bb91",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=99--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 46083,
+    "sha256": "0eb10aadfa349c1f5ee19e05c7a8f24c4d605fb3945ac1bdf50d09c53f7dcb7c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50404,
+    "sha256": "510e6d060b04421db4c14cecc34a143b34a7d034c4314db21f174b60af5ba1a7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40063,
+    "sha256": "160f599f913ffd7bca1c3eec81a529400dd10ad323ca4b8b595ffc48cd39d260",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40876,
+    "sha256": "001126236ca271a499577bc7e3e57ccfbe69ead0e2d1c68adbad4ca2a97428d1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39033,
+    "sha256": "08220ce5dd98c0d06f022e91c880f614faef927b568b0cc49e2340b827dd03bf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42896,
+    "sha256": "a6873244877c131e63d4b176b79531dc87482e0dbd6198ceafe584ed34b7672d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 42732,
+    "sha256": "658c46c3edce13023b10889cb0398ca3327681df9a947058420a1503067671ca",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41641,
+    "sha256": "70c62a227d2dac8eb956121ad2b0e2ecb4c97958efc69e080c5553a0d6361394",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38104,
+    "sha256": "d3a081a7bd91e16ac52acb80c62c5d955dda7596dce142f244905c416620b764",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39587,
+    "sha256": "af37a49bb94eb112548cc9ff7b78d3b5ac4087573d8676d82d12070c298f89ea",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38430,
+    "sha256": "0dbf0eb2304e560fc77d4250596f678ff3a368713c7fe28421e8c08e7f8b96aa",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40017,
+    "sha256": "f8feaafc9bc95d9cce6ad26e328ea577dbe3b2cb739431ca828c7c13bd344ffc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43777,
+    "sha256": "ccd35e7987e07dc297ecc996fcf9a435934be529a7958646506ec752f50529de",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41689,
+    "sha256": "8f79ab84cbba8a78ac6eef188c76611de30d0d54d9be0fd07bd3daa5e1c02498",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43057,
+    "sha256": "117e6b71806b6efd1399e4e879085b74cb40c32575f67d4004f2e2b7665fffe9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44491,
+    "sha256": "286347798498332906e2ccf63bff5b3c42070d122530b7959c288ba6b44a24a2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42777,
+    "sha256": "53dd924793c1f1e0a8f5ee911f0793c84dd99cdb7bae3ad6681c7697fb6bb396",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 45081,
+    "sha256": "9333c991431a6bbff25517aa7929d0d6b00eae870b05de69da8d00e7e8f6520e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43961,
+    "sha256": "d9c25970b34c7dfb6820530798a46fa628fe52a2a52a04b3cc00b4076e26ebc1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 43070,
+    "sha256": "19bcad49e8e6944083b046a1291269b9662d5008320ab82c407559bb4ac97117",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42504,
+    "sha256": "4ae7b3ca61167db16f8f581fd69c33782d4c3e7ec9f3b9620bc8d2c0b2d01a04",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 44677,
+    "sha256": "eb6e71df82bb5c8f42e97dfd0f6a9209997ebdef8ccde113067d706684ad85d1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48741,
+    "sha256": "0c5877fb3790d157ae7744580d7b58761cb8b49a50e7ed80781150e146b25e7e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46180,
+    "sha256": "8a67d4f1b17ccb13875fd808bdbe1b6696312982ba60bd648d90645238113792",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 50377,
+    "sha256": "003dbc6f5e99a62292cffb688fa3e87d7ade02e3b8d6aa767a3a685da5deeaea",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49252,
+    "sha256": "fead11285654d7a14db8d2a414f43e0ef9a9cd2ab8e3d7904848ae3b87f9f298",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 45640,
+    "sha256": "8827b9859c828b8b146dc44fec5c28302643142a1b5191762be53bc90bda6232",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47444,
+    "sha256": "421719513afeac94a0f1d29631a7fec711b16a82f9abf8024200a8f431b739e8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48684,
+    "sha256": "d27b22e95ef2b3a78492a689cb8eb76e7e5aad8b051cd510459854beb07ff1d5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46607,
+    "sha256": "2a62b002c2b39db6e3706481adb666c78ed3c250a55d61f8046b33df68f59dbb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48407,
+    "sha256": "fbfe016e1fdaf82a97e7e028edfffbcd849ebf9e92b9c0687f0ea53c8df0c2b5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49543,
+    "sha256": "f07a0ce930d40ca65d72a20f3a0e525ed3195f822cf49ba9555afcc41d803736",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48224,
+    "sha256": "540e99eca5d468a28d4fef97c655023567afcf9f3287e5087866ccd87d2643f3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47044,
+    "sha256": "01e0a20864c56fa4e945d8b408e12921d27c31ca3cdd844c0c69f0cc4953206b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49154,
+    "sha256": "5aa64da032069fedbec9465999c260c40a5909e07365dc48d696a7a4672be6a8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46711,
+    "sha256": "f67d4c4547c6208deda31d7a6f93fa1be5de0d637989e3db6d706597dec70dd1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48467,
+    "sha256": "588d25b5fc9c8b1bb6d486f4a723967d79318ed39cf160de5ec032df49c0fcdf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49154,
+    "sha256": "89556de53a06586d694944da00ac1415e10a05d598191cbc163adf477397b641",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 45643,
+    "sha256": "02f684bb103a79ee5c9242955ec0bbd8987ce471dee19f84cc53761039fb1834",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47621,
+    "sha256": "d9810df2bfe5325c150d0edc484eceac110145f04e2eaeeb8760ae170e7d3dee",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47135,
+    "sha256": "15cc61aac6a8ca2931615f91ade26ebe47e521cbd4925dd6ca32b4d04e0cb862",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46197,
+    "sha256": "8b7ff038f717f92dbcfac676596bfa7e234c91b35a41b254e06af44f199eb49b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 61965,
+    "sha256": "da6658d929a81c55733d55a915bfecc69bcb56cbc304d28e444c637d835ee1d8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 57806,
+    "sha256": "cec1934d97144d9bee10029d60747d482e9409afb0b3d57bfd3735933806e6ba",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=43--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 95105,
+    "sha256": "388269771de3951b27212f236499dfb33bbcfc02c3bdca5cf3c834e3a2b1b3ca",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 64794,
+    "sha256": "a8ba8dcea2a64333059a82cda1e7664a4c82cba485f0dbc3fdaa0f76a26ffdd8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63803,
+    "sha256": "284b7266ce21fdd316cf904b85fb3f1dc8b01c7fb128d754fe565c775854a6ea",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=46--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 103123,
+    "sha256": "f743a65a1c0ec32be4f795417acfcf1f36fb25426c5d6fa15d4057ee26e4d6e3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 65786,
+    "sha256": "d2f6b3993e508d0a39bf97ff01971b20c0c2c363ad26acc766cca48dd407825e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 60850,
+    "sha256": "3cf728cd4aabc883656914180352dd2dc2a917c5f4a05b7281a1cd232acce7d6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 61496,
+    "sha256": "faf45c6d74572d6bcdbb18d4b430f9a845c7f831d0711df4f19dca99722b615a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63937,
+    "sha256": "5e93c3fb26ef49750a9a55302147dc16e1935db15bedb2b52ea0bb91a3415a3c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=51--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38681,
+    "sha256": "0c01c5d46740ac315d68304f939430edc3d3445d3a5d3658c7a918e1d445f45e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=52--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 72316,
+    "sha256": "b0a0cf08863b42d38816ad07bf4452f026a3faa2ba827f5fa7814e5b9452e48f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 40343,
+    "sha256": "a46e23ae0223771d7e95f0d54c1a0829cf68ea43a1bf2d3b94059ce56afdaef5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41187,
+    "sha256": "0d70a0efd1646b62acf126c6de9df2d9089e153a9d881e216675ce1f08a78487",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 43948,
+    "sha256": "0cce05c22c338ba5fa1cb4b2fa109d541026db39d0a3132865afeec3d271b587",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39981,
+    "sha256": "00cd80b4522af95bbfa8f9d3ce50d6f41e14e6f0e6c8bbd95912c65005d84b38",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41640,
+    "sha256": "0dc1b00fa76c77a4ae6470fa1306e618b3b8b4f771a38a203cee3bd555d88601",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=58--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 86910,
+    "sha256": "5fcd41499aaa8e6f0d80c6a6246a40a98acbd0354c679dbf598e3c637ab5a12d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 40986,
+    "sha256": "4a61811eb96e32b489fa5dc6df8e8108db4f5dbfe7e8554c8bebb38c1ab3f17b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39395,
+    "sha256": "1c86c6b35081a97a19110c57796b45d11207aa542bc0670da213dc95588ff4ec",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59717,
+    "sha256": "fcf303f18847bf0cf00ec5592ff06d0beee33ee86e522f3ea3f6b31c120b1e5f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59360,
+    "sha256": "286dd86b3fbf8f524c015b6a862392101ea3f22321a1166940bb5f5020a22011",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 58132,
+    "sha256": "0176f8fb6b1ed6679b6b8241ae605b6b6394fd975ec5791e0bfac0b63b2d8621",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 59571,
+    "sha256": "8f1887c8f04069b4d6ba65b9b13cd8b6951bf93e9c24db93700ab8d085303e61",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 55700,
+    "sha256": "4624a7f177491e46507c60c603254d805700cad7100d8f60164f7677b86a34a6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 58794,
+    "sha256": "2903f122d97c2b9fc6989b3a87bf1e3981a956bd973546297c603ddd147026c7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60651,
+    "sha256": "5438b87745aede0775b7a5c1d03e3113239bf0737639f1c5ba6690f632961862",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57665,
+    "sha256": "6034fa1dfa85e8eee690ae2dc821e1518afc358cf36ef27af8db2a0efac8c167",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60901,
+    "sha256": "e981be8f70f7a7e70cba9efff152eb72dc7c6544f8e070ea789ef4aec1bb460f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57904,
+    "sha256": "4e4bcd760e2a61e85b913b627eb5394dea0b018f03495d451942d6e5eacacf03",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 56115,
+    "sha256": "e88933fdcea17e541d31875ce15f3da873984ea70db9dcf2654ef0fcda20ce60",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 55333,
+    "sha256": "e7abad03cfe21fe5bca1d24e66aba926d27d24cb295fe115226caf993ab66da8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53645,
+    "sha256": "7909c5f73c0dcee524358a8acf5165712deafd71667365e0e70e158d835203bc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=74--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 92227,
+    "sha256": "0f64096c5368c0d1ca3c8ab243ef699bdb9bbf5f28dbc4b3798a7f267c732043",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53065,
+    "sha256": "5bc28860cacec88818c924c15818f5bab589f2042574bacf0e14b7227000c8b4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=76--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53694,
+    "sha256": "e16269f504d5f58092437e40b5ceeb8e335e94a42952e1d85ae1945059ae794d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=77--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50070,
+    "sha256": "a245d243da4851fbb763c346928e761908a54f9a2db7e0cf0fac2aa9e3d04a78",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 51477,
+    "sha256": "c659f2c23c4ad2f008a44f92edde40c04e0bfd5a1d69d17ebb7e2f73029eeb5d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=79--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 93052,
+    "sha256": "26f88780f6fa8b94d67242e1b331ab165f97ba51a7eb6dcc60e243e7674a7b36",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50495,
+    "sha256": "6f454c3c1a852028ad61231dbc3959a083d780d8f8288a7d8801fd1834b17c8b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=81--success=False--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 96770,
+    "sha256": "7f2490da86b605b0032967eef90b45dcfa37ee9f809d20dc95e012cc82684199",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 53910,
+    "sha256": "1d3f44aa49962ca76046e10d31f59945f0e88d3d1df1eee03aeea47855cd906e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 54359,
+    "sha256": "bc2d4d71d4fe2fa68e199c758101f550242a0702eb02a8c7114c4ed1adca2be4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51459,
+    "sha256": "43a632830a5f9b4af5118f62b7f550d67530243e93c4eb9884e921b906434a73",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 55111,
+    "sha256": "4775025466bbe3a64e1af50a60502c47221d1f0d36a2db43fe38ad7ba60a36d6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47852,
+    "sha256": "263c06966cd0038076071d70fe526759bcfa3cd2af7d5a1acaf14cce2623abc8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 51690,
+    "sha256": "896847a149f76ed50981537febec6a5076329d6b1102397ef148f8152d024810",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 48361,
+    "sha256": "5014a2764c477ebf44b03c4a4d925c375d20daa30e457f4d9d817f61c5f65c12",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 54610,
+    "sha256": "8a7bb584005129c4b9892a614a7a0b15c77b9969b91233856f57ecb84820e3d8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50146,
+    "sha256": "8431b996527c3838784d4cea0c635b1b3998659518e0166794dd061f56d5a6ee",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=91--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50340,
+    "sha256": "9eda070bee3c24ef60ba50d7d296ecda8ba50cdbaf7e553145683154751ce942",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 46459,
+    "sha256": "0a84dffa90dc81241a8bc8904bb6fa2f5ff327d4486e8085bc061091015f6863",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=93--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 54328,
+    "sha256": "47c5eae146a31b6935e5d4376e2f098e2d4bad487663f3297b0aa06e21fc3bc6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 56489,
+    "sha256": "6a5eb609be7b62f4a87a964d2f47a1f4c8d9ff628bc43b4531722d1cab6d9468",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50560,
+    "sha256": "bb889359cc6bfa1f7cb0907f5c0b9bea8e35ee5877c8e88c2500b8021d692127",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 47555,
+    "sha256": "29534f0f6e18232d3657708bf9083e8215674f0ef43f5aa565636df031d50214",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49678,
+    "sha256": "11ac1847acd4c380565433e3b39abd28ca15f53a6aee3f13b7249eb6903b0e32",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49854,
+    "sha256": "4fb23e2239f31899f05f461e35b093c009804b81f3ccdfd5f902ee2d9397b804",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=99--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 45727,
+    "sha256": "29f89d666b6541e9d2fa55de1b187a582e7e11c1fbaa79f12e7cdcb7b6e64de2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_09_52--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49247,
+    "sha256": "7e6de3d21fff1808b06bc9e95ed2c77c41e5929a2b5483f2c4cbb526e1f00cd2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38144,
+    "sha256": "3db94cd72bc7729a544658ab97bc184ff416f382cb3ad9a3a4301b4e13835868",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39333,
+    "sha256": "64ef7e392ac2d166f20821670588a822ace30d078150917a985044646279410f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 51848,
+    "sha256": "d7c7ce5f6ff1691bd1d786b9e31ddf367ba7019f3d56328522c42fa9918e17b7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42628,
+    "sha256": "64cece37c82e0fc5874c4db269531863ee44e17fca1da91243dff5cb676c1a78",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46533,
+    "sha256": "f3fb9e2c293a13d4a423968196db680048cedbfc5f7b8d696461f8e0c5681a3c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47710,
+    "sha256": "ccd5dfc6bf30a1015bbfe2ad62423023fba6591b71fbddb400f53abb2d38d787",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47615,
+    "sha256": "dc1aa67c15b0676bd9f23d2ac2deba746cd13e95cf738f866ee63bac9272c1fb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 45044,
+    "sha256": "6bfea635931a33e7422687e771e26b74a7de53bd210f9e3d99f562c0f570b7b4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 60173,
+    "sha256": "838ccd30901e8e2bdcc36b4f4e6322898c57faf8522c31e2fbd952f9e56ad841",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 62759,
+    "sha256": "be436fdc521a57849ecc49754989f3732545cc794b219b9c3890659466a533db",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41570,
+    "sha256": "37fbc35b9d5f39aa94d90a8466f353acf4805c9f7abc4538690e427723f4eb2b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 43904,
+    "sha256": "22b26f24927a9a63a4bd97150fc5b8157bf3876b788998525f0acee0964a1a79",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 63442,
+    "sha256": "021c93b1be4096fa1b6730e07b8b5406f89be6517c1fe51e75216c1b40b9ab52",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 62189,
+    "sha256": "40ebc2f55285fc3b0bc583c7a8f0c9520c8d0260d1f687f673ad9985ed1875cd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52120,
+    "sha256": "5aa9197a5544ecbb169ae76ddbd2b23d94e8644eed50c205b7de3fa923e2eb54",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 54964,
+    "sha256": "d31bd3ade5522de29c723e9ccd388906125f426ca8f3446cc5247cd46f876164",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 54928,
+    "sha256": "a909ec6df775b2c5a56aacfa7cabb57b638aa61c4162ce6684e35c86f6da12b6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50306,
+    "sha256": "1472e91b844b5e15f0f0e8fa2115aef3e641fe5c4e9233e3505e80205a15fb3d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50848,
+    "sha256": "9afadd916234eed70cc04dfda7fa42dc9114c0e0af15763a13d1ef9bd7b073fe",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_28_43--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49572,
+    "sha256": "450e95e51069a13e0698741782fdc9a2493ded4f9fa21331d1338aed130cbdd4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/bf16/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39028,
+    "sha256": "baac548e2c62afd9eed8a2363a79f9cbc0eb1993058260d5f9c19366098dd63a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 41293,
+    "sha256": "c4bc88e8bf20faa73120018493bfcc284a879bdc3628ad4d75dea34cd17d7bb4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 45695,
+    "sha256": "02169856edb4f99ee7d0b3f501d1580763e7981e9ba65877e3be21a3a34632c4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42234,
+    "sha256": "a73a575af3b7bbcc421508239b06e4d30d67025eaec1d5a25730b4cc7caa7152",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47112,
+    "sha256": "0d60d72f2372de2f82da23bcd69e5f2c5727abc2c30be392b106aba78c041277",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47610,
+    "sha256": "32201bfe5d5a761154dca89f779cf21573808f45c44b7042ac1fa5f87902cbb7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46085,
+    "sha256": "2f56824e4ee6889d5d7064d5226f485f4d753e096b9c609ce74d8e153af7a4e2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46170,
+    "sha256": "79f5dde93e7ddc231460537a163b18fb5bde4c17ed25e563ef4082a0e8b947ef",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 57832,
+    "sha256": "2d6d34d31928f4c141b33eca73cea1d8486eaa72c314f1f2c92b2a621e904c86",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 63579,
+    "sha256": "ce231b3a2ae3df727d06c70a76ebecc65a72fd5988183130179284a1e6e54ff9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41298,
+    "sha256": "1a87ab11cc8b3d5c98e49ad5d9d95e093755ab285a35f85afd5da002a3d76afb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 38897,
+    "sha256": "334136af48a0970c661fcef48214128a93e20b7f5d6ab5d2437e43a21c11bc48",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 63963,
+    "sha256": "6ae00a9a096d2ac51a26554db1b2bcd0d2cc2e0b5bb8dbffc706703695cef7b0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 61881,
+    "sha256": "5d1ee34c735bf3477ba1e9c6c4439cb9ad9e4c0dadf6dc5a81ecea90951aa1a2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53412,
+    "sha256": "dc000adafad6d0f19062a493f35a0b5a77e19d21592dc8758e233d7a2b6b2bc2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 55088,
+    "sha256": "de4259b44c382120302979166781db3183b90ed350fa1a8425a315977253b583",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 52496,
+    "sha256": "6a9ceec1dd9e914c0b9e6dcf19272b4d2d23d77ddcd7f1ebbb83afd0653d7569",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 50031,
+    "sha256": "45779d72fd3fb8b1bf26b2bc6a0f0a695505c3b482f1843f76b4756506d1474e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51666,
+    "sha256": "ad7ab984deec6a4d99290080d7e10119f430ff1cbde18d15d30e1f17ad668c40",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_17/2026_09_17-13_33_08--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 49628,
+    "sha256": "2b8e45669e65b0830bd59c0beb349d1df4e0beef9481850823bd7579cbf5055b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787/w4/console.log"
+  }
+]

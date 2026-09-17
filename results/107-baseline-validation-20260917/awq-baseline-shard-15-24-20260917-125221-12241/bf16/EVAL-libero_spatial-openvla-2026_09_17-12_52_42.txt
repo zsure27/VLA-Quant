@@ -1,0 +1,836 @@
+SEED_PROTOCOL {"env_seed": 0, "model_seed": 0, "protocol": "paired", "pythonhashseed_at_launch": "0", "runner_sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873", "strict": false}
+Task suite: libero_spatial
+Using default initial states
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 1683549054, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "51f7d2ae92042fec16a54dd5cd6823eac63f9c096a04bae00a5ec737d8db2cd8", "init_state_shape": [92], "model_seed": 3807370148, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 1
+# successes: 1 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 4202172176, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "db2c9ab25c6b23526efa6be860e4bd8330fab9a84131628f2dea6fe4062f993d", "init_state_shape": [92], "model_seed": 4022819875, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 2
+# successes: 2 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 2090749949, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "cf9d2825f843308d0880ee0d5e3099a43ae2395e616351f6bae4c046dd50198a", "init_state_shape": [92], "model_seed": 1824987577, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 3
+# successes: 3 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 2662597911, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "1f130e9178c4924cf8d24e175c2f0573a5e089299ddf6984b71265abf65bd4e0", "init_state_shape": [92], "model_seed": 3109138317, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 4
+# successes: 4 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 3267390290, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "18f349fb4d8b52566befcd2a80723d533717d8dd5dada90ecd7721d512b65e32", "init_state_shape": [92], "model_seed": 2334791775, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 5
+# successes: 5 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 3857939239, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "79a03d1a76b0b6beb5e3ac797dc63dcd4f8deda96cc70100fd352bf02b8b62b1", "init_state_shape": [92], "model_seed": 2314666808, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 6
+# successes: 6 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 108709149, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "05b91b73c5da09660bb91c279b9ed5a13be98f07fdf979ecda0ec92640d9e331", "init_state_shape": [92], "model_seed": 4021272041, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 7
+# successes: 7 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 3317668814, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "e7a1daaec3d35b65f3dbc4b7b981500c8247a321d3c1fea60f245589d7fcc345", "init_state_shape": [92], "model_seed": 2723145541, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 8
+# successes: 8 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 2106207045, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "79cdb8ea384ce01c24d656b80a89d1dff625fc8259e77b68d4e206df1c397939", "init_state_shape": [92], "model_seed": 2167003792, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 9
+# successes: 9 (100.0%)
+
+Task: pick up the black bowl between the plate and the ramekin and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 3014012616, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "58fff4a2c49c751e36ac3b459a980c981c8eee95ff4bf8b51fa3f778d8caf6c5", "init_state_shape": [92], "model_seed": 2648567554, "protocol": "paired", "task_id": 0}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+Success: True
+# episodes completed so far: 10
+# successes: 10 (100.0%)
+Current task success rate: 1.0
+Current total success rate: 1.0
+Using default initial states
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 4187981846, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "e066d2a2b83106d42b1ebba4879b77a4206fe243c2722620df89ddf2724112be", "init_state_shape": [92], "model_seed": 543885494, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 11
+# successes: 11 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 101600424, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "4f194fc2e167205fe0cb404ac38fc61d19637e9a22a914c4a59950813501bc4f", "init_state_shape": [92], "model_seed": 4207872516, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 12
+# successes: 12 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 1760898638, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "d7e0d413dd7853419fb3d2c740087d47828487f25b21b485447376ebaf1946ee", "init_state_shape": [92], "model_seed": 2167843117, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 13
+# successes: 13 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 3382291826, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "b7a22aa591d638c864be3019d088fec8a4fd1460d74098f0ead3193c5bed40c6", "init_state_shape": [92], "model_seed": 3871709862, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 14
+# successes: 14 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 2704222166, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "7ed62144c063138af691f12437505b3fe5200d7e464743f57ae599fe238e6fcc", "init_state_shape": [92], "model_seed": 1820116093, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 15
+# successes: 15 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 175693112, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "aef97da3ecaba0f853f56a30e620566abeb607173e7ed1c51b969771f193e427", "init_state_shape": [92], "model_seed": 125433153, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 16
+# successes: 16 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 2570175446, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "204f240ceac0e1d55281d9f5760d5810f02fe9bf2db5c259a4cdd3b0d696ae07", "init_state_shape": [92], "model_seed": 900983934, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 17
+# successes: 17 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 1337176195, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "f7b5b53bda496b303d061d6235521c331ea773edddeae4915ab9e515d1d9a946", "init_state_shape": [92], "model_seed": 4203624039, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 18
+# successes: 18 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 382995625, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "9204c3a8b891069e31537d63dcd72e2a7607111c73cf8a4f038495e4b6d5cbfa", "init_state_shape": [92], "model_seed": 1376077132, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 19
+# successes: 19 (100.0%)
+
+Task: pick up the black bowl next to the ramekin and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 3055386128, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "d5457abae771c1553985928c9e7d8f29295a6d3e391efb9be37ab94de1c03651", "init_state_shape": [92], "model_seed": 4070818733, "protocol": "paired", "task_id": 1}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+Success: True
+# episodes completed so far: 20
+# successes: 20 (100.0%)
+Current task success rate: 1.0
+Current total success rate: 1.0
+Using default initial states
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 1569098190, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "45770514fe0b8e43809603f66532b15c29966b8bd10e974ac4934a32bcc2c94d", "init_state_shape": [92], "model_seed": 3046509409, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 21
+# successes: 21 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 3448983821, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "048497d9ac994d7efd126ba1cb5794d350e266ab578ecba687fb31b9d529984e", "init_state_shape": [92], "model_seed": 1083217717, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 22
+# successes: 22 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 152219977, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "d3c93a325a74c6fb997498769e0608ac9e40c83950ded8f9dfdf6eb0e187f4ed", "init_state_shape": [92], "model_seed": 2682498644, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 23
+# successes: 23 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 2631818856, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "c36f01f74b686f82c83b3ea55dcb018a741cfefe09b6d120ae227c9c21faf2ff", "init_state_shape": [92], "model_seed": 178345693, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 24
+# successes: 24 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 1413599330, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "8b4a7bfbf0fff7d6bf560b38e4cf156bf967a1ee574e0e8b90944781ca52c664", "init_state_shape": [92], "model_seed": 1347478484, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 25
+# successes: 25 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 3549346256, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "86c32e500c2d681050de51b451bf325b3c8abbefc58b02fc198edea233d4458c", "init_state_shape": [92], "model_seed": 2848030071, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 26
+# successes: 26 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 3330881757, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "42f7d963fbe9577ac9acd3193a0079e75915573d0a52a13ae5308d594ab2c398", "init_state_shape": [92], "model_seed": 2923225422, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 27
+# successes: 27 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 1223014189, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "0e39b547c3c98c40b90b7edc9f466ee2e05beceba75f60cba0ced4f3af6cc3bb", "init_state_shape": [92], "model_seed": 153838975, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 28
+# successes: 28 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 176109981, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "851c8e19199bcf8e98e54b540bac566c6e151dad452b8db80428591474e76851", "init_state_shape": [92], "model_seed": 1840263269, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 29
+# successes: 29 (100.0%)
+
+Task: pick up the black bowl from table center and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 3545906471, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "18a6352b98f5b15f80b7104e38d8409d29a30b7662b378404ebadecc4e6dc256", "init_state_shape": [92], "model_seed": 2943093867, "protocol": "paired", "task_id": 2}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+Success: True
+# episodes completed so far: 30
+# successes: 30 (100.0%)
+Current task success rate: 1.0
+Current total success rate: 1.0
+Using default initial states
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 3338659295, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "52361b17e964ee6de88d5cacda510e638cf084542ea78d76c70a5d395726abd5", "init_state_shape": [92], "model_seed": 37896630, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 31
+# successes: 31 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 2389088309, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "423931bf6a388befaa73aee6d7505d928643429025cfd78629d28fd20fd85227", "init_state_shape": [92], "model_seed": 4215148904, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 32
+# successes: 32 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 483432697, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "afbd7079d975f031f72f9f86d4f9b0546bb5aba956165e546a303aca82f6b006", "init_state_shape": [92], "model_seed": 2788686702, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 33
+# successes: 33 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 561897185, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "f8f9fc0451830fc655416dddfbe161dd478fe1024e89da2515d3f11d5e324d58", "init_state_shape": [92], "model_seed": 857807918, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 34
+# successes: 34 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 3083610471, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "506d45d3efe3f6738675330af8d19d16069ff0ddf8470ffad2306e592c3b48ed", "init_state_shape": [92], "model_seed": 1368153207, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 35
+# successes: 35 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 3228636619, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "f23e83808a0fc8511f8360b41b764ceb71492223a8f646094087ed6a6241b6e5", "init_state_shape": [92], "model_seed": 2587966869, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 36
+# successes: 36 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 2132391892, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "5a225f422e1c897f0f3cc086530d18bf555b87916b9dc53511982099a452baa1", "init_state_shape": [92], "model_seed": 2143382431, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 37
+# successes: 37 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 404979242, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "23cbe8d139063c7a402eebde0cec2e486ccb8cefd6ba08b0dc1fa55917ba79c0", "init_state_shape": [92], "model_seed": 3900826560, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 38
+# successes: 38 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 2656395681, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "fa88150e97cd146fb482f33b8d99e6245ce3aa11a19719053a2de455235dc62d", "init_state_shape": [92], "model_seed": 27036578, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 39
+# successes: 39 (100.0%)
+
+Task: pick up the black bowl on the cookie box and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 1353353388, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "8f2f7a03f736dbd1696f28b14a1f1ab8e06fef15a4be7ae925d975605c086b68", "init_state_shape": [92], "model_seed": 3820890312, "protocol": "paired", "task_id": 3}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+Success: True
+# episodes completed so far: 40
+# successes: 40 (100.0%)
+Current task success rate: 1.0
+Current total success rate: 1.0
+Using default initial states
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 592266451, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "cb5e701ddd05a14b73dade2a434b1ce1bd338ce61091f2e5c21eef2af3c91ce2", "init_state_shape": [92], "model_seed": 3913061369, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 41
+# successes: 41 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 174463350, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "2fd6bf6a9d7196b0c22521e814d89983b55b5ee584b68a3de0ca6ff4659cfaba", "init_state_shape": [92], "model_seed": 2608786554, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 42
+# successes: 42 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 952382972, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "f5d465f187549523ee7aaedba70bf6427cc717feb1cdc5beffdb576b406b6ead", "init_state_shape": [92], "model_seed": 2666651633, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 43
+# successes: 43 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 597217658, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "aa414e9c1b365ba49f5754f04a6d22fe76579e537cc0532defd2b143c8162449", "init_state_shape": [92], "model_seed": 4232163839, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 44
+# successes: 44 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 1378792430, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "c3c1ec2925956850aa3e3a52f63f7b6887c58e2e6cd4900bb07100abe491a044", "init_state_shape": [92], "model_seed": 2353055044, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 45
+# successes: 45 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 920887174, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "ab224edee886b131234e99a0f368026164c95d0cf66b86e2b8e5d57f4752fd0c", "init_state_shape": [92], "model_seed": 1670908685, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 46
+# successes: 46 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 3430711781, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "a1cf613529a200d3bb91c110552437fd8ca22808593bf4ac3474e3c045b972f9", "init_state_shape": [92], "model_seed": 1335719344, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 47
+# successes: 47 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 2566227889, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "186efc26523a1312fad0cace8e20b362c572b5ea898249e5414147fe57593fe7", "init_state_shape": [92], "model_seed": 3568216841, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 48
+# successes: 48 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 1610053798, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "a908a6adf34b19db8ca2aadf44af35f23b19800ecc295882d55df41d51b3b9a0", "init_state_shape": [92], "model_seed": 1283900926, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 49
+# successes: 49 (100.0%)
+
+Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 4102214031, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "beaa5adbb4f8eb5f1f7ac237eeffd5d8080fbf29ccefdd280b3a85edb7ebb4a8", "init_state_shape": [92], "model_seed": 2088329899, "protocol": "paired", "task_id": 4}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+Success: True
+# episodes completed so far: 50
+# successes: 50 (100.0%)
+Current task success rate: 1.0
+Current total success rate: 1.0
+Using default initial states
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 3020995234, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "a4deab6566eeb86430ab9f1e5f4f8167ab666fecaf318188b9ce5f5d15999921", "init_state_shape": [92], "model_seed": 1559526597, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=51--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 51
+# successes: 51 (100.0%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 348540942, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "7230223d3b36c289be0dc4cfbfe916bfe65e2b20c4755b123504b97f9db19e76", "init_state_shape": [92], "model_seed": 571957621, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=52--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: False
+# episodes completed so far: 52
+# successes: 51 (98.1%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 2006356597, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "6fd8ad771d6691f57d4512a8036552c7b7f13cc92730d96e1fe04cf10f19f622", "init_state_shape": [92], "model_seed": 359235110, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 53
+# successes: 52 (98.1%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 1929182354, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "bae20d83cc8f5698c74606627590ca7a468ddfcefb40d2b14e88f856ead59dac", "init_state_shape": [92], "model_seed": 133738021, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 54
+# successes: 53 (98.1%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 1473662895, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "abdc5421f4dbbe198b856e56c8808bb94de1984fbc206990666daac8c48b94f9", "init_state_shape": [92], "model_seed": 4203872880, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 55
+# successes: 54 (98.2%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 19764613, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "7a3297ec1b170ec45b15af3de0e9ea7980bc479cc017842d7e5d66b3362b2134", "init_state_shape": [92], "model_seed": 1213222342, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 56
+# successes: 55 (98.2%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 2462779054, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "87f12a540d751c063931039d6c667170d2175b401711b1dafd44f04a4cce37fb", "init_state_shape": [92], "model_seed": 2794476500, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 57
+# successes: 56 (98.2%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 3667193238, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "ee8e4157331954c562a92ace1d7af51fb0099876a4eaa5ff8926374864c8164f", "init_state_shape": [92], "model_seed": 3630998236, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=58--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: False
+# episodes completed so far: 58
+# successes: 56 (96.6%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 1405764916, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "bbef69f5116f7dfa488cfd39df356f328a5ba440318fcbbaf9e3ae64a27fe76f", "init_state_shape": [92], "model_seed": 2128370540, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 59
+# successes: 57 (96.6%)
+
+Task: pick up the black bowl on the ramekin and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 3350552169, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "8999f5cec79ff0e9ea8952dd394f2d21a9f8b9f2243f389090d970761ba500ce", "init_state_shape": [92], "model_seed": 482868109, "protocol": "paired", "task_id": 5}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+Success: True
+# episodes completed so far: 60
+# successes: 58 (96.7%)
+Current task success rate: 0.8
+Current total success rate: 0.9666666666666667
+Using default initial states
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 1695376014, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "5ac177ae8b3d5faae0f96018f1a10c896aa28c50cf164f892a63ace956e84d67", "init_state_shape": [92], "model_seed": 1779348709, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 61
+# successes: 59 (96.7%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 387923774, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "2d63eeddc4973f63b27ea3eedb94aeb27091ca0ffca689f19f33f469304ff547", "init_state_shape": [92], "model_seed": 2192902544, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 62
+# successes: 60 (96.8%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 1763420194, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "cc6c84732e3358311f9cfb008badb2e680c95edae0258090dc72ca95c7ecc6d8", "init_state_shape": [92], "model_seed": 140198152, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 63
+# successes: 61 (96.8%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 3577260325, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "cd32e37a9f4452ae643216373cd731097bb26b2de5b4179c598f449dffe7883c", "init_state_shape": [92], "model_seed": 1004619153, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 64
+# successes: 62 (96.9%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 3289218336, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "83c492e3e060153644099b67cfed0ea3ba076f44b5c1d483cbe93efe90266de7", "init_state_shape": [92], "model_seed": 2594496890, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 65
+# successes: 63 (96.9%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 1008085084, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "23c3cb4dbeceecf92d8d82905228c346e4b0ce5fad6d11f08a0686fb85522a13", "init_state_shape": [92], "model_seed": 4065589618, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 66
+# successes: 64 (97.0%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 3891077391, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "37374a758b8fe00057b18c282c0e94194cec7b1a2bc416563b17b5bb65f390dc", "init_state_shape": [92], "model_seed": 599463303, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 67
+# successes: 65 (97.0%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 4264307511, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "9394427a6abc248436e265d430b257d6d6a812904e6cf5101d21a90694a3f052", "init_state_shape": [92], "model_seed": 4257906431, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 68
+# successes: 66 (97.1%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 2501495080, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "fea11f92c738a7c7314fd30344e0b8232d2e12c218a1864a26d47c6b81f16dc4", "init_state_shape": [92], "model_seed": 1793467699, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 69
+# successes: 67 (97.1%)
+
+Task: pick up the black bowl next to the cookie box and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 458125798, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "0e049e58bca8daf06ea4d88e13b2c2733c2c4444894717ecba36cfa5d1fa0d12", "init_state_shape": [92], "model_seed": 448094624, "protocol": "paired", "task_id": 6}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+Success: True
+# episodes completed so far: 70
+# successes: 68 (97.1%)
+Current task success rate: 1.0
+Current total success rate: 0.9714285714285714
+Using default initial states
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 1607189153, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "c2d397c97dff15be672ebc121b0bf6a49522c58cc15164b688b81dcf1f53486c", "init_state_shape": [92], "model_seed": 2069251692, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 71
+# successes: 69 (97.2%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 2378730282, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "7ca0656515f25ac924542e0f9fdc1de90bd8f52c93368dde245b0d8d902b7b1f", "init_state_shape": [92], "model_seed": 2424370288, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 72
+# successes: 70 (97.2%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 2617456485, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "dfefa2e8fbfa660e7ad3f9fe8abfc5f0334de73d23101a02f4832a3e88b399f7", "init_state_shape": [92], "model_seed": 2396518492, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 73
+# successes: 71 (97.3%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 3907992634, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "a8adffa84c6ca0334dbd7c5f04255f37049725d84d1fff85bffd76f24e22a98c", "init_state_shape": [92], "model_seed": 2696294697, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=74--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 74
+# successes: 72 (97.3%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 312003604, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "33513be059126ac134cdc4bc4e77077909122fc4e90b908bf8e9f3a149568415", "init_state_shape": [92], "model_seed": 908971156, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 75
+# successes: 73 (97.3%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 3181967237, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "5d4ab17c105939d8824d816e38358ac58c80cf8a6ba520dca725e9597fb18007", "init_state_shape": [92], "model_seed": 2322073522, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=76--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 76
+# successes: 74 (97.4%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 746991484, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "5c480ba571a4ea4d1d62571f012b7745817d0533c86b2c1ebbbec5c2cd6e5a64", "init_state_shape": [92], "model_seed": 3109435903, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=77--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 77
+# successes: 75 (97.4%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 2510933965, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "82319d1154573849ec780b17a58b14939b058ae16c67beb9957ed1dd2ffd68cb", "init_state_shape": [92], "model_seed": 2949563981, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 78
+# successes: 76 (97.4%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 2237519504, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "384d1fd61d5ee71104cc9fa2327517a8233032c023e67954c500d8089be44c8a", "init_state_shape": [92], "model_seed": 3430609134, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=79--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 79
+# successes: 77 (97.5%)
+
+Task: pick up the black bowl on the stove and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 3330374006, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "b95bcc7b8869d8343e98e4533444d7378e1d87db67549954b12449ea0e870a30", "init_state_shape": [92], "model_seed": 1667478000, "protocol": "paired", "task_id": 7}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+Success: True
+# episodes completed so far: 80
+# successes: 78 (97.5%)
+Current task success rate: 1.0
+Current total success rate: 0.975
+Using default initial states
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 3838899006, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "837065b5d5e92195cc5f9e7b89da3cca12228766cc72f5fcff69ffbcdfd30be4", "init_state_shape": [92], "model_seed": 2738183301, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=81--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 81
+# successes: 79 (97.5%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 2538210076, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "ba007128ac93f07dae4d1bd9c147dfe1b2793a7b934adee4666212617eccb8ff", "init_state_shape": [92], "model_seed": 2432764985, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 82
+# successes: 80 (97.6%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 3789555858, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "be6fbfec818b29b08a928dcc4b6be90ad5a7f2d829cd41071924230c8331a735", "init_state_shape": [92], "model_seed": 903631136, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 83
+# successes: 81 (97.6%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 1768762109, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "21e9a30cf8e0eb3cf2c39deaf2f67ab160c505d26a8a7517d7ec659243f1d114", "init_state_shape": [92], "model_seed": 1210240488, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 84
+# successes: 82 (97.6%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 3907673016, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "d391e42a6d2629a0c03aac61e103e668843920f864dfda9e010698f465ae1805", "init_state_shape": [92], "model_seed": 1420650844, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 85
+# successes: 83 (97.6%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 405074211, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "47b148cb2752229f0a1533d2d00af3c37e856e444cc1bd9a05d77f221f8108a8", "init_state_shape": [92], "model_seed": 1460665727, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 86
+# successes: 84 (97.7%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 4141177550, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "d81096691fa3b69dbf5ccce36661289db9e3fdc77ba1471ea82f89751742d023", "init_state_shape": [92], "model_seed": 470801494, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 87
+# successes: 85 (97.7%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 171163916, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "e876b55c1fd564acbd8aa5d9753b2ac4f2cb77a222ee0d2ee3b4c4a51c8e6201", "init_state_shape": [92], "model_seed": 906307654, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 88
+# successes: 86 (97.7%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 3310446970, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "d9a409c02879424306d08896d9cfc5df4446d437190667c3bffa6f6a633e6bae", "init_state_shape": [92], "model_seed": 524255958, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 89
+# successes: 87 (97.8%)
+
+Task: pick up the black bowl next to the plate and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 136373062, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "5a3616236ad0838dca6ccf0ef19727712c1876e7c16e1030856b6dc6b3bf59c0", "init_state_shape": [92], "model_seed": 273502852, "protocol": "paired", "task_id": 8}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+Success: True
+# episodes completed so far: 90
+# successes: 88 (97.8%)
+Current task success rate: 1.0
+Current total success rate: 0.9777777777777777
+Using default initial states
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 1...
+EPISODE_MANIFEST {"env_seed": 3779558617, "init_state_dtype": "float64", "init_state_index": 15, "init_state_sha256": "e5466b756c5f5583d1efe6408171fabdb6d57c076492841aaed2cf862bcb2086", "init_state_shape": [92], "model_seed": 3747118274, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=91--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 91
+# successes: 89 (97.8%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 2...
+EPISODE_MANIFEST {"env_seed": 3307202243, "init_state_dtype": "float64", "init_state_index": 16, "init_state_sha256": "76e2ded6c389300a73bb7cf4306348a5ccb531ed7730f54c7fef7cb704955eca", "init_state_shape": [92], "model_seed": 3717612147, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 92
+# successes: 90 (97.8%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 3...
+EPISODE_MANIFEST {"env_seed": 2626669344, "init_state_dtype": "float64", "init_state_index": 17, "init_state_sha256": "f6f3204e80922a4262c002a95fe878d8af31ae89305568ebdc0ab750f6ddaa50", "init_state_shape": [92], "model_seed": 1171711006, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=93--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 93
+# successes: 91 (97.8%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 4...
+EPISODE_MANIFEST {"env_seed": 1569100945, "init_state_dtype": "float64", "init_state_index": 18, "init_state_sha256": "0c9b215520647ce1a2fb63052acb60707a3f3a9325d0e6a6c90015e9248e180c", "init_state_shape": [92], "model_seed": 1553610868, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 94
+# successes: 92 (97.9%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 5...
+EPISODE_MANIFEST {"env_seed": 2304298750, "init_state_dtype": "float64", "init_state_index": 19, "init_state_sha256": "f794efb4eb6e80746d815c6544cdfd24ec8dcf58c45780ffee26adab7532c50b", "init_state_shape": [92], "model_seed": 3079865435, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 95
+# successes: 93 (97.9%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 6...
+EPISODE_MANIFEST {"env_seed": 1813912078, "init_state_dtype": "float64", "init_state_index": 20, "init_state_sha256": "25ac47d9a340464d54f544a9049de58edef2020ce168053c1f839275aa8305c0", "init_state_shape": [92], "model_seed": 2435183153, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 96
+# successes: 94 (97.9%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 7...
+EPISODE_MANIFEST {"env_seed": 372355126, "init_state_dtype": "float64", "init_state_index": 21, "init_state_sha256": "460f4016e92ad4bb831bbdb3ed58a2cd57f80006390d07a9130b9ce9ec484490", "init_state_shape": [92], "model_seed": 2848406996, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 97
+# successes: 95 (97.9%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 8...
+EPISODE_MANIFEST {"env_seed": 3180995936, "init_state_dtype": "float64", "init_state_index": 22, "init_state_sha256": "20984208ef7319c8e406639c4b99b3c207db600882ca52f02a31a0bfb14e87db", "init_state_shape": [92], "model_seed": 2247227004, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 98
+# successes: 96 (98.0%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 9...
+EPISODE_MANIFEST {"env_seed": 1627128681, "init_state_dtype": "float64", "init_state_index": 23, "init_state_sha256": "bd4a3d61ac174006d7b661eaff87c117416a8f362dc2db692e645cb62c5a8bd6", "init_state_shape": [92], "model_seed": 1268263828, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=99--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 99
+# successes: 97 (98.0%)
+
+Task: pick up the black bowl on the wooden cabinet and place it on the plate
+Starting episode 10...
+EPISODE_MANIFEST {"env_seed": 149638191, "init_state_dtype": "float64", "init_state_index": 24, "init_state_sha256": "a17f8d750e4c1b53e6793d067837fbd8d8572628f04e50deb307ee9aa15d8c71", "init_state_shape": [92], "model_seed": 2125966794, "protocol": "paired", "task_id": 9}
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-12_52_42--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+Success: True
+# episodes completed so far: 100
+# successes: 98 (98.0%)
+Current task success rate: 1.0
+Current total success rate: 0.98
+Final results:
+Total episodes: 100
+Total successes: 98
+Overall success rate: 0.9800 (98.0%)

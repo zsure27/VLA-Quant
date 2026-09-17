@@ -1,0 +1,37 @@
+{
+  "status": "BACKUP_VERIFIED_AWAITING_NATIVE_SHUTDOWN",
+  "five_hour_remaining_at_close_decision": 9,
+  "paired_episodes": 220,
+  "bf16_successes": 215,
+  "w4_successes": 214,
+  "control_panel_off_verified": false,
+  "backup": {
+    "status": "VERIFIED_ALL_THREE_COMPLETED_SHARDS",
+    "local_backup": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\results\\pending-20260917-107-baseline-validation\\20260917-107-baseline-final-133807-852d350",
+    "server_backup": "/root/autodl-tmp/qvla-repro/backups/20260917-107-baseline-final-133807-852d350",
+    "files_verified": 10,
+    "total_bytes": 26519858,
+    "videos": 440,
+    "video_original_bytes": 22540346,
+    "note": "Models/calibration/profile originals remain on persistent disk, not in this archive or ordinary Git."
+  },
+  "next_shards": [
+    [
+      27,
+      8
+    ],
+    [
+      35,
+      10
+    ],
+    [
+      45,
+      5
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "priority": "AWQ baseline first; SQ and PEFT secondary"
+}

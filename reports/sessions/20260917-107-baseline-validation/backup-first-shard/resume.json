@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-09-17T04:55:38.845343+00:00",
+  "label": "20260917-107-baseline-first-shard",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}

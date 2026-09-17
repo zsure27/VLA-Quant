@@ -5,5 +5,26 @@
     "window_minutes": 300,
     "source": "current_thread_response_event",
     "event": "after first BF16/W4 100-rollout pair"
+  },
+  {
+    "observed_at_utc": "2026-09-17T05:27:21.660Z",
+    "remaining_percent": 20,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after second BF16/W4 100-rollout pair; reduce next shard to 20 per case"
+  },
+  {
+    "observed_at_utc": "2026-09-17T05:33:33.267Z",
+    "remaining_percent": 13,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after small-shard BF16"
+  },
+  {
+    "observed_at_utc": "2026-09-17T05:37:43.376Z",
+    "remaining_percent": 9,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after small-shard W4; stop dispatch and close"
   }
 ]
