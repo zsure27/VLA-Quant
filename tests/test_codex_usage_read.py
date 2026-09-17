@@ -26,6 +26,8 @@ class QuotaContractTest(unittest.TestCase):
         now = datetime.fromisoformat(value["observed_at_utc"])
         self.assertEqual(decision(value, now=now+timedelta(seconds=301))["action"], "UNKNOWN_DO_NOT_DISPATCH")
         value["windows"]["secondary"] = None
+        self.assertEqual(decision(value)["action"], "LIVE_BUDGET_AVAILABLE")
+        value["windows"]["primary"] = None
         self.assertEqual(decision(value)["action"], "UNKNOWN_DO_NOT_DISPATCH")
 
     def test_threshold_and_next_test_preserve_shutdown_reserve(self):
@@ -33,6 +35,18 @@ class QuotaContractTest(unittest.TestCase):
         self.assertEqual(decision(value)["action"], "BACKUP_AND_CLOSE")
         value = normalize(self.payload(85), "test")
         self.assertEqual(decision(value, estimated_next=13)["action"], "BACKUP_AND_CLOSE")
+
+    def test_weekly_does_not_block_and_frequency_changes(self):
+        payload=self.payload(75)
+        payload["rateLimitsByLimitId"]["codex"]["secondary"]["usedPercent"]=float("nan")
+        value=normalize(payload,"test")
+        self.assertEqual(decision(value)["action"],"LIVE_BUDGET_AVAILABLE")
+        self.assertEqual(decision(value)["check_after_short_tests"],3)
+        self.assertEqual(decision(value)["check_after_long_tests"],2)
+        value["windows"]["primary"]["remaining_percent"]=19
+        self.assertEqual(decision(value)["check_after_long_tests"],1)
+        value["windows"]["primary"]["window_minutes"]=10080
+        self.assertEqual(decision(value)["action"],"UNKNOWN_DO_NOT_DISPATCH")
 
     def test_invalid_usage_is_not_accepted(self):
         with self.assertRaises(ValueError): normalize(self.payload(float("nan")), "test")

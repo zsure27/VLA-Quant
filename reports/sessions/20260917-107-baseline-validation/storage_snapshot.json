@@ -1,0 +1,15 @@
+{
+  "observed_at_utc": "2026-09-17T04:25:07.039896+00:00",
+  "data_disk_free_gib_rounded": 20,
+  "system_disk_free_gib_rounded": 21,
+  "models_gib_rounded": 15,
+  "calibration_mib_rounded": 81,
+  "artifacts_gib_rounded": 4,
+  "eval_mib_rounded": 9.1,
+  "backups_mib_rounded": 294,
+  "rollouts_mib_rounded": 6.3,
+  "historical_video_count": 60,
+  "historical_video_bytes": 3188473,
+  "estimated_1000_videos_bytes": 53141216.666666664,
+  "note": "Rounded df/du read-only snapshot; estimate from historical videos only, not guarantee. Current fixed-model accuracy tests have ample space; future suite-specific checkpoints require separate capacity check."
+}

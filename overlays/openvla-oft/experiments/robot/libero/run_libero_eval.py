@@ -114,6 +114,7 @@ class GenerateConfig:
     task_suite_name: str = TaskSuite.LIBERO_SPATIAL  # Task suite
     num_steps_wait: int = 10                         # Number of steps to wait for objects to stabilize in sim
     num_trials_per_task: int = 50                    # Number of rollouts per task
+    initial_state_offset: int = 0                  # Actual official index; never modulo or restart at zero
     initial_states_path: str = "DEFAULT"             # "DEFAULT", or path to initial states JSON file
     env_img_res: int = 256                           # Resolution for environment images (not policy input resolution)
 
@@ -149,6 +150,10 @@ def validate_config(cfg: GenerateConfig) -> None:
     assert cfg.task_suite_name in [suite.value for suite in TaskSuite], f"Invalid task suite: {cfg.task_suite_name}"
     if cfg.seed_protocol not in ("upstream", "paired"):
         raise ValueError("seed_protocol 必须为 upstream 或 paired")
+    if cfg.initial_state_offset < 0:
+        raise ValueError("initial_state_offset must be nonnegative")
+    if cfg.seed_protocol != "paired" and cfg.initial_state_offset:
+        raise ValueError("Shards require paired per-episode seeds")
     if cfg.num_trials_per_task < 1:
         raise ValueError("num_trials_per_task 必须为正数")
     if cfg.seed_protocol == "upstream" and cfg.env_seed != 0:
@@ -394,13 +399,13 @@ def run_task(
 
     # Initialize environment and get task description
     env, task_description = get_libero_env(task, cfg.model_family, resolution=cfg.env_img_res)
-    if cfg.initial_states_path == "DEFAULT" and cfg.num_trials_per_task > len(initial_states):
+    if cfg.initial_states_path == "DEFAULT" and cfg.initial_state_offset + cfg.num_trials_per_task > len(initial_states):
         env.close()
         raise ValueError("请求回合数超过官方初始状态数量；禁止取模重复统计")
 
     # Start episodes
     task_episodes, task_successes = 0, 0
-    for episode_idx in tqdm.tqdm(range(cfg.num_trials_per_task)):
+    for episode_idx in tqdm.tqdm(range(cfg.initial_state_offset, cfg.initial_state_offset + cfg.num_trials_per_task)):
         log_message(f"\nTask: {task_description}", log_file)
 
         # Handle initial state

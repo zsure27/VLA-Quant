@@ -42,6 +42,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--official-root", required=True, type=Path)
     parser.add_argument("--task_suite_name", default="libero_spatial")
     parser.add_argument("--num_trials_per_task", type=int, default=2)
+    parser.add_argument("--initial-state-offset", type=int, default=0)
     parser.add_argument("--local_log_dir", required=True)
     parser.add_argument("--libero_root", default=os.environ.get("LIBERO_ROOT", ""))
     parser.add_argument("--seed", type=int, default=7)
@@ -68,6 +69,10 @@ def parse_args() -> argparse.Namespace:
         parser.error("Scoped diagnostics are currently supported only for AWQ")
     if args.awq_candidate == "profile" and args.awq_primary_group64_profile is not None:
         parser.error("--awq-primary-group64-profile requires --awq-candidate w2-no-clip-primary-g64")
+    if args.initial_state_offset < 0 or args.num_trials_per_task < 1:
+        parser.error("Invalid initial-state shard range")
+    if args.initial_state_offset and args.seed_protocol != "paired":
+        parser.error("Shard offset requires paired per-episode seeding")
     if args.awq_candidate == "w2-no-clip-stage-w4":
         if (args.method, args.weight_bits, args.activation_bits, args.awq_scope) != ("awq", 2, 16, "language"):
             parser.error("Stage W4 rescue requires language-only AWQ W2A16")
@@ -395,6 +400,7 @@ def main() -> None:
             "--pretrained_checkpoint", args.pretrained_checkpoint,
             "--task_suite_name", args.task_suite_name,
             "--num_trials_per_task", str(args.num_trials_per_task),
+            "--initial_state_offset", str(args.initial_state_offset),
             "--local_log_dir", args.local_log_dir,
             "--center_crop", "True",
             "--seed", str(args.seed),

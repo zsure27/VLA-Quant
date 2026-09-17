@@ -29,7 +29,7 @@ def normalize(payload, source, expected_tag=None):
     if not isinstance(bucket, dict):
         raise ValueError("quota_fields_missing")
     windows = {}
-    for name in ("primary", "secondary"):
+    for name in ("primary",):
         window = bucket.get(name)
         if not isinstance(window, dict):
             windows[name] = None
@@ -49,17 +49,19 @@ def normalize(payload, source, expected_tag=None):
 def decision(snapshot, now=None, estimated_next=0, reserve=3):
     now = now or datetime.now(timezone.utc)
     age = (now-datetime.fromisoformat(snapshot["observed_at_utc"].replace("Z", "+00:00"))).total_seconds()
-    values = [w["remaining_percent"] for w in snapshot["windows"].values() if w is not None]
-    # Missing either window cannot silently be treated as unlimited/zero usage.
-    complete = all(snapshot["windows"].get(k) is not None for k in ("primary", "secondary"))
+    primary = snapshot["windows"].get("primary")
+    complete = primary is not None and primary.get("window_minutes") == 300
+    remaining = primary["remaining_percent"] if complete else None
     if not complete or age < 0 or age > 300:
         action = "UNKNOWN_DO_NOT_DISPATCH"
-    elif min(values) < 10 or min(values) < estimated_next+reserve:
+    elif remaining < 10 or remaining < estimated_next+reserve:
         action = "BACKUP_AND_CLOSE"
     else:
         action = "LIVE_BUDGET_AVAILABLE"
     return {**snapshot, "age_seconds": round(age, 1), "action": action,
-        "estimated_next_percent": estimated_next, "shutdown_reserve_percent": reserve}
+        "estimated_next_percent": estimated_next, "shutdown_reserve_percent": reserve,
+        "decision_window": "five_hour_only", "check_after_short_tests": (1 if remaining is None or remaining < 20 else 3),
+        "check_after_long_tests": (1 if remaining is None or remaining < 20 else 2)}
 
 
 def save(snapshot, path):
@@ -93,7 +95,7 @@ def read_session(root, thread_id):
     if not latest: raise ValueError("current_thread_quota_event_missing")
     timestamp, limits = latest
     bucket = {"limitId": limits["limit_id"]}
-    for name in ("primary", "secondary"):
+    for name in ("primary",):
         window = limits.get(name)
         bucket[name] = ({"usedPercent": window.get("used_percent"),
             "windowDurationMins": window.get("window_minutes"), "resetsAt": window.get("resets_at")} if window else None)
