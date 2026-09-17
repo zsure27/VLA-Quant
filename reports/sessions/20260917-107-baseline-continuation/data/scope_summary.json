@@ -1,5 +1,21 @@
 [
   {
+    "case": "language-w2-clip",
+    "source_shard": "awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294",
+    "episodes": 50,
+    "successes": 0,
+    "bf16_successes": 50,
+    "episode_errors": 0
+  },
+  {
+    "case": "language-w2-no-clip",
+    "source_shard": "awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304",
+    "episodes": 50,
+    "successes": 8,
+    "bf16_successes": 50,
+    "episode_errors": 0
+  },
+  {
     "case": "vision-w2",
     "source_shard": "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
     "episodes": 100,

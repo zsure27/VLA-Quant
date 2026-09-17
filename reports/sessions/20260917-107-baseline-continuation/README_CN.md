@@ -40,3 +40,9 @@
 完整500配对与视觉100已生成双份归档：服务器`/root/autodl-tmp/qvla-repro/backups/20260917-107-spatial500-vision100-205053-852d350`及本地`results/pending-20260917-107-baseline-continuation/20260917-107-spatial500-vision100-205053-852d350`；63,345,952字节结果归档、1100视频、10项SHA256通过。核验回执见[backup](backup/LOCAL_VERIFICATION.json)。模型和原校准集未包含在此归档，不宣称已有异地模型备份。
 
 语言W2 G128无剪裁初态5–9：8/50、配对BF16 50/50、0程序异常；已完成原始manifest检查，数据将随下一批归档取回。保留剪裁同50初态正在测试，不提前填入未测结果。下一控制使用独立原生G64搜索profile，保持视觉BF16；这是PTQ搜索配置变化，尚无训练或PEFT效果证据。
+
+## 语言W2 G128剪裁对照已完成
+
+同初态5–9、同seed与BF16成对manifest完全匹配：保留剪裁0/50、去除语言160个clip为8/50、BF16 50/50，全部exit0且0程序异常。原始数据已落地`results/107-baseline-continuation-20260917/awq-scope-shard-language-*`，下载SHA256 `5526ca8846952e7b0b31dd5d36a5dc794ea07fca36f1b40ee67529e97368a65c`。无clip带来有限改善但尚不可用；不是训练所得改善。G64 clip仍在运行，未将局部结果填写为完整实验。
+
+下一步G64无clip会明确标为原生G64 profile的post-search clip消融，并携带原始profile哈希、160条变换清单与派生profile哈希。原始搜索参数和校准溯源保留，绝不称为重新校准；冻结evaluator不变。语言四格PTQ比较结束后按预算优先扩大视觉W2，PEFT为辅。
