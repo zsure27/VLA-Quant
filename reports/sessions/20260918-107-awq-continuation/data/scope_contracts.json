@@ -1,0 +1,29 @@
+{
+  "vision-w2": [
+    "35a38de6079bca625f1c2e661365af3423ef85d124739e9654bacc4e2eb26c0c  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/qvla/run_eval_official_quant.py",
+    "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/oft/experiments/robot/libero/run_libero_eval.py",
+    "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc  /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+    "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8  /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt"
+  ],
+  "language-w2-clip": [
+    "35a38de6079bca625f1c2e661365af3423ef85d124739e9654bacc4e2eb26c0c  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/qvla/run_eval_official_quant.py",
+    "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/oft/experiments/robot/libero/run_libero_eval.py",
+    "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc  /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt"
+  ],
+  "language-w2-g64-clip": [
+    "35a38de6079bca625f1c2e661365af3423ef85d124739e9654bacc4e2eb26c0c  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/qvla/run_eval_official_quant.py",
+    "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/oft/experiments/robot/libero/run_libero_eval.py",
+    "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8  /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt"
+  ],
+  "language-w2-g64-no-clip": [
+    "35a38de6079bca625f1c2e661365af3423ef85d124739e9654bacc4e2eb26c0c  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/qvla/run_eval_official_quant.py",
+    "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/oft/experiments/robot/libero/run_libero_eval.py",
+    "b5b0f4f11fd436a35a36266bb4136aad6bc9385a9f95de586716b0fc3f5706fa  /root/autodl-tmp/qvla-repro/artifacts/awq-language-g64-no-clip-derived/w2-g64-language-no-clip.pt"
+  ],
+  "language-w2-no-clip": [
+    "35a38de6079bca625f1c2e661365af3423ef85d124739e9654bacc4e2eb26c0c  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/qvla/run_eval_official_quant.py",
+    "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873  /root/autodl-tmp/qvla-repro/overlays/baseline-shards/oft/experiments/robot/libero/run_libero_eval.py",
+    "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc  /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+    "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8  /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt"
+  ]
+}

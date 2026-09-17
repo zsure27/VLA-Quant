@@ -1,0 +1,152 @@
+[
+  {
+    "task_id": 1,
+    "init_state_index": 7,
+    "source_shard": "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
+    "bf16_success": "True",
+    "candidate_success": "False",
+    "candidate_label": "Vision-W2",
+    "figure": "task-1-init-07.png",
+    "sources": [
+      {
+        "case": "bf16",
+        "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+        "sha256": "20374fa7c95b37dc12dc8a9f7fd8fecbec45f6f12cec5c4018701693c6bb6a69",
+        "fps": 30.0,
+        "frame_count": 108,
+        "selected_frame_indices": [
+          0,
+          35,
+          71,
+          107
+        ],
+        "selected_times_seconds": [
+          0.0,
+          1.1666666666666667,
+          2.3666666666666667,
+          3.566666666666667
+        ]
+      },
+      {
+        "case": "candidate",
+        "path": "/root/rollouts/2026_09_17/2026_09_17-20_25_12--openvla_oft--episode=13--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+        "sha256": "22c4c0ee422d258b58e81fe6c97db47f8b8c2aa54e0cb9a31de125ca463bbb37",
+        "fps": 30.0,
+        "frame_count": 220,
+        "selected_frame_indices": [
+          0,
+          73,
+          146,
+          219
+        ],
+        "selected_times_seconds": [
+          0.0,
+          2.433333333333333,
+          4.866666666666666,
+          7.3
+        ]
+      }
+    ],
+    "note": "Actual decoded rollout frames; differing closed-loop trajectories, not a causal error decomposition."
+  },
+  {
+    "task_id": 1,
+    "init_state_index": 8,
+    "source_shard": "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
+    "bf16_success": "True",
+    "candidate_success": "False",
+    "candidate_label": "Vision-W2",
+    "figure": "task-1-init-08.png",
+    "sources": [
+      {
+        "case": "bf16",
+        "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+        "sha256": "7432bdc7bec7cca3ffebb35ebd9ad2b9e96237071a4a94c948ffa793e797609d",
+        "fps": 30.0,
+        "frame_count": 99,
+        "selected_frame_indices": [
+          0,
+          32,
+          65,
+          98
+        ],
+        "selected_times_seconds": [
+          0.0,
+          1.0666666666666667,
+          2.1666666666666665,
+          3.2666666666666666
+        ]
+      },
+      {
+        "case": "candidate",
+        "path": "/root/rollouts/2026_09_17/2026_09_17-20_25_12--openvla_oft--episode=14--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+        "sha256": "f640fa8ab4a4377852716fdbeb399c8ffa7eac292be6e87ebeb26db6f9f3f5b9",
+        "fps": 30.0,
+        "frame_count": 220,
+        "selected_frame_indices": [
+          0,
+          73,
+          146,
+          219
+        ],
+        "selected_times_seconds": [
+          0.0,
+          2.433333333333333,
+          4.866666666666666,
+          7.3
+        ]
+      }
+    ],
+    "note": "Actual decoded rollout frames; differing closed-loop trajectories, not a causal error decomposition."
+  },
+  {
+    "task_id": 1,
+    "init_state_index": 14,
+    "source_shard": "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
+    "bf16_success": "True",
+    "candidate_success": "False",
+    "candidate_label": "Vision-W2",
+    "figure": "task-1-init-14.png",
+    "sources": [
+      {
+        "case": "bf16",
+        "path": "/root/rollouts/2026_09_17/2026_09_17-12_17_17--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+        "sha256": "d2e81fb1aaee937b6be264ce912b0c215be19ea00a71d8f4c0c800e11cbdfb57",
+        "fps": 30.0,
+        "frame_count": 111,
+        "selected_frame_indices": [
+          0,
+          36,
+          73,
+          110
+        ],
+        "selected_times_seconds": [
+          0.0,
+          1.2,
+          2.433333333333333,
+          3.6666666666666665
+        ]
+      },
+      {
+        "case": "candidate",
+        "path": "/root/rollouts/2026_09_17/2026_09_17-20_25_12--openvla_oft--episode=20--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+        "sha256": "f63e59fbdee239ea48310c2cfc14b622a7105affccf996afdceb4ad54d44b0b2",
+        "fps": 30.0,
+        "frame_count": 220,
+        "selected_frame_indices": [
+          0,
+          73,
+          146,
+          219
+        ],
+        "selected_times_seconds": [
+          0.0,
+          2.433333333333333,
+          4.866666666666666,
+          7.3
+        ]
+      }
+    ],
+    "note": "Actual decoded rollout frames; differing closed-loop trajectories, not a causal error decomposition."
+  }
+]

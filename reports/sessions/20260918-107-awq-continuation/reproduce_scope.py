@@ -1,5 +1,5 @@
 """Figures and provenance CSV from completed, manifest-paired scope experiments."""
-import csv,json
+import csv,json,math
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -7,9 +7,21 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 HERE=Path(__file__).resolve().parent
 RAWS=[HERE.parents[2]/'results/107-baseline-continuation-20260917',HERE.parents[2]/'results/107-awq-continuation-20260918']
-summary=[];pairs=[]
+summary=[];pairs=[];contracts={};evaluator_contract=None
+def paired_stats(rs):
+    a=sum(r['bf16_success'] and not r['candidate_success'] for r in rs)
+    b=sum(r['candidate_success'] and not r['bf16_success'] for r in rs);n=a+b
+    p=min(1.,2.*sum(math.factorial(n)//(math.factorial(k)*math.factorial(n-k)) for k in range(min(a,b)+1))/2**n) if n else 1.
+    return dict(bf16_only=a,candidate_only=b,discordant_pairs=n,mcnemar_exact_p=p,
+        both_success=sum(r['bf16_success'] and r['candidate_success'] for r in rs),
+        both_fail=sum(not r['bf16_success'] and not r['candidate_success'] for r in rs))
 for p in sorted(p for root in RAWS for p in root.glob('awq-scope-shard-*/scope-paired-results.json')):
     d=json.loads(p.read_text());rs=d['paired_episodes'];case=d['case']
+    contract=(p.parent/'CONTRACT_SHA256SUMS.txt').read_text().splitlines()
+    if evaluator_contract is None:evaluator_contract=contract[:2]
+    assert contract[:2]==evaluator_contract,'evaluator contract changed'
+    assert contracts.setdefault(case,contract)==contract,'profile contract changed within candidate'
+    assert all(0<=r['task_id']<10 and 0<=r['init_state_index']<50 for r in rs)
     s=dict(case=case,source_shard=p.parent.name,episodes=len(rs),successes=sum(r['candidate_success'] for r in rs),
         bf16_successes=sum(r['bf16_success'] for r in rs),episode_errors=sum(len(r['candidate_episode_errors']) for r in rs))
     summary.append(s)
@@ -27,13 +39,14 @@ for p in sorted(p for root in RAWS for p in root.glob('awq-scope-shard-*/scope-p
 if not summary:raise SystemExit('No completed scope pairs; no speculative plots')
 keys=[(r['case'],r['task_id'],r['init_state_index']) for r in pairs]
 assert len(keys)==len(set(keys)),'duplicate initial state within a candidate'
+(HERE/'data/scope_contracts.json').write_text(json.dumps(contracts,indent=2)+'\n')
 summary=[];per_task=[]
 for case in sorted(set(r['case'] for r in pairs)):
     rs=[r for r in pairs if r['case']==case]
     summary.append(dict(case=case,source_shards=sorted(set(r['source_shard'] for r in rs)),
         episodes=len(rs),successes=sum(r['candidate_success'] for r in rs),
         bf16_successes=sum(r['bf16_success'] for r in rs),
-        episode_errors=sum(len(r['candidate_episode_errors']) for r in rs)))
+        episode_errors=sum(len(r['candidate_episode_errors']) for r in rs),**paired_stats(rs)))
     for task in range(10):
         ts=[r for r in rs if r['task_id']==task]
         per_task.append(dict(case=case,task_id=task,episodes=len(ts),
@@ -56,4 +69,15 @@ ax.set_ylim(0,1.05);ax.set_ylabel('Closed-loop success rate');ax.legend(loc='low
 ax.set_title('Scope diagnostics; matched references; candidate coverage may differ',pad=40);fig.tight_layout()
 for ext in ('png','svg'):fig.savefig(HERE/'figures'/('04_scope_success.'+ext),dpi=160)
 plt.close(fig)
+vision=[r for r in per_task if r['case']=='vision-w2']
+if vision:
+    fig,ax=plt.subplots(figsize=(10,4));x=np.arange(len(vision))
+    ax.bar(x-.18,[r['bf16_successes']/r['episodes'] for r in vision],.36,label='Matched BF16')
+    ax.bar(x+.18,[r['successes']/r['episodes'] for r in vision],.36,label='Vision W2')
+    for i,r in enumerate(vision):ax.text(i+.18,r['successes']/r['episodes']+.02,str(r['successes'])+'/'+str(r['episodes']),ha='center',fontsize=9)
+    ax.set_xticks(x);ax.set_xticklabels([r['task_id'] for r in vision]);ax.set_ylim(0,1.13)
+    ax.set_xlabel('Spatial task ID');ax.set_ylabel('Closed-loop success rate');ax.legend(loc='lower left')
+    ax.set_title('Vision W2 task sensitivity; same official states and seeds');fig.tight_layout()
+    for ext in ('png','svg'):fig.savefig(HERE/'figures'/('05_vision_per_task.'+ext),dpi=160)
+    plt.close(fig)
 print(json.dumps(summary,indent=2))

@@ -7,7 +7,13 @@
     "episodes": 50,
     "successes": 0,
     "bf16_successes": 50,
-    "episode_errors": 0
+    "episode_errors": 0,
+    "bf16_only": 50,
+    "candidate_only": 0,
+    "discordant_pairs": 50,
+    "mcnemar_exact_p": 1.7763568394002505e-15,
+    "both_success": 0,
+    "both_fail": 0
   },
   {
     "case": "language-w2-g64-clip",
@@ -17,7 +23,13 @@
     "episodes": 50,
     "successes": 0,
     "bf16_successes": 50,
-    "episode_errors": 0
+    "episode_errors": 0,
+    "bf16_only": 50,
+    "candidate_only": 0,
+    "discordant_pairs": 50,
+    "mcnemar_exact_p": 1.7763568394002505e-15,
+    "both_success": 0,
+    "both_fail": 0
   },
   {
     "case": "language-w2-g64-no-clip",
@@ -27,7 +39,13 @@
     "episodes": 50,
     "successes": 20,
     "bf16_successes": 50,
-    "episode_errors": 0
+    "episode_errors": 0,
+    "bf16_only": 30,
+    "candidate_only": 0,
+    "discordant_pairs": 30,
+    "mcnemar_exact_p": 1.862645149230957e-09,
+    "both_success": 20,
+    "both_fail": 0
   },
   {
     "case": "language-w2-no-clip",
@@ -37,19 +55,33 @@
     "episodes": 50,
     "successes": 8,
     "bf16_successes": 50,
-    "episode_errors": 0
+    "episode_errors": 0,
+    "bf16_only": 42,
+    "candidate_only": 0,
+    "discordant_pairs": 42,
+    "mcnemar_exact_p": 4.547473508864641e-13,
+    "both_success": 8,
+    "both_fail": 0
   },
   {
     "case": "vision-w2",
     "source_shards": [
+      "awq-scope-shard-vision-w2-00-04-20260918-020701-76061",
       "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
       "awq-scope-shard-vision-w2-15-24-20260917-214554-50802",
       "awq-scope-shard-vision-w2-25-29-20260917-220504-56292",
-      "awq-scope-shard-vision-w2-30-39-20260918-013150-63930"
+      "awq-scope-shard-vision-w2-30-39-20260918-013150-63930",
+      "awq-scope-shard-vision-w2-40-49-20260918-014925-69712"
     ],
-    "episodes": 350,
-    "successes": 324,
-    "bf16_successes": 341,
-    "episode_errors": 0
+    "episodes": 500,
+    "successes": 460,
+    "bf16_successes": 487,
+    "episode_errors": 0,
+    "bf16_only": 37,
+    "candidate_only": 10,
+    "discordant_pairs": 47,
+    "mcnemar_exact_p": 9.848878492846325e-05,
+    "both_success": 450,
+    "both_fail": 3
   }
 ]
