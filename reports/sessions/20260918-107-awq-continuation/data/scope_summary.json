@@ -1,5 +1,37 @@
 [
   {
+    "case": "full-w2-g64-attention-no-clip",
+    "source_shards": [
+      "awq-scope-shard-full-w2-g64-attention-no-clip-05-09-20260918-032153-93284"
+    ],
+    "episodes": 50,
+    "successes": 11,
+    "bf16_successes": 50,
+    "episode_errors": 0,
+    "bf16_only": 39,
+    "candidate_only": 0,
+    "discordant_pairs": 39,
+    "mcnemar_exact_p": 3.637978807091713e-12,
+    "both_success": 11,
+    "both_fail": 0
+  },
+  {
+    "case": "full-w2-original",
+    "source_shards": [
+      "awq-scope-shard-full-w2-original-05-09-20260918-030722-90322"
+    ],
+    "episodes": 50,
+    "successes": 0,
+    "bf16_successes": 50,
+    "episode_errors": 0,
+    "bf16_only": 50,
+    "candidate_only": 0,
+    "discordant_pairs": 50,
+    "mcnemar_exact_p": 1.7763568394002505e-15,
+    "both_success": 0,
+    "both_fail": 0
+  },
+  {
     "case": "language-w2-clip",
     "source_shards": [
       "awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294"

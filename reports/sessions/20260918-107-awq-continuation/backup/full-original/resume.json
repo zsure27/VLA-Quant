@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-09-17T19:22:03.467827+00:00",
+  "label": "20260918-107-full-original",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-full-w2-original-05-09-20260918-030722-90322"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}

@@ -1,4 +1,6 @@
 case,source_shards,episodes,successes,bf16_successes,episode_errors,bf16_only,candidate_only,discordant_pairs,mcnemar_exact_p,both_success,both_fail
+full-w2-g64-attention-no-clip,['awq-scope-shard-full-w2-g64-attention-no-clip-05-09-20260918-032153-93284'],50,11,50,0,39,0,39,3.637978807091713e-12,11,0
+full-w2-original,['awq-scope-shard-full-w2-original-05-09-20260918-030722-90322'],50,0,50,0,50,0,50,1.7763568394002505e-15,0,0
 language-w2-clip,['awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294'],50,0,50,0,50,0,50,1.7763568394002505e-15,0,0
 language-w2-g64-clip,['awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227'],50,0,50,0,50,0,50,1.7763568394002505e-15,0,0
 language-w2-g64-no-clip,['awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249'],50,20,50,0,30,0,30,1.862645149230957e-09,20,0
