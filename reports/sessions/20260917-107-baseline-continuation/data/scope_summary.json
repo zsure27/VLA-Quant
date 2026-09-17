@@ -1,15 +1,39 @@
 [
   {
     "case": "language-w2-clip",
-    "source_shard": "awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294",
+    "source_shards": [
+      "awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294"
+    ],
     "episodes": 50,
     "successes": 0,
     "bf16_successes": 50,
     "episode_errors": 0
   },
   {
+    "case": "language-w2-g64-clip",
+    "source_shards": [
+      "awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227"
+    ],
+    "episodes": 50,
+    "successes": 0,
+    "bf16_successes": 50,
+    "episode_errors": 0
+  },
+  {
+    "case": "language-w2-g64-no-clip",
+    "source_shards": [
+      "awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249"
+    ],
+    "episodes": 50,
+    "successes": 20,
+    "bf16_successes": 50,
+    "episode_errors": 0
+  },
+  {
     "case": "language-w2-no-clip",
-    "source_shard": "awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304",
+    "source_shards": [
+      "awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304"
+    ],
     "episodes": 50,
     "successes": 8,
     "bf16_successes": 50,
@@ -17,7 +41,9 @@
   },
   {
     "case": "vision-w2",
-    "source_shard": "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
+    "source_shards": [
+      "awq-scope-shard-vision-w2-05-14-20260917-202448-31883"
+    ],
     "episodes": 100,
     "successes": 93,
     "bf16_successes": 97,

@@ -1,0 +1,13 @@
+{
+  "kind": "post_search_language_clip_removal",
+  "source_profile_sha256": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8",
+  "derived_profile_sha256": "b5b0f4f11fd436a35a36266bb4136aad6bc9385a9f95de586716b0fc3f5706fa",
+  "derived_profile_bytes": 36730732,
+  "removed_language_clips": 160,
+  "language_targets": 224,
+  "group_size": 64,
+  "bits": 2,
+  "original_profile_unchanged": true,
+  "training": false,
+  "new_calibration": false
+}

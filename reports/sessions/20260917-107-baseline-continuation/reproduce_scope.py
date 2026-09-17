@@ -25,7 +25,20 @@ for p in sorted(RAW.glob('awq-scope-shard-*/scope-paired-results.json')):
     for ext in ('png','svg'):fig.savefig(HERE/'figures'/('scope-'+p.parent.name+'.'+ext),dpi=160)
     plt.close(fig)
 if not summary:raise SystemExit('No completed scope pairs; no speculative plots')
-for name,rs in [('scope_summary',summary),('scope_paired_episodes',pairs)]:
+keys=[(r['case'],r['task_id'],r['init_state_index']) for r in pairs]
+assert len(keys)==len(set(keys)),'duplicate initial state within a candidate'
+summary=[];per_task=[]
+for case in sorted(set(r['case'] for r in pairs)):
+    rs=[r for r in pairs if r['case']==case]
+    summary.append(dict(case=case,source_shards=sorted(set(r['source_shard'] for r in rs)),
+        episodes=len(rs),successes=sum(r['candidate_success'] for r in rs),
+        bf16_successes=sum(r['bf16_success'] for r in rs),
+        episode_errors=sum(len(r['candidate_episode_errors']) for r in rs)))
+    for task in range(10):
+        ts=[r for r in rs if r['task_id']==task]
+        per_task.append(dict(case=case,task_id=task,episodes=len(ts),
+            successes=sum(r['candidate_success'] for r in ts),bf16_successes=sum(r['bf16_success'] for r in ts)))
+for name,rs in [('scope_summary',summary),('scope_paired_episodes',pairs),('scope_per_task',per_task)]:
     with (HERE/'data'/(name+'.csv')).open('w',newline='',encoding='utf-8') as f:
         w=csv.DictWriter(f,fieldnames=list(rs[0]));w.writeheader();w.writerows(rs)
 (HERE/'data/scope_summary.json').write_text(json.dumps(summary,indent=2)+'\n')

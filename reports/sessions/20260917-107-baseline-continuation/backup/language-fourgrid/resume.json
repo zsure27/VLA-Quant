@@ -1,0 +1,16 @@
+{
+  "time_utc": "2026-09-17T13:46:02.394756+00:00",
+  "label": "20260917-107-language-fourgrid",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304",
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294",
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227",
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249",
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-language-g64-no-clip-derived",
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial500-task4-contact-20260917"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}

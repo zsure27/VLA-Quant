@@ -1,0 +1,20 @@
+{
+  "source": "frozen W4 calibration metadata; G64 peer contract checks require identical samples",
+  "selected_frames": 32,
+  "manifest_samples": 64,
+  "instruction_counts": {
+    "pick up the black bowl next to the ramekin and place it on the plate": 7,
+    "pick up the black bowl next to the plate and place it on the plate": 4,
+    "pick up the black bowl on the stove and place it on the plate": 3,
+    "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate": 3,
+    "pick up the black bowl between the plate and the ramekin and place it on the plate": 2,
+    "pick up the black bowl on the cookie box and place it on the plate": 2,
+    "pick up the black bowl from table center and place it on the plate": 2,
+    "pick up the black bowl on the wooden cabinet and place it on the plate": 5,
+    "pick up the black bowl next to the cookie box and place it on the plate": 2,
+    "pick up the black bowl on the ramekin and place it on the plate": 2
+  },
+  "note": "Frames, not trajectories. Role labels are metadata; original dataset provenance needs audit before new training claims.",
+  "manifest_selection": "by original filename; first32 calibration, next32 diagnostic; not random or final test",
+  "manifest_limits": "one frame per trajectory from existing128 Spatial trajectories; not paper calibration protocol"
+}

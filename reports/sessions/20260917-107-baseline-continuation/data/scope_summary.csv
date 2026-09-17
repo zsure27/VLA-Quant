@@ -1,4 +1,6 @@
-case,source_shard,episodes,successes,bf16_successes,episode_errors
-language-w2-clip,awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294,50,0,50,0
-language-w2-no-clip,awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304,50,8,50,0
-vision-w2,awq-scope-shard-vision-w2-05-14-20260917-202448-31883,100,93,97,0
+case,source_shards,episodes,successes,bf16_successes,episode_errors
+language-w2-clip,['awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294'],50,0,50,0
+language-w2-g64-clip,['awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227'],50,0,50,0
+language-w2-g64-no-clip,['awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249'],50,20,50,0
+language-w2-no-clip,['awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304'],50,8,50,0
+vision-w2,['awq-scope-shard-vision-w2-05-14-20260917-202448-31883'],100,93,97,0

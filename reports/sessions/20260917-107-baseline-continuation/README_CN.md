@@ -46,3 +46,22 @@
 同初态5–9、同seed与BF16成对manifest完全匹配：保留剪裁0/50、去除语言160个clip为8/50、BF16 50/50，全部exit0且0程序异常。原始数据已落地`results/107-baseline-continuation-20260917/awq-scope-shard-language-*`，下载SHA256 `5526ca8846952e7b0b31dd5d36a5dc794ea07fca36f1b40ee67529e97368a65c`。无clip带来有限改善但尚不可用；不是训练所得改善。G64 clip仍在运行，未将局部结果填写为完整实验。
 
 下一步G64无clip会明确标为原生G64 profile的post-search clip消融，并携带原始profile哈希、160条变换清单与派生profile哈希。原始搜索参数和校准溯源保留，绝不称为重新校准；冻结evaluator不变。语言四格PTQ比较结束后按预算优先扩大视觉W2，PEFT为辅。
+
+
+## 完整语言四格结果与真实失败帧图
+
+|语言配置（视觉BF16）|相同初态5–9成功/50|程序异常|
+|---|---:|---:|
+|G128 clip|0|0|
+|G128 no-clip|8|0|
+|G64 clip|0|0|
+|G64 no-clip|20|0|
+|BF16参照|50|0|
+
+所有manifest成对核验；40%有所改善但不能称为可用W2基线。[完整分析](ANALYSIS_CN.md)说明校准预算、局部失败、论文主线和后续PTQ/PEFT/Routing假设。
+
+![W4任务4初态17真实帧图](figures/awq-spatial500-task4-contact-20260917/task-4-init-17.png)
+
+图中为不同视频各自进度，不是同状态动作误差；初态17/20/27/29/34的完整图片与视频hash见同目录manifest。语言四格200视频及完整G64派生profile已双份归档`20260917-107-language-fourgrid-214555-852d350`，45,252,013字节结果归档、10 SHA256通过，回执见[backup/language-fourgrid](backup/language-fourgrid/LOCAL_VERIFICATION.json)。原始G64搜索profile仍在服务器，不把清单当作其异地副本。
+
+当前继续视觉W2初态15–24共100，尚未计入汇总，随后按预算补齐剩余官方初态。
