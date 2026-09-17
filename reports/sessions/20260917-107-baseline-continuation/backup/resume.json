@@ -1,0 +1,18 @@
+{
+  "time_utc": "2026-09-17T12:51:00.177645+00:00",
+  "label": "20260917-107-spatial500-vision100",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-00-04-20260917-200140-26212",
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-05-14-20260917-121652-1344",
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-15-24-20260917-125221-12241",
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-25-26-20260917-132820-22787",
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-27-34-20260917-182634-1372",
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-35-44-20260917-190101-10039",
+    "/root/autodl-tmp/qvla-repro/eval/awq-baseline-shard-45-49-20260917-193926-20575",
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-05-14-20260917-202448-31883"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}

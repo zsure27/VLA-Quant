@@ -33,5 +33,12 @@
     "window_minutes": 300,
     "source": "current_thread_response_event",
     "event": "after complete Spatial500 pair"
+  },
+  {
+    "observed_at_utc": "2026-09-17T13:01:30.750Z",
+    "remaining_percent": 59,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after vision100 and language-no-clip50"
   }
 ]
