@@ -1,0 +1,16 @@
+[
+  {
+    "observed_at_utc": "2026-09-17T10:24:11.696Z",
+    "remaining_percent": 100,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "resume after user boot"
+  },
+  {
+    "observed_at_utc": "2026-09-17T10:57:11.917Z",
+    "remaining_percent": 94,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after finite BF16/W4 80 pair; reconnect after app exit"
+  }
+]
