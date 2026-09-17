@@ -45,7 +45,11 @@ for name,rs in [('scope_summary',summary),('scope_paired_episodes',pairs),('scop
 fig,ax=plt.subplots(figsize=(10,4));x=np.arange(len(summary))
 ax.bar(x-.18,[r['bf16_successes']/r['episodes'] for r in summary],.36,label='Matched BF16')
 ax.bar(x+.18,[r['successes']/r['episodes'] for r in summary],.36,label='Candidate')
-ax.set_xticks(x);ax.set_xticklabels([r['case']+'\nn='+str(r['episodes']) for r in summary])
+labels={'language-w2-clip':'Language W2\nG128, clip','language-w2-no-clip':'Language W2\nG128, no clip',
+    'language-w2-g64-clip':'Language W2\nG64, clip','language-w2-g64-no-clip':'Language W2\nG64, no clip',
+    'vision-w2':'Vision W2\nD64 / S128'}
+ax.set_xticks(x);ax.set_xticklabels([labels.get(r['case'],r['case'])+'\nn='+str(r['episodes']) for r in summary])
+for i,r in enumerate(summary):ax.text(i+.18,r['successes']/r['episodes']+.02,str(r['successes'])+'/'+str(r['episodes']),ha='center',fontsize=9)
 ax.set_ylim(0,1.05);ax.set_ylabel('Closed-loop success rate');ax.legend(loc='lower center',bbox_to_anchor=(.5,1.01),ncol=2)
 ax.set_title('Scope diagnostics; matched references; candidate coverage may differ',pad=40);fig.tight_layout()
 for ext in ('png','svg'):fig.savefig(HERE/'figures'/('04_scope_success.'+ext),dpi=160)

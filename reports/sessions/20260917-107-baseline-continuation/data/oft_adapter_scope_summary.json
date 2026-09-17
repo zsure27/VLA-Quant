@@ -1,0 +1,17 @@
+{
+  "all_module_counts": {
+    "language": 225,
+    "other": 3,
+    "vision": 211
+  },
+  "all_adapter_parameters": {
+    "language": 81111040,
+    "other": 1019904,
+    "vision": 28697344
+  },
+  "connected_quantized_adapter_modules": 422,
+  "connected_language_modules": 224,
+  "connected_language_adapter_parameters": 79953920,
+  "runtime_merge_verified": false,
+  "training_steps": 0
+}

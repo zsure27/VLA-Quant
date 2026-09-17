@@ -42,11 +42,13 @@
   {
     "case": "vision-w2",
     "source_shards": [
-      "awq-scope-shard-vision-w2-05-14-20260917-202448-31883"
+      "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
+      "awq-scope-shard-vision-w2-15-24-20260917-214554-50802",
+      "awq-scope-shard-vision-w2-25-29-20260917-220504-56292"
     ],
-    "episodes": 100,
-    "successes": 93,
-    "bf16_successes": 97,
+    "episodes": 250,
+    "successes": 230,
+    "bf16_successes": 242,
     "episode_errors": 0
   }
 ]

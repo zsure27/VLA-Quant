@@ -47,5 +47,19 @@
     "window_minutes": 300,
     "source": "current_thread_response_event",
     "event": "after language G128/G64 clip pair"
+  },
+  {
+    "observed_at_utc": "2026-09-17T14:03:41.532Z",
+    "remaining_percent": 19,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after G64-no-clip50 and vision100; check every experiment"
+  },
+  {
+    "observed_at_utc": "2026-09-17T14:14:31.370Z",
+    "remaining_percent": 7,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "threshold triggered after vision50; backup and close"
   }
 ]
