@@ -1,0 +1,6 @@
+{
+  "connected_target_weight_parameters": 7162537472,
+  "language_fraction": 0.9041495980043649,
+  "vision_fraction": 0.0958504019956351,
+  "note": "Only quantization-target weights. Excludes protected modules and metadata; fake quant is still BF16 storage. Not a realized compression ratio."
+}

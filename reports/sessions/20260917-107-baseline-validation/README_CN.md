@@ -12,6 +12,10 @@ Spatial对应OFT checkpoint、既有W4 G128 profile、seed0和paired种子协议
 
 ## 数据与复现
 
+![AWQ量化目标参数分布](figures/00_awq_scope.png)
+
+真实profile审计见[awq-profile-metadata.json](awq-profile-metadata.json)，模块形状、校准预算、来源hash与覆盖均保留；分支统计CSV见[data/awq_scope.csv](data/awq_scope.csv)，运行[plot_awq_scope.py](plot_awq_scope.py)复现。语言约占量化目标权重参数的90.4%，视觉约9.6%；视觉W2有效只能支持该局部方案，主要参数压缩仍受语言低比特效果限制。此比例不含保护模块/元数据，不代表实际压缩率。profile校准样本数32，不能称复现论文512轨迹校准配置。
+
 完成片的原始小日志和配对JSON位于[results/107-baseline-validation-20260917](../../../results/107-baseline-validation-20260917/)。运行[reproduce.py](reproduce.py)生成真实已完成回合的CSV、汇总JSON和PNG/SVG图；没有完整配对片时不生成结果图。视频和逐步trace进入服务器持久盘及本地第二份压缩备份，Git保存清单/hash和小文件。
 
 ## 存储
