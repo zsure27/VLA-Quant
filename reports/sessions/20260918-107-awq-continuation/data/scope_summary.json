@@ -48,6 +48,38 @@
     "both_fail": 0
   },
   {
+    "case": "language-w2-g64-no-clip-attention",
+    "source_shards": [
+      "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936"
+    ],
+    "episodes": 50,
+    "successes": 29,
+    "bf16_successes": 50,
+    "episode_errors": 0,
+    "bf16_only": 21,
+    "candidate_only": 0,
+    "discordant_pairs": 21,
+    "mcnemar_exact_p": 9.5367431640625e-07,
+    "both_success": 29,
+    "both_fail": 0
+  },
+  {
+    "case": "language-w2-g64-no-clip-mlp",
+    "source_shards": [
+      "awq-scope-shard-language-w2-g64-no-clip-mlp-05-09-20260918-022939-81891"
+    ],
+    "episodes": 50,
+    "successes": 0,
+    "bf16_successes": 50,
+    "episode_errors": 0,
+    "bf16_only": 50,
+    "candidate_only": 0,
+    "discordant_pairs": 50,
+    "mcnemar_exact_p": 1.7763568394002505e-15,
+    "both_success": 0,
+    "both_fail": 0
+  },
+  {
     "case": "language-w2-no-clip",
     "source_shards": [
       "awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304"

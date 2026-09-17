@@ -1,0 +1,54 @@
+{
+  "decision_window": "five_hour_only",
+  "close_at_remaining_percent": 15,
+  "reserve_percent": 8,
+  "events": [
+    {
+      "observed_at_utc": null,
+      "remaining_percent": 98,
+      "source": "official_tool_initial_timestamp_not_saved"
+    },
+    {
+      "observed_at_utc": "2026-09-17T17:37:49.849Z",
+      "remaining_percent": 93,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    },
+    {
+      "observed_at_utc": "2026-09-17T17:48:52.364Z",
+      "remaining_percent": 88,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    },
+    {
+      "observed_at_utc": "2026-09-17T18:06:38.909Z",
+      "remaining_percent": 76,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    },
+    {
+      "observed_at_utc": "2026-09-17T18:16:41.233Z",
+      "remaining_percent": 68,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    },
+    {
+      "observed_at_utc": "2026-09-17T18:29:05.253Z",
+      "remaining_percent": 58,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    },
+    {
+      "observed_at_utc": "2026-09-17T18:40:51.886Z",
+      "remaining_percent": 47,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    },
+    {
+      "observed_at_utc": "2026-09-17T18:44:13.967Z",
+      "remaining_percent": 42,
+      "window_minutes": 300,
+      "source": "official_codex_app_primary"
+    }
+  ]
+}

@@ -55,7 +55,7 @@ for name,rs in [('scope_summary',summary),('scope_paired_episodes',pairs),('scop
     with (HERE/'data'/(name+'.csv')).open('w',newline='',encoding='utf-8') as f:
         w=csv.DictWriter(f,fieldnames=list(rs[0]));w.writeheader();w.writerows(rs)
 (HERE/'data/scope_summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-fig,ax=plt.subplots(figsize=(10,4));x=np.arange(len(summary))
+fig,ax=plt.subplots(figsize=(max(10,2.3*len(summary)),4.5));x=np.arange(len(summary))
 ax.bar(x-.18,[r['bf16_successes']/r['episodes'] for r in summary],.36,label='Matched BF16')
 ax.bar(x+.18,[r['successes']/r['episodes'] for r in summary],.36,label='Candidate')
 labels={'language-w2-clip':'Language W2\nG128, clip','language-w2-no-clip':'Language W2\nG128, no clip',

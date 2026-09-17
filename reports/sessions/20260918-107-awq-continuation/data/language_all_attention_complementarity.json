@@ -1,0 +1,441 @@
+{
+  "cases": [
+    "language-w2-g64-no-clip",
+    "language-w2-g64-no-clip-attention"
+  ],
+  "summary": {
+    "episodes": 50,
+    "a_successes": 20,
+    "b_successes": 29,
+    "a_only": 5,
+    "b_only": 14,
+    "both_success": 15,
+    "both_fail": 16,
+    "outcome_oracle_successes": 34
+  },
+  "source_files": [
+    {
+      "path": "results\\107-baseline-continuation-20260917\\awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249\\scope-paired-results.json",
+      "sha256": "dfe031bac687d9a59f0f12facd96b8651c157cc8289c37580ff3151ade9b8236"
+    },
+    {
+      "path": "results\\107-awq-continuation-20260918\\awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936\\scope-paired-results.json",
+      "sha256": "88898cc0e22d5ddf6f5b7d6248d4c6c395420bcbccdc9648d35fa937abd263eb"
+    }
+  ],
+  "per_task": [
+    {
+      "task_id": 0,
+      "episodes": 5,
+      "a_successes": 5,
+      "b_successes": 3,
+      "a_only": 2,
+      "b_only": 0,
+      "both_success": 3,
+      "both_fail": 0,
+      "outcome_oracle_successes": 5
+    },
+    {
+      "task_id": 1,
+      "episodes": 5,
+      "a_successes": 1,
+      "b_successes": 2,
+      "a_only": 1,
+      "b_only": 2,
+      "both_success": 0,
+      "both_fail": 2,
+      "outcome_oracle_successes": 3
+    },
+    {
+      "task_id": 2,
+      "episodes": 5,
+      "a_successes": 5,
+      "b_successes": 4,
+      "a_only": 1,
+      "b_only": 0,
+      "both_success": 4,
+      "both_fail": 0,
+      "outcome_oracle_successes": 5
+    },
+    {
+      "task_id": 3,
+      "episodes": 5,
+      "a_successes": 3,
+      "b_successes": 5,
+      "a_only": 0,
+      "b_only": 2,
+      "both_success": 3,
+      "both_fail": 0,
+      "outcome_oracle_successes": 5
+    },
+    {
+      "task_id": 4,
+      "episodes": 5,
+      "a_successes": 0,
+      "b_successes": 4,
+      "a_only": 0,
+      "b_only": 4,
+      "both_success": 0,
+      "both_fail": 1,
+      "outcome_oracle_successes": 4
+    },
+    {
+      "task_id": 5,
+      "episodes": 5,
+      "a_successes": 2,
+      "b_successes": 2,
+      "a_only": 1,
+      "b_only": 1,
+      "both_success": 1,
+      "both_fail": 2,
+      "outcome_oracle_successes": 3
+    },
+    {
+      "task_id": 6,
+      "episodes": 5,
+      "a_successes": 1,
+      "b_successes": 5,
+      "a_only": 0,
+      "b_only": 4,
+      "both_success": 1,
+      "both_fail": 0,
+      "outcome_oracle_successes": 5
+    },
+    {
+      "task_id": 7,
+      "episodes": 5,
+      "a_successes": 0,
+      "b_successes": 0,
+      "a_only": 0,
+      "b_only": 0,
+      "both_success": 0,
+      "both_fail": 5,
+      "outcome_oracle_successes": 0
+    },
+    {
+      "task_id": 8,
+      "episodes": 5,
+      "a_successes": 3,
+      "b_successes": 3,
+      "a_only": 0,
+      "b_only": 0,
+      "both_success": 3,
+      "both_fail": 2,
+      "outcome_oracle_successes": 3
+    },
+    {
+      "task_id": 9,
+      "episodes": 5,
+      "a_successes": 0,
+      "b_successes": 1,
+      "a_only": 0,
+      "b_only": 1,
+      "both_success": 0,
+      "both_fail": 4,
+      "outcome_oracle_successes": 1
+    }
+  ],
+  "paired_episodes": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "a_success": true,
+      "b_success": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 9,
+      "a_success": true,
+      "b_success": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "a_success": true,
+      "b_success": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 6,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 9,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 6,
+      "a_success": true,
+      "b_success": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 7,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 8,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 9,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 6,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 7,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 8,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 9,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 6,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 9,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 5,
+      "a_success": true,
+      "b_success": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 6,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 9,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 5,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 6,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 9,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 6,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 9,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 6,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 9,
+      "a_success": true,
+      "b_success": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 6,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 7,
+      "a_success": false,
+      "b_success": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 8,
+      "a_success": false,
+      "b_success": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 9,
+      "a_success": false,
+      "b_success": false
+    }
+  ],
+  "note": "Outcome oracle uses test outcomes; only a complementarity upper bound, not routing performance or training data."
+}

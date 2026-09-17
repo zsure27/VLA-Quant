@@ -1,0 +1,44 @@
+{
+  "group_size": 64,
+  "source_profile_sha256": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8",
+  "initial_state_indices": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "cases": {
+    "language-w2-g64-clip": {
+      "episodes": 50,
+      "successes": 0,
+      "source_shard": "awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227"
+    },
+    "language-w2-g64-no-clip": {
+      "episodes": 50,
+      "successes": 20,
+      "source_shard": "awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249"
+    },
+    "language-w2-g64-no-clip-attention": {
+      "episodes": 50,
+      "successes": 29,
+      "source_shard": "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936"
+    },
+    "language-w2-g64-no-clip-mlp": {
+      "episodes": 50,
+      "successes": 0,
+      "source_shard": "awq-scope-shard-language-w2-g64-no-clip-mlp-05-09-20260918-022939-81891"
+    }
+  },
+  "matrix": [
+    [
+      0,
+      0
+    ],
+    [
+      29,
+      20
+    ]
+  ],
+  "note": "Language-only W2; vision BF16; identical original AWQ scales. Q/K weight clipping naturally absent in all four cases."
+}
