@@ -1,0 +1,36 @@
+[
+  {
+    "split": "development_05_09",
+    "initial_state_start": 5,
+    "initial_state_end": 9,
+    "episodes": 50,
+    "successes": 29,
+    "bf16_successes": 50,
+    "source_shards": [
+      "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936"
+    ],
+    "bf16_only": 21,
+    "candidate_only": 0,
+    "discordant_pairs": 21,
+    "mcnemar_exact_p": 9.5367431640625e-07,
+    "both_success": 29,
+    "both_fail": 0
+  },
+  {
+    "split": "extension_10_19",
+    "initial_state_start": 10,
+    "initial_state_end": 19,
+    "episodes": 100,
+    "successes": 49,
+    "bf16_successes": 96,
+    "source_shards": [
+      "awq-scope-shard-language-w2-g64-no-clip-attention-10-19-20260918-024442-84914"
+    ],
+    "bf16_only": 48,
+    "candidate_only": 1,
+    "discordant_pairs": 49,
+    "mcnemar_exact_p": 1.7763568394002505e-13,
+    "both_success": 48,
+    "both_fail": 3
+  }
+]

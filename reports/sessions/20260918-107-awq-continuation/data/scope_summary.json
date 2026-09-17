@@ -50,18 +50,19 @@
   {
     "case": "language-w2-g64-no-clip-attention",
     "source_shards": [
-      "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936"
+      "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936",
+      "awq-scope-shard-language-w2-g64-no-clip-attention-10-19-20260918-024442-84914"
     ],
-    "episodes": 50,
-    "successes": 29,
-    "bf16_successes": 50,
+    "episodes": 150,
+    "successes": 78,
+    "bf16_successes": 146,
     "episode_errors": 0,
-    "bf16_only": 21,
-    "candidate_only": 0,
-    "discordant_pairs": 21,
-    "mcnemar_exact_p": 9.5367431640625e-07,
-    "both_success": 29,
-    "both_fail": 0
+    "bf16_only": 69,
+    "candidate_only": 1,
+    "discordant_pairs": 70,
+    "mcnemar_exact_p": 1.2027867851011065e-19,
+    "both_success": 77,
+    "both_fail": 3
   },
   {
     "case": "language-w2-g64-no-clip-mlp",

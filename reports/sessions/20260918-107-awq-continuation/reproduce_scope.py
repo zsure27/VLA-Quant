@@ -80,4 +80,24 @@ if vision:
     ax.set_title('Vision W2 task sensitivity; same official states and seeds');fig.tight_layout()
     for ext in ('png','svg'):fig.savefig(HERE/'figures'/('05_vision_per_task.'+ext),dpi=160)
     plt.close(fig)
+attention_splits=[]
+for label,lo,hi in [('development_05_09',5,9),('extension_10_19',10,19)]:
+    rs=[r for r in pairs if r['case']=='language-w2-g64-no-clip-attention' and lo<=r['init_state_index']<=hi]
+    if not rs:continue
+    assert len(rs)==10*(hi-lo+1),'incomplete attention split'
+    attention_splits.append(dict(split=label,initial_state_start=lo,initial_state_end=hi,
+        episodes=len(rs),successes=sum(r['candidate_success'] for r in rs),
+        bf16_successes=sum(r['bf16_success'] for r in rs),
+        source_shards=sorted(set(r['source_shard'] for r in rs)),**paired_stats(rs)))
+(HERE/'data/language_attention_splits.json').write_text(json.dumps(attention_splits,indent=2)+'\n')
+if attention_splits:
+    fig,ax=plt.subplots(figsize=(7,4));x=np.arange(len(attention_splits))
+    ax.bar(x-.18,[r['bf16_successes']/r['episodes'] for r in attention_splits],.36,label='Matched BF16')
+    ax.bar(x+.18,[r['successes']/r['episodes'] for r in attention_splits],.36,label='Language W2 attention no clip')
+    for i,r in enumerate(attention_splits):ax.text(i+.18,r['successes']/r['episodes']+.02,str(r['successes'])+'/'+str(r['episodes']),ha='center')
+    ax.set_xticks(x);ax.set_xticklabels(['Development 5-9' if r['split'].startswith('development') else 'Extension 10-19' for r in attention_splits])
+    ax.set_ylim(0,1.1);ax.set_ylabel('Closed-loop success rate');ax.legend(loc='lower left',fontsize=8)
+    ax.set_title('Separate strategy selection from extended-state validation');fig.tight_layout()
+    for ext in ('png','svg'):fig.savefig(HERE/'figures'/('08_attention_state_extension.'+ext),dpi=160)
+    plt.close(fig)
 print(json.dumps(summary,indent=2))

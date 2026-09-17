@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-09-17T19:07:52.011417+00:00",
+  "label": "20260918-107-attention100",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-language-w2-g64-no-clip-attention-10-19-20260918-024442-84914"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}
