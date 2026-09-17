@@ -1,0 +1,1441 @@
+2026-09-17 19:39:29.226455: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-17 19:39:29.266441: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-17 19:39:29.266466: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-17 19:39:29.267785: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-17 19:39:29.273990: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-17 19:39:30.100525: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+VILA is not installed. Multimodal features will not be available. To activate, please install VILA at https://github.com/NVlabs/VILA.
+[official-quant] scope={"fused_vision": 105, "language": 224, "primary_vision": 93, "total": 422, "unexpected": 0, "vision": 198}
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.28it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.86it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.11it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.99it/s]
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+[diagnostic] same-loader BF16 control: no scales, clipping or weight quantization applied
+[official-quant] method=awq weight_bits=4 activation_bits=16 profile_targets=422 scope=none
+[official-quant] BF16 exclusions=projector,proprio_projector,action_head,embeddings,norms
+[official-quant] candidate={"applied_target_bits": {"4": 0}, "applied_targets": 0, "name": "profile", "profiles": [{"path": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt", "sha256": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4"}], "removed_language_clips": 0, "scope": "none", "target_group_counts": {"128": 422}, "w4_layers": ""}
+[official-quant] using preloaded model
+09/17 [19:40:11] INFO     | >> Logging to local log file: run_libero_eval.py:223
+                          /root/autodl-tmp/qvla-repro/eva                       
+                          l/awq-baseline-shard-45-49-2026                       
+                          0917-193926-20575/bf16/EVAL-lib                       
+                          ero_spatial-openvla-2026_09_17-                       
+                          19_39_48.txt                                          
+                 INFO     | >> SEED_PROTOCOL {"env_seed": run_libero_eval.py:238
+                          0, "model_seed": 0, "protocol":                       
+                          "paired",                                             
+                          "pythonhashseed_at_launch":                           
+                          "0", "runner_sha256":                                 
+                          "fe37e8097c286e1946e5194a1f817a                       
+                          2b2362d167a6a5a49443c5aa20314d8                       
+                          873", "strict": false}                                
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                 INFO     | >> Task suite: libero_spatial run_libero_eval.py:238
+  0%|          | 0/10 [00:00<?, ?it/s]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:40:14] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 4215005786,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "aeed457c3aaa84628169ec809ab31f                       
+                          ea7d3baed43d4e0e68970d01485d8b4                       
+                          987", "init_state_shape": [92],                       
+                          "model_seed": 1611577170,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/17 [19:40:22] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 1                                                
+                 INFO     | >> # successes: 1 (100.0%)    run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:32,  8.12s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1732376798,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "54b3e75ce4b8126c50bc354ae6c534                       
+                          c6e9c2f6180a86a8cc97100a598c808                       
+                          2f1", "init_state_shape": [92],                       
+                          "model_seed": 1854073269,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/17 [19:40:30] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 2                                                
+                 INFO     | >> # successes: 2 (100.0%)    run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:15<00:23,  7.96s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 301706372,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "4f5e968e3f8a21ea074562fb9ce67e                       
+                          13dc39cfba572b37e5cc18e15d8f939                       
+                          a1f", "init_state_shape": [92],                       
+                          "model_seed": 647178796,                              
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/17 [19:40:38] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 3                                                
+                 INFO     | >> # successes: 3 (100.0%)    run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:23<00:15,  7.86s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1741847142,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "14331e45a001f601d1a68e2824d6d7                       
+                          49ce477bcb0c29f127b12d5ac08087d                       
+                          57d", "init_state_shape": [92],                       
+                          "model_seed": 3513033951,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/17 [19:40:46] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 4                                                
+                 INFO     | >> # successes: 4 (100.0%)    run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:31<00:07,  7.89s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1839010978,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "80d1403d4b3f6adeff4ed42fe0f4a5                       
+                          dc70b570e6d59ae52aa7f0afd3d9194                       
+                          4be", "init_state_shape": [92],                       
+                          "model_seed": 3176067782,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/17 [19:40:54] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 5                                                
+                 INFO     | >> # successes: 5 (100.0%)    run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:39<00:00,  7.88s/it][A100%|██████████| 5/5 [00:39<00:00,  7.90s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 10%|█         | 1/10 [00:43<06:27, 43.05s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:40:57] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 412679868,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "f79d4d21159c657a528a4fb0c9c10b                       
+                          b1d473e2595f8d5ac0780507a157185                       
+                          eee", "init_state_shape": [92],                       
+                          "model_seed": 2098898157,                             
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/17 [19:41:06] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 6                                                
+                 INFO     | >> # successes: 6 (100.0%)    run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:35,  8.97s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1398216352,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "c8b9606909cd34025dae7bcbe3c11d                       
+                          f89f26a6617c1934e98b9c49af7a9b5                       
+                          59c", "init_state_shape": [92],                       
+                          "model_seed": 635895520,                              
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/17 [19:41:15] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 7                                                
+                 INFO     | >> # successes: 7 (100.0%)    run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:18<00:27,  9.24s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 425169792,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "59a712c55409ee2c49087d209aab4c                       
+                          a1474a7879e3071be37b1c762e45b3b                       
+                          ffd", "init_state_shape": [92],                       
+                          "model_seed": 943839910,                              
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/17 [19:41:25] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 8                                                
+                 INFO     | >> # successes: 8 (100.0%)    run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:27<00:18,  9.34s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1990084044,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "350bf488c06f0918ecef5cc9dc56a1                       
+                          63821d4dce5b9e53923f6b8f5f46c48                       
+                          213", "init_state_shape": [92],                       
+                          "model_seed": 2829823387,                             
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/17 [19:41:34] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 9                                                
+                 INFO     | >> # successes: 9 (100.0%)    run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:37<00:09,  9.42s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 4022403081,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "5a5b6913c479b18c86010683d35206                       
+                          0eb68f382f2de75e6b68ac1f3dae5e1                       
+                          1ea", "init_state_shape": [92],                       
+                          "model_seed": 805964948,                              
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/17 [19:41:43] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 10                                               
+                 INFO     | >> # successes: 10 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:46<00:00,  9.29s/it][A100%|██████████| 5/5 [00:46<00:00,  9.29s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 20%|██        | 2/10 [01:32<06:16, 47.01s/it]09/17 [19:41:44] INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:41:47] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3950244284,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "918a0f7ae544673a763398420d1a7c                       
+                          15c373ea38695ca38f52ba4996c43e7                       
+                          a6d", "init_state_shape": [92],                       
+                          "model_seed": 2083605657,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/17 [19:41:56] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 11                                               
+                 INFO     | >> # successes: 11 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:09<00:36,  9.21s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1989382542,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "3427a168ba24740f56ed0fbbaa0c7f                       
+                          684391154d9759cd326301dd619ff82                       
+                          618", "init_state_shape": [92],                       
+                          "model_seed": 1959857874,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/17 [19:42:04] INFO     | >> Success: True              run_libero_eval.py:238
+09/17 [19:42:05] INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 12                                               
+                 INFO     | >> # successes: 12 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:17<00:26,  8.79s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1955218558,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "a6e64088e298a32030c8f152139fb7                       
+                          32bd77e932b024716ff6203cc133bb0                       
+                          a0e", "init_state_shape": [92],                       
+                          "model_seed": 1524464040,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/17 [19:42:13] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 13                                               
+                 INFO     | >> # successes: 13 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:26<00:17,  8.69s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2392964692,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "48f0949b13a759c3d62bf385522785                       
+                          15dbcd69a6216b32b340f8627109344                       
+                          6f8", "init_state_shape": [92],                       
+                          "model_seed": 3440829925,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/17 [19:42:23] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 14                                               
+                 INFO     | >> # successes: 14 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:35<00:09,  9.04s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1684192834,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "d76e44f29bd43b5fd70783aaff1471                       
+                          066fd8ab774311c1b298916b60a728d                       
+                          f1b", "init_state_shape": [92],                       
+                          "model_seed": 702398939,                              
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/17 [19:42:31] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 15                                               
+                 INFO     | >> # successes: 15 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:44<00:00,  8.81s/it][A100%|██████████| 5/5 [00:44<00:00,  8.85s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 30%|███       | 3/10 [02:20<05:31, 47.30s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:42:34] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1555665035,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "c0c1341319bb4ff603051411661c71                       
+                          cdda11b1577d4bf36eedd8015bef231                       
+                          c20", "init_state_shape": [92],                       
+                          "model_seed": 3916229738,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/17 [19:42:43] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 16                                               
+                 INFO     | >> # successes: 16 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:33,  8.35s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3878865789,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "fddd2fdfc1106380989a912c32bc28                       
+                          22120797428604773abbb3dbb496393                       
+                          ac9", "init_state_shape": [92],                       
+                          "model_seed": 1671958709,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/17 [19:42:51] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 17                                               
+                 INFO     | >> # successes: 17 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:16<00:24,  8.29s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1012803538,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "ff6eb7a3e2f731455339a4e18b9525                       
+                          3fbe3d637629b8a420d1ab4ab862b14                       
+                          c2c", "init_state_shape": [92],                       
+                          "model_seed": 1736052250,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/17 [19:42:59] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 18                                               
+                 INFO     | >> # successes: 18 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:24<00:16,  8.20s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2029235663,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "1d510958095b4e025666708756a278                       
+                          fb42c249a651924a66baa2799f06978                       
+                          3d4", "init_state_shape": [92],                       
+                          "model_seed": 3945289724,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/17 [19:43:07] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 19                                               
+                 INFO     | >> # successes: 19 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:32<00:08,  8.10s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2654291109,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "ff1ccf054cd500323a4baa963795dd                       
+                          7dea85c785a0231a6541bd33704d237                       
+                          be3", "init_state_shape": [92],                       
+                          "model_seed": 3326157905,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/17 [19:43:15] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 20                                               
+                 INFO     | >> # successes: 20 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:40<00:00,  8.17s/it][A100%|██████████| 5/5 [00:40<00:00,  8.19s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 40%|████      | 4/10 [03:04<04:36, 46.11s/it]09/17 [19:43:16] INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:43:19] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2874557574,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "d12e3368e6ad9301b7d632429171be                       
+                          9b23b9fe1b1ab7b9062159ffe46060f                       
+                          664", "init_state_shape": [92],                       
+                          "model_seed": 1554191966,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/17 [19:43:29] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 21                                               
+                 INFO     | >> # successes: 21 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:10<00:41, 10.36s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1004960251,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "5b09daab114e4d3af5d84965400e51                       
+                          bb5e493a6b9ce78c8d04d12f7bb1bfa                       
+                          bff", "init_state_shape": [92],                       
+                          "model_seed": 3964310256,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/17 [19:43:39] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 22                                               
+                 INFO     | >> # successes: 22 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:20<00:30, 10.32s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3115568711,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "eaaf7fd0994b7998df04e31ee01d27                       
+                          dc01a586bc5f6ef0f65480cf20c9afb                       
+                          1c9", "init_state_shape": [92],                       
+                          "model_seed": 2639573391,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/17 [19:43:51] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 23                                               
+                 INFO     | >> # successes: 23 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:32<00:21, 10.85s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3131556104,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "c08b9f27005bfbc13c50875b0b1788                       
+                          4fe186bf3cde0d95be7a5e2b801c04a                       
+                          652", "init_state_shape": [92],                       
+                          "model_seed": 2100786662,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/17 [19:44:02] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 24                                               
+                 INFO     | >> # successes: 24 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:43<00:10, 10.96s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 15171292,                                
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "c6a4a780eee1b9319e2bfea84e8709                       
+                          63dfcd46d0eb1c1f0c1aa822a7cbf81                       
+                          d62", "init_state_shape": [92],                       
+                          "model_seed": 3144507017,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/17 [19:44:13] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 25                                               
+                 INFO     | >> # successes: 25 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:53<00:00, 10.79s/it][A100%|██████████| 5/5 [00:53<00:00, 10.75s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 50%|█████     | 5/10 [04:01<04:10, 50.10s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:44:16] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 603923488,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "c42d0bcb3d42923d97b8f0d3b182fa                       
+                          4c58f251b688e78502491f9abdbecc2                       
+                          4a0", "init_state_shape": [92],                       
+                          "model_seed": 3944718947,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/17 [19:44:25] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 26                                               
+                 INFO     | >> # successes: 26 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:35,  8.78s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 739294674,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "e7a51f3e006d762b755017f9ec395e                       
+                          bb9b272e716d811f5f4e22980251ce9                       
+                          e0f", "init_state_shape": [92],                       
+                          "model_seed": 3770319583,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/17 [19:44:33] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 27                                               
+                 INFO     | >> # successes: 27 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:17<00:25,  8.61s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 906680753,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "29a92c0348dee75c131fa0beb9c776                       
+                          11224fdaf778c2e18af95b88cb0b9ce                       
+                          57f", "init_state_shape": [92],                       
+                          "model_seed": 86586123,                               
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/17 [19:44:42] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 28                                               
+                 INFO     | >> # successes: 28 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:26<00:17,  8.68s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3950833648,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "351c182d153de42923ed58162f88a7                       
+                          c2e90587a54073fdda3fda66e1cb7d0                       
+                          903", "init_state_shape": [92],                       
+                          "model_seed": 1493182971,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/17 [19:44:51] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 29                                               
+                 INFO     | >> # successes: 29 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:34<00:08,  8.68s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 111379952,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "8cdf5e442c27c558616896aeee60f5                       
+                          b45b8e965e7e732fddc02e6b29ea7fa                       
+                          a49", "init_state_shape": [92],                       
+                          "model_seed": 330876625,                              
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/17 [19:44:59] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 30                                               
+                 INFO     | >> # successes: 30 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:43<00:00,  8.57s/it][A100%|██████████| 5/5 [00:43<00:00,  8.62s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 60%|██████    | 6/10 [04:48<03:15, 48.88s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:45:02] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3872737533,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "1a69936d7667002d0f9639fc59707a                       
+                          6dd8a522a9d5d0fc6457165b8e4951e                       
+                          87d", "init_state_shape": [92],                       
+                          "model_seed": 3608390160,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/17 [19:45:11] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 31                                               
+                 INFO     | >> # successes: 31 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:35,  8.81s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1100020953,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "f5e40a343e382819bf45003eebc2bb                       
+                          909ed5dc124e04a2f01515664a03f87                       
+                          1e6", "init_state_shape": [92],                       
+                          "model_seed": 4087587385,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/17 [19:45:20] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 32                                               
+                 INFO     | >> # successes: 32 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:17<00:26,  8.92s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 4051934205,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "ff2ce0348bbfc80f7d09be07a05e9f                       
+                          04b11c41ba280d6f2587356b4434f23                       
+                          b95", "init_state_shape": [92],                       
+                          "model_seed": 2271210947,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/17 [19:45:30] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 33                                               
+                 INFO     | >> # successes: 33 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:27<00:18,  9.14s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 80968398,                                
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "124743d27a771973786e97ccb89ce9                       
+                          8d8554be780a10c6ad7faeb6150af09                       
+                          d79", "init_state_shape": [92],                       
+                          "model_seed": 3599038561,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/17 [19:45:38] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 34                                               
+                 INFO     | >> # successes: 34 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:36<00:09,  9.05s/it][A09/17 [19:45:39] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3102821187,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "3a892e49c8d9eed6572b7712beddd7                       
+                          6effe0a27d65b6fb1572e40afe5e3bd                       
+                          0c0", "init_state_shape": [92],                       
+                          "model_seed": 912153937,                              
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/17 [19:45:48] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 35                                               
+                 INFO     | >> # successes: 35 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:45<00:00,  9.16s/it][A100%|██████████| 5/5 [00:45<00:00,  9.10s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 70%|███████   | 7/10 [05:37<02:26, 48.87s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:45:51] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2906979937,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "6830b4e68d19d9574651c79c44be95                       
+                          819fb61f8bdb0395f912d650c32bded                       
+                          9bb", "init_state_shape": [92],                       
+                          "model_seed": 1733443500,                             
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/17 [19:46:01] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 36                                               
+                 INFO     | >> # successes: 36 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:09<00:38,  9.54s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1308179430,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "652690e243bfc1d53ca4115864adc4                       
+                          a7587623c127abb19242135faffed8a                       
+                          9ce", "init_state_shape": [92],                       
+                          "model_seed": 742969919,                              
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/17 [19:46:11] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 37                                               
+                 INFO     | >> # successes: 37 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:20<00:30, 10.14s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1972629738,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "62add5097e9d617e5a0012137a6802                       
+                          ed0bfde98849fd6c58003ae5d799875                       
+                          1fc", "init_state_shape": [92],                       
+                          "model_seed": 1934989639,                             
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/17 [19:46:21] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 38                                               
+                 INFO     | >> # successes: 38 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:29<00:19,  9.94s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3416793725,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "2a3816644356e20bf708f08425cf2a                       
+                          f1aa93a19eacb147198b68e3753335d                       
+                          788", "init_state_shape": [92],                       
+                          "model_seed": 1359267905,                             
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/17 [19:46:31] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 39                                               
+                 INFO     | >> # successes: 39 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:39<00:09,  9.99s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2176902890,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "1ded5e57130dd32724935dafa2bb36                       
+                          401940812bfffeeca16980851c31ee4                       
+                          fb6", "init_state_shape": [92],                       
+                          "model_seed": 1318497224,                             
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/17 [19:46:42] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 40                                               
+                 INFO     | >> # successes: 40 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:50<00:00, 10.21s/it][A100%|██████████| 5/5 [00:50<00:00, 10.09s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 80%|████████  | 8/10 [06:31<01:40, 50.43s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:46:45] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3139176122,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "24f9cfa1728ed262f64521c6b3b3e7                       
+                          1cdc52afa97e4e6ab77bccdebc865d0                       
+                          7f2", "init_state_shape": [92],                       
+                          "model_seed": 3223707390,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/17 [19:46:54] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 41                                               
+                 INFO     | >> # successes: 41 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:34,  8.63s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1778439941,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "ad9245178ee8387348b1ea63f8448e                       
+                          a1ad61eda3014722b5d910f822325ed                       
+                          806", "init_state_shape": [92],                       
+                          "model_seed": 4828471,                                
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/17 [19:47:02] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 42                                               
+                 INFO     | >> # successes: 42 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:17<00:25,  8.48s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 842738773,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "588a468ca5f3513b762bcbdddd64b0                       
+                          4b84d53eb09639895413e1f4e84c219                       
+                          d6d", "init_state_shape": [92],                       
+                          "model_seed": 2040028324,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/17 [19:47:11] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 43                                               
+                 INFO     | >> # successes: 43 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:25<00:17,  8.55s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 4033137365,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "7177b22f02f0cee52ce2a47480c5a5                       
+                          d9a486e259bc536e049be2731c5b3b2                       
+                          319", "init_state_shape": [92],                       
+                          "model_seed": 803687494,                              
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/17 [19:47:19] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 44                                               
+                 INFO     | >> # successes: 44 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:34<00:08,  8.51s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3110794515,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "037f7cfbd5fa5f9191a91bbb76310d                       
+                          3ecf0a5355bd4bc977d0757a561a803                       
+                          b13", "init_state_shape": [92],                       
+                          "model_seed": 2053103887,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/17 [19:47:28] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 45                                               
+                 INFO     | >> # successes: 45 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:42<00:00,  8.54s/it][A100%|██████████| 5/5 [00:42<00:00,  8.53s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+ 90%|█████████ | 9/10 [07:17<00:49, 49.06s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/17 [19:47:31] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3486997007,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 45,                               
+                          "init_state_sha256":                                  
+                          "37f936abf77d94b75fac07e590fa26                       
+                          37bcbbcf6881a8d40837cae7f17fcf1                       
+                          68d", "init_state_shape": [92],                       
+                          "model_seed": 3362489072,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/17 [19:47:41] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 46                                               
+                 INFO     | >> # successes: 46 (100.0%)   run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:09<00:38,  9.61s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3765230933,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 46,                               
+                          "init_state_sha256":                                  
+                          "511e59296c4beb7b243d57c9e41d76                       
+                          2ed8eff497250f796fa65ce2a585b16                       
+                          51a", "init_state_shape": [92],                       
+                          "model_seed": 2268066207,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/17 [19:47:50] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 47                                               
+                 INFO     | >> # successes: 47 (100.0%)   run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:19<00:29,  9.69s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2613388118,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 47,                               
+                          "init_state_sha256":                                  
+                          "d01f488938b9c169d441d381187a80                       
+                          4766918fe4394bfd6325e308b20a206                       
+                          1d1", "init_state_shape": [92],                       
+                          "model_seed": 115556393,                              
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/17 [19:48:00] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 48                                               
+                 INFO     | >> # successes: 48 (100.0%)   run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:29<00:19,  9.69s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 315129556,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 48,                               
+                          "init_state_sha256":                                  
+                          "e383cb9ca532d15d777684d04e4895                       
+                          8e6c86c6a82f7440610bfa47acb6c73                       
+                          98f", "init_state_shape": [92],                       
+                          "model_seed": 2923982392,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/17 [19:48:12] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 49                                               
+                 INFO     | >> # successes: 49 (100.0%)   run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:40<00:10, 10.56s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3538353301,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 49,                               
+                          "init_state_sha256":                                  
+                          "e3e487c4499d0d6ac7f71956603b8f                       
+                          9a9fe84b62afe6b7d2ca622cfbffe3d                       
+                          9dd", "init_state_shape": [92],                       
+                          "model_seed": 3148363717,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Saved rollout MP4 at path ./rollouts/2026_09_17/2026_09_17-19_39_48--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/17 [19:48:21] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 50                                               
+                 INFO     | >> # successes: 50 (100.0%)   run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:50<00:00, 10.20s/it][A100%|██████████| 5/5 [00:50<00:00, 10.10s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 1.0                                             
+100%|██████████| 10/10 [08:10<00:00, 50.50s/it]100%|██████████| 10/10 [08:10<00:00, 49.08s/it]
+09/17 [19:48:22] INFO     | >> Final results:             run_libero_eval.py:238
+                 INFO     | >> Total episodes: 50         run_libero_eval.py:238
+                 INFO     | >> Total successes: 50        run_libero_eval.py:238
+                 INFO     | >> Overall success rate:      run_libero_eval.py:238
+                          1.0000 (100.0%)                                       

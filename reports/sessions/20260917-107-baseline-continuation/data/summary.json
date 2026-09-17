@@ -2,20 +2,25 @@
   "variants": [
     {
       "case": "bf16",
-      "episodes": 450,
-      "successes": 440,
-      "success_rate": 0.9777777777777777,
+      "episodes": 500,
+      "successes": 487,
+      "success_rate": 0.974,
       "episode_errors": 0
     },
     {
       "case": "w4",
-      "episodes": 450,
-      "successes": 439,
-      "success_rate": 0.9755555555555555,
+      "episodes": 500,
+      "successes": 486,
+      "success_rate": 0.972,
       "episode_errors": 0
     }
   ],
   "covered_initial_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
     5,
     6,
     7,
@@ -62,12 +67,12 @@
     48,
     49
   ],
-  "paired_episodes": 450,
-  "bf16_only": 9,
-  "w4_only": 8,
-  "both_success": 431,
-  "both_failure": 2,
-  "difference_percentage_points": -0.2222222222222222,
+  "paired_episodes": 500,
+  "bf16_only": 10,
+  "w4_only": 9,
+  "both_success": 477,
+  "both_failure": 4,
+  "difference_percentage_points": -0.2,
   "mcnemar_exact_p": 1.0,
   "note": "Fixed tasks, paired official init indices; p value not equivalence; fake quant precision only"
 }
