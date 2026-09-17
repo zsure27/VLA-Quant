@@ -14,7 +14,8 @@ def sha(path):
     return h.hexdigest()
 
 p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True)
-p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+p.add_argument('--output',type=Path,required=True)
+p.add_argument('--family',choices=['all','attention','mlp'],default='all');a=p.parse_args()
 if a.output.exists() or a.source.resolve()==a.output.resolve():
     raise SystemExit('Refusing overwrite or in-place profile edits')
 before=sha(a.source);d=torch.load(a.source,map_location='cpu',weights_only=True)
@@ -24,12 +25,15 @@ language=[n for n in d['entries'] if n.startswith('language_model.model.layers.'
 assert len(language)==224
 removed=[]
 for name in language:
+    if a.family=='attention' and '.self_attn.' not in name:continue
+    if a.family=='mlp' and '.mlp.' not in name:continue
     entry=d['entries'][name]
     if entry.get('clip_max') is not None:removed.append(name)
     entry['clip_max']=None
-assert len(removed)==160
+assert len(removed)=={'all':160,'attention':64,'mlp':96}[a.family]
 intervention=dict(kind='post_search_language_clip_removal',source_profile=str(a.source),
     source_profile_sha256=before,removed_language_clips=removed,language_targets=224,
+    removed_clip_family=a.family,
     preserved='original native G64 block scales, calibration provenance, vision entries',
     note='Diagnostic derived profile; no new AWQ search, training, or original baseline claim.')
 d['diagnostic_intervention']=intervention

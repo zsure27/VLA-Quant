@@ -46,22 +46,24 @@ def normalize(payload, source, expected_tag=None):
         "bucket": bucket.get("limitId", "codex"), "windows": windows}
 
 
-def decision(snapshot, now=None, estimated_next=0, reserve=3):
+def decision(snapshot, now=None, estimated_next=0, reserve=8):
     now = now or datetime.now(timezone.utc)
     age = (now-datetime.fromisoformat(snapshot["observed_at_utc"].replace("Z", "+00:00"))).total_seconds()
     primary = snapshot["windows"].get("primary")
     complete = primary is not None and primary.get("window_minutes") == 300
     remaining = primary["remaining_percent"] if complete else None
-    if not complete or age < 0 or age > 300:
+    if not complete or age < 0 or age > 60:
         action = "UNKNOWN_DO_NOT_DISPATCH"
-    elif remaining < 10 or remaining < estimated_next+reserve:
+    elif remaining <= 15 or remaining < estimated_next+reserve:
         action = "BACKUP_AND_CLOSE"
     else:
         action = "LIVE_BUDGET_AVAILABLE"
     return {**snapshot, "age_seconds": round(age, 1), "action": action,
         "estimated_next_percent": estimated_next, "shutdown_reserve_percent": reserve,
         "decision_window": "five_hour_only", "check_after_short_tests": (1 if remaining is None or remaining < 20 else 3),
-        "check_after_long_tests": (1 if remaining is None or remaining < 20 else 2)}
+        "prepare_backup": remaining is not None and remaining <= 20,
+        "close_threshold_percent": 15, "maximum_age_seconds": 60,
+        "check_after_long_tests": 1}
 
 
 def save(snapshot, path):
@@ -180,7 +182,7 @@ def main():
     p.add_argument("--timeout", type=float, default=18)
     p.add_argument("--cache", type=Path, default=CACHE)
     p.add_argument("--estimated-next-percent", type=float, default=0)
-    p.add_argument("--reserve-percent", type=float, default=3)
+    p.add_argument("--reserve-percent", type=float, default=8)
     args = p.parse_args()
     if not 1 <= args.timeout <= 25 or args.reserve_percent < 3 or args.estimated_next_percent < 0:
         p.error("timeout must be 1..25s; reserve >=3%; next estimate >=0")

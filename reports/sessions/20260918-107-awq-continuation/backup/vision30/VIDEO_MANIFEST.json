@@ -1,0 +1,602 @@
+[
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38729,
+    "sha256": "c08c2b36d666f0daea2775b32e541e69fe682642c0b3a9628c5414e7d4ca8123",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39004,
+    "sha256": "61d60b26077c4fec21c6f84361d310e0f5eda15e86e90e23c6a702786b8df3f2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39588,
+    "sha256": "0eb68b82a8250473dfb386af038d45057e173cd1bff5945f3bb3aa798d42bd11",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 39739,
+    "sha256": "265224235557a2afb44d4036c504a22ed6bbc2d4b6f06dbbd6cb3a54e0317511",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 36987,
+    "sha256": "47dccbde19aafcf341ff5f02bef8bc6bd818091c8531fa4cd38b524936cf5db9",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38687,
+    "sha256": "8d375f886a9e21038449fe9f1bb129bc4138c633eb4bdd77c5ae8ddd8fb65104",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 37993,
+    "sha256": "8b073240d0e027898f261d6284e0fec36c0d9bacf3dee07d0ab3f3e7deaa902e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 40946,
+    "sha256": "b6c3948e50c6da12bf5e005dab595eb389de473fed0f40a1e2e08fc4dd972e4d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38488,
+    "sha256": "9af7ec843cef480c13ea9fe492534e46d412ca29eb6f447c341241fb41d4a0b2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4",
+    "bytes": 38487,
+    "sha256": "b589d1c6ccb86bebf0b91345ea5476a93dd0454731133d316f1cf6063e209cdf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=11--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 87541,
+    "sha256": "233ee8442d0fc7eb336842cf2622baa46bc58a71ec90a62ef8cb0ef040294268",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 40618,
+    "sha256": "e8bb93c752f992b095c3eb5490fb6c5c079284cccd41240abf803f5995aa4e66",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41889,
+    "sha256": "a0cc421c61c30eac4359ce8df43fed221595c32241c8db4041953a1d5310d334",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 42762,
+    "sha256": "51144c6e30d2f4582e03f8868470a242f5ef405b35abb2e6ad5b7fd2f97eb9c7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41521,
+    "sha256": "52c6a3f3e511683ced0f592d4819bbef80fe2d585cb1d4da559d8a3c44796055",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=16--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 88371,
+    "sha256": "1d3a29bd805f23baae3f2a7ce6724372906ec38c06d2ab6efdeb3366f31c59ea",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=17--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 86443,
+    "sha256": "ca9b1ea88b914d3a4136b8839190797a8ac66ea2c543814d15ab13c7c438f858",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=18--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 88620,
+    "sha256": "b1a40667428df22f8af0fd44d6877bf4ac5144b55e54beaafc1145e14fe5c8fc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 41061,
+    "sha256": "aaaf83e2b9459bf48b14c77ca86df263d0b6f16e7ab8dbe95943fa3501a5b1e0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4",
+    "bytes": 40688,
+    "sha256": "b7dd3bdec4ecdce8d32fe412df2b3c94fc405862dbc76454bbe1b09fdd2af148",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49710,
+    "sha256": "34579511882aa35038578abc5f586833b44c2d9fd3393a936f06690bf878855c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 46989,
+    "sha256": "77529231a17854f82ec8c8eb77f09a1e21b8ed8b3cc2c7197516bee87ad90c0d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48760,
+    "sha256": "88638608dd5ad12dc6a9bc8bf350192d52f0cd26b4f0a4ebf4cfe27844ece5c4",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 49042,
+    "sha256": "86f5e8f85c0c5a3d927a3abe7033c2abd90e810a8c2c45b45d3b8d98a0fc360c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48333,
+    "sha256": "11cb13d24aabab610be4b9b8d3a03d054ca6ec38399dcf4b16d3936b747bded6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47607,
+    "sha256": "e58be121d0be40f83f132d895f121357a0e735560be8334cbb06a8d729293074",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48980,
+    "sha256": "78379e53fdff89d6a9cf976ec79452a1e0759b3f8d7d31a17dda426d7f100c54",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48217,
+    "sha256": "da027c5c214b051705b779c01be7d5f6c56b8188bf6f0524c6755024efb1444e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 48530,
+    "sha256": "0be55a42d5a6416b2863e12fae4215ff5f4e6d40d3a843cbdb6633e8a1b9d6cb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4",
+    "bytes": 47791,
+    "sha256": "b8a1524add7a9313ea61ff78aabe65b7379425ffa88dc38620eb843eeedf167e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 50050,
+    "sha256": "82c96732f107fffa8178c4c67eff08cc0528c7d15c11a28dbcc4f1225d717535",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46864,
+    "sha256": "2da12e0e72e87454455f89d8b44a14fe3ce3a87bddf8afd2a5f8b933a5b49ad6",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 46533,
+    "sha256": "603054a2b379a86cf83dace11767e439187c0dd1f981808a019e6ff05ae23335",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 48593,
+    "sha256": "2dc0537636740ec71a76539b176354c02b0a1578cfd383b2aa54eeaf665f413c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 50213,
+    "sha256": "596bae03163d1d1fd933e3229b01c8f4d1553d0a8791b1a0356d7cb2ddd88bc8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49151,
+    "sha256": "e9816154804f959e86edb70ba8dad0b5328467bf5562bd9742bd66a7d43e4e53",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 50143,
+    "sha256": "302feb58c76cef248b154b4f5c7b46d33c655f875bb280fa47e12a011374ada1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 47864,
+    "sha256": "03a6c75cf58370ea3f996d8d63b36dfbaefdd796ffc8e708b442e8e973c2eac2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49020,
+    "sha256": "226a2ace4a840f339a5a2531086339a39ff4638e23069aeffd55ce0a79dc40eb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4",
+    "bytes": 49509,
+    "sha256": "63b56101c7c774129034be85a7570db27a6c1ef3c559b4df1c4853dc26979a3b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 61041,
+    "sha256": "1290ce1c24d6076bcd852f9c7cd50a488b30e3693b9899e0a485ce2525c285ca",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 58640,
+    "sha256": "f4dd545cd4a2419a1771a00ad9d0b22134f8f7043dff2e2133e3ff8e7ed75ef3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 58314,
+    "sha256": "2ccb87a6372102b5001201db453c3b62282a946d380dc9a4359606c5a7ea9758",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 59943,
+    "sha256": "ca6d03b75ca0dff9749c3655f0092448ba42f919e592fe269e86b38185cd7dec",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 57685,
+    "sha256": "178442b93ff3f9e7c69fcfd4c2e28c5572adb363fb146ffd9a3235aca524103f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 59031,
+    "sha256": "b81304107ab9769cad7d9139c5f7aca045130db1c20a8b9fbb07d3050487f5f5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 61606,
+    "sha256": "233d690cccbcc2d54811b9dc9bfb4cbbf41eeab13ddd3c39e45af63025d5835c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 58230,
+    "sha256": "f6538c57c65407fbd36ad957f064f05ecb5d46dd5dcad6e7724e12dd93561cdd",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 58719,
+    "sha256": "f85a4d9e6202d7cc57b9ffc7a8bfc7ba5d7145481655da18d57cbcc14cc5f29a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4",
+    "bytes": 58414,
+    "sha256": "2bdddaaa777a178ddd621d2616811982e26525715b2d639560aa567f76568766",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=51--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 98515,
+    "sha256": "3c3e3aee47ba6b3e3d0a6e3e879ddee492114a31e4b9f42a945b681a06778a7d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=52--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 43367,
+    "sha256": "5cb12536f649812eba0a95b1382ed50473613cfe19495d11b276fa4c1ad252d1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42277,
+    "sha256": "58767f1bbcf60b828f0a343b88eb572c2a4eb7876ecb04ebd6cfae2e2ad88f6d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41555,
+    "sha256": "e6dfcee83a2af83fd8cda934d45ab88878a182384382640a5b4e8b61b95ab1db",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 41104,
+    "sha256": "d0bfe096e7cf96d2375af25d96a091cdfff4f2bfdb6b1b604dfc7e50fd6ca53e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39715,
+    "sha256": "ed456bad5ea90503aa21dc47a5ffbe7ba8d6506a8a24eba922986b7a55792648",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39261,
+    "sha256": "1fc4eb69d82d303aaa6a5c1fe8f3a05b855bc13a003558c9c496ecbcafcf6b05",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=58--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42144,
+    "sha256": "9bafe5b4231fc4442dbcd5bd77b46bcd286806dad1e97e40469e5df930bc7ce0",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 42295,
+    "sha256": "5cbb02f9fbcd9266bc23549aede060c92562bcd9a130987cec3d9d961dc41502",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4",
+    "bytes": 39853,
+    "sha256": "737884c38deae09b8d9120a61a84294b6a25fea04c7292e0feb3ad214e4b0607",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 63812,
+    "sha256": "620dd6762ba8c8fc9765630c33df19c9180d33df96dd1fed544d06671273a825",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 62590,
+    "sha256": "73e104fb1da1fb9c21f4fc2c60889dca7acf7b998a666c4d0809e95ec0ddf34c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 57757,
+    "sha256": "3d382be9d5aba49efa3cd90bc805ab85712387ce188d3f9a0b22fa2afe391d71",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 62912,
+    "sha256": "512131f3e052dbcac4ac9b67dcc10d172a5fe02bb62c1be1053096e04ed0a626",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 64639,
+    "sha256": "e8fb16b39154a090263e0389b75a91699d87da18f97a0a55dde698ea52f9d5d5",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 61806,
+    "sha256": "dffaf755b6211929aa3eb08a58d600489a810d970bd17f2a17e7068f7becb36c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 60484,
+    "sha256": "87016c4cbd6d0ac26fa43bc89fa3f9a72aa3645dab594e748288ea77fe71f4bb",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 64340,
+    "sha256": "425effde6279dd37569264804e2173d167c6e4a3e9ce19bd870ff25e75dfd511",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 63274,
+    "sha256": "d9ce7f990c1411289400f0eb3055d08d6a3139c61a875a21662aaff643722d87",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4",
+    "bytes": 61435,
+    "sha256": "d02a88882c6bd3edab954e603b8588ca60ed78c3a11a56a64608b22bc9cec006",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 51822,
+    "sha256": "bead7338707ea234d3b6281444443dd41f33512b292dd2666757d7f143a4a3b2",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50858,
+    "sha256": "9c4cf1a93a6fccd6933af7c26aa9f271f4b866556c84658a76a1d02e94e60440",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 52408,
+    "sha256": "9ecbe3f7829f73591d3d5f5f29eb1b7cf133ba52b4f6bec3dd5ef629e0cfb1e1",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=74--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 51440,
+    "sha256": "4e71c11b8347db10cefbe76c8d273b3135c83f7b07b16dac2489ef0326d1b7d7",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53377,
+    "sha256": "339d697d53763e1a56dd331f3b184eecccc45cd1831265c85471e0997453de8e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=76--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 45911,
+    "sha256": "f8f36b165ae3006f614f80fd3e51d2e21176589bdbeb0b6b29c167735f1a952e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=77--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 97019,
+    "sha256": "ca834eb7b6ffa320244fdecd6c16b3f0a8250a7b6616d043124230882c00aa08",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 53449,
+    "sha256": "62a8f089c56aa05528e34f9c9f047b6bfe9901f6072e41626f5bd1a6e5efb30f",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=79--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 55270,
+    "sha256": "222408eea547ab4245a5e8312bbad95820e60acf51ea713744d39973f5a803ca",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4",
+    "bytes": 50046,
+    "sha256": "ac6a54de1787c859c7284fa70c28702c94f292ff71b7efde68254489050d9f4d",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=81--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 49164,
+    "sha256": "1b190a974ecaf9e851fbb01d62882258ebe276b0ebd8ea7443a2f02bb541e2d3",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47176,
+    "sha256": "cfc81ec532869676dced74d08c1cd24276bf44620648af55e66e7907ebdf4c2c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47466,
+    "sha256": "63b1c65ff0f968db767cd6af9863abc4805ca90911ec17dc4b0ae35af36c9d60",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47472,
+    "sha256": "5c1287e03d0c762fc58b485833edd7df9af091a3a7755a076e03c69a153ddba8",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 44202,
+    "sha256": "3c3d8b97c9e37a4bc7db0c9a7c96296c1ac793860e33c8b1e90084566835c95a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 46128,
+    "sha256": "1bdd5fd5a561ddd9bf866bccf8d565fb107c3b019908b7c3f0e2ec5048f8db64",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 48007,
+    "sha256": "8657d06402ef6d684dc67f721a71de999f5a09abcae9853c483943eaf927b35b",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 46662,
+    "sha256": "4c885a1bc62ef24e68fc0cd2d0c2a03604dd253a6099c0e9b16e5318728ee149",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 46578,
+    "sha256": "418a1682e6501e98a542cc52b8c1bc60cc3fc1a8c2af4d690afe858eb1b7b42e",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4",
+    "bytes": 47567,
+    "sha256": "17137f69b671f722b26d17bb7c4999115c59bf3d207d86c8fbc4b9e456315240",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=91--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48279,
+    "sha256": "b385ce454a845897aa801875c0e5dca4205c8a682d41da97c07726b00c2fa103",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 47463,
+    "sha256": "7bedd726b1b3fa82dc57f1c53544ce467d8eef48768852f8f5bed65c61a14adf",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=93--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 46878,
+    "sha256": "8336719c01bbebb7717ea2b0e8334901619e296341d1fb214f67f3548314356a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48678,
+    "sha256": "a7b46a627b98b9451c6e2d43772149a7102a5b2e6ff79a33a9e5fd0a4f834702",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48626,
+    "sha256": "bdb24ce45bdd8ae58952da828af2b8c3be205a8a15844ffd11d76dd24e15c88c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 48679,
+    "sha256": "5226e8446e3cbdcd573975665335fc60b2eb11440c672a5129f44c0e5680552c",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 51228,
+    "sha256": "f152c1320cf90a83fe49a0071bed50fcd0e49fc30123270d8fde368f5327b033",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 50303,
+    "sha256": "088d2974574562ba16521c9bdd2eca40b078e6c2525120effdf4f8aceb728adc",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=99--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 47133,
+    "sha256": "e7f9a383ee8ee9c6611506921029e85ba31b4ec2afa6d183133e53e919e96b7a",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  },
+  {
+    "path": "/root/rollouts/2026_09_18/2026_09_18-01_32_15--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4",
+    "bytes": 47943,
+    "sha256": "055e69140ce418e4af04793ba544e369f9b0d7f77ab23e59a3c73e6932e22a45",
+    "source_console": "/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-vision-w2-30-39-20260918-013150-63930/vision-w2/console.log"
+  }
+]

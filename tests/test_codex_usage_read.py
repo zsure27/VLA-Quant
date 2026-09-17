@@ -19,10 +19,10 @@ class QuotaContractTest(unittest.TestCase):
         value = normalize(self.payload(), "test")
         self.assertEqual(value["windows"]["primary"]["remaining_percent"], 15)
         self.assertNotIn("accountId", value)
-        self.assertEqual(decision(value)["action"], "LIVE_BUDGET_AVAILABLE")
+        self.assertEqual(decision(value)["action"], "BACKUP_AND_CLOSE")
 
     def test_stale_and_missing_are_unknown(self):
-        value = normalize(self.payload(), "test")
+        value = normalize(self.payload(84), "test")
         now = datetime.fromisoformat(value["observed_at_utc"])
         self.assertEqual(decision(value, now=now+timedelta(seconds=301))["action"], "UNKNOWN_DO_NOT_DISPATCH")
         value["windows"]["secondary"] = None
@@ -42,7 +42,7 @@ class QuotaContractTest(unittest.TestCase):
         value=normalize(payload,"test")
         self.assertEqual(decision(value)["action"],"LIVE_BUDGET_AVAILABLE")
         self.assertEqual(decision(value)["check_after_short_tests"],3)
-        self.assertEqual(decision(value)["check_after_long_tests"],2)
+        self.assertEqual(decision(value)["check_after_long_tests"],1)
         value["windows"]["primary"]["remaining_percent"]=19
         self.assertEqual(decision(value)["check_after_long_tests"],1)
         value["windows"]["primary"]["window_minutes"]=10080
@@ -51,6 +51,16 @@ class QuotaContractTest(unittest.TestCase):
     def test_invalid_usage_is_not_accepted(self):
         with self.assertRaises(ValueError): normalize(self.payload(float("nan")), "test")
         with self.assertRaises(ValueError): normalize(self.payload(True), "test")
+
+    def test_early_close_and_fresh_dispatch(self):
+        value = normalize(self.payload(80), "test")
+        self.assertTrue(decision(value)["prepare_backup"])
+        self.assertEqual(decision(value)["action"], "LIVE_BUDGET_AVAILABLE")
+        self.assertEqual(decision(value, estimated_next=13)["action"], "BACKUP_AND_CLOSE")
+        now = datetime.fromisoformat(value["observed_at_utc"])
+        self.assertEqual(decision(value, now=now+timedelta(seconds=61))["action"], "UNKNOWN_DO_NOT_DISPATCH")
+        value["windows"]["primary"]["remaining_percent"] = 15
+        self.assertEqual(decision(value)["action"], "BACKUP_AND_CLOSE")
 
     def test_response_event_preserves_age_and_excludes_other_session(self):
         thread = "00000000-0000-4000-8000-000000000001"
