@@ -12,5 +12,19 @@
     "window_minutes": 300,
     "source": "current_thread_response_event",
     "event": "after finite BF16/W4 80 pair; reconnect after app exit"
+  },
+  {
+    "observed_at_utc": "2026-09-17T11:36:42.625Z",
+    "remaining_percent": 79,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after BF16/W4 100 pair 35-44"
+  },
+  {
+    "observed_at_utc": "2026-09-17T11:58:23.940Z",
+    "remaining_percent": 71,
+    "window_minutes": 300,
+    "source": "current_thread_response_event",
+    "event": "after BF16/W4 50 pair 45-49"
   }
 ]
