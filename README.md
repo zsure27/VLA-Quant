@@ -1,10 +1,10 @@
 # VLA 快速量化与微调实验备份
 
-## 2026-09-16 综合进展与后续研究安排
+## 2026-09-18 综合进展与后续研究安排
 
-[周末交流报告](reports/2026-09-16-weekend-review/README_CN.md)整合三条量化基线、已做干预、学术定位及证据边界，附6张图、CSV/JSON源数据与hash；[实验矩阵](reports/2026-09-16-weekend-review/EXPERIMENT_PLAN_CN.md)明确对照和晋级条件；[TSQ-MTC / Contextual Routing精读](reports/2026-09-16-weekend-review/CONTEXTUAL_ROUTING_CN.md)区分原论文与扩刊提案。
+[汇报总结](reports/2026-09-16-weekend-review/汇报总结.md)整合截至9月18日的AWQ/SQ基线、改进效果、问题分析、PEFT与Contextual Routing可用性，附13张实测图；[实验日志](reports/2026-09-16-weekend-review/实验日志.md)按19个实验名称记录配置、结果和原始日志入口；[结果数据](reports/2026-09-16-weekend-review/结果数据.json)收录源表格、metrics、配对结果及SHA。目标目录仅这三个文件，旧版材料完整保存在[历史归档](reports/2026-09-16-weekend-review-archive/)。
 
-当前Spatial开发检查BF16/W4均47/50；全W2候选0/10，仅语言W2无额外clip1/10、原clip0/10，仅视觉W2小样本10/10。SQ W4A4当前可比结果缺失。以上均不构成packed低比特效率验证。107机已继承014数据，后续通过SSH实验；每轮图/数据/分析独立归档到[reports/sessions](reports/sessions/README_CN.md)。以下早期段落保留为历史记录。
+当前正式Spatial500：BF16 487/500、AWQ W4 486/500、视觉仅W2 460/500。语言G64注意力无额外clip开发29/50、扩展49/100；完整W2原始0/50、改进组合11/50。SQ W4A4当前尚未验收，PEFT仅有初始化探针、尚无梯度训练或Router闭环。以上不构成packed低比特效率验证。107本轮已执行原生关机请求，平台OFF/停止计费未独立核验；等待用户重新开机告知再通过SSH实验。每轮图/数据/分析独立归档到[reports/sessions](reports/sessions/README_CN.md)。以下早期段落保留为历史记录。
 
 安装中遇到 NumPy 2.x 冲突或 `openvla_utils.py SHA256` 不符，请先看 [2026-09-11 安装修复](docs/INSTALL_REPAIR_20260911_CN.md)。在本仓库更新后运行 `bash scripts/repair_install_20260911.sh`，无需删除原环境/数据，也不要绕过校验。
 
