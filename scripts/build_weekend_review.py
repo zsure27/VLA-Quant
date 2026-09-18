@@ -19,7 +19,10 @@ def relative(path):
     return path.relative_to(REPO).as_posix()
 
 def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    content = path.read_bytes()
+    if path.suffix.lower() in ['.csv', '.json', '.md', '.py', '.txt', '.svg']:
+        content = content.replace(b'\r\n', b'\n')
+    return hashlib.sha256(content).hexdigest()
 
 def compact_raw_metrics(value):
     """Index large numeric diagnostic arrays; retain original files and scalars."""
@@ -67,6 +70,7 @@ def build():
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     import numpy as np
+    plt.rcParams['svg.hashsalt'] = 'vla-weekend-review-20260918'
     ASSETS.mkdir(parents=True, exist_ok=True)
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.3))
     panels = [(['BF16', 'AWQ W4', 'Vision W2'], [487, 486, 460], 500, 'Spatial500: official states 0-49'),
@@ -78,7 +82,8 @@ def build():
         for i, value in enumerate(values): ax.text(i, value / n + .025, str(value) + '/' + str(n), ha='center', fontsize=9)
     fig.suptitle('Measured AWQ progress; protected modules BF16; fake quant', fontsize=12)
     fig.tight_layout(rect=(0, 0, 1, .9))
-    for ext in ('png', 'svg'): fig.savefig(ASSETS / ('01_baselines.' + ext), dpi=180)
+    for ext in ('png', 'svg'):
+        fig.savefig(ASSETS / ('01_baselines.' + ext), dpi=180, **({'metadata': {'Date': None}} if ext == 'svg' else {}))
     plt.close(fig)
     positive = read_json(LATEST / 'data/language_all_attention_complementarity.json')['summary']
     assert [positive[k] for k in ['episodes', 'a_successes', 'b_successes', 'outcome_oracle_successes', 'a_only', 'b_only']] == [50, 20, 29, 34, 5, 14]
@@ -89,7 +94,8 @@ def build():
     ax.set_ylim(0, 1); ax.set_ylabel('Closed-loop success rate')
     ax.set_title('Development-only complementarity: 5 and 14 unique successes')
     fig.tight_layout()
-    for ext in ('png', 'svg'): fig.savefig(ASSETS / ('02_router_upper_bound.' + ext), dpi=180)
+    for ext in ('png', 'svg'):
+        fig.savefig(ASSETS / ('02_router_upper_bound.' + ext), dpi=180, **({'metadata': {'Date': None}} if ext == 'svg' else {}))
     plt.close(fig)
     datasets = []
     paths = set(ARCHIVE.glob('data/*.csv')) | set(ARCHIVE.glob('data/*.json'))
@@ -144,6 +150,7 @@ def build():
         'not_measured': ['certified current SQ W4A4 closed-loop', 'gradient-trained PEFT closed-loop', 'trained contextual routing',
                          'packed INT2/INT4 total bytes, peak VRAM and synchronized latency', 'complete four-suite reproduction'],
         'sources': datasets, 'figures': sorted(figures.values(), key=lambda r: r['repository_path']),
+        'file_hash_policy': 'SHA256 of canonical LF bytes for CSV/JSON/Markdown/Python/text/SVG; binary PNG uses original bytes. bytes fields record local source size. Embedded profile and upstream hashes retain their own original conventions.',
         'diagnostic_index_policy': 'In raw metrics only, large features/attention/activation_local_error blocks and numeric arrays longer than64 are represented by byte count/length and canonical JSON SHA. Original files remain intact. Action error scalars, per-frame/per-dimension results, CSV tables and report JSON snapshots retain their values.',
         'document_hashes': {name: sha(REPORT / name) for name in ['汇报总结.md', '实验日志.md']},
         'reproduction': 'python scripts/build_weekend_review.py (numpy/matplotlib; no network or GPU)',
