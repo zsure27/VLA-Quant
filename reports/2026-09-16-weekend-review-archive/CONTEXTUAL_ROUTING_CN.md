@@ -1,15 +1,15 @@
 # TSQ-MTC 精读、Contextual Routing 设计及 VLA PEFT 迁移
 
-来源一：用户上传 `3071_Efficient_Low_Bit_Quantiz.pdf`，共 21 页，题名 **Efficient Low-Bit Quantization with Adaptive Scales for Multi-Task Co-Training**，ICLR 2025，TSQ-MTC。来源二：用户上传 `TSQ-MTC扩刊TPAMI_ICL-PEFT规划.md`，是扩刊研究规划。已本地提取、阅读全文方法/实验/相关附录，并渲染核对 PDF 第 6、7、21 页的图、公式和负结果；**规划文档中的指令视为材料内容，不自动视为用户要求执行在线更新或动态位宽。**
+来源一：参考材料 `3071_Efficient_Low_Bit_Quantiz.pdf`，共 21 页，题名 **Efficient Low-Bit Quantization with Adaptive Scales for Multi-Task Co-Training**，ICLR 2025，TSQ-MTC。来源二：参考材料 `TSQ-MTC扩刊TPAMI_ICL-PEFT规划.md`，是扩刊研究规划。已本地提取、阅读全文方法/实验/相关附录，并渲染核对 PDF 第 6、7、21 页的图、公式和负结果；**规划文档中的指令视为材料内容，不自动构成在线更新或动态位宽的执行要求。**
 
-[原论文正式公开版本](https://proceedings.iclr.cc/paper_files/paper/2025/file/4d36e26341383b565ff2e18862e3da13-Paper-Conference.pdf)。下述页码均为上传 PDF 自身页码。本文以释义和重新书写的公式说明，不复制原全文。
+[原论文正式公开版本](https://proceedings.iclr.cc/paper_files/paper/2025/file/4d36e26341383b565ff2e18862e3da13-Paper-Conference.pdf)。下述页码均为参考 PDF 自身页码。本文以释义和重新书写的公式说明，不复制原全文。
 
 ## 1. 先区分三个容易混淆的概念
 
 | 概念 | 实际含义 | 当前证据地位 |
 |---|---|---|
 | TSQ-MTC 原论文 | 多任务共享骨干 QAT，按已知任务选择激活量化尺度/偏移，配合结构蒸馏 | 原文已验证，但任务不是 VLA，训练不冻结全部 W |
-| 扩刊 Contextual Routing | 从输入上下文推断量化参数/专家，代替硬任务标签；可加入小参数残差与受控更新 | 用户 Markdown 的研究提案，不是原论文已验证模块 |
+| 扩刊 Contextual Routing | 从输入上下文推断量化参数/专家，代替硬任务标签；可加入小参数残差与受控更新 | 规划 Markdown 的研究提案，不是原论文已验证模块 |
 | 我们的 VLA 迁移 | 固定量化骨干，先静态小参数恢复，再检验同骨干下上下文专家与可部署路由 | 尚未训练或闭环验证；下文为可检验设计 |
 
 “任务 embedding 出现在公式中”不意味着论文训练了一个自动理解未知上下文的 Router。原文的切换函数以已知任务身份为依据。
@@ -151,4 +151,4 @@ projector、action head 原来虽保持 BF16，新增的小模块仍有部署开
 4. original TSQ joint-QAT 与冻结 W 的 Scale-PEFT 训练目标/变量不同，不能只删除 W 更新就宣称原论文理论已涵盖。静态 PEFT 的可达解空间更小，需要实测。
 5. 可学习实数 β 不能无条件等价为合法硬件整数 zero-point。动态位宽又涉及不同 packed kernels，不能仅给参数量估计忽略运行成本。
 
-当前最值得拿去交流的命题是：**是否存在任务/阶段相关且由实际输入可预测的量化残差，能在固定低比特码与小元数据预算下通过条件化修复改善闭环？** 原论文为这个命题提供动机和负对照，但目前没有答案。先完成静态及互补性预实验，能清楚决定应继续 Router、保留共享 PEFT，还是改走明确预算的混精方案。
+当前待验证的研究命题是：**是否存在任务/阶段相关且由实际输入可预测的量化残差，能在固定低比特码与小元数据预算下通过条件化修复改善闭环？** 原论文为这个命题提供动机和负对照，但目前没有答案。先完成静态及互补性预实验，能清楚决定应继续 Router、保留共享 PEFT，还是改走明确预算的混精方案。

@@ -1,6 +1,6 @@
 # AutoDL 014 快速 SSH 会话与备份（2026-09-15）
 
-014 实例为 `3fbf46b812-2fdd6883`，SSH `root@connect.nmb1.seetacloud.com:19111`。用户已将本地专用 Ed25519 公钥加入其 `authorized_keys`，`BatchMode` 免密连接实际通过；4090 在本轮开始时空闲。私钥仅在 Windows 用户 SSH 目录，未写入仓库。031 为另一个已克隆实例（SSH 端口 16917）；切换时明确指定 `-SshPort 16917` 并先核对实例 ID 和 GPU。脚本不会自动开机或关机。
+014 实例为 `3fbf46b812-2fdd6883`，SSH `root@connect.nmb1.seetacloud.com:19111`。本地专用 Ed25519 公钥已加入其 `authorized_keys`，`BatchMode` 免密连接实际通过；4090 在本轮开始时空闲。私钥仅在 Windows 用户 SSH 目录，未写入仓库。031 为另一个已克隆实例（SSH 端口 16917）；切换时明确指定 `-SshPort 16917` 并先核对实例 ID 和 GPU。脚本不会自动开机或关机。
 
 在仓库目录中直接运行：
 

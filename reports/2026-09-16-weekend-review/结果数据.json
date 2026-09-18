@@ -191243,7 +191243,7 @@
   "file_hash_policy": "SHA256 of canonical LF bytes for CSV/JSON/Markdown/Python/text/SVG; binary PNG uses original bytes. bytes fields record local source size. Embedded profile and upstream hashes retain their own original conventions.",
   "diagnostic_index_policy": "In raw metrics only, large features/attention/activation_local_error blocks and numeric arrays longer than64 are represented by byte count/length and canonical JSON SHA. Original files remain intact. Action error scalars, per-frame/per-dimension results, CSV tables and report JSON snapshots retain their values.",
   "document_hashes": {
-    "汇报总结.md": "a3e6c40e573f33fc8a2020f30b2442763bb2f8c919fe421c42341a80b57bf8b7",
+    "汇报总结.md": "ed690dde7e34e0b0723d225310da83b1c55f1e21d4786bd010bfacd6deec4db2",
     "实验日志.md": "a92c3206e5b7d30deca2e781c8010d1c867aac13c51a4f842793559cc93cdadd"
   },
   "reproduction": "python scripts/build_weekend_review.py (numpy/matplotlib; no network or GPU)",

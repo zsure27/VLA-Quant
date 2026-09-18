@@ -1,6 +1,6 @@
 # 2026-09-11 安装中断修复
 
-不需要更换服务器、重装系统或删除模型/数据。本次修复针对用户提供的安装日志，不代表 GPU 实验已通过。
+不需要更换服务器、重装系统或删除模型/数据。本次修复针对已保存的安装日志，不代表 GPU 实验已通过。
 
 ## 原因一：后续安装升级了 NumPy
 
@@ -23,7 +23,7 @@
 
 ## 如何恢复
 
-在你 clone 的 **VLA-Quant 仓库目录**中执行（不要在 `src/QVLA` 上执行 git pull）：
+在本地克隆的 **VLA-Quant 仓库目录**中执行（不要在 `src/QVLA` 上执行 git pull）：
 
 ```bash
 git pull --ff-only
@@ -33,7 +33,7 @@ bash scripts/repair_install_20260911.sh
 若之前使用非默认 ROOT，继续传同一值：
 
 ```bash
-ROOT=/你的原实验目录 bash scripts/repair_install_20260911.sh
+ROOT=/原实验目录 bash scripts/repair_install_20260911.sh
 ```
 
 脚本会激活 qvla-oft 环境、确认 Python 3.10、保存修复前后 pip freeze、联合修复 NumPy/OpenCV、执行 pip check 和 NumPy/OpenCV/Numba/Torch/TF 导入检查、验证 OFT attention 实现，最后继续安装覆盖文件和 qvla 工具。原源码会备份，不清理检查点、样本或 profile。

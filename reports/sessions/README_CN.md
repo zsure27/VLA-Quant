@@ -1,6 +1,6 @@
 # 每轮实验独立报告与可视化归档
 
-用户要求：每次实验对话收尾时，将图、对应数据和分析单独备份到 GitHub，便于查验及学术汇报。固定位置为 `reports/sessions/YYYYMMDD-SESSION/`，原始小文件放 `results/SESSION/` 并互相引用。不依赖定时对话或服务器独立看门狗。
+备份约定：每次实验会话收尾时，将图、对应数据和分析单独备份到 GitHub，便于查验及学术汇报。固定位置为 `reports/sessions/YYYYMMDD-SESSION/`，原始小文件放 `results/SESSION/` 并互相引用。不依赖定时对话或服务器独立看门狗。
 
 ```text
 reports/sessions/YYYYMMDD-SESSION/

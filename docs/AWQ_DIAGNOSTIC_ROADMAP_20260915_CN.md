@@ -18,7 +18,7 @@
 
 成果目录：`results/awq-visual-diagnostics-20260915/`，含 CSV、JSON、成功矩阵、真实回放帧、动作与本体状态曲线。最初诊断记录在 `get_action` 修改输入后保存，因此其中 state 是归一化后的本体状态；图表已明确标注 normalized，不能解读成米制物理轨迹。后续代码在调用前复制原始 state，并写入 `state_space`。原始日志与运行时 evaluator patch/hash 保留，不覆写历史数据。
 
-## 接纳用户方案后的顺序与门槛
+## 综合诊断方案后的顺序与门槛
 
 **Phase 0 尚未完成，不进入恢复训练。** 当前只完成 BF16/W4/W2 的十状态模拟量化筛选及复测。W4 下一步先扩大预先固定的独立初始状态（例如每任务 10 个，共 100），与 BF16 配对报告差值和置信区间，单独核查任务 9 的抓取/释放阶段。还需记录同步 CUDA 的预热后延迟、峰值显存、同观测 teacher action L1、动作 token hidden cosine。现有 CSV 的未测值留空。W3 需要独立校准及位宽契约扩展，不能把 W2/W4 profile 改标签；当前没有经过验证的 packed 实现，fake/real parity、真实模型大小与加速不作已完成报告。
 

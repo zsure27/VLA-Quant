@@ -34,7 +34,11 @@ for p in sorted(p for root in RAWS for p in root.glob('awq-scope-shard-*/scope-p
     ax.set_xlabel('Official initial state index');ax.set_ylabel('Spatial task ID')
     ax.set_title(case+': blue BF16 only; gray same; red candidate only')
     fig.tight_layout()
-    for ext in ('png','svg'):fig.savefig(HERE/'figures'/('scope-'+p.parent.name+'.'+ext),dpi=160)
+    for ext in ('png','svg'):
+        filename='scope-'+p.parent.name+'.'+ext
+        original=HERE.parent/'20260917-107-baseline-continuation'/'figures'/filename
+        if p.parent.parent==RAWS[0] and original.is_file():continue
+        fig.savefig(HERE/'figures'/filename,dpi=160)
     plt.close(fig)
 if not summary:raise SystemExit('No completed scope pairs; no speculative plots')
 keys=[(r['case'],r['task_id'],r['init_state_index']) for r in pairs]

@@ -4,11 +4,11 @@
 
 ## 1. 先纠正结论和实验命名
 
-你的论文判断是对的。QVLA Table 1 中 OpenVLA-OFT + SmoothQuant W4A4 的 Spatial 为 77.2%，四套任务平均为 73.4%。此前本地 0/20 不能简单解释为“SmoothQuant 天生不能做 W4A4”。但论文未给出足以逐项对齐我们 SQ 适配器的完整基线 recipe，不能把这个差距直接等同于某一行代码的错误。[论文 Table 1](https://arxiv.org/html/2602.03782v1#S4.T1)
+QVLA Table 1 中 OpenVLA-OFT + SmoothQuant W4A4 的 Spatial 为 77.2%，四套任务平均为 73.4%。此前本地 0/20 不能简单解释为“SmoothQuant 天生不能做 W4A4”。但论文未给出足以逐项对齐我们 SQ 适配器的完整基线 recipe，不能把这个差距直接等同于某一行代码的错误。[论文 Table 1](https://arxiv.org/html/2602.03782v1#S4.T1)
 
 Table 2 的 AWQ 只有 W8A16、W4A16，没有 AWQ W2A16 结果。W2 是更激进的新目标，不能由论文 W4 结果推出它应该成功。论文报告的 LIBERO 实验 GPU 是 RTX 4090；不要用 A100/4090 差异解释当前崩溃。[论文 Table 2 与设置](https://arxiv.org/html/2602.03782v1#S4.T2)
 
-历史日志中的结果（用户此前提供，本轮未重跑）：
+历史日志中的结果（已保存的历史记录，本轮未重跑）：
 
 | 路线 | 结果 | 正确口径 |
 |---|---:|---|
@@ -151,7 +151,7 @@ oracle 是因果诊断，不是可部署模型，更不是“projector 微调一
 bash /root/autodl-tmp/qvla-repro/diagnostics/vla_quant_audit/run_first_batch.sh
 ```
 
-需要持久会话时，在你已有的 screen/tmux 会话中运行即可。默认输出是独立时间戳目录，不覆盖任何旧结果；每个 case 重新加载一个模型进程，不会在已量化权重上再次量化。
+需要持久会话时，在已有的 screen/tmux 会话中运行。默认输出是独立时间戳目录，不覆盖任何旧结果；每个 case 重新加载一个模型进程，不会在已量化权重上再次量化。
 
 默认路径可用 ROOT/OFT/SAMPLES/OFFICIAL/PROFILE/CKPT/TARGETS 环境变量覆盖。少量样本调试可用 `N=2`；正式第一轮仍建议默认 8。若路径或 profile 验证失败，把日志发回，不要绕过验证或新旧 shard 混用。
 

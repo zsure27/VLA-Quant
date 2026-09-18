@@ -1,0 +1,51 @@
+{
+  "edited_markdown": [
+    "README.md",
+    "docs/AUDIT_CN.md",
+    "docs/AWQ_DIAGNOSTIC_ROADMAP_20260915_CN.md",
+    "docs/AWQ_SPATIAL_MATRIX_CN.md",
+    "docs/BASELINE_VALIDATION_PLAN_20260917_CN.md",
+    "docs/CODEX_USAGE_READ_RECOVERY_20260916_CN.md",
+    "docs/INSTALL_REPAIR_20260911_CN.md",
+    "docs/QVLA_PAPER_AND_CODE_WALKTHROUGH_CN.md",
+    "docs/VLA_FAST_SESSION_20260915_CN.md",
+    "reports/2026-09-16-weekend-review-archive/ARCHIVE_NOTE.md",
+    "reports/2026-09-16-weekend-review-archive/CONTEXTUAL_ROUTING_CN.md",
+    "reports/2026-09-16-weekend-review-archive/EXPERIMENT_PLAN_CN.md",
+    "reports/2026-09-16-weekend-review-archive/README_CN.md",
+    "reports/2026-09-16-weekend-review/汇报总结.md",
+    "reports/sessions/20260916-107-diagnostics/README_CN.md",
+    "reports/sessions/20260916-107-diagnostics/backup/README_CN.md",
+    "reports/sessions/20260916-107-followup/README_CN.md",
+    "reports/sessions/20260917-107-baseline-validation/README_CN.md",
+    "reports/sessions/20260917-107-response-svd/README_CN.md",
+    "reports/sessions/20260918-107-awq-continuation/ANALYSIS_CN.md",
+    "reports/sessions/20260918-107-awq-continuation/README_CN.md",
+    "reports/sessions/README_CN.md"
+  ],
+  "trimmed_disabled_scripts": [
+    "scripts/run-official-w4-smoke20.sh",
+    "scripts/run-official-quant-validation.sh",
+    "diagnostics/run_first_batch.sh"
+  ],
+  "removed_redundant_files": [
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294.svg",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227.svg",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249.svg",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304.svg",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-vision-w2-05-14-20260917-202448-31883.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-vision-w2-05-14-20260917-202448-31883.svg",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-vision-w2-15-24-20260917-214554-50802.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-vision-w2-15-24-20260917-214554-50802.svg",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-vision-w2-25-29-20260917-220504-56292.png",
+    "reports/sessions/20260918-107-awq-continuation/figures/scope-awq-scope-shard-vision-w2-25-29-20260917-220504-56292.svg",
+    "文件说明_CN.md"
+  ],
+  "removed_bytes": 586804,
+  "preserved_raw_results_and_source_data": 699,
+  "policy": "Preserve experiment logs, source data and historical code snapshots; remove verified duplicate derived files; use personal backup prose."
+}

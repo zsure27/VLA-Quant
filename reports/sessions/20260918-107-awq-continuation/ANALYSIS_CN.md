@@ -16,11 +16,11 @@
 
 ## 语言W2下一诊断
 
-历史G64 clip 0/50、G64全无clip20/50说明剪裁撤销有改善但不足。两份新profile分别只撤销注意力64处、MLP96处clip，其他字段与原G64 profile逐字段完全相等；保留原校准样本、block scale，不声称新搜索或PEFT。注意力组29/50（58%）、MLP组0/50，均0异常、退出0、manifest一致。V/O clip保留时两组均0；撤销V/O后，MLP clip保留29/50优于撤销20/50的描述性计数，不能外推为所有层都不应clip。相同G64 scale的完整四格见图07和源JSON。这里language scope指LLM主干，参与跨模态融合和动作token处理，不仅是文字编码。新初态10–19验证正在运行，避免只依赖开发50。
+历史G64 clip 0/50、G64全无clip20/50说明剪裁撤销有改善但不足。两份新profile分别只撤销注意力64处、MLP96处clip，其他字段与原G64 profile逐字段完全相等；保留原校准样本、block scale，不声称新搜索或PEFT。注意力组29/50（58%）、MLP组0/50，均0异常、退出0、manifest一致。V/O clip保留时两组均0；撤销V/O后，MLP clip保留29/50优于撤销20/50的描述性计数，不能外推为所有层都不应clip。相同G64 scale的完整四格见图07和源JSON。这里language scope指LLM主干，参与跨模态融合和动作token处理，不仅是文字编码。注意力无clip的扩展初态10–19已完成49/100，对应BF16为96/100，均0程序异常、manifest严格配对；开发50与扩展100分别记录，不将扩展评估视为全项目盲测。
 
 ## PEFT与Contextual Routing的研究接口
 
-材料边界：TSQ-MTC原论文验证多任务专属激活尺度与QAT，并非冻结VLA骨干的PEFT；Contextual Routing来自用户提供的C2S拓展规划，不能当作原论文已验证结果。本轮路由应用是本项目建议，互补检查是新实测，尚无Router训练。既有精读笔记在工作区`docs/CONTEXTUAL_ROUTING_READING_20260914_CN.md`。
+材料边界：TSQ-MTC原论文验证多任务专属激活尺度与QAT，并非冻结VLA骨干的PEFT；Contextual Routing来自参考材料的C2S拓展规划，不能当作原论文已验证结果。本轮路由应用是本项目建议，互补检查是新实测，尚无Router训练。既有精读笔记在工作区`docs/CONTEXTUAL_ROUTING_READING_20260914_CN.md`。
 
 先定位视觉分支/语言clip的损失，再验证简单静态低秩恢复。现有OFT adapter源文件439模块形状映射已通过，但尚未验证运行时merge数值等价；不能用未经验证的merged weight减LoRA delta冒充恢复基座。
 
