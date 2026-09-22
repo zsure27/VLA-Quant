@@ -52,4 +52,4 @@ python scripts/build_weekend_review.py
 
 模型、校准集、视频、NPZ和大profile不放普通Git，恢复位置及SHA以各轮清单为准。双份归档不代表所有模型和数据均已异地备份。凭据和私钥不入仓库。仅清理确认冗余的派生文件，保留唯一原件。
 
-后续先验证AWQ完整W2的语言/视觉组合损失，SQ数值控制其次；静态PEFT有效且专家互补可泛化后再考虑路由。技术变更见[CHANGELOG](CHANGELOG_CN.md)，最近整理清单见[维护记录](docs/REPOSITORY_CLEANUP_20260918.json)。
+后续先验证AWQ完整W2的语言/视觉组合损失，SQ数值控制其次；静态PEFT有效且专家互补可泛化后再考虑路由。具体顺序、验收条件和待解决问题见[AWQ W2恢复与Contextual Routing实验计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，最近整理清单见[维护记录](docs/REPOSITORY_CLEANUP_20260918.json)。
