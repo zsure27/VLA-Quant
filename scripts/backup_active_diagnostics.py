@@ -50,7 +50,7 @@ def main():
     (backup / "runtime-lock.txt").write_text(run("/root/miniconda3/envs/qvla-oft/bin/python", "-m", "pip", "freeze"))
     subprocess.check_call(["git", "-C", str(repo), "bundle", "create", str(backup / ("VLA-Quant-"+commit+".bundle")), "--all"])
     with tarfile.open(backup / "code-overlay.tar.gz", "w:gz") as tar:
-        for name in ("language-stage-rescue", "closed-loop-stage-rescue", "language-family-rescue", "closed-loop-fixed-coordinates", "low-rank-recovery", "fp32-smoothing-pairs", "input-diag-recovery", "response-svd-recovery", "baseline-shards", "fp32-vision-smoothing"):
+        for name in ("language-stage-rescue", "closed-loop-stage-rescue", "language-family-rescue", "closed-loop-fixed-coordinates", "low-rank-recovery", "fp32-smoothing-pairs", "input-diag-recovery", "response-svd-recovery", "baseline-shards", "fp32-vision-smoothing", "awq-p0-stage-20260923"):
             path = root / "overlays" / name
             if path.is_dir(): tar.add(path, arcname="overlays/"+name, filter=source_filter)
         for name in ("diagnostics/export_checkpoint_manifest.py", "diagnostics/plot_awq_rollouts.py", "tests/test_awq_eval_scope.py"):
@@ -63,7 +63,10 @@ def main():
             raise SystemExit("Result must be a concrete existing artifact/eval directory")
         selected.append(path)
     videos = []
-    video_root = Path("/root/rollouts").resolve()
+    video_roots = [
+        (root / "overlays/awq-p0-stage-20260923/rollouts").resolve(),
+        Path("/root/rollouts").resolve(),
+    ]
     for directory in selected:
         if directory.parent != root / "eval": continue
         for console in directory.glob("*/console.log"):
@@ -74,11 +77,17 @@ def main():
             if len(paths) != expected:
                 raise SystemExit(f"{expected} original videos required for completed stage rollout")
             for name in paths:
-                path = (Path("/root") / name).resolve()
-                if video_root not in path.parents or not path.is_file():
+                relative = Path(name)
+                if relative.parts and relative.parts[0] == "rollouts":
+                    relative = Path(*relative.parts[1:])
+                candidates = [(video_root / relative).resolve() for video_root in video_roots]
+                path = next((candidate for candidate in candidates if candidate.is_file()), None)
+                if path is None or not any(video_root in path.parents for video_root in video_roots):
                     raise SystemExit("Missing or unsafe rollout video: " + str(path))
+                video_root = next(root_path for root_path in video_roots if root_path in path.parents)
                 videos.append({"path": str(path), "bytes": path.stat().st_size,
-                               "sha256": sha(path), "source_console": str(console)})
+                               "sha256": sha(path), "source_console": str(console),
+                               "archive_name": "rollouts/" + path.relative_to(video_root).as_posix()})
     (backup / "VIDEO_MANIFEST.json").write_text(json.dumps(videos, indent=2)+"\n")
     with tarfile.open(backup / "session-results.tar.gz", "w:gz") as tar:
         for path in selected:
@@ -92,7 +101,7 @@ def main():
         if path.is_file(): tar.add(path, arcname="eval/language-stage-rescue10-launch.log")
         for video in videos:
             path = Path(video["path"])
-            tar.add(path, arcname="rollouts/"+path.relative_to(video_root).as_posix())
+            tar.add(path, arcname=video["archive_name"])
     large = []
     for name in ("artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
                  "artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",

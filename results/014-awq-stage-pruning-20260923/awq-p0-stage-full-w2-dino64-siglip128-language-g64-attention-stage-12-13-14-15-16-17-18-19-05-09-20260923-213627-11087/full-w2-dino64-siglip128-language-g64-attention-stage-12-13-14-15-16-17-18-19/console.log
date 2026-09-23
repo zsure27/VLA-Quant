@@ -1,0 +1,1667 @@
+2026-09-23 21:36:32.609373: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-23 21:36:32.647343: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-23 21:36:32.647365: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-23 21:36:32.648638: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-23 21:36:32.655119: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-23 21:36:33.421665: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+VILA is not installed. Multimodal features will not be available. To activate, please install VILA at https://github.com/NVlabs/VILA.
+[official-quant] scope={"fused_vision": 105, "language": 224, "primary_vision": 93, "total": 422, "unexpected": 0, "vision": 198}
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.55it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.22it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.46it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  5.50it/s]
+[official-awq] 1/422 language_model.model.layers.0.self_attn.q_proj
+[official-awq] 2/422 language_model.model.layers.0.self_attn.k_proj
+[official-awq] 3/422 language_model.model.layers.0.self_attn.v_proj
+[official-awq] 4/422 language_model.model.layers.0.self_attn.o_proj
+[official-awq] 5/422 language_model.model.layers.0.mlp.gate_proj
+[official-awq] 6/422 language_model.model.layers.0.mlp.up_proj
+[official-awq] 7/422 language_model.model.layers.0.mlp.down_proj
+[official-awq] 8/422 language_model.model.layers.1.self_attn.q_proj
+[official-awq] 9/422 language_model.model.layers.1.self_attn.k_proj
+[official-awq] 10/422 language_model.model.layers.1.self_attn.v_proj
+[official-awq] 11/422 language_model.model.layers.1.self_attn.o_proj
+[official-awq] 12/422 language_model.model.layers.1.mlp.gate_proj
+[official-awq] 13/422 language_model.model.layers.1.mlp.up_proj
+[official-awq] 14/422 language_model.model.layers.1.mlp.down_proj
+[official-awq] 15/422 language_model.model.layers.2.self_attn.q_proj
+[official-awq] 16/422 language_model.model.layers.2.self_attn.k_proj
+[official-awq] 17/422 language_model.model.layers.2.self_attn.v_proj
+[official-awq] 18/422 language_model.model.layers.2.self_attn.o_proj
+[official-awq] 19/422 language_model.model.layers.2.mlp.gate_proj
+[official-awq] 20/422 language_model.model.layers.2.mlp.up_proj
+[official-awq] 21/422 language_model.model.layers.2.mlp.down_proj
+[official-awq] 22/422 language_model.model.layers.3.self_attn.q_proj
+[official-awq] 23/422 language_model.model.layers.3.self_attn.k_proj
+[official-awq] 24/422 language_model.model.layers.3.self_attn.v_proj
+[official-awq] 25/422 language_model.model.layers.3.self_attn.o_proj
+[official-awq] 26/422 language_model.model.layers.3.mlp.gate_proj
+[official-awq] 27/422 language_model.model.layers.3.mlp.up_proj
+[official-awq] 28/422 language_model.model.layers.3.mlp.down_proj
+[official-awq] 29/422 language_model.model.layers.4.self_attn.q_proj
+[official-awq] 30/422 language_model.model.layers.4.self_attn.k_proj
+[official-awq] 31/422 language_model.model.layers.4.self_attn.v_proj
+[official-awq] 32/422 language_model.model.layers.4.self_attn.o_proj
+[official-awq] 33/422 language_model.model.layers.4.mlp.gate_proj
+[official-awq] 34/422 language_model.model.layers.4.mlp.up_proj
+[official-awq] 35/422 language_model.model.layers.4.mlp.down_proj
+[official-awq] 36/422 language_model.model.layers.5.self_attn.q_proj
+[official-awq] 37/422 language_model.model.layers.5.self_attn.k_proj
+[official-awq] 38/422 language_model.model.layers.5.self_attn.v_proj
+[official-awq] 39/422 language_model.model.layers.5.self_attn.o_proj
+[official-awq] 40/422 language_model.model.layers.5.mlp.gate_proj
+[official-awq] 41/422 language_model.model.layers.5.mlp.up_proj
+[official-awq] 42/422 language_model.model.layers.5.mlp.down_proj
+[official-awq] 43/422 language_model.model.layers.6.self_attn.q_proj
+[official-awq] 44/422 language_model.model.layers.6.self_attn.k_proj
+[official-awq] 45/422 language_model.model.layers.6.self_attn.v_proj
+[official-awq] 46/422 language_model.model.layers.6.self_attn.o_proj
+[official-awq] 47/422 language_model.model.layers.6.mlp.gate_proj
+[official-awq] 48/422 language_model.model.layers.6.mlp.up_proj
+[official-awq] 49/422 language_model.model.layers.6.mlp.down_proj
+[official-awq] 50/422 language_model.model.layers.7.self_attn.q_proj
+[official-awq] 51/422 language_model.model.layers.7.self_attn.k_proj
+[official-awq] 52/422 language_model.model.layers.7.self_attn.v_proj
+[official-awq] 53/422 language_model.model.layers.7.self_attn.o_proj
+[official-awq] 54/422 language_model.model.layers.7.mlp.gate_proj
+[official-awq] 55/422 language_model.model.layers.7.mlp.up_proj
+[official-awq] 56/422 language_model.model.layers.7.mlp.down_proj
+[official-awq] 57/422 language_model.model.layers.8.self_attn.q_proj
+[official-awq] 58/422 language_model.model.layers.8.self_attn.k_proj
+[official-awq] 59/422 language_model.model.layers.8.self_attn.v_proj
+[official-awq] 60/422 language_model.model.layers.8.self_attn.o_proj
+[official-awq] 61/422 language_model.model.layers.8.mlp.gate_proj
+[official-awq] 62/422 language_model.model.layers.8.mlp.up_proj
+[official-awq] 63/422 language_model.model.layers.8.mlp.down_proj
+[official-awq] 64/422 language_model.model.layers.9.self_attn.q_proj
+[official-awq] 65/422 language_model.model.layers.9.self_attn.k_proj
+[official-awq] 66/422 language_model.model.layers.9.self_attn.v_proj
+[official-awq] 67/422 language_model.model.layers.9.self_attn.o_proj
+[official-awq] 68/422 language_model.model.layers.9.mlp.gate_proj
+[official-awq] 69/422 language_model.model.layers.9.mlp.up_proj
+[official-awq] 70/422 language_model.model.layers.9.mlp.down_proj
+[official-awq] 71/422 language_model.model.layers.10.self_attn.q_proj
+[official-awq] 72/422 language_model.model.layers.10.self_attn.k_proj
+[official-awq] 73/422 language_model.model.layers.10.self_attn.v_proj
+[official-awq] 74/422 language_model.model.layers.10.self_attn.o_proj
+[official-awq] 75/422 language_model.model.layers.10.mlp.gate_proj
+[official-awq] 76/422 language_model.model.layers.10.mlp.up_proj
+[official-awq] 77/422 language_model.model.layers.10.mlp.down_proj
+[official-awq] 78/422 language_model.model.layers.11.self_attn.q_proj
+[official-awq] 79/422 language_model.model.layers.11.self_attn.k_proj
+[official-awq] 80/422 language_model.model.layers.11.self_attn.v_proj
+[official-awq] 81/422 language_model.model.layers.11.self_attn.o_proj
+[official-awq] 82/422 language_model.model.layers.11.mlp.gate_proj
+[official-awq] 83/422 language_model.model.layers.11.mlp.up_proj
+[official-awq] 84/422 language_model.model.layers.11.mlp.down_proj
+[official-awq] 85/422 language_model.model.layers.12.self_attn.q_proj
+[official-awq] 86/422 language_model.model.layers.12.self_attn.k_proj
+[official-awq] 87/422 language_model.model.layers.12.self_attn.v_proj
+[official-awq] 88/422 language_model.model.layers.12.self_attn.o_proj
+[official-awq] 89/422 language_model.model.layers.12.mlp.gate_proj
+[official-awq] 90/422 language_model.model.layers.12.mlp.up_proj
+[official-awq] 91/422 language_model.model.layers.12.mlp.down_proj
+[official-awq] 92/422 language_model.model.layers.13.self_attn.q_proj
+[official-awq] 93/422 language_model.model.layers.13.self_attn.k_proj
+[official-awq] 94/422 language_model.model.layers.13.self_attn.v_proj
+[official-awq] 95/422 language_model.model.layers.13.self_attn.o_proj
+[official-awq] 96/422 language_model.model.layers.13.mlp.gate_proj
+[official-awq] 97/422 language_model.model.layers.13.mlp.up_proj
+[official-awq] 98/422 language_model.model.layers.13.mlp.down_proj
+[official-awq] 99/422 language_model.model.layers.14.self_attn.q_proj
+[official-awq] 100/422 language_model.model.layers.14.self_attn.k_proj
+[official-awq] 101/422 language_model.model.layers.14.self_attn.v_proj
+[official-awq] 102/422 language_model.model.layers.14.self_attn.o_proj
+[official-awq] 103/422 language_model.model.layers.14.mlp.gate_proj
+[official-awq] 104/422 language_model.model.layers.14.mlp.up_proj
+[official-awq] 105/422 language_model.model.layers.14.mlp.down_proj
+[official-awq] 106/422 language_model.model.layers.15.self_attn.q_proj
+[official-awq] 107/422 language_model.model.layers.15.self_attn.k_proj
+[official-awq] 108/422 language_model.model.layers.15.self_attn.v_proj
+[official-awq] 109/422 language_model.model.layers.15.self_attn.o_proj
+[official-awq] 110/422 language_model.model.layers.15.mlp.gate_proj
+[official-awq] 111/422 language_model.model.layers.15.mlp.up_proj
+[official-awq] 112/422 language_model.model.layers.15.mlp.down_proj
+[official-awq] 113/422 language_model.model.layers.16.self_attn.q_proj
+[official-awq] 114/422 language_model.model.layers.16.self_attn.k_proj
+[official-awq] 115/422 language_model.model.layers.16.self_attn.v_proj
+[official-awq] 116/422 language_model.model.layers.16.self_attn.o_proj
+[official-awq] 117/422 language_model.model.layers.16.mlp.gate_proj
+[official-awq] 118/422 language_model.model.layers.16.mlp.up_proj
+[official-awq] 119/422 language_model.model.layers.16.mlp.down_proj
+[official-awq] 120/422 language_model.model.layers.17.self_attn.q_proj
+[official-awq] 121/422 language_model.model.layers.17.self_attn.k_proj
+[official-awq] 122/422 language_model.model.layers.17.self_attn.v_proj
+[official-awq] 123/422 language_model.model.layers.17.self_attn.o_proj
+[official-awq] 124/422 language_model.model.layers.17.mlp.gate_proj
+[official-awq] 125/422 language_model.model.layers.17.mlp.up_proj
+[official-awq] 126/422 language_model.model.layers.17.mlp.down_proj
+[official-awq] 127/422 language_model.model.layers.18.self_attn.q_proj
+[official-awq] 128/422 language_model.model.layers.18.self_attn.k_proj
+[official-awq] 129/422 language_model.model.layers.18.self_attn.v_proj
+[official-awq] 130/422 language_model.model.layers.18.self_attn.o_proj
+[official-awq] 131/422 language_model.model.layers.18.mlp.gate_proj
+[official-awq] 132/422 language_model.model.layers.18.mlp.up_proj
+[official-awq] 133/422 language_model.model.layers.18.mlp.down_proj
+[official-awq] 134/422 language_model.model.layers.19.self_attn.q_proj
+[official-awq] 135/422 language_model.model.layers.19.self_attn.k_proj
+[official-awq] 136/422 language_model.model.layers.19.self_attn.v_proj
+[official-awq] 137/422 language_model.model.layers.19.self_attn.o_proj
+[official-awq] 138/422 language_model.model.layers.19.mlp.gate_proj
+[official-awq] 139/422 language_model.model.layers.19.mlp.up_proj
+[official-awq] 140/422 language_model.model.layers.19.mlp.down_proj
+[official-awq] 141/422 language_model.model.layers.20.self_attn.q_proj
+[official-awq] 142/422 language_model.model.layers.20.self_attn.k_proj
+[official-awq] 143/422 language_model.model.layers.20.self_attn.v_proj
+[official-awq] 144/422 language_model.model.layers.20.self_attn.o_proj
+[official-awq] 145/422 language_model.model.layers.20.mlp.gate_proj
+[official-awq] 146/422 language_model.model.layers.20.mlp.up_proj
+[official-awq] 147/422 language_model.model.layers.20.mlp.down_proj
+[official-awq] 148/422 language_model.model.layers.21.self_attn.q_proj
+[official-awq] 149/422 language_model.model.layers.21.self_attn.k_proj
+[official-awq] 150/422 language_model.model.layers.21.self_attn.v_proj
+[official-awq] 151/422 language_model.model.layers.21.self_attn.o_proj
+[official-awq] 152/422 language_model.model.layers.21.mlp.gate_proj
+[official-awq] 153/422 language_model.model.layers.21.mlp.up_proj
+[official-awq] 154/422 language_model.model.layers.21.mlp.down_proj
+[official-awq] 155/422 language_model.model.layers.22.self_attn.q_proj
+[official-awq] 156/422 language_model.model.layers.22.self_attn.k_proj
+[official-awq] 157/422 language_model.model.layers.22.self_attn.v_proj
+[official-awq] 158/422 language_model.model.layers.22.self_attn.o_proj
+[official-awq] 159/422 language_model.model.layers.22.mlp.gate_proj
+[official-awq] 160/422 language_model.model.layers.22.mlp.up_proj
+[official-awq] 161/422 language_model.model.layers.22.mlp.down_proj
+[official-awq] 162/422 language_model.model.layers.23.self_attn.q_proj
+[official-awq] 163/422 language_model.model.layers.23.self_attn.k_proj
+[official-awq] 164/422 language_model.model.layers.23.self_attn.v_proj
+[official-awq] 165/422 language_model.model.layers.23.self_attn.o_proj
+[official-awq] 166/422 language_model.model.layers.23.mlp.gate_proj
+[official-awq] 167/422 language_model.model.layers.23.mlp.up_proj
+[official-awq] 168/422 language_model.model.layers.23.mlp.down_proj
+[official-awq] 169/422 language_model.model.layers.24.self_attn.q_proj
+[official-awq] 170/422 language_model.model.layers.24.self_attn.k_proj
+[official-awq] 171/422 language_model.model.layers.24.self_attn.v_proj
+[official-awq] 172/422 language_model.model.layers.24.self_attn.o_proj
+[official-awq] 173/422 language_model.model.layers.24.mlp.gate_proj
+[official-awq] 174/422 language_model.model.layers.24.mlp.up_proj
+[official-awq] 175/422 language_model.model.layers.24.mlp.down_proj
+[official-awq] 176/422 language_model.model.layers.25.self_attn.q_proj
+[official-awq] 177/422 language_model.model.layers.25.self_attn.k_proj
+[official-awq] 178/422 language_model.model.layers.25.self_attn.v_proj
+[official-awq] 179/422 language_model.model.layers.25.self_attn.o_proj
+[official-awq] 180/422 language_model.model.layers.25.mlp.gate_proj
+[official-awq] 181/422 language_model.model.layers.25.mlp.up_proj
+[official-awq] 182/422 language_model.model.layers.25.mlp.down_proj
+[official-awq] 183/422 language_model.model.layers.26.self_attn.q_proj
+[official-awq] 184/422 language_model.model.layers.26.self_attn.k_proj
+[official-awq] 185/422 language_model.model.layers.26.self_attn.v_proj
+[official-awq] 186/422 language_model.model.layers.26.self_attn.o_proj
+[official-awq] 187/422 language_model.model.layers.26.mlp.gate_proj
+[official-awq] 188/422 language_model.model.layers.26.mlp.up_proj
+[official-awq] 189/422 language_model.model.layers.26.mlp.down_proj
+[official-awq] 190/422 language_model.model.layers.27.self_attn.q_proj
+[official-awq] 191/422 language_model.model.layers.27.self_attn.k_proj
+[official-awq] 192/422 language_model.model.layers.27.self_attn.v_proj
+[official-awq] 193/422 language_model.model.layers.27.self_attn.o_proj
+[official-awq] 194/422 language_model.model.layers.27.mlp.gate_proj
+[official-awq] 195/422 language_model.model.layers.27.mlp.up_proj
+[official-awq] 196/422 language_model.model.layers.27.mlp.down_proj
+[official-awq] 197/422 language_model.model.layers.28.self_attn.q_proj
+[official-awq] 198/422 language_model.model.layers.28.self_attn.k_proj
+[official-awq] 199/422 language_model.model.layers.28.self_attn.v_proj
+[official-awq] 200/422 language_model.model.layers.28.self_attn.o_proj
+[official-awq] 201/422 language_model.model.layers.28.mlp.gate_proj
+[official-awq] 202/422 language_model.model.layers.28.mlp.up_proj
+[official-awq] 203/422 language_model.model.layers.28.mlp.down_proj
+[official-awq] 204/422 language_model.model.layers.29.self_attn.q_proj
+[official-awq] 205/422 language_model.model.layers.29.self_attn.k_proj
+[official-awq] 206/422 language_model.model.layers.29.self_attn.v_proj
+[official-awq] 207/422 language_model.model.layers.29.self_attn.o_proj
+[official-awq] 208/422 language_model.model.layers.29.mlp.gate_proj
+[official-awq] 209/422 language_model.model.layers.29.mlp.up_proj
+[official-awq] 210/422 language_model.model.layers.29.mlp.down_proj
+[official-awq] 211/422 language_model.model.layers.30.self_attn.q_proj
+[official-awq] 212/422 language_model.model.layers.30.self_attn.k_proj
+[official-awq] 213/422 language_model.model.layers.30.self_attn.v_proj
+[official-awq] 214/422 language_model.model.layers.30.self_attn.o_proj
+[official-awq] 215/422 language_model.model.layers.30.mlp.gate_proj
+[official-awq] 216/422 language_model.model.layers.30.mlp.up_proj
+[official-awq] 217/422 language_model.model.layers.30.mlp.down_proj
+[official-awq] 218/422 language_model.model.layers.31.self_attn.q_proj
+[official-awq] 219/422 language_model.model.layers.31.self_attn.k_proj
+[official-awq] 220/422 language_model.model.layers.31.self_attn.v_proj
+[official-awq] 221/422 language_model.model.layers.31.self_attn.o_proj
+[official-awq] 222/422 language_model.model.layers.31.mlp.gate_proj
+[official-awq] 223/422 language_model.model.layers.31.mlp.up_proj
+[official-awq] 224/422 language_model.model.layers.31.mlp.down_proj
+[official-awq] 225/422 vision_backbone.featurizer.patch_embed.proj
+[official-awq] 226/422 vision_backbone.featurizer.blocks.0.attn.qkv
+[official-awq] 227/422 vision_backbone.featurizer.blocks.0.attn.proj
+[official-awq] 228/422 vision_backbone.featurizer.blocks.0.mlp.fc1
+[official-awq] 229/422 vision_backbone.featurizer.blocks.0.mlp.fc2
+[official-awq] 230/422 vision_backbone.featurizer.blocks.1.attn.qkv
+[official-awq] 231/422 vision_backbone.featurizer.blocks.1.attn.proj
+[official-awq] 232/422 vision_backbone.featurizer.blocks.1.mlp.fc1
+[official-awq] 233/422 vision_backbone.featurizer.blocks.1.mlp.fc2
+[official-awq] 234/422 vision_backbone.featurizer.blocks.2.attn.qkv
+[official-awq] 235/422 vision_backbone.featurizer.blocks.2.attn.proj
+[official-awq] 236/422 vision_backbone.featurizer.blocks.2.mlp.fc1
+[official-awq] 237/422 vision_backbone.featurizer.blocks.2.mlp.fc2
+[official-awq] 238/422 vision_backbone.featurizer.blocks.3.attn.qkv
+[official-awq] 239/422 vision_backbone.featurizer.blocks.3.attn.proj
+[official-awq] 240/422 vision_backbone.featurizer.blocks.3.mlp.fc1
+[official-awq] 241/422 vision_backbone.featurizer.blocks.3.mlp.fc2
+[official-awq] 242/422 vision_backbone.featurizer.blocks.4.attn.qkv
+[official-awq] 243/422 vision_backbone.featurizer.blocks.4.attn.proj
+[official-awq] 244/422 vision_backbone.featurizer.blocks.4.mlp.fc1
+[official-awq] 245/422 vision_backbone.featurizer.blocks.4.mlp.fc2
+[official-awq] 246/422 vision_backbone.featurizer.blocks.5.attn.qkv
+[official-awq] 247/422 vision_backbone.featurizer.blocks.5.attn.proj
+[official-awq] 248/422 vision_backbone.featurizer.blocks.5.mlp.fc1
+[official-awq] 249/422 vision_backbone.featurizer.blocks.5.mlp.fc2
+[official-awq] 250/422 vision_backbone.featurizer.blocks.6.attn.qkv
+[official-awq] 251/422 vision_backbone.featurizer.blocks.6.attn.proj
+[official-awq] 252/422 vision_backbone.featurizer.blocks.6.mlp.fc1
+[official-awq] 253/422 vision_backbone.featurizer.blocks.6.mlp.fc2
+[official-awq] 254/422 vision_backbone.featurizer.blocks.7.attn.qkv
+[official-awq] 255/422 vision_backbone.featurizer.blocks.7.attn.proj
+[official-awq] 256/422 vision_backbone.featurizer.blocks.7.mlp.fc1
+[official-awq] 257/422 vision_backbone.featurizer.blocks.7.mlp.fc2
+[official-awq] 258/422 vision_backbone.featurizer.blocks.8.attn.qkv
+[official-awq] 259/422 vision_backbone.featurizer.blocks.8.attn.proj
+[official-awq] 260/422 vision_backbone.featurizer.blocks.8.mlp.fc1
+[official-awq] 261/422 vision_backbone.featurizer.blocks.8.mlp.fc2
+[official-awq] 262/422 vision_backbone.featurizer.blocks.9.attn.qkv
+[official-awq] 263/422 vision_backbone.featurizer.blocks.9.attn.proj
+[official-awq] 264/422 vision_backbone.featurizer.blocks.9.mlp.fc1
+[official-awq] 265/422 vision_backbone.featurizer.blocks.9.mlp.fc2
+[official-awq] 266/422 vision_backbone.featurizer.blocks.10.attn.qkv
+[official-awq] 267/422 vision_backbone.featurizer.blocks.10.attn.proj
+[official-awq] 268/422 vision_backbone.featurizer.blocks.10.mlp.fc1
+[official-awq] 269/422 vision_backbone.featurizer.blocks.10.mlp.fc2
+[official-awq] 270/422 vision_backbone.featurizer.blocks.11.attn.qkv
+[official-awq] 271/422 vision_backbone.featurizer.blocks.11.attn.proj
+[official-awq] 272/422 vision_backbone.featurizer.blocks.11.mlp.fc1
+[official-awq] 273/422 vision_backbone.featurizer.blocks.11.mlp.fc2
+[official-awq] 274/422 vision_backbone.featurizer.blocks.12.attn.qkv
+[official-awq] 275/422 vision_backbone.featurizer.blocks.12.attn.proj
+[official-awq] 276/422 vision_backbone.featurizer.blocks.12.mlp.fc1
+[official-awq] 277/422 vision_backbone.featurizer.blocks.12.mlp.fc2
+[official-awq] 278/422 vision_backbone.featurizer.blocks.13.attn.qkv
+[official-awq] 279/422 vision_backbone.featurizer.blocks.13.attn.proj
+[official-awq] 280/422 vision_backbone.featurizer.blocks.13.mlp.fc1
+[official-awq] 281/422 vision_backbone.featurizer.blocks.13.mlp.fc2
+[official-awq] 282/422 vision_backbone.featurizer.blocks.14.attn.qkv
+[official-awq] 283/422 vision_backbone.featurizer.blocks.14.attn.proj
+[official-awq] 284/422 vision_backbone.featurizer.blocks.14.mlp.fc1
+[official-awq] 285/422 vision_backbone.featurizer.blocks.14.mlp.fc2
+[official-awq] 286/422 vision_backbone.featurizer.blocks.15.attn.qkv
+[official-awq] 287/422 vision_backbone.featurizer.blocks.15.attn.proj
+[official-awq] 288/422 vision_backbone.featurizer.blocks.15.mlp.fc1
+[official-awq] 289/422 vision_backbone.featurizer.blocks.15.mlp.fc2
+[official-awq] 290/422 vision_backbone.featurizer.blocks.16.attn.qkv
+[official-awq] 291/422 vision_backbone.featurizer.blocks.16.attn.proj
+[official-awq] 292/422 vision_backbone.featurizer.blocks.16.mlp.fc1
+[official-awq] 293/422 vision_backbone.featurizer.blocks.16.mlp.fc2
+[official-awq] 294/422 vision_backbone.featurizer.blocks.17.attn.qkv
+[official-awq] 295/422 vision_backbone.featurizer.blocks.17.attn.proj
+[official-awq] 296/422 vision_backbone.featurizer.blocks.17.mlp.fc1
+[official-awq] 297/422 vision_backbone.featurizer.blocks.17.mlp.fc2
+[official-awq] 298/422 vision_backbone.featurizer.blocks.18.attn.qkv
+[official-awq] 299/422 vision_backbone.featurizer.blocks.18.attn.proj
+[official-awq] 300/422 vision_backbone.featurizer.blocks.18.mlp.fc1
+[official-awq] 301/422 vision_backbone.featurizer.blocks.18.mlp.fc2
+[official-awq] 302/422 vision_backbone.featurizer.blocks.19.attn.qkv
+[official-awq] 303/422 vision_backbone.featurizer.blocks.19.attn.proj
+[official-awq] 304/422 vision_backbone.featurizer.blocks.19.mlp.fc1
+[official-awq] 305/422 vision_backbone.featurizer.blocks.19.mlp.fc2
+[official-awq] 306/422 vision_backbone.featurizer.blocks.20.attn.qkv
+[official-awq] 307/422 vision_backbone.featurizer.blocks.20.attn.proj
+[official-awq] 308/422 vision_backbone.featurizer.blocks.20.mlp.fc1
+[official-awq] 309/422 vision_backbone.featurizer.blocks.20.mlp.fc2
+[official-awq] 310/422 vision_backbone.featurizer.blocks.21.attn.qkv
+[official-awq] 311/422 vision_backbone.featurizer.blocks.21.attn.proj
+[official-awq] 312/422 vision_backbone.featurizer.blocks.21.mlp.fc1
+[official-awq] 313/422 vision_backbone.featurizer.blocks.21.mlp.fc2
+[official-awq] 314/422 vision_backbone.featurizer.blocks.22.attn.qkv
+[official-awq] 315/422 vision_backbone.featurizer.blocks.22.attn.proj
+[official-awq] 316/422 vision_backbone.featurizer.blocks.22.mlp.fc1
+[official-awq] 317/422 vision_backbone.featurizer.blocks.22.mlp.fc2
+[official-awq] 318/422 vision_backbone.fused_featurizer.patch_embed.proj
+[official-awq] 319/422 vision_backbone.fused_featurizer.blocks.0.attn.qkv
+[official-awq] 320/422 vision_backbone.fused_featurizer.blocks.0.attn.proj
+[official-awq] 321/422 vision_backbone.fused_featurizer.blocks.0.mlp.fc1
+[official-awq] 322/422 vision_backbone.fused_featurizer.blocks.0.mlp.fc2
+[official-awq] 323/422 vision_backbone.fused_featurizer.blocks.1.attn.qkv
+[official-awq] 324/422 vision_backbone.fused_featurizer.blocks.1.attn.proj
+[official-awq] 325/422 vision_backbone.fused_featurizer.blocks.1.mlp.fc1
+[official-awq] 326/422 vision_backbone.fused_featurizer.blocks.1.mlp.fc2
+[official-awq] 327/422 vision_backbone.fused_featurizer.blocks.2.attn.qkv
+[official-awq] 328/422 vision_backbone.fused_featurizer.blocks.2.attn.proj
+[official-awq] 329/422 vision_backbone.fused_featurizer.blocks.2.mlp.fc1
+[official-awq] 330/422 vision_backbone.fused_featurizer.blocks.2.mlp.fc2
+[official-awq] 331/422 vision_backbone.fused_featurizer.blocks.3.attn.qkv
+[official-awq] 332/422 vision_backbone.fused_featurizer.blocks.3.attn.proj
+[official-awq] 333/422 vision_backbone.fused_featurizer.blocks.3.mlp.fc1
+[official-awq] 334/422 vision_backbone.fused_featurizer.blocks.3.mlp.fc2
+[official-awq] 335/422 vision_backbone.fused_featurizer.blocks.4.attn.qkv
+[official-awq] 336/422 vision_backbone.fused_featurizer.blocks.4.attn.proj
+[official-awq] 337/422 vision_backbone.fused_featurizer.blocks.4.mlp.fc1
+[official-awq] 338/422 vision_backbone.fused_featurizer.blocks.4.mlp.fc2
+[official-awq] 339/422 vision_backbone.fused_featurizer.blocks.5.attn.qkv
+[official-awq] 340/422 vision_backbone.fused_featurizer.blocks.5.attn.proj
+[official-awq] 341/422 vision_backbone.fused_featurizer.blocks.5.mlp.fc1
+[official-awq] 342/422 vision_backbone.fused_featurizer.blocks.5.mlp.fc2
+[official-awq] 343/422 vision_backbone.fused_featurizer.blocks.6.attn.qkv
+[official-awq] 344/422 vision_backbone.fused_featurizer.blocks.6.attn.proj
+[official-awq] 345/422 vision_backbone.fused_featurizer.blocks.6.mlp.fc1
+[official-awq] 346/422 vision_backbone.fused_featurizer.blocks.6.mlp.fc2
+[official-awq] 347/422 vision_backbone.fused_featurizer.blocks.7.attn.qkv
+[official-awq] 348/422 vision_backbone.fused_featurizer.blocks.7.attn.proj
+[official-awq] 349/422 vision_backbone.fused_featurizer.blocks.7.mlp.fc1
+[official-awq] 350/422 vision_backbone.fused_featurizer.blocks.7.mlp.fc2
+[official-awq] 351/422 vision_backbone.fused_featurizer.blocks.8.attn.qkv
+[official-awq] 352/422 vision_backbone.fused_featurizer.blocks.8.attn.proj
+[official-awq] 353/422 vision_backbone.fused_featurizer.blocks.8.mlp.fc1
+[official-awq] 354/422 vision_backbone.fused_featurizer.blocks.8.mlp.fc2
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+[official-awq] 355/422 vision_backbone.fused_featurizer.blocks.9.attn.qkv
+[official-awq] 356/422 vision_backbone.fused_featurizer.blocks.9.attn.proj
+[official-awq] 357/422 vision_backbone.fused_featurizer.blocks.9.mlp.fc1
+[official-awq] 358/422 vision_backbone.fused_featurizer.blocks.9.mlp.fc2
+[official-awq] 359/422 vision_backbone.fused_featurizer.blocks.10.attn.qkv
+[official-awq] 360/422 vision_backbone.fused_featurizer.blocks.10.attn.proj
+[official-awq] 361/422 vision_backbone.fused_featurizer.blocks.10.mlp.fc1
+[official-awq] 362/422 vision_backbone.fused_featurizer.blocks.10.mlp.fc2
+[official-awq] 363/422 vision_backbone.fused_featurizer.blocks.11.attn.qkv
+[official-awq] 364/422 vision_backbone.fused_featurizer.blocks.11.attn.proj
+[official-awq] 365/422 vision_backbone.fused_featurizer.blocks.11.mlp.fc1
+[official-awq] 366/422 vision_backbone.fused_featurizer.blocks.11.mlp.fc2
+[official-awq] 367/422 vision_backbone.fused_featurizer.blocks.12.attn.qkv
+[official-awq] 368/422 vision_backbone.fused_featurizer.blocks.12.attn.proj
+[official-awq] 369/422 vision_backbone.fused_featurizer.blocks.12.mlp.fc1
+[official-awq] 370/422 vision_backbone.fused_featurizer.blocks.12.mlp.fc2
+[official-awq] 371/422 vision_backbone.fused_featurizer.blocks.13.attn.qkv
+[official-awq] 372/422 vision_backbone.fused_featurizer.blocks.13.attn.proj
+[official-awq] 373/422 vision_backbone.fused_featurizer.blocks.13.mlp.fc1
+[official-awq] 374/422 vision_backbone.fused_featurizer.blocks.13.mlp.fc2
+[official-awq] 375/422 vision_backbone.fused_featurizer.blocks.14.attn.qkv
+[official-awq] 376/422 vision_backbone.fused_featurizer.blocks.14.attn.proj
+[official-awq] 377/422 vision_backbone.fused_featurizer.blocks.14.mlp.fc1
+[official-awq] 378/422 vision_backbone.fused_featurizer.blocks.14.mlp.fc2
+[official-awq] 379/422 vision_backbone.fused_featurizer.blocks.15.attn.qkv
+[official-awq] 380/422 vision_backbone.fused_featurizer.blocks.15.attn.proj
+[official-awq] 381/422 vision_backbone.fused_featurizer.blocks.15.mlp.fc1
+[official-awq] 382/422 vision_backbone.fused_featurizer.blocks.15.mlp.fc2
+[official-awq] 383/422 vision_backbone.fused_featurizer.blocks.16.attn.qkv
+[official-awq] 384/422 vision_backbone.fused_featurizer.blocks.16.attn.proj
+[official-awq] 385/422 vision_backbone.fused_featurizer.blocks.16.mlp.fc1
+[official-awq] 386/422 vision_backbone.fused_featurizer.blocks.16.mlp.fc2
+[official-awq] 387/422 vision_backbone.fused_featurizer.blocks.17.attn.qkv
+[official-awq] 388/422 vision_backbone.fused_featurizer.blocks.17.attn.proj
+[official-awq] 389/422 vision_backbone.fused_featurizer.blocks.17.mlp.fc1
+[official-awq] 390/422 vision_backbone.fused_featurizer.blocks.17.mlp.fc2
+[official-awq] 391/422 vision_backbone.fused_featurizer.blocks.18.attn.qkv
+[official-awq] 392/422 vision_backbone.fused_featurizer.blocks.18.attn.proj
+[official-awq] 393/422 vision_backbone.fused_featurizer.blocks.18.mlp.fc1
+[official-awq] 394/422 vision_backbone.fused_featurizer.blocks.18.mlp.fc2
+[official-awq] 395/422 vision_backbone.fused_featurizer.blocks.19.attn.qkv
+[official-awq] 396/422 vision_backbone.fused_featurizer.blocks.19.attn.proj
+[official-awq] 397/422 vision_backbone.fused_featurizer.blocks.19.mlp.fc1
+[official-awq] 398/422 vision_backbone.fused_featurizer.blocks.19.mlp.fc2
+[official-awq] 399/422 vision_backbone.fused_featurizer.blocks.20.attn.qkv
+[official-awq] 400/422 vision_backbone.fused_featurizer.blocks.20.attn.proj
+[official-awq] 401/422 vision_backbone.fused_featurizer.blocks.20.mlp.fc1
+[official-awq] 402/422 vision_backbone.fused_featurizer.blocks.20.mlp.fc2
+[official-awq] 403/422 vision_backbone.fused_featurizer.blocks.21.attn.qkv
+[official-awq] 404/422 vision_backbone.fused_featurizer.blocks.21.attn.proj
+[official-awq] 405/422 vision_backbone.fused_featurizer.blocks.21.mlp.fc1
+[official-awq] 406/422 vision_backbone.fused_featurizer.blocks.21.mlp.fc2
+[official-awq] 407/422 vision_backbone.fused_featurizer.blocks.22.attn.qkv
+[official-awq] 408/422 vision_backbone.fused_featurizer.blocks.22.attn.proj
+[official-awq] 409/422 vision_backbone.fused_featurizer.blocks.22.mlp.fc1
+[official-awq] 410/422 vision_backbone.fused_featurizer.blocks.22.mlp.fc2
+[official-awq] 411/422 vision_backbone.fused_featurizer.blocks.23.attn.qkv
+[official-awq] 412/422 vision_backbone.fused_featurizer.blocks.23.attn.proj
+[official-awq] 413/422 vision_backbone.fused_featurizer.blocks.23.mlp.fc1
+[official-awq] 414/422 vision_backbone.fused_featurizer.blocks.23.mlp.fc2
+[official-awq] 415/422 vision_backbone.fused_featurizer.blocks.24.attn.qkv
+[official-awq] 416/422 vision_backbone.fused_featurizer.blocks.24.attn.proj
+[official-awq] 417/422 vision_backbone.fused_featurizer.blocks.24.mlp.fc1
+[official-awq] 418/422 vision_backbone.fused_featurizer.blocks.24.mlp.fc2
+[official-awq] 419/422 vision_backbone.fused_featurizer.blocks.25.attn.qkv
+[official-awq] 420/422 vision_backbone.fused_featurizer.blocks.25.attn.proj
+[official-awq] 421/422 vision_backbone.fused_featurizer.blocks.25.mlp.fc1
+[official-awq] 422/422 vision_backbone.fused_featurizer.blocks.25.mlp.fc2
+[official-quant] method=awq weight_bits=2 activation_bits=16 profile_targets=422 scope=all
+[official-quant] BF16 exclusions=projector,proprio_projector,action_head,embeddings,norms
+[official-quant] candidate={"applied_target_bits": {"2": 366, "4": 56}, "applied_targets": 422, "name": "w2-attention-primary-g64-stage-w4", "profiles": [{"path": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt", "sha256": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc"}, {"path": "/root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt", "sha256": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8"}, {"path": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt", "sha256": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4"}], "removed_language_clips": 48, "scope": "all", "target_group_counts": {"128": 161, "64": 261}, "w4_layers": "12,13,14,15,16,17,18,19"}
+[official-quant] using preloaded model
+09/23 [21:37:18] INFO     | >> Logging to local log file: run_libero_eval.py:223
+                          /root/autodl-tmp/qvla-repro/eva                       
+                          l/awq-p0-stage-full-w2-dino64-s                       
+                          iglip128-language-g64-attention                       
+                          -stage-12-13-14-15-16-17-18-19-                       
+                          05-09-20260923-213627-11087/ful                       
+                          l-w2-dino64-siglip128-language-                       
+                          g64-attention-stage-12-13-14-15                       
+                          -16-17-18-19/EVAL-libero_spatia                       
+                          l-openvla-2026_09_23-21_36_51.t                       
+                          xt                                                    
+                 INFO     | >> SEED_PROTOCOL {"env_seed": run_libero_eval.py:238
+                          0, "model_seed": 0, "protocol":                       
+                          "paired",                                             
+                          "pythonhashseed_at_launch":                           
+                          "0", "runner_sha256":                                 
+                          "fe37e8097c286e1946e5194a1f817a                       
+                          2b2362d167a6a5a49443c5aa20314d8                       
+                          873", "strict": false}                                
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                 INFO     | >> Task suite: libero_spatial run_libero_eval.py:238
+  0%|          | 0/10 [00:00<?, ?it/s]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:37:21] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2920509582,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "c9c2f8022034e9a0705daab34a7f5b                       
+                          f9947ac939dfc5cf5a0ab493a377028                       
+                          a02", "init_state_shape": [92],                       
+                          "model_seed": 4110909047,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/23 [21:37:29] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 1                                                
+                 INFO     | >> # successes: 1 (100.0%)    run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:08<00:32,  8.02s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 90430444,                                
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "784dba596f01025199c62c3e262748                       
+                          c68f1f3b6ff92df2fd36aab8b5263bc                       
+                          0ce", "init_state_shape": [92],                       
+                          "model_seed": 3154189564,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=2--success=False--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/23 [21:37:44] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 2                                                
+                 INFO     | >> # successes: 1 (50.0%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:23<00:36, 12.17s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2593257767,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "d297dd693cb3e13a607d16f211730e                       
+                          28c50b463f597f066ef2a424a8a0361                       
+                          86c", "init_state_shape": [92],                       
+                          "model_seed": 3181712472,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=3--success=False--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/23 [21:37:59] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 3                                                
+                 INFO     | >> # successes: 1 (33.3%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:38<00:27, 13.53s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3459110301,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "3f628d77bb395ff9ff2b248e18e5de                       
+                          a19d9b1103ed48b55df4eafa29188bd                       
+                          9f0", "init_state_shape": [92],                       
+                          "model_seed": 441765833,                              
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=4--success=False--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/23 [21:38:14] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 4                                                
+                 INFO     | >> # successes: 1 (25.0%)     run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:53<00:14, 14.03s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          between the plate and the                             
+                          ramekin and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3221137945,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "6ccefe4bd69954c98ddc32f1acdcff                       
+                          81b5a66ed4304391089bbc027172b66                       
+                          d64", "init_state_shape": [92],                       
+                          "model_seed": 1987439733,                             
+                          "protocol": "paired",                                 
+                          "task_id": 0}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=5--success=False--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+09/23 [21:38:29] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 5                                                
+                 INFO     | >> # successes: 1 (20.0%)     run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:08<00:00, 14.40s/it][A100%|██████████| 5/5 [01:08<00:00, 13.62s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.2                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.2                                             
+ 10%|█         | 1/10 [01:11<10:44, 71.57s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:38:32] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2720709901,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "d0345028d24b7dda175db33c7eb0e5                       
+                          c1d4df2fdf5620c51dd3641fdc77750                       
+                          964", "init_state_shape": [92],                       
+                          "model_seed": 2466788813,                             
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=6--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/23 [21:38:46] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 6                                                
+                 INFO     | >> # successes: 1 (16.7%)     run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:13<00:55, 13.81s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1980140999,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "74548b977713394a062b37d064eb85                       
+                          7cc795b1dd9e3dd6f72236514b2f854                       
+                          04c", "init_state_shape": [92],                       
+                          "model_seed": 2663980325,                             
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/23 [21:38:56] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 7                                                
+                 INFO     | >> # successes: 2 (28.6%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:23<00:34, 11.49s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 355043717,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "a45364f84a9e141a83181828fb6b8f                       
+                          b37a162e7e85d8636fa891064717f1f                       
+                          95e", "init_state_shape": [92],                       
+                          "model_seed": 1895985625,                             
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=8--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/23 [21:39:10] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 8                                                
+                 INFO     | >> # successes: 2 (25.0%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:37<00:25, 12.68s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 4285867666,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "dec62b7a7f186620b39af37c335407                       
+                          1d3b720a7c93e5de1ca14e54f28bc76                       
+                          d41", "init_state_shape": [92],                       
+                          "model_seed": 751507276,                              
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=9--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/23 [21:39:24] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 9                                                
+                 INFO     | >> # successes: 2 (22.2%)     run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:51<00:13, 13.18s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the ramekin and place                         
+                          it on the plate                                       
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 307292723,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "4c98afd093bda011d941abba6e2d53                       
+                          d57d3b258fe56cfdfbc4dc74d50260f                       
+                          9ae", "init_state_shape": [92],                       
+                          "model_seed": 2609141265,                             
+                          "protocol": "paired",                                 
+                          "task_id": 1}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=10--success=False--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+09/23 [21:39:38] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 10                                               
+                 INFO     | >> # successes: 2 (20.0%)     run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:05<00:00, 13.56s/it][A100%|██████████| 5/5 [01:05<00:00, 13.19s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.2                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.2                                             
+ 20%|██        | 2/10 [02:20<09:21, 70.17s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:39:41] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1320153655,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "244227d010ee2b731b1226316f6f51                       
+                          ddc0b589941068f68e88e7778eabf2e                       
+                          302", "init_state_shape": [92],                       
+                          "model_seed": 550830392,                              
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=11--success=False--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/23 [21:39:56] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 11                                               
+                 INFO     | >> # successes: 2 (18.2%)     run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:14<00:57, 14.48s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3154410349,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "015663b2e58bace14677f65f8871f6                       
+                          22d3c7c24fb3938114fbacaa91ff56d                       
+                          38b", "init_state_shape": [92],                       
+                          "model_seed": 2606276245,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=12--success=False--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/23 [21:40:11] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 12                                               
+                 INFO     | >> # successes: 2 (16.7%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:29<00:44, 14.86s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3995789380,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "3e05dba60bf1a41c0bc853e8480cee                       
+                          4f4a7c58fc86ae62cec40fdc9e5f61c                       
+                          be0", "init_state_shape": [92],                       
+                          "model_seed": 1923587010,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=13--success=False--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/23 [21:40:25] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 13                                               
+                 INFO     | >> # successes: 2 (15.4%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:44<00:29, 14.70s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1352003176,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "10d28a829243d7c83db659e2c66233                       
+                          f7bee106f22cfe5b2261f9f9831ebac                       
+                          708", "init_state_shape": [92],                       
+                          "model_seed": 344153472,                              
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/23 [21:40:34] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 14                                               
+                 INFO     | >> # successes: 3 (21.4%)     run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:52<00:12, 12.15s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          from table center and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 706024588,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "864819f19088c1c5f38f9b06923cce                       
+                          bd4818892a4bb231cedc71b892d2a2b                       
+                          c67", "init_state_shape": [92],                       
+                          "model_seed": 1165687323,                             
+                          "protocol": "paired",                                 
+                          "task_id": 2}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=15--success=False--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+09/23 [21:40:48] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 15                                               
+                 INFO     | >> # successes: 3 (20.0%)     run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:06<00:00, 12.99s/it][A100%|██████████| 5/5 [01:06<00:00, 13.37s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.2                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.2                                             
+ 30%|███       | 3/10 [03:30<08:10, 70.08s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:40:51] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3987898825,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "6dac57dbcf0ffc62ca6a37b1334c61                       
+                          683200e4b3e944c2de2eb98563b1c6d                       
+                          f56", "init_state_shape": [92],                       
+                          "model_seed": 3527698013,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/23 [21:40:59] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 16                                               
+                 INFO     | >> # successes: 4 (25.0%)     run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:07<00:31,  7.93s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 748821386,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "cc809ea238ea9d71bcd0fa683f60c5                       
+                          1f7d2a3864963da43149e4df35d0eed                       
+                          85f", "init_state_shape": [92],                       
+                          "model_seed": 2357097212,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=17--success=False--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/23 [21:41:14] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 17                                               
+                 INFO     | >> # successes: 4 (23.5%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:22<00:36, 12.04s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3351635119,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "b58022b980ae6497859d4ad985cfa8                       
+                          9b16832f4c7f82cd2abb8b03cb2e0f6                       
+                          119", "init_state_shape": [92],                       
+                          "model_seed": 2057051480,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/23 [21:41:23] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 18                                               
+                 INFO     | >> # successes: 5 (27.8%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:31<00:20, 10.49s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1502850896,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "7d5f3b9821665f85bbf943b1da3fa0                       
+                          3d53b694bc8751b4503a39a7351734f                       
+                          89b", "init_state_shape": [92],                       
+                          "model_seed": 3041705555,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=19--success=False--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/23 [21:41:37] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 19                                               
+                 INFO     | >> # successes: 5 (26.3%)     run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:45<00:12, 12.04s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the cookie box and place it on                        
+                          the plate                                             
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 4002874428,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "d60041b13e4f125b32f1d55912b939                       
+                          701a3ddfc2815acb15484be856e2943                       
+                          dae", "init_state_shape": [92],                       
+                          "model_seed": 1571737591,                             
+                          "protocol": "paired",                                 
+                          "task_id": 3}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+09/23 [21:41:45] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 20                                               
+                 INFO     | >> # successes: 6 (30.0%)     run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:54<00:00, 10.68s/it][A100%|██████████| 5/5 [00:54<00:00, 10.84s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.6                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.3                                             
+ 40%|████      | 4/10 [04:28<06:30, 65.09s/it]09/23 [21:41:46] INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:41:49] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3540813242,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "b87346216738a7ce42130dcd154c43                       
+                          380035d684b66a383eaa412aa7d7295                       
+                          b7c", "init_state_shape": [92],                       
+                          "model_seed": 837752708,                              
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/23 [21:41:58] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 21                                               
+                 INFO     | >> # successes: 7 (33.3%)     run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:09<00:37,  9.27s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3714354992,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "58efbae8fa8cdf03edfa2542dbbda4                       
+                          caf806bdf5268b8320a00f1549b00be                       
+                          c95", "init_state_shape": [92],                       
+                          "model_seed": 2961343796,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=22--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/23 [21:42:13] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 22                                               
+                 INFO     | >> # successes: 7 (31.8%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:23<00:37, 12.40s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 98182254,                                
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "f90125fb43ad6d5983af928adc76f7                       
+                          ad7520f2ce624dbd25bb45e1888a5a9                       
+                          e56", "init_state_shape": [92],                       
+                          "model_seed": 3730720358,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=23--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/23 [21:42:28] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 23                                               
+                 INFO     | >> # successes: 7 (30.4%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:39<00:27, 13.72s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3891202893,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "2b61811f6b6a9a61b89a236fd0b30a                       
+                          5b10539a70b67c34209624cfdf52af4                       
+                          e5a", "init_state_shape": [92],                       
+                          "model_seed": 157600660,                              
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=24--success=False--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/23 [21:42:43] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 24                                               
+                 INFO     | >> # successes: 7 (29.2%)     run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:54<00:14, 14.31s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl in                       
+                          the top drawer of the wooden                          
+                          cabinet and place it on the                           
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 372916700,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "6a71ea6e55326efc34ec666f301a01                       
+                          8286ad06f19222511f0c3af44896801                       
+                          580", "init_state_shape": [92],                       
+                          "model_seed": 4112920766,                             
+                          "protocol": "paired",                                 
+                          "task_id": 4}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+09/23 [21:42:53] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 25                                               
+                 INFO     | >> # successes: 8 (32.0%)     run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:04<00:00, 12.78s/it][A100%|██████████| 5/5 [01:04<00:00, 12.89s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.4                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.32                                            
+ 50%|█████     | 5/10 [05:35<05:30, 66.01s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:42:56] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 195921136,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "8a66e26dcb5684fb06268d8558ec89                       
+                          cb48b496d3ba03c491d620ac3d37bba                       
+                          6ba", "init_state_shape": [92],                       
+                          "model_seed": 2704172120,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=26--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/23 [21:43:11] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 26                                               
+                 INFO     | >> # successes: 8 (30.8%)     run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:14<00:59, 14.93s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 148153071,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "a9b966c9cf9cc8d424d7ae20f2e72e                       
+                          57c828aef13f172c2643fa7f7d3b194                       
+                          181", "init_state_shape": [92],                       
+                          "model_seed": 1621750818,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=27--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/23 [21:43:26] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 27                                               
+                 INFO     | >> # successes: 8 (29.6%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:29<00:43, 14.65s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2581305755,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "987aabd844775a9b57c09e65ce787d                       
+                          cc8b38ef6f8b0c5565dbd48c83ba6ce                       
+                          d2f", "init_state_shape": [92],                       
+                          "model_seed": 1633783552,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/23 [21:43:34] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 28                                               
+                 INFO     | >> # successes: 9 (32.1%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:37<00:23, 11.61s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3545051791,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "d6c4a596a6f3f6e5bb1b2366f1a459                       
+                          8afaca8d263b0a4e50652479a1ee117                       
+                          ed7", "init_state_shape": [92],                       
+                          "model_seed": 3910483305,                             
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=29--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/23 [21:43:48] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 29                                               
+                 INFO     | >> # successes: 9 (31.0%)     run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:51<00:12, 12.79s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the ramekin and place it on the                       
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3492466183,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "b97e853cb653df09c54d36b06bd56c                       
+                          40dff4222ea2f6c4a01d6847e1a9b60                       
+                          7eb", "init_state_shape": [92],                       
+                          "model_seed": 808358117,                              
+                          "protocol": "paired",                                 
+                          "task_id": 5}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=30--success=False--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+09/23 [21:44:03] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 30                                               
+                 INFO     | >> # successes: 9 (30.0%)     run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:06<00:00, 13.39s/it][A100%|██████████| 5/5 [01:06<00:00, 13.29s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.2                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.3                                             
+ 60%|██████    | 6/10 [06:45<04:29, 67.27s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:44:06] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 817051687,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "5a499b730ad51bec1d7a79a787b43d                       
+                          d62eb4c99b34d13f92a74cafebf7b6f                       
+                          9de", "init_state_shape": [92],                       
+                          "model_seed": 2986975463,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=31--success=False--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/23 [21:44:20] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 31                                               
+                 INFO     | >> # successes: 9 (29.0%)     run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:14<00:56, 14.08s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3519949638,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "9fe1e2e5914a33d82379a012d69199                       
+                          ead3e5a7248d4ca37da81786863dbc6                       
+                          43d", "init_state_shape": [92],                       
+                          "model_seed": 2837676184,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=32--success=False--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/23 [21:44:35] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 32                                               
+                 INFO     | >> # successes: 9 (28.1%)     run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:29<00:43, 14.61s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1179455625,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "f0dc954a7059fa3185a63ea648be5f                       
+                          a5fac395b27f135e0771adc594f837b                       
+                          49c", "init_state_shape": [92],                       
+                          "model_seed": 2951695608,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=33--success=False--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/23 [21:44:50] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 33                                               
+                 INFO     | >> # successes: 9 (27.3%)     run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:44<00:29, 14.86s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3268505317,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "949373f1f909d26e57ace693cadbd2                       
+                          1aa658d89546cf2f4ded0fd3e17a460                       
+                          6ac", "init_state_shape": [92],                       
+                          "model_seed": 1618128254,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/23 [21:45:00] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 34                                               
+                 INFO     | >> # successes: 10 (29.4%)    run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:54<00:12, 12.86s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the cookie box and                            
+                          place it on the plate                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1021821383,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "0ffc5da6f449cc4be5f2d6fbe4ea56                       
+                          9c870e80a127d9aef2bced08e1407e4                       
+                          b5f", "init_state_shape": [92],                       
+                          "model_seed": 1310436415,                             
+                          "protocol": "paired",                                 
+                          "task_id": 6}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=35--success=False--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+09/23 [21:45:15] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 35                                               
+                 INFO     | >> # successes: 10 (28.6%)    run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:08<00:00, 13.46s/it][A100%|██████████| 5/5 [01:08<00:00, 13.71s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.2                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.2857142857142857                              
+ 70%|███████   | 7/10 [07:57<03:26, 68.75s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:45:18] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2755095330,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "b887ede88d157e4e55c6c31aa79eec                       
+                          7ea0c950034f6111fd9f619c423469d                       
+                          483", "init_state_shape": [92],                       
+                          "model_seed": 3911580404,                             
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=36--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/23 [21:45:33] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 36                                               
+                 INFO     | >> # successes: 10 (27.8%)    run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:14<00:59, 14.93s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1197697093,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "583801d2f7fa2816c9b5a290cd4e95                       
+                          4a88c7b5a43f9bc4c7735ba26633f79                       
+                          97d", "init_state_shape": [92],                       
+                          "model_seed": 34433123,                               
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=37--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/23 [21:45:48] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 37                                               
+                 INFO     | >> # successes: 10 (27.0%)    run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:29<00:44, 14.91s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1111197035,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "7a2ae9fdc7b6512f45182c6c1eb060                       
+                          5cfc023075e306c0c5909078fe235db                       
+                          309", "init_state_shape": [92],                       
+                          "model_seed": 370948222,                              
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=38--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/23 [21:46:02] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 38                                               
+                 INFO     | >> # successes: 10 (26.3%)    run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:44<00:29, 14.73s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3113684588,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "ab1daae4e2f98cfe102420e3659a5e                       
+                          9b27643619d8637f8985b729db38be5                       
+                          b54", "init_state_shape": [92],                       
+                          "model_seed": 2440714535,                             
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=39--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/23 [21:46:17] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 39                                               
+                 INFO     | >> # successes: 10 (25.6%)    run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:59<00:14, 14.78s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the stove and place it on the                         
+                          plate                                                 
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 25912323,                                
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "546f905e8563676df7f13cf4071337                       
+                          c8e75b41ba50d997ad1732d0d666be5                       
+                          0f5", "init_state_shape": [92],                       
+                          "model_seed": 115094259,                              
+                          "protocol": "paired",                                 
+                          "task_id": 7}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=40--success=False--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+09/23 [21:46:31] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 40                                               
+                 INFO     | >> # successes: 10 (25.0%)    run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:13<00:00, 14.64s/it][A100%|██████████| 5/5 [01:13<00:00, 14.72s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.25                                            
+ 80%|████████  | 8/10 [09:14<02:22, 71.32s/it]09/23 [21:46:32] INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:46:35] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1238714754,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "6b4f91c1a15155e7f0a6ce3085bea1                       
+                          0bef88c0cb5fa46526cf7115c56ca93                       
+                          0e4", "init_state_shape": [92],                       
+                          "model_seed": 1579726468,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/23 [21:46:42] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 41                                               
+                 INFO     | >> # successes: 11 (26.8%)    run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:07<00:31,  7.76s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 311933947,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "e6c8b330e200dfac047d69461946ed                       
+                          fa16c7526af280af94e5f035ca3f04a                       
+                          88e", "init_state_shape": [92],                       
+                          "model_seed": 3920860468,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/23 [21:46:50] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 42                                               
+                 INFO     | >> # successes: 12 (28.6%)    run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:15<00:23,  7.73s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1895236238,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "b0c0e39e2152058d077abf5025369e                       
+                          5183dc4b393291a638d59a529c54de2                       
+                          a63", "init_state_shape": [92],                       
+                          "model_seed": 1872252116,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/23 [21:46:58] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 43                                               
+                 INFO     | >> # successes: 13 (30.2%)    run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:23<00:15,  7.79s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 125097745,                               
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "5cdf91438b981a12625fd104367717                       
+                          52a3d3a34bc99b3865800876064d71f                       
+                          6ac", "init_state_shape": [92],                       
+                          "model_seed": 3022301049,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/23 [21:47:06] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 44                                               
+                 INFO     | >> # successes: 14 (31.8%)    run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:30<00:07,  7.72s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl                          
+                          next to the plate and place it                        
+                          on the plate                                          
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1723525530,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "caf2ae97e43664e04a6534a50c176d                       
+                          b42a116e6ccc6c963a6646f725ac075                       
+                          45e", "init_state_shape": [92],                       
+                          "model_seed": 2590999359,                             
+                          "protocol": "paired",                                 
+                          "task_id": 8}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+09/23 [21:47:13] INFO     | >> Success: True              run_libero_eval.py:238
+09/23 [21:47:14] INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 45                                               
+                 INFO     | >> # successes: 15 (33.3%)    run_libero_eval.py:238
+
+100%|██████████| 5/5 [00:38<00:00,  7.81s/it][A100%|██████████| 5/5 [00:38<00:00,  7.78s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          1.0                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.3333333333333333                              
+ 90%|█████████ | 9/10 [09:56<01:02, 62.18s/it]                 INFO     | >> Using default initial      run_libero_eval.py:238
+                          states                                                
+
+  0%|          | 0/5 [00:00<?, ?it/s][A09/23 [21:47:17] INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 1...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 3119629661,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 5,                                
+                          "init_state_sha256":                                  
+                          "3696f68817ba2c2ce9da0453042f1b                       
+                          a257245c07b7a4a814be58e0903b20e                       
+                          fcf", "init_state_shape": [92],                       
+                          "model_seed": 3542413795,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/23 [21:47:26] INFO     | >> Success: True              run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 46                                               
+                 INFO     | >> # successes: 16 (34.8%)    run_libero_eval.py:238
+
+ 20%|██        | 1/5 [00:09<00:37,  9.30s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 2...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1550231648,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 6,                                
+                          "init_state_sha256":                                  
+                          "54598c38c111468114f1ba90bd651e                       
+                          a406747053136212c6e48a29dcecc1d                       
+                          89d", "init_state_shape": [92],                       
+                          "model_seed": 2956024805,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=47--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/23 [21:47:41] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 47                                               
+                 INFO     | >> # successes: 16 (34.0%)    run_libero_eval.py:238
+
+ 40%|████      | 2/5 [00:24<00:38, 12.68s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 3...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1076517777,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 7,                                
+                          "init_state_sha256":                                  
+                          "f4e929cfbc734ce820906169165ff4                       
+                          cd18d641e944a183f686943303751b9                       
+                          fd6", "init_state_shape": [92],                       
+                          "model_seed": 4195687758,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=48--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/23 [21:47:56] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 48                                               
+                 INFO     | >> # successes: 16 (33.3%)    run_libero_eval.py:238
+
+ 60%|██████    | 3/5 [00:39<00:27, 13.73s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 4...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 1161406313,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 8,                                
+                          "init_state_sha256":                                  
+                          "b1ed9a6a0930dfb10e2a1e103608cb                       
+                          68bae0f2bff2cf89ed283a6ebe00c28                       
+                          f96", "init_state_shape": [92],                       
+                          "model_seed": 2395291537,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=49--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/23 [21:48:11] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 49                                               
+                 INFO     | >> # successes: 16 (32.7%)    run_libero_eval.py:238
+
+ 80%|████████  | 4/5 [00:54<00:14, 14.12s/it][A                 INFO     | >>                            run_libero_eval.py:238
+                          Task: pick up the black bowl on                       
+                          the wooden cabinet and place it                       
+                          on the plate                                          
+                 INFO     | >> Starting episode 5...      run_libero_eval.py:238
+                 INFO     | >> EPISODE_MANIFEST           run_libero_eval.py:238
+                          {"env_seed": 2676125635,                              
+                          "init_state_dtype": "float64",                        
+                          "init_state_index": 9,                                
+                          "init_state_sha256":                                  
+                          "1798c4b6a1487a8d4cbe773e8c4ac1                       
+                          be5ac48439f0c3df53adc5cf84f757c                       
+                          c1f", "init_state_shape": [92],                       
+                          "model_seed": 2955358067,                             
+                          "protocol": "paired",                                 
+                          "task_id": 9}                                         
+Saved rollout MP4 at path ./rollouts/2026_09_23/2026_09_23-21_36_51--openvla_oft--episode=50--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+09/23 [21:48:25] INFO     | >> Success: False             run_libero_eval.py:238
+                 INFO     | >> # episodes completed so    run_libero_eval.py:238
+                          far: 50                                               
+                 INFO     | >> # successes: 16 (32.0%)    run_libero_eval.py:238
+
+100%|██████████| 5/5 [01:08<00:00, 14.27s/it][A100%|██████████| 5/5 [01:08<00:00, 13.71s/it]
+                 INFO     | >> Current task success rate: run_libero_eval.py:238
+                          0.2                                                   
+                 INFO     | >> Current total success      run_libero_eval.py:238
+                          rate: 0.32                                            
+100%|██████████| 10/10 [11:08<00:00, 65.16s/it]100%|██████████| 10/10 [11:08<00:00, 66.81s/it]
+09/23 [21:48:26] INFO     | >> Final results:             run_libero_eval.py:238
+                 INFO     | >> Total episodes: 50         run_libero_eval.py:238
+                 INFO     | >> Total successes: 16        run_libero_eval.py:238
+                 INFO     | >> Overall success rate:      run_libero_eval.py:238
+                          0.3200 (32.0%)                                        

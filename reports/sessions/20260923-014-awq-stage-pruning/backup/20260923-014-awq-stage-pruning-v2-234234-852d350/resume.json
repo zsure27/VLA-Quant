@@ -1,0 +1,32 @@
+{
+  "time_utc": "2026-09-23T15:42:39.322610+00:00",
+  "label": "20260923-014-awq-stage-pruning-v2",
+  "hostname": "autodl-container-3fbf46b812-2fdd6883",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}

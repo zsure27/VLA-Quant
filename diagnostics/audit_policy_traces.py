@@ -2,9 +2,10 @@
 import argparse,hashlib,json,math
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--raw-root',type=Path,action='append',required=True)
+p.add_argument('--result-prefix',default='awq-scope-shard-')
 p.add_argument('--output',type=Path,required=True);a=p.parse_args();results=[]
 for root in a.raw_root:
-    for path in sorted(root.glob('awq-scope-shard-*/*/policy-queries.jsonl')):
+    for path in sorted(root.glob(a.result_prefix+'*/*/policy-queries.jsonl')):
         shard=path.parent.parent
         assert (shard/'exit-code.txt').read_text().strip()=='0'
         count=0

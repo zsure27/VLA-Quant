@@ -1,6 +1,8 @@
 # 每轮实验独立报告与可视化归档
 
-最新实测：[2026-09-23 完整 W2 视觉 group 归因](20260923-107-awq-p0-visual-groups/README_CN.md)，固定语言配置后完成 DINO/SigLIP 的 2×2 配对网格。
+最新实测：[2026-09-23 014 完整 W2 的语言 W4 层数裁剪](20260923-014-awq-stage-pruning/README_CN.md)，完成 22 个分片、580 回合，比较 8/10/12 层稀疏保护组合。
+
+前置视觉实验：[2026-09-23 完整 W2 视觉 group 归因](20260923-107-awq-p0-visual-groups/README_CN.md)，固定语言配置后完成 DINO/SigLIP 的 2×2 配对网格。
 
 后续恢复实验：[2026-09-23 完整 W2 的语言 W4 岛](20260923-107-awq-stage-rescue/README_CN.md)，比较 8–15、8–23 与 16–23 block 范围。
 

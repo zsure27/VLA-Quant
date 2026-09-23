@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 p=argparse.ArgumentParser();p.add_argument('--backup',type=Path,required=True)
 p.add_argument('--receipts',type=Path,required=True);p.add_argument('--raw-root',type=Path,required=True)
+p.add_argument('--result-prefix',default='awq-scope-shard-')
 p.add_argument('--expected-videos',type=int,required=True);a=p.parse_args();b=a.backup.resolve();checks=[]
 for line in (b/'SHA256SUMS.txt').read_text().splitlines():
     digest,name=line.split(maxsplit=1);f=(b/name.strip()).resolve()
@@ -19,7 +20,7 @@ for name in ('SHA256SUMS.txt','RESULTS_SHA256SUMS.txt','VIDEO_MANIFEST.json','LA
 root=a.raw_root.resolve()
 with tarfile.open(b/'session-results.tar.gz') as tf:
     for m in tf.getmembers():
-        if not m.name.startswith('eval/awq-scope-shard-'):continue
+        if not m.name.startswith('eval/'+a.result_prefix):continue
         f=(root/m.name[5:]).resolve();assert root in f.parents and (m.isdir() or m.isfile())
         if m.isdir():f.mkdir(parents=True,exist_ok=True)
         else:

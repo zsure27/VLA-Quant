@@ -1,0 +1,1373 @@
+{
+  "evidence_class": "measured_paired_closed_loop",
+  "episodes": 580,
+  "result_shards": 22,
+  "policy_queries": 10020,
+  "files": [
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/backup/20260923-014-awq-stage-pruning-v2-234234-852d350/LARGE_FILES_NOT_IN_GIT.json",
+      "bytes": 1058,
+      "sha256": "2c8757754035b59d120dbca6e778f66197f3e2f7dc6320414ced02614cbec2f6"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/backup/20260923-014-awq-stage-pruning-v2-234234-852d350/LOCAL_VERIFICATION.json",
+      "bytes": 566,
+      "sha256": "abf7af6a19beefcdc082c7250df8e123054c6c8da3649fc4fac9fb7ec9b8832f"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/backup/20260923-014-awq-stage-pruning-v2-234234-852d350/RESULTS_SHA256SUMS.txt",
+      "bytes": 89,
+      "sha256": "a4faab20a0abb1a9fb71e34e0a1c033ce346383929af7acbde094f3d1b9c4099"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/backup/20260923-014-awq-stage-pruning-v2-234234-852d350/resume.json",
+      "bytes": 3910,
+      "sha256": "1879b44ec48b552b2da8df63070fd70030cbb55322056de867971d0e404d1589"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/backup/20260923-014-awq-stage-pruning-v2-234234-852d350/SHA256SUMS.txt",
+      "bytes": 851,
+      "sha256": "b1767d2ba86277a776694f71a674aea61333c269a2757151b216cfb616120a50"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/backup/20260923-014-awq-stage-pruning-v2-234234-852d350/VIDEO_MANIFEST.json",
+      "bytes": 412982,
+      "sha256": "dd8dbccc43f197bb19871017f6e93810282cb36f578421cb54c093bbe1dd4d65"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/data/policy_trace_audit.json",
+      "bytes": 15385,
+      "sha256": "75b6b38ed174f4fe22ae36c3e699a63b7e80e6d14987f9f5ad614899bf64e483"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/data/results.csv",
+      "bytes": 3447,
+      "sha256": "c697cd0498ed86713639b2150d93bc2a5a83f63ce1c9fc5f7f8a21060db8489f"
+    },
+    {
+      "path": "reports/sessions/20260923-014-awq-stage-pruning/README_CN.md",
+      "bytes": 2631,
+      "sha256": "2d5dcdf7d9df1bd2878bfc67d486e026affd2ec151baa94028860d987fd252eb"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1218,
+      "sha256": "dc0522123271b7010410baa52e9c1f532a5dc79d679dcb8e7322bfa188324800"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 61365,
+      "sha256": "2c4a9d72fc67c1b8910e2fa4012e56fd5b1bf2ceb64325dfe4c4fc80469e9992"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-23_06_40.txt",
+      "bytes": 7387,
+      "sha256": "b4f270bd0a9265528cd1551b546dcbc192c2f5c3925969d32ec61964ec747677"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 255883,
+      "sha256": "9558061e568e67e48b319d96910e1238730c9e5dc382fa7b7393814b56147cab"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1218,
+      "sha256": "e68aafe0a1406ad7097cdd48586e53d3a8a6ff3c8b17e0c09c127bfe9c7840a9"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 135942,
+      "sha256": "f369eb846ab1876d61d298c3793768f88ba53a47aa32c802448474c3a67193a7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-23_17_03.txt",
+      "bytes": 31783,
+      "sha256": "bdaa920140cff7610720bbc8003b448dd1a764a66f5bf25d3847b801c55045d3"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1307370,
+      "sha256": "46c742a3c1c661d25705c49915777cf45fa22c0f77a3762b4135ce6e8b44213a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15/command.txt",
+      "bytes": 1157,
+      "sha256": "0b18c808ec11425dd04af0be8b02a124c829ecc71e84e8c6b473a7ac685271bf"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15/console.log",
+      "bytes": 61269,
+      "sha256": "c96a5e19ec64e9460c4e913dadbc3e53fba745fbe8a44d103fb1fd8ee2b4510a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15/EVAL-libero_spatial-openvla-2026_09_23-21_13_08.txt",
+      "bytes": 7394,
+      "sha256": "7f5fb2c019d6dc5538ef38d878746880c052220ed7a17d0934cf827e63a25d34"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15/policy-queries.jsonl",
+      "bytes": 343902,
+      "sha256": "ecf4eef5e45487403a1c6522d587919bee78179907e15c98639df2888bbe800c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19/command.txt",
+      "bytes": 1198,
+      "sha256": "69d4e848f664c74a2fed9c978c2de58aa8f75d1c853890c35019e2ed729037fc"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19/console.log",
+      "bytes": 135959,
+      "sha256": "1048e02668760ce4f9d881c22bf80b5f2f5031e050a2ca233031dd8d32b5af14"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19/EVAL-libero_spatial-openvla-2026_09_23-21_36_51.txt",
+      "bytes": 31821,
+      "sha256": "2ea965f757e80be59c2c0ffb97ea4305e93077f89345bc5b0215d9da57bfb9a3"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19/policy-queries.jsonl",
+      "bytes": 1880728,
+      "sha256": "10491472618bc6fbe31c462d2d1a5260802ad54f73c1547847332d7fc89ce104"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23/command.txt",
+      "bytes": 1237,
+      "sha256": "5ab09bcef00df40a02892acad787fe5fbad445d1067f3d4e52faecc4271b48b5"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23/console.log",
+      "bytes": 135948,
+      "sha256": "da92662e58cabaf6a2dc361d10cc2257df2d63138d5c86aaac649f9caa671d97"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-21_25_21.txt",
+      "bytes": 31799,
+      "sha256": "73b50b9f06d599c0d903c04ea9e4f7195db5c2f24e23fb7cdd129bae377c835b"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1290525,
+      "sha256": "2b4468ecdf0ac5109550095d132427b176a9e77211b7c39798e51ca8a6c80aa5"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1198,
+      "sha256": "1af7272cd477637b297137168d1ff7eafeaa6157dce21e9dbdeb30868581c3e6"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 61360,
+      "sha256": "e3e1403a56c057d5fbc02636938f498be85076625b62cf67dcc98f18128c7bb9"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-22_33_51.txt",
+      "bytes": 7389,
+      "sha256": "f5ee34fad3c996b089da79d67f308ebd727e7f8a90be5f4505c64792c1a42e96"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 277387,
+      "sha256": "a72c495406bf12cc3b6e2416564363192bc4c75ab9b53e89b88c68b5e52eadfb"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1198,
+      "sha256": "4702e69725c3151da51d279b128381225555f8aab0cf851296689e22c648020e"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 135938,
+      "sha256": "3fb69ad09d40878176226370ffe78327330e33b90567e20d6700aad40f23115d"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-22_51_21.txt",
+      "bytes": 31833,
+      "sha256": "fac9606667fbd74c96592195b51f1e79a9ebf80e4d3ee880b87e1c08d8e55dc5"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1365048,
+      "sha256": "e50728c9c9042a6e274e211de5653b40bed6550d8518dbd97bbe79c41531abb9"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19/command.txt",
+      "bytes": 1157,
+      "sha256": "7bab5cec10b137726492abc395a50eaeeba134f5cf5b7230702775e197423b88"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19/console.log",
+      "bytes": 61268,
+      "sha256": "30400ee193663703d09fd34c61c1ce9edc4c06c7f1a4b3602284aba4affd0cc9"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19/EVAL-libero_spatial-openvla-2026_09_23-21_16_30.txt",
+      "bytes": 7373,
+      "sha256": "71050c4b316c7c73452865b1f175ab012346cf1e33db35dce29c8a89c4c02da9"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19/policy-queries.jsonl",
+      "bytes": 309237,
+      "sha256": "aca36d1f734752c030449bad02c4d7ebd9464fe7a1719034d00427f0cd59d43e"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23/command.txt",
+      "bytes": 1197,
+      "sha256": "71beb0a91600d9e1697c959d177fb4b50d10ce7444fc06ef6086191f9bf142c5"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23/console.log",
+      "bytes": 135947,
+      "sha256": "999de8f0eb525ccb8a273773c740d391ab6669bdf54c693232471c56769f5fd7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-20_56_05.txt",
+      "bytes": 31821,
+      "sha256": "30e7120dca2f7fcbe45729f34ab32cac36bc18c4f2fdd851541b3ff3f3686f5a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1572406,
+      "sha256": "be5776ba77fd8fd72293706d996baf5e2c1d4d2aa11b8afba5598a8d2d43b68b"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23/command.txt",
+      "bytes": 1157,
+      "sha256": "537e6a399b4626189cdca6e606723beb22c05c8f4a078096a09bf51adb968287"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23/console.log",
+      "bytes": 61269,
+      "sha256": "8af8c1f73072e4357842ef87ed6383d0bbca2fc3b03696a41b30a78999fc7d3f"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-21_19_45.txt",
+      "bytes": 7392,
+      "sha256": "f1a72927eca9caef14acb70604e76795ae71e5ff76f53d47bc88f51305285506"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23/policy-queries.jsonl",
+      "bytes": 326039,
+      "sha256": "a15fbaa4fd45ef9b11518a002f7ffc0b51897198220a24adcc3b73a03c82f904"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11/command.txt",
+      "bytes": 1151,
+      "sha256": "0fc28172b4b90877143d74f2ed7613d8603ccd2f02b69e5865e53c0d1043927b"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11/console.log",
+      "bytes": 61271,
+      "sha256": "629555bd2fb673d676e2a9b0dd9aeeeef8e7390937f6a73d9e9cb68545b04208"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11/EVAL-libero_spatial-openvla-2026_09_23-21_09_26.txt",
+      "bytes": 7385,
+      "sha256": "5db0664b3f2c90cc07c45da3ee8f7e2a40200245cc0dfc389a3de1b3ca70dcc6"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11/policy-queries.jsonl",
+      "bytes": 432494,
+      "sha256": "e37a2d05d748efa0dc478cdd61afcc8fe0ae58b625346322444afb4e0eb82d1a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19/command.txt",
+      "bytes": 1232,
+      "sha256": "0998e9420a8769a11f17e63f6bc4e877053f47f5048a8da0aaaec98f117cc439"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19/console.log",
+      "bytes": 61372,
+      "sha256": "b961cda78e7e45553e8050416d63777b352b98b9369cd3c72b6860a2dbbe5fa6"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19/EVAL-libero_spatial-openvla-2026_09_23-21_50_57.txt",
+      "bytes": 7391,
+      "sha256": "1ea84b7c47b4847229f4cd99ad408f2c84ab87669c255c80a99e811edd23a88c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19/policy-queries.jsonl",
+      "bytes": 330271,
+      "sha256": "14fead593e115674350dceb8aac6d3fb9610fa658bd6a5df13ed7ac9a28ae3a7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1232,
+      "sha256": "9fd7bf14c5645eeaa21fa5db315039a1d77437e60ef953f326a5d44bb7059b0a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 61368,
+      "sha256": "4a9340a69abfa2126e7c417003be67d83560306c523127e5954986973f7b923c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-21_54_18.txt",
+      "bytes": 7386,
+      "sha256": "d5c72572adc6a53fbe95eba01bc401eb8e927f62a0d9be331596c6f4d44e3a35"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 227854,
+      "sha256": "e9f16062cb0fadfffeffae9e45aa14c2c64006741dfbad483e9cbb98275f13ea"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1232,
+      "sha256": "d15d5fe3eb074707ad002c306a1ee58bd9d3955ef5ffb232bbe4891531e930f9"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 135943,
+      "sha256": "d2541f7dc56d4ca65dd0fc48cbab2678a8d5ca39c1eaf006fb7ef0d700ad9a37"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-22_09_31.txt",
+      "bytes": 31808,
+      "sha256": "4291844fa49fa1667f11a7ace1e4de344a79d51308b7fb03841871b1f2e0be45"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1225862,
+      "sha256": "42f84d6633ce0addac120789f28daec187af8f4ec919c6b5aa13676f41409093"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/command.txt",
+      "bytes": 1212,
+      "sha256": "88c0d9e7465b30e17684de98f703142afc4232a74046815493669b3fb39e8c3a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/console.log",
+      "bytes": 61363,
+      "sha256": "fc14801cd8af10d501b7f2d37b1e4ec4fcd5ce513313f80305db32244c7fb9bb"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-23_03_36.txt",
+      "bytes": 7387,
+      "sha256": "0c3247041c13a882869002ca460a2e0f96956dc68198baf489d0f105aacc9b1e"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/policy-queries.jsonl",
+      "bytes": 260533,
+      "sha256": "6c2f6e9156e77d7d9f0e41d055fbca047eaf0ae9f1e71b8731519f1bc01a7f60"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/command.txt",
+      "bytes": 1212,
+      "sha256": "66a653892f5ece1e8288938fdfa044d88a9df0e65ffe59c18876af19f39c22a4"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/console.log",
+      "bytes": 135941,
+      "sha256": "277e3d3a99514621d0cf2371c346db7f6d4621e9b5f06084b0d39bdc4a871a86"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-23_28_23.txt",
+      "bytes": 31831,
+      "sha256": "6a2802082f0efd2a1d2bb8a57fd278b6eddfccb68b9a5e831454bbbb5cf6a4b5"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1336237,
+      "sha256": "c53e0cd47035c835b4f1c09e10b34912c0948911667ee33a172bcfbff42d6ecc"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23/command.txt",
+      "bytes": 1212,
+      "sha256": "f852d269a6397b92b7047f367f60e2737f0a755f6a2512dad8183dc3b9fc4435"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23/console.log",
+      "bytes": 61363,
+      "sha256": "03d3c23a483cf581ad43f851df982d58b1938eb0e0de1476e7ca21241fa6d56d"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-23_12_51.txt",
+      "bytes": 7387,
+      "sha256": "92546ca6d60a0637d14002940fcfc6c1fbe839703f8377812ca2e32507ec30d0"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 255843,
+      "sha256": "be4a9681e06516b14301290349de329b5be97339c08e8ef76b5b85a6e0e0eb79"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/command.txt",
+      "bytes": 1232,
+      "sha256": "98f443049c131ba5bc438e1defc45a79fd28b0e58145128ccbc4114bd8c7d08f"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/console.log",
+      "bytes": 61368,
+      "sha256": "48387a01ac5aada367344ca57f924d9973d89f141dd8983766666d0417e1cbe8"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-21_57_14.txt",
+      "bytes": 7386,
+      "sha256": "808d313e8fa2e315c3052ec7510b345fac0eeccad3070b555268149d9397ec89"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "bytes": 226126,
+      "sha256": "fe5beeebe06fb05bf61b19e12c861465f8292bd82de837a28042c753bc33a98b"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/command.txt",
+      "bytes": 1232,
+      "sha256": "f8ec80a32c636834ef4753d7ff703efe963ec713cc9bfd58570023f4b053255a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/console.log",
+      "bytes": 135945,
+      "sha256": "94cd75fbca8c3d99cecc9c2d2caa93dbaf596120562205a1d9beeb5c8475416d"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-22_18_53.txt",
+      "bytes": 31825,
+      "sha256": "32727569e13fe8d52b77a39a426f346d3447cd3b11b20494bcf09e8f889d9e0e"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1264642,
+      "sha256": "29f122e904ee348e78e77ad4ef4fbdfa9dfbf69dee4823339d519444beadd352"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/command.txt",
+      "bytes": 1192,
+      "sha256": "d704afaf654d60a96e02dd6f7f2c8fd0af5dc04c260bab7c3a3aa41b66d82969"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/console.log",
+      "bytes": 61276,
+      "sha256": "4833307e411bb2f20e53f0554436658745efeff2fc1a10b090a917bd9ab9dc33"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-22_30_49.txt",
+      "bytes": 7387,
+      "sha256": "ccc5c3db6a376a1c68ae93eaecb188cab0fdd6b211349d27235bf8811d6ef1df"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/policy-queries.jsonl",
+      "bytes": 260816,
+      "sha256": "73891e61559e3e77056805bff54112f7ae59ca2656f4f85b55519ba3c5734d33"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/command.txt",
+      "bytes": 1192,
+      "sha256": "b13e5b8777185f6deb5d635031ee2b76a81be01fa52b2b46477c636df78e1f54"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/console.log",
+      "bytes": 135856,
+      "sha256": "ad78a1aed99c3cb95a8ad8bde5b25f8a6a3c676957576e9660c4a93d6520944a"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-22_40_28.txt",
+      "bytes": 31821,
+      "sha256": "39d357c2151114039b825208f67518d48ffbc5c2098b40fb51cc9a38602a95e1"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/policy-queries.jsonl",
+      "bytes": 1407404,
+      "sha256": "b28ba6e7f8f8c45bd1b6dd3ef71e2a618048e09ac44cf828bd715d44940ce5d5"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/awq-interventions-source.py",
+      "bytes": 10781,
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/base-commit.txt",
+      "bytes": 41,
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/complete.json",
+      "bytes": 133,
+      "sha256": "d910604fb4e83c22f7457c5e6635fb2a251e49e0621ef0c4f75ecabdea964ec7"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/CONTRACT_SHA256SUMS.txt",
+      "bytes": 954,
+      "sha256": "1907b4ee779ad9e396d4c568c600728a2cd1eb7fdc64c59db3de8d60d22a4f1c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/evaluator-source.py",
+      "bytes": 24347,
+      "sha256": "f4d3ff7c01ecfe5ffb0f18608ce528b627cc588c8b302f9d8a8f6bbc49e71b93"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23/command.txt",
+      "bytes": 1212,
+      "sha256": "ddc0dbd82cc8c3da04168bf8c55962eaf76c731d5dc88b03ef306f6843665198"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23/console.log",
+      "bytes": 61364,
+      "sha256": "152da5612d008f01d0cb11c7639957e251419f0a26c4c05935d0404c3ad88c8d"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23/EVAL-libero_spatial-openvla-2026_09_23-23_09_43.txt",
+      "bytes": 7390,
+      "sha256": "8c6f1f8bd976bd0787da7efd21c499d139cf9dc0b0a883f845973f89c944a9f4"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "bytes": 277248,
+      "sha256": "188c4103f90af602fca5090eed40aeffbbdcb6d43c756601e319ab637b8b021c"
+    },
+    {
+      "path": "results/014-awq-stage-pruning-20260923/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/oft-evaluator-source.py",
+      "bytes": 22008,
+      "sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+    }
+  ]
+}
