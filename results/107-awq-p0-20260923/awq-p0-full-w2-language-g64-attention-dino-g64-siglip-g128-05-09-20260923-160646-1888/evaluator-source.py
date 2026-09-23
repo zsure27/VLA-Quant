@@ -53,7 +53,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trace-actions", action="store_true", help="Save raw policy chunks and query-time proprio for diagnostics")
     parser.add_argument(
         "--awq-candidate",
-        choices=("profile", "w2-no-clip-primary-g64", "w2-attention-no-clip-primary-g64", "w2-attention-no-clip-dino-g128-siglip-g64", "w2-attention-no-clip-visual-g128", "w2-no-clip-stage-w4", "w2-fixed-coordinates-stage-w4"),
+        choices=("profile", "w2-no-clip-primary-g64", "w2-attention-no-clip-primary-g64", "w2-no-clip-stage-w4", "w2-fixed-coordinates-stage-w4"),
         default="profile",
         help="AWQ rollout recipe; the tuned W2 candidate uses language no-clip, primary vision G64, fused vision G128",
     )
@@ -67,12 +67,7 @@ def parse_args() -> argparse.Namespace:
     args = parser.parse_args()
     if args.awq_scope != "all" and args.method != "awq":
         parser.error("Scoped diagnostics are currently supported only for AWQ")
-    primary_g64_candidates = {
-        "w2-no-clip-primary-g64",
-        "w2-attention-no-clip-primary-g64",
-        "w2-attention-no-clip-dino-g128-siglip-g64",
-        "w2-attention-no-clip-visual-g128",
-    }
+    primary_g64_candidates = {"w2-no-clip-primary-g64", "w2-attention-no-clip-primary-g64"}
     if (args.awq_primary_group64_profile is not None) != (args.awq_candidate in primary_g64_candidates):
         parser.error("primary-g64 candidates require exactly one --awq-primary-group64-profile")
     if args.initial_state_offset < 0 or args.num_trials_per_task < 1:
@@ -285,20 +280,6 @@ def main() -> None:
         from diagnostics.awq_interventions import attention_no_clip_primary_g64_plan
         peer = load_profiles([args.awq_primary_group64_profile], "awq")
         awq_plan = attention_no_clip_primary_g64_plan(entries, metadata, peer)
-        profile_manifest.append({
-            "path": str(args.awq_primary_group64_profile),
-            "sha256": source_sha256(args.awq_primary_group64_profile),
-        })
-    elif args.awq_candidate in {"w2-attention-no-clip-dino-g128-siglip-g64", "w2-attention-no-clip-visual-g128"}:
-        if args.method != "awq" or args.weight_bits != 2 or args.activation_bits != 16 or len(args.profile) != 1:
-            raise ValueError("visual-group attribution requires one AWQ W2A16 base profile")
-        from diagnostics.awq_interventions import attention_no_clip_visual_groups_plan
-        peer = load_profiles([args.awq_primary_group64_profile], "awq")
-        groups = {
-            "w2-attention-no-clip-dino-g128-siglip-g64": (128, 64),
-            "w2-attention-no-clip-visual-g128": (128, 128),
-        }[args.awq_candidate]
-        awq_plan = attention_no_clip_visual_groups_plan(entries, metadata, peer, *groups)
         profile_manifest.append({
             "path": str(args.awq_primary_group64_profile),
             "sha256": source_sha256(args.awq_primary_group64_profile),

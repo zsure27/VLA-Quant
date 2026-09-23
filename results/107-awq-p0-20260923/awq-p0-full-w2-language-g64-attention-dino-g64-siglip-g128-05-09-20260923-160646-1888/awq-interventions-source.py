@@ -133,12 +133,13 @@ def current_w2_candidate_plan(entries, meta, primary_group64_peer):
     return scales, targets, removed
 
 
-def attention_no_clip_visual_groups_plan(entries, meta, group64_peer, dino_group, siglip_group):
-    """G64 attention-only language with independently selected visual groups.
+def attention_no_clip_primary_g64_plan(entries, meta, group64_peer):
+    """G64 language with attention clip disabled, DINO G64, and SigLIP G128.
 
     The peer supplies one coherent set of G64 language block coordinates and
-    The peer supplies coherent G64 language block coordinates. Visual entries
-    are selected branch-wise from the paired G64 peer or G128 base profile.
+    DINO entries.  The base profile supplies the fused SigLIP entries.  This
+    isolates the visual group recipe while keeping the language intervention
+    fixed to the validated G64 attention-only no-clip setting.
     """
     selected, other = group64_peer
     comparison = dict(other, group_size=meta["group_size"])
@@ -146,24 +147,13 @@ def attention_no_clip_visual_groups_plan(entries, meta, group64_peer, dino_group
     if meta["bits"] != 2 or meta["group_size"] != 128 or other["bits"] != 2 or other["group_size"] != 64:
         raise ValueError("要求配对的 W2 G128/G64 profile")
 
-    if dino_group not in (64, 128) or siglip_group not in (64, 128):
-        raise ValueError("视觉 group 只支持64或128")
     scales, targets, removed = plan(selected, other, "attention", set())
-    for branch, group in (("primary", dino_group), ("fused", siglip_group)):
-        source = selected if group == 64 else entries
-        targets.update({
-            name: (dict(entry), 2, group)
-            for name, entry in source.items()
-            if in_vision_branch(name, branch)
-        })
+    visual = vision_plan(entries, meta, 2)
+    visual.update(primary_group_plan(entries, meta, group64_peer))
+    targets.update(visual)
     if len(targets) != 422 or len(removed) != 64:
         raise ValueError("attention-only 候选必须是422目标并移除64个注意力裁剪")
     return scales, targets, removed
-
-
-def attention_no_clip_primary_g64_plan(entries, meta, group64_peer):
-    """Compatibility wrapper: DINO G64 and SigLIP G128."""
-    return attention_no_clip_visual_groups_plan(entries, meta, group64_peer, 64, 128)
 
 
 def language_stage_rollout_plan(entries, meta, w4_layers, peer):

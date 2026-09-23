@@ -14,7 +14,7 @@
 | 历史两种 G64 clip 配方 | 最佳静态 29/50，事后 success 并集 34/50 | 提示可能存在互补失败模式 | 同一量化底座上的 PEFT 专家互补；可训练路由器的 34/50 上界 |
 | LoRA 初始化 / SQ | rank8 响应 SVD 仅离线零步测量；SQ W4A4 未验收 | 初始化和 SQ 诊断有线索 | LoRA 已训练、闭环有效或 SQ 基线已跑通 |
 
-以上数字取自[综合实验日志](../reports/2026-09-16-weekend-review/实验日志.md)、[汇报总结](../reports/2026-09-16-weekend-review/汇报总结.md)及[2026-09-18 分片](../reports/sessions/20260918-107-awq-continuation/)。它们均来自 BF16 权重承载的 fake quant，不能报告真实 INT2/INT4 压缩率或加速。[QVLA 原文](https://arxiv.org/abs/2602.03782)按动作敏感度跨通道分配位宽；本项目 AWQ 视觉逐 Linear/Conv 适配与其方法不是同一种量化机制，当前单套件 W4 数值也不能直接推翻其四套件结论。
+以上数字取自[综合实验日志](../reports/20260918-vla-experiment-summary/EXPERIMENT_LOG_CN.md)、[汇报总结](../reports/20260918-vla-experiment-summary/README_CN.md)及[2026-09-18 分片](../reports/sessions/20260918-107-awq-continuation/)。它们均来自 BF16 权重承载的 fake quant，不能报告真实 INT2/INT4 压缩率或加速。[QVLA 原文](https://arxiv.org/abs/2602.03782)按动作敏感度跨通道分配位宽；本项目 AWQ 视觉逐 Linear/Conv 适配与其方法不是同一种量化机制，当前单套件 W4 数值也不能直接推翻其四套件结论。
 
 ## 2. 对原构想的关键修订
 
