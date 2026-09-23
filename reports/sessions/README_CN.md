@@ -2,6 +2,8 @@
 
 最新实测：[2026-09-23 完整 W2 视觉 group 归因](20260923-107-awq-p0-visual-groups/README_CN.md)，固定语言配置后完成 DINO/SigLIP 的 2×2 配对网格。
 
+后续恢复实验：[2026-09-23 完整 W2 的语言 W4 岛](20260923-107-awq-stage-rescue/README_CN.md)，比较 8–15、8–23 与 16–23 block 范围。
+
 2026-09-22 的仓库整理仅移除经 SHA256 确认的字节相同文件。当前 `manifest.json` 索引整理后的 Git 文件树；每轮 `backup/SHA256SUMS.txt` 等历史回执仍对应服务器归档时的原目录，不改写。旧路径与规范副本的逐项映射见[精确去重清单](../../results/DEDUPLICATED_FILES_20260922.json)，从清理前 Git 提交也可恢复旧布局。
 
 备份约定：每次实验会话收尾时，将图、对应数据和分析单独备份到 GitHub，便于查验及学术汇报。固定位置为 `reports/sessions/YYYYMMDD-SESSION/`，原始小文件放 `results/SESSION/` 并互相引用。不依赖定时对话或服务器独立看门狗。
