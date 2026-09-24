@@ -1,0 +1,200 @@
+{
+  "status": "AUDIT_COMPLETE",
+  "batches": [
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-014547-36550",
+      "episodes_per_run": 50,
+      "reference_successes": 45,
+      "pruned_successes": 43,
+      "paired_both_success": 43,
+      "paired_reference_only": 2,
+      "paired_pruned_only": 0,
+      "paired_both_fail": 5,
+      "reference_policy_queries": 696,
+      "pruned_policy_queries": 729,
+      "reference_trace_sha256": "c950d94108920036c4d259cc321412b0c1a6ccf05f1eabc6731a7e9109be59e2",
+      "pruned_trace_sha256": "10cfcb74b7195eadb60285ee403079d733d8645f7a0500e5568255232f163c9d",
+      "manifest_sha256": "2d60d972c4874fedd8f2901eef88e7e3dee9cc89c61244fc64b106f2db1f74fd",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25-29-20260924-233836-1501",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-25-29-20260925-014547-36556"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-015654-39410",
+      "episodes_per_run": 50,
+      "reference_successes": 47,
+      "pruned_successes": 45,
+      "paired_both_success": 45,
+      "paired_reference_only": 2,
+      "paired_pruned_only": 0,
+      "paired_both_fail": 3,
+      "reference_policy_queries": 676,
+      "pruned_policy_queries": 698,
+      "reference_trace_sha256": "c53ea846ab199afe83e398ed6b921f9df060e655747e4034136b2ed5cfd9c60e",
+      "pruned_trace_sha256": "53e9c3611621a9ce67b15db2c20659eebc32dc0b60998af44e29c058cfc58c15",
+      "manifest_sha256": "8ffd60ff18e9e33deeaa908d7670ab47515398bd5a37aeacd6693a38a019ba33",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-30-34-20260924-235937-7257",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-30-34-20260925-015654-39415"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-020604-42182",
+      "episodes_per_run": 50,
+      "reference_successes": 44,
+      "pruned_successes": 44,
+      "paired_both_success": 43,
+      "paired_reference_only": 1,
+      "paired_pruned_only": 1,
+      "paired_both_fail": 5,
+      "reference_policy_queries": 712,
+      "pruned_policy_queries": 711,
+      "reference_trace_sha256": "6dfc5b24041b4b5aff5955a35f983e1ab00933d1e13ce77442ea7d1706103ee7",
+      "pruned_trace_sha256": "4b36bd15a07db000f58d7d3405511f3ad4f390c3400aa884bd753eb230766a77",
+      "manifest_sha256": "43e6dd2820a4bdb52ad7b1fe729fb0d0556c2289aec5fea0f46d21f55b7cd9e6",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-35-39-20260925-002108-12925",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-35-39-20260925-020604-42187"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-021521-44970",
+      "episodes_per_run": 50,
+      "reference_successes": 41,
+      "pruned_successes": 40,
+      "paired_both_success": 39,
+      "paired_reference_only": 2,
+      "paired_pruned_only": 1,
+      "paired_both_fail": 8,
+      "reference_policy_queries": 751,
+      "pruned_policy_queries": 775,
+      "reference_trace_sha256": "b5f71e17a9ffcd5755236c2dc180e3788482890f7e9ff61b7f8df997f96bdfba",
+      "pruned_trace_sha256": "162906978a97f6087917858f64b01c9f67a6763329b3da0b786e796131a52246",
+      "manifest_sha256": "03ff2dd185aae2eda5ad8130f293df68559edd9633851f5af3e5271e8268baac",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-40-44-20260925-004229-18584",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-40-44-20260925-021522-44975"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-022500-47768",
+      "episodes_per_run": 50,
+      "reference_successes": 42,
+      "pruned_successes": 42,
+      "paired_both_success": 40,
+      "paired_reference_only": 2,
+      "paired_pruned_only": 2,
+      "paired_both_fail": 6,
+      "reference_policy_queries": 741,
+      "pruned_policy_queries": 738,
+      "reference_trace_sha256": "e57f1fd068a8b0769393a00a9bc7cf2dfde75a264627e378bf45986923fdc738",
+      "pruned_trace_sha256": "8bbd66f3c69f7f053d678225fc8525974bdb4469320033effdaed78e9365c8ab",
+      "manifest_sha256": "7f6dbae439d4a9596c607a344e93ac3bf1e5c49e4c4561e60dbeb43fd7eb7314",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-45-49-20260925-010357-24228",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-45-49-20260925-022500-47773"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-023715-50684",
+      "episodes_per_run": 50,
+      "reference_successes": 45,
+      "pruned_successes": 43,
+      "paired_both_success": 42,
+      "paired_reference_only": 3,
+      "paired_pruned_only": 1,
+      "paired_both_fail": 4,
+      "reference_policy_queries": 687,
+      "pruned_policy_queries": 720,
+      "reference_trace_sha256": "1e2bbbd005990ce4b354a3f0ac28443eb63a81be37ec4a236213570cd539f9b0",
+      "pruned_trace_sha256": "ffc28ac67514055e8e82f961a351e52c14652f64d07509372a07d763f3332991",
+      "manifest_sha256": "486cd306274ed1a333d6b7962bd741a5f157bbae28d57d99c20810e3ac790c5c",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-00-04-20260925-012513-30715",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-00-04-20260925-023715-50689"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-024636-53458",
+      "episodes_per_run": 50,
+      "reference_successes": 44,
+      "pruned_successes": 44,
+      "paired_both_success": 40,
+      "paired_reference_only": 4,
+      "paired_pruned_only": 4,
+      "paired_both_fail": 2,
+      "reference_policy_queries": 709,
+      "pruned_policy_queries": 729,
+      "reference_trace_sha256": "6873f7352e2296db4f21122cd94d91ac58fdeeb431db40a43461c2e8141aeb2b",
+      "pruned_trace_sha256": "5922bc0f915054c3499046853cc1c6453c8cc7658195a714d9d70c13be281377",
+      "manifest_sha256": "5024aaece21dc233bd6c540d36287f0b94b09f75016935318adb60e93bd2f2d2",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-183044-1649",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-05-09-20260925-024636-53463"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-025547-56229",
+      "episodes_per_run": 50,
+      "reference_successes": 44,
+      "pruned_successes": 45,
+      "paired_both_success": 43,
+      "paired_reference_only": 1,
+      "paired_pruned_only": 2,
+      "paired_both_fail": 4,
+      "reference_policy_queries": 706,
+      "pruned_policy_queries": 695,
+      "reference_trace_sha256": "d5fb02f4978958d2de56ee278cd916a651c1e4a5c4ae6498b92da4ca892163b7",
+      "pruned_trace_sha256": "791cbb7088b80baa571f58913180c744f98875b8c84568e220879cfc20d08433",
+      "manifest_sha256": "8baf281327a91a53f516320eb846cfa17f4fd76decebb3525651cfd21cdf2d53",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-10-14-20260924-123019-1516",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-10-14-20260925-025547-56234"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-030444-58993",
+      "episodes_per_run": 50,
+      "reference_successes": 39,
+      "pruned_successes": 44,
+      "paired_both_success": 39,
+      "paired_reference_only": 0,
+      "paired_pruned_only": 5,
+      "paired_both_fail": 6,
+      "reference_policy_queries": 787,
+      "pruned_policy_queries": 715,
+      "reference_trace_sha256": "d8c03bb0988e16975c95560244ff675a9351d94a8ddd83e3bf92c9fca423447d",
+      "pruned_trace_sha256": "d4c9b06a2a4c3228e720951b08fcf3732179b9d2646ab5afefa930c9073a811a",
+      "manifest_sha256": "d973b61aec4058f37617840a1e0e52c8b8a0cbc3650de0a37dd43efe8273e575",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-15-19-20260924-125246-7292",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-15-19-20260925-030444-59000"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-candidate-pair-20260925-031345-61761",
+      "episodes_per_run": 50,
+      "reference_successes": 43,
+      "pruned_successes": 41,
+      "paired_both_success": 40,
+      "paired_reference_only": 3,
+      "paired_pruned_only": 1,
+      "paired_both_fail": 6,
+      "reference_policy_queries": 728,
+      "pruned_policy_queries": 760,
+      "reference_trace_sha256": "506819aa82b66397609fb7095bc45c18cc83e16890af9f7354a4b0207290e765",
+      "pruned_trace_sha256": "676b5b7fa94fbf16d8cddd890110d8aab2c447b022b0b4a76cc8e56564f94ded",
+      "manifest_sha256": "f4b3e1dbfa2ec4aaa7fd527584d349349f501a31af2ff632ea6f784aaf2c8237",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-20-24-20260924-132013-13065",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-18-19-20-21-22-23-20-24-20260925-031345-61766"
+      ]
+    }
+  ],
+  "total_episodes_per_candidate": 500,
+  "reference_successes": 434,
+  "pruned_successes": 431,
+  "all_manifests_paired": true,
+  "all_traces_finite_8x7_with_proprio": true
+}

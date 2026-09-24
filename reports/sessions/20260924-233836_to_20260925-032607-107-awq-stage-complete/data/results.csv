@@ -1,0 +1,7 @@
+initial_states,reference_w4_blocks,reference_successes,pruned_w4_blocks,pruned_successes,episodes_per_candidate,paired_both_success,paired_reference_only,paired_pruned_only,paired_both_fail
+00-04,8-23,45,8-15+20-23,43,50,42,3,1,4
+25-29,8-23,45,8-15+20-23,42,50,42,3,0,5
+30-34,8-23,47,8-15+20-23,40,50,40,7,0,3
+35-39,8-23,44,8-15+20-23,42,50,41,3,1,5
+40-44,8-23,41,8-15+20-23,40,50,38,3,2,7
+45-49,8-23,42,8-15+20-23,40,50,38,4,2,6
