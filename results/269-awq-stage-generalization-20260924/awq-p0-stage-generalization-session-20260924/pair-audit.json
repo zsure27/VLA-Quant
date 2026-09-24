@@ -1,0 +1,67 @@
+{
+  "status": "AUDIT_COMPLETE",
+  "batches": [
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-pair-20260924-123019-1508",
+      "episodes_per_run": 50,
+      "reference_successes": 44,
+      "pruned_successes": 42,
+      "paired_both_success": 41,
+      "paired_reference_only": 3,
+      "paired_pruned_only": 1,
+      "paired_both_fail": 5,
+      "reference_policy_queries": 706,
+      "pruned_policy_queries": 742,
+      "reference_trace_sha256": "d5fb02f4978958d2de56ee278cd916a651c1e4a5c4ae6498b92da4ca892163b7",
+      "pruned_trace_sha256": "83ffd975eb4d7496987efee3a697534e02db1aabdf85e961c94c5124b1eceab1",
+      "manifest_sha256": "8baf281327a91a53f516320eb846cfa17f4fd76decebb3525651cfd21cdf2d53",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-10-14-20260924-123019-1516",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-10-14-20260924-124005-4376"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-pair-20260924-125246-7284",
+      "episodes_per_run": 50,
+      "reference_successes": 39,
+      "pruned_successes": 41,
+      "paired_both_success": 36,
+      "paired_reference_only": 3,
+      "paired_pruned_only": 5,
+      "paired_both_fail": 6,
+      "reference_policy_queries": 787,
+      "pruned_policy_queries": 763,
+      "reference_trace_sha256": "d8c03bb0988e16975c95560244ff675a9351d94a8ddd83e3bf92c9fca423447d",
+      "pruned_trace_sha256": "7c8eda4961c623c9df9e9f1d6a703a9cd8ba901855986fa2d1e4e53a9e73ac28",
+      "manifest_sha256": "d973b61aec4058f37617840a1e0e52c8b8a0cbc3650de0a37dd43efe8273e575",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-15-19-20260924-125246-7292",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-15-19-20260924-130256-10062"
+      ]
+    },
+    {
+      "batch": "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-pair-20260924-132013-13057",
+      "episodes_per_run": 50,
+      "reference_successes": 43,
+      "pruned_successes": 40,
+      "paired_both_success": 38,
+      "paired_reference_only": 5,
+      "paired_pruned_only": 2,
+      "paired_both_fail": 5,
+      "reference_policy_queries": 728,
+      "pruned_policy_queries": 778,
+      "reference_trace_sha256": "506819aa82b66397609fb7095bc45c18cc83e16890af9f7354a4b0207290e765",
+      "pruned_trace_sha256": "a553f6196812cbbab3edb121933484b7f0a2582dc238d19e45fb44edac8be092",
+      "manifest_sha256": "f4b3e1dbfa2ec4aaa7fd527584d349349f501a31af2ff632ea6f784aaf2c8237",
+      "result_directories": [
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-20-24-20260924-132013-13065",
+        "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-20-24-20260924-133009-15828"
+      ]
+    }
+  ],
+  "total_episodes_per_candidate": 150,
+  "reference_successes": 126,
+  "pruned_successes": 123,
+  "all_manifests_paired": true,
+  "all_traces_finite_8x7_with_proprio": true
+}

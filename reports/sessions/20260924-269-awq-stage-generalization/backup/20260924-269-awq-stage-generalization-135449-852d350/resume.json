@@ -1,0 +1,20 @@
+{
+  "time_utc": "2026-09-24T05:54:52.466696+00:00",
+  "label": "20260924-269-awq-stage-generalization",
+  "hostname": "autodl-container-2db141bceb-95fcbbe7",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-10-14-20260924-123019-1516",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-15-19-20260924-125246-7292",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-20-24-20260924-132013-13065",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-10-14-20260924-124005-4376",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-15-19-20260924-130256-10062",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-20-24-20260924-133009-15828",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-pair-20260924-123019-1508",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-pair-20260924-125246-7284",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-pair-20260924-132013-13057",
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-session-20260924"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}
