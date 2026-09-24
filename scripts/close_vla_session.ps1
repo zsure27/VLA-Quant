@@ -5,18 +5,28 @@ param(
     [Parameter(Mandatory=$true)][string]$ReportRelativeRoot,
     [Parameter(Mandatory=$true)][string]$RawRelativeRoot,
     [string]$ExpectedHostname='autodl-container-8b78499521-41be183e',
+    [string]$SshHost='connect.nmb1.seetacloud.com',
+    [ValidateRange(1,65535)][int]$SshPort=31263,
+    [string]$IdentityFile='C:/Users/zsure/.ssh/id_ed25519_vla_014',
+    [string]$KnownHostsFile,
+    [string]$RemoteToolDirectory='/root/autodl-tmp/qvla-repro/closure-tools',
+    [string]$ResultPrefix='awq-scope-shard-',
     [string]$FallbackBackupDirectory,
+    [switch]$UseVerifiedFallbackOnly,
     [switch]$Execute
 )
 # One explicitly approved finite closure. No boot, login, timer or deletion.
 $ErrorActionPreference='Stop'
 $taskRepo=(Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 if($Label -notmatch '^[A-Za-z0-9_-]+$' -or $ExpectedVideos -lt 1){throw 'Invalid closure label/video count'}
-if($ExpectedHostname -notmatch '^[A-Za-z0-9-]+$'){throw 'Invalid expected hostname'}
+if($ExpectedHostname -notmatch '^[A-Za-z0-9-]+$' -or $SshHost -notmatch '^[A-Za-z0-9.-]+$' -or
+   $RemoteToolDirectory -notmatch '^/root/autodl-tmp/qvla-repro/[A-Za-z0-9_./-]+$' -or
+   $ResultPrefix -notmatch '^[A-Za-z0-9_-]+$'){throw 'Invalid closure target'}
 if($FallbackBackupDirectory -and $FallbackBackupDirectory -notmatch '^/root/autodl-tmp/qvla-repro/backups/[A-Za-z0-9_-]+$'){throw 'Invalid fallback backup path'}
+if($UseVerifiedFallbackOnly -and -not $FallbackBackupDirectory){throw 'Fast shutdown requires a concrete verified fallback backup'}
 foreach($taskDir in $ResultDirectory){
-    if($taskDir -notmatch '^/root/autodl-tmp/qvla-repro/eval/awq-scope-shard-[A-Za-z0-9_-]+$'){
-        throw 'Only concrete finite AWQ scope shard paths are accepted'
+    if($taskDir -notmatch '^/root/autodl-tmp/qvla-repro/eval/[A-Za-z0-9_-]+$'){
+        throw 'Only concrete finite eval result paths are accepted'
     }
 }
 if($ReportRelativeRoot -notmatch '^reports/sessions/[A-Za-z0-9_-]+$' -or
@@ -24,20 +34,19 @@ if($ReportRelativeRoot -notmatch '^reports/sessions/[A-Za-z0-9_-]+$' -or
 $taskReport=Join-Path $taskRepo $ReportRelativeRoot
 $taskRaw=Join-Path $taskRepo $RawRelativeRoot
 $taskPython='C:/Users/zsure/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
-$taskSsh=@('-i','C:/Users/zsure/.ssh/id_ed25519_vla_014',
-    '-o','UserKnownHostsFile=C:/Users/zsure/Documents/Triton/tmp/vla107-known-hosts',
-    '-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=12')
+$taskSsh=@('-i',$IdentityFile,'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=12')
+if($KnownHostsFile){$taskSsh+=@('-o',"UserKnownHostsFile=$KnownHostsFile")}
 $taskRemotePython='/root/miniconda3/envs/qvla-oft/bin/python'
-$taskRemoteScripts='/root/autodl-tmp/qvla-repro/overlays/baseline-shards/scripts'
+$taskRemoteScripts=$RemoteToolDirectory
 if(-not $Execute){
     [pscustomobject]@{execute=$false;expected_hostname=$ExpectedHostname;results=$ResultDirectory;
-        expected_videos=$ExpectedVideos;steps=@('identity','paired audit','persistent archive',
+        expected_videos=$ExpectedVideos;steps=@('identity','remote closure tool SHA verification','paired audit','persistent archive',
         'local copy and SHA256','GitHub zsure27 account verification and push',
         'native shutdown receipt','post-shutdown receipt push');deletes_data=$false} | ConvertTo-Json -Depth 4
     return
 }
 function Invoke-TaskSsh([string]$command){
-    $taskOutput=& ssh @taskSsh -p 31263 root@connect.nmb1.seetacloud.com $command
+    $taskOutput=& ssh @taskSsh -p $SshPort "root@$SshHost" $command
     if($LASTEXITCODE -ne 0){throw 'SSH step failed; preserve all data and report server may still run'}
     return $taskOutput
 }
@@ -46,7 +55,7 @@ function Invoke-TaskGitSnapshot([string]$message){
     if($LASTEXITCODE -ne 0){throw 'Report manifest generation failed'}
     & $taskPython (Join-Path $taskReport 'manifest.py') --verify
     if($LASTEXITCODE -ne 0){throw 'Report manifest verification failed'}
-    & git -c "safe.directory=$taskRepo" -c core.longpaths=true -C $taskRepo add -- $ReportRelativeRoot $RawRelativeRoot scripts/close_vla_session.ps1 diagnostics/audit_policy_traces.py
+    & git -c "safe.directory=$taskRepo" -c core.longpaths=true -C $taskRepo add -- $ReportRelativeRoot $RawRelativeRoot scripts/close_vla_session.ps1 scripts/sync_vla_remote_closure.ps1 diagnostics/audit_policy_traces.py
     if($LASTEXITCODE -ne 0){throw 'Git staging failed'}
     & git -c "safe.directory=$taskRepo" -C $taskRepo diff --cached --quiet
     if($LASTEXITCODE -eq 1){
@@ -59,8 +68,18 @@ function Invoke-TaskGitSnapshot([string]$message){
 $taskHost=(Invoke-TaskSsh 'hostname' | Out-String).Trim()
 if($taskHost -ne $ExpectedHostname){throw 'Instance hostname mismatch; no shutdown permitted'}
 Write-Output 'CLOSURE_STEP=identity_verified'
+$taskSyncArgs=@{SshHost=$SshHost;SshPort=$SshPort;IdentityFile=$IdentityFile;
+    ExpectedHostname=$ExpectedHostname;RemoteDirectory=$RemoteToolDirectory}
+if($KnownHostsFile){$taskSyncArgs.KnownHostsFile=$KnownHostsFile}
+& (Join-Path $PSScriptRoot 'sync_vla_remote_closure.ps1') @taskSyncArgs | Write-Output
+if($LASTEXITCODE -ne 0){throw 'Remote closure tool synchronization failed before backup'}
+Write-Output 'CLOSURE_STEP=remote_tools_verified'
 $taskBackup=$FallbackBackupDirectory
 $taskPreparationError=$null
+if($UseVerifiedFallbackOnly){
+    $taskPreparationError='Fast shutdown used the previously verified fallback archive; no new archive or report rebuild was attempted.'
+    Write-Output "CLOSURE_STEP=verified_fallback_selected; DIRECTORY=$taskBackup"
+}else{
 try{
 foreach($taskDir in $ResultDirectory){
     Invoke-TaskSsh "$taskRemotePython $taskRemoteScripts/awq_scope_analysis.py $taskDir --reference-root /root/autodl-tmp/qvla-repro/eval" | Write-Output
@@ -74,15 +93,15 @@ $taskBackup=$taskNewBackups[0];$taskBase=Split-Path $taskBackup -Leaf
 Write-Output "CLOSURE_STEP=persistent_backup; DIRECTORY=$taskBackup"
 $taskPending=Join-Path $taskRepo ("results/pending-"+$Label)
 New-Item -ItemType Directory -Force $taskPending | Out-Null
-& scp -r @taskSsh -P 31263 "root@connect.nmb1.seetacloud.com:$taskBackup" $taskPending
+& scp -r @taskSsh -P $SshPort "root@${SshHost}:$taskBackup" $taskPending
 if($LASTEXITCODE -ne 0){throw 'Local backup transfer failed; no deletion or false full-backup claim'}
 $taskLocalBackup=Join-Path $taskPending $taskBase
-& $taskPython (Join-Path $PSScriptRoot 'verify_awq_scope_backup_local.py') --backup $taskLocalBackup --receipts (Join-Path $taskReport "backup/$taskBase") --raw-root $taskRaw --expected-videos $ExpectedVideos
+& $taskPython (Join-Path $PSScriptRoot 'verify_awq_scope_backup_local.py') --backup $taskLocalBackup --receipts (Join-Path $taskReport "backup/$taskBase") --raw-root $taskRaw --expected-videos $ExpectedVideos --result-prefix $ResultPrefix
 if($LASTEXITCODE -ne 0){throw 'Local SHA256/video/extraction verification failed'}
 Write-Output 'CLOSURE_STEP=local_backup_verified'
 & D:/Anaconda3-5.3.1/python.exe (Join-Path $taskReport 'reproduce_scope.py')
 if($LASTEXITCODE -ne 0){throw 'Measured scope report generation failed'}
-& $taskPython (Join-Path $taskRepo 'diagnostics/audit_policy_traces.py') --raw-root (Join-Path $taskRepo 'results/107-baseline-continuation-20260917') --raw-root $taskRaw --output (Join-Path $taskReport 'data/policy_trace_audit.json')
+& $taskPython (Join-Path $taskRepo 'diagnostics/audit_policy_traces.py') --raw-root $taskRaw --result-prefix $ResultPrefix --output (Join-Path $taskReport 'data/policy_trace_audit.json')
 if($LASTEXITCODE -ne 0){throw 'Original trace audit failed'}
 Invoke-TaskGitSnapshot 'Back up completed AWQ session before native shutdown'
 Write-Output 'CLOSURE_STEP=github_verified_before_shutdown'
@@ -91,12 +110,13 @@ Write-Output 'CLOSURE_STEP=github_verified_before_shutdown'
     if(-not $taskBackup){throw 'Preparation failed without a verified fallback archive; shutdown not executed'}
     Write-Output 'CLOSURE_STEP=preparation_incomplete; ORIGINALS_RETAINED_ON_PERSISTENT_DISK'
 }
+}
 # The remote helper independently rechecks backup hashes, idle GPU and supervisor.
 try{
     # PowerShell 5 turns expected SSH disconnect stderr into ErrorRecord objects.
     $taskSavedErrorPreference=$ErrorActionPreference
     $ErrorActionPreference='Continue'
-$taskSignalOutput=& ssh @taskSsh -p 31263 root@connect.nmb1.seetacloud.com "$taskRemotePython $taskRemoteScripts/vla_shutdown_remote.py --backup-dir $taskBackup --execute" 2>&1
+$taskSignalOutput=& ssh @taskSsh -p $SshPort "root@$SshHost" "$taskRemotePython $taskRemoteScripts/vla_shutdown_remote.py --backup-dir $taskBackup --execute" 2>&1
 $taskSignalExit=$LASTEXITCODE
 }finally{$ErrorActionPreference=$taskSavedErrorPreference}
 $taskReceipts=@()
