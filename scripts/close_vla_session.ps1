@@ -51,10 +51,16 @@ function Invoke-TaskSsh([string]$command){
     return $taskOutput
 }
 function Invoke-TaskGitSnapshot([string]$message){
-    & $taskPython (Join-Path $taskReport 'manifest.py')
-    if($LASTEXITCODE -ne 0){throw 'Report manifest generation failed'}
-    & $taskPython (Join-Path $taskReport 'manifest.py') --verify
-    if($LASTEXITCODE -ne 0){throw 'Report manifest verification failed'}
+    $taskManifestScript=Join-Path $taskReport 'manifest.py'
+    $taskManifestJson=Join-Path $taskReport 'manifest.json'
+    if(Test-Path -LiteralPath $taskManifestScript){
+        & $taskPython $taskManifestScript
+        if($LASTEXITCODE -ne 0){throw 'Report manifest generation failed'}
+        & $taskPython $taskManifestScript --verify
+        if($LASTEXITCODE -ne 0){throw 'Report manifest verification failed'}
+    }elseif(Test-Path -LiteralPath $taskManifestJson){
+        $null=Get-Content -LiteralPath $taskManifestJson -Raw | ConvertFrom-Json
+    }else{throw 'No report manifest or manifest generator found'}
     & git -c "safe.directory=$taskRepo" -c core.longpaths=true -C $taskRepo add -- $ReportRelativeRoot $RawRelativeRoot scripts/close_vla_session.ps1 scripts/sync_vla_remote_closure.ps1 diagnostics/audit_policy_traces.py
     if($LASTEXITCODE -ne 0){throw 'Git staging failed'}
     & git -c "safe.directory=$taskRepo" -C $taskRepo diff --cached --quiet
@@ -76,8 +82,9 @@ if($LASTEXITCODE -ne 0){throw 'Remote closure tool synchronization failed before
 Write-Output 'CLOSURE_STEP=remote_tools_verified'
 $taskBackup=$FallbackBackupDirectory
 $taskPreparationError=$null
+$taskClosureMode='full'
 if($UseVerifiedFallbackOnly){
-    $taskPreparationError='Fast shutdown used the previously verified fallback archive; no new archive or report rebuild was attempted.'
+    $taskClosureMode='verified_fallback_fast'
     Write-Output "CLOSURE_STEP=verified_fallback_selected; DIRECTORY=$taskBackup"
 }else{
 try{
@@ -131,7 +138,7 @@ if($taskReceipts.Count -ne 1){
 }
 $taskClosure=[ordered]@{time_utc=[DateTime]::UtcNow.ToString('o');hostname=$taskHost;
     native_request_receipt=$taskReceipts[0];ssh_exit_code=$taskSignalExit;
-    preparation_error=$taskPreparationError;requested_results=$ResultDirectory;
+    closure_mode=$taskClosureMode;preparation_error=$taskPreparationError;requested_results=$ResultDirectory;
     platform_off_independently_verified=$false;billing_stop_independently_verified=$false}
 $taskClosure | ConvertTo-Json -Depth 8 | Set-Content -Encoding UTF8 (Join-Path $taskReport 'closure.json')
 Write-Output 'CLOSURE_STEP=native_request_receipt_saved; PLATFORM_OFF_NOT_INDEPENDENTLY_VERIFIED'

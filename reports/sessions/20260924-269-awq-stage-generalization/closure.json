@@ -1,0 +1,22 @@
+{
+  "time_utc": "2026-09-24T06:02:09.5262502Z",
+  "hostname": "autodl-container-2db141bceb-95fcbbe7",
+  "native_request_receipt": {
+    "time_utc": "2026-09-24T06:02:08.294668+00:00",
+    "commit": "852d350",
+    "backup": "/root/autodl-tmp/qvla-repro/backups/20260924-269-awq-stage-generalization-135449-852d350",
+    "supervisor_pid": 837,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "execute": true,
+    "control_panel_off_verified": false,
+    "note": "Uses native supervisor termination; omits native Trash deletion"
+  },
+  "ssh_exit_code": -1,
+  "preparation_error": null,
+  "requested_results": [
+    "/root/autodl-tmp/qvla-repro/eval/awq-p0-stage-generalization-session-20260924"
+  ],
+  "platform_off_independently_verified": false,
+  "billing_stop_independently_verified": false,
+  "closure_mode": "verified_fallback_fast"
+}
