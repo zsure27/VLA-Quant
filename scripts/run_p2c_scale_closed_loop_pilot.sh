@@ -9,15 +9,16 @@ BASE=$ROOT/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt
 W4=$ROOT/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt
 G64=$ROOT/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt
 SCALE_STATE=${VLA_SCALE_STATE:-$ROOT/backups/p2_20260925_107_final/recovery_adapter_state.pt}
+OFT_ROOT=${VLA_OFT_ROOT:-$ROOT/src/QVLA/openvla-oft}
 STAMP=$(date +%Y%m%d-%H%M%S)
 OUT=$ROOT/eval/p2c-scale-closed-loop-pilot-${OFFSET}-$((OFFSET+COUNT-1))-$STAMP-$$
 test -z "$(nvidia-smi --query-compute-apps=pid --format=csv,noheader)" || exit 3
-for path in "$REPO/qvla/run_eval_official_quant.py" "$REPO/qvla/fixed_code_scale.py" "$SCALE_STATE" "$BASE" "$W4" "$G64"; do test -s "$path"; done
+for path in "$REPO/qvla/run_eval_official_quant.py" "$REPO/qvla/fixed_code_scale.py" "$OFT_ROOT/experiments/robot/libero/run_libero_eval.py" "$SCALE_STATE" "$BASE" "$W4" "$G64"; do test -s "$path"; done
 mkdir -p "$OUT"
 printf '%s\n' "$OUT" > "$ROOT/eval/LATEST_P2C_SCALE.txt"
 trap 'rc=$?; printf "%s\n" "$rc" > "$OUT/exit-code.txt"' EXIT
 source /root/miniconda3/bin/activate /root/miniconda3/envs/qvla-oft
-export PYTHONPATH="$REPO:$ROOT/src/QVLA/openvla-oft:$ROOT/src/LIBERO"
+export PYTHONPATH="$REPO:$OFT_ROOT:$ROOT/src/LIBERO"
 export CUDA_VISIBLE_DEVICES=0 PYTHONHASHSEED=0 WANDB_MODE=disabled MUJOCO_GL=egl
 export TF_NUM_INTEROP_THREADS=2 TF_NUM_INTRAOP_THREADS=4 TOKENIZERS_PARALLELISM=false
 python - "$OUT/preregistered-protocol.json" "$OFFSET" "$COUNT" "$SCALE_STATE" <<'PY'
@@ -27,7 +28,7 @@ payload={"schema_version":"1.0","question":"Does the existing shared fixed-code 
 pathlib.Path(out).write_text(json.dumps(payload,indent=2)+"\n")
 PY
 sha256sum "$REPO/qvla/run_eval_official_quant.py" "$REPO/qvla/fixed_code_scale.py" \
-  "$REPO/diagnostics/awq_interventions.py" "$REPO/oft/experiments/robot/libero/run_libero_eval.py" \
+  "$REPO/diagnostics/awq_interventions.py" "$OFT_ROOT/experiments/robot/libero/run_libero_eval.py" \
   "$BASE" "$G64" "$W4" "$SCALE_STATE" > "$OUT/CONTRACT_SHA256SUMS.txt"
 common=(python "$REPO/qvla/run_eval_official_quant.py" --method awq --weight-bits 2 --activation-bits 16
  --pretrained_checkpoint "$ROOT/models/openvla-7b-oft-finetuned-libero-spatial"
