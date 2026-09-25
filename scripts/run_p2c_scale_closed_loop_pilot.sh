@@ -9,7 +9,7 @@ BASE=$ROOT/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt
 W4=$ROOT/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt
 G64=$ROOT/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt
 SCALE_STATE=${VLA_SCALE_STATE:-$ROOT/backups/p2_20260925_107_final/recovery_adapter_state.pt}
-OFT_ROOT=${VLA_OFT_ROOT:-$ROOT/src/QVLA/openvla-oft}
+OFT_ROOT=${VLA_OFT_ROOT:-$ROOT/overlays/awq-p0-stage-20260923/oft}
 STAMP=$(date +%Y%m%d-%H%M%S)
 OUT=$ROOT/eval/p2c-scale-closed-loop-pilot-${OFFSET}-$((OFFSET+COUNT-1))-$STAMP-$$
 test -z "$(nvidia-smi --query-compute-apps=pid --format=csv,noheader)" || exit 3
