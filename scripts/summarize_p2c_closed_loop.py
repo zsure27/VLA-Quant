@@ -74,11 +74,14 @@ def main() -> None:
     parser.add_argument("directory", type=Path)
     args = parser.parse_args()
     protocol = json.loads((args.directory / "preregistered-protocol.json").read_text())
+    case_directories = protocol.get("case_directories", CASES)
+    if set(case_directories) != set(CASES):
+        raise ValueError("case directory mapping must define C0, C1 and C2")
     offset, count = protocol["initial_state_offset"], protocol["trials_per_task"]
     expected = {(task, state) for task in range(protocol["task_count"]) for state in range(offset, offset + count)}
     loaded = {}
     evidence = {}
-    for case, name in CASES.items():
+    for case, name in case_directories.items():
         directory = args.directory / name
         logs = list(directory.glob("EVAL-*.txt"))
         if len(logs) != 1 or (directory / "exit-code.txt").read_text().strip() != "0":

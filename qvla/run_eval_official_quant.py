@@ -65,6 +65,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--awq-w4-profile", type=Path)
     parser.add_argument("--awq-w4-layers", default="")
     parser.add_argument("--awq-scale-peft-state", type=Path)
+    parser.add_argument("--awq-recovery-lora-state", type=Path)
     args = parser.parse_args()
     if args.awq_scope != "all" and args.method != "awq":
         parser.error("Scoped diagnostics are currently supported only for AWQ")
@@ -98,14 +99,17 @@ def parse_args() -> argparse.Namespace:
             parser.error("Fixed-coordinate rescue requires layers without any peer profile")
     elif args.awq_w4_layers or args.awq_w4_profile is not None:
         parser.error("W4 stage parameters require --awq-candidate w2-no-clip-stage-w4")
-    if args.awq_scale_peft_state is not None:
+    if args.awq_scale_peft_state is not None and args.awq_recovery_lora_state is not None:
+        parser.error("Select one PEFT state per paired evaluation")
+    if args.awq_scale_peft_state is not None or args.awq_recovery_lora_state is not None:
         if args.awq_candidate != "w2-attention-primary-g64-stage-w4":
-            parser.error("Scale-PEFT state requires the exact attention/visual stage backbone")
+            parser.error("PEFT state requires the exact attention/visual stage backbone")
         layers = {int(value) for value in args.awq_w4_layers.split(",") if value}
         if layers != set(range(8, 16)) | set(range(20, 24)):
-            parser.error("Scale-PEFT state is pinned to the exact 12L backbone")
-        if not args.awq_scale_peft_state.is_file():
-            parser.error("Scale-PEFT state file does not exist")
+            parser.error("PEFT state is pinned to the exact 12L backbone")
+        state_path = args.awq_scale_peft_state or args.awq_recovery_lora_state
+        if not state_path.is_file():
+            parser.error("PEFT state file does not exist")
     return args
 
 
@@ -126,6 +130,26 @@ def load_scale_peft_state(path: Path) -> dict[str, torch.Tensor]:
     for name, value in payload.items():
         if not isinstance(value, torch.Tensor) or value.dtype != torch.float32 or not torch.isfinite(value).all():
             raise RuntimeError(f"Invalid Scale-PEFT tensor: {name}")
+    return payload
+
+
+def load_recovery_lora_state(path: Path) -> dict[str, torch.Tensor]:
+    payload = torch.load(path, map_location="cpu", weights_only=True)
+    families = (
+        "self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
+        "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj",
+    )
+    expected = {
+        f"language_model.model.layers.{layer}.{family}.awq_recovery_lora.{index}.weight"
+        for layer in (18, 19) for family in families for index in (0, 1)
+    }
+    if not isinstance(payload, dict) or set(payload) != expected:
+        missing = sorted(expected - set(payload)) if isinstance(payload, dict) else sorted(expected)
+        extra = sorted(set(payload) - expected) if isinstance(payload, dict) else []
+        raise RuntimeError(f"Recovery LoRA state key mismatch: missing={missing}, extra={extra}")
+    for name, value in payload.items():
+        if not isinstance(value, torch.Tensor) or not value.is_floating_point() or not torch.isfinite(value).all():
+            raise RuntimeError(f"Invalid Recovery LoRA tensor: {name}")
     return payload
 
 
@@ -193,6 +217,7 @@ def apply_quantization(
     awq_plan: tuple[dict[str, Any], dict[str, tuple[dict[str, Any], int, int]], list[str]] | None = None,
     awq_scope: str = "all",
     scale_peft_state: dict[str, torch.Tensor] | None = None,
+    recovery_lora_state: dict[str, torch.Tensor] | None = None,
 ) -> list[Any]:
     names = list(awq_plan[1] if awq_plan is not None else entries)
     check_scope(names)
@@ -252,6 +277,15 @@ def apply_quantization(
                     scale_peft_state[state_key],
                 )
                 print("[scale-peft] " + json.dumps({"target": name, **details}, sort_keys=True))
+            lora_prefix = f"{name}.awq_recovery_lora"
+            if recovery_lora_state is not None and f"{lora_prefix}.0.weight" in recovery_lora_state:
+                from qvla.recovery_lora import attach_recovery_lora_state
+                details = attach_recovery_lora_state(
+                    modules[name],
+                    recovery_lora_state[f"{lora_prefix}.0.weight"],
+                    recovery_lora_state[f"{lora_prefix}.1.weight"],
+                )
+                print("[recovery-lora] " + json.dumps({"target": name, **details}, sort_keys=True))
             print(f"[official-awq] {index + 1}/{len(names)} {name}")
         if scale_peft_state is not None:
             attached = {
@@ -260,6 +294,13 @@ def apply_quantization(
             }
             if attached != set(scale_peft_state):
                 raise RuntimeError("Not all Scale-PEFT state tensors were attached")
+        if recovery_lora_state is not None:
+            attached = {
+                f"{name}.awq_recovery_lora.{index}.weight"
+                for name in names if hasattr(modules[name], "awq_recovery_lora") for index in (0, 1)
+            }
+            if attached != set(recovery_lora_state):
+                raise RuntimeError("Not all Recovery LoRA state tensors were attached")
     else:
         if weight_bits not in (4, 8, 16) or activation_bits not in (4, 8, 16):
             raise ValueError("SQ 仅支持已定义的 W4/W8/W16、A4/A8/A16 控制组")
@@ -322,6 +363,7 @@ def main() -> None:
         {"path": str(path), "sha256": source_sha256(path)} for path in args.profile
     ]
     scale_peft_state = None
+    recovery_lora_state = None
     if args.awq_scale_peft_state is not None:
         scale_peft_state = load_scale_peft_state(args.awq_scale_peft_state)
         profile_manifest.append({
@@ -331,6 +373,16 @@ def main() -> None:
             "parameter_tensors": len(scale_peft_state),
             "parameters": sum(value.numel() for value in scale_peft_state.values()),
             "serialized_bytes": args.awq_scale_peft_state.stat().st_size,
+        })
+    if args.awq_recovery_lora_state is not None:
+        recovery_lora_state = load_recovery_lora_state(args.awq_recovery_lora_state)
+        profile_manifest.append({
+            "path": str(args.awq_recovery_lora_state),
+            "sha256": source_sha256(args.awq_recovery_lora_state),
+            "kind": "recovery_lora_state",
+            "parameter_tensors": len(recovery_lora_state),
+            "parameters": sum(value.numel() for value in recovery_lora_state.values()),
+            "serialized_bytes": args.awq_recovery_lora_state.stat().st_size,
         })
     if args.awq_candidate == "w2-no-clip-primary-g64":
         if args.method != "awq" or args.weight_bits != 2 or args.activation_bits != 16 or len(args.profile) != 1:
@@ -440,6 +492,7 @@ def main() -> None:
         awq_plan=awq_plan,
         awq_scope=args.awq_scope,
         scale_peft_state=scale_peft_state,
+        recovery_lora_state=recovery_lora_state,
     )
     print(
         f"[official-quant] method={args.method} weight_bits={args.weight_bits} "
