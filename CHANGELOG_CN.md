@@ -1,5 +1,12 @@
 # 封装审计与修复记录
 
+## 2026-09-25
+
+- 冻结粗粒度 W4 block 组合搜索，固定 16L/14L/12L 的参照角色；12L 成为 blocks18–19 PEFT 恢复底座。
+- 新增 PEFT/Contextual Routing 强制执行协议：先训练数据与 q/z/Δ 契约，再 shared PEFT、专家互补和因果 Top-1 Router。
+- 将 Spatial states0–49 标为历史/开发证据，要求模型选择完成前预注册真正留出的最终 reset/seed/扰动协议。
+- 明确 Response-SVD 仅是 LoRA 初始化；不同静态量化配置不得直接充当轻量运行时专家。
+
 ## 2026-09-11
 
 - 修复跨平台 overlay 哈希错误：旧 expected 来自 Windows CRLF；按固定 QVLA git blob 验证 LF 后统一换行再比较。

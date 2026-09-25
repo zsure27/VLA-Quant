@@ -17,8 +17,10 @@
 
 补齐 states 0–4 后，完整 Spatial500 为 16 层 **434/500（86.8%）**、12 层 **412/500（82.4%）**。
 
-本轮进一步测试 14 层折中配置 `8–15 + 18–23`，即仅移除 16–17。完整 Spatial500 得到 **431/500（86.2%）**，只比 16 层参考少 3 次成功，同时少保护 2 个 W4 block；配对为共同成功 414、仅参考成功 20、仅 14 层成功 17、共同失败 49。十批 manifest 严格一致，三候选相关联合审计中的 14,463 次策略查询全部 finite。该配置是当前更好的准确率与 W4 保护规模折中。
+本轮进一步测试 14 层折中配置 `8–15 + 18–23`，即仅移除 16–17。完整 Spatial500 得到 **431/500（86.2%）**，只比 16 层参考少 3 次成功，同时少保护 2 个 W4 block；配对为共同成功 414、仅参考成功 20、仅 14 层成功 17、共同失败 49。十批 manifest 严格一致，三候选相关联合审计中的 14,463 次策略查询全部 finite。14L 是当前静态部署膝点候选，并非已证明的唯一 Pareto 最优。
+
+2026-09-25 主线调整后，16L 固定为较强静态参照，14L 固定为静态部署候选，12L 固定为 PEFT 主底座。12L 相对 14L 仅把 blocks18–19 从 W4 改为 W2，却下降 19/500，因此后续核心实验是在不改变其他量化设置的条件下，用 blocks18–19 的 shared Scale-PEFT 或 rank8 Recovery LoRA 追回这部分收益。未经用户明确重启 P3，不再运行其他 W4 block 组合搜索。
 
 远端主归档：`/root/autodl-tmp/qvla-repro/backups/107-awq-stage-complete-20260925-032607-852d350`。本机副本：`C:\Users\zsure\Documents\Triton\backups\107-awq-stage-complete-20260925-032607-852d350`。
 
-逐批结果见 [`data/results.csv`](data/results.csv)。本轮完整联合审计与 states 0–4 补测将在收尾前写入本目录。
+逐批 16L/12L 结果见 [`data/results.csv`](data/results.csv)。完整 14L Spatial500 联合审计见仓库备份中的 [`20260925-032607-awq-14layer-spatial500-audit.json`](../../../results/20260924-233836_to_20260925-032607-107-awq-stage-complete/data/20260925-032607-awq-14layer-spatial500-audit.json)，归档哈希和恢复信息位于同一时间命名备份目录。

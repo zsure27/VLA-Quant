@@ -1,0 +1,45 @@
+{
+  "status": "ACTIVE_MAINLINE",
+  "effective_date": "2026-09-25",
+  "causal_chain": [
+    "static_low_bit_backbone",
+    "shared_peft_recovery",
+    "expert_complementarity",
+    "observable_context_prediction",
+    "contextual_routing"
+  ],
+  "p3_static_search_frozen": true,
+  "p3_reopen_requires_explicit_user_instruction": true,
+  "frozen_quantization_common": {
+    "language_low_bit": "W2_G64",
+    "attention_vo_extra_clip": false,
+    "mlp_clip": "retain_frozen_recipe",
+    "dino": "W2_G64",
+    "siglip": "W2_G128",
+    "evaluation": "existing_fake_quant_contract"
+  },
+  "references": {
+    "static_reference_16l": {
+      "w4_blocks": "8-23",
+      "spatial_successes": 434,
+      "episodes": 500
+    },
+    "deployment_knee_candidate_14l": {
+      "w4_blocks": "8-15,18-23",
+      "spatial_successes": 431,
+      "episodes": 500
+    },
+    "primary_peft_backbone_12l": {
+      "w4_blocks": "8-15,20-23",
+      "peft_target_w2_blocks": "18-19",
+      "spatial_successes": 412,
+      "episodes": 500
+    }
+  },
+  "next_gate": "P1_DATA_AND_PARAMETERIZATION_CONTRACT",
+  "first_shared_peft_targets": "language_blocks_18_19_only",
+  "router_allowed_only_after_shared_peft_and_stable_expert_complementarity": true,
+  "router_context_boundary": "after_block_17_before_block_18",
+  "historical_development_states": "libero_spatial_official_0_49",
+  "final_test_protocol": "PRE_REGISTER_BEFORE_ROUTER_MODEL_SELECTION_COMPLETES"
+}

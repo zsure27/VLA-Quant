@@ -1,5 +1,7 @@
 # AWQ W2 恢复与 Contextual Routing：证据审阅和后续实验计划
 
+> **2026-09-25 执行覆盖：** Spatial500 已完成 16L=434/500、14L=431/500、12L=412/500。静态 W4 block 组合搜索现已冻结；16L 作为较强静态参照，14L 作为静态部署膝点候选，12L 作为 blocks 18–19 shared PEFT 的主实验底座。后续严格遵循 `static backbone → shared PEFT → expert complementarity → observable context → Router`。具体约束与下一轮队列见[2026-09-25 主线执行协议](PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)，该协议覆盖本文中与之冲突的旧队列和目标层建议。
+
 更新：2026-09-22。本文审阅用户提供的 15 节实验构想，属于**待执行计划**；表中只有注明来源的数字是已完成实验。优先级仍是 AWQ 基线与归因，随后是静态 PEFT，证明互补性后才训练路由器；SmoothQuant 独立排障。所有新结果以实际 profile、manifest、逐回合数据和当轮源码为准。
 
 ## 1. 当前证据及其边界

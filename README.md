@@ -1,6 +1,6 @@
 # VLA 快速量化与微调：个人实验备份
 
-保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-23**。
+保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-25**。
 
 ## 实验记录入口
 
@@ -24,6 +24,9 @@
 | 完整连接目标W2，G64注意力无clip | 11/50 | 同50回合，视觉也是G64 |
 | 完整W2视觉group归因（语言固定G64注意力无clip） | DINO128/SigLIP128 3/50；DINO128/SigLIP64 1/50；DINO64/SigLIP128 10/50；DINO64/SigLIP64 11/50 | 初态5–9严格配对；主要恢复来自DINO G64 |
 | 完整W2底座加语言W4岛 | 8–15层27/50；8–23层44/50；16–23层短筛13/20 | DINO64/SigLIP128固定；属于混合W2/W4 |
+| 16层静态参照 | 434/500 | W4 blocks 8–23；较强静态恢复参考 |
+| 14层静态候选 | 431/500 | W4 blocks 8–15、18–23；部署膝点候选 |
+| 12层PEFT底座 | 412/500 | W4 blocks 8–15、20–23；blocks18–19保持W2 |
 
 SQ W4A4尚未验收；PEFT已有低秩初始化测量，但没有梯度训练、LoRA闭环或Router结果。当前是BF16存储的fake quant，不据此报告INT2/INT4实际压缩与加速。完整四套件、多种子及真实kernel评测未完成。
 
@@ -55,4 +58,4 @@ python scripts/build_experiment_summary.py
 
 模型、校准集、视频、NPZ和大 profile 不放普通 Git，恢复位置及 SHA 以各轮清单为准。双份归档不代表所有模型和数据均已异地备份。凭据和私钥不入仓库。此次整理保留全部唯一的逐回合日志和指标，仅移除哈希核对过的重复文件及汇总 JSON 的重复数值副本；历史 Git 提交仍可取回原目录布局。
 
-后续先验证 AWQ 完整 W2 的语言/视觉组合损失，SQ 数值控制其次；静态 PEFT 有效且专家互补可泛化后再考虑路由。具体顺序见[2026-09-22 实验计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
+静态 W4 block 组合搜索已冻结。后续以 12L 为同一低比特底座，先完成训练数据与 q/z/Δ 契约，再在 blocks18–19 做 shared Scale-PEFT 与 Recovery LoRA；只有 shared PEFT 闭环有效且两个等预算专家呈现稳定互补后，才训练基于 block17 后因果表示的 Top-1 Router。执行顺序见[2026-09-25 主线协议](docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)与[2026-09-22 证据计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
