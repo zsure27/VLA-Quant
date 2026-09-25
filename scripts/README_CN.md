@@ -6,6 +6,7 @@
 |---|---|
 | 环境恢复与安装 | `bootstrap_autodl.sh`、`install_adapter.sh`、`repair_install_20260911.sh`、`check_runtime.py` |
 | 当前 AWQ 有限闭环 | `run_awq_baseline_shard.sh`、`run_awq_scope_shard.sh`、`run_awq_full_scope_shard.sh`、`run_awq_g64_language_family_shard.sh`、`run_awq_p0_visual_group_shard.sh` |
+| 连续阶段执行 | `vla_stage_supervisor.py` 读取不可变JSON计划并无间隙顺序执行；状态只在阶段启动、完成、失败和终态时增加 revision，可用 `--wait-after-revision` 低频等待事件，禁止以逐回合日志轮询代替阶段事件 |
 | AWQ/SQ 机制实验 | `run_awq_spatial.sh`、`run_awq_validation.sh`、`run_smoothing_ablation.sh` 及相应 `run_awq_*` 有限诊断脚本 |
 | 状态与配对审计 | `awq_scope_status.py`、`baseline_shard_status.py`、`verify_awq_scope_backup_local.py`、`verify_deduplicated_results.py`、`verify_session_manifests.py`、`validate_repository_layout.py` |
 | 归档与收尾 | `sync_vla_remote_closure.ps1`、`backup_active_diagnostics.py`、`vla_push_local.ps1`、`close_vla_session.ps1`、`vla_shutdown_remote.py` |
