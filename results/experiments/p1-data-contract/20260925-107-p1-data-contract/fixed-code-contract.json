@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "targets": [
+    {
+      "name": "language_model.model.layers.18.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "435a0330e2c9d8e35ce43041f5b0e61d049828596fc4152828bacfc2847aa07c",
+      "zero_sha256": "04597e5c0813ee4e2de18d3c5025db73705936a112d4f69019d2a2ebe2550f63",
+      "step_sha256": "2ecdce1ea4c15f40d2c3e0243e80078057d4bef8536471b32e2c0a370f3d3363"
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "cd09c2ea9091ce821b715e2eef3827031de42997c84e75ce9aa95d35f863dec5",
+      "zero_sha256": "2c7603b7be284548c16a26429e78586e46581e87f56a6206b4b7d190bd44b8ea",
+      "step_sha256": "b29621d67e181af444638fa9ec3b188e7297271ffa2875a344399d286daf5bbe"
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "dd57db85bbe699504f96b038773bbaa6d833af92e9537a40f775278d6cdb2976",
+      "zero_sha256": "d9aab059053edc2113f92f72d827bc52f47d722b62416eb69bac50d511c44069",
+      "step_sha256": "4ac14f2a798243217bbb14283b9124becf97db72a615c79aa2cde6b312c35961"
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "44854c5f4d3fb7f2e8690dd385065360a1857f705c2ff65e6ca9a0d29996252f",
+      "zero_sha256": "14da3ff612586e3d5381de71ec6e75ea84c3d2c26023e79db4082f6a1ab54636",
+      "step_sha256": "a410818f5779d7b1f5f9c666e937792cbb07ab7ad8c75cfbf8e07fd5b1b777e3"
+    },
+    {
+      "name": "language_model.model.layers.18.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "0b099c4100ebb67bc65495cbca8dd772a5ac89a5a14a58af3d29b36fe4297ea5",
+      "zero_sha256": "e0b6ca4d1442b9230eec6d2507b134396518c9cd72cb7cd5b7445cdd05bda42a",
+      "step_sha256": "d12fb5fa6a47e48c91165b80c1d1a4596a9df7b2e59b670adfc6157ba8399e0c"
+    },
+    {
+      "name": "language_model.model.layers.18.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "bfb65bf0975d191d9e17e239193736f88a4fa346c84217309431f6a2a6023b9e",
+      "zero_sha256": "f15c22e286c600b74147de5a7c3837a8f5ec70e1dc179ff4b3c99a889631b33f",
+      "step_sha256": "a73afd28fd86f82958565fe071949f82d1378373f4fc0ea7194c60e3d25a9e44"
+    },
+    {
+      "name": "language_model.model.layers.18.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "21763b23a02b47fa643d7ba414e7ad3d4bcb3e298bf1382da689e95d923c6f06",
+      "zero_sha256": "5a14bd9377c1a392cb04722b188c32969348fc12be2f7ed1c27453b412a7eac4",
+      "step_sha256": "431f3fdaf81855788be2c6bb9535b119487e5aad8b139b3ef757055f1edf84d8"
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "41d7281e51318a6d21b5e63a5757a20def64b89b40d091cedfbf2e3f2c89cce4",
+      "zero_sha256": "cde2075a5bb24ca049ce1a51d6e22bd3b26104035fed8bcaaa752080111c90d2",
+      "step_sha256": "d9553b07b34275bd9895b4b911a2e2632f0aca291604969f48d1fac2e025eee6"
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "aa2e9cdca134cd237831882c467f0752e0b36f56cbef7c5e7cde3086dca9b44b",
+      "zero_sha256": "e49b93c9c471a2b873ac205e53ea2128ea2a59e3720a692b0f0fb8cb5fa46596",
+      "step_sha256": "7a5ed16dfdd11438f2116c6d2f0caa31d5a18b1a2346031f0bafeb67c9d64431"
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "7dee7dd0a29698a588e2a0900334d1ab7521003a2d393119f4bf50466f1d3a87",
+      "zero_sha256": "1857d26f2053059d3fe56919a10deb3fca8463fa556e88c659f9e3461282b1f6",
+      "step_sha256": "c5d3e4086d77cd4680410ebbd27adc73f690d3a587dba10f74d9ba4547f92225"
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "787e3f7b2fa023a521bc6b8ac13ef4adbf022422101896033e5a5cb8959ce0c7",
+      "zero_sha256": "ad5b242aba6c9fb94fb4ccfc0e3519e88e8204fec0379cc2e550378ca7aa36c0",
+      "step_sha256": "e96b1f554f23312ebcbc3644906831b42971dc303e06f48d069e3c9e2d26f717"
+    },
+    {
+      "name": "language_model.model.layers.19.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "943b02a4f602ae2667056a3deb46595892a2bdcd3784e3adbf9327159aad9fb1",
+      "zero_sha256": "6095e81a3ecbcf18a6fe1b007fb908c4d207a82c37e0fc2f152be9c35d21e61f",
+      "step_sha256": "7e892d5ddfb2572a56ce57764686beab2b938fa58cc21036455e035643820103"
+    },
+    {
+      "name": "language_model.model.layers.19.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "d9085b8c825bfb94264153b32434aff7e3c26d9fc419601c8c5537a079e54129",
+      "zero_sha256": "04f95439dd0002b6c7e4f15d51c365e6f8b600d7621bfa7ec1c6ba3776632870",
+      "step_sha256": "17b95915bd4bfc52b307f3639ac9c75706bf436b98dd5e164abb0d28a282f228"
+    },
+    {
+      "name": "language_model.model.layers.19.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "q_sha256": "f7215e4f58a29af96c52900d3b95ccd63967240fd5b78114898a4364c8b8d456",
+      "zero_sha256": "811b75d012999c851252d1e17abefcff2c7bc2720aa49bc9f9b6d7a10bd38cfb",
+      "step_sha256": "764ec0856a404af0c2f43952dbb7a1c772abf17956b07e1d9796a45292f1d886"
+    }
+  ],
+  "target_count": 14,
+  "loss": 39.37352752685547,
+  "finite_gradients": true,
+  "nonzero_gradients": true,
+  "reload_exact": true,
+  "trainable_parameters": 6324224,
+  "profile_sha256": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc",
+  "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial"
+}

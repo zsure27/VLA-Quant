@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "dataset": "libero_spatial",
+  "dataset_version": "1.0.0",
+  "trajectory_count": 432,
+  "transition_count": 52970,
+  "split_method": "within each instruction, sort SHA256(vla-peft-split-v1\\0 + deterministic dataset index + original file_path + instruction), then 70/15/remaining",
+  "split_counts": {
+    "offline_final_holdout": 75,
+    "peft_train": 298,
+    "router_dev": 59
+  },
+  "fields": {
+    "images": [
+      "observation.image uint8[256,256,3]",
+      "observation.wrist_image uint8[256,256,3]"
+    ],
+    "instruction": "language_instruction UTF-8, constant within trajectory",
+    "proprio": "observation.state float32[8]",
+    "action": "raw float32[7]; LIBERO transform maps raw gripper -1=open,+1=close via 1-clip(x,0,1) to 1=open,0=close; dimensions 0:6 use bounds_q99 while gripper stays unnormalized",
+    "action_chunk": "8 steps (OpenVLA-OFT runtime constant)"
+  },
+  "action_min": [
+    -0.9375,
+    -0.9375,
+    -0.9375,
+    -0.1875,
+    -0.3675000071525574,
+    -0.36000001430511475,
+    -1.0
+  ],
+  "action_max": [
+    0.9375,
+    0.9375,
+    0.9375,
+    0.1971428543329239,
+    0.33642858266830444,
+    0.375,
+    1.0
+  ],
+  "gripper_unique_values": [
+    -1.0,
+    1.0
+  ],
+  "standardized_gripper_unique_values": [
+    0.0,
+    1.0
+  ],
+  "instructions": {
+    "pick up the black bowl between the plate and the ramekin and place it on the plate": 45,
+    "pick up the black bowl from table center and place it on the plate": 46,
+    "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate": 42,
+    "pick up the black bowl next to the cookie box and place it on the plate": 46,
+    "pick up the black bowl next to the plate and place it on the plate": 47,
+    "pick up the black bowl next to the ramekin and place it on the plate": 45,
+    "pick up the black bowl on the cookie box and place it on the plate": 43,
+    "pick up the black bowl on the ramekin and place it on the plate": 39,
+    "pick up the black bowl on the stove and place it on the plate": 35,
+    "pick up the black bowl on the wooden cabinet and place it on the plate": 44
+  },
+  "leakage_policy": {
+    "unit": "trajectory",
+    "frame_random_split": false,
+    "spatial_states_0_49": "historical/development closed-loop evidence only; never training trajectories or blind test",
+    "offline_final_holdout": "sealed until PEFT type, modules, rank, experts and router features are frozen",
+    "closed_loop_final": "use changed simulator reset/seed or preregistered controlled perturbations; record initial observation hashes"
+  }
+}

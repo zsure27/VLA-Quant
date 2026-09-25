@@ -268,6 +268,89 @@ def predict(sample_path, cfg, model, action_head, proprio_projector, processor):
     return torch.as_tensor(raw).float(), normalized, input_hashes
 
 
+def end_to_end_action_distill(args, calibration, teacher_targets, cfg, model, action_head,
+                              proprio_projector, processor):
+    """Jointly train the blocks 18-19 recovery branches on final normalized actions."""
+    from qvla.action_jacobian_batch import load_sample, prepare_inputs
+    named = [(name, parameter) for name, parameter in model.named_parameters()
+             if ("awq_recovery_lora" in name or "awq_scale_peft" in name) and parameter.requires_grad]
+    if not named:
+        raise RuntimeError("end-to-end distillation found no trainable recovery parameters")
+    unexpected = [name for name, parameter in model.named_parameters()
+                  if parameter.requires_grad and "awq_recovery_lora" not in name and "awq_scale_peft" not in name]
+    if unexpected:
+        raise RuntimeError(f"unexpected trainable parameters: {unexpected[:8]}")
+    cached = []
+    device = torch.device("cuda:0")
+    for path in calibration:
+        sample = load_sample(path)
+        inputs, state = prepare_inputs(sample, cfg, model, processor, device)
+        cached.append((path.name, inputs, state, teacher_targets[path.name].to(device)))
+    parameters = [parameter for _, parameter in named]
+    optimizer = torch.optim.AdamW(parameters, lr=args.awq_e2e_distill_learning_rate)
+
+    def forward_normalized(inputs, state):
+        _, hidden = model.predict_action(
+            **inputs, unnorm_key=cfg.unnorm_key, do_sample=False, proprio=state,
+            proprio_projector=proprio_projector, action_head=action_head,
+            noisy_action_projector=None, use_film=False)
+        return action_head.predict_action(hidden).reshape(-1, 7).float()
+
+    def evaluate_training_set():
+        values = []
+        with torch.no_grad():
+            for _, inputs, state, target in cached:
+                values.append(F.mse_loss(forward_normalized(inputs, state), target.float()).item())
+        return float(np.mean(values)), values
+
+    initial_mse, initial_per_sample = evaluate_training_set()
+    trace = []
+    generator = torch.Generator(device="cpu").manual_seed(args.seed)
+    order = torch.randperm(len(cached), generator=generator).tolist()
+    with torch.enable_grad():
+        for step in range(args.awq_e2e_distill_steps):
+            if step and step % len(order) == 0:
+                order = torch.randperm(len(cached), generator=generator).tolist()
+            sample_name, inputs, state, target = cached[order[step % len(order)]]
+            optimizer.zero_grad(set_to_none=True)
+            prediction = forward_normalized(inputs, state)
+            loss = F.mse_loss(prediction, target.float())
+            if not torch.isfinite(loss):
+                raise RuntimeError("non-finite end-to-end action distillation loss")
+            loss.backward()
+            gradients = [p.grad for p in parameters if p.grad is not None]
+            if not gradients or not all(torch.isfinite(g).all() for g in gradients):
+                raise RuntimeError("invalid end-to-end action distillation gradients")
+            grad_norm = torch.nn.utils.clip_grad_norm_(parameters, 1.0)
+            optimizer.step()
+            if step == 0 or (step + 1) % 10 == 0 or step + 1 == args.awq_e2e_distill_steps:
+                row = {"step": step + 1, "sample": sample_name, "loss": float(loss.detach()),
+                       "gradient_norm": float(grad_norm.detach())}
+                trace.append(row)
+                print("E2E_ACTION_DISTILL", json.dumps(row, sort_keys=True), flush=True)
+    final_mse, final_per_sample = evaluate_training_set()
+    state = {name: parameter.detach().cpu() for name, parameter in named}
+    state_path = args.output / "e2e_adapter_state.pt"
+    torch.save(state, state_path)
+    summary = {
+        "objective": "normalized_action_mse_8x7",
+        "steps": args.awq_e2e_distill_steps,
+        "learning_rate": args.awq_e2e_distill_learning_rate,
+        "samples": [name for name, _, _, _ in cached],
+        "trainable_parameters": sum(p.numel() for p in parameters),
+        "trainable_parameter_names": [name for name, _ in named],
+        "initial_train_mse": initial_mse,
+        "final_train_mse": final_mse,
+        "initial_per_sample_mse": initial_per_sample,
+        "final_per_sample_mse": final_per_sample,
+        "trace": trace,
+        "state_file": state_path.name,
+        "state_sha256": digest(state_path),
+    }
+    save_json(args.output / "e2e_distillation.json", summary)
+    return summary
+
+
 @torch.no_grad()
 def awq_micro(args, bundle, official):
     from qvla.official_quant_adapter import module_rows, flatten_weight, awq_fake_quantize
@@ -350,8 +433,16 @@ def main():
     p.add_argument("--awq-residual-rank", type=int, default=0)
     p.add_argument("--awq-residual-layers", default="")
     p.add_argument("--awq-residual-calibration-dir", type=Path)
+    p.add_argument("--awq-residual-calibration-count", type=int, default=8)
     p.add_argument("--awq-residual-token-scope", choices=("all", "action"), default="all")
     p.add_argument("--awq-residual-response-svd", action="store_true")
+    p.add_argument("--awq-residual-train-steps", type=int, default=0)
+    p.add_argument("--awq-residual-learning-rate", type=float, default=1e-3)
+    p.add_argument("--awq-scale-peft-layers", default="")
+    p.add_argument("--awq-scale-peft-train-steps", type=int, default=0)
+    p.add_argument("--awq-scale-peft-learning-rate", type=float, default=1e-3)
+    p.add_argument("--awq-e2e-distill-steps", type=int, default=0)
+    p.add_argument("--awq-e2e-distill-learning-rate", type=float, default=1e-4)
     p.add_argument("--smoothing-pairs-fp32", action="store_true")
     p.add_argument("--smoothing-vision-fp32", action="store_true")
     p.add_argument("--smoothing-bypass", action="store_true")
@@ -362,6 +453,7 @@ def main():
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
     p.add_argument("--awq-primary-no-clip", action="store_true")
     p.add_argument("--awq-primary-group64-profile", type=Path)
+    p.add_argument("--awq-exact-attention-visual-stage", action="store_true")
     p.add_argument("--attention-layers", default="", help="例如 7,15,23,31；不切换 attention 后端")
     p.add_argument("--teacher-dir", type=Path)
     p.add_argument("--profile-dir", type=Path)
@@ -399,22 +491,42 @@ def main():
         p.error("FP32 pairs are vision-only smoothing W16A16 numerical diagnostics")
     if (args.smoothing_bypass or args.export_candidate_teacher or args.teacher_fp32_reference) and not numerical_fp32:
         p.error("Numerical reference flags require FP32 vision pairs")
-    from awq_interventions import parse_layers, plan, vision_plan, in_vision_branch, remove_primary_clips, primary_group_plan, family_precision_plan
+    from awq_interventions import (parse_layers, plan, vision_plan, in_vision_branch,
+        remove_primary_clips, primary_group_plan, family_precision_plan,
+        attention_visual_stage_plan)
     w4_layers = parse_layers(args.awq_w4_layers)
     rescue_layers = parse_layers(args.awq_rescue_layers)
     residual_layers = parse_layers(args.awq_residual_layers)
+    scale_peft_layers = parse_layers(args.awq_scale_peft_layers)
+    if residual_layers and scale_peft_layers:
+        p.error("LoRA and Scale-PEFT must be separate paired runs")
     if bool(residual_layers) != bool(args.awq_residual_rank):
         p.error("Residual recovery requires rank and layers together")
-    if (args.awq_residual_calibration_dir is not None or args.awq_residual_token_scope != "all") and not residual_layers:
-        p.error("Residual input statistics require a residual branch")
+    if (args.awq_residual_calibration_dir is not None or args.awq_residual_token_scope != "all") and not (residual_layers or scale_peft_layers):
+        p.error("Recovery input statistics require a LoRA or Scale-PEFT branch")
     if args.awq_residual_token_scope == "action" and args.awq_residual_calibration_dir is None:
         p.error("Action-token residual statistics require calibration inputs")
     if args.awq_residual_response_svd and (args.awq_residual_calibration_dir is None or args.awq_residual_token_scope != "action"):
         p.error("Response SVD requires independent action-token calibration")
+    if args.awq_residual_train_steps and (args.awq_residual_calibration_dir is None or args.awq_residual_token_scope != "action"):
+        p.error("Recovery LoRA training requires independent action-token calibration")
+    if scale_peft_layers and not (args.awq_scale_peft_train_steps or args.awq_e2e_distill_steps):
+        p.error("Scale-PEFT requires local or end-to-end training steps")
+    if args.awq_scale_peft_train_steps and not scale_peft_layers:
+        p.error("Scale-PEFT local training steps require Scale-PEFT target layers")
+    if scale_peft_layers and (args.awq_residual_calibration_dir is None or args.awq_residual_token_scope != "action" or
+                              args.mode != "awq" or args.weight_bits != 2 or args.activation_bits != 16):
+        p.error("Scale-PEFT requires AWQ W2A16 and action-token calibration")
+    if args.awq_e2e_distill_steps and (not (residual_layers or scale_peft_layers) or
+            args.awq_residual_calibration_dir is None or args.mode != "awq"):
+        p.error("End-to-end distillation requires a recovery branch and independent calibration inputs")
+    if args.awq_e2e_distill_steps < 0 or args.awq_e2e_distill_learning_rate <= 0:
+        p.error("Invalid end-to-end distillation schedule")
     if residual_layers and (args.awq_residual_rank not in (4,8,16) or args.mode != "awq" or
-            args.weight_bits != 2 or args.activation_bits != 16 or args.weight_scope != "language" or
-            args.awq_disable_clip != "all" or rescue_layers or w4_layers or args.awq_w4_profile or args.awq_vision_bits != 16):
-        p.error("Residual probe requires language W2 no-clip, BF16 vision, no mixed precision")
+            args.weight_bits != 2 or args.activation_bits != 16 or
+            args.weight_scope != ("all" if args.awq_vision_bits != 16 else "language") or
+            args.awq_disable_clip not in ("all", "attention") or rescue_layers):
+        p.error("Residual probe requires the declared W2A16 language targets and a complete backbone plan")
     if bool(rescue_layers) != bool(args.awq_rescue_family):
         p.error("Family rescue requires both layer selection and family")
     if rescue_layers and (w4_layers or args.awq_w4_profile or args.awq_vision_bits != 16 or args.awq_disable_clip != "all"):
@@ -422,14 +534,21 @@ def main():
     vision_composition = args.awq_vision_bits != 16
     if args.awq_primary_group64_profile and (args.awq_vision_bits != 2 or args.awq_vision_branch not in ('primary', 'all') or args.awq_primary_no_clip):
         p.error('G64对照仅允许primary/all分支W2保留裁剪')
+    if args.awq_exact_attention_visual_stage and not (
+            args.mode == "awq" and args.weight_bits == 2 and args.activation_bits == 16 and
+            args.weight_scope == "all" and args.awq_disable_clip == "attention" and
+            w4_layers and args.awq_w4_profile is not None and
+            args.awq_vision_bits == 2 and args.awq_vision_branch == "all" and
+            args.awq_primary_group64_profile is not None and not args.awq_primary_no_clip):
+        p.error("Exact stage backbone requires language G64 attention-no-clip, W4 peer, and DINO G64/SigLIP G128")
     if args.awq_primary_no_clip and (args.awq_vision_bits != 2 or args.awq_vision_branch != "primary"):
         p.error("主视觉无裁剪仅允许primary分支W2")
     if args.awq_vision_branch != "all" and not vision_composition:
         p.error("分支选择仅用于显式视觉量化组合")
     if (args.awq_vision_bits == 4) != (args.awq_vision_profile is not None):
         p.error("视觉 W4 必须提供独立 profile，其他视觉位宽不提供该参数")
-    if vision_composition and (args.awq_disable_clip != "all" or w4_layers):
-        p.error("视觉组合固定语言 W2 全部取消裁剪，不叠加语言 W4 层保护")
+    if vision_composition and args.awq_disable_clip not in ("all", "attention"):
+        p.error("视觉组合的语言裁剪范围只能是 all 或 attention")
     intervention = args.awq_disable_clip != "none" or bool(w4_layers) or args.awq_w4_profile is not None or vision_composition or bool(rescue_layers)
     if intervention and (args.mode != "awq" or args.weight_scope != ("all" if vision_composition else "language") or
                          args.weight_bits != 2 or args.activation_bits != 16 or args.oracle_projector):
@@ -481,23 +600,32 @@ def main():
             raise ValueError("AWQ 首轮只支持 all/vision/language；细粒度恢复另做受控实验")
         profile_manifest = [{"file": str(args.awq_profile), "sha256": digest(args.awq_profile)}]
         if intervention:
-            w4 = load_profiles([args.awq_w4_profile], "awq") if w4_layers else None
-            intervention_plan = (family_precision_plan(entries, meta, rescue_layers, args.awq_rescue_family)
-                                 if rescue_layers else plan(entries, meta, args.awq_disable_clip, w4_layers, w4))
-            if w4:
-                profile_manifest.append({"file": str(args.awq_w4_profile), "sha256": digest(args.awq_w4_profile)})
-            if vision_composition:
-                peer = load_profiles([args.awq_vision_profile], "awq") if args.awq_vision_bits == 4 else None
-                visual_targets = vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch)
-                if args.awq_primary_group64_profile:
-                    visual_targets.update(primary_group_plan(entries, meta, load_profiles([args.awq_primary_group64_profile], 'awq')))
-                    profile_manifest.append({'file': str(args.awq_primary_group64_profile), 'sha256': digest(args.awq_primary_group64_profile)})
+            if args.awq_exact_attention_visual_stage:
+                group64 = load_profiles([args.awq_primary_group64_profile], "awq")
+                w4 = load_profiles([args.awq_w4_profile], "awq")
+                intervention_plan = attention_visual_stage_plan(
+                    entries, meta, group64, w4, w4_layers)
                 visual_removed = []
-                if args.awq_primary_no_clip:
-                    visual_targets, visual_removed = remove_primary_clips(visual_targets)
-                intervention_plan[1].update(visual_targets)
-                if peer:
-                    profile_manifest.append({"file": str(args.awq_vision_profile), "sha256": digest(args.awq_vision_profile)})
+                for path in (args.awq_primary_group64_profile, args.awq_w4_profile):
+                    profile_manifest.append({"file": str(path), "sha256": digest(path)})
+            else:
+                w4 = load_profiles([args.awq_w4_profile], "awq") if w4_layers else None
+                intervention_plan = (family_precision_plan(entries, meta, rescue_layers, args.awq_rescue_family)
+                                     if rescue_layers else plan(entries, meta, args.awq_disable_clip, w4_layers, w4))
+                if w4:
+                    profile_manifest.append({"file": str(args.awq_w4_profile), "sha256": digest(args.awq_w4_profile)})
+                if vision_composition:
+                    peer = load_profiles([args.awq_vision_profile], "awq") if args.awq_vision_bits == 4 else None
+                    visual_targets = vision_plan(entries, meta, args.awq_vision_bits, peer, args.awq_vision_branch)
+                    if args.awq_primary_group64_profile:
+                        visual_targets.update(primary_group_plan(entries, meta, load_profiles([args.awq_primary_group64_profile], 'awq')))
+                        profile_manifest.append({'file': str(args.awq_primary_group64_profile), 'sha256': digest(args.awq_primary_group64_profile)})
+                    visual_removed = []
+                    if args.awq_primary_no_clip:
+                        visual_targets, visual_removed = remove_primary_clips(visual_targets)
+                    intervention_plan[1].update(visual_targets)
+                    if peer:
+                        profile_manifest.append({"file": str(args.awq_vision_profile), "sha256": digest(args.awq_vision_profile)})
         # profile 文件不变也要核对实际加载的官方源码。
         for saved, loaded in (("awq_auto_scale", "awq_auto_scale_block"),
                               ("awq_auto_clip", "awq_auto_clip"), ("awq_quantizer", "awq_quantize")):
@@ -565,9 +693,11 @@ def main():
         from qvla.awq_block import apply_block_scales, apply_llama_entry
         from qvla.official_quant_adapter import apply_awq_entry
         residual_records = {}
+        scale_peft_records = {}
         residual_input_rms = {}
         residual_input_rows = {}
         residual_calibration_manifest = []
+        e2e_teacher_targets = {}
         if meta["bits"] != args.weight_bits or args.activation_bits != 16:
             raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
         modules = dict(model.named_modules())
@@ -581,10 +711,12 @@ def main():
             for prefix, scales in scale_plan.items():
                 apply_block_scales(modules[prefix], scales, official)
             if args.awq_residual_calibration_dir is not None:
-                calibration=sorted(args.awq_residual_calibration_dir.glob("sample-*.npz"))[64:72]
-                if len(calibration)!=8 or set(p.resolve() for p in calibration)&set(p.resolve() for p in args.samples):
-                    raise ValueError("Residual calibration requires eight separate inputs at indices64-71")
-                selected_names=[n for n in target_plan if int(n.split(".layers.")[1].split(".")[0]) in residual_layers]
+                calibration=sorted(args.awq_residual_calibration_dir.glob("sample-*.npz"))[:args.awq_residual_calibration_count]
+                if len(calibration)!=args.awq_residual_calibration_count or set(p.resolve() for p in calibration)&set(p.resolve() for p in args.samples):
+                    raise ValueError("Residual calibration requires the declared number of separate inputs")
+                recovery_layers=residual_layers or scale_peft_layers
+                selected_names=[n for n in target_plan if n.startswith("language_model.") and
+                                int(n.split(".layers.")[1].split(".")[0]) in recovery_layers]
                 stats={}
                 calibration_recorder=Recorder(model)
                 calibration_handles=[]
@@ -597,7 +729,8 @@ def main():
                                 raise ValueError("Action token indices unavailable for residual statistics")
                             x=x[:,start:start+count,:]
                         x=x.reshape(-1,x.shape[-1])
-                        if args.awq_residual_response_svd:
+                        if (args.awq_residual_response_svd or args.awq_residual_train_steps or
+                                args.awq_e2e_distill_steps or scale_peft_layers):
                             residual_input_rows.setdefault(name,[]).append(x.cpu())
                         total=x.square().sum(0).cpu()
                         previous=stats.get(name)
@@ -609,33 +742,51 @@ def main():
                     with torch.random.fork_rng(devices=[0]):
                         for path in calibration:
                             calibration_recorder.reset(None)
-                            predict(path,cfg,model,head,proprio,processor)
+                            _, teacher_normalized, _ = predict(path,cfg,model,head,proprio,processor)
+                            if args.awq_e2e_distill_steps:
+                                e2e_teacher_targets[path.name] = teacher_normalized
                             residual_calibration_manifest.append({"sample":path.name,"sha256":digest(path)})
                             print("RESIDUAL_INPUT_CALIBRATED",path.name,flush=True)
                 finally:
                     for h in calibration_handles: h.remove()
                     calibration_recorder.close()
                     np.random.set_state(np_state); random.setstate(py_state)
-                if set(stats)!=set(selected_names) or any(v[2]!=8 for v in stats.values()):
+                if set(stats)!=set(selected_names) or any(v[2]!=args.awq_residual_calibration_count for v in stats.values()):
                     raise ValueError("Residual input calibration target/call coverage mismatch")
                 residual_input_rms={n:(s/c).sqrt() for n,(s,c,_) in stats.items()}
-                if args.awq_residual_response_svd:
+                if (args.awq_residual_response_svd or args.awq_residual_train_steps or
+                        args.awq_e2e_distill_steps or scale_peft_layers):
                     residual_input_rows={n:torch.cat(rows) for n,rows in residual_input_rows.items()}
                 save_json(args.output/"residual_input_statistics.json",{n:{"rows":stats[n][1],"rms":r.tolist()} for n,r in residual_input_rms.items()})
             for name, (entry, bits, group_size) in target_plan.items():
                 if list(modules[name].weight.shape) != entry["shape"]:
                     raise ValueError("干预 profile 参数形状不符")
                 fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
-                residual_selected = bool(residual_layers) and int(name.split(".layers.")[1].split(".")[0]) in residual_layers
-                original_weight = modules[name].weight.detach().clone() if residual_selected else None
+                residual_selected = (bool(residual_layers) and name.startswith("language_model.") and
+                                     int(name.split(".layers.")[1].split(".")[0]) in residual_layers)
+                scale_peft_selected = (bool(scale_peft_layers) and name.startswith("language_model.") and
+                                       int(name.split(".layers.")[1].split(".")[0]) in scale_peft_layers)
+                original_weight = modules[name].weight.detach().clone() if (residual_selected or scale_peft_selected) else None
                 fn(modules[name], entry, official, bits, group_size)
                 if residual_selected:
                     from low_rank_recovery import attach_residual
                     details=attach_residual(modules[name], original_weight, args.awq_residual_rank,
                         int(hashlib.sha256(name.encode()).hexdigest()[:8],16),
-                        None if args.awq_residual_response_svd else residual_input_rms.get(name),residual_input_rows.get(name))
+                        None if (args.awq_residual_response_svd or args.awq_residual_train_steps or
+                                 args.awq_e2e_distill_steps) else residual_input_rms.get(name),
+                        residual_input_rows.get(name),
+                        init="response-svd" if args.awq_residual_response_svd else "standard-zero",
+                        train_steps=args.awq_residual_train_steps,
+                        learning_rate=args.awq_residual_learning_rate)
                     residual_records[name]=details
                     print("RESIDUAL_ATTACHED",name,flush=True)
+                    del original_weight
+                elif scale_peft_selected:
+                    from scale_peft_recovery import attach_scale_peft
+                    details=attach_scale_peft(modules[name],original_weight,entry,bits,group_size,
+                        residual_input_rows[name],args.awq_scale_peft_train_steps,args.awq_scale_peft_learning_rate)
+                    scale_peft_records[name]=details
+                    print("SCALE_PEFT_ATTACHED",name,flush=True)
                     del original_weight
         elif args.weight_scope != "vision":
             for prefix, scales in meta["block_scales"].items():
@@ -643,10 +794,28 @@ def main():
         for name in ([] if intervention else w_names):
             fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
             fn(modules[name], entries[name], official, args.weight_bits, meta["group_size"])
+        e2e_summary = None
+        if args.awq_e2e_distill_steps:
+            e2e_summary = end_to_end_action_distill(
+                args, calibration, e2e_teacher_targets, cfg, model, head, proprio, processor)
+        recovery_state = {name: parameter.detach().cpu() for name, parameter in model.named_parameters()
+                          if "awq_recovery_lora" in name or "awq_scale_peft" in name}
+        recovery_state_record = None
+        if recovery_state:
+            recovery_state_path = args.output / "recovery_adapter_state.pt"
+            torch.save(recovery_state, recovery_state_path)
+            recovery_state_record = {"file": recovery_state_path.name,
+                                     "sha256": digest(recovery_state_path),
+                                     "parameter_tensors": len(recovery_state)}
         save_json(args.output / "scope.json", {"weight_targets": w_names, "activation_targets": [],
             "low_rank_residual": residual_records,
+            "fixed_code_scale_peft": scale_peft_records,
             "residual_adapter_parameters": sum(r["adapter_parameters"] for r in residual_records.values()),
-            "residual_training_steps": 0,
+            "scale_peft_parameters": sum(r["trainable_parameters"] for r in scale_peft_records.values()),
+            "residual_training_steps": args.awq_residual_train_steps,
+            "scale_peft_training_steps": args.awq_scale_peft_train_steps,
+            "e2e_action_distillation": e2e_summary,
+            "recovery_adapter_state": recovery_state_record,
             "residual_input_token_scope":args.awq_residual_token_scope,
             "residual_response_svd":args.awq_residual_response_svd,
             "residual_calibration_manifest":residual_calibration_manifest,
@@ -662,6 +831,7 @@ def main():
             "group_size_by_target": {n: target_plan[n][2] if intervention else meta['group_size'] for n in w_names},
             "removed_visual_clip_targets": visual_removed if vision_composition else [],
             "clip_intervention_scope": ("language_and_primary" if args.awq_primary_no_clip else "language_only") if intervention else None,
+            "exact_attention_visual_stage": args.awq_exact_attention_visual_stage,
             "weight_bits_by_target": {n: target_plan[n][1] if intervention else args.weight_bits for n in w_names},
             "recipe": meta["algorithm"], "warning": "vision 为显式适配；范围消融不是完整论文基线"})
     if args.mode == "smoothquant":

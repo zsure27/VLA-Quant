@@ -43,4 +43,16 @@ class RecoveryContractTest(unittest.TestCase):
         torch.testing.assert_close(base(x),restored(x),atol=0,rtol=0)
         with self.assertRaises(ValueError): attach_residual(base,teacher,2,7)
 
+    def test_standard_zero_and_equal_step_training_contract(self):
+        torch.manual_seed(3)
+        base=torch.nn.Linear(8,6,bias=False); base.weight.data.zero_()
+        teacher=torch.randn(6,2)@torch.randn(2,8)
+        x=torch.randn(16,8)
+        detail=attach_residual(base,teacher,2,7,input_rows=x,init="standard-zero",
+                               train_steps=20,learning_rate=1e-2)
+        self.assertTrue(detail["initial_output_exact_zero"])
+        self.assertEqual(detail["training_steps"],20)
+        self.assertLess(detail["training_final_mse"],detail["training_initial_mse"])
+        self.assertIsNone(base.weight.grad)
+
 if __name__=="__main__": unittest.main()

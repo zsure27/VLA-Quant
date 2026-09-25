@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "status": "SUPERSEDED_CONFIGURATION_MISMATCH",
+  "reason": "The initial diagnostic composition kept language W2 at G128; the registered 12L backbone requires language W2 G64.",
+  "excluded_from_p2_gate": true,
+  "remote_raw_root": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260925-107-p2-shared-peft",
+  "runs": [
+    {"name": "baseline-offline32", "normalized_action_mse": 0.0981947762, "raw_action_mse": 0.0351534532, "raw_gripper_disagreement": 0.0859375},
+    {"name": "standard-zero-r8-train200-offline32", "normalized_action_mse": 0.1598398647, "raw_action_mse": 0.0562755859, "raw_gripper_disagreement": 0.08984375, "adapter_parameters": 1249280},
+    {"name": "response-svd-r8-train200-offline32", "normalized_action_mse": 0.1203585976, "raw_action_mse": 0.0442411360, "raw_gripper_disagreement": 0.09375, "adapter_parameters": 1249280},
+    {"name": "response-svd-r8-12l-preliminary", "normalized_action_mse": 0.1297440064, "raw_action_mse": 0.0435540033, "raw_gripper_disagreement": 0.08984375},
+    {"name": "fixed-code-scale-train200-offline32", "normalized_action_mse": 0.1282095281, "raw_action_mse": 0.0494078575, "raw_gripper_disagreement": 0.0859375, "scale_parameters": 3162112}
+  ]
+}
