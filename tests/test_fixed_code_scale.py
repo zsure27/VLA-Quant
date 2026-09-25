@@ -2,7 +2,13 @@ import io
 
 import torch
 
-from qvla.fixed_code_scale import FixedCodeScaleLinear, build_fixed_code, dequantize_fixed_code, official_equivalent
+from qvla.fixed_code_scale import (
+    FixedCodeScaleLinear,
+    attach_fixed_code_scale_state,
+    build_fixed_code,
+    dequantize_fixed_code,
+    official_equivalent,
+)
 
 
 def test_zero_residual_exact_and_gradient_reload():
@@ -23,3 +29,17 @@ def test_zero_residual_exact_and_gradient_reload():
     clone.load_state_dict(torch.load(payload, weights_only=True))
     for key, value in module.state_dict().items():
         assert torch.equal(value, clone.state_dict()[key])
+
+
+def test_attach_pretrained_scale_state_preserves_zero_contract_and_loads_residual():
+    torch.manual_seed(11)
+    source = torch.nn.Linear(128, 32, bias=False, dtype=torch.bfloat16)
+    teacher = source.weight.detach().clone()
+    source.weight.data.copy_(official_equivalent(teacher, 2, 64))
+    residual = torch.randn(32 * 2, 1, dtype=torch.float32) * 1e-3
+    details = attach_fixed_code_scale_state(source, teacher, {}, 2, 64, residual)
+    assert details["parameters"] == residual.numel()
+    assert torch.equal(source.awq_scale_peft.log_step_residual, residual)
+    value = torch.randn(2, 128, dtype=torch.bfloat16)
+    output = source(value)
+    assert torch.isfinite(output).all()

@@ -64,6 +64,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--awq-w4-profile", type=Path)
     parser.add_argument("--awq-w4-layers", default="")
+    parser.add_argument("--awq-scale-peft-state", type=Path)
     args = parser.parse_args()
     if args.awq_scope != "all" and args.method != "awq":
         parser.error("Scoped diagnostics are currently supported only for AWQ")
@@ -97,7 +98,35 @@ def parse_args() -> argparse.Namespace:
             parser.error("Fixed-coordinate rescue requires layers without any peer profile")
     elif args.awq_w4_layers or args.awq_w4_profile is not None:
         parser.error("W4 stage parameters require --awq-candidate w2-no-clip-stage-w4")
+    if args.awq_scale_peft_state is not None:
+        if args.awq_candidate != "w2-attention-primary-g64-stage-w4":
+            parser.error("Scale-PEFT state requires the exact attention/visual stage backbone")
+        layers = {int(value) for value in args.awq_w4_layers.split(",") if value}
+        if layers != set(range(8, 16)) | set(range(20, 24)):
+            parser.error("Scale-PEFT state is pinned to the exact 12L backbone")
+        if not args.awq_scale_peft_state.is_file():
+            parser.error("Scale-PEFT state file does not exist")
     return args
+
+
+def load_scale_peft_state(path: Path) -> dict[str, torch.Tensor]:
+    payload = torch.load(path, map_location="cpu", weights_only=True)
+    families = (
+        "self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
+        "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj",
+    )
+    expected = {
+        f"language_model.model.layers.{layer}.{family}.awq_scale_peft.log_step_residual"
+        for layer in (18, 19) for family in families
+    }
+    if not isinstance(payload, dict) or set(payload) != expected:
+        missing = sorted(expected - set(payload)) if isinstance(payload, dict) else sorted(expected)
+        extra = sorted(set(payload) - expected) if isinstance(payload, dict) else []
+        raise RuntimeError(f"Scale-PEFT state key mismatch: missing={missing}, extra={extra}")
+    for name, value in payload.items():
+        if not isinstance(value, torch.Tensor) or value.dtype != torch.float32 or not torch.isfinite(value).all():
+            raise RuntimeError(f"Invalid Scale-PEFT tensor: {name}")
+    return payload
 
 
 def load_profiles(paths: list[Path], method: str) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -163,6 +192,7 @@ def apply_quantization(
     activation_bits: int,
     awq_plan: tuple[dict[str, Any], dict[str, tuple[dict[str, Any], int, int]], list[str]] | None = None,
     awq_scope: str = "all",
+    scale_peft_state: dict[str, torch.Tensor] | None = None,
 ) -> list[Any]:
     names = list(awq_plan[1] if awq_plan is not None else entries)
     check_scope(names)
@@ -202,6 +232,10 @@ def apply_quantization(
                 else (entries[name], weight_bits, int(metadata.get("group_size", 128)))
             )
             apply_entry = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
+            state_key = f"{name}.awq_scale_peft.log_step_residual"
+            teacher_weight = (
+                modules[name].weight.detach().clone() if scale_peft_state is not None and state_key in scale_peft_state else None
+            )
             if name.startswith("language_model.") and entry.get("recipe") != "official_llama_block_v1":
                 raise ValueError("LLM profile 不是官方 block 搜索")
             apply_entry(
@@ -211,7 +245,21 @@ def apply_quantization(
                 bits=target_bits,
                 group_size=target_group,
             )
+            if teacher_weight is not None:
+                from qvla.fixed_code_scale import attach_fixed_code_scale_state
+                details = attach_fixed_code_scale_state(
+                    modules[name], teacher_weight, entry, target_bits, target_group,
+                    scale_peft_state[state_key],
+                )
+                print("[scale-peft] " + json.dumps({"target": name, **details}, sort_keys=True))
             print(f"[official-awq] {index + 1}/{len(names)} {name}")
+        if scale_peft_state is not None:
+            attached = {
+                f"{name}.awq_scale_peft.log_step_residual" for name in names
+                if hasattr(modules[name], "awq_scale_peft")
+            }
+            if attached != set(scale_peft_state):
+                raise RuntimeError("Not all Scale-PEFT state tensors were attached")
     else:
         if weight_bits not in (4, 8, 16) or activation_bits not in (4, 8, 16):
             raise ValueError("SQ 仅支持已定义的 W4/W8/W16、A4/A8/A16 控制组")
@@ -273,6 +321,17 @@ def main() -> None:
     profile_manifest = [
         {"path": str(path), "sha256": source_sha256(path)} for path in args.profile
     ]
+    scale_peft_state = None
+    if args.awq_scale_peft_state is not None:
+        scale_peft_state = load_scale_peft_state(args.awq_scale_peft_state)
+        profile_manifest.append({
+            "path": str(args.awq_scale_peft_state),
+            "sha256": source_sha256(args.awq_scale_peft_state),
+            "kind": "fixed_code_scale_peft_state",
+            "parameter_tensors": len(scale_peft_state),
+            "parameters": sum(value.numel() for value in scale_peft_state.values()),
+            "serialized_bytes": args.awq_scale_peft_state.stat().st_size,
+        })
     if args.awq_candidate == "w2-no-clip-primary-g64":
         if args.method != "awq" or args.weight_bits != 2 or args.activation_bits != 16 or len(args.profile) != 1:
             raise ValueError("w2-no-clip-primary-g64 requires one AWQ W2A16 base profile")
@@ -380,6 +439,7 @@ def main() -> None:
         args.activation_bits,
         awq_plan=awq_plan,
         awq_scope=args.awq_scope,
+        scale_peft_state=scale_peft_state,
     )
     print(
         f"[official-quant] method={args.method} weight_bits={args.weight_bits} "

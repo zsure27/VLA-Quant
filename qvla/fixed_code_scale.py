@@ -95,3 +95,69 @@ class FixedCodeScaleLinear(torch.nn.Module):
         weight = dequantize_fixed_code(self.fixed_code(), self.log_step_residual)
         return F.linear(value, weight, self.bias)
 
+
+class FixedCodeScaleCorrection(torch.nn.Module):
+    """Additive correction that preserves the frozen fake-quantized base weight."""
+
+    def __init__(self, code: FixedCodeTensors):
+        super().__init__()
+        self.shape = code.shape
+        self.group_size = code.group_size
+        self.bits = code.bits
+        self.register_buffer("q", code.q, persistent=True)
+        self.register_buffer("zero", code.zero, persistent=True)
+        self.register_buffer("step", code.step, persistent=True)
+        self.log_step_residual = torch.nn.Parameter(
+            torch.zeros_like(code.step, dtype=torch.float32), requires_grad=False
+        )
+
+    def fixed_code(self) -> FixedCodeTensors:
+        return FixedCodeTensors(
+            self.q, self.zero, self.step, self.shape, self.group_size, self.bits
+        )
+
+    def forward(self, value: torch.Tensor) -> torch.Tensor:
+        code = self.fixed_code()
+        correction = dequantize_fixed_code(code, self.log_step_residual) - dequantize_fixed_code(code)
+        return F.linear(value, correction)
+
+
+def attach_fixed_code_scale_state(
+    linear: torch.nn.Linear,
+    teacher_weight: torch.Tensor,
+    entry: dict,
+    bits: int,
+    group_size: int,
+    log_step_residual: torch.Tensor,
+) -> dict:
+    """Recreate a trained Scale-PEFT branch and attach its frozen residual state."""
+    if not isinstance(linear, torch.nn.Linear) or hasattr(linear, "awq_scale_peft"):
+        raise ValueError("Scale-PEFT state requires an unattached Linear")
+    prepared = teacher_weight.detach().clone()
+    clip = entry.get("clip_max")
+    if clip is not None:
+        clip = clip.to(prepared.device, prepared.dtype)
+        prepared.reshape(*clip.shape[:2], -1).clamp_(-clip, clip)
+    code = build_fixed_code(prepared, bits, group_size)
+    rebuilt = dequantize_fixed_code(code)
+    if not torch.equal(rebuilt, linear.weight.detach()):
+        raise RuntimeError("Scale-PEFT state does not match the frozen AWQ base weight")
+    branch = FixedCodeScaleCorrection(code).to(linear.weight.device)
+    if tuple(log_step_residual.shape) != tuple(branch.log_step_residual.shape):
+        raise RuntimeError("Scale-PEFT residual shape mismatch")
+    if not torch.isfinite(log_step_residual).all():
+        raise RuntimeError("Scale-PEFT residual contains non-finite values")
+    branch.log_step_residual.copy_(
+        log_step_residual.to(branch.log_step_residual.device, branch.log_step_residual.dtype)
+    )
+    linear.add_module("awq_scale_peft", branch)
+
+    def correction(module, args, output):
+        return output + module.awq_scale_peft(args[0])
+
+    linear.register_forward_hook(correction)
+    return {
+        "parameters": branch.log_step_residual.numel(),
+        "max_abs_log_step_residual": float(branch.log_step_residual.abs().max()),
+        "zero_residual_exact": True,
+    }
