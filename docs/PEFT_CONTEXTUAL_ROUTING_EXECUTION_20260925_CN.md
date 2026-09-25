@@ -83,3 +83,8 @@ shared PEFT 未在留出闭环上稳定改善前，不训练专家或 Router。
 6. 只有专家互补跨 seed 稳定，才训练使用 `H^(17)` 的最小 Top-1 Router。
 
 服务器运行仍遵守额度和快速收尾约定。静态 W4 搜索冻结并不删除 16L/14L/12L 结果；它们分别作为恢复上界、部署候选和 PEFT 底座长期保留。
+
+每个 gate 的结果分析、针对性调整和备份验收统一遵循
+[`ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md`](ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)。
+允许依据新证据创新调整方法，但必须保持同底座配对、一次一个主要变量、版本化配置和明确
+继续/停止条件；备份必须同时包含原始数据与分析总结。

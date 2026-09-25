@@ -28,7 +28,11 @@
 | 14层静态候选 | 431/500 | W4 blocks 8–15、18–23；部署膝点候选 |
 | 12层PEFT底座 | 412/500 | W4 blocks 8–15、20–23；blocks18–19保持W2 |
 
-SQ W4A4尚未验收；PEFT已有低秩初始化测量，但没有梯度训练、LoRA闭环或Router结果。当前是BF16存储的fake quant，不据此报告INT2/INT4实际压缩与加速。完整四套件、多种子及真实kernel评测未完成。
+SQ W4A4尚未验收。P2 已在 12L 的 blocks18–19 完成同预算离线训练：fixed-code Scale-PEFT
+通过离线 gate，rank8 LoRA 改善连续动作误差但夹爪分歧未改善；Scale 的首个开发闭环分片
+为44/50，对应12L与14L均为43/50。该 +1/50 的区间仍跨零，正在按同一 checkpoint 和协议
+扩大配对闭环，尚未进入专家或Router。当前是BF16存储的fake quant，不据此报告INT2/INT4
+实际压缩与加速。完整四套件、多种子及真实kernel评测未完成。
 
 当前 PEFT / Contextual Routing 唯一默认底座为 [`awq-w2a16-12l-mixed-spatial-v1`](configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json)：DINO W2 G64、SigLIP W2 G128，语言 W4 blocks 8–15 与 20–23，其余语言 W2 G64。第一版 PEFT 只作用于仍为 W2 的 blocks 18–19。14L 和 16L 只承担静态恢复参照；若新证据要求改变底座，新增版本化配置并保留旧版本。
 
@@ -61,4 +65,10 @@ python scripts/build_experiment_summary.py
 
 模型、校准集、视频、NPZ和大 profile 不放普通 Git，恢复位置及 SHA 以各轮清单为准。双份归档不代表所有模型和数据均已异地备份。凭据和私钥不入仓库。目录命名、模块边界和旧路径映射见[2026-09-25 仓库布局说明](docs/REPOSITORY_LAYOUT_20260925_CN.md)。
 
-静态 W4 block 组合搜索已冻结。后续以 12L 为同一低比特底座，先完成训练数据与 q/z/Δ 契约，再在 blocks18–19 做 shared Scale-PEFT 与 Recovery LoRA；只有 shared PEFT 闭环有效且两个等预算专家呈现稳定互补后，才训练基于 block17 后因果表示的 Top-1 Router。执行顺序见[2026-09-25 主线协议](docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)与[2026-09-22 证据计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
+静态 W4 block 组合搜索已冻结。后续以 12L 为同一低比特底座，在 blocks18–19 完成 shared
+Scale-PEFT 与 Recovery LoRA 的闭环验证；只有 shared PEFT 闭环有效且两个等预算专家呈现
+稳定互补后，才训练基于 block17 后因果表示的 Top-1 Router。执行顺序见
+[2026-09-25 主线协议](docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)，结果驱动的调整、
+历史实验教训和“数据+分析”备份验收见
+[自适应实验与备份分析协议](docs/ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)，证据设计见
+[2026-09-22 计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
