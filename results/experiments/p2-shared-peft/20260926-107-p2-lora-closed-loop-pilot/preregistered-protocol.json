@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "question": "Does exact-12L rank8 Recovery LoRA trained by end-to-end action distillation improve paired closed-loop success?",
+  "status": "PREREGISTERED_BEFORE_EXECUTION",
+  "suite": "libero_spatial",
+  "initial_state_offset": 0,
+  "trials_per_task": 5,
+  "task_count": 10,
+  "episodes_per_config": 50,
+  "seed": 0,
+  "env_seed": 0,
+  "seed_protocol": "paired",
+  "configs": {
+    "C0": {
+      "w4_layers": "8-15,20-23",
+      "adapter": false
+    },
+    "C1": {
+      "w4_layers": "8-15,20-23",
+      "adapter": "rank8 Recovery LoRA"
+    },
+    "C2": {
+      "w4_layers": "8-15,18-23",
+      "adapter": false
+    }
+  },
+  "case_directories": {
+    "C0": "C0-12L",
+    "C1": "C1-12L-lora",
+    "C2": "C2-14L"
+  },
+  "adapter_state": {
+    "path": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-exact12l-e2e-distill/exact12l-response-svd-r8-e2e200-offline32/recovery_adapter_state.pt",
+    "sha256": "8408908bc73becc547c955d4c37be220c468599af1a15c228d435436cea4b953",
+    "bytes": 2509154
+  },
+  "classification": "historical/development closed-loop evidence; not final blind evaluation"
+}
