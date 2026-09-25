@@ -4,6 +4,9 @@ param(
     [Parameter(Mandatory=$true)][int]$ExpectedVideos,
     [Parameter(Mandatory=$true)][string]$ReportRelativeRoot,
     [Parameter(Mandatory=$true)][string]$RawRelativeRoot,
+    [Parameter(Mandatory=$true)]
+    [ValidateSet('p0-foundation-baselines','p1-data-contract','p2-shared-peft','p3-static-backbone','p4-expert-complementarity','p5-contextual-routing','secondary-smoothquant')]
+    [string]$ExperimentModule,
     [string]$ExpectedHostname='autodl-container-8b78499521-41be183e',
     [string]$SshHost='connect.nmb1.seetacloud.com',
     [ValidateRange(1,65535)][int]$SshPort=31263,
@@ -29,8 +32,13 @@ foreach($taskDir in $ResultDirectory){
         throw 'Only concrete finite eval result paths are accepted'
     }
 }
-if($ReportRelativeRoot -notmatch '^reports/sessions/[A-Za-z0-9_-]+$' -or
-   $RawRelativeRoot -notmatch '^results/[A-Za-z0-9_-]+$'){throw 'Invalid workspace report/raw paths'}
+$taskModule=[regex]::Escape($ExperimentModule)
+if($ReportRelativeRoot -notmatch "^reports/experiments/$taskModule/[0-9]{8}-[A-Za-z0-9_-]+$" -or
+   $RawRelativeRoot -notmatch "^results/experiments/$taskModule/[0-9]{8}-[A-Za-z0-9_-]+$"){
+    throw 'Report and raw paths must use the selected experiment module and YYYYMMDD-session naming'
+}
+$taskSessionName=Split-Path $RawRelativeRoot -Leaf
+if((Split-Path $ReportRelativeRoot -Leaf) -ne $taskSessionName){throw 'Report and raw session names must match'}
 $taskReport=Join-Path $taskRepo $ReportRelativeRoot
 $taskRaw=Join-Path $taskRepo $RawRelativeRoot
 $taskPython='C:/Users/zsure/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe'
@@ -39,7 +47,8 @@ if($KnownHostsFile){$taskSsh+=@('-o',"UserKnownHostsFile=$KnownHostsFile")}
 $taskRemotePython='/root/miniconda3/envs/qvla-oft/bin/python'
 $taskRemoteScripts=$RemoteToolDirectory
 if(-not $Execute){
-    [pscustomobject]@{execute=$false;expected_hostname=$ExpectedHostname;results=$ResultDirectory;
+    [pscustomobject]@{execute=$false;expected_hostname=$ExpectedHostname;experiment_module=$ExperimentModule;
+        session=$taskSessionName;results=$ResultDirectory;
         expected_videos=$ExpectedVideos;steps=@('identity','remote closure tool SHA verification','paired audit','persistent archive',
         'local copy and SHA256','GitHub zsure27 account verification and push',
         'native shutdown receipt','post-shutdown receipt push');deletes_data=$false} | ConvertTo-Json -Depth 4
@@ -98,7 +107,7 @@ $taskNewBackups=@($taskBackupLines | Where-Object {$_ -match '^/root/autodl-tmp/
 if($taskNewBackups.Count -ne 1){throw 'Expected one concrete backup directory'}
 $taskBackup=$taskNewBackups[0];$taskBase=Split-Path $taskBackup -Leaf
 Write-Output "CLOSURE_STEP=persistent_backup; DIRECTORY=$taskBackup"
-$taskPending=Join-Path $taskRepo ("results/pending-"+$Label)
+$taskPending=Join-Path $taskRepo ("backups/experiments/$ExperimentModule/$taskSessionName")
 New-Item -ItemType Directory -Force $taskPending | Out-Null
 & scp -r @taskSsh -P $SshPort "root@${SshHost}:$taskBackup" $taskPending
 if($LASTEXITCODE -ne 0){throw 'Local backup transfer failed; no deletion or false full-backup claim'}

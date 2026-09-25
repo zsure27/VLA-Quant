@@ -1,0 +1,148 @@
+{
+  "report": "2026-09-16-weekend-review",
+  "kind": "local_evidence_review_no_new_gpu_run",
+  "source_hash_format": "Text inputs use UTF-8 bytes with CRLF normalized to LF; normalize text sources before verification, since some legacy Git blobs retain CRLF. Generated files use exact bytes; CSV and SVG are written with LF.",
+  "source_files": [
+    {
+      "path": "reports/2026-09-16-weekend-review/data/archival_offline.json",
+      "sha256": "5935e04bcdc3f6451012a483c12996252bd884ee8bb67db91a8a23204b0a8561"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-awq-baseline-gate/analysis/paired_episodes.csv",
+      "sha256": "80d70151559a3e2f4327403adbf416f6e2fa74198598d15851286f00e76c2d30"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-awq-baseline-gate/analysis/summary.json",
+      "sha256": "eef5f52ce21753d7d0b343c7587f994a860cbaf4400df3ad5ff527e31f7190fb"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-awq-block-audit/block-error-summary.json",
+      "sha256": "857aee29760a027d1d3d7056d233e8a12248bfe96b44a32935e85367792b0465"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-awq-block-audit/e2e-interventions-old-summary.json",
+      "sha256": "2cbc99256d6ba9b8164d40ddcbca01c91a1637fc39cca54adb4edca7644cb5b1"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics/summary.json",
+      "sha256": "7003860ef8b248bf03a961fd6a3de9bd8da49f5ff816d7fb556f2714a5f80db5"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-awq-w2-language-clip10/paired_w2_clip_comparison.json",
+      "sha256": "83f0caa254553c8a125c9ec3cae5cbb1aa3a54e11962ff4d1f6cc89a9b71886b"
+    },
+    {
+      "path": "results/shared/historical/official_quant_validation.csv",
+      "sha256": "94ba447243e4f19d4ea3d91b3e7c34c4033cfb74003c01357ad80f89ba826a80"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "data/closed_loop.csv",
+      "size_bytes": 811,
+      "sha256": "7813b24214e3f14b43112c33de0720a52e70119719c12f541e7f2c91d061cfd7"
+    },
+    {
+      "path": "data/historical_sq.csv",
+      "size_bytes": 528,
+      "sha256": "94ba447243e4f19d4ea3d91b3e7c34c4033cfb74003c01357ad80f89ba826a80"
+    },
+    {
+      "path": "data/language_diagnostic_per_frame.csv",
+      "size_bytes": 8497,
+      "sha256": "f5abeed0b479d90c4549f979ba4842de19e966f6440badd82166a515ea3198d6"
+    },
+    {
+      "path": "data/language_offline.csv",
+      "size_bytes": 785,
+      "sha256": "02da84af09b0d32d229421854113410e2dfe4a50dd983066e924d518b2480d62"
+    },
+    {
+      "path": "data/paired_50.csv",
+      "size_bytes": 5416,
+      "sha256": "80d70151559a3e2f4327403adbf416f6e2fa74198598d15851286f00e76c2d30"
+    },
+    {
+      "path": "data/selected_block_error.csv",
+      "size_bytes": 3696,
+      "sha256": "6ce0044a99f03646e4fed47a1611848e0d24487ed5b1f8308a7ae03bf47d3e09"
+    },
+    {
+      "path": "data/vision_combination_validation.csv",
+      "size_bytes": 275,
+      "sha256": "9767e8aa7c358034ab7ed801be2a6aa8fcf051033655320435b6d1f1493520d2"
+    },
+    {
+      "path": "data/vision_offline.csv",
+      "size_bytes": 676,
+      "sha256": "7f0a60947c1fcfac4efad1e06d07fa0adececeb8ff8798b375c13c81974da342"
+    },
+    {
+      "path": "figures/01_closed_loop.png",
+      "size_bytes": 109994,
+      "sha256": "beea246b47e9cc0f5bd6f3db90d9c2bf177a580f4b8931d5815364b0fe8faa1f"
+    },
+    {
+      "path": "figures/01_closed_loop.svg",
+      "size_bytes": 78534,
+      "sha256": "7d57e667c1ff8e4d22f2a365fd21ae4c64733b5dda591a0906ebf28a73b2a4a1"
+    },
+    {
+      "path": "figures/02_paired_w4.png",
+      "size_bytes": 91593,
+      "sha256": "ea5ec5a398e95d10058828f968267df6e55490dc09f055125ee0ccc5efd19ae9"
+    },
+    {
+      "path": "figures/02_paired_w4.svg",
+      "size_bytes": 88696,
+      "sha256": "5014073f0a4d402c9438d4180331886906d1ff19c34435ac3b4d85ea05d22cd0"
+    },
+    {
+      "path": "figures/03_language_offline.png",
+      "size_bytes": 162509,
+      "sha256": "e89c0356ca32d69e01026cf0d2b83e3c9da312ce1f02e6c8ece9e7539309f286"
+    },
+    {
+      "path": "figures/03_language_offline.svg",
+      "size_bytes": 105767,
+      "sha256": "2a38eb92f4c52d5d7db3802ec0b3fa2258c34848f2a6d5ba63a9811c31b55c11"
+    },
+    {
+      "path": "figures/04_vision_offline.png",
+      "size_bytes": 120804,
+      "sha256": "2286e52c873294dd6b82891a7c642f6e26236cd1ff061359f43fa378a60a22ea"
+    },
+    {
+      "path": "figures/04_vision_offline.svg",
+      "size_bytes": 87854,
+      "sha256": "3bacfff065624555fc9ace806ede3ff1199d95ca51a7e30de681015efd9c631e"
+    },
+    {
+      "path": "figures/05_sq_historical.png",
+      "size_bytes": 78218,
+      "sha256": "0061723dffd257da3827594d1ddc0f877f728df9e90ce1ffc6e059718cb0cc61"
+    },
+    {
+      "path": "figures/05_sq_historical.svg",
+      "size_bytes": 58737,
+      "sha256": "93b9bb04636462cd27fa33eaa20679083b94ff31f8eab9bfe071ca44bfb7dade"
+    },
+    {
+      "path": "figures/06_selected_block_audit.png",
+      "size_bytes": 214044,
+      "sha256": "1958ed0299fcefce5f1b4db0b58a40f585d1eea112c782cdd7fbc19e3b094a93"
+    },
+    {
+      "path": "figures/06_selected_block_audit.svg",
+      "size_bytes": 140044,
+      "sha256": "eff2dd1ee7e0c436e8825b5c50622da2aca43ddf75c3dd32ee8f8d6efb090f38"
+    }
+  ],
+  "not_uploaded": [
+    "source PDF/full extracted text",
+    "model weights",
+    "AWQ profile binaries",
+    "full calibration/trajectory data"
+  ],
+  "verification_limits": "Hashes bind local committed evidence and generated files. They do not prove semantic correctness of server profiles or identity of original paper results. See evidence classifications in the report."
+}

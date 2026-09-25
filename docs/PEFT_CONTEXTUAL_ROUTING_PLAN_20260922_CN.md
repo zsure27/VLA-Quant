@@ -16,7 +16,7 @@
 | 历史两种 G64 clip 配方 | 最佳静态 29/50，事后 success 并集 34/50 | 提示可能存在互补失败模式 | 同一量化底座上的 PEFT 专家互补；可训练路由器的 34/50 上界 |
 | LoRA 初始化 / SQ | rank8 响应 SVD 仅离线零步测量；SQ W4A4 未验收 | 初始化和 SQ 诊断有线索 | LoRA 已训练、闭环有效或 SQ 基线已跑通 |
 
-以上数字取自[综合实验日志](../reports/20260918-vla-experiment-summary/EXPERIMENT_LOG_CN.md)、[汇报总结](../reports/20260918-vla-experiment-summary/README_CN.md)及[2026-09-18 分片](../reports/sessions/20260918-107-awq-continuation/)。它们均来自 BF16 权重承载的 fake quant，不能报告真实 INT2/INT4 压缩率或加速。[QVLA 原文](https://arxiv.org/abs/2602.03782)按动作敏感度跨通道分配位宽；本项目 AWQ 视觉逐 Linear/Conv 适配与其方法不是同一种量化机制，当前单套件 W4 数值也不能直接推翻其四套件结论。
+以上数字取自[综合实验日志](../reports/summaries/20260918-experiment-overview/EXPERIMENT_LOG_CN.md)、[汇报总结](../reports/summaries/20260918-experiment-overview/README_CN.md)及[2026-09-18 分片](../reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/)。它们均来自 BF16 权重承载的 fake quant，不能报告真实 INT2/INT4 压缩率或加速。[QVLA 原文](https://arxiv.org/abs/2602.03782)按动作敏感度跨通道分配位宽；本项目 AWQ 视觉逐 Linear/Conv 适配与其方法不是同一种量化机制，当前单套件 W4 数值也不能直接推翻其四套件结论。
 
 ## 2. 对原构想的关键修订
 
@@ -58,4 +58,4 @@
 
 ## 5. 实验产物与运行边界
 
-每轮保存 `results/<SESSION>/` 中的配置、训练/评估轨迹清单与哈希、console、逐回合 CSV/JSON、模型/适配器 SHA、代码版本、异常及资源；`reports/sessions/<YYYYMMDD-SESSION>/` 保存图表、原数据和可复核分析。路由另存离线专家损失矩阵、闭环成功矩阵、路由预测及切换 trace、预算账本。把“已完成 / 开发 / 锁定测试 / 未测”写清；唯一原件留持久盘，大文件用双份归档与哈希清单，不放普通 Git。每次用户已开启的实验会话结束按既定流程同步 `zsure27/VLA-Quant` 并关机；当前未收到新开机信息，本文件不触发服务器操作。
+每轮按规划模块保存：`results/experiments/<module>/<YYYYMMDD-SESSION>/` 放配置、训练/评估轨迹清单与哈希、console、逐回合 CSV/JSON、模型/适配器 SHA、代码版本、异常及资源；同名的 `reports/experiments/<module>/<YYYYMMDD-SESSION>/` 放图表、分析数据和可复核结论；完整本地归档统一进入 `backups/experiments/<module>/<YYYYMMDD-SESSION>/`。路由另存离线专家损失矩阵、闭环成功矩阵、路由预测及切换 trace、预算账本。把“已完成 / 开发 / 锁定测试 / 未测”写清；唯一原件留持久盘，大文件用双份归档与哈希清单，不放普通 Git。每次用户已开启的实验会话结束按既定流程同步 `zsure27/VLA-Quant` 并关机；当前未收到新开机信息，本文件不触发服务器操作。

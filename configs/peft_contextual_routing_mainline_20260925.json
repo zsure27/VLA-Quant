@@ -1,6 +1,10 @@
 {
   "status": "ACTIVE_MAINLINE",
   "effective_date": "2026-09-25",
+  "primary_backbone_config": "configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json",
+  "primary_quantization_track": "AWQ_W2A16",
+  "contextual_routing_role": "recover_capability_lost_by_pure_2bit_quantization",
+  "smoothquant_role": "optional_followup_after_contextual_routing_validation",
   "causal_chain": [
     "static_low_bit_backbone",
     "shared_peft_recovery",

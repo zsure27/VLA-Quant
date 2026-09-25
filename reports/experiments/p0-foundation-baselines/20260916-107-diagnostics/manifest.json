@@ -1,0 +1,732 @@
+{
+  "session": "20260916-107-diagnostics",
+  "kind": "gpu_offline_and_closed_loop_diagnostics",
+  "source_hash_format": "Committed text sources are hashed with CRLF normalized to LF; generated CSV/SVG use LF, binary images use exact bytes.",
+  "analysis_source_sha256_lf": "51b9699ae286dad79e0b19e33921240df3c67379d5c3e4be3f644fe2895f44e9",
+  "numpy": "1.26.4",
+  "matplotlib": "3.11.1",
+  "raw_files": [
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/attention/manifest.json",
+      "sha256": "bb2cd8782ba0a7f75f6893d05761482bcd245c3673f04eeed071a49cafde6de9"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/attention/metrics.json",
+      "sha256": "7bf67d90709a14c5f5465c881d4dc527ea00dd7aa1a5ed472b5e00049844d257"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/attention/scope.json",
+      "sha256": "a18608e74ee375ceabf58ecf34a28560c7d70f53c8101e0514bf4564efb02543"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/attention.command.txt",
+      "sha256": "5040f2064acc5596e8e4d8b8b11177e496302ec926435f7eabc66b37f6720adc"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/attention.console.log",
+      "sha256": "46c45e3077575268fc5a4b296eee6b17e3f8b4c077f351f23fb7e372e9d2cf25"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/complete.json",
+      "sha256": "fdad2ac5152fc9af1cd4fe7ae654cb4fe1822accf7c0deb5254eb6383cb9b5af"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/mlp/manifest.json",
+      "sha256": "a81699c5eb4bc93a5987ff7150fcc061538b9a51686f77051fde5d36a73a75b8"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/mlp/metrics.json",
+      "sha256": "509d036ad3b1855418da747ecfc2f4ae069cdac8e34db0e6349d13326de51871"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/mlp/scope.json",
+      "sha256": "d8e843fc754f4e1e20559ee7b8077fea68ae18c35a11f78d4b138ac9ce944fbd"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/mlp.command.txt",
+      "sha256": "6fd155acf92e77da2039a3d57c8b50d65d8eebfc359aa3c0ba3a2051c1bbd3b5"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/mlp.console.log",
+      "sha256": "7fe9d64647b843fa708ab52b9f3b8441a0338fad383af49d47946411cf7bcaaa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/OVERLAY_SHA256SUMS.txt",
+      "sha256": "f710d0193424fed525c7adfe5cbc364c73ce69ece3e4834c65066e6bbef646b3"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/SHA256SUMS.txt",
+      "sha256": "a0e16437c8b97cc0546974e31ae58fe74de432b7b8c3e964f6aa35bf7c28cc26"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/summary.json",
+      "sha256": "c3a364a3a5cfc4c9bc44effe5f546e90653809429f7be415123e1eb605373075"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/base-status.txt",
+      "sha256": "03061f64858d56c8d2408ecf6b5e657e99dd401ac2866bfa138f51fa5970709a"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/complete.json",
+      "sha256": "8ad25defe855d80356460ad437ceebb6c2ebbcf721b2ec23750a2c2b3cfd8e3f"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/OVERLAY_SHA256SUMS.txt",
+      "sha256": "3d61d8aeb568c2376e47da0537824697a06a2f46ee295bce5a653ed37ef263a2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/SHA256SUMS.txt",
+      "sha256": "0e7e9061ca3b1228ad4f2e64ae97dd348c0ba0ecb0ba22c03c120738adba9e14"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-00-07/manifest.json",
+      "sha256": "77657205130ebe021611ef2c715480c00908c231c2f6a9ac8ab5594c3ea53f62"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-00-07/metrics.json",
+      "sha256": "e7f9324b7cad6da79b7b7ec6fb15ed50a5716e7a93a98b796eeca28eb43749d1"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-00-07/scope.json",
+      "sha256": "674ef6e4d3143241cd2f25ca045d0eb9bd3ac67ac8cf96230bf84bed6808d131"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-00-07.command.txt",
+      "sha256": "bae4398db1ea4302a9f868da4c232b08067014f14d6bbab6f9831c5045483566"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-00-07.console.log",
+      "sha256": "06d61e9a65e26a066a8c7a1e40662ad9748056240eba11fde9b440cd5129fcf9"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15/manifest.json",
+      "sha256": "f0f2517a13470771b9f66166787b23dd42d58520b58eab665f74c1fa6163378f"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15/metrics.json",
+      "sha256": "90029b681cf5e947b8f6082d354d0420b9c3134cea066838817ac7f5b95f601d"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15/scope.json",
+      "sha256": "5a02c1e20ad4be8775df753303f0a2e4177bac5eca0addaba76a04d9e5102dec"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15.command.txt",
+      "sha256": "d74791f0e9b77ce4f3686fb5ea9908186bf8afa5f1f0794ffa048c5a0e775bc9"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15.console.log",
+      "sha256": "3962e3a18d163540c7cb7269e3cea3eddaaf58ef17672a8951e9ed8c06c88707"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/summary.json",
+      "sha256": "46a9ce2a7a1e4ec7aa7dbfe4cfb628043cffaf9b3ab29937c6830758c67ab9fa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/base-status.txt",
+      "sha256": "03061f64858d56c8d2408ecf6b5e657e99dd401ac2866bfa138f51fa5970709a"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/complete.json",
+      "sha256": "8ad25defe855d80356460ad437ceebb6c2ebbcf721b2ec23750a2c2b3cfd8e3f"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/OVERLAY_SHA256SUMS.txt",
+      "sha256": "3d61d8aeb568c2376e47da0537824697a06a2f46ee295bce5a653ed37ef263a2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/SHA256SUMS.txt",
+      "sha256": "37ebfb7f8e39a66b19878501f7b1f401a9fcf628cb20531aeec9c65e8294dc24"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-16-23/manifest.json",
+      "sha256": "2075ebdb4590d2dcbd0cffd287b108cc59b5eeae64e44332992d5ec2a6491da6"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-16-23/metrics.json",
+      "sha256": "a9832a761fdb1803e40ebbe94d9fc5804437a7ec5a15ddb0d3c8479fd071a367"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-16-23/scope.json",
+      "sha256": "585154a6a06d239b8d06b61f41f88b2a69f57f74430c354e02f759e89b692406"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-16-23.command.txt",
+      "sha256": "923f0b61d94bb3456fd2f78a1534e0c1737b3a9376cd78a6e78ce559274d3174"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-16-23.console.log",
+      "sha256": "418b1ecf1e8028473b1b138e89013f6ec4af1bee4d736bbe372cda7d082ed19d"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-24-31/manifest.json",
+      "sha256": "84fda2aa8fb6385af720e72b3afe981417bd99169d1c3b70c2473ddd42f4741d"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-24-31/metrics.json",
+      "sha256": "260bd077787e6f600063ccd47c7176588977fa16aef1c866f5c3d828a8964b97"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-24-31/scope.json",
+      "sha256": "265770632d85306b2ee51ba7cd5d44d4c53142344a0b2cc101154e3e6d507a2d"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-24-31.command.txt",
+      "sha256": "a49a68f988bbacdeb5398d71eab27cd52d039caae1eb23b402c982c6762d83be"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-24-31.console.log",
+      "sha256": "f50a01de37bb08f2de4a84cc494865283c414d7f1c56f1aeaf9e25bb94e42fdf"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/summary.json",
+      "sha256": "5de452f48d71f059e0b7b5b3a6912040ef27f316fbd870d024935b58323c4bbb"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/baseline/manifest.json",
+      "sha256": "3eb9f0c1fa2e5de3e0aae18e10d127f0c55d7ceaf72e5aef86dde24449335186"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/baseline/metrics.json",
+      "sha256": "e9ae70467b29d72624d9a7b308f10b773f50eca42510aa5af78588bc3af2aea0"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/baseline/scope.json",
+      "sha256": "d98afca4221d020a90d14c4b0a7875bd836ccf34e60e6aca90dccfdacd8c748c"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/complete.json",
+      "sha256": "bfbbd262d126e8cae7852b7a39b508d55acc950e811a49ba4c7f3f34732e4264"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/evaluator-source.py",
+      "sha256": "69940e009f3571d9134f5a89cd46e94b6590cb7ae0d10512ceefbe46434f83f5"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/intervention-source.py",
+      "sha256": "4c0c1aed47ff3663aecb0a4af9f84f7878ecca68c2bdb25b9e140159064cbfee"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/OVERLAY_SHA256SUMS.txt",
+      "sha256": "13b3a077227c2daf536e1459f845aea9f58b746b24369e5e7c352db7d57f43cf"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-15/command.txt",
+      "sha256": "6f6a593f1d5e263bfe27fca13ba227a15e54b30b0b0160f6289d7b852f26a00c"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-15/console.log",
+      "sha256": "b8f8ea23ea661da31302cb56bdf311e3e2c1a88cdd590f1c02b13c515c0100f1"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-15/EVAL-libero_spatial-openvla-2026_09_16-19_14_57.txt",
+      "sha256": "272f3ee99c84a5ec1159f35a1dc9cd4c03b5ef479c74914abab34dcfa369efe3"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-15/exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-15/policy-queries.jsonl",
+      "sha256": "122e2d11524fe479ffbbbcb0d45b097f2706527bff3bf0caa00c9830180e0a86"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-23/command.txt",
+      "sha256": "5de093d98edf7b3efd0c347f30da3a5a6ed8da948810c4a94e99d8c47b4ccd11"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-23/console.log",
+      "sha256": "9b3a05c31184633f52642581371a8082259711677fa7aec53a0a5c2d06f0e21e"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-23/EVAL-libero_spatial-openvla-2026_09_16-19_18_08.txt",
+      "sha256": "2b4bf5b855aa461909177cf1e627ff12259b8fdbc45632f9a5765eb3b9d00be9"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-23/exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-23/policy-queries.jsonl",
+      "sha256": "3233cb07a31984cfd786616284865133d9935ad8ce9ec64525000ae16b60ad12"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/complete.json",
+      "sha256": "64f4f2daef94cbd56eead215b9cfbfe127581a60a8dbcd288a89b24276fe9d42"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/OVERLAY_SHA256SUMS.txt",
+      "sha256": "3d61d8aeb568c2376e47da0537824697a06a2f46ee295bce5a653ed37ef263a2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/repeat/manifest.json",
+      "sha256": "1b569f9dfa11b31c2c1a04ca61870d555e28314f8cd842e49eda965936429323"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/repeat/metrics.json",
+      "sha256": "f9556ad250424b5a6720559341db213b46f301aa056f2e6f40fd0ad24266f2aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/repeat.command.txt",
+      "sha256": "63aaa8fe973f5dcba3634377290888f945f0013d209ba9f58f78a1eb0fbcb6d0"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/repeat.console.log",
+      "sha256": "16ba41ff6c300cd2c6f3cb939a2ffc11665788ae2a8d4969e563ee89a1dcf608"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/SHA256SUMS.txt",
+      "sha256": "621d5a893e9df928a8be723e2a8041e973c3aaef30b9487ae29fb36d20f56fac"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/smooth-only/manifest.json",
+      "sha256": "46f9f5b5a0fe88c97b2b36e51764eee1f4aef466ad72d6af267a0a4663d92b17"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/smooth-only/metrics.json",
+      "sha256": "c156da5466b3d10c8ef4903d8080ada706f4a58b897ea9f0f0fb1cc95204e213"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/smooth-only/scope.json",
+      "sha256": "0f427fcdf8cba78f3316326fc847efaaf495b105acaad05a88f7106b6935b5c0"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/smooth-only.command.txt",
+      "sha256": "802f2be66eeb9549ec78be3d2da85e28d647719fef71f9f29b22b041013dc7cd"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/smooth-only.console.log",
+      "sha256": "37826417070209ab4f19359abeba0b14c1b654cd7fc31b7d71b628cb534d81f7"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/summary.json",
+      "sha256": "900289ff5d30bcd4bf2229ad01826cab7179f3066a6e3d9b1c734d537187de29"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/complete.json",
+      "sha256": "8a56835b7386525498d521bb834b4fe69910b18226b77ac0d7dedaa6140f2717"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/exit-code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language/manifest.json",
+      "sha256": "6cc0bf43b70dbe9c1bae891cad2ea220c499aab2cffb48027ebab6caa99fc7c9"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language/metrics.json",
+      "sha256": "d1e470c34360c8b0bd76add730d53a8d9335c7b1daa620d7ca83fd55aa5ec05f"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language/scope.json",
+      "sha256": "d936ba9047c99ce35760fc45aa35e58d80b6ccc7324297b0a8d8835b1d115edc"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language-oracle/manifest.json",
+      "sha256": "87a5c76f1e57c4a30f5439ae77f098504ca73cd8e8a6c7fd767e8fa1de2486a5"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language-oracle/metrics.json",
+      "sha256": "c9ae0fd02d6485232eea44397c7674d43d40cfe9118e6f6dfda54662a2ca79ee"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language-oracle/scope.json",
+      "sha256": "d936ba9047c99ce35760fc45aa35e58d80b6ccc7324297b0a8d8835b1d115edc"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language-oracle.command.txt",
+      "sha256": "b76e261bbc1b5dae31e96082844d6bff4a77d4be88794e9296e6ef16a40cf92b"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language-oracle.console.log",
+      "sha256": "ec4cc4c7b46cd7ec2f14abe1160b6abfa6552ccc60b71a49c19da36f33d567b3"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language.command.txt",
+      "sha256": "6f2b8b448e6ba819c7bd7cb0bf9307303fd7ca0a3dfac3f903e0c46bf1b7cf86"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language.console.log",
+      "sha256": "37201a49a32db40dda020994a70f3a2b36966787ad7c3c32d8493733e3adefb2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/OVERLAY_SHA256SUMS.txt",
+      "sha256": "3d61d8aeb568c2376e47da0537824697a06a2f46ee295bce5a653ed37ef263a2"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/SHA256SUMS.txt",
+      "sha256": "dc6ab6b583e601140f0a0f7df7fd2513aeb0320b4dc77307fe714ee7558cf386"
+    },
+    {
+      "path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/summary.json",
+      "sha256": "b5dc14711bea467bfb4a4e7a84d4f2a12c87a1d26853858e29b0b26cee9465bb"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "data/closed_loop_per_task.csv",
+      "sha256": "44735547b8598df342e455973c4c5c4e6bbcbe5b36f62a23db461b56932b0798"
+    },
+    {
+      "path": "data/closed_loop_summary.csv",
+      "sha256": "b1521fff8fa776bcbeef3478cc80d244f1f23ae62796485b117b294fa85e07c6"
+    },
+    {
+      "path": "data/family_per_frame.csv",
+      "sha256": "fb53c13bd5d923b4d70a04f20bc79d2e286385aeb49829cbaec8a509b376e96a"
+    },
+    {
+      "path": "data/family_summary.csv",
+      "sha256": "f0f5ddbe69edf00e540a129c17167403a0a6950df9335ddcfe73e1598a9fd9ae"
+    },
+    {
+      "path": "data/sq_control_per_frame.csv",
+      "sha256": "2f83e4dcee8ef9cc45a70e9fc74406510368002a5463a10737cba6cc0d163788"
+    },
+    {
+      "path": "data/sq_control_summary.csv",
+      "sha256": "846c580d1761aed53935b6938c5c984072135b9b3d869b6928168ab01b14a641"
+    },
+    {
+      "path": "data/sq_features_per_frame.csv",
+      "sha256": "64186f5ec4568ee93caa6a1ba09732ee853b89c50dc12dc7254daf38fbf7a5c7"
+    },
+    {
+      "path": "data/stage_per_dimension.csv",
+      "sha256": "bef2a93f129925c3d84d5c8c70fbd57fa6b6908ece342662e2f9025b7b41a017"
+    },
+    {
+      "path": "data/stage_per_frame.csv",
+      "sha256": "1940528f1c568467a6a1f74081ff73d73f79febe443166efeb7d615068f2ae83"
+    },
+    {
+      "path": "data/stage_summary.csv",
+      "sha256": "666dcf6ae13f7721cabc13c378c1a66d196928d72cbec3ee5a5a0e3ef6c4ed8e"
+    },
+    {
+      "path": "figures/01_stage_rescue.png",
+      "sha256": "b9815c6fa304330a9262838ec2ef6c988302fd475e36dc8fcd3df1b00af16d70"
+    },
+    {
+      "path": "figures/01_stage_rescue.svg",
+      "sha256": "db071caf9cda2f300e640d3de5d4c51b92d6206c460952ad89ec46df2cd7a081"
+    },
+    {
+      "path": "figures/02_paired_stage_frames.png",
+      "sha256": "f656d7728bcd4a6bb201704d85c234e4862cba66468b4b88029cee5bac36ff83"
+    },
+    {
+      "path": "figures/02_paired_stage_frames.svg",
+      "sha256": "2e8f6a22364761c8615a68e47db3148a6b730f67f0489f864a628395ac4ab0c4"
+    },
+    {
+      "path": "figures/03_sq_control.png",
+      "sha256": "6a1a6692afc7ba95ea09b800cb1d4418817d27b8c5cfdfec3704313b8211f268"
+    },
+    {
+      "path": "figures/03_sq_control.svg",
+      "sha256": "60800835d1c4160ce0c28588d22e37d2b0f39da3f93a3f8b55b6327868a0cfff"
+    },
+    {
+      "path": "figures/04_action_dimensions.png",
+      "sha256": "fd0ff464b5f767f6015ce333cc921227fe226d11e39e0ef64c3f2da77aa89196"
+    },
+    {
+      "path": "figures/04_action_dimensions.svg",
+      "sha256": "c1450900f79b5979e1a8ea752cc0b114992f43e5039d8f8a07d37e49c50dfeb3"
+    },
+    {
+      "path": "figures/05_closed_loop_rescue.png",
+      "sha256": "885a2fa1f23af651b3b18f8c77cfd086765ec2b95afcf15050ede934298e697d"
+    },
+    {
+      "path": "figures/05_closed_loop_rescue.svg",
+      "sha256": "0d8cf7dde16edad5565be65ddcfc456d87a5fbd0616a0502359c93464b1925c7"
+    },
+    {
+      "path": "figures/06_sq_token_partition.png",
+      "sha256": "7477dae5748d86d93d499b33ea3918fc03558995e19243ec59ece5a047ee29cb"
+    },
+    {
+      "path": "figures/06_sq_token_partition.svg",
+      "sha256": "7270b42274379003cb9ede120eb461ba223804645b75a9cbf70dad2c012ebe25"
+    },
+    {
+      "path": "figures/07_family_precision.png",
+      "sha256": "b729b4480391a7b268329459323b1c6d98c2a7abc8b4151278d0cf9bd9349db9"
+    },
+    {
+      "path": "figures/07_family_precision.svg",
+      "sha256": "3d40cf418bf9802ea43249302fe78345c3bba7df2e601b614021c5c8c4093d4a"
+    },
+    {
+      "path": "video-analysis/task-5-stage-frames.png",
+      "sha256": "5a175fc6df1358039a9f5caf50b70f5aacd09c93e9d25cc2b4173c96ba0e73ee"
+    },
+    {
+      "path": "video-analysis/task-7-stage-frames.png",
+      "sha256": "871a2a5202a7a8a565c906cfbeff3328ef8e069b5c93b42ac23c371c4af5964a"
+    },
+    {
+      "path": "video-analysis/video_frames.csv",
+      "sha256": "13a7de4d9804b5a9b7895afe3847a64c15ba1578689f1343f2373bb2848af559"
+    },
+    {
+      "path": "video-analysis/video_manifest.json",
+      "sha256": "413dd401d506649122370f02a0a4be22df4f912e561fb0730b4182c4324c272b"
+    }
+  ],
+  "backup_metadata": [
+    {
+      "path": "backup/base-commit.txt",
+      "sha256": "6ced514ad79306771119e4e38bc3f3dbaf44078e6725803f526711b9c41360e2"
+    },
+    {
+      "path": "backup/git-status.txt",
+      "sha256": "03061f64858d56c8d2408ecf6b5e657e99dd401ac2866bfa138f51fa5970709a"
+    },
+    {
+      "path": "backup/LARGE_FILES_NOT_IN_GIT.json",
+      "sha256": "2c8757754035b59d120dbca6e778f66197f3e2f7dc6320414ced02614cbec2f6"
+    },
+    {
+      "path": "backup/RESULTS_SHA256SUMS.txt",
+      "sha256": "0d314ea10224a79ba3e7804eedbb3f755faa0deabc51877fa8c38c85dc8161c9"
+    },
+    {
+      "path": "backup/resume.json",
+      "sha256": "f119b8aafa8770abd215e47dcae7698439b6fc558f85b5dd4e3cc531a63eb45a"
+    },
+    {
+      "path": "backup/runtime-lock.txt",
+      "sha256": "5447a86b5c870d7c33b22caac3ade68511d2dacf1d6a1de75d1a6e95f7d160ab"
+    },
+    {
+      "path": "backup/SHA256SUMS.txt",
+      "sha256": "71b5adc6efca2f020311a8e81e1cdfef9c73cc84c22efa7fa23e0accbd95818e"
+    },
+    {
+      "path": "backup/VIDEO_MANIFEST.json",
+      "sha256": "70f5efb4870af77e753b6c4095f7a4d5c7c0645cfaafb69e60e589c6e0b24de5"
+    },
+    {
+      "path": "backup/worktree.patch",
+      "sha256": "cc4b7ec86cff7301ac4af1bc6798637e224210c0c9147839f5762736c393407e"
+    }
+  ],
+  "scope": "Actual offline teacher agreement and paired development closed-loop screening. No synthetic data, trained PEFT or packed kernel result.",
+  "summary": [
+    {
+      "configuration": "W2 no-clip baseline",
+      "frames": 32,
+      "chunk_steps": 8,
+      "mean_teacher_action_mse": 0.06972660918836482,
+      "median_teacher_action_mse": 0.0631791464984417,
+      "max_teacher_action_mse": 0.17896972596645355,
+      "gripper_disagreements": 15,
+      "improved_frames": 0,
+      "worsened_frames": 0,
+      "mean_paired_mse_difference": 0.0,
+      "exploratory_bootstrap_low": 0.0,
+      "exploratory_bootstrap_high": 0.0,
+      "evidence_class": "fetched_actual_metrics_development"
+    },
+    {
+      "configuration": "W4 blocks 0,1,2,3,4,5,6,7",
+      "frames": 32,
+      "chunk_steps": 8,
+      "mean_teacher_action_mse": 0.05122426575690042,
+      "median_teacher_action_mse": 0.04807421192526817,
+      "max_teacher_action_mse": 0.13226136565208435,
+      "gripper_disagreements": 9,
+      "improved_frames": 30,
+      "worsened_frames": 2,
+      "mean_paired_mse_difference": -0.018502343431464396,
+      "exploratory_bootstrap_low": -0.025345874735285177,
+      "exploratory_bootstrap_high": -0.01242168644384947,
+      "evidence_class": "fetched_actual_metrics_development"
+    },
+    {
+      "configuration": "W4 blocks 8,9,10,11,12,13,14,15",
+      "frames": 32,
+      "chunk_steps": 8,
+      "mean_teacher_action_mse": 0.029689878145291004,
+      "median_teacher_action_mse": 0.025246907025575638,
+      "max_teacher_action_mse": 0.07375713437795639,
+      "gripper_disagreements": 4,
+      "improved_frames": 32,
+      "worsened_frames": 0,
+      "mean_paired_mse_difference": -0.040036731043073814,
+      "exploratory_bootstrap_low": -0.050438321682304374,
+      "exploratory_bootstrap_high": -0.030653485707989606,
+      "evidence_class": "fetched_actual_metrics_development"
+    },
+    {
+      "configuration": "W4 blocks 16,17,18,19,20,21,22,23",
+      "frames": 32,
+      "chunk_steps": 8,
+      "mean_teacher_action_mse": 0.035839286698319484,
+      "median_teacher_action_mse": 0.029405303299427032,
+      "max_teacher_action_mse": 0.11658964306116104,
+      "gripper_disagreements": 7,
+      "improved_frames": 32,
+      "worsened_frames": 0,
+      "mean_paired_mse_difference": -0.033887322490045335,
+      "exploratory_bootstrap_low": -0.04304429254334537,
+      "exploratory_bootstrap_high": -0.02576896459650016,
+      "evidence_class": "fetched_actual_metrics_development"
+    },
+    {
+      "configuration": "W4 blocks 24,25,26,27,28,29,30,31",
+      "frames": 32,
+      "chunk_steps": 8,
+      "mean_teacher_action_mse": 0.06314108581864275,
+      "median_teacher_action_mse": 0.053898515179753304,
+      "max_teacher_action_mse": 0.18913981318473816,
+      "gripper_disagreements": 12,
+      "improved_frames": 24,
+      "worsened_frames": 8,
+      "mean_paired_mse_difference": -0.006585523369722068,
+      "exploratory_bootstrap_low": -0.009710483443632257,
+      "exploratory_bootstrap_high": -0.00374117851315532,
+      "evidence_class": "fetched_actual_metrics_development"
+    }
+  ],
+  "sq_summary": [
+    {
+      "configuration": "repeat",
+      "frames": 8,
+      "mean_action_mse": 0.0,
+      "max_action_mse": 0.0,
+      "gripper_disagreements": 0
+    },
+    {
+      "configuration": "smooth-only",
+      "frames": 8,
+      "mean_action_mse": 0.00015435650649919808,
+      "max_action_mse": 0.0010221635457128286,
+      "gripper_disagreements": 1
+    },
+    {
+      "configuration": "no-language",
+      "frames": 8,
+      "mean_action_mse": 0.00010235659767943162,
+      "max_action_mse": 0.0005603093886747956,
+      "gripper_disagreements": 1
+    },
+    {
+      "configuration": "no-language-oracle",
+      "frames": 8,
+      "mean_action_mse": 0.0,
+      "max_action_mse": 0.0,
+      "gripper_disagreements": 0
+    }
+  ],
+  "closed_loop_summary": [
+    {
+      "configuration": "BF16 (historical paired control)",
+      "successes": 9,
+      "episodes": 10,
+      "success_rate": 0.9,
+      "paired_manifest_equal": true,
+      "source": "results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics/raw/diagnostic-20260915-215923/bf16/EVAL-libero_spatial-openvla-2026_09_15-21_59_43.txt",
+      "source_sha256": "0dab66ced17dac25450f6168dd2868b347ac8c51ff152d42f28b94bb05072fd2",
+      "evidence_class": "actual_paired_development_screen_no_peft_no_packing"
+    },
+    {
+      "configuration": "W4 language + vision (historical)",
+      "successes": 8,
+      "episodes": 10,
+      "success_rate": 0.8,
+      "paired_manifest_equal": true,
+      "source": "results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics/raw/diagnostic-20260915-215923/w4/EVAL-libero_spatial-openvla-2026_09_15-22_02_39.txt",
+      "source_sha256": "dd39164eeed4a6d942c1e58150a0fc9302eab688922881d6e25a0e4c61f8712a",
+      "evidence_class": "actual_paired_development_screen_no_peft_no_packing"
+    },
+    {
+      "configuration": "W2 language no-clip (historical)",
+      "successes": 1,
+      "episodes": 10,
+      "success_rate": 0.1,
+      "paired_manifest_equal": true,
+      "source": "results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics/raw/diagnostic-20260915-215923/language/EVAL-libero_spatial-openvla-2026_09_15-22_05_43.txt",
+      "source_sha256": "85ef603487c2b415be88ca204f588b4f415e5b7e1866133a745ec511d49b39a3",
+      "evidence_class": "actual_paired_development_screen_no_peft_no_packing"
+    },
+    {
+      "configuration": "Language W4 blocks 08-15",
+      "successes": 7,
+      "episodes": 10,
+      "success_rate": 0.7,
+      "paired_manifest_equal": true,
+      "source": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-15/EVAL-libero_spatial-openvla-2026_09_16-19_14_57.txt",
+      "source_sha256": "272f3ee99c84a5ec1159f35a1dc9cd4c03b5ef479c74914abab34dcfa369efe3",
+      "evidence_class": "actual_paired_development_screen_no_peft_no_packing"
+    },
+    {
+      "configuration": "Language W4 blocks 08-23",
+      "successes": 9,
+      "episodes": 10,
+      "success_rate": 0.9,
+      "paired_manifest_equal": true,
+      "source": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/language-stage-rescue10-20260916-191437-4331/stage-08-23/EVAL-libero_spatial-openvla-2026_09_16-19_18_08.txt",
+      "source_sha256": "2b4bf5b855aa461909177cf1e627ff12259b8fdbc45632f9a5765eb3b9d00be9",
+      "evidence_class": "actual_paired_development_screen_no_peft_no_packing"
+    }
+  ],
+  "family_summary": [
+    {
+      "configuration": "attention",
+      "frames": 32,
+      "mean_teacher_action_mse": 0.04736661206698045,
+      "gripper_disagreements": 9,
+      "rescue_coordinates": "original_W2_no_clip",
+      "evidence_class": "fetched_actual_development_family_precision_no_peft"
+    },
+    {
+      "configuration": "mlp",
+      "frames": 32,
+      "mean_teacher_action_mse": 0.04872760333819315,
+      "gripper_disagreements": 10,
+      "rescue_coordinates": "original_W2_no_clip",
+      "evidence_class": "fetched_actual_development_family_precision_no_peft"
+    }
+  ]
+}

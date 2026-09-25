@@ -1,0 +1,1 @@
+本轮原始EVAL、命令、策略trace、源码/profile hash、paired结果，来自完整server归档或小文件传输核验。正式新增280/配置；视觉W2共250；语言四格各50。前轮220不重复复制/计数，报告reproduce.py读取其原始来源。大视频在四份双份完整归档，恢复回执见reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/backup。

@@ -17,7 +17,7 @@
 |SQ W16A16数值控制|视觉分支及FP32成对控制仍超旧max MSE 1e-4筛查门槛；局部FP32等价误差约1e-14|存在整体动作扰动，需定位|超门槛必是逻辑bug；单组max误差能确定低比特失败根因|
 |响应SVD初始化|rank8 MSE0.06361106，rank16 0.06399096；零训练步、无闭环|动作输入方向选择略改善开发误差|已恢复W2或已完成PEFT|
 
-原始证据与图表：[9/16后续实验](../reports/sessions/20260916-107-followup/README_CN.md)、[9/17 SVD](../reports/sessions/20260917-107-response-svd/README_CN.md)、[早期路线图](AWQ_DIAGNOSTIC_ROADMAP_20260915_CN.md)。重复开发初态与帧不增加独立样本量。
+原始证据与图表：[9/16后续实验](../reports/experiments/p0-foundation-baselines/20260916-107-followup/README_CN.md)、[9/17 SVD](../reports/experiments/p2-shared-peft/20260917-107-response-svd/README_CN.md)、[早期路线图](AWQ_DIAGNOSTIC_ROADMAP_20260915_CN.md)。重复开发初态与帧不增加独立样本量。
 
 ## 二、先冻结共同评测契约（G0）
 
@@ -86,7 +86,7 @@ SQ4正式评测：数值/实现契约明确后先50/100配对Spatial，再完整
 
 每片持久化逐episode JSONL/CSV：suite/task/init index+hash/seed/config hash/success/episode error/steps/time；分任务柱状图、配对矩阵、累积率和失败视频；诊断另存逐帧动作/hidden/activation数值与分析。视频可保存在双份大文件备份，报告链接对应清单hash；未测格空白，不为计划生成假成功曲线。
 
-每轮结果单独reports/sessions/YYYYMMDD-SESSION/，原始小日志results/SESSION/互引，分析及source hash随正确账号zsure27/VLA-Quant同步，保留失败候选。
+每轮结果按当前目录规范放入同模块、同会话名的 `reports/experiments/<module>/YYYYMMDD-SESSION/` 与 `results/experiments/<module>/YYYYMMDD-SESSION/`，分析及 source hash 随正确账号 zsure27/VLA-Quant 同步，保留失败候选。
 
 只看五小时剩余额度：>=20%每3短/2长检测，10%–20%每实验后检测，<10%立即备份关机并至少预留3%。分片不能跨越安全收尾预算；读数脚本须先落实仅五小时判定，周窗口缺失不得阻止实验。检测不可用按既定快速恢复后收尾。不设置定时任务；手动开机并确认实例后通过SSH开展实验。
 

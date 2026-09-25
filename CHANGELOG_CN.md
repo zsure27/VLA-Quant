@@ -3,6 +3,8 @@
 ## 2026-09-25
 
 - 冻结粗粒度 W4 block 组合搜索，固定 16L/14L/12L 的参照角色；12L 成为 blocks18–19 PEFT 恢复底座。
+- 将 12L backbone 固化为版本化配置 `awq-w2a16-12l-mixed-spatial-v1`；AWQ-W2A16 为主线，Router 用于恢复纯 2bit 能力，SQ 作为验证后的独立扩展。
+- 将报告、Git 小结果和本地完整归档统一为 `<module>/YYYYMMDD-<host>-<experiment>`，并按 P0–P5/次线模块归档。
 - 新增 PEFT/Contextual Routing 强制执行协议：先训练数据与 q/z/Δ 契约，再 shared PEFT、专家互补和因果 Top-1 Router。
 - 将 Spatial states0–49 标为历史/开发证据，要求模型选择完成前预注册真正留出的最终 reset/seed/扰动协议。
 - 明确 Response-SVD 仅是 LoRA 初始化；不同静态量化配置不得直接充当轻量运行时专家。

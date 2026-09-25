@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "backbone_id": "awq-w2a16-12l-mixed-spatial-v1",
+  "status": "ACTIVE_PRIMARY_PEFT_ROUTING_BACKBONE",
+  "effective_date": "2026-09-25",
+  "model": "OpenVLA-OFT",
+  "quantization_family": "AWQ fake quant",
+  "activation_precision": "A16",
+  "vision": {
+    "dino": {"weight_bits": 2, "group_size": 64},
+    "siglip": {"weight_bits": 2, "group_size": 128}
+  },
+  "language": {
+    "default_weight_bits": 2,
+    "default_group_size": 64,
+    "w4_blocks": [8, 9, 10, 11, 12, 13, 14, 15, 20, 21, 22, 23],
+    "w2_blocks_between_w4_islands": [16, 17, 18, 19],
+    "first_peft_target_blocks": [18, 19],
+    "attention_vo_extra_clip": false,
+    "mlp_clip": "retain_current_frozen_recipe"
+  },
+  "protected_high_precision_modules": [
+    "projector",
+    "action_head",
+    "proprio",
+    "normalization_and_existing_protected_modules"
+  ],
+  "spatial500": {"successes": 412, "episodes": 500, "rate": 0.824},
+  "references": {
+    "static_14l_blocks_18_19_promoted_to_w4": {
+      "w4_blocks": "8-15,18-23",
+      "successes": 431,
+      "episodes": 500,
+      "delta_vs_backbone": 19
+    },
+    "static_16l_reference": {
+      "w4_blocks": "8-23",
+      "successes": 434,
+      "episodes": 500
+    }
+  },
+  "mutation_policy": "P2 experiments may modify only PEFT attached to W2 language blocks 18-19. A backbone precision change requires a new versioned config and explicit evidence review.",
+  "research_priority": "AWQ-W2A16 is primary. Contextual routing is a recovery mechanism motivated by pure 2-bit accuracy failure. SmoothQuant may be evaluated as a separate extension after contextual routing is validated."
+}

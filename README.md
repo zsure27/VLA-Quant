@@ -4,13 +4,13 @@
 
 ## 实验记录入口
 
-综合目录 [2026-09-18 实验总结](reports/20260918-vla-experiment-summary/) 保留三个文件：
+综合目录 [2026-09-18 实验总结](reports/summaries/20260918-experiment-overview/) 保留三个文件：
 
-- [结论与研究计划](reports/20260918-vla-experiment-summary/README_CN.md)：图表、问题分析和后续条件。
-- [按实验名称整理的日志](reports/20260918-vla-experiment-summary/EXPERIMENT_LOG_CN.md)：配置、结果和原始证据入口。
-- [证据索引](reports/20260918-vla-experiment-summary/EVIDENCE_INDEX.json)：权威汇总、来源路径、字节数和 SHA256；原始数值保留在所指文件。
+- [结论与研究计划](reports/summaries/20260918-experiment-overview/README_CN.md)：图表、问题分析和后续条件。
+- [按实验名称整理的日志](reports/summaries/20260918-experiment-overview/EXPERIMENT_LOG_CN.md)：配置、结果和原始证据入口。
+- [证据索引](reports/summaries/20260918-experiment-overview/EVIDENCE_INDEX.json)：权威汇总、来源路径、字节数和 SHA256；原始数值保留在所指文件。
 
-[各轮记录](reports/sessions/README_CN.md)保存当轮数据与分析；[原始结果](results/README_CN.md)保存console、命令、manifest和逐回合指标。[精确重复文件清单](results/DEDUPLICATED_FILES_20260922.json)给出移除文件与规范副本的 SHA256 映射。较早的[分析归档](reports/2026-09-16-weekend-review-archive/)保留历史证据，旧状态不覆盖最新结论。
+[各轮记录](reports/README_CN.md)保存当轮数据与分析；[原始结果](results/README_CN.md)保存console、命令、manifest和逐回合指标。[精确重复文件清单](results/indexes/DEDUPLICATED_FILES_20260922.json)给出移除文件与规范副本的 SHA256 映射。较早的[分析归档](reports/archive/20260916-weekend-review/)保留历史证据，旧状态不覆盖最新结论。
 
 ## 当前结果
 
@@ -30,12 +30,15 @@
 
 SQ W4A4尚未验收；PEFT已有低秩初始化测量，但没有梯度训练、LoRA闭环或Router结果。当前是BF16存储的fake quant，不据此报告INT2/INT4实际压缩与加速。完整四套件、多种子及真实kernel评测未完成。
 
+当前 PEFT / Contextual Routing 唯一默认底座为 [`awq-w2a16-12l-mixed-spatial-v1`](configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json)：DINO W2 G64、SigLIP W2 G128，语言 W4 blocks 8–15 与 20–23，其余语言 W2 G64。第一版 PEFT 只作用于仍为 W2 的 blocks 18–19。14L 和 16L 只承担静态恢复参照；若新证据要求改变底座，新增版本化配置并保留旧版本。
+
 ## 目录
 
 | 路径 | 内容 |
 |---|---|
-| `reports/` | 综合分析、逐轮记录、图表与历史归档 |
-| `results/` | 原始小日志、数据、命令、配置、哈希及源码快照 |
+| [`reports/`](reports/README_CN.md) | 按 P0–P5/次线模块归档的分析、图表、汇总与历史报告 |
+| [`results/`](results/README_CN.md) | 与报告同名分组的原始小日志、数据、配置、哈希及共享快照 |
+| [`backups/`](backups/README_CN.md) | 本地完整归档的统一入口；`backups/experiments/` 不进入普通 Git |
 | [`qvla/`](qvla/README_CN.md) | 维护中的量化、校准、评估与运行时契约代码 |
 | [`diagnostics/`](diagnostics/README_CN.md) | 机制诊断与结果审计代码 |
 | [`scripts/`](scripts/README_CN.md) | 有限实验分片、恢复、备份与收尾工具 |
@@ -44,7 +47,7 @@ SQ W4A4尚未验收；PEFT已有低秩初始化测量，但没有梯度训练、
 | `docs/` | 技术说明、安装修复与研究计划 |
 | `tests/` | 数值及实现契约检查，不替代GPU闭环验收 |
 
-复核某次结果时使用其记录的 checkpoint、profile、代码与输入哈希，不用当前维护代码改写历史测量。字节相同的源码快照归并到 `results/source-snapshots/`，历史路径和哈希见精确重复文件清单；不同版本仍留在原分片。
+复核某次结果时使用其记录的 checkpoint、profile、代码与输入哈希，不用当前维护代码改写历史测量。字节相同的源码快照归并到 `results/shared/source-snapshots/`，历史路径和哈希见精确重复文件清单；不同版本仍留在原分片。
 
 ## 恢复与维护
 
@@ -56,6 +59,6 @@ SQ W4A4尚未验收；PEFT已有低秩初始化测量，但没有梯度训练、
 python scripts/build_experiment_summary.py
 ```
 
-模型、校准集、视频、NPZ和大 profile 不放普通 Git，恢复位置及 SHA 以各轮清单为准。双份归档不代表所有模型和数据均已异地备份。凭据和私钥不入仓库。此次整理保留全部唯一的逐回合日志和指标，仅移除哈希核对过的重复文件及汇总 JSON 的重复数值副本；历史 Git 提交仍可取回原目录布局。
+模型、校准集、视频、NPZ和大 profile 不放普通 Git，恢复位置及 SHA 以各轮清单为准。双份归档不代表所有模型和数据均已异地备份。凭据和私钥不入仓库。目录命名、模块边界和旧路径映射见[2026-09-25 仓库布局说明](docs/REPOSITORY_LAYOUT_20260925_CN.md)。
 
 静态 W4 block 组合搜索已冻结。后续以 12L 为同一低比特底座，先完成训练数据与 q/z/Δ 契约，再在 blocks18–19 做 shared Scale-PEFT 与 Recovery LoRA；只有 shared PEFT 闭环有效且两个等预算专家呈现稳定互补后，才训练基于 block17 后因果表示的 Top-1 Router。执行顺序见[2026-09-25 主线协议](docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)与[2026-09-22 证据计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。

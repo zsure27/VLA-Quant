@@ -27,6 +27,7 @@ Thumbs.db
 *.tmp
 *.bak
 
-# 会话取回的原始归档保留本地，不进入普通Git
-results/pending-*/
+# 会话取回的完整归档统一保留在本地 backups/experiments/，不进入普通 Git。
+# Git 只保存 backups/README_CN.md 中的目录约定与各轮的小型清单/哈希。
+backups/experiments/
 .local/

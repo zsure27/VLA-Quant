@@ -1,0 +1,2694 @@
+{
+  "schema_version": "1.0",
+  "updated_date_beijing": "2026-09-18",
+  "measurement_cutoff_beijing": "2026-09-18 03:37:12",
+  "measurement_source_commit": "3ecaaf4f0f90dff03284e974145976602d345fad",
+  "scope": "Locally available committed VLA-OFT evidence through cutoff; no new GPU experiment in consolidation",
+  "protocol": {
+    "model": "OpenVLA-OFT LIBERO Spatial checkpoint",
+    "formal_protocol": "10 tasks x 50 official initial states, paired model/env seeds",
+    "implementation": "BF16 stored fake-quant weights; no packed-kernel efficiency result",
+    "quantized_targets": {
+      "language": 224,
+      "DINO": 93,
+      "SigLIP": 105
+    },
+    "teacher_mse": "relative to BF16 teacher, not ground-truth action error",
+    "repeat_policy": "Source snapshots may overlap; do not sum datasets as independent observations"
+  },
+  "authoritative_baseline": {
+    "variants": [
+      {
+        "case": "bf16",
+        "episodes": 500,
+        "successes": 487,
+        "success_rate": 0.974,
+        "episode_errors": 0
+      },
+      {
+        "case": "w4",
+        "episodes": 500,
+        "successes": 486,
+        "success_rate": 0.972,
+        "episode_errors": 0
+      }
+    ],
+    "covered_initial_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "paired_episodes": 500,
+    "bf16_only": 10,
+    "w4_only": 9,
+    "both_success": 477,
+    "both_failure": 4,
+    "difference_percentage_points": -0.2,
+    "mcnemar_exact_p": 1.0,
+    "note": "Fixed tasks, paired official init indices; p value not equivalence; fake quant precision only"
+  },
+  "authoritative_scope": [
+    {
+      "case": "full-w2-g64-attention-no-clip",
+      "source_shards": [
+        "awq-scope-shard-full-w2-g64-attention-no-clip-05-09-20260918-032153-93284"
+      ],
+      "episodes": 50,
+      "successes": 11,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 39,
+      "candidate_only": 0,
+      "discordant_pairs": 39,
+      "mcnemar_exact_p": 3.637978807091713e-12,
+      "both_success": 11,
+      "both_fail": 0
+    },
+    {
+      "case": "full-w2-original",
+      "source_shards": [
+        "awq-scope-shard-full-w2-original-05-09-20260918-030722-90322"
+      ],
+      "episodes": 50,
+      "successes": 0,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 50,
+      "candidate_only": 0,
+      "discordant_pairs": 50,
+      "mcnemar_exact_p": 1.7763568394002505e-15,
+      "both_success": 0,
+      "both_fail": 0
+    },
+    {
+      "case": "language-w2-clip",
+      "source_shards": [
+        "awq-scope-shard-language-w2-clip-05-09-20260917-210340-40294"
+      ],
+      "episodes": 50,
+      "successes": 0,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 50,
+      "candidate_only": 0,
+      "discordant_pairs": 50,
+      "mcnemar_exact_p": 1.7763568394002505e-15,
+      "both_success": 0,
+      "both_fail": 0
+    },
+    {
+      "case": "language-w2-g64-clip",
+      "source_shards": [
+        "awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227"
+      ],
+      "episodes": 50,
+      "successes": 0,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 50,
+      "candidate_only": 0,
+      "discordant_pairs": 50,
+      "mcnemar_exact_p": 1.7763568394002505e-15,
+      "both_success": 0,
+      "both_fail": 0
+    },
+    {
+      "case": "language-w2-g64-no-clip",
+      "source_shards": [
+        "awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249"
+      ],
+      "episodes": 50,
+      "successes": 20,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 30,
+      "candidate_only": 0,
+      "discordant_pairs": 30,
+      "mcnemar_exact_p": 1.862645149230957e-09,
+      "both_success": 20,
+      "both_fail": 0
+    },
+    {
+      "case": "language-w2-g64-no-clip-attention",
+      "source_shards": [
+        "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936",
+        "awq-scope-shard-language-w2-g64-no-clip-attention-10-19-20260918-024442-84914"
+      ],
+      "episodes": 150,
+      "successes": 78,
+      "bf16_successes": 146,
+      "episode_errors": 0,
+      "bf16_only": 69,
+      "candidate_only": 1,
+      "discordant_pairs": 70,
+      "mcnemar_exact_p": 1.2027867851011065e-19,
+      "both_success": 77,
+      "both_fail": 3
+    },
+    {
+      "case": "language-w2-g64-no-clip-mlp",
+      "source_shards": [
+        "awq-scope-shard-language-w2-g64-no-clip-mlp-05-09-20260918-022939-81891"
+      ],
+      "episodes": 50,
+      "successes": 0,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 50,
+      "candidate_only": 0,
+      "discordant_pairs": 50,
+      "mcnemar_exact_p": 1.7763568394002505e-15,
+      "both_success": 0,
+      "both_fail": 0
+    },
+    {
+      "case": "language-w2-no-clip",
+      "source_shards": [
+        "awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304"
+      ],
+      "episodes": 50,
+      "successes": 8,
+      "bf16_successes": 50,
+      "episode_errors": 0,
+      "bf16_only": 42,
+      "candidate_only": 0,
+      "discordant_pairs": 42,
+      "mcnemar_exact_p": 4.547473508864641e-13,
+      "both_success": 8,
+      "both_fail": 0
+    },
+    {
+      "case": "vision-w2",
+      "source_shards": [
+        "awq-scope-shard-vision-w2-00-04-20260918-020701-76061",
+        "awq-scope-shard-vision-w2-05-14-20260917-202448-31883",
+        "awq-scope-shard-vision-w2-15-24-20260917-214554-50802",
+        "awq-scope-shard-vision-w2-25-29-20260917-220504-56292",
+        "awq-scope-shard-vision-w2-30-39-20260918-013150-63930",
+        "awq-scope-shard-vision-w2-40-49-20260918-014925-69712"
+      ],
+      "episodes": 500,
+      "successes": 460,
+      "bf16_successes": 487,
+      "episode_errors": 0,
+      "bf16_only": 37,
+      "candidate_only": 10,
+      "discordant_pairs": 47,
+      "mcnemar_exact_p": 9.848878492846325e-05,
+      "both_success": 450,
+      "both_fail": 3
+    }
+  ],
+  "attention_development_extension_splits": [
+    {
+      "split": "development_05_09",
+      "initial_state_start": 5,
+      "initial_state_end": 9,
+      "episodes": 50,
+      "successes": 29,
+      "bf16_successes": 50,
+      "source_shards": [
+        "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936"
+      ],
+      "bf16_only": 21,
+      "candidate_only": 0,
+      "discordant_pairs": 21,
+      "mcnemar_exact_p": 9.5367431640625e-07,
+      "both_success": 29,
+      "both_fail": 0
+    },
+    {
+      "split": "extension_10_19",
+      "initial_state_start": 10,
+      "initial_state_end": 19,
+      "episodes": 100,
+      "successes": 49,
+      "bf16_successes": 96,
+      "source_shards": [
+        "awq-scope-shard-language-w2-g64-no-clip-attention-10-19-20260918-024442-84914"
+      ],
+      "bf16_only": 48,
+      "candidate_only": 1,
+      "discordant_pairs": 49,
+      "mcnemar_exact_p": 1.7763568394002505e-13,
+      "both_success": 48,
+      "both_fail": 3
+    }
+  ],
+  "clip_factorial": {
+    "group_size": 64,
+    "source_profile_sha256": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8",
+    "initial_state_indices": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "cases": {
+      "language-w2-g64-clip": {
+        "episodes": 50,
+        "successes": 0,
+        "source_shard": "awq-scope-shard-language-w2-g64-clip-05-09-20260917-211833-43227"
+      },
+      "language-w2-g64-no-clip": {
+        "episodes": 50,
+        "successes": 20,
+        "source_shard": "awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249"
+      },
+      "language-w2-g64-no-clip-attention": {
+        "episodes": 50,
+        "successes": 29,
+        "source_shard": "awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936"
+      },
+      "language-w2-g64-no-clip-mlp": {
+        "episodes": 50,
+        "successes": 0,
+        "source_shard": "awq-scope-shard-language-w2-g64-no-clip-mlp-05-09-20260918-022939-81891"
+      }
+    },
+    "matrix": [
+      [
+        0,
+        0
+      ],
+      [
+        29,
+        20
+      ]
+    ],
+    "note": "Language-only W2; vision BF16; identical original AWQ scales. Q/K weight clipping naturally absent in all four cases."
+  },
+  "contextual_routing": {
+    "positive_development_pair": {
+      "cases": [
+        "language-w2-g64-no-clip",
+        "language-w2-g64-no-clip-attention"
+      ],
+      "summary": {
+        "episodes": 50,
+        "a_successes": 20,
+        "b_successes": 29,
+        "a_only": 5,
+        "b_only": 14,
+        "both_success": 15,
+        "both_fail": 16,
+        "outcome_oracle_successes": 34
+      },
+      "source_files": [
+        {
+          "path": "results\\107-baseline-continuation-20260917\\awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249\\scope-paired-results.json",
+          "sha256": "dfe031bac687d9a59f0f12facd96b8651c157cc8289c37580ff3151ade9b8236"
+        },
+        {
+          "path": "results\\107-awq-continuation-20260918\\awq-scope-shard-language-w2-g64-no-clip-attention-05-09-20260918-021705-78936\\scope-paired-results.json",
+          "sha256": "88898cc0e22d5ddf6f5b7d6248d4c6c395420bcbccdc9648d35fa937abd263eb"
+        }
+      ],
+      "per_task": [
+        {
+          "task_id": 0,
+          "episodes": 5,
+          "a_successes": 5,
+          "b_successes": 3,
+          "a_only": 2,
+          "b_only": 0,
+          "both_success": 3,
+          "both_fail": 0,
+          "outcome_oracle_successes": 5
+        },
+        {
+          "task_id": 1,
+          "episodes": 5,
+          "a_successes": 1,
+          "b_successes": 2,
+          "a_only": 1,
+          "b_only": 2,
+          "both_success": 0,
+          "both_fail": 2,
+          "outcome_oracle_successes": 3
+        },
+        {
+          "task_id": 2,
+          "episodes": 5,
+          "a_successes": 5,
+          "b_successes": 4,
+          "a_only": 1,
+          "b_only": 0,
+          "both_success": 4,
+          "both_fail": 0,
+          "outcome_oracle_successes": 5
+        },
+        {
+          "task_id": 3,
+          "episodes": 5,
+          "a_successes": 3,
+          "b_successes": 5,
+          "a_only": 0,
+          "b_only": 2,
+          "both_success": 3,
+          "both_fail": 0,
+          "outcome_oracle_successes": 5
+        },
+        {
+          "task_id": 4,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 4,
+          "a_only": 0,
+          "b_only": 4,
+          "both_success": 0,
+          "both_fail": 1,
+          "outcome_oracle_successes": 4
+        },
+        {
+          "task_id": 5,
+          "episodes": 5,
+          "a_successes": 2,
+          "b_successes": 2,
+          "a_only": 1,
+          "b_only": 1,
+          "both_success": 1,
+          "both_fail": 2,
+          "outcome_oracle_successes": 3
+        },
+        {
+          "task_id": 6,
+          "episodes": 5,
+          "a_successes": 1,
+          "b_successes": 5,
+          "a_only": 0,
+          "b_only": 4,
+          "both_success": 1,
+          "both_fail": 0,
+          "outcome_oracle_successes": 5
+        },
+        {
+          "task_id": 7,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 0,
+          "a_only": 0,
+          "b_only": 0,
+          "both_success": 0,
+          "both_fail": 5,
+          "outcome_oracle_successes": 0
+        },
+        {
+          "task_id": 8,
+          "episodes": 5,
+          "a_successes": 3,
+          "b_successes": 3,
+          "a_only": 0,
+          "b_only": 0,
+          "both_success": 3,
+          "both_fail": 2,
+          "outcome_oracle_successes": 3
+        },
+        {
+          "task_id": 9,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 1,
+          "a_only": 0,
+          "b_only": 1,
+          "both_success": 0,
+          "both_fail": 4,
+          "outcome_oracle_successes": 1
+        }
+      ],
+      "paired_episodes": [
+        {
+          "task_id": 0,
+          "init_state_index": 5,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 6,
+          "a_success": true,
+          "b_success": false
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 7,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 8,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": false
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 5,
+          "a_success": true,
+          "b_success": false
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 5,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 6,
+          "a_success": true,
+          "b_success": false
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 7,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 8,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 7,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 8,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 5,
+          "a_success": true,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 6,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 5,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 6,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        }
+      ],
+      "note": "Outcome oracle uses test outcomes; only a complementarity upper bound, not routing performance or training data."
+    },
+    "negative_development_pair": {
+      "cases": [
+        "language-w2-no-clip",
+        "language-w2-g64-no-clip"
+      ],
+      "summary": {
+        "episodes": 50,
+        "a_successes": 8,
+        "b_successes": 20,
+        "a_only": 0,
+        "b_only": 12,
+        "both_success": 8,
+        "both_fail": 30,
+        "outcome_oracle_successes": 20
+      },
+      "source_files": [
+        {
+          "path": "results\\107-baseline-continuation-20260917\\awq-scope-shard-language-w2-no-clip-05-09-20260917-204811-37304\\scope-paired-results.json",
+          "sha256": "f18211b61ea4b8ca9b8451e0c9892a792e34c10587032935fc215e03c62e7534"
+        },
+        {
+          "path": "results\\107-baseline-continuation-20260917\\awq-scope-shard-language-w2-g64-no-clip-05-09-20260917-213317-46249\\scope-paired-results.json",
+          "sha256": "dfe031bac687d9a59f0f12facd96b8651c157cc8289c37580ff3151ade9b8236"
+        }
+      ],
+      "per_task": [
+        {
+          "task_id": 0,
+          "episodes": 5,
+          "a_successes": 4,
+          "b_successes": 5,
+          "a_only": 0,
+          "b_only": 1,
+          "both_success": 4,
+          "both_fail": 0,
+          "outcome_oracle_successes": 5
+        },
+        {
+          "task_id": 1,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 1,
+          "a_only": 0,
+          "b_only": 1,
+          "both_success": 0,
+          "both_fail": 4,
+          "outcome_oracle_successes": 1
+        },
+        {
+          "task_id": 2,
+          "episodes": 5,
+          "a_successes": 3,
+          "b_successes": 5,
+          "a_only": 0,
+          "b_only": 2,
+          "both_success": 3,
+          "both_fail": 0,
+          "outcome_oracle_successes": 5
+        },
+        {
+          "task_id": 3,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 3,
+          "a_only": 0,
+          "b_only": 3,
+          "both_success": 0,
+          "both_fail": 2,
+          "outcome_oracle_successes": 3
+        },
+        {
+          "task_id": 4,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 0,
+          "a_only": 0,
+          "b_only": 0,
+          "both_success": 0,
+          "both_fail": 5,
+          "outcome_oracle_successes": 0
+        },
+        {
+          "task_id": 5,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 2,
+          "a_only": 0,
+          "b_only": 2,
+          "both_success": 0,
+          "both_fail": 3,
+          "outcome_oracle_successes": 2
+        },
+        {
+          "task_id": 6,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 1,
+          "a_only": 0,
+          "b_only": 1,
+          "both_success": 0,
+          "both_fail": 4,
+          "outcome_oracle_successes": 1
+        },
+        {
+          "task_id": 7,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 0,
+          "a_only": 0,
+          "b_only": 0,
+          "both_success": 0,
+          "both_fail": 5,
+          "outcome_oracle_successes": 0
+        },
+        {
+          "task_id": 8,
+          "episodes": 5,
+          "a_successes": 1,
+          "b_successes": 3,
+          "a_only": 0,
+          "b_only": 2,
+          "both_success": 1,
+          "both_fail": 2,
+          "outcome_oracle_successes": 3
+        },
+        {
+          "task_id": 9,
+          "episodes": 5,
+          "a_successes": 0,
+          "b_successes": 0,
+          "a_only": 0,
+          "b_only": 0,
+          "both_success": 0,
+          "both_fail": 5,
+          "outcome_oracle_successes": 0
+        }
+      ],
+      "paired_episodes": [
+        {
+          "task_id": 0,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 6,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 7,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 8,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 0,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 1,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 5,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 8,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 2,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 3,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 4,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 5,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 6,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 7,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": true
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 8,
+          "init_state_index": 9,
+          "a_success": true,
+          "b_success": true
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 5,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 6,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 7,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 8,
+          "a_success": false,
+          "b_success": false
+        },
+        {
+          "task_id": 9,
+          "init_state_index": 9,
+          "a_success": false,
+          "b_success": false
+        }
+      ],
+      "note": "Outcome oracle uses test outcomes; only a complementarity upper bound, not routing performance or training data."
+    },
+    "trained_router": false,
+    "oracle_is_deployable": false
+  },
+  "not_measured": [
+    "certified current SQ W4A4 closed-loop",
+    "gradient-trained PEFT closed-loop",
+    "trained contextual routing",
+    "packed INT2/INT4 total bytes, peak VRAM and synchronized latency",
+    "complete four-suite reproduction"
+  ],
+  "sources": [
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/archival_offline.json",
+      "sha256": "5935e04bcdc3f6451012a483c12996252bd884ee8bb67db91a8a23204b0a8561",
+      "bytes": 2719,
+      "format": "json",
+      "evidence_class": "archival_summary"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/closed_loop.csv",
+      "sha256": "7813b24214e3f14b43112c33de0720a52e70119719c12f541e7f2c91d061cfd7",
+      "bytes": 811,
+      "format": "csv",
+      "columns": [
+        "cohort",
+        "method",
+        "successes",
+        "episodes",
+        "rate",
+        "wilson_low",
+        "wilson_high",
+        "evidence_class",
+        "repeated_states"
+      ],
+      "row_count": 8,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/historical_sq.csv",
+      "sha256": "94ba447243e4f19d4ea3d91b3e7c34c4033cfb74003c01357ad80f89ba826a80",
+      "bytes": 528,
+      "format": "csv",
+      "columns": [
+        "method",
+        "weight_bits",
+        "activation_bits",
+        "episodes",
+        "successes",
+        "rate",
+        "wilson95_low",
+        "wilson95_high",
+        "exit_code",
+        "wall_seconds",
+        "evidence"
+      ],
+      "row_count": 6,
+      "evidence_class": "archival_summary"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/language_diagnostic_per_frame.csv",
+      "sha256": "f5abeed0b479d90c4549f979ba4842de19e966f6440badd82166a515ea3198d6",
+      "bytes": 8497,
+      "format": "csv",
+      "columns": [
+        "sample",
+        "configuration",
+        "teacher_action_mse"
+      ],
+      "row_count": 160,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/language_offline.csv",
+      "sha256": "02da84af09b0d32d229421854113410e2dfe4a50dd983066e924d518b2480d62",
+      "bytes": 785,
+      "format": "csv",
+      "columns": [
+        "dataset",
+        "configuration",
+        "mean_action_mse",
+        "gripper_disagreements",
+        "predictions",
+        "evidence_class"
+      ],
+      "row_count": 8,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/paired_50.csv",
+      "sha256": "80d70151559a3e2f4327403adbf416f6e2fa74198598d15851286f00e76c2d30",
+      "bytes": 5416,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "bf16_success",
+        "w4_success",
+        "model_seed",
+        "env_seed",
+        "init_state_sha256",
+        "previously_screened"
+      ],
+      "row_count": 50,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/selected_block_error.csv",
+      "sha256": "6ce0044a99f03646e4fed47a1611848e0d24487ed5b1f8308a7ae03bf47d3e09",
+      "bytes": 3696,
+      "format": "csv",
+      "columns": [
+        "input_condition",
+        "layer",
+        "variant",
+        "median_action_token_relative_mse",
+        "selected_frames"
+      ],
+      "row_count": 80,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/vision_combination_validation.csv",
+      "sha256": "9767e8aa7c358034ab7ed801be2a6aa8fcf051033655320435b6d1f1493520d2",
+      "bytes": 275,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "mean_action_mse",
+        "median_action_mse",
+        "max_action_mse",
+        "gripper_disagreements",
+        "evidence_class",
+        "frames",
+        "predictions"
+      ],
+      "row_count": 2,
+      "evidence_class": "archival_summary"
+    },
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/data/vision_offline.csv",
+      "sha256": "7f0a60947c1fcfac4efad1e06d07fa0adececeb8ff8798b375c13c81974da342",
+      "bytes": 676,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "mean_action_mse",
+        "gripper_disagreements",
+        "projector_relative_mse",
+        "evidence_class",
+        "frames",
+        "predictions",
+        "language"
+      ],
+      "row_count": 7,
+      "evidence_class": "archival_summary"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/closed_loop_per_task.csv",
+      "sha256": "44735547b8598df342e455973c4c5c4e6bbcbe5b36f62a23db461b56932b0798",
+      "bytes": 7394,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "env_seed",
+        "init_state_dtype",
+        "init_state_index",
+        "init_state_sha256",
+        "init_state_shape",
+        "model_seed",
+        "protocol",
+        "task_id",
+        "success"
+      ],
+      "row_count": 50,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/closed_loop_summary.csv",
+      "sha256": "b1521fff8fa776bcbeef3478cc80d244f1f23ae62796485b117b294fa85e07c6",
+      "bytes": 1579,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "successes",
+        "episodes",
+        "success_rate",
+        "paired_manifest_equal",
+        "source",
+        "source_sha256",
+        "evidence_class"
+      ],
+      "row_count": 5,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/family_per_frame.csv",
+      "sha256": "fb53c13bd5d923b4d70a04f20bc79d2e286385aeb49829cbaec8a509b376e96a",
+      "bytes": 4266,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "sample",
+        "teacher_action_mse",
+        "baseline_teacher_action_mse",
+        "gripper_disagreements"
+      ],
+      "row_count": 64,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/family_summary.csv",
+      "sha256": "f0f5ddbe69edf00e540a129c17167403a0a6950df9335ddcfe73e1598a9fd9ae",
+      "bytes": 310,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "frames",
+        "mean_teacher_action_mse",
+        "gripper_disagreements",
+        "rescue_coordinates",
+        "evidence_class"
+      ],
+      "row_count": 2,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/sq_control_per_frame.csv",
+      "sha256": "2f83e4dcee8ef9cc45a70e9fc74406510368002a5463a10737cba6cc0d163788",
+      "bytes": 1455,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "sample",
+        "action_mse",
+        "gripper_disagreements"
+      ],
+      "row_count": 32,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/sq_control_summary.csv",
+      "sha256": "846c580d1761aed53935b6938c5c984072135b9b3d869b6928168ab01b14a641",
+      "bytes": 246,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "frames",
+        "mean_action_mse",
+        "max_action_mse",
+        "gripper_disagreements"
+      ],
+      "row_count": 4,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/sq_features_per_frame.csv",
+      "sha256": "64186f5ec4568ee93caa6a1ba09732ee853b89c50dc12dc7254daf38fbf7a5c7",
+      "bytes": 399160,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "sample",
+        "block",
+        "token_partition",
+        "relative_mse",
+        "cosine",
+        "max_abs_error"
+      ],
+      "row_count": 5120,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/stage_per_dimension.csv",
+      "sha256": "bef2a93f129925c3d84d5c8c70fbd57fa6b6908ece342662e2f9025b7b41a017",
+      "bytes": 76872,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "sample",
+        "dimension",
+        "normalized_rmse"
+      ],
+      "row_count": 1120,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/stage_per_frame.csv",
+      "sha256": "1940528f1c568467a6a1f74081ff73d73f79febe443166efeb7d615068f2ae83",
+      "bytes": 14362,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "sample",
+        "teacher_action_mse",
+        "baseline_teacher_action_mse",
+        "gripper_disagreements"
+      ],
+      "row_count": 160,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/stage_summary.csv",
+      "sha256": "666dcf6ae13f7721cabc13c378c1a66d196928d72cbec3ee5a5a0e3ef6c4ed8e",
+      "bytes": 1221,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "frames",
+        "chunk_steps",
+        "mean_teacher_action_mse",
+        "median_teacher_action_mse",
+        "max_teacher_action_mse",
+        "gripper_disagreements",
+        "improved_frames",
+        "worsened_frames",
+        "mean_paired_mse_difference",
+        "exploratory_bootstrap_low",
+        "exploratory_bootstrap_high",
+        "evidence_class"
+      ],
+      "row_count": 5,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/awq_paired_frames.csv",
+      "sha256": "03645fbd960e2ce3a5b8dba2cf0818f4f32827df214168d66acfc1f39cc62af7",
+      "bytes": 3272,
+      "format": "csv",
+      "columns": [
+        "sample",
+        "W2 baseline",
+        "W4 bits / W2 coordinates",
+        "W4 searched profile",
+        "fixed_minus_searched"
+      ],
+      "row_count": 32,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/awq_summary.csv",
+      "sha256": "5c5d2b6f57b30a853b17f9015bf66b5f6ebb2eac3af758ea82f49146c86e5eaa",
+      "bytes": 297,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "frames",
+        "mean_action_mse",
+        "gripper_disagreement_steps",
+        "evidence_class"
+      ],
+      "row_count": 3,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/closed_loop_10.csv",
+      "sha256": "1eeccaf79cbe7565fe4542bcf60201809ea1216fffd9238cdea86b1e4f7b4bcd",
+      "bytes": 3153,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "env_seed",
+        "init_state_dtype",
+        "init_state_index",
+        "init_state_sha256",
+        "init_state_shape",
+        "model_seed",
+        "protocol",
+        "task_id",
+        "success"
+      ],
+      "row_count": 20,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/closed_loop_50.csv",
+      "sha256": "49873a288764ace80f05e01a9286b20d08a610a8760a945507b7ace9f2419cc1",
+      "bytes": 18975,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "env_seed",
+        "init_state_dtype",
+        "init_state_index",
+        "init_state_sha256",
+        "init_state_shape",
+        "model_seed",
+        "protocol",
+        "task_id",
+        "success"
+      ],
+      "row_count": 150,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/closed_loop_50_summary.csv",
+      "sha256": "fa47b4544bd3232c8cfe5d0ad58cdf209890dbfe2ddea49235f82ac0f2e7ca99",
+      "bytes": 171,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "successes",
+        "episodes",
+        "new_candidate_init_1_to_4_successes",
+        "new_candidate_init_1_to_4_episodes"
+      ],
+      "row_count": 3,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/input_diag_frames.csv",
+      "sha256": "ba6392b18fc2857e7cb679398a618af3ebfd15e292cab625bbd289384fe72d0f",
+      "bytes": 2696,
+      "format": "csv",
+      "columns": [
+        "initialization",
+        "sample",
+        "action_mse"
+      ],
+      "row_count": 64,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/input_diag_summary.csv",
+      "sha256": "41f40aa2b6da0621edeaa0cf7a7175c4dbba799a3bb249024c6243ce9477b9f1",
+      "bytes": 401,
+      "format": "csv",
+      "columns": [
+        "initialization",
+        "rank",
+        "frames",
+        "calibration_frames",
+        "adapter_parameters",
+        "training_steps",
+        "mean_action_mse",
+        "gripper_disagreement_steps",
+        "mean_unexplained_weight_residual",
+        "mean_unexplained_input_diagonal_residual"
+      ],
+      "row_count": 2,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/low_rank_frames.csv",
+      "sha256": "17570f3f06c905181b2459c545a3800156370238c85743e95854f0c6ebb51599",
+      "bytes": 2465,
+      "format": "csv",
+      "columns": [
+        "rank",
+        "sample",
+        "action_mse"
+      ],
+      "row_count": 64,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/low_rank_summary.csv",
+      "sha256": "6ff3f5089231de23fdf66e978b45a96bda398a7b214ac18401efe39514e15273",
+      "bytes": 234,
+      "format": "csv",
+      "columns": [
+        "rank",
+        "frames",
+        "mean_action_mse",
+        "gripper_disagreement_steps",
+        "adapter_parameters",
+        "training_steps",
+        "mean_unexplained_weight_residual"
+      ],
+      "row_count": 2,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/sq_branch_frames.csv",
+      "sha256": "ca7dda4d3569a441ec0d90d6f20b1c301eafe0479e07325dc15aeeb69db79b0e",
+      "bytes": 717,
+      "format": "csv",
+      "columns": [
+        "sample",
+        "Vision both (previous)",
+        "DINO only",
+        "SigLIP only"
+      ],
+      "row_count": 8,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/sq_branch_summary.csv",
+      "sha256": "850836c59818332d0d0f16ffafc163cad828c62326da38506ac3f83185eeeff0",
+      "bytes": 312,
+      "format": "csv",
+      "columns": [
+        "configuration",
+        "frames",
+        "mean_action_mse",
+        "max_action_mse",
+        "gripper_disagreement_steps",
+        "within_original_1e4_gate"
+      ],
+      "row_count": 3,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/sq_fp32_pairs_frames.csv",
+      "sha256": "ab07b9f90317413c291f7b84a6ce9895f0e10245332a2e287b28d1b32d7ce8e9",
+      "bytes": 824,
+      "format": "csv",
+      "columns": [
+        "case",
+        "sample",
+        "action_mse"
+      ],
+      "row_count": 16,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/sq_fp32_pairs_summary.csv",
+      "sha256": "f3027d2712aca344f7c9fd8f9cd164ff409be88259b1978c7e2676d78a4b7854",
+      "bytes": 308,
+      "format": "csv",
+      "columns": [
+        "case",
+        "reference",
+        "frames",
+        "mean_action_mse",
+        "max_action_mse",
+        "gripper_disagreement_steps",
+        "smoothing_groups",
+        "within_original_1e4_gate"
+      ],
+      "row_count": 2,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/data/sq_local_groups.csv",
+      "sha256": "b0eaf52c799dbaabbde6a5cbc6232fa52cc570f7b20e671bb33f4928afe20b01",
+      "bytes": 9986,
+      "format": "csv",
+      "columns": [
+        "norm",
+        "linear",
+        "case",
+        "tokens",
+        "input_space",
+        "mse",
+        "relative_mse",
+        "reference_rms",
+        "candidate_rms",
+        "cosine",
+        "max_abs_error",
+        "reference_zero_fraction",
+        "candidate_zero_fraction"
+      ],
+      "row_count": 36,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/baseline_disagreement_videos.csv",
+      "sha256": "6c65e698da557723ba82a03aa9ac926c1eeda5ea0745fe14a108a511f5cb176c",
+      "bytes": 6853,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "bf16_success",
+        "w4_success",
+        "bf16_video",
+        "w4_video",
+        "source_shard"
+      ],
+      "row_count": 19,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/calibration_coverage.csv",
+      "sha256": "46325478fca9d6c146921c66c0e4ae090a33d61399108872dc50b533ef985ef9",
+      "bytes": 770,
+      "format": "csv",
+      "columns": [
+        "instruction",
+        "selected_frames"
+      ],
+      "row_count": 10,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/calibration_coverage.json",
+      "sha256": "0d36312d900a39b95effccb802de5837eac3c6f710ff70448eeec9c6d37aeaac",
+      "bytes": 1379,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/g64_no_clip_derivation_summary.json",
+      "sha256": "5de364e31a7dc5a559a58a03f0e5f5ebba0693e7172bcbede32fda21d3ef936f",
+      "bytes": 471,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/oft_adapter_scope_summary.json",
+      "sha256": "74c3c2a340ebe0f89340a85c934358a4642cc38d41acb6ece36ff0a1850bd137",
+      "bytes": 405,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/oft_adapter_source_audit.json",
+      "sha256": "ce8afdb08a78f2c7dcf463603ba11148dc046d064a84b03c59b7d01ad8a881f6",
+      "bytes": 198922,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/paired_episodes.csv",
+      "sha256": "a8feef514e2809449afbfe9f7f531aa4bc24914271651e9798e9aadacb4170a3",
+      "bytes": 94719,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "model_seed",
+        "env_seed",
+        "init_state_sha256",
+        "bf16_success",
+        "w4_success",
+        "bf16_episode_errors",
+        "w4_episode_errors",
+        "source_shard",
+        "source_session"
+      ],
+      "row_count": 500,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/per_task.csv",
+      "sha256": "98e9cad6bf8c716e4b27a7bfd597249bbff44b528c8a27fa6c22dca21f4a1a67",
+      "bytes": 166,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "episodes",
+        "bf16_successes",
+        "w4_successes"
+      ],
+      "row_count": 10,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/policy_finite_checks.json",
+      "sha256": "1ad0c94e5c390928cfcc5d08859b6e4b9a789add12cbb2830f73493557bbcb25",
+      "bytes": 125,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/scope_paired_episodes.csv",
+      "sha256": "08498fe81fdcc02a0caf911f89807d9ec426164ea33d0d7686ec315e280a4070",
+      "bytes": 117623,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "init_state_sha256",
+        "model_seed",
+        "env_seed",
+        "bf16_success",
+        "candidate_success",
+        "candidate_episode_errors",
+        "reference_episode_errors",
+        "reference_shard",
+        "case",
+        "source_shard"
+      ],
+      "row_count": 450,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/scope_per_task.csv",
+      "sha256": "6724384082e037122aae03cbcf348debe5bfe7cd67056970d42ae0063dd36897",
+      "bytes": 1448,
+      "format": "csv",
+      "columns": [
+        "case",
+        "task_id",
+        "episodes",
+        "successes",
+        "bf16_successes"
+      ],
+      "row_count": 50,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/scope_summary.csv",
+      "sha256": "32234f9c10e7f507124ad7780f44b4ddcd2053c566f50855b62b6f0e8197ed4f",
+      "bytes": 669,
+      "format": "csv",
+      "columns": [
+        "case",
+        "source_shards",
+        "episodes",
+        "successes",
+        "bf16_successes",
+        "episode_errors"
+      ],
+      "row_count": 5,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/scope_summary.json",
+      "sha256": "fd8d0da268348027d962ca6c2ee7b7d9f2c25d628b0abf34cd1952e85c3c2b5f",
+      "bytes": 1352,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/summary.csv",
+      "sha256": "1ec544607b6f4ea54bc52c03fc9d739133f5b6681d5888fd9ce4deed50557843",
+      "bytes": 95,
+      "format": "csv",
+      "columns": [
+        "case",
+        "episodes",
+        "successes",
+        "success_rate",
+        "episode_errors"
+      ],
+      "row_count": 2,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/data/summary.json",
+      "sha256": "cc4b5e7ce4f32b41f176b8b52d2f8a1b7ee88bd777cb0a0dade774cd193c33ee",
+      "bytes": 1076,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/awq_scope.csv",
+      "sha256": "2ca48fef26e7982365ee9eaddd03ff10e72154fc56eefd29543c881661426b32",
+      "bytes": 198,
+      "format": "csv",
+      "columns": [
+        "branch",
+        "targets",
+        "weight_parameters",
+        "weight_fraction",
+        "clip_targets"
+      ],
+      "row_count": 3,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/awq_scope_summary.json",
+      "sha256": "c88be496fa4b4b291de29b4cd1d4aa2ae7f33940847daa5dcc016929659ca34b",
+      "bytes": 301,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/paired_episodes.csv",
+      "sha256": "adf0876e1b8d098fbbf6cfcfcae0ea8984e99ca07b697d0e76069f348b6a3b8a",
+      "bytes": 23965,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "model_seed",
+        "env_seed",
+        "init_state_sha256",
+        "bf16_success",
+        "w4_success",
+        "bf16_episode_errors",
+        "w4_episode_errors"
+      ],
+      "row_count": 220,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/per_task.csv",
+      "sha256": "4cb1ed71aaf2f2305934531a1ea4c7510bcc56096fa576a2ef64aea98729bdd3",
+      "bytes": 166,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "episodes",
+        "bf16_successes",
+        "w4_successes"
+      ],
+      "row_count": 10,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/policy_finiteness.json",
+      "sha256": "3142e1dd2511880b0ab73aa4d85e15219e78c567604857819dcf0994a18c94c3",
+      "bytes": 1491,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/summary.csv",
+      "sha256": "74d83bf61749d5c3a9d576de7e1c71d48e039b5709190d7947fc47b27ff99ff9",
+      "bytes": 121,
+      "format": "csv",
+      "columns": [
+        "case",
+        "episodes",
+        "successes",
+        "success_rate",
+        "episode_errors"
+      ],
+      "row_count": 2,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/summary.json",
+      "sha256": "b8ca0aa04a01eefde306520910a76ee7647bcaae05e95432ad20176fd9dae478",
+      "bytes": 870,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-validation/data/task_names.csv",
+      "sha256": "2a1a4938d205cfc8c325d02a83cd9dcd4472dc52d6b1ae2a181368d4b74c4227",
+      "bytes": 767,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "task_description"
+      ],
+      "row_count": 10,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/language_all_attention_complementarity.json",
+      "sha256": "1a179344f2dc8428fa97d854c3c437a26ae00c21ce28d3386b22b160de9a7026",
+      "bytes": 9273,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/language_attention_splits.json",
+      "sha256": "74c486bd6269e9a94bf70346ab5248d776cb241aa27247da66f6447fef60b09f",
+      "bytes": 933,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/language_clip_factorial.json",
+      "sha256": "4a40531928c6142ab115315066cd8fc935f219207d56c12ce1c12a670aa95b92",
+      "bytes": 1186,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/language_g128_g64_complementarity.json",
+      "sha256": "0554cbf61da0819e4e9c8dd9b23d0f5d21d25e6d4d6a127028b5aa8f2cfafff5",
+      "bytes": 9269,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/policy_trace_audit.json",
+      "sha256": "b8bac873b5330679042f6d75a4baa4433bb0d7209b3dc52e9c66087c528b5cf5",
+      "bytes": 8474,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/prior_shutdown_failure.json",
+      "sha256": "a3d18b68879a4af0c2c3876c289f9bdc45ac130bbb723551429097683daa910d",
+      "bytes": 504,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/profile-provenance/w2-g64-language-no-clip-attention.intervention.json",
+      "sha256": "909f140099a8a54c538818eb75a7b01e224d1e2f79ffbb98cd478628d24630c1",
+      "bytes": 4358,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/profile-provenance/w2-g64-language-no-clip-attention.verification.json",
+      "sha256": "db27acdce985751d3f6ca340451386503d6af942c37802413ece28182d158213",
+      "bytes": 337,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/profile-provenance/w2-g64-language-no-clip-mlp.intervention.json",
+      "sha256": "75d1df6306367cec5ef709c7e19b59cabfd4b9555eea944d93030ce88c520cb0",
+      "bytes": 5744,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/profile-provenance/w2-g64-language-no-clip-mlp.verification.json",
+      "sha256": "ff7a3054bc33b76e07596d9d218a9bbd587eea2d993a3a639bf2862e38b256a6",
+      "bytes": 331,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/scope_contracts.json",
+      "sha256": "8c416458b94bf3d76084691835ee1cc467e1269d84a43d4cf8aa6b54ab177908",
+      "bytes": 5212,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/scope_paired_episodes.csv",
+      "sha256": "feae4d7c2bd066c723ff0fb819a06f903f90a67cf404620d9de28d777a8e0fe0",
+      "bytes": 267891,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "init_state_sha256",
+        "model_seed",
+        "env_seed",
+        "bf16_success",
+        "candidate_success",
+        "candidate_episode_errors",
+        "reference_episode_errors",
+        "reference_shard",
+        "case",
+        "source_shard"
+      ],
+      "row_count": 1000,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/scope_per_task.csv",
+      "sha256": "42b7483f1b62da334982fc66bd0ede94f53a47259bc064caa1fc5568a8f582fc",
+      "bytes": 2922,
+      "format": "csv",
+      "columns": [
+        "case",
+        "task_id",
+        "episodes",
+        "successes",
+        "bf16_successes"
+      ],
+      "row_count": 90,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/scope_summary.csv",
+      "sha256": "c538495634ebc0a27135ad3bd591488c1fe9194c2e5566e99a2e6fd3894d3ae5",
+      "bytes": 1779,
+      "format": "csv",
+      "columns": [
+        "case",
+        "source_shards",
+        "episodes",
+        "successes",
+        "bf16_successes",
+        "episode_errors",
+        "bf16_only",
+        "candidate_only",
+        "discordant_pairs",
+        "mcnemar_exact_p",
+        "both_success",
+        "both_fail"
+      ],
+      "row_count": 9,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/scope_summary.json",
+      "sha256": "944aa928fdce173440d186ee622578119db44766bef305cab4d6d8e23f8d7ee8",
+      "bytes": 4210,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/task_instructions.json",
+      "sha256": "2525ade21492515526df6f8e5a3224521efc8a471790b07f56452e02ee448fa6",
+      "bytes": 2036,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/data/vision-w2-disagreement-350-20260918.csv",
+      "sha256": "5dbfb32b86cdef9c2f89f25b0307ce60a5ba5fdc587f3aa5becb9a4344f8b0ba",
+      "bytes": 12102,
+      "format": "csv",
+      "columns": [
+        "task_id",
+        "init_state_index",
+        "bf16_success",
+        "candidate_success",
+        "bf16_video",
+        "candidate_video",
+        "source_shard"
+      ],
+      "row_count": 33,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20260917-107-response-svd/data/frames.csv",
+      "sha256": "dce8dba649306fa8f9d37e1c63b822ac58fe48f1285c6268e9757e151d1a6a48",
+      "bytes": 7715,
+      "format": "csv",
+      "columns": [
+        "case",
+        "sample",
+        "action_mse",
+        "gripper_disagreement"
+      ],
+      "row_count": 128,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20260917-107-response-svd/data/module_geometry.csv",
+      "sha256": "58f32ea4ffbce56d126c85e4050951e44bf56531cdf6a32d03268f385798cbea",
+      "bytes": 21803,
+      "format": "csv",
+      "columns": [
+        "case",
+        "module",
+        "rank",
+        "adapter_parameters",
+        "residual_frobenius_unexplained_fraction",
+        "input_diagonal_unexplained_fraction",
+        "response_unexplained_fraction",
+        "init",
+        "seed"
+      ],
+      "row_count": 112,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20260917-107-response-svd/data/summary.csv",
+      "sha256": "df97b9a214029ff06cbef7c79542af1ececda3da441f73d90b17ab8f4a60bd25",
+      "bytes": 517,
+      "format": "csv",
+      "columns": [
+        "case",
+        "frames",
+        "calibration_frames",
+        "parameters",
+        "training_steps",
+        "mean_action_mse",
+        "gripper_disagreement_steps",
+        "mean_unexplained_weight_residual",
+        "mean_unexplained_calibration_response"
+      ],
+      "row_count": 4,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20260917-107-response-svd/data/summary.json",
+      "sha256": "08ae91f306fe761ae00394136c52b5799436da347917df36a0004a1346e53071",
+      "bytes": 1410,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/data/policy_trace_audit.json",
+      "sha256": "0c48dc310d144ab4dfb2cacfe43d9df71d59c8dfe97842710ed95965dca44d5a",
+      "bytes": 15885,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/data/results.csv",
+      "sha256": "c697cd0498ed86713639b2150d93bc2a5a83f63ce1c9fc5f7f8a21060db8489f",
+      "bytes": 3447,
+      "format": "csv",
+      "columns": [
+        "evidence_class",
+        "w4_blocks",
+        "block_count",
+        "initial_states",
+        "episodes",
+        "successes",
+        "success_rate",
+        "result_directory"
+      ],
+      "row_count": 22,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p3-static-backbone/20260923-107-awq-p0-visual-groups/data/paired-results.json",
+      "sha256": "85f5211167fe6b090609f5a3ccd5319a092d33fb8ded93e1bcffe302feaed115",
+      "bytes": 17389,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p3-static-backbone/20260924-107-awq-stage-complete/data/results.csv",
+      "sha256": "cd188e418fa0610fd4c0f269a75c883d343d53f178c058d99b57697658284c56",
+      "bytes": 430,
+      "format": "csv",
+      "columns": [
+        "initial_states",
+        "reference_w4_blocks",
+        "reference_successes",
+        "pruned_w4_blocks",
+        "pruned_successes",
+        "episodes_per_candidate",
+        "paired_both_success",
+        "paired_reference_only",
+        "paired_pruned_only",
+        "paired_both_fail"
+      ],
+      "row_count": 6,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p3-static-backbone/20260924-269-awq-stage-generalization/data/pair-audit.json",
+      "sha256": "5767325d4d0299011f389210edd5afde94f3d7f908f0bc9fc0444517585a3fe3",
+      "bytes": 3518,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "reports/experiments/p3-static-backbone/20260924-269-awq-stage-generalization/data/results.csv",
+      "sha256": "d4a0f9843c96cbdae73d433b06845bc35282d30fb88340f01df33dc7c5ffd8c7",
+      "bytes": 310,
+      "format": "csv",
+      "columns": [
+        "initial_states",
+        "reference_w4_blocks",
+        "reference_successes",
+        "pruned_w4_blocks",
+        "pruned_successes",
+        "episodes_per_candidate",
+        "paired_both_success",
+        "paired_reference_only",
+        "paired_pruned_only",
+        "paired_both_fail"
+      ],
+      "row_count": 3,
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics/summary.json",
+      "sha256": "7003860ef8b248bf03a961fd6a3de9bd8da49f5ff816d7fb556f2714a5f80db5",
+      "bytes": 3038,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/attention/metrics.json",
+      "sha256": "7bf67d90709a14c5f5465c881d4dc527ea00dd7aa1a5ed472b5e00049844d257",
+      "bytes": 3745916,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/mlp/metrics.json",
+      "sha256": "509d036ad3b1855418da747ecfc2f4ae069cdac8e34db0e6349d13326de51871",
+      "bytes": 3745771,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-family-precision-20260916-192926-6819/summary.json",
+      "sha256": "c3a364a3a5cfc4c9bc44effe5f546e90653809429f7be415123e1eb605373075",
+      "bytes": 202,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-00-07/metrics.json",
+      "sha256": "e7f9324b7cad6da79b7b7ec6fb15ed50a5716e7a93a98b796eeca28eb43749d1",
+      "bytes": 3750157,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/stage-08-15/metrics.json",
+      "sha256": "90029b681cf5e947b8f6082d354d0420b9c3134cea066838817ac7f5b95f601d",
+      "bytes": 3747118,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-a-20260916-185313-2064/summary.json",
+      "sha256": "46a9ce2a7a1e4ec7aa7dbfe4cfb628043cffaf9b3ab29937c6830758c67ab9fa",
+      "bytes": 564,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-16-23/metrics.json",
+      "sha256": "a9832a761fdb1803e40ebbe94d9fc5804437a7ec5a15ddb0d3c8479fd071a367",
+      "bytes": 3747241,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/stage-24-31/metrics.json",
+      "sha256": "260bd077787e6f600063ccd47c7176588977fa16aef1c866f5c3d828a8964b97",
+      "bytes": 3745818,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/awq-language-stage-rescue-b-20260916-190137-2866/summary.json",
+      "sha256": "5de452f48d71f059e0b7b5b3a6912040ef27f316fbd870d024935b58323c4bbb",
+      "bytes": 566,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/baseline/metrics.json",
+      "sha256": "e9ae70467b29d72624d9a7b308f10b773f50eca42510aa5af78588bc3af2aea0",
+      "bytes": 3745157,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/repeat/metrics.json",
+      "sha256": "f9556ad250424b5a6720559341db213b46f301aa056f2e6f40fd0ad24266f2aa",
+      "bytes": 872532,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/smooth-only/metrics.json",
+      "sha256": "c156da5466b3d10c8ef4903d8080ada706f4a58b897ea9f0f0fb1cc95204e213",
+      "bytes": 977234,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-190836-3620/summary.json",
+      "sha256": "900289ff5d30bcd4bf2229ad01826cab7179f3066a6e3d9b1c734d537187de29",
+      "bytes": 433,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language/metrics.json",
+      "sha256": "d1e470c34360c8b0bd76add730d53a8d9335c7b1daa620d7ca83fd55aa5ec05f",
+      "bytes": 977334,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/no-language-oracle/metrics.json",
+      "sha256": "c9ae0fd02d6485232eea44397c7674d43d40cfe9118e6f6dfda54662a2ca79ee",
+      "bytes": 904644,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-diagnostics/sq-controls-recheck-20260916-192316-6105/summary.json",
+      "sha256": "b5dc14711bea467bfb4a4e7a84d4f2a12c87a1d26853858e29b0b26cee9465bb",
+      "bytes": 445,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-family-precision-20260916-231456-1371/all/metrics.json",
+      "sha256": "434c5840f8e7b761b67468b03157afbca64737e1032b8e84f59cccbbb816669c",
+      "bytes": 3747377,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-family-precision-20260916-231456-1371/summary.json",
+      "sha256": "9156f72b9995e8a2eca24e13b8730b31804e4c83e6fbc96b7db46c8e73b40cbe",
+      "bytes": 99,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-input-diag-residual-20260916-235145-8370/rank-action/metrics.json",
+      "sha256": "3d659466096f061604088090d7bdf9d42f2b82afcbfdcdfaed6c6e6f457ac520",
+      "bytes": 3745187,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-input-diag-residual-20260916-235145-8370/rank-all/metrics.json",
+      "sha256": "a40a97f6a85176741d5550849a877d71ec9a59b856b1c1452bd18bac5395a1fe",
+      "bytes": 3744906,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-low-rank-residual-20260916-233954-6900/rank-4/metrics.json",
+      "sha256": "92a574e4df71c3cf2a89cd20508512d1c1334f6a935b1ece08a14e5b7208f753",
+      "bytes": 3744631,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-low-rank-residual-20260916-233954-6900/rank-8/metrics.json",
+      "sha256": "eaa3f041d18d9182226ad5f4d16cc31dedbc9307954fbc92713a9e50eeec55e2",
+      "bytes": 3744971,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/sq-controls-recheck-20260916-231858-1844/fused-only/metrics.json",
+      "sha256": "d32a2dcfd597155e94683e0b092195f848ac96f95236aedc18ff61d892b53795",
+      "bytes": 962715,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/sq-controls-recheck-20260916-231858-1844/primary-only/metrics.json",
+      "sha256": "260a80cb235fb48bebdf2893271910510933dfee6421ac3f9f0e34a0125c1aa8",
+      "bytes": 960704,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/sq-controls-recheck-20260916-231858-1844/summary.json",
+      "sha256": "a04b213474f1ad1b935cabc29f414f8bcab93bb26dcc3f187cce05f9b7cb403a",
+      "bytes": 475,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/sq-fp32-pairs-20260916-234625-7660/fp32-repeat/metrics.json",
+      "sha256": "4ad13f0bc6db4d5b1cc867c7f4a0b2a1e1a19132160ebda7c9854148a9ffa537",
+      "bytes": 977503,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/sq-fp32-pairs-20260916-234625-7660/fp32-smooth/metrics.json",
+      "sha256": "b892d45a08a3a7b238a6a16297eaf70fc48c9b0261f284f216ac810559444f83",
+      "bytes": 977604,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-107-followup/sq-local-equivalence-20260916-232709-3496/measurement/metrics.json",
+      "sha256": "46601c620ec0b9eb7ab40aecc493534d9fd6e4d20cf3f19c185d02ffa7b3dcd7",
+      "bytes": 19559,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-awq-baseline-gate/analysis/summary.json",
+      "sha256": "eef5f52ce21753d7d0b343c7587f994a860cbaf4400df3ad5ff527e31f7190fb",
+      "bytes": 2434,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-awq-block-audit/block-error-summary.json",
+      "sha256": "857aee29760a027d1d3d7056d233e8a12248bfe96b44a32935e85367792b0465",
+      "bytes": 3089,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-awq-block-audit/controls.json",
+      "sha256": "6f14d19348407475b0c30b39f604195a0acb3ec236ae7a12ff506d14efb2b7d4",
+      "bytes": 348,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-awq-block-audit/e2e-interventions-old-summary.json",
+      "sha256": "2cbc99256d6ba9b8164d40ddcbca01c91a1637fc39cca54adb4edca7644cb5b1",
+      "bytes": 15410,
+      "format": "json",
+      "evidence_class": "archival_summary"
+    },
+    {
+      "repository_path": "results/experiments/p0-foundation-baselines/20260916-awq-block-audit/metrics.json",
+      "sha256": "5ec812332cc76c7eec2a351423ace0ceb1093edc66083084aa48547110f10321",
+      "bytes": 411104,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p2-shared-peft/20260917-107-response-svd/awq-response-svd-20260917-003557-1297/rank-16/metrics.json",
+      "sha256": "0ae5b6db3366f9a2a1a48e61450fbb63119395a5e99b221cae2322e10ba5386d",
+      "bytes": 3745451,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p2-shared-peft/20260917-107-response-svd/awq-response-svd-20260917-003557-1297/rank-8/metrics.json",
+      "sha256": "5639d2aa5503111a7ab3ced30b38b65d3d867fa22d939266e2febfe4593169ba",
+      "bytes": 3745311,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    },
+    {
+      "repository_path": "results/experiments/p2-shared-peft/20260917-107-response-svd/awq-response-svd-rms16-20260917-004327-2145/rank-16/metrics.json",
+      "sha256": "67da5f3c43f53b9e22adb22eb2033bdd7aae42146ea500bf42708cdf3551fbf8",
+      "bytes": 3744844,
+      "format": "json",
+      "evidence_class": "committed_source_snapshot"
+    }
+  ],
+  "figures": [
+    {
+      "repository_path": "reports/archive/20260916-weekend-review/figures/03_language_offline.png",
+      "sha256": "e89c0356ca32d69e01026cf0d2b83e3c9da312ce1f02e6c8ece9e7539309f286",
+      "bytes": 162509
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/figures/01_stage_rescue.png",
+      "sha256": "b9815c6fa304330a9262838ec2ef6c988302fd475e36dc8fcd3df1b00af16d70",
+      "bytes": 90002
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/figures/02_sq_vision_branches.png",
+      "sha256": "7311c4fd97b142b8726f08725172047ba61be5a063473de22429fe711b232e32",
+      "bytes": 90455
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/figures/03_sq_local_equivalence.png",
+      "sha256": "61537bc7d114f554045776ad1a7845ac71aadbfa74048ce76c6b57981bc3b7d5",
+      "bytes": 123464
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-followup/figures/05_stage_08_23_closed_loop50.png",
+      "sha256": "e48d845e4b64b53edb2e856bc4fab10d3d5094b05cb10e89f3b159cfef2de1f3",
+      "bytes": 41494
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation/figures/01_per_task.png",
+      "sha256": "7f6413a9648007dcbe4ed273f05dbf4576ca031943471cfd9269105feef64d99",
+      "bytes": 41309
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/figures/05_vision_per_task.png",
+      "sha256": "fb7dc1d97c1576dbdc73c4398dbecf9a411ebda23d849754ee499698fa0a3e85",
+      "bytes": 56445
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/figures/07_language_clip_factorial.png",
+      "sha256": "95a33c3990bd52165fca2cf7895275a8e759d42dd85249af0b4d27aaa0a853ec",
+      "bytes": 63091
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/figures/08_attention_state_extension.png",
+      "sha256": "d8d023e798014a5756ca8e8df7f281656f3eef82e0f5866bafe040b8527438f3",
+      "bytes": 50651
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation/figures/vision-w2-task1-contact-350-20260918/task-1-init-07.png",
+      "sha256": "0f4975ef48d9431b246165085f2ffde5e1a5098c4f1545017ad98a47aec3202a",
+      "bytes": 261982
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20260917-107-response-svd/figures/01_action_mse.png",
+      "sha256": "dbf05096b5e50e98a62aa0c0e7aa1c50edd7d5b83a8ae367e339da5399531ba9",
+      "bytes": 52282
+    },
+    {
+      "repository_path": "reports/summaries/20260918-experiment-overview/assets/01_baselines.png",
+      "sha256": "732c130206fffae391d897d840bb0b597554efe88f3065baa717a4711e19ff15",
+      "bytes": 83880
+    },
+    {
+      "repository_path": "reports/summaries/20260918-experiment-overview/assets/01_baselines.svg",
+      "sha256": "5254239d8a086460563d9a51351a53ebffc749f2fa148d6edea80f6fb5861586",
+      "bytes": 57953
+    },
+    {
+      "repository_path": "reports/summaries/20260918-experiment-overview/assets/02_router_upper_bound.png",
+      "sha256": "775a55f8ea78cf8add024c8fda89e8663f093f0d545305741d98a3b0bde9fd6b",
+      "bytes": 57262
+    },
+    {
+      "repository_path": "reports/summaries/20260918-experiment-overview/assets/02_router_upper_bound.svg",
+      "sha256": "c13d080164bcfd6189894aad15917241902d4b4826ef47f0de94431cae9a1577",
+      "bytes": 39510
+    }
+  ],
+  "file_hash_policy": "SHA256 of canonical LF bytes for CSV/JSON/Markdown/Python/text/SVG; binary PNG uses original bytes. bytes fields record local source size. Embedded profile and upstream hashes retain their own original conventions.",
+  "diagnostic_index_policy": "Sources are indexed by relative path, SHA256 and byte count. Large arrays and CSV rows remain in their source files and are not duplicated here. Authoritative result summaries above retain the measured counts.",
+  "document_hashes": {
+    "README_CN.md": "8af24bafb0bd6c6a67cf8e58813cb01747a96f3749106cc43a33cf56adecfd03",
+    "EXPERIMENT_LOG_CN.md": "e160d747f566fd4dd4d24f8e005522cdefa2d3e7be4511080c8a1daeff046e84"
+  },
+  "reproduction": "python scripts/build_experiment_summary.py (numpy/matplotlib; no network or GPU)",
+  "large_artifacts": "Source videos/profile/NPZ are in separately SHA-verified server and local archives; models/calibration/original profiles are not fully offsite-backed-up"
+}

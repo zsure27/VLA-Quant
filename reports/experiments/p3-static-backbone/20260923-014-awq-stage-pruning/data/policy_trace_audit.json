@@ -1,0 +1,182 @@
+{
+  "files": [
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23",
+      "queries": 156,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-05-20260923-230616-31750/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "9558061e568e67e48b319d96910e1238730c9e5dc382fa7b7393814b56147cab"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23",
+      "queries": 797,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23-05-09-20260923-231639-34324/full-w2-dino64-siglip128-language-g64-attention-stage-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "46c742a3c1c661d25705c49915777cf45fa22c0f77a3762b4135ce6e8b44213a"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15",
+      "queries": 210,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-05-05-20260923-211244-5278/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15/policy-queries.jsonl",
+      "sha256": "ecf4eef5e45487403a1c6522d587919bee78179907e15c98639df2888bbe800c"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19",
+      "queries": 1148,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-05-09-20260923-213627-11087/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19/policy-queries.jsonl",
+      "sha256": "10491472618bc6fbe31c462d2d1a5260802ad54f73c1547847332d7fc89ce104"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23",
+      "queries": 787,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23-05-09-20260923-212457-8058/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "sha256": "2b4468ecdf0ac5109550095d132427b176a9e77211b7c39798e51ca8a6c80aa5"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23",
+      "queries": 169,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-05-20260923-223327-23985/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "a72c495406bf12cc3b6e2416564363192bc4c75ab9b53e89b88c68b5e52eadfb"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23",
+      "queries": 832,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23-05-09-20260923-225057-27948/full-w2-dino64-siglip128-language-g64-attention-stage-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "e50728c9c9042a6e274e211de5653b40bed6550d8518dbd97bbe79c41531abb9"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19",
+      "queries": 189,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-05-05-20260923-211606-6153/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19/policy-queries.jsonl",
+      "sha256": "aca36d1f734752c030449bad02c4d7ebd9464fe7a1719034d00427f0cd59d43e"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23",
+      "queries": 957,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23-05-09-20260923-205540-1244/full-w2-dino64-siglip128-language-g64-attention-stage-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "sha256": "be5776ba77fd8fd72293706d996baf5e2c1d4d2aa11b8afba5598a8d2d43b68b"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23",
+      "queries": 198,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23-05-05-20260923-211921-7024/full-w2-dino64-siglip128-language-g64-attention-stage-20-21-22-23/policy-queries.jsonl",
+      "sha256": "a15fbaa4fd45ef9b11518a002f7ffc0b51897198220a24adcc3b73a03c82f904"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11",
+      "queries": 264,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-05-05-20260923-210900-4398/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11/policy-queries.jsonl",
+      "sha256": "e37a2d05d748efa0dc478cdd61afcc8fe0ae58b625346322444afb4e0eb82d1a"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19",
+      "queries": 202,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19-05-05-20260923-215034-14227/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-16-17-18-19/policy-queries.jsonl",
+      "sha256": "14fead593e115674350dceb8aac6d3fb9610fa658bd6a5df13ed7ac9a28ae3a7"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23",
+      "queries": 139,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-05-20260923-215354-15096/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "e9f16062cb0fadfffeffae9e45aa14c2c64006741dfbad483e9cbb98275f13ea"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23",
+      "queries": 748,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23-05-09-20260923-220907-17142/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "42f84d6633ce0addac120789f28daec187af8f4ec919c6b5aa13676f41409093"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23",
+      "queries": 159,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-05-20260923-230312-30900/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/policy-queries.jsonl",
+      "sha256": "6c2f6e9156e77d7d9f0e41d055fbca047eaf0ae9f1e71b8731519f1bc01a7f60"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23",
+      "queries": 815,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23-05-09-20260923-232759-37252/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-12-13-20-21-22-23/policy-queries.jsonl",
+      "sha256": "c53e0cd47035c835b4f1c09e10b34912c0948911667ee33a172bcfbff42d6ecc"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23",
+      "queries": 156,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23-05-05-20260923-231227-33414/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "be4a9681e06516b14301290349de329b5be97339c08e8ef76b5b85a6e0e0eb79"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23",
+      "queries": 138,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-05-20260923-215650-15960/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "sha256": "fe5beeebe06fb05bf61b19e12c861465f8292bd82de837a28042c753bc33a98b"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23",
+      "queries": 771,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23-05-09-20260923-221830-20021/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-16-17-18-19-20-21-22-23/policy-queries.jsonl",
+      "sha256": "29f122e904ee348e78e77ad4ef4fbdfa9dfbf69dee4823339d519444beadd352"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23",
+      "queries": 159,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-05-20260923-223025-23122/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/policy-queries.jsonl",
+      "sha256": "73891e61559e3e77056805bff54112f7ae59ca2656f4f85b55519ba3c5734d33"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23",
+      "queries": 857,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23-05-09-20260923-224003-25026/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-10-11-20-21-22-23/policy-queries.jsonl",
+      "sha256": "b28ba6e7f8f8c45bd1b6dd3ef71e2a618048e09ac44cf828bd715d44940ce5d5"
+    },
+    {
+      "source_shard": "awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580",
+      "case": "full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23",
+      "queries": 169,
+      "all_actions_and_proprio_finite": true,
+      "path": "results/experiments/p3-static-backbone/20260923-014-awq-stage-pruning/awq-p0-stage-full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23-05-05-20260923-230919-32580/full-w2-dino64-siglip128-language-g64-attention-stage-8-9-12-13-14-15-20-21-22-23/policy-queries.jsonl",
+      "sha256": "188c4103f90af602fca5090eed40aeffbbdcb6d43c756601e319ab637b8b021c"
+    }
+  ],
+  "total_queries": 10020,
+  "note": "8x7 raw action chunks before gripper processing. Query counts are not episodes; trajectories are not matched states."
+}

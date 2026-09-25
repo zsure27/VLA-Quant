@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MAP = ROOT / "results/DEDUPLICATED_FILES_20260922.json"
+MAP = ROOT / "results/indexes/DEDUPLICATED_FILES_20260922.json"
 
 
 def inside_root(relative_path):

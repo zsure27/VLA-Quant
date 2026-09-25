@@ -6,11 +6,11 @@ import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-REPORT = REPO / 'reports/20260918-vla-experiment-summary'
-ARCHIVE = REPO / 'reports/2026-09-16-weekend-review-archive'
-ASSETS = REPO / 'reports/assets/20260918-vla-experiment-summary'
-LATEST = REPO / 'reports/sessions/20260918-107-awq-continuation'
-BASELINE = REPO / 'reports/sessions/20260917-107-baseline-continuation'
+REPORT = REPO / 'reports/summaries/20260918-experiment-overview'
+ARCHIVE = REPO / 'reports/archive/20260916-weekend-review'
+ASSETS = REPORT / 'assets'
+LATEST = REPO / 'reports/experiments/p0-foundation-baselines/20260918-107-awq-continuation'
+BASELINE = REPO / 'reports/experiments/p0-foundation-baselines/20260917-107-baseline-continuation'
 
 def read_json(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -79,14 +79,21 @@ def build():
     plt.close(fig)
     datasets = []
     paths = set(ARCHIVE.glob('data/*.csv')) | set(ARCHIVE.glob('data/*.json'))
-    for session in (REPO / 'reports/sessions').iterdir():
+    for session in (REPO / 'reports/experiments').glob('*/*'):
         if session.is_dir():
             paths.update(session.glob('data/*.csv')); paths.update(session.glob('data/*.json'))
             paths.update(session.glob('data/profile-provenance/*.json'))
     # Retain the actual raw metrics for controls, rescue and initialization probes.
-    for root in ['awq-block-audit-20260916', 'awq-visual-diagnostics-20260915', 'awq-baseline-gate-20260916',
-                 '107-diagnostics-20260916', '107-followup-20260916', '107-response-svd-20260917']:
-        for path in (REPO / 'results' / root).rglob('*.json'):
+    raw_roots = [
+        'results/experiments/p0-foundation-baselines/20260916-awq-block-audit',
+        'results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics',
+        'results/experiments/p0-foundation-baselines/20260916-awq-baseline-gate',
+        'results/experiments/p0-foundation-baselines/20260916-107-diagnostics',
+        'results/experiments/p0-foundation-baselines/20260916-107-followup',
+        'results/experiments/p2-shared-peft/20260917-107-response-svd',
+    ]
+    for root in raw_roots:
+        for path in (REPO / root).rglob('*.json'):
             if path.name in ['metrics.json', 'summary.json', 'controls.json', 'block-error-summary.json', 'e2e-interventions-old-summary.json']:
                 paths.add(path)
     for path in sorted(paths):
@@ -138,8 +145,8 @@ def build():
         'large_artifacts': 'Source videos/profile/NPZ are in separately SHA-verified server and local archives; models/calibration/original profiles are not fully offsite-backed-up'}
     output = REPORT / 'EVIDENCE_INDEX.json'
     output.write_text(json.dumps(data, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
-    assert sorted(p.name for p in REPORT.iterdir()) == ['EVIDENCE_INDEX.json', 'EXPERIMENT_LOG_CN.md', 'README_CN.md']
-    print(json.dumps({'files': 3, 'datasets': len(datasets), 'images': len(figures), 'paired_scope_records': len(pairs),
+    assert sorted(p.name for p in REPORT.iterdir()) == ['EVIDENCE_INDEX.json', 'EXPERIMENT_LOG_CN.md', 'README_CN.md', 'assets']
+    print(json.dumps({'summary_files': 3, 'asset_directory': relative(ASSETS), 'datasets': len(datasets), 'images': len(figures), 'paired_scope_records': len(pairs),
                       'output_bytes': output.stat().st_size, 'validated_main_counts': True}, ensure_ascii=False))
 
 if __name__ == '__main__': build()

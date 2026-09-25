@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "source": "results/experiments/p0-foundation-baselines/20260917-107-baseline-validation/awq-baseline-shard-05-14-20260917-121652-1344/bf16/policy-queries.jsonl",
+      "queries": 1350,
+      "nonfinite_chunks": 0
+    },
+    {
+      "source": "results/experiments/p0-foundation-baselines/20260917-107-baseline-validation/awq-baseline-shard-05-14-20260917-121652-1344/w4/policy-queries.jsonl",
+      "queries": 1301,
+      "nonfinite_chunks": 0
+    },
+    {
+      "source": "results/experiments/p0-foundation-baselines/20260917-107-baseline-validation/awq-baseline-shard-15-24-20260917-125221-12241/bf16/policy-queries.jsonl",
+      "queries": 1340,
+      "nonfinite_chunks": 0
+    },
+    {
+      "source": "results/experiments/p0-foundation-baselines/20260917-107-baseline-validation/awq-baseline-shard-15-24-20260917-125221-12241/w4/policy-queries.jsonl",
+      "queries": 1385,
+      "nonfinite_chunks": 0
+    },
+    {
+      "source": "results/experiments/p0-foundation-baselines/20260917-107-baseline-validation/awq-baseline-shard-25-26-20260917-132820-22787/bf16/policy-queries.jsonl",
+      "queries": 262,
+      "nonfinite_chunks": 0
+    },
+    {
+      "source": "results/experiments/p0-foundation-baselines/20260917-107-baseline-validation/awq-baseline-shard-25-26-20260917-132820-22787/w4/policy-queries.jsonl",
+      "queries": 258,
+      "nonfinite_chunks": 0
+    }
+  ],
+  "note": "Independent closed-loop states; no pointwise quantization-error claim."
+}

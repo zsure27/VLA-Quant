@@ -16,7 +16,7 @@
 
 十个共享初始观测上的首个动作块，相对同入口 BF16 的平均 L1：W4 **0.0117178**，语言 W2 **0.1268062**，视觉 W2 **0.0675469**。这是反归一化后的原始策略动作块、夹爪阈值/翻转之前的 teacher 对照；不是 GT action L1，不是不同闭环轨迹逐时刻相减的误差。视觉 W2 的较大初始动作偏差仍能完成任务，再次说明单一 MSE/L1 不能代替闭环。
 
-成果目录：`results/awq-visual-diagnostics-20260915/`，含 CSV、JSON、成功矩阵、真实回放帧、动作与本体状态曲线。最初诊断记录在 `get_action` 修改输入后保存，因此其中 state 是归一化后的本体状态；图表已明确标注 normalized，不能解读成米制物理轨迹。后续代码在调用前复制原始 state，并写入 `state_space`。原始日志与运行时 evaluator patch/hash 保留，不覆写历史数据。
+成果目录：`results/experiments/p0-foundation-baselines/20260915-awq-visual-diagnostics/`，含 CSV、JSON、成功矩阵、真实回放帧、动作与本体状态曲线。最初诊断记录在 `get_action` 修改输入后保存，因此其中 state 是归一化后的本体状态；图表已明确标注 normalized，不能解读成米制物理轨迹。后续代码在调用前复制原始 state，并写入 `state_space`。原始日志与运行时 evaluator patch/hash 保留，不覆写历史数据。
 
 ## 综合诊断方案后的顺序与门槛
 

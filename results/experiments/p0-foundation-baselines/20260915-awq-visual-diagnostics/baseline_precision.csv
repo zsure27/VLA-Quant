@@ -1,0 +1,10 @@
+method,success_rate,action_l1,act_hidden_cosine,average_bits,model_size_gb,peak_vram_gb,latency_ms,trainable_params,first_query_action_l1_vs_bf16,status,notes
+BF16,0.9,,,,,,,0,,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+AWQ W4,0.8,,,,,,,0,,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+AWQ W2 tuned,0.0,,,,,,,0,,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+BF16 same loader,0.9,,,,,,,0,0.0,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+W4 repeat + trace,0.8,,,,,,,0,0.01171778124495153,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+W2 language only,0.1,,,,,,,0,0.12680622402169747,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+W2 vision only,1.0,,,,,,,0,0.06754694691336965,paired_screening_complete_other_metrics_pending,10 matched initial states; simulated quantization held in BF16; blank means unmeasured; first-query teacher L1 is not trajectory or ground-truth action L1
+AWQ W3A16,,,,,,,,,,not_run,No validated W3 profile/adapter contract
+AWQ packed W2/W4,,,,,,,,,,not_run,No validated packed implementation; cannot diagnose packing parity from fake quant results

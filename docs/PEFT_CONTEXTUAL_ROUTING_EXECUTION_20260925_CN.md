@@ -6,6 +6,8 @@
 
 任何新实验必须注明它检验 P1、P2、P4 或 P5 中的哪一环。仅搜索新的 W4 block 子集不进入执行队列，除非用户明确重新开启 P3。
 
+项目主线仍是 VLA 快速量化微调，首要量化对象是 AWQ-W2A16。Contextual Routing 的直接动机是纯 2bit 精度失效后的轻量能力恢复；SmoothQuant 只在该主线得到有效性证据后作为独立扩展。当前唯一默认 backbone 的机器可读定义是 [`awq_w2a16_12l_mixed_spatial_v1.json`](../configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json)。若后续证据支持改变 baseline 或 backbone，必须新增版本化配置、配对复核并记录替代原因，不能直接改写 v1。
+
 ## 1. 冻结 P3 静态混合精度搜索
 
 三种固定参照共享以下配置：语言其余低位 block 为 W2 G64，attention V/O 不做额外 clip，MLP 保留冻结配方中的 clip；DINO W2 G64；SigLIP W2 G128；既有保护模块继续保持高精度；评测和 fake-quant 契约不变。
@@ -19,6 +21,8 @@
 禁止自动运行 13 层、11 层、其他 14 层组合或更多粗粒度 W4 岛搜索。14L 不是唯一 Pareto 最优点；它只是当前数据支持的静态部署候选。
 
 12L 相对 14L 只将 blocks 18–19 从 W4 改为 W2，却下降 19/500；这里有清晰且足够的修复空间。核心问题固定为：**能否让 blocks 18–19 保持 W2，用远小于两个完整 W4 block 的 PEFT 存储接近 14L？** 其他量化设置在该实验中不得改变。
+
+12L 的语言精度布局固定为 `0–7 W2 | 8–15 W4 | 16–19 W2 | 20–23 W4 | 24–31 W2`；所有 W2 语言层使用 G64。Projector、Action Head、Proprio、Norm 及既有保护模块继续保持 BF16/高精度。
 
 ## 2. P1：训练数据与参数化契约
 

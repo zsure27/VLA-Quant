@@ -3,7 +3,9 @@ param(
     [string]$SshHost = 'connect.nmb1.seetacloud.com',
     [int]$SshPort = 19111,
     [string]$SshUser = 'root',
-    [string]$IdentityFile = 'C:\Users\zsure\.ssh\id_ed25519_vla_014'
+    [string]$IdentityFile = 'C:\Users\zsure\.ssh\id_ed25519_vla_014',
+    [ValidateSet('p0-foundation-baselines','p1-data-contract','p2-shared-peft','p3-static-backbone','p4-expert-complementarity','p5-contextual-routing','secondary-smoothquant')]
+    [string]$ExperimentModule
 )
 
 $ErrorActionPreference = 'Stop'
@@ -30,12 +32,13 @@ $remoteExit = $LASTEXITCODE
 $remoteOutput | ForEach-Object { Write-Host $_ }
 
 if ($Action -eq 'backup') {
+    if (-not $ExperimentModule) { throw 'Backup requires -ExperimentModule for classified storage' }
     # Copy a second recoverable copy even when the GitHub push lacks credentials.
     $backupLine = $remoteOutput | Where-Object { $_ -like 'Backup directory: *' } | Select-Object -First 1
     if (-not $backupLine) { throw 'Remote backup directory was not reported' }
     $remoteBackup = $backupLine.Substring('Backup directory: '.Length)
     if ($remoteBackup -notmatch '^/root/autodl-tmp/qvla-repro/backups/[0-9]{8}-[a-f0-9]+$') { throw 'Unexpected remote backup path' }
-    $backup = Join-Path $repo ('results\pending-' + [IO.Path]::GetFileName($remoteBackup))
+    $backup = Join-Path $repo ('backups\experiments\' + $ExperimentModule + '\legacy-fast\' + [IO.Path]::GetFileName($remoteBackup))
     New-Item -ItemType Directory -Path $backup -Force | Out-Null
     $shortCommit = ([IO.Path]::GetFileName($remoteBackup) -split '-',2)[1]
     foreach ($file in @("VLA-Quant-$shortCommit.bundle","$shortCommit.patch",'SHA256SUMS.txt','RESULTS_SHA256SUMS.txt','LARGE_FILES_NOT_IN_GIT.txt','pending-remote.txt','git-status.txt','worktree.patch','runtime-lock.txt')) {
