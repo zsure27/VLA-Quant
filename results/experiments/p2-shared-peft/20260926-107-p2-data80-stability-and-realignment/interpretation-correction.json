@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "time": "2026-09-26",
+  "data80_interpretation": "greater trajectory coverage plus greater total optimization exposure improved offline generalization",
+  "pure_coverage_claim_supported": false,
+  "compute_coverage_matrix": {
+    "A": {"trajectories": 16, "optimizer_steps": 200, "status": "complete"},
+    "B": {"trajectories": 16, "optimizer_steps": 1000, "status": "planned"},
+    "C": {"trajectories": 80, "optimizer_steps": 200, "status": "planned"},
+    "D": {"trajectories": 80, "optimizer_steps": 1000, "status": "complete"}
+  },
+  "closed_loop_slice": {
+    "C0_12L": 43,
+    "C1_data80_lora": 42,
+    "C2_14L": 43,
+    "episodes": 50,
+    "static_headroom": 0,
+    "recovery_fraction": null,
+    "classification": "closed-loop stability pilot"
+  },
+  "decision_case": "B: approximately equal to 12L; mandatory P2.5 before any expert work",
+  "router_locked": true,
+  "offline_final_holdout_touched": false
+}

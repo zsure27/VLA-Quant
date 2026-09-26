@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "classification": "historical/development closed-loop evidence; not final blind evaluation",
+  "episodes_per_config": 50,
+  "successes": {
+    "C0": 43,
+    "C1": 42,
+    "C2": 43
+  },
+  "success_rates": {
+    "C0": 0.86,
+    "C1": 0.84,
+    "C2": 0.86
+  },
+  "recovery_fraction": null,
+  "recovery_fraction_denominator_positive": false,
+  "paired_C0_C1": {
+    "both_success": 40,
+    "C0_only": 3,
+    "C1_only": 2,
+    "both_fail": 5,
+    "mcnemar_exact_p": 1.0
+  },
+  "paired_C1_C2": {
+    "both_success": 40,
+    "C1_only": 2,
+    "C2_only": 3,
+    "both_fail": 5,
+    "mcnemar_exact_p": 1.0
+  },
+  "bootstrap": {
+    "method": "paired episode bootstrap, seed=7",
+    "iterations": 20000,
+    "scale_minus_12l_95ci": [
+      -0.10000000000000009,
+      0.06000000000000005
+    ],
+    "recovery_fraction_95ci_when_denominator_positive": [
+      -4.000000000000022,
+      3.0
+    ],
+    "recovery_fraction_valid_draws": 6989
+  },
+  "evidence": {
+    "C0": {
+      "eval_log": "/root/autodl-tmp/qvla-repro/eval/p2c-lora-closed-loop-pilot-0-4-20260926-120417-102671/C0-12L/EVAL-libero_spatial-openvla-2026_09_26-12_13_54.txt",
+      "sha256": "b541ee44538756e2b21e80ec6565cceef6b2ea8775c4dddb1ac6da4478acd5ac"
+    },
+    "C1": {
+      "eval_log": "/root/autodl-tmp/qvla-repro/eval/p2c-lora-closed-loop-pilot-0-4-20260926-120417-102671/C1-12L-lora/EVAL-libero_spatial-openvla-2026_09_26-12_04_41.txt",
+      "sha256": "daf6244cc5ad37a6b457a158fa6f654cdabc2af84bedee9db204850f16f782de"
+    },
+    "C2": {
+      "eval_log": "/root/autodl-tmp/qvla-repro/eval/p2c-lora-closed-loop-pilot-0-4-20260926-120417-102671/C2-14L/EVAL-libero_spatial-openvla-2026_09_26-12_22_59.txt",
+      "sha256": "321b6fe8620c7be3e69fcf31c9d968b8ccbe96ab3846858848b6bd61ce3e2b46"
+    }
+  },
+  "protocol": {
+    "schema_version": "1.0",
+    "question": "Does exact-12L rank8 Recovery LoRA trained by end-to-end action distillation improve paired closed-loop success?",
+    "status": "PREREGISTERED_BEFORE_EXECUTION",
+    "suite": "libero_spatial",
+    "initial_state_offset": 0,
+    "trials_per_task": 5,
+    "task_count": 10,
+    "episodes_per_config": 50,
+    "seed": 0,
+    "env_seed": 0,
+    "seed_protocol": "paired",
+    "configs": {
+      "C0": {
+        "w4_layers": "8-15,20-23",
+        "adapter": false
+      },
+      "C1": {
+        "w4_layers": "8-15,20-23",
+        "adapter": "rank8 Recovery LoRA"
+      },
+      "C2": {
+        "w4_layers": "8-15,18-23",
+        "adapter": false
+      }
+    },
+    "case_directories": {
+      "C0": "C0-12L",
+      "C1": "C1-12L-lora",
+      "C2": "C2-14L"
+    },
+    "adapter_state": {
+      "path": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt",
+      "sha256": "ce34247710923b1ff2db9f40c5a0b982cdd228a5238d19b4dd9005e4743c9a47",
+      "bytes": 2509154
+    },
+    "classification": "historical/development closed-loop evidence; not final blind evaluation"
+  }
+}

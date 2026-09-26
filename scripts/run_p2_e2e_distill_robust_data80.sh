@@ -40,11 +40,12 @@ args=(
 cat > "$OUT_ROOT/preregistered-protocol.json" <<'JSON'
 {
   "schema_version": "1.0",
-  "question": "Does broader trajectory-disjoint PEFT training coverage make robust exact-12L rank8 Recovery LoRA improve typical frames?",
+  "question": "Does greater trajectory coverage plus greater total optimization exposure improve robust exact-12L rank8 Recovery LoRA offline generalization?",
   "status": "PREREGISTERED_BEFORE_EXECUTION",
   "backbone": "awq-w2a16-12l-mixed-spatial-v1",
   "target_blocks": [18, 19],
-  "single_major_variable": "unique peft_train trajectories: 16 -> 80; 12.5 optimizer updates per frame held fixed",
+  "interpretation_correction_20260926": "This historical run changed unique trajectories 16->80 and optimizer steps 200->1000 together. It is not a pure coverage ablation.",
+  "changed_factors": {"unique_peft_train_trajectories": "16 -> 80", "optimizer_steps": "200 -> 1000", "updates_per_selected_frame": "12.5 -> 12.5"},
   "fixed_controls": {"rank": 8, "initialization": "Response-SVD", "loss": "Smooth L1(beta=0.1)", "training_samples": 80, "steps": 1000, "learning_rate": 0.0001, "offline_frames": 32},
   "offline_gate": {"median_paired_mse_delta_lt": 0, "improved_frames_gte": 20, "mean_mse_not_worse": true, "gripper_disagreement_not_worse": true},
   "classification": "historical/development offline evidence; closed-loop required for PEFT gate"

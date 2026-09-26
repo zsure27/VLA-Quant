@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "classification": "closed-loop stability pilot; historical/development slice",
+  "server_result": "/root/autodl-tmp/qvla-repro/eval/p2c-lora-closed-loop-pilot-0-4-20260926-120417-102671",
+  "server_backup": "/root/autodl-tmp/qvla-repro/backups/p2_data80_stability_20260926-123704-852d350",
+  "local_backup": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\backups\\experiments\\p2-shared-peft\\20260926-107-p2-data80-stability-and-realignment\\p2_data80_stability_20260926-123704-852d350",
+  "local_backup_files": 12,
+  "local_backup_bytes": 61629180.0,
+  "files": [
+    {
+      "path": "C0-12L/command.txt",
+      "bytes": 1057,
+      "sha256": "dd8cd5c0686be8c5f016837e81b3435e79088ceaecc2b9ddbb444c2131087b95"
+    },
+    {
+      "path": "C0-12L/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C1-12L-lora/command.txt",
+      "bytes": 1278,
+      "sha256": "668ea9ac123abe93ad8819129961cb8f46e03e7d96dd402bd4ddbc8c86ea4c40"
+    },
+    {
+      "path": "C1-12L-lora/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C2-14L/command.txt",
+      "bytes": 1065,
+      "sha256": "8b56a36d1b8d2051325f311c8f43beef98e16758a641922e8c5c1210c8ec42d4"
+    },
+    {
+      "path": "C2-14L/exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "complete.json",
+      "bytes": 76,
+      "sha256": "f2f0e59e5b25d915506cb381a0d2acbc9fe4176af52d34f63933d931c6ebf239"
+    },
+    {
+      "path": "CONTRACT_SHA256SUMS.txt",
+      "bytes": 1300,
+      "sha256": "38637439845fe01086b52b72ffb2ce4ab80caac84eb4f6cf9fb2525d4b2de3a2"
+    },
+    {
+      "path": "exit-code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "interpretation-correction.json",
+      "bytes": 949,
+      "sha256": "749e7dd1b3defb319148b3c17d71e9d0081026ec916c9211db19ba51417b9888"
+    },
+    {
+      "path": "paired-episodes.jsonl",
+      "bytes": 14385,
+      "sha256": "6c82aee2d889277c525ba8eb0aafe53b8c553c534154cdd63b943b6a2dd02915"
+    },
+    {
+      "path": "paired-summary.json",
+      "bytes": 3064,
+      "sha256": "bd898582c2c4402d5ef7705f02c9633ec40aa0f987b594b5a8c3245f4255542c"
+    },
+    {
+      "path": "per-task.csv",
+      "bytes": 167,
+      "sha256": "7e66f73fd35cc36df7fffe9ee1be013dd9ecd7e2f1ca55a764b301314eaa3524"
+    },
+    {
+      "path": "preregistered-protocol.json",
+      "bytes": 1178,
+      "sha256": "61c891e39e14c53888a58e0d05055bdad17a0d53c0bc8f59fa1696006b3cbd88"
+    }
+  ]
+}

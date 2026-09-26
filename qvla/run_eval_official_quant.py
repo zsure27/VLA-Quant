@@ -52,6 +52,10 @@ def parse_args() -> argparse.Namespace:
                         help="Diagnostic ablation only; none is the same-loader BF16 control")
     parser.add_argument("--trace-actions", action="store_true", help="Save raw policy chunks and query-time proprio for diagnostics")
     parser.add_argument(
+        "--trace-observations", action="store_true",
+        help="P2.5: save observations actually visited by the student, its raw chunk, and causal H17 summaries",
+    )
+    parser.add_argument(
         "--awq-candidate",
         choices=("profile", "w2-no-clip-primary-g64", "w2-attention-no-clip-primary-g64", "w2-attention-no-clip-dino-g128-siglip-g64", "w2-attention-no-clip-visual-g128", "w2-attention-primary-g64-stage-w4", "w2-no-clip-stage-w4", "w2-fixed-coordinates-stage-w4"),
         default="profile",
@@ -531,23 +535,54 @@ def main() -> None:
         L.get_model = patched_get_model
     argv_backup = list(sys.argv)
     original_get_action = L.get_action
+    original_run_episode = L.run_episode
     trace_file = None
-    if args.trace_actions:
+    observation_capture = None
+    h17_recorder = None
+    if args.trace_actions or args.trace_observations:
         import numpy as np
         os.makedirs(args.local_log_dir, exist_ok=True)
-        trace_file = open(Path(args.local_log_dir) / "policy-queries.jsonl", "x", encoding="utf-8")
+        if args.trace_actions:
+            trace_file = open(Path(args.local_log_dir) / "policy-queries.jsonl", "x", encoding="utf-8")
+        if args.trace_observations:
+            from prismatic.vla.constants import NUM_ACTIONS_CHUNK
+            from qvla.on_policy_capture import H17SummaryRecorder, OnPolicyObservationCapture
+            observation_capture = OnPolicyObservationCapture(Path(args.local_log_dir), NUM_ACTIONS_CHUNK)
+            h17_recorder = H17SummaryRecorder(model)
+
+            def traced_run_episode(*run_args, **run_kwargs):
+                task = run_kwargs.get("task_description")
+                if task is None and len(run_args) > 2:
+                    task = run_args[2]
+                if not isinstance(task, str):
+                    raise RuntimeError("Cannot identify task for P2.5 observation capture")
+                observation_capture.begin_episode(task)
+                try:
+                    result = original_run_episode(*run_args, **run_kwargs)
+                except BaseException:
+                    observation_capture.end_episode(False, aborted=True)
+                    raise
+                observation_capture.end_episode(bool(result[0]))
+                return result
+
+            L.run_episode = traced_run_episode
 
         def traced_get_action(cfg, model, obs, task_label, **kwargs):
             state_before_action = np.asarray(obs["state"]).copy()
+            if h17_recorder is not None:
+                h17_recorder.reset()
             actions = original_get_action(cfg, model, obs, task_label, **kwargs)
             chunk = np.asarray(actions).copy()
-            trace_file.write(json.dumps({
-                "task": task_label, "state": state_before_action.tolist(),
-                "state_space": "raw_proprio_before_get_action",
-                "raw_policy_chunk": chunk.tolist(), "finite": bool(np.isfinite(chunk).all()),
-                "note": "query-time observation; raw chunk before gripper processing; later closed-loop states diverge",
-            }) + "\n")
-            trace_file.flush()
+            if trace_file is not None:
+                trace_file.write(json.dumps({
+                    "task": task_label, "state": state_before_action.tolist(),
+                    "state_space": "raw_proprio_before_get_action",
+                    "raw_policy_chunk": chunk.tolist(), "finite": bool(np.isfinite(chunk).all()),
+                    "note": "query-time observation; raw chunk before gripper processing; later closed-loop states diverge",
+                }) + "\n")
+                trace_file.flush()
+            if observation_capture is not None:
+                observation_capture.record_query(obs, task_label, chunk, h17_recorder.take())
             return actions
 
         L.get_action = traced_get_action
@@ -570,8 +605,13 @@ def main() -> None:
         eval_libero()
     finally:
         L.get_action = original_get_action
+        L.run_episode = original_run_episode
         if trace_file is not None:
             trace_file.close()
+        if h17_recorder is not None:
+            h17_recorder.close()
+        if observation_capture is not None:
+            observation_capture.close()
         sys.argv = argv_backup
         R.get_model = original_get_model
         if original_libero_get_model is not None:

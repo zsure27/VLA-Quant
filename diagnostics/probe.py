@@ -163,8 +163,9 @@ def evenly(length, maximum, device="cpu"):
 
 
 class Recorder:
-    def __init__(self, model):
+    def __init__(self, model, capture_traces=True):
         self.model = model
+        self.capture_traces = capture_traces
         self.handles = []
         self.reset(None)
         original = model._regression_or_discrete_prediction
@@ -187,12 +188,13 @@ class Recorder:
             return teacher
         self.handles.append(model.projector.register_forward_hook(rescue_hook))
         self.handles.append(model.projector.register_forward_hook(self.hook("projector")))
-        self.handles.append(model.vision_backbone.register_forward_hook(self.hook("vision_output")))
-        for name, module in model.named_modules():
-            if re.fullmatch(r"language_model\.model\.layers\.\d+", name):
-                self.handles.append(module.register_forward_hook(self.hook(name)))
-            elif re.fullmatch(r"vision_backbone\.(?:fused_)?featurizer\.blocks\.\d+", name):
-                self.handles.append(module.register_forward_hook(self.hook(name)))
+        if capture_traces:
+            self.handles.append(model.vision_backbone.register_forward_hook(self.hook("vision_output")))
+            for name, module in model.named_modules():
+                if re.fullmatch(r"language_model\.model\.layers\.\d+", name):
+                    self.handles.append(module.register_forward_hook(self.hook(name)))
+                elif re.fullmatch(r"vision_backbone\.(?:fused_)?featurizer\.blocks\.\d+", name):
+                    self.handles.append(module.register_forward_hook(self.hook(name)))
         first = model.language_model.model.layers[0]
 
         def llm_input(_module, args, kwargs):
@@ -219,6 +221,8 @@ class Recorder:
         self.counts[name] = call + 1
         if name == "projector":
             self.projector = value.cpu().clone()
+        if not self.capture_traces:
+            return
         length = value.shape[1]
         if name.startswith("language_model.") or name == "llm_input":
             patches = self.model.vision_backbone.get_num_patches()
@@ -450,6 +454,7 @@ def main():
     p.add_argument("--awq-residual-calibration-count", type=int, default=8)
     p.add_argument("--awq-residual-token-scope", choices=("all", "action"), default="all")
     p.add_argument("--awq-residual-response-svd", action="store_true")
+    p.add_argument("--awq-recovery-lora-state", type=Path)
     p.add_argument("--awq-residual-train-steps", type=int, default=0)
     p.add_argument("--awq-residual-learning-rate", type=float, default=1e-3)
     p.add_argument("--awq-scale-peft-layers", default="")
@@ -464,6 +469,8 @@ def main():
     p.add_argument("--smoothing-bypass", action="store_true")
     p.add_argument("--export-candidate-teacher", action="store_true")
     p.add_argument("--teacher-fp32-reference", action="store_true")
+    p.add_argument("--action-only", action="store_true",
+                   help="Store and compare actions without large intermediate-feature tensors")
     p.add_argument("--awq-vision-bits", type=int, choices=(2, 4, 16), default=16)
     p.add_argument("--awq-vision-profile", type=Path)
     p.add_argument("--awq-vision-branch", choices=("all", "primary", "fused"), default="all")
@@ -518,6 +525,12 @@ def main():
         p.error("LoRA and Scale-PEFT must be separate paired runs")
     if bool(residual_layers) != bool(args.awq_residual_rank):
         p.error("Residual recovery requires rank and layers together")
+    if args.awq_recovery_lora_state is not None:
+        if (residual_layers != {18, 19} or args.awq_residual_rank != 8 or
+                args.awq_residual_train_steps or args.awq_e2e_distill_steps):
+            p.error("A serialized Recovery-LoRA state is evaluation-only and pinned to rank8 blocks18-19")
+        if not args.awq_recovery_lora_state.is_file():
+            p.error("Recovery-LoRA state does not exist")
     if (args.awq_residual_calibration_dir is not None or args.awq_residual_token_scope != "all") and not (residual_layers or scale_peft_layers):
         p.error("Recovery input statistics require a LoRA or Scale-PEFT branch")
     if args.awq_residual_token_scope == "action" and args.awq_residual_calibration_dir is None:
@@ -577,6 +590,8 @@ def main():
     ):
         p.error("平滑范围消融仅允许 smoothquant W16A16")
     attention_layers = sorted(set(int(x) for x in args.attention_layers.split(",") if x))
+    if args.action_only and attention_layers:
+        p.error("Action-only evaluation must not request attention traces")
     if any(i < 0 or i >= 32 for i in attention_layers):
         raise ValueError("attention 层号必须为 0..31")
     if args.alpha is not None and not 0 <= args.alpha <= 1:
@@ -735,7 +750,7 @@ def main():
                 selected_names=[n for n in target_plan if n.startswith("language_model.") and
                                 int(n.split(".layers.")[1].split(".")[0]) in recovery_layers]
                 stats={}
-                calibration_recorder=Recorder(model)
+                calibration_recorder=Recorder(model, capture_traces=False)
                 calibration_handles=[]
                 def input_stat_hook(name):
                     def collect(_module,inputs):
@@ -812,6 +827,15 @@ def main():
             fn = apply_llama_entry if name.startswith("language_model.") else apply_awq_entry
             fn(modules[name], entries[name], official, args.weight_bits, meta["group_size"])
         e2e_summary = None
+        if args.awq_recovery_lora_state is not None:
+            from qvla.run_eval_official_quant import load_recovery_lora_state
+            payload = load_recovery_lora_state(args.awq_recovery_lora_state)
+            named_parameters = dict(model.named_parameters())
+            for name, value in payload.items():
+                if name not in named_parameters:
+                    raise RuntimeError(f"Recovery-LoRA target missing: {name}")
+                named_parameters[name].data.copy_(value.to(named_parameters[name].device, named_parameters[name].dtype))
+            print("RECOVERY_LORA_STATE_LOADED", args.awq_recovery_lora_state, flush=True)
         if args.awq_e2e_distill_steps:
             e2e_summary = end_to_end_action_distill(
                 args, calibration, e2e_teacher_targets, cfg, model, head, proprio, processor)
@@ -835,6 +859,8 @@ def main():
             "recovery_adapter_state": recovery_state_record,
             "residual_input_token_scope":args.awq_residual_token_scope,
             "residual_response_svd":args.awq_residual_response_svd,
+            "loaded_recovery_lora_state": ({"file": str(args.awq_recovery_lora_state),
+                "sha256": digest(args.awq_recovery_lora_state)} if args.awq_recovery_lora_state else None),
             "residual_calibration_manifest":residual_calibration_manifest,
             "intervention": intervention, "disable_clip": args.awq_disable_clip,
             "rescue_family": args.awq_rescue_family, "rescue_layers": sorted(rescue_layers),
@@ -911,7 +937,7 @@ def main():
                   "smoothing_selection": args.smoothing_selection,
                   "skipped_smoothing_groups": [g[0] for g in skipped],
                   "weight_targets": w_names, "activation_targets": a_names, "alpha": alpha})
-    recorder = Recorder(model)
+    recorder = Recorder(model, capture_traces=not args.action_only)
     from attention_probe import AttentionTap
     tap = AttentionTap(model, recorder, attention_layers) if attention_layers else None
     results = []
