@@ -34,6 +34,12 @@ def atomic_json(path: Path, payload: dict) -> None:
     os.replace(temporary, path)
 
 
+def atomic_text(path: Path, value: str) -> None:
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    temporary.write_text(value)
+    os.replace(temporary, path)
+
+
 def read_json(path: Path) -> dict:
     return json.loads(path.read_text())
 
@@ -116,6 +122,8 @@ def run_plan(plan_path: Path) -> None:
     plan_sha = canonical_hash(plan)
     directory, status_path, events_path, lock_path = paths(plan_path, plan)
     directory.mkdir(parents=True, exist_ok=True)
+    atomic_text(directory.parent / "LATEST_ACTIVE_PLAN.txt", str(plan_path.resolve()) + "\n")
+    atomic_text(directory.parent / "LATEST_STATUS.txt", str(status_path.resolve()) + "\n")
     descriptor = acquire_lock(lock_path)
     try:
         if status_path.exists():

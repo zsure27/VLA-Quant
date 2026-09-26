@@ -268,6 +268,15 @@ def predict(sample_path, cfg, model, action_head, proprio_projector, processor):
     return torch.as_tensor(raw).float(), normalized, input_hashes
 
 
+def e2e_distill_loss(prediction, target, kind="mse", beta=0.1):
+    """Action distillation objective; Smooth L1 limits domination by rare large errors."""
+    if kind == "mse":
+        return F.mse_loss(prediction, target)
+    if kind == "smooth-l1":
+        return F.smooth_l1_loss(prediction, target, beta=beta)
+    raise ValueError(f"unsupported end-to-end distillation loss: {kind}")
+
+
 def end_to_end_action_distill(args, calibration, teacher_targets, cfg, model, action_head,
                               proprio_projector, processor):
     """Jointly train the blocks 18-19 recovery branches on final normalized actions."""
@@ -314,7 +323,9 @@ def end_to_end_action_distill(args, calibration, teacher_targets, cfg, model, ac
             sample_name, inputs, state, target = cached[order[step % len(order)]]
             optimizer.zero_grad(set_to_none=True)
             prediction = forward_normalized(inputs, state)
-            loss = F.mse_loss(prediction, target.float())
+            loss = e2e_distill_loss(
+                prediction, target.float(), args.awq_e2e_distill_loss,
+                args.awq_e2e_distill_smooth_l1_beta)
             if not torch.isfinite(loss):
                 raise RuntimeError("non-finite end-to-end action distillation loss")
             loss.backward()
@@ -333,7 +344,10 @@ def end_to_end_action_distill(args, calibration, teacher_targets, cfg, model, ac
     state_path = args.output / "e2e_adapter_state.pt"
     torch.save(state, state_path)
     summary = {
-        "objective": "normalized_action_mse_8x7",
+        "objective": f"normalized_action_{args.awq_e2e_distill_loss}_8x7",
+        "loss": args.awq_e2e_distill_loss,
+        "smooth_l1_beta": (args.awq_e2e_distill_smooth_l1_beta
+                           if args.awq_e2e_distill_loss == "smooth-l1" else None),
         "steps": args.awq_e2e_distill_steps,
         "learning_rate": args.awq_e2e_distill_learning_rate,
         "samples": [name for name, _, _, _ in cached],
@@ -443,6 +457,8 @@ def main():
     p.add_argument("--awq-scale-peft-learning-rate", type=float, default=1e-3)
     p.add_argument("--awq-e2e-distill-steps", type=int, default=0)
     p.add_argument("--awq-e2e-distill-learning-rate", type=float, default=1e-4)
+    p.add_argument("--awq-e2e-distill-loss", choices=("mse", "smooth-l1"), default="mse")
+    p.add_argument("--awq-e2e-distill-smooth-l1-beta", type=float, default=0.1)
     p.add_argument("--smoothing-pairs-fp32", action="store_true")
     p.add_argument("--smoothing-vision-fp32", action="store_true")
     p.add_argument("--smoothing-bypass", action="store_true")
@@ -520,7 +536,8 @@ def main():
     if args.awq_e2e_distill_steps and (not (residual_layers or scale_peft_layers) or
             args.awq_residual_calibration_dir is None or args.mode != "awq"):
         p.error("End-to-end distillation requires a recovery branch and independent calibration inputs")
-    if args.awq_e2e_distill_steps < 0 or args.awq_e2e_distill_learning_rate <= 0:
+    if (args.awq_e2e_distill_steps < 0 or args.awq_e2e_distill_learning_rate <= 0 or
+            args.awq_e2e_distill_smooth_l1_beta <= 0):
         p.error("Invalid end-to-end distillation schedule")
     if residual_layers and (args.awq_residual_rank not in (4,8,16) or args.mode != "awq" or
             args.weight_bits != 2 or args.activation_bits != 16 or
