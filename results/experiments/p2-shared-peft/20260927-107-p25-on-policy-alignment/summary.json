@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "question": "Does rank8 Recovery-LoRA remain close to BF16 on observations induced by its own actions?",
+  "distribution": "student-visited closed-loop observations",
+  "teacher": "frozen BF16 queried on exactly the captured student observation",
+  "future_outcome_used_as_input": false,
+  "action_chunk_execution": "all 8 predicted actions execute open-loop before re-inference",
+  "queries": 140,
+  "episodes": 10,
+  "successful_episodes": 9,
+  "mean_chunk_mse": 0.028551575950234193,
+  "median_chunk_mse": 0.016549676702594253,
+  "mean_position_rmse": 0.17921706400855933,
+  "mean_rotation_rmse": 0.023753538029931704,
+  "mean_gripper_continuous_rmse": 0.14467314744733434,
+  "mean_gripper_disagreement": 0.04642857142857143,
+  "large_disagreement_threshold": null,
+  "threshold_note": "null until preregistered from router_dev; no post-hoc large-divergence classification",
+  "per_episode": [
+    {
+      "episode_serial": 0,
+      "task": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "success": true,
+      "queries": 10,
+      "mean_chunk_mse": 0.013895780389760595,
+      "max_chunk_rmse": 0.2313593493996449,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 9
+    },
+    {
+      "episode_serial": 1,
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "success": false,
+      "queries": 28,
+      "mean_chunk_mse": 0.03221336210263479,
+      "max_chunk_rmse": 0.3493156095382164,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 2
+    },
+    {
+      "episode_serial": 2,
+      "task": "pick up the black bowl from table center and place it on the plate",
+      "success": true,
+      "queries": 12,
+      "mean_chunk_mse": 0.01446367904677816,
+      "max_chunk_rmse": 0.235567873438055,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 11
+    },
+    {
+      "episode_serial": 3,
+      "task": "pick up the black bowl on the cookie box and place it on the plate",
+      "success": true,
+      "queries": 12,
+      "mean_chunk_mse": 0.03129889950485208,
+      "max_chunk_rmse": 0.5322893154680342,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 11
+    },
+    {
+      "episode_serial": 4,
+      "task": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "success": true,
+      "queries": 14,
+      "mean_chunk_mse": 0.0287366190835253,
+      "max_chunk_rmse": 0.261861080958294,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 5
+    },
+    {
+      "episode_serial": 5,
+      "task": "pick up the black bowl on the ramekin and place it on the plate",
+      "success": true,
+      "queries": 11,
+      "mean_chunk_mse": 0.043644989510823046,
+      "max_chunk_rmse": 0.4069483499953114,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 2
+    },
+    {
+      "episode_serial": 6,
+      "task": "pick up the black bowl next to the cookie box and place it on the plate",
+      "success": true,
+      "queries": 13,
+      "mean_chunk_mse": 0.011397537175417676,
+      "max_chunk_rmse": 0.16872817251111927,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 5
+    },
+    {
+      "episode_serial": 7,
+      "task": "pick up the black bowl on the stove and place it on the plate",
+      "success": true,
+      "queries": 14,
+      "mean_chunk_mse": 0.04662900241212762,
+      "max_chunk_rmse": 0.6500207454283781,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 3
+    },
+    {
+      "episode_serial": 8,
+      "task": "pick up the black bowl next to the plate and place it on the plate",
+      "success": true,
+      "queries": 12,
+      "mean_chunk_mse": 0.016104991129429792,
+      "max_chunk_rmse": 0.16298932929740764,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 5
+    },
+    {
+      "episode_serial": 9,
+      "task": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "success": true,
+      "queries": 14,
+      "mean_chunk_mse": 0.03789259180357592,
+      "max_chunk_rmse": 0.35332429252560427,
+      "first_large_policy_divergence_query": null,
+      "first_large_policy_divergence_threshold": null,
+      "first_gripper_divergence_query": 5
+    }
+  ]
+}

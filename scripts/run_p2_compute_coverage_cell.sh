@@ -32,7 +32,7 @@ cat > "$OUT_ROOT/cell-${CELL}-preregistered-protocol.json" <<JSON
   "trajectory_coverage": $TRAJECTORIES,
   "optimizer_steps": $STEPS,
   "samples_seen": $STEPS,
-  "effective_exposures_per_selected_frame": $(python -c "print($STEPS/$TRAJECTORIES)"),
+  "effective_exposures_per_selected_frame": $(/root/miniconda3/envs/qvla-oft/bin/python -c "print($STEPS/$TRAJECTORIES)"),
   "fixed": {"backbone":"exact-12L","blocks":[18,19],"rank":8,"initialization":"Response-SVD","loss":"Smooth-L1(beta=0.1)","learning_rate":0.0001,"batch_semantics":"one selected trajectory frame per optimizer step"},
   "primary_gate": "trajectory-level router_dev; historical 32 frames are regression/debug only",
   "closed_loop_planned": false
@@ -62,7 +62,7 @@ START=$(date +%s)
   --awq-e2e-distill-loss smooth-l1 --awq-e2e-distill-smooth-l1-beta 0.1 --output "$OUT" \
   2>&1 | tee "$OUT_ROOT/cell-${CELL}-console.log"
 END=$(date +%s)
-python - "$OUT_ROOT/cell-${CELL}-runtime.json" "$START" "$END" <<'PY'
+/root/miniconda3/envs/qvla-oft/bin/python - "$OUT_ROOT/cell-${CELL}-runtime.json" "$START" "$END" <<'PY'
 import json,pathlib,sys
 pathlib.Path(sys.argv[1]).write_text(json.dumps({"start_unix":int(sys.argv[2]),"end_unix":int(sys.argv[3]),"wall_seconds":int(sys.argv[3])-int(sys.argv[2])},indent=2)+"\n")
 PY

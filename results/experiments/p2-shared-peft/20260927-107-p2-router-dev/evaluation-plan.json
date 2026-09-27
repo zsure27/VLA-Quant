@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-router-dev-matrix-20260927",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {
+      "id": "prepare-teacher-and-exact12l",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_router_dev_eval.sh",
+        "prepare"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p2-router-dev"
+      }
+    },
+    {
+      "id": "evaluate-cell-A",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_router_dev_eval.sh",
+        "candidate",
+        "A",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill/exact12l-response-svd-r8-smoothl1-e2e200-offline32/recovery_adapter_state.pt",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260925-107-p1-data-contract/peft-train-calibration16",
+        "16"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p2-router-dev"
+      }
+    },
+    {
+      "id": "evaluate-cell-B",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_router_dev_eval.sh",
+        "candidate",
+        "B",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260927-107-p2-compute-coverage-matrix/cell-B-traj16-steps1000/recovery_adapter_state.pt",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260925-107-p1-data-contract/peft-train-calibration16",
+        "16"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p2-router-dev"
+      }
+    },
+    {
+      "id": "evaluate-cell-C",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_router_dev_eval.sh",
+        "candidate",
+        "C",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260927-107-p2-compute-coverage-matrix/cell-C-traj80-steps200/recovery_adapter_state.pt",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260926-107-p1-data-contract/peft-train-calibration80",
+        "80"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p2-router-dev"
+      }
+    },
+    {
+      "id": "evaluate-cell-D",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_router_dev_eval.sh",
+        "candidate",
+        "D",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260926-107-p1-data-contract/peft-train-calibration80",
+        "80"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p2-router-dev"
+      }
+    }
+  ]
+}

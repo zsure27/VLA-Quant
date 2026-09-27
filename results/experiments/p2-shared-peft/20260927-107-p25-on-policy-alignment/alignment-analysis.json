@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "evidence_class": "diagnostic_development_resets_not_final",
+  "queries": 140,
+  "episode_count": 10,
+  "successes": 9,
+  "episode_mean_chunk_mse_mean": 0.027627745215892497,
+  "episode_mean_chunk_mse_median": 0.030017759294188692,
+  "episode_mean_chunk_mse_bootstrap_95ci": [
+    0.02024872029969789,
+    0.035401372988535275
+  ],
+  "late_minus_early_mse_mean": -0.0006427028906214168,
+  "late_minus_early_mse_median": 0.01650556723974426,
+  "late_minus_early_mse_bootstrap_95ci": [
+    -0.030660692348717912,
+    0.02537953189195565
+  ],
+  "episodes_late_worse": 7,
+  "worst_episode_mean_chunk_mse": 0.046629002412127606,
+  "mean_rmse_by_executed_step": [
+    0.13149307556806047,
+    0.1196621022581393,
+    0.11561615019759834,
+    0.11068443387086381,
+    0.11624203740647202,
+    0.11920856471629836,
+    0.1294841191526044,
+    0.16321079515042752
+  ],
+  "mean_rmse_by_action_dimension": [
+    0.16850475314568952,
+    0.1300998162465761,
+    0.19078940905089928,
+    0.016019116248323455,
+    0.028300854212719828,
+    0.020994147951844885,
+    0.1446731474473344
+  ],
+  "mean_h17_token_mean_cosine": 0.8967558931136091,
+  "median_h17_token_mean_cosine": 0.902996088807292,
+  "student_gripper_near_threshold_fraction_abs_margin_lt_0_1": 0.0,
+  "teacher_gripper_near_threshold_fraction_abs_margin_lt_0_1": 0.0026785714285714286,
+  "episodes": [
+    {
+      "episode_serial": 0,
+      "success": true,
+      "queries": 10,
+      "mean_chunk_mse": 0.013895780389760595,
+      "median_chunk_mse": 0.009871532380244654,
+      "early_third_mse": 0.010605097689259093,
+      "late_third_mse": 0.026948511854766006,
+      "late_minus_early_mse": 0.016343414165506914,
+      "mean_gripper_disagreement": 0.0125,
+      "first_gripper_disagreement_query": 9
+    },
+    {
+      "episode_serial": 1,
+      "success": false,
+      "queries": 28,
+      "mean_chunk_mse": 0.0322133621026348,
+      "median_chunk_mse": 0.02723704028019496,
+      "early_third_mse": 0.048381876778188185,
+      "late_third_mse": 0.01519429462518874,
+      "late_minus_early_mse": -0.03318758215299945,
+      "mean_gripper_disagreement": 0.07589285714285714,
+      "first_gripper_disagreement_query": 2
+    },
+    {
+      "episode_serial": 2,
+      "success": true,
+      "queries": 12,
+      "mean_chunk_mse": 0.01446367904677816,
+      "median_chunk_mse": 0.010236213340432641,
+      "early_third_mse": 0.011053476963209755,
+      "late_third_mse": 0.027721197277191363,
+      "late_minus_early_mse": 0.01666772031398161,
+      "mean_gripper_disagreement": 0.03125,
+      "first_gripper_disagreement_query": 11
+    },
+    {
+      "episode_serial": 3,
+      "success": true,
+      "queries": 12,
+      "mean_chunk_mse": 0.03129889950485208,
+      "median_chunk_mse": 0.00556772812734852,
+      "early_third_mse": 0.07762246806144392,
+      "late_third_mse": 0.013987062235931734,
+      "late_minus_early_mse": -0.06363540582551219,
+      "mean_gripper_disagreement": 0.010416666666666666,
+      "first_gripper_disagreement_query": 11
+    },
+    {
+      "episode_serial": 4,
+      "success": true,
+      "queries": 14,
+      "mean_chunk_mse": 0.0287366190835253,
+      "median_chunk_mse": 0.019915418710469913,
+      "early_third_mse": 0.005880968804338578,
+      "late_third_mse": 0.042562910896289746,
+      "late_minus_early_mse": 0.03668194209195117,
+      "mean_gripper_disagreement": 0.03571428571428571,
+      "first_gripper_disagreement_query": 5
+    },
+    {
+      "episode_serial": 5,
+      "success": true,
+      "queries": 11,
+      "mean_chunk_mse": 0.043644989510823046,
+      "median_chunk_mse": 0.028962865738388955,
+      "early_third_mse": 0.03629067762359003,
+      "late_third_mse": 0.07925816339416161,
+      "late_minus_early_mse": 0.042967485770571585,
+      "mean_gripper_disagreement": 0.09090909090909091,
+      "first_gripper_disagreement_query": 2
+    },
+    {
+      "episode_serial": 6,
+      "success": true,
+      "queries": 13,
+      "mean_chunk_mse": 0.011397537175417676,
+      "median_chunk_mse": 0.005824867705614042,
+      "early_third_mse": 0.003235680086404494,
+      "late_third_mse": 0.021139515505020603,
+      "late_minus_early_mse": 0.017903835418616107,
+      "mean_gripper_disagreement": 0.028846153846153848,
+      "first_gripper_disagreement_query": 5
+    },
+    {
+      "episode_serial": 7,
+      "success": true,
+      "queries": 14,
+      "mean_chunk_mse": 0.046629002412127606,
+      "median_chunk_mse": 0.009709624972868789,
+      "early_third_mse": 0.12436343120406275,
+      "late_third_mse": 0.027889052081885312,
+      "late_minus_early_mse": -0.09647437912217743,
+      "mean_gripper_disagreement": 0.05357142857142857,
+      "first_gripper_disagreement_query": 3
+    },
+    {
+      "episode_serial": 8,
+      "success": true,
+      "queries": 12,
+      "mean_chunk_mse": 0.016104991129429792,
+      "median_chunk_mse": 0.01576405554642491,
+      "early_third_mse": 0.010004425534278695,
+      "late_third_mse": 0.020299159677038044,
+      "late_minus_early_mse": 0.01029473414275935,
+      "mean_gripper_disagreement": 0.03125,
+      "first_gripper_disagreement_query": 5
+    },
+    {
+      "episode_serial": 9,
+      "success": true,
+      "queries": 14,
+      "mean_chunk_mse": 0.03789259180357592,
+      "median_chunk_mse": 0.026309555687320185,
+      "early_third_mse": 0.0064239537017316325,
+      "late_third_mse": 0.05243515999281981,
+      "late_minus_early_mse": 0.04601120629108817,
+      "mean_gripper_disagreement": 0.05357142857142857,
+      "first_gripper_disagreement_query": 5
+    }
+  ],
+  "large_divergence_threshold": null
+}

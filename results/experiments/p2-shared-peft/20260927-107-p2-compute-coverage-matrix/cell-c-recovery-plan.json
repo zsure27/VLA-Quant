@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-compute-coverage-cell-c-recovery-20260927",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {
+      "id": "train-only-missing-cell-C",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_compute_coverage_cell.sh",
+        "C"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p2-compute-coverage-matrix"
+      }
+    }
+  ]
+}

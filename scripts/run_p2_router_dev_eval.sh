@@ -6,8 +6,8 @@ ROOT=${VLA_EXPERIMENT_ROOT:-/root/autodl-tmp/qvla-repro}
 REPO=${VLA_REPO:-/root/autodl-tmp/VLA-Quant-p2c-20260925}
 SESSION=${VLA_SESSION:-20260926-107-p2-router-dev}
 OUT=$ROOT/backups/experiments/p2-shared-peft/$SESSION
-SPLIT=${VLA_TRAJECTORY_SPLIT:-$ROOT/backups/experiments/p1-data-contract/20260925-107-p1-data-contract/trajectory-split.json}
-DATASET=${VLA_SPATIAL_DATASET:-$ROOT/datasets/libero_spatial_no_noops/1.0.0}
+SPLIT=${VLA_TRAJECTORY_SPLIT:-$ROOT/backups/experiments/p1-data-contract/20260925-107-p1-data-contract/trajectory-inventory-v3/trajectory_split.json}
+DATASET=${VLA_SPATIAL_DATASET:-$ROOT/data/modified_libero_rlds/libero_spatial_no_noops/1.0.0}
 SAMPLES=$OUT/router-dev-frames-p10-p30-p50-p70-p90
 TEACHER=$OUT/bf16-teacher
 BASELINE=$OUT/exact12l-baseline
@@ -36,10 +36,14 @@ exact12=(
 )
 
 if [[ "$MODE" == prepare ]]; then
-  test ! -e "$OUT"
-  mkdir -p "$OUT"
-  python "$REPO/qvla/extract_trajectory_frames.py" --dataset-directory "$DATASET" \
-    --trajectory-split "$SPLIT" --role router_dev --positions 0.1,0.3,0.5,0.7,0.9 --output "$SAMPLES"
+  if [[ -e "$OUT" ]]; then
+    test -s "$SAMPLES/manifest.json"
+    test ! -e "$TEACHER"
+  else
+    mkdir -p "$OUT"
+    python "$REPO/qvla/extract_trajectory_frames.py" --dataset-directory "$DATASET" \
+      --trajectory-split "$SPLIT" --role router_dev --positions 0.1,0.3,0.5,0.7,0.9 --output "$SAMPLES"
+  fi
   python -u "$REPO/diagnostics/probe.py" "${common[@]}" --mode teacher --output "$TEACHER" \
     2>&1 | tee "$OUT/bf16-teacher-console.log"
   python -u "$REPO/diagnostics/probe.py" "${common[@]}" "${exact12[@]}" --teacher-dir "$TEACHER" --output "$BASELINE" \
