@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "paired_queries": 140,
+  "episodes": 10,
+  "bf16_teacher_max_abs_difference": 0.0,
+  "lora_mean_mse": 0.0285515759502342,
+  "no_lora_mean_mse": 0.0352791164457033,
+  "mean_paired_delta_lora_minus_no_lora": -0.006727540495469101,
+  "fraction_queries_lora_better": 0.5,
+  "fraction_episodes_lora_better": 0.7,
+  "lora_gripper_disagreement": 0.04642857142857143,
+  "no_lora_gripper_disagreement": 0.15714285714285714,
+  "per_episode": [
+    {
+      "episode_serial": 0,
+      "queries": 10,
+      "mean_delta": -0.011577331059048908
+    },
+    {
+      "episode_serial": 1,
+      "queries": 28,
+      "mean_delta": -0.023488503204753236
+    },
+    {
+      "episode_serial": 2,
+      "queries": 12,
+      "mean_delta": -0.0009457601102567301
+    },
+    {
+      "episode_serial": 3,
+      "queries": 12,
+      "mean_delta": 0.0020769015253281637
+    },
+    {
+      "episode_serial": 4,
+      "queries": 14,
+      "mean_delta": -0.000293829282763859
+    },
+    {
+      "episode_serial": 5,
+      "queries": 11,
+      "mean_delta": -0.01582561817135052
+    },
+    {
+      "episode_serial": 6,
+      "queries": 13,
+      "mean_delta": -0.0071454673843651595
+    },
+    {
+      "episode_serial": 7,
+      "queries": 14,
+      "mean_delta": 0.022576350522039743
+    },
+    {
+      "episode_serial": 8,
+      "queries": 12,
+      "mean_delta": -0.02426883060370159
+    },
+    {
+      "episode_serial": 9,
+      "queries": 14,
+      "mean_delta": 0.004590398553800564
+    }
+  ],
+  "classification": "student-visited mechanism diagnosis; development resets; not a closed-loop causal effect"
+}
