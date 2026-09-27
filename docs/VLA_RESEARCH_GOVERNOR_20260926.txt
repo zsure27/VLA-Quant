@@ -1,0 +1,657 @@
+TITLE:
+VLA-Quant Research Governor — Experiment Direction Self-Correction Protocol
+
+PURPOSE:
+
+Your primary responsibility is NOT to continuously improve the latest
+metric.
+
+Your primary responsibility is to preserve the causal research question,
+experimental validity, and stage order of this project.
+
+Before proposing, coding, launching, or extending ANY experiment,
+you must execute the following self-audit.
+
+============================================================
+0. CORE RESEARCH OBJECTIVE — DO NOT REWRITE
+============================================================
+
+The project is studying:
+
+1. how extreme low-bit quantization damages VLA closed-loop control;
+
+2. whether a compact PEFT repair can recover action-critical capability
+   on a frozen low-bit backbone;
+
+3. if one shared repair is insufficient, whether different observable
+   contexts require genuinely different repair directions;
+
+4. only if such expert complementarity exists, whether a causal
+   Contextual Router can select the appropriate expert;
+
+5. finally, whether the resulting system offers a meaningful
+   accuracy / storage / deployment tradeoff.
+
+The project objective is NOT:
+
+- minimize offline MSE indefinitely;
+- find the absolute best W2/W4 layer combination;
+- maximize the number of experiments;
+- create a Router regardless of evidence;
+- prove that a preferred method must work.
+
+Negative results are acceptable.
+
+============================================================
+1. CURRENT RESEARCH STATE MACHINE
+============================================================
+
+Use the following stage order:
+
+P1:
+data / quantization / gradient / save-reload contracts
+
+P2:
+shared static PEFT recovery
+
+P2.5:
+offline-to-closed-loop alignment diagnosis
+
+P4:
+expert complementarity
+
+P5:
+Contextual Router
+
+P6:
+cross-suite / packed deployment / systems evaluation
+
+At any moment:
+
+ONLY ONE stage may be PRIMARY.
+
+Later stages are LOCKED unless their explicit gate has passed.
+
+Do not interpret a promising offline metric as permission to advance
+to a later stage.
+
+Before every experiment, output internally:
+
+CURRENT_PRIMARY_STAGE = ?
+CURRENT_LOCKED_STAGES = ?
+CURRENT_MAIN_QUESTION = ?
+
+If these cannot be answered from the source-of-truth documents,
+STOP and inspect the documents before proposing work.
+
+============================================================
+2. SOURCE OF TRUTH
+============================================================
+
+Before planning a new experiment:
+
+Read the latest:
+
+- master experiment plan;
+- experiment log;
+- latest accepted session report;
+- current canonical baseline table;
+- current stage gate decision.
+
+Do not infer the current stage only from the latest single experiment.
+
+If two reports disagree:
+
+DO NOT silently choose one.
+
+Audit:
+- code commit
+- profile hash
+- checkpoint
+- evaluator
+- manifest
+- seeds
+- data split
+
+Then designate:
+CANONICAL
+HISTORICAL
+SUPERSEDED
+
+Never mix incompatible results in one conclusion.
+
+============================================================
+3. EXPERIMENT ADMISSION TEST
+============================================================
+
+Before running an experiment, write exactly:
+
+HYPOTHESIS:
+What causal hypothesis is being tested?
+
+VARIABLE:
+What is the ONE intended independent change?
+
+CONTROL:
+What stays fixed?
+
+PRIMARY_METRIC:
+Which metric directly answers the hypothesis?
+
+DECISION:
+What will we do if result is positive?
+
+STOP_DECISION:
+What will we do if result is negative?
+
+MAINLINE_RELEVANCE:
+Which current research question does this answer?
+
+If the experiment cannot answer a specific current-stage question,
+DO NOT EXECUTE IT.
+
+Experiments that merely:
+- improve an offline number;
+- add another rank;
+- add another W4 subset;
+- add another loss;
+- add another expert;
+without changing a research decision are NOT sufficient reason to run.
+
+============================================================
+4. DISTINGUISH FOUR TYPES OF EXPERIMENTS
+============================================================
+
+Every experiment must be labeled as exactly one of:
+
+A. CONTRACT
+Tests implementation correctness.
+
+B. DIAGNOSTIC
+Explains a mechanism or failure.
+
+C. MODEL-SELECTION / DEVELOPMENT
+Chooses among candidate methods using development data.
+
+D. FINAL EVALUATION
+Tests a frozen method once on a held-out protocol.
+
+Do not promote a DIAGNOSTIC set into a FINAL benchmark.
+
+Do not repeatedly tune on FINAL data.
+
+Do not report post-hoc diagnostic subsets as unbiased success rates.
+
+============================================================
+5. DO NOT OPTIMIZE A PROXY AFTER IT IS DISPROVEN
+============================================================
+
+If evidence shows:
+
+offline metric improvement
+does not reliably predict
+closed-loop success,
+
+then that offline metric becomes a DIAGNOSTIC metric,
+not the primary optimization objective.
+
+For this project:
+
+closed-loop task success is the principal policy-level endpoint.
+
+Offline action MSE / Smooth-L1 / hidden cosine are mechanism metrics.
+
+Therefore:
+
+Do not continue reducing offline teacher error indefinitely unless the
+experiment specifically tests why it should improve closed-loop control.
+
+Always report:
+
+- mean change
+- median paired change
+- fraction improved
+- worst regressions
+- gripper behavior
+- trajectory-level aggregation
+
+Do not allow one outlier to justify progression.
+
+============================================================
+6. CONFOUND CHECK — MANDATORY
+============================================================
+
+Before interpreting a result causally, check whether more than one
+variable changed.
+
+Examples:
+
+data coverage changed
+AND
+optimizer steps changed
+
+rank changed
+AND
+training budget changed
+
+W4 layer set changed
+AND
+quantization profile was re-searched
+
+loss changed
+AND
+dataset changed
+
+If multiple variables changed:
+
+DO NOT conclude which variable caused the result.
+
+Write:
+
+CONFOUNDED RESULT
+
+Then propose the minimum factorial/control experiment needed to separate
+the causes.
+
+Prefer cheap offline controls before expensive closed-loop evaluation.
+
+============================================================
+7. STOP LOCAL SEARCH WHEN ITS PURPOSE IS SATISFIED
+============================================================
+
+Every search branch must have a stopping condition.
+
+Examples:
+
+W4-island search exists only to identify representative static Pareto
+references.
+
+Once adequate reference points exist:
+FREEZE the branch.
+
+Do not continue:
+16 -> 14 -> 13 -> 12 -> 11 ...
+unless the current scientific question explicitly requires it.
+
+Similarly:
+
+Response-SVD is an initialization strategy.
+
+Do not turn it into an unlimited SVD-method search unless initialization
+quality itself becomes the registered research question.
+
+LoRA rank search is forbidden until evidence shows rank capacity is the
+actual bottleneck.
+
+============================================================
+8. PRESERVE THE CURRENT BACKBONE
+============================================================
+
+Once a PEFT experiment declares a canonical backbone:
+
+Do not alter:
+- W2/W4 placement
+- group size
+- clipping rule
+- protected modules
+- quantization target set
+
+while testing PEFT,
+unless the experiment is explicitly a backbone ablation.
+
+Otherwise the PEFT causal question becomes invalid.
+
+============================================================
+9. OFFLINE VS CLOSED-LOOP
+============================================================
+
+Always distinguish:
+
+fixed-observation teacher consistency
+
+from
+
+on-policy closed-loop behavior.
+
+The policy changes its own future state distribution:
+
+o_t
+-> a_t
+-> environment
+-> o_(t+1)
+
+Therefore:
+
+lower teacher-action loss on dataset states
+does NOT imply
+higher closed-loop success.
+
+If strong offline improvement fails to improve closed-loop:
+
+Do NOT immediately:
+- increase rank;
+- add experts;
+- add Router;
+- add more static layers.
+
+Enter P2.5 alignment diagnosis.
+
+Test:
+- student-state teacher disagreement;
+- first-divergence time;
+- gripper threshold errors;
+- trajectory distribution shift;
+- actual action-chunk execution semantics;
+- loss-component alignment.
+
+============================================================
+10. CURRENT P2.5 PRINCIPLE
+============================================================
+
+When offline recovery and closed-loop recovery disagree, distinguish:
+
+H1:
+objective / distribution mismatch
+
+from
+
+H2:
+context-specific correction conflict
+
+H1 means:
+the shared repair is trained on the wrong state/loss distribution.
+
+H2 means:
+different contexts genuinely require incompatible repair directions.
+
+Do NOT invoke Contextual Routing until H2 has evidence.
+
+Diagnostics for H2 may include:
+
+- context-conditioned gradient cosine
+- Response-SVD subspace similarity
+- per-context residual vectors
+- cross-context adapter response
+
+If correction directions are largely aligned:
+Router is unlikely to be necessary.
+
+If stable conflicting directions exist:
+expert specialization becomes justified.
+
+============================================================
+11. EXPERT GATE
+============================================================
+
+Multiple experts may be trained only if:
+
+either:
+
+A.
+a shared PEFT already gives credible closed-loop recovery;
+
+or:
+
+B.
+after objective/distribution mismatch has been addressed,
+there is reproducible evidence of context-dependent correction conflict.
+
+Expert experiments must use:
+
+- identical backbone
+- identical target modules
+- identical PEFT type
+- identical rank/parameterization
+- identical parameter count
+- identical training budget
+- identical optimizer/loss
+
+Only context distribution or weighting may differ.
+
+Do not mix:
+Scale expert
+vs
+LoRA expert
+vs
+Scale+LoRA expert
+in the first complementarity study.
+
+============================================================
+12. ROUTER GATE
+============================================================
+
+Do NOT build a Router simply because multiple experts exist.
+
+Before Router:
+
+freeze experts.
+
+Build a full cross-expert fixed-observation matrix.
+
+Measure:
+
+Shared
+Expert A
+Expert B
+Best Fixed
+Oracle
+
+If:
+
+Oracle approximately equals Best Fixed
+
+or
+
+one expert dominates almost all contexts,
+
+STOP.
+
+Router has no demonstrated purpose.
+
+Only proceed if:
+
+- bidirectional complementarity exists;
+- it is stable across held-out trajectories/seeds;
+- winner preference is related to inference-time observable context.
+
+============================================================
+13. ROUTER CAUSALITY
+============================================================
+
+Router features must exist BEFORE expert selection.
+
+For PEFT in blocks18-19:
+
+prefer pre-block18 representations such as H17.
+
+Never use:
+
+- future episode success
+- future GT action
+- BF16 future output as inference input
+- post-expert hidden state to choose the same expert
+
+Task-ID-only and instruction-only must be explicit baselines.
+
+A full-context Router may only be called
+state-dependent Contextual Routing if it adds value beyond task identity.
+
+============================================================
+14. DATA HYGIENE
+============================================================
+
+Keep:
+
+peft_train:
+PEFT/expert training only
+
+router_dev:
+development/context analysis/model selection
+
+offline_final_holdout:
+untouched until all choices are frozen
+
+Historical Spatial evaluation states already used repeatedly for
+method selection are development evidence, not blind final evidence.
+
+Do not convert repeatedly inspected data back into a "final test".
+
+============================================================
+15. BEFORE EVERY GPU RUN
+============================================================
+
+Produce a short PRE-RUN CARD:
+
+PRIMARY STAGE:
+QUESTION:
+HYPOTHESIS:
+BACKBONE HASH:
+METHOD:
+DATA SPLIT:
+ONE CHANGED VARIABLE:
+CONTROL:
+PRIMARY METRIC:
+SECONDARY METRICS:
+EXPECTED DECISION:
+STOP CONDITION:
+OUTPUT DIRECTORY:
+ESTIMATED COST:
+
+Then ask:
+
+"If this experiment succeeds, what decision changes?"
+
+"If it fails, what decision changes?"
+
+If the answer to both is:
+"we will probably run another similar variant",
+
+the experiment is underspecified and must not run.
+
+============================================================
+16. AFTER EVERY EXPERIMENT
+============================================================
+
+Do not immediately propose another experiment.
+
+First create a POST-RUN DECISION:
+
+RESULT:
+SUPPORTED / NOT SUPPORTED / INCONCLUSIVE
+
+CAUSAL CLAIM ALLOWED:
+exactly what can be claimed
+
+CAUSAL CLAIM NOT ALLOWED:
+what remains confounded
+
+STAGE STATUS:
+stay / advance / retreat
+
+BRANCH STATUS:
+continue / freeze / terminate
+
+NEXT QUESTION:
+one question only
+
+Do not choose the next experiment merely because it is easy to run.
+
+============================================================
+17. ANTI-DRIFT RULE
+============================================================
+
+Before proposing the next experiment, compare it with the master research
+question.
+
+Ask:
+
+"Does this experiment reduce uncertainty about one of the following?"
+
+1. Can compact PEFT recover W2 closed-loop capability?
+
+2. If not, is failure caused by objective/state-distribution mismatch
+   or by context-specific repair conflict?
+
+3. If context-specific conflict exists, do multiple experts show real
+   complementarity?
+
+4. If complementarity exists, can causal token context predict expert
+   choice?
+
+5. Does the resulting system improve the accuracy/storage/deployment
+   Pareto frontier?
+
+If NO:
+
+label the experiment SIDE QUEST.
+
+Do not execute SIDE QUEST experiments without explicit user approval.
+
+============================================================
+18. EXPLORATION IS ALLOWED, BUT MUST BE BOUNDED
+============================================================
+
+Exploration is allowed only when:
+
+- the current result is inconclusive;
+- the missing information is clearly stated;
+- no cheaper diagnostic can answer it;
+- the exploration budget is fixed in advance.
+
+Exploration must specify:
+
+MAX_VARIANTS
+MAX_GPU_TIME
+STOP_RULE
+
+When the budget is exhausted:
+return to the main decision tree.
+
+Never allow a diagnostic branch to recursively create another open-ended
+search branch.
+
+============================================================
+19. CURRENT DEFAULT PROJECT PRIORITY
+============================================================
+
+Unless newer canonical evidence explicitly changes it:
+
+Priority is:
+
+P2 / P2.5:
+closed-loop-aligned Recovery-LoRA
+
+then:
+
+P4:
+expert complementarity
+
+then:
+
+P5:
+H17 Contextual Routing
+
+Static W4 search is frozen.
+
+Scale-PEFT is retained as an important negative/static baseline unless
+new evidence changes its closed-loop status.
+
+Recovery-LoRA is the current preferred PEFT family only if it obtains
+credible closed-loop recovery or provides clear context-conflict
+evidence after P2.5 diagnosis.
+
+Router remains LOCKED until the corresponding gate is passed.
+
+============================================================
+20. FINAL RULE
+============================================================
+
+Do not optimize for "more experiments".
+
+Optimize for:
+
+fewer experiments
+with stronger causal interpretation.
+
+The correct next experiment is the one that changes a scientific
+decision, not the one that produces another metric.
