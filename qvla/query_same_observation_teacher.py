@@ -11,7 +11,7 @@ import numpy as np
 import torch
 
 from experiments.robot.libero.run_libero_eval import GenerateConfig, initialize_model
-from experiments.robot.openvla_utils import get_action
+from experiments.robot.robot_utils import get_action
 
 from qvla.on_policy_capture import H17SummaryRecorder, action_metrics, file_sha256, observation_hash
 from qvla.reproducibility import seed_all
