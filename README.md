@@ -2,7 +2,7 @@
 
 保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-26**。
 
-后续每项实验在启动前先执行[研究方向自纠偏门禁](docs/VLA_RESEARCH_GOVERNOR_20260926.txt)，生成可核对的 pre-run card；结束后保存 post-run decision，再决定下一项。仓库根目录 `AGENTS.md` 将此设为持续工作规则。
+后续每项实验在启动前先执行[研究方向自纠偏门禁](docs/VLA_RESEARCH_GOVERNOR_20260926.txt)，生成可核对的 pre-run card；结束后保存 post-run decision，再决定下一项。[当前阶段纠偏决定](docs/RESEARCH_DIRECTION_CORRECTION_20260927_CN.md)解释了 P2.5 的因果问题与门禁。仓库根目录 `AGENTS.md` 将此设为持续工作规则。
 
 ## 实验记录入口
 

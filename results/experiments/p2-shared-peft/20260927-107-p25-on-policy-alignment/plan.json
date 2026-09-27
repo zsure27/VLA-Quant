@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p25-on-policy-alignment-20260927",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {
+      "id": "capture-student-and-query-bf16-same-observation",
+      "command": [
+        "bash",
+        "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p2_5_on_policy_diagnosis.sh"
+      ],
+      "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+      "env": {
+        "VLA_REPO": "/root/autodl-tmp/VLA-Quant-p2c-20260925",
+        "VLA_SESSION": "20260927-107-p25-on-policy-alignment",
+        "VLA_LORA_STATE": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt"
+      }
+    }
+  ]
+}
