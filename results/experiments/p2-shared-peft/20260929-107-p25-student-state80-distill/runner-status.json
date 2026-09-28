@@ -1,0 +1,22 @@
+{
+  "child_pid": null,
+  "completed_stage_ids": [
+    "rollout-05-09",
+    "rollout-10-19",
+    "rollout-20-29",
+    "rollout-30-39",
+    "rollout-40-49"
+  ],
+  "current_stage": null,
+  "last_exit_code": 0,
+  "log": "/root/autodl-tmp/qvla-repro/control/p25-student-state80-closed-loop-450-20260929/stage-04-rollout-40-49.log",
+  "message": "all preregistered stages complete; gate review required",
+  "plan_id": "p25-student-state80-closed-loop-450-20260929",
+  "plan_path": "/root/autodl-tmp/qvla-repro/control/p25-student-state80-closed-loop-450-20260929-plan.json",
+  "plan_sha256": "7270f227f0a6a45c7d3beb2f2a5587cb3f18759b3a54cac0077106de70a3fc96",
+  "revision": 17,
+  "schema_version": "1.0",
+  "state": "AWAITING_GATE_REVIEW",
+  "supervisor_pid": 14431,
+  "time_utc": "2026-09-28T19:59:13.025322+00:00"
+}

@@ -39,7 +39,7 @@ def main():
         assert summary["holdout_touched"] is False
         assert all(sum(int(x[c]) for x in part) == summary["successes"][c] for c in CASES)
         rows.extend(part)
-        sources.append({"directory": str(shard), "rows_sha256": sha(file), "summary_sha256": sha(shard / "paired-summary.json"),
+        sources.append({"directory": shard.name, "rows_sha256": sha(file), "summary_sha256": sha(shard / "paired-summary.json"),
                         "candidate_eval_sha256": summary["candidate_eval_sha256"]})
     keys = [(x["task_id"], x["init_state_index"]) for x in rows]
     assert len(rows) == len(set(keys)) == 450

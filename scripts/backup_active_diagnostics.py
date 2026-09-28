@@ -66,14 +66,29 @@ def main():
     video_roots = [
         (root / "overlays/awq-p0-stage-20260923/rollouts").resolve(),
         Path("/root/rollouts").resolve(),
+        Path("/root/autodl-tmp/VLA-Quant-p2c-20260925/rollouts").resolve(),
     ]
     for directory in selected:
         if directory.parent != root / "eval": continue
         for console in directory.glob("*/console.log"):
             paths = re.findall(r"Saved rollout MP4 at path ([^\r\n]+)", console.read_text())
-            command=(console.parent / "command.txt").read_text()
-            trials=re.search(r"--num_trials_per_task\s+(\d+)",command)
-            expected=10*int(trials.group(1)) if trials else 10
+            command_path = console.parent / "command.txt"
+            if command_path.is_file():
+                command = command_path.read_text()
+                trials = re.search(r"--num_trials_per_task\s+(\d+)", command)
+                if not trials:
+                    raise SystemExit("Missing trial count in recorded evaluator command")
+                expected = 10 * int(trials.group(1))
+            else:
+                # The paired P2.5 runner records the immutable command in its
+                # versioned stage script and writes an audited shard summary.
+                summary_path = directory / "paired-summary.json"
+                if not summary_path.is_file():
+                    raise SystemExit("No evaluator command or paired shard summary")
+                summary = json.loads(summary_path.read_text())
+                expected = 10 * int(summary["count"])
+                if summary["episodes"] != expected:
+                    raise SystemExit("Paired shard episode count mismatch")
             if len(paths) != expected:
                 raise SystemExit(f"{expected} original videos required for completed stage rollout")
             for name in paths:

@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0",
+  "classification": "development paired; reset5-49 only; offline_final_holdout untouched",
+  "n": 450,
+  "successes": {
+    "C0": 368,
+    "C1": 366,
+    "C2": 388,
+    "C3": 389
+  },
+  "success_rates": {
+    "C0": 0.8177777777777778,
+    "C1": 0.8133333333333334,
+    "C2": 0.8622222222222222,
+    "C3": 0.8644444444444445
+  },
+  "C3_vs_C0": {
+    "gain": 35,
+    "loss": 14,
+    "net": 21,
+    "discordant": 49,
+    "mcnemar_exact_two_sided_p": 0.003801654409748778
+  },
+  "C3_vs_C1": {
+    "gain": 38,
+    "loss": 15,
+    "net": 23,
+    "discordant": 53,
+    "mcnemar_exact_two_sided_p": 0.0021901868838920535
+  },
+  "C3_vs_C2": {
+    "gain": 16,
+    "loss": 15,
+    "net": 1,
+    "discordant": 31,
+    "mcnemar_exact_two_sided_p": 1.0
+  },
+  "C2_vs_C0": {
+    "gain": 26,
+    "loss": 6,
+    "net": 20,
+    "discordant": 32,
+    "mcnemar_exact_two_sided_p": 0.0005350527353584766
+  },
+  "C3_minus_C0_rate": 0.04666666666666667,
+  "C3_minus_C0_bootstrap_95": [
+    0.015555555555555555,
+    0.07777777777777778
+  ],
+  "static_headroom_C2_minus_C0": 20,
+  "recovery_fraction": 1.05,
+  "per_task": {
+    "0": {
+      "n": 45,
+      "successes": {
+        "C0": 45,
+        "C1": 45,
+        "C2": 45,
+        "C3": 45
+      },
+      "C3_vs_C0": {
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "discordant": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      "C3_vs_C1": {
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "discordant": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    },
+    "1": {
+      "n": 45,
+      "successes": {
+        "C0": 1,
+        "C1": 10,
+        "C2": 8,
+        "C3": 15
+      },
+      "C3_vs_C0": {
+        "gain": 15,
+        "loss": 1,
+        "net": 14,
+        "discordant": 16,
+        "mcnemar_exact_two_sided_p": 0.000518798828125
+      },
+      "C3_vs_C1": {
+        "gain": 7,
+        "loss": 2,
+        "net": 5,
+        "discordant": 9,
+        "mcnemar_exact_two_sided_p": 0.1796875
+      }
+    },
+    "2": {
+      "n": 45,
+      "successes": {
+        "C0": 42,
+        "C1": 29,
+        "C2": 45,
+        "C3": 45
+      },
+      "C3_vs_C0": {
+        "gain": 3,
+        "loss": 0,
+        "net": 3,
+        "discordant": 3,
+        "mcnemar_exact_two_sided_p": 0.25
+      },
+      "C3_vs_C1": {
+        "gain": 16,
+        "loss": 0,
+        "net": 16,
+        "discordant": 16,
+        "mcnemar_exact_two_sided_p": 3.0517578125e-05
+      }
+    },
+    "3": {
+      "n": 45,
+      "successes": {
+        "C0": 45,
+        "C1": 45,
+        "C2": 42,
+        "C3": 43
+      },
+      "C3_vs_C0": {
+        "gain": 0,
+        "loss": 2,
+        "net": -2,
+        "discordant": 2,
+        "mcnemar_exact_two_sided_p": 0.5
+      },
+      "C3_vs_C1": {
+        "gain": 0,
+        "loss": 2,
+        "net": -2,
+        "discordant": 2,
+        "mcnemar_exact_two_sided_p": 0.5
+      }
+    },
+    "4": {
+      "n": 45,
+      "successes": {
+        "C0": 43,
+        "C1": 44,
+        "C2": 44,
+        "C3": 44
+      },
+      "C3_vs_C0": {
+        "gain": 1,
+        "loss": 0,
+        "net": 1,
+        "discordant": 1,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      "C3_vs_C1": {
+        "gain": 1,
+        "loss": 1,
+        "net": 0,
+        "discordant": 2,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    },
+    "5": {
+      "n": 45,
+      "successes": {
+        "C0": 22,
+        "C1": 29,
+        "C2": 30,
+        "C3": 31
+      },
+      "C3_vs_C0": {
+        "gain": 10,
+        "loss": 1,
+        "net": 9,
+        "discordant": 11,
+        "mcnemar_exact_two_sided_p": 0.01171875
+      },
+      "C3_vs_C1": {
+        "gain": 4,
+        "loss": 2,
+        "net": 2,
+        "discordant": 6,
+        "mcnemar_exact_two_sided_p": 0.6875
+      }
+    },
+    "6": {
+      "n": 45,
+      "successes": {
+        "C0": 44,
+        "C1": 43,
+        "C2": 45,
+        "C3": 41
+      },
+      "C3_vs_C0": {
+        "gain": 1,
+        "loss": 4,
+        "net": -3,
+        "discordant": 5,
+        "mcnemar_exact_two_sided_p": 0.375
+      },
+      "C3_vs_C1": {
+        "gain": 2,
+        "loss": 4,
+        "net": -2,
+        "discordant": 6,
+        "mcnemar_exact_two_sided_p": 0.6875
+      }
+    },
+    "7": {
+      "n": 45,
+      "successes": {
+        "C0": 40,
+        "C1": 35,
+        "C2": 42,
+        "C3": 36
+      },
+      "C3_vs_C0": {
+        "gain": 2,
+        "loss": 6,
+        "net": -4,
+        "discordant": 8,
+        "mcnemar_exact_two_sided_p": 0.2890625
+      },
+      "C3_vs_C1": {
+        "gain": 5,
+        "loss": 4,
+        "net": 1,
+        "discordant": 9,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    },
+    "8": {
+      "n": 45,
+      "successes": {
+        "C0": 42,
+        "C1": 45,
+        "C2": 44,
+        "C3": 45
+      },
+      "C3_vs_C0": {
+        "gain": 3,
+        "loss": 0,
+        "net": 3,
+        "discordant": 3,
+        "mcnemar_exact_two_sided_p": 0.25
+      },
+      "C3_vs_C1": {
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "discordant": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      }
+    },
+    "9": {
+      "n": 45,
+      "successes": {
+        "C0": 44,
+        "C1": 41,
+        "C2": 43,
+        "C3": 44
+      },
+      "C3_vs_C0": {
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "discordant": 0,
+        "mcnemar_exact_two_sided_p": 1.0
+      },
+      "C3_vs_C1": {
+        "gain": 3,
+        "loss": 0,
+        "net": 3,
+        "discordant": 3,
+        "mcnemar_exact_two_sided_p": 0.25
+      }
+    }
+  },
+  "sources": [
+    {
+      "directory": "p25-student-state80-10-19-20260929-025024-17262",
+      "rows_sha256": "a00c389264825651d594ce60bc27ef5d4c2c03a5c2a65bd415c30a7f012802ec",
+      "summary_sha256": "8bab6278b4a44f3330861d700b751bd0ffc3112266118c24842adfcb8a804328",
+      "candidate_eval_sha256": "14116e1fe448922449feec590a54ea15a0111b87358f84e5155a00707e8275f7"
+    },
+    {
+      "directory": "p25-student-state80-20-29-20260929-030746-22497",
+      "rows_sha256": "486205f1854553318c25f06ea653d76f2263832fa685d6a4e32670d18cf1cde1",
+      "summary_sha256": "64fca6df8c3c4f0ad69c18b58f0de4158a40e53603cd44f2b6e53a7ff7d5b603",
+      "candidate_eval_sha256": "6686082676f0031438bb737f732a191159ca640e5e0720e0fd38cd0bd62e692c"
+    },
+    {
+      "directory": "p25-student-state80-30-39-20260929-032444-27738",
+      "rows_sha256": "94415e166d22a8835a1226a0e66c9f6510d6987fc28d951e679856036ec39ad3",
+      "summary_sha256": "059958c29910de97ef0b3be62ee2ec89ddb1d3434f569acac53aa8f4fd73fbf8",
+      "candidate_eval_sha256": "2d74f3eed5ba47c943997153b3aeee3c71266a4c739179deeab9ff128f49953e"
+    },
+    {
+      "directory": "p25-student-state80-40-49-20260929-034151-32962",
+      "rows_sha256": "13ba1b43974007668c4188e0d0ca6d13dfd99f77297f36eb4ad1b84ce90eca7c",
+      "summary_sha256": "cae3e8cb1d4fe39ee67312af2be083973b6551cc1153287e399b42a92d9783b7",
+      "candidate_eval_sha256": "345c186cfd281cf7910608fb217a46456d6c25ae0c311c060573b75a7e907eb8"
+    },
+    {
+      "directory": "p25-student-state80-5-9-20260929-024101-14433",
+      "rows_sha256": "d541bace5bdc3625d82fdc6b23333fea75d3dd496ad4a37552806a8f7157a3ec",
+      "summary_sha256": "f7ad6aa1c43c3867d33ba73922f6e2ffa5f94126aab75fb0f1f16b9829db385b",
+      "candidate_eval_sha256": "e903fa0ab0b376cda5fce22360576c845273e18bc49ceeeca3bb05f078a757b1"
+    }
+  ]
+}
