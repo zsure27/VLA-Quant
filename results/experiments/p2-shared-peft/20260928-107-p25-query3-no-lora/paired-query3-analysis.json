@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "role": "P2.5_same_student_observation_query3_no_lora_control",
+  "n": 500,
+  "query_in_episode": 3,
+  "executed_step_start": 24,
+  "closed_loop_spatial500": {
+    "exact12l_success": 411,
+    "lora_success": 408,
+    "static14l_success": 431
+  },
+  "lora_raw_mse_mean": 0.03302360545273325,
+  "no_lora_raw_mse_mean": 0.04719572514342144,
+  "mean_lora_minus_no_lora_mse": -0.014172119690688188,
+  "median_lora_minus_no_lora_mse": -0.01654751430263116,
+  "paired_episode_bootstrap_95ci_lora_minus_no_lora_mse": [
+    -0.02068056293775779,
+    -0.006866592317539887
+  ],
+  "lora_lower_mse_count": 421,
+  "no_lora_lower_mse_count": 79,
+  "lora_gripper_disagreement_mean": 0.06575,
+  "no_lora_gripper_disagreement_mean": 0.23,
+  "bf16_teacher_gripper_signed_margin_max_abs_diff": 0,
+  "by_task": {
+    "pick up the black bowl between the plate and the ramekin and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.012770698969723094,
+      "lora_lower_mse_count": 43
+    },
+    "pick up the black bowl from table center and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": 0.1014179609188554,
+      "lora_lower_mse_count": 23
+    },
+    "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.021238995642412894,
+      "lora_lower_mse_count": 50
+    },
+    "pick up the black bowl next to the cookie box and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": 0.012363576867146729,
+      "lora_lower_mse_count": 35
+    },
+    "pick up the black bowl next to the plate and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.013913625339521084,
+      "lora_lower_mse_count": 46
+    },
+    "pick up the black bowl next to the ramekin and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.08752560312725315,
+      "lora_lower_mse_count": 48
+    },
+    "pick up the black bowl on the cookie box and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": 0.0032255587713550435,
+      "lora_lower_mse_count": 41
+    },
+    "pick up the black bowl on the ramekin and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.024112978514868006,
+      "lora_lower_mse_count": 36
+    },
+    "pick up the black bowl on the stove and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.03467743620707277,
+      "lora_lower_mse_count": 49
+    },
+    "pick up the black bowl on the wooden cabinet and place it on the plate": {
+      "n": 50,
+      "mean_lora_minus_no_lora_mse": -0.06448895566338804,
+      "lora_lower_mse_count": 50
+    }
+  },
+  "raw_dim_mse_mean": {
+    "lora": [
+      0.03646948806618706,
+      0.03349036858612837,
+      0.052112928373514285,
+      0.00033849557845137894,
+      0.00178838297282958,
+      0.002657018552058962,
+      0.10430855603996315
+    ],
+    "no_lora": [
+      0.06076479677038315,
+      0.019634758292891612,
+      0.024648740928079973,
+      0.00010310181105508617,
+      0.0005671007206744075,
+      0.0005106305412325641,
+      0.22414094323698633
+    ]
+  },
+  "small_archive_sha256": "f9d1bb942d7c67f865d9552782dda260a3b0e594d2d10a26dcb4deb872b3f943",
+  "limitations": [
+    "query3 from LoRA-visited trajectories only",
+    "no-LoRA was not independently rolled out",
+    "teacher full 7D equivalence not checked; gripper exact",
+    "development states, not held-out"
+  ]
+}
