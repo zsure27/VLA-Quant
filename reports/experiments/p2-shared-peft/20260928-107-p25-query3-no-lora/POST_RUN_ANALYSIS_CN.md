@@ -20,3 +20,7 @@ LoRA−无 LoRA 的配对 MSE 均值为 −0.014172，回合配对 bootstrap 95%
 - 连续执行器 revision 17，五阶段退出 0，计划 SHA256 `1fcb84e299b4865199e8724d3def33616da2ae9460050c4434c3638bf923f128`。
 - 服务器持久盘：`/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260928-107-p25-query3-no-lora/query3-control-raw.tar`，SHA256 `5fc9a70545f9f9201d77599a2661697b0e4f6b1b9fa540cdf87a0dafbedad94d`。本机同名完整副本传输及哈希核验见收尾记录；大体积原始观测和模型探针不会提交普通 Git。
 - Github 仅保存小结果、预注册卡与本报告。最终提交和远端 SHA 见收尾记录。
+
+## 收尾核验（2026-09-28）
+
+完整原始归档在服务器持久盘和本机各一份，均为 2,168,606,720 字节、1,072 个 tar 条目，SHA256 均为 `5fc9a70545f9f9201d77599a2661697b0e4f6b1b9fa540cdf87a0dafbedad94d`。本机路径：`C:\Users\zsure\Documents\Triton\.codex-work\vla-quant-sync-20260915\backups\experiments\p2-shared-peft\20260928-107-p25-query3-no-lora\query3-control-raw.tar`。五个先前的配对闭环与教师诊断归档仍各有服务器持久盘和本机副本，SHA 见各自同名报告。本轮 GitHub 小结果和分析已推送至 `zsure27/VLA-Quant` 的 `codex/repository-cleanup-20260922` 分支，远端 SHA `89be7f270c9fda42c3188b7c46316234d34e586e`。原始 2.1GB tar 未上传 GitHub；关机执行回执另存。
