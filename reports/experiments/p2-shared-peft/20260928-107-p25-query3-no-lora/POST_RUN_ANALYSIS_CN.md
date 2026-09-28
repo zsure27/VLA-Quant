@@ -24,3 +24,7 @@ LoRA−无 LoRA 的配对 MSE 均值为 −0.014172，回合配对 bootstrap 95%
 ## 收尾核验（2026-09-28）
 
 完整原始归档在服务器持久盘和本机各一份，均为 2,168,606,720 字节、1,072 个 tar 条目，SHA256 均为 `5fc9a70545f9f9201d77599a2661697b0e4f6b1b9fa540cdf87a0dafbedad94d`。本机路径：`C:\Users\zsure\Documents\Triton\.codex-work\vla-quant-sync-20260915\backups\experiments\p2-shared-peft\20260928-107-p25-query3-no-lora\query3-control-raw.tar`。五个先前的配对闭环与教师诊断归档仍各有服务器持久盘和本机副本，SHA 见各自同名报告。本轮 GitHub 小结果和分析已推送至 `zsure27/VLA-Quant` 的 `codex/repository-cleanup-20260922` 分支，远端 SHA `89be7f270c9fda42c3188b7c46316234d34e586e`。原始 2.1GB tar 未上传 GitHub；关机执行回执另存。
+
+## 107 关机回执
+
+2026-09-28 11:36:59 UTC，已核对 hostname `autodl-container-8b78499521-41be183e`、GPU 无计算进程、远端快速收尾目录双份 SHA 清单通过，并取得 supervisor PID 838 的原生关机执行回执（`execute=true`）；随后 SSH 由远端关闭。回执见 `closure.json`。控制台 OFF 与停止计费未独立核验，不能将 SSH 断连当作平台状态证明。15 分钟心跳 `vla-107-p2-5` 已暂停，本轮不关闭 Windows 本机。
