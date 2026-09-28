@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $repo = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
-if ((& git -c "safe.directory=$repo" -C $repo remote get-url origin) -ne 'https://github.com/zsure27/VLA-Quant.git') {
+$remoteUrl = & git -c "safe.directory=$repo" -C $repo remote get-url origin
+if ($remoteUrl -cnotin @('https://github.com/zsure27/VLA-Quant.git', 'https://zsure27@github.com/zsure27/VLA-Quant.git')) {
     throw 'Unexpected GitHub repository'
 }
 & (Join-Path $PSScriptRoot 'verify_zsure27_gcm.ps1')
