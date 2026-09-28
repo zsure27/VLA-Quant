@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p25-position-weight2-early-task-20260929",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id":"early-00-09","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_position_weight2_early_task.sh","0","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"early-10-19","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_position_weight2_early_task.sh","10","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"early-20-29","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_position_weight2_early_task.sh","20","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"early-30-39","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_position_weight2_early_task.sh","30","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"early-40-49","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_position_weight2_early_task.sh","40","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}

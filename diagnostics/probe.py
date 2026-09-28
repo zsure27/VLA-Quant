@@ -471,6 +471,8 @@ def main():
     p.add_argument("--awq-e2e-distill-loss", choices=("mse", "smooth-l1"), default="mse")
     p.add_argument("--awq-e2e-distill-smooth-l1-beta", type=float, default=0.1)
     p.add_argument("--awq-e2e-distill-position-weight", type=float, default=1.0)
+    p.add_argument("--awq-e2e-distill-samples-dir", type=Path)
+    p.add_argument("--awq-e2e-distill-samples-count", type=int, default=0)
     p.add_argument("--smoothing-pairs-fp32", action="store_true")
     p.add_argument("--smoothing-vision-fp32", action="store_true")
     p.add_argument("--smoothing-bypass", action="store_true")
@@ -561,6 +563,10 @@ def main():
             args.awq_e2e_distill_position_weight <= 0 or
             (args.awq_e2e_distill_position_weight != 1.0 and args.awq_e2e_distill_loss != "smooth-l1")):
         p.error("Invalid end-to-end distillation schedule")
+    if bool(args.awq_e2e_distill_samples_dir) != bool(args.awq_e2e_distill_samples_count):
+        p.error("Separate end-to-end samples require directory and count together")
+    if args.awq_e2e_distill_samples_dir and not args.awq_e2e_distill_steps:
+        p.error("Separate end-to-end samples require training steps")
     if residual_layers and (args.awq_residual_rank not in (4,8,16) or args.mode != "awq" or
             args.weight_bits != 2 or args.activation_bits != 16 or
             args.weight_scope != ("all" if args.awq_vision_bits != 16 else "language") or
@@ -739,6 +745,7 @@ def main():
         residual_input_rows = {}
         residual_calibration_manifest = []
         e2e_teacher_targets = {}
+        e2e_training_samples = None
         if meta["bits"] != args.weight_bits or args.activation_bits != 16:
             raise ValueError("AWQ 必须 A16，profile bits 须与候选 W 位宽一致")
         modules = dict(model.named_modules())
@@ -784,7 +791,7 @@ def main():
                         for path in calibration:
                             calibration_recorder.reset(None)
                             _, teacher_normalized, _ = predict(path,cfg,model,head,proprio,processor)
-                            if args.awq_e2e_distill_steps:
+                            if args.awq_e2e_distill_steps and args.awq_e2e_distill_samples_dir is None:
                                 e2e_teacher_targets[path.name] = teacher_normalized
                             residual_calibration_manifest.append({"sample":path.name,"sha256":digest(path)})
                             print("RESIDUAL_INPUT_CALIBRATED",path.name,flush=True)
@@ -799,6 +806,21 @@ def main():
                         args.awq_e2e_distill_steps or scale_peft_layers):
                     residual_input_rows={n:torch.cat(rows) for n,rows in residual_input_rows.items()}
                 save_json(args.output/"residual_input_statistics.json",{n:{"rows":stats[n][1],"rms":r.tolist()} for n,r in residual_input_rms.items()})
+                e2e_training_samples = calibration
+                if args.awq_e2e_distill_samples_dir is not None:
+                    e2e_training_samples = sorted(args.awq_e2e_distill_samples_dir.glob("sample-*.npz"))
+                    if (len(e2e_training_samples) != args.awq_e2e_distill_samples_count or
+                            set(p.resolve() for p in e2e_training_samples) &
+                            set(p.resolve() for p in calibration + args.samples)):
+                        raise ValueError("Separate end-to-end training samples must match count and remain disjoint")
+                    for path in e2e_training_samples:
+                        _, teacher_normalized, _ = predict(path,cfg,model,head,proprio,processor)
+                        e2e_teacher_targets[path.name] = teacher_normalized
+                    save_json(args.output/"e2e_training_samples.json", {
+                        "source": str(args.awq_e2e_distill_samples_dir),
+                        "samples": [{"name":p.name,"sha256":digest(p)} for p in e2e_training_samples],
+                        "teacher": "frozen BF16 same-observation normalized action",
+                    })
             for name, (entry, bits, group_size) in target_plan.items():
                 if list(modules[name].weight.shape) != entry["shape"]:
                     raise ValueError("干预 profile 参数形状不符")
@@ -847,7 +869,7 @@ def main():
             print("RECOVERY_LORA_STATE_LOADED", args.awq_recovery_lora_state, flush=True)
         if args.awq_e2e_distill_steps:
             e2e_summary = end_to_end_action_distill(
-                args, calibration, e2e_teacher_targets, cfg, model, head, proprio, processor)
+                args, e2e_training_samples, e2e_teacher_targets, cfg, model, head, proprio, processor)
         recovery_state = {name: parameter.detach().cpu() for name, parameter in model.named_parameters()
                           if "awq_recovery_lora" in name or "awq_scale_peft" in name}
         recovery_state_record = None
