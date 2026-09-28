@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p25-paired-headroom-20260928",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id": "paired-00-09", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_paired_headroom_shard.sh", "0", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925", "env": {"VLA_LORA_STATE": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt"}},
+    {"id": "paired-10-19", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_paired_headroom_shard.sh", "10", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925", "env": {"VLA_LORA_STATE": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt"}},
+    {"id": "paired-20-29", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_paired_headroom_shard.sh", "20", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925", "env": {"VLA_LORA_STATE": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt"}},
+    {"id": "paired-30-39", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_paired_headroom_shard.sh", "30", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925", "env": {"VLA_LORA_STATE": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt"}},
+    {"id": "paired-40-49", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_paired_headroom_shard.sh", "40", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925", "env": {"VLA_LORA_STATE": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260926-107-p2-robust-e2e-distill-data80/exact12l-response-svd-r8-smoothl1-data80-e2e1000-offline32/recovery_adapter_state.pt"}}
+  ]
+}
