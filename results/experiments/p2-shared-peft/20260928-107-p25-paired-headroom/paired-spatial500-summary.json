@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "classification": "historical/development paired closed-loop evidence",
+  "episodes_per_config": 500,
+  "successes": {
+    "C0": 411,
+    "C1": 408,
+    "C2": 431
+  },
+  "success_rates": {
+    "C0": 0.822,
+    "C1": 0.816,
+    "C2": 0.862
+  },
+  "recovery_fraction": -0.15,
+  "recovery_fraction_denominator_positive": true,
+  "paired_C0_C1": {
+    "both_success": 383,
+    "C0_only": 28,
+    "C1_only": 25,
+    "both_fail": 64,
+    "mcnemar_exact_p": 0.7838463022094988
+  },
+  "paired_C1_C2": {
+    "both_success": 395,
+    "C1_only": 13,
+    "C2_only": 36,
+    "both_fail": 56,
+    "mcnemar_exact_p": 0.001402688503695515
+  },
+  "bootstrap": {
+    "method": "paired episode bootstrap, seed=7",
+    "iterations": 20000,
+    "scale_minus_12l_95ci": [
+      -0.03400000000000003,
+      0.02399999999999991
+    ],
+    "recovery_fraction_95ci_when_denominator_positive": [
+      -1.416666666666662,
+      0.49999999999999895
+    ],
+    "recovery_fraction_valid_draws": 19995
+  },
+  "sources": [
+    {
+      "directory": "/root/autodl-tmp/qvla-repro/eval/p25-paired-headroom-0-9-20260928-133858-2168",
+      "episodes": 100
+    },
+    {
+      "directory": "/root/autodl-tmp/qvla-repro/eval/p25-paired-headroom-10-19-20260928-143105-17819",
+      "episodes": 100
+    },
+    {
+      "directory": "/root/autodl-tmp/qvla-repro/eval/p25-paired-headroom-20-29-20260928-152258-33460",
+      "episodes": 100
+    },
+    {
+      "directory": "/root/autodl-tmp/qvla-repro/eval/p25-paired-headroom-30-39-20260928-161705-49114",
+      "episodes": 100
+    },
+    {
+      "directory": "/root/autodl-tmp/qvla-repro/eval/p25-paired-headroom-40-49-20260928-171012-64738",
+      "episodes": 100
+    }
+  ]
+}
