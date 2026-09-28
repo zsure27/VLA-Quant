@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p25-position-weight2-train-20260929",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id":"train-pos2-data80-step1000","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_position_weight2_train.sh"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}
