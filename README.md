@@ -1,6 +1,6 @@
 # VLA 快速量化与微调：个人实验备份
 
-保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-26**。
+保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-28**。
 
 后续每项实验在启动前先执行[研究方向自纠偏门禁](docs/VLA_RESEARCH_GOVERNOR_20260926.txt)，生成可核对的 pre-run card；结束后保存 post-run decision，再决定下一项。[当前阶段纠偏决定](docs/RESEARCH_DIRECTION_CORRECTION_20260927_CN.md)解释了 P2.5 的因果问题与门禁。仓库根目录 `AGENTS.md` 将此设为持续工作规则。
 
@@ -27,16 +27,11 @@
 | 完整W2视觉group归因（语言固定G64注意力无clip） | DINO128/SigLIP128 3/50；DINO128/SigLIP64 1/50；DINO64/SigLIP128 10/50；DINO64/SigLIP64 11/50 | 初态5–9严格配对；主要恢复来自DINO G64 |
 | 完整W2底座加语言W4岛 | 8–15层27/50；8–23层44/50；16–23层短筛13/20 | DINO64/SigLIP128固定；属于混合W2/W4 |
 | 16层静态参照 | 434/500 | W4 blocks 8–23；较强静态恢复参考 |
-| 14层静态候选 | 约430/500 | 历史431、最新完整复跑430，来源审计中；W4 blocks 8–15、18–23 |
-| 12层PEFT底座 | 约411/500 | 历史412、最新完整复跑411，来源审计中；blocks18–19保持W2 |
+| 14层静态候选 | 431/500 | 本轮与12L/LoRA同评测器配对；另一完整复跑430，来源审计中；W4 blocks 8–15、18–23 |
+| 12层PEFT底座 | 411/500 | 本轮配对；历史412，来源审计中；blocks18–19保持W2 |
+| 12层+data80 rank8 Recovery-LoRA | 408/500 | 本轮配对；相对12L救回25回合、新增失败28回合，净闭环恢复未成立 |
 
-SQ W4A4尚未验收。Scale-PEFT 虽显著降低固定观测误差，但完整闭环为407/500，低于约
-411/500 的12L，现作为负基线。rank8 Response-SVD Recovery-LoRA 的 data80 Smooth-L1 版本
-在历史32帧上降至0.02284、31/32改善，但它同时把轨迹数16→80、优化步200→1000，不能归因
-为单独的覆盖率收益。当前50回合slice的12L与14L均为43/50，因此 data80 闭环只作为稳定性
-试跑，不能计算W4恢复率。后续已改为轨迹级router_dev、A/B/C/D compute-vs-coverage与P2.5
-学生访问观测上的BF16同观测诊断，尚未进入专家或Router。当前仍是BF16存储的fake quant，
-不据此报告INT2/INT4实际压缩与加速。
+SQ W4A4尚未验收。Scale-PEFT 虽显著降低固定观测误差，但完整闭环为407/500，现作为负基线。rank8 Response-SVD Recovery-LoRA 的 data80 版本同时改变轨迹覆盖16→80和优化步数200→1000，不能单独归因于覆盖。轨迹级 A/B/C/D 已补齐，增加训练步数与覆盖均未呈单调收益。本轮 500 回合中 LoRA 的动作拟合改善没有形成净闭环收益；在其学生访问的 500 个同观测上，LoRA 比无 LoRA 更接近 BF16 的样本为421个，但同状态探针并非无 LoRA 的反事实闭环。下一步是 P2.5 的失败时序与目标错配诊断，专家和 Router 继续锁定。当前仍是BF16存储的fake quant，不据此报告INT2/INT4实际压缩与加速。
 
 当前 PEFT / Contextual Routing 唯一默认底座为 [`awq-w2a16-12l-mixed-spatial-v1`](configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json)：DINO W2 G64、SigLIP W2 G128，语言 W4 blocks 8–15 与 20–23，其余语言 W2 G64。第一版 PEFT 只作用于仍为 W2 的 blocks 18–19。14L 和 16L 只承担静态恢复参照；若新证据要求改变底座，新增版本化配置并保留旧版本。
 
@@ -76,4 +71,4 @@ Recovery-LoRA 的 compute-vs-coverage 与 P2.5 闭环对齐诊断；固定观测
 [2026-09-25 主线协议](docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)，结果驱动的调整、
 历史实验教训和“数据+分析”备份验收见
 [自适应实验与备份分析协议](docs/ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)，证据设计见
-[2026-09-22 计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
+[2026-09-22 计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。结合 2026-09-28 配对结果的研究问题、阶段门禁与条件分支见[低比特恢复与 Contextual Routing 修订规划](docs/VLA_QUANT_CONTEXTUAL_RECOVERY_ROADMAP_20260928_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
