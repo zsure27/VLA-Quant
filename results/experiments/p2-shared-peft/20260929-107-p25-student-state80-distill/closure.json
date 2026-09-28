@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-09-28T20:11:23.397739+00:00",
+  "hostname": "autodl-container-8b78499521-41be183e",
+  "native_request_receipt": {
+    "commit": "852d350",
+    "backup": "/root/autodl-tmp/qvla-repro/backups/p25studentstate80-20260929-040513-852d350",
+    "supervisor_pid": 837,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "execute": true,
+    "control_panel_off_verified": false,
+    "note": "Native supervisor termination requested; SSH then closed by remote host. Platform OFF and billing stop were not independently verified."
+  },
+  "ssh_exit_code": 1,
+  "github_remote_sha_before_shutdown": "3c912a0327a8d98a674c016b52048c70452b3bc5",
+  "local_backup_verified_files": 15,
+  "original_videos_verified": 450,
+  "automation_id": "vla-107-p2-5",
+  "automation_status": "PAUSED"
+}
