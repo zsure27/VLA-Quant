@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "classification": "trajectory-level router_dev development evidence; offline_final_holdout untouched",
+  "selection": "fixed normalized temporal positions per complete trajectory; round(p*(steps-1)); duplicate indices removed",
+  "requested_positions": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "trajectory_count": 59,
+  "baseline": {
+    "frames": 295,
+    "mean_action_mse": 0.0554871023072214,
+    "median_action_mse": 0.035576850175857544,
+    "p90_action_mse": 0.11096844673156739,
+    "position_rmse": 0.1907886298200593,
+    "rotation_rmse": 0.2631612200508654,
+    "gripper_continuous_rmse": 0.2672963322567422,
+    "gripper_disagreement": 0.06694915254237288,
+    "teacher_gripper_abs_margin_mean": 1.0004210132663534,
+    "candidate_gripper_abs_margin_mean": 1.022283857959812,
+    "candidate_gripper_abs_margin_p10": 0.9934478759765625
+  },
+  "candidates": {
+    "old": {
+      "frames": 295,
+      "mean_action_mse": 0.05172864021457164,
+      "median_action_mse": 0.03308267518877983,
+      "p90_action_mse": 0.10380343049764634,
+      "position_rmse": 0.18754580580401614,
+      "rotation_rmse": 0.24826520833190613,
+      "gripper_continuous_rmse": 0.267718795377884,
+      "gripper_disagreement": 0.06906779661016949,
+      "teacher_gripper_abs_margin_mean": 1.0004210132663534,
+      "candidate_gripper_abs_margin_mean": 1.0200615511102191,
+      "candidate_gripper_abs_margin_p10": 0.9789794921875,
+      "per_trajectory_median_mean": 0.038413888482787345,
+      "per_trajectory_median_median": 0.03532961755990982,
+      "fraction_trajectories_improved_vs_12l": 0.5254237288135594,
+      "median_trajectory_delta_vs_12l": -0.00018683448433876038,
+      "worst_decile_mean_trajectory_delta_vs_12l": 0.01681121935447057,
+      "max_trajectory_regression_vs_12l": 0.048822347074747086
+    },
+    "student": {
+      "frames": 295,
+      "mean_action_mse": 0.0491531295165167,
+      "median_action_mse": 0.03489984944462776,
+      "p90_action_mse": 0.10288961827754978,
+      "position_rmse": 0.18277655558119937,
+      "rotation_rmse": 0.24609202635412533,
+      "gripper_continuous_rmse": 0.24933159322933926,
+      "gripper_disagreement": 0.061016949152542375,
+      "teacher_gripper_abs_margin_mean": 1.0004210132663534,
+      "candidate_gripper_abs_margin_mean": 1.0215161469023106,
+      "candidate_gripper_abs_margin_p10": 0.9967224121093751,
+      "per_trajectory_median_mean": 0.039142033479855225,
+      "per_trajectory_median_median": 0.03588245064020157,
+      "fraction_trajectories_improved_vs_12l": 0.6101694915254238,
+      "median_trajectory_delta_vs_12l": -0.0002861209213733673,
+      "worst_decile_mean_trajectory_delta_vs_12l": 0.012125461051861445,
+      "max_trajectory_regression_vs_12l": 0.02580714225769043
+    }
+  }
+}

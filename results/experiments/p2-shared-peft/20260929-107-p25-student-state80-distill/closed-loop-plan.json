@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p25-student-state80-closed-loop-450-20260929",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id":"rollout-05-09","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_student_state80_closed_loop_shard.sh","5","5"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"rollout-10-19","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_student_state80_closed_loop_shard.sh","10","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"rollout-20-29","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_student_state80_closed_loop_shard.sh","20","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"rollout-30-39","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_student_state80_closed_loop_shard.sh","30","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"rollout-40-49","command":["bash","/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_student_state80_closed_loop_shard.sh","40","10"],"cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "source": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260929-107-p25-student-state80-distill/student-state80",
+  "samples": [
+    {
+      "name": "sample-00000.npz",
+      "sha256": "70af7889e71f5917e666c8ec3e9dfb744d88e7a75fc7698f82eef52e9cee95e1"
+    },
+    {
+      "name": "sample-00001.npz",
+      "sha256": "5725c5c62293a4c0d1bfc358a808c9e21efcb41e409e33f7bad908dc06b7f142"
+    },
+    {
+      "name": "sample-00002.npz",
+      "sha256": "ea11ae65eb71b6de9d5dce2902398a14608835f151ceaa256a851ba3ce8f2c19"
+    },
+    {
+      "name": "sample-00003.npz",
+      "sha256": "178e98cdee96f2c6c1d06f704c9bd94d6fcc74a18d6feacced475bf442002244"
+    },
+    {
+      "name": "sample-00004.npz",
+      "sha256": "ba7bf7578288522625cb556da0f4087cc6f4f94debbd71b291f131f917848a06"
+    },
+    {
+      "name": "sample-00005.npz",
+      "sha256": "09f804bda9c571fd09ec87f8737e66b421f3f2dfd12108ae49a2a2dd02cd16c6"
+    },
+    {
+      "name": "sample-00006.npz",
+      "sha256": "54dc77baaacbc9ce6faafac96fc1a0e1b6dd2cbfcf42cd4b98d26a0c521c8226"
+    },
+    {
+      "name": "sample-00007.npz",
+      "sha256": "2256f8c7e28bfbb95d003970a0ad62bafe2162f09e6a3d6c0bfd6bd7d54a2d57"
+    },
+    {
+      "name": "sample-00008.npz",
+      "sha256": "bc007753b8186b7ff7687fe5686d5ba2eaba040c80ba4cc190f73f0f017facff"
+    },
+    {
+      "name": "sample-00009.npz",
+      "sha256": "fdfad51260f50e8392d7411bffe02c77235279a10db25d9617d8c1a1b9ea5a4a"
+    },
+    {
+      "name": "sample-00010.npz",
+      "sha256": "ee7ba59e8553489c7778fffd8993f0102a3770285377709508fbf6b362548388"
+    },
+    {
+      "name": "sample-00011.npz",
+      "sha256": "6bd0b78ebeb4212b8fa008aebc8c7d781765c57a17e6659514a5df24593df0cc"
+    },
+    {
+      "name": "sample-00012.npz",
+      "sha256": "d3351fdea43ce38a687588e2b2a53f1fc8eda76fd141e83a0594639742a78592"
+    },
+    {
+      "name": "sample-00013.npz",
+      "sha256": "1f5fc5eb6e9d483dd46bdcef91f7692a84f26904e0506250ae18ff92bc5b079f"
+    },
+    {
+      "name": "sample-00014.npz",
+      "sha256": "fcfa13076f7b127b3d9fe3716f4509c836747837d204846279c4cd2f2e70fee3"
+    },
+    {
+      "name": "sample-00015.npz",
+      "sha256": "14c9fbe5c56a6357804ba8fd65b2db79136d1010647c2c2582c6144abd98a69b"
+    },
+    {
+      "name": "sample-00016.npz",
+      "sha256": "a8e23fba42c431de673bceb1af2395ad30f4a24304500aa0946da443f9f24b78"
+    },
+    {
+      "name": "sample-00017.npz",
+      "sha256": "2a27510d4fa9e74fe89b079b0494f3be37e1dbdbc726b0804b752f01bbd9ca6a"
+    },
+    {
+      "name": "sample-00018.npz",
+      "sha256": "4d4723aae725fe02842e41c146e7dd33f3e7bc7d813fb8a125bac5a9429dcb16"
+    },
+    {
+      "name": "sample-00019.npz",
+      "sha256": "8e9d2e4ea812f839b766ae7c716a158188ba91cfa3fd3e198cad0fcfb0fc57d1"
+    },
+    {
+      "name": "sample-00020.npz",
+      "sha256": "9b2605adec63327e45de7df1621a28ccc78dae79051ed98dd20e5d4fb87f972e"
+    },
+    {
+      "name": "sample-00021.npz",
+      "sha256": "aa8168a7a6a0011d1a1c4302c4bf14d46dc116a5477954f23014543312a0e06e"
+    },
+    {
+      "name": "sample-00022.npz",
+      "sha256": "dab78ce916b4ca52fcfafd376bf1421b7cccbcae4b30dfb3dd689d13b4d25816"
+    },
+    {
+      "name": "sample-00023.npz",
+      "sha256": "3eba2ba3c7ed0dac1ef29e3284721ec9b0c3dfa2744bab0de7cfd11ae97b0662"
+    },
+    {
+      "name": "sample-00024.npz",
+      "sha256": "ae850eeb4825b4c9403fc58b3e6c2a05fdae23dea1f0e3bf147403728ff5a21e"
+    },
+    {
+      "name": "sample-00025.npz",
+      "sha256": "d0206814791627266033604bc1f12dbcb6bfe6262b100f924feafde2d1eff3b3"
+    },
+    {
+      "name": "sample-00026.npz",
+      "sha256": "3e25525431d8e8fecfb867aa9a5dbb6acd91601f55427234324350c93fc8c80f"
+    },
+    {
+      "name": "sample-00027.npz",
+      "sha256": "5ef099a9d946905a5b85745a1a74b3f9218cd810a68f2a73442100d0bde04833"
+    },
+    {
+      "name": "sample-00028.npz",
+      "sha256": "7229b8d9a19c5a0fac380384c714aa5ea5e808474e64d336aaa4d256cb72a23e"
+    },
+    {
+      "name": "sample-00029.npz",
+      "sha256": "5adf6109441c94c802f546210e128712bd2811633bea4a1be91dd08c6f038248"
+    },
+    {
+      "name": "sample-00030.npz",
+      "sha256": "c8ce0f3f7a450b41342825d493a43ff839f9989c140be7273c287852b7df633c"
+    },
+    {
+      "name": "sample-00031.npz",
+      "sha256": "351a2ac72f5a9ffcdd7b32fca22d9540743d6f251cba47c3c02411be95716b12"
+    },
+    {
+      "name": "sample-00032.npz",
+      "sha256": "d5885023b4960a98be4e9d4fadb3bec693ece48cd22f3770e47d67a179dbeadd"
+    },
+    {
+      "name": "sample-00033.npz",
+      "sha256": "721a7bbf8e8f6480661acaa2df89946294769dd1e0fc6d0fad4990338407ee1f"
+    },
+    {
+      "name": "sample-00034.npz",
+      "sha256": "a26f2839f75bd193c9584a132f80a6da114a5b5ed64c6f9884d81874b47a3410"
+    },
+    {
+      "name": "sample-00035.npz",
+      "sha256": "2e6fc84925d1ed1fdb8dc6440d80baaf96c0c41f58e5090512c4f99c8c4383e6"
+    },
+    {
+      "name": "sample-00036.npz",
+      "sha256": "1fc544a4edc52a73087247f3b7c7e7eb2d7c50d9f2b590ec99d10f52b6aef14d"
+    },
+    {
+      "name": "sample-00037.npz",
+      "sha256": "05bcf7af29031f004690aaa13ee6d3604b5e3e7e7e6b6dda091af351ba3730a3"
+    },
+    {
+      "name": "sample-00038.npz",
+      "sha256": "049ebf02e7c2cf241c5f20940501f139a101eb8198b2016870050e0a9ed58ba4"
+    },
+    {
+      "name": "sample-00039.npz",
+      "sha256": "58347302c917bd232bf29d9659b4bce24e73db1430768d4ac62f63094a992a7b"
+    },
+    {
+      "name": "sample-00040.npz",
+      "sha256": "bf43f58d06eeaefc2b40bf3e01b2b2e2335371234134785ce7877faa9390058b"
+    },
+    {
+      "name": "sample-00041.npz",
+      "sha256": "cd75e82c8847defa797eff219384048b170763978f3cbdc26b20f4cd462f57af"
+    },
+    {
+      "name": "sample-00042.npz",
+      "sha256": "bb3902aee835be9f06f7bc7e61344839de801f6675363980cd859ab6fb079385"
+    },
+    {
+      "name": "sample-00043.npz",
+      "sha256": "74870af4b9568cc892452f53adffe1839274d96287e186823c206777c3d5a96f"
+    },
+    {
+      "name": "sample-00044.npz",
+      "sha256": "d4412b268d617022b8a19f970fe88663b4c71ed2d49a1532833b08ed1ed1a919"
+    },
+    {
+      "name": "sample-00045.npz",
+      "sha256": "005de8d556cbdc2e3efaa7465eb0389699a3ee018788c5cc248f6dcbea3c33ff"
+    },
+    {
+      "name": "sample-00046.npz",
+      "sha256": "690aedf460dd1e891d2fc18b9d6be4e515baa9008f63c812ca2876c1d2ed33b9"
+    },
+    {
+      "name": "sample-00047.npz",
+      "sha256": "dcba9dd7472dd1ddaf29292d7da2448866c9e432d8ddb171eafd4022a2217e77"
+    },
+    {
+      "name": "sample-00048.npz",
+      "sha256": "52df1de54fd425f48a43911931260996c9adb8c57deb352dd6a517e9f1ee6142"
+    },
+    {
+      "name": "sample-00049.npz",
+      "sha256": "b1c819e49275acac2fe5fb0ff3e86dfb74e3867523f4f124254b31abe10b623d"
+    },
+    {
+      "name": "sample-00050.npz",
+      "sha256": "23a674b48b072538b730225ab1a718ae2777b558cda9fd0562657e80cc113fef"
+    },
+    {
+      "name": "sample-00051.npz",
+      "sha256": "aae7ef393a6ae5bcefc9a97cd7c54f40d32af7ba4b550168af46f08a0e0aa65a"
+    },
+    {
+      "name": "sample-00052.npz",
+      "sha256": "dc0e74bdd40227d7f09510a3d9cf36173c355537da7d82bc4789b10035d5cedc"
+    },
+    {
+      "name": "sample-00053.npz",
+      "sha256": "64586058c88a20989ce7a13690b0442e04730163fca93cdf48661287f5d7ea95"
+    },
+    {
+      "name": "sample-00054.npz",
+      "sha256": "d295a6b52f65fb769d2d105ac735062ae98940c6d3881f1fce6eb88c19457fcf"
+    },
+    {
+      "name": "sample-00055.npz",
+      "sha256": "98dc30dba07902fa138f9c2e11df6755417998243157b1ce7050b28ab2638399"
+    },
+    {
+      "name": "sample-00056.npz",
+      "sha256": "cc082e58e24b3da4b5dc7108c7204addf6695f52d31a9570df1d28aceb8dcaa2"
+    },
+    {
+      "name": "sample-00057.npz",
+      "sha256": "4e90da769db9d268ae6cfedcacb48c20af4bcc62401479a17fd3aa76be54f15c"
+    },
+    {
+      "name": "sample-00058.npz",
+      "sha256": "9677242aa05c45422d2a27bb9a061659769243d9dd90583c51c6aeefea6fcd59"
+    },
+    {
+      "name": "sample-00059.npz",
+      "sha256": "f092594b9c0d215331b9e0c37d0d45dd939001e8cd0ceccddc7efacc670c0259"
+    },
+    {
+      "name": "sample-00060.npz",
+      "sha256": "e15b1c6bdb242cc1a0f8780b55ba9c632faaef7b6748c635a15acd8523af2f28"
+    },
+    {
+      "name": "sample-00061.npz",
+      "sha256": "bf014efe69ec6b900eac26c9a8572f9e09086fa68454497abc776d7ac31f0c0d"
+    },
+    {
+      "name": "sample-00062.npz",
+      "sha256": "2ef9ae2e9b9998252e12744ce99be171a3031bb96bebe425c64776c3f26aabef"
+    },
+    {
+      "name": "sample-00063.npz",
+      "sha256": "4eccc6786f2980afe60cf6bb5e49ced19f8201797de7778368c3191875de3abb"
+    },
+    {
+      "name": "sample-00064.npz",
+      "sha256": "ea7e33bb64e18227e2edb4faf74f644bc3098ca55aadb8d98c368b606dbe5fe1"
+    },
+    {
+      "name": "sample-00065.npz",
+      "sha256": "c8348cff8aa4742e4f9efb00fbdb497bd9a802da17dc816c059d05abe1d72fbc"
+    },
+    {
+      "name": "sample-00066.npz",
+      "sha256": "89600bf2190c470b6db6517c892b919663b3bd4d8792c3e3a524a3e756269db9"
+    },
+    {
+      "name": "sample-00067.npz",
+      "sha256": "c6c653c09a3a9b55f3e08e6e025ba6eb68f05b38dcf2ac417ce5f176f62e87ed"
+    },
+    {
+      "name": "sample-00068.npz",
+      "sha256": "d675a967757f36b7519b2bdf213b5f643193b52e4b1c25013ebd6397b9518466"
+    },
+    {
+      "name": "sample-00069.npz",
+      "sha256": "ce15f0e94206343592c857eb75e2986485a6a40aa1afdf15f453ef6ac034b04d"
+    },
+    {
+      "name": "sample-00070.npz",
+      "sha256": "e944c9caac36995dc1ff0cc6d5244ef2844c74a49143feeb2c197c58b99095df"
+    },
+    {
+      "name": "sample-00071.npz",
+      "sha256": "10f36073a48318beec0eb6ec1bcd8f503efb8d9505d5a2a7d20af686e5f61148"
+    },
+    {
+      "name": "sample-00072.npz",
+      "sha256": "6d42ea6c4c6e7f3111aec4597820db22afee5f6c4051ee6c919bc04f07b0a7c4"
+    },
+    {
+      "name": "sample-00073.npz",
+      "sha256": "b72a0ab29c8871e0649f766df31dab66ff87fbe815e9e9c25f016b4b24efc8a4"
+    },
+    {
+      "name": "sample-00074.npz",
+      "sha256": "e0863cce24f2dcc8ccbc0861549b4d9aba41e6af1fcabaa7f13613e77222a3c1"
+    },
+    {
+      "name": "sample-00075.npz",
+      "sha256": "f745929d82082fa110284c1f6b68464ea1dbf2a000ec33401fb888c7f1f02cd1"
+    },
+    {
+      "name": "sample-00076.npz",
+      "sha256": "3714108d6a1ca2336dceb02170bf91eaf4b431e671234e4eb70b4bdaba5faa5a"
+    },
+    {
+      "name": "sample-00077.npz",
+      "sha256": "555518c483fc0b1d9216646428ddc37fbd39a52df48abad1d3ed11d43fc9889c"
+    },
+    {
+      "name": "sample-00078.npz",
+      "sha256": "602e3830c2b39914bec5e7acc3d7893fe4b7ce8eba5dc029ed22ba4ea7557179"
+    },
+    {
+      "name": "sample-00079.npz",
+      "sha256": "86cfeac29c71853c27e27295fd313cf7e57c9f8982f575b27cff929bfed3c010"
+    }
+  ],
+  "teacher": "frozen BF16 same-observation normalized action"
+}
