@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "classification": "P2.5 observational mechanism diagnosis; development resets",
+  "archive_sha256": "04ce720badf00025034afb50ca37a9840dab85b945243b804caa067622867396",
+  "sources": [
+    {
+      "file": "backups/experiments/p2-shared-peft/20260928-107-p25-onpolicy-teacher500/teacher-0-9/same-observation-comparisons.jsonl",
+      "queries": 1510
+    },
+    {
+      "file": "backups/experiments/p2-shared-peft/20260928-107-p25-onpolicy-teacher500/teacher-10-19/same-observation-comparisons.jsonl",
+      "queries": 1509
+    },
+    {
+      "file": "backups/experiments/p2-shared-peft/20260928-107-p25-onpolicy-teacher500/teacher-20-29/same-observation-comparisons.jsonl",
+      "queries": 1594
+    },
+    {
+      "file": "backups/experiments/p2-shared-peft/20260928-107-p25-onpolicy-teacher500/teacher-30-39/same-observation-comparisons.jsonl",
+      "queries": 1515
+    },
+    {
+      "file": "backups/experiments/p2-shared-peft/20260928-107-p25-onpolicy-teacher500/teacher-40-49/same-observation-comparisons.jsonl",
+      "queries": 1514
+    }
+  ],
+  "queries": 7642,
+  "episodes": 500,
+  "successes": 408,
+  "query_mean_chunk_mse": 0.03259989052719574,
+  "query_median_chunk_mse": 0.0177310113683846,
+  "query_mean_gripper_disagreement": 0.09169719968594608,
+  "episode_mean_chunk_mse": 0.028211173877079013,
+  "success_episode_mean_mse": 0.02347513615004269,
+  "failure_episode_mean_mse": 0.04921447162306612,
+  "failure_minus_success_episode_mse_95ci": [
+    0.022197258633104257,
+    0.02940128546045215
+  ],
+  "worst_decile_episode_mse_threshold": 0.05264294485507642,
+  "late_minus_early_episode_mse_mean": 0.006056761886486774,
+  "late_worse_episodes": 352,
+  "first_gripper_disagreement_episode_fraction": 0.968,
+  "per_chunk_step_mean_rmse": [
+    0.1340235825398002,
+    0.12993138117819283,
+    0.12897930418467493,
+    0.12851298747994375,
+    0.12963599815950674,
+    0.135145154688711,
+    0.14346165434515948,
+    0.16013000278238945
+  ],
+  "per_action_dimension_mean_rmse": [
+    0.15926294731911395,
+    0.1302783949484748,
+    0.19380692409458222,
+    0.015717575999854065,
+    0.02906126343103765,
+    0.0197171580871821,
+    0.18422718671151345
+  ],
+  "student_gripper_margin_abs_lt_0_1": 0.0014066998168018843,
+  "teacher_gripper_margin_abs_lt_0_1": 0.002159120649044753,
+  "per_task": [
+    {
+      "task": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "episodes": 50,
+      "successes": 50,
+      "episode_mean_mse": 0.02134342472919364,
+      "episode_gripper_disagreement": 0.03658333333333333
+    },
+    {
+      "task": "pick up the black bowl from table center and place it on the plate",
+      "episodes": 50,
+      "successes": 33,
+      "episode_mean_mse": 0.03639361204746914,
+      "episode_gripper_disagreement": 0.10258928571428574
+    },
+    {
+      "task": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "episodes": 50,
+      "successes": 48,
+      "episode_mean_mse": 0.03169222399532731,
+      "episode_gripper_disagreement": 0.04046428571428574
+    },
+    {
+      "task": "pick up the black bowl next to the cookie box and place it on the plate",
+      "episodes": 50,
+      "successes": 48,
+      "episode_mean_mse": 0.015642187426257767,
+      "episode_gripper_disagreement": 0.032485347985347975
+    },
+    {
+      "task": "pick up the black bowl next to the plate and place it on the plate",
+      "episodes": 50,
+      "successes": 49,
+      "episode_mean_mse": 0.016361612355528327,
+      "episode_gripper_disagreement": 0.028545454545454537
+    },
+    {
+      "task": "pick up the black bowl next to the ramekin and place it on the plate",
+      "episodes": 50,
+      "successes": 11,
+      "episode_mean_mse": 0.03505884842822117,
+      "episode_gripper_disagreement": 0.0808035714285714
+    },
+    {
+      "task": "pick up the black bowl on the cookie box and place it on the plate",
+      "episodes": 50,
+      "successes": 49,
+      "episode_mean_mse": 0.011079910530014092,
+      "episode_gripper_disagreement": 0.023574675324675318
+    },
+    {
+      "task": "pick up the black bowl on the ramekin and place it on the plate",
+      "episodes": 50,
+      "successes": 34,
+      "episode_mean_mse": 0.04071688299137983,
+      "episode_gripper_disagreement": 0.12141233766233768
+    },
+    {
+      "task": "pick up the black bowl on the stove and place it on the plate",
+      "episodes": 50,
+      "successes": 40,
+      "episode_mean_mse": 0.02687284723835516,
+      "episode_gripper_disagreement": 0.09766850490196076
+    },
+    {
+      "task": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "episodes": 50,
+      "successes": 46,
+      "episode_mean_mse": 0.04695018902904361,
+      "episode_gripper_disagreement": 0.11529166666666667
+    }
+  ],
+  "limitations": [
+    "No independent failure-onset annotation; gripper disagreement is not failure causation.",
+    "No preregistered large-divergence threshold; first large divergence remains null.",
+    "Student-visited query frequency differs from trajectory-level offline sampling."
+  ]
+}

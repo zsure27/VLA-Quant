@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0", "plan_id": "p25-query3-no-lora-20260928",
+  "control_root": "/root/autodl-tmp/qvla-repro/control", "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id": "control-00-09", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_query3_no_lora_control.sh", "0", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id": "control-10-19", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_query3_no_lora_control.sh", "10", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id": "control-20-29", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_query3_no_lora_control.sh", "20", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id": "control-30-39", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_query3_no_lora_control.sh", "30", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id": "control-40-49", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_query3_no_lora_control.sh", "40", "10"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}

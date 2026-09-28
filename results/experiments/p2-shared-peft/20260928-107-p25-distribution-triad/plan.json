@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p25-peft-train-distribution-20260928",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id": "peft-train-other-frame80", "command": ["bash", "/root/autodl-tmp/VLA-Quant-p2c-20260925/scripts/run_p25_peft_train_distribution.sh"], "cwd": "/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}

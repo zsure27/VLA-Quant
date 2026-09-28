@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "classification": "P2.5 observational distribution comparison",
+  "peft_train_other_frame": {
+    "frames": 80,
+    "trajectories": 80,
+    "lora_raw_mse_mean": 0.02124712635850301,
+    "lora_raw_mse_median": 0.009244568645954132,
+    "lora_raw_mse_worst_decile_threshold": 0.060606010258197784,
+    "per_trajectory_median_raw_mse": 0.009244568645954132,
+    "baseline_raw_mse_mean": 0.0204899616423063,
+    "lora_minus_baseline_raw_mse": 0.0007571647161967121,
+    "frames_lora_improved_fraction": 0.7625,
+    "lora_gripper_disagreement_mean": 0.0375,
+    "baseline_gripper_disagreement_mean": 0.04375
+  },
+  "router_dev": {
+    "frames": 295,
+    "trajectories": 59,
+    "lora_raw_mse_mean": 0.022063103322949956,
+    "lora_raw_mse_median": 0.008206107653677464,
+    "lora_raw_mse_worst_decile_threshold": 0.06088807061314583,
+    "per_trajectory_median_raw_mse": 0.020178859960287808,
+    "baseline_raw_mse_mean": 0.022580481094892246,
+    "lora_minus_baseline_raw_mse": -0.0005173777719422923,
+    "frames_lora_improved_fraction": 0.576271186440678,
+    "lora_gripper_disagreement_mean": 0.06906779661016949,
+    "baseline_gripper_disagreement_mean": 0.06694915254237288
+  },
+  "student_visited": {
+    "policy_queries": 7642,
+    "episodes": 500,
+    "successes": 408,
+    "lora_raw_mse_query_mean": 0.03259989052719574,
+    "lora_raw_mse_query_median": 0.0177310113683846,
+    "lora_gripper_disagreement_query_mean": 0.09169719968594608,
+    "success_episode_mean_mse": 0.02347513615004269,
+    "failure_episode_mean_mse": 0.04921447162306612
+  },
+  "limitations": [
+    "Three distributions have different frame/trajectory sampling and query weighting; raw means are descriptive, not a causal covariate-shift proof.",
+    "Student-visited data are induced by the LoRA policy; no full 500-episode no-LoRA same-state query control is included.",
+    "The peft_train comparison uses other frames from training-role trajectories, not the exact 80 optimizer frames.",
+    "Success and same-state teacher error can share task difficulty or episode length as confounders."
+  ]
+}
