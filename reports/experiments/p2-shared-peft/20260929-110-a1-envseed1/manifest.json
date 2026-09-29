@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "session": "20260929-110-a1-envseed1",
+  "classification": "A1_INVALID_CONDITION",
+  "episodes_per_configuration": 450,
+  "configurations": ["BF16", "C0", "C1", "C2", "C3"],
+  "raw_results": "results/experiments/p2-shared-peft/20260929-110-a1-envseed1/",
+  "server_backup": "/root/autodl-tmp/qvla-repro/backups/a1-110-envseed1-complete-20260929-221049-852d350/",
+  "local_backup": "backups/experiments/p2-shared-peft/20260929-110-a1-envseed1/a1-110-envseed1-complete-20260929-221049-852d350/",
+  "backup_sha256_entries_checked": 10,
+  "backup_sha256_mismatches": 0,
+  "key_result_sha256": {
+    "aggregate-450.json": "b0e7f12e741066c10345bf222c1c27d0937d269e5841433dd6cb5f8fd8a9e84f",
+    "cross-run-outcome-audit.json": "09abdf96691e35ddd18b08bafd29ddaea05581c474ee5b91664c18160322b2a5",
+    "evaluator-order-probe.json": "dd17251b2533693efdb8d457915f97bfe482c80f53ae4a4735fabaffb53c0b64",
+    "paired-40-49-summary.json": "c4d0b7b9c9f22e9df5708c878c118c058809ba9acc4b7d6c846bf758460c07ef",
+    "paired-40-49-episodes.jsonl": "6bbf6bd1cd0cec94e5ade182aaa19452b38671299218651a5fe019426333971c"
+  },
+  "large_files_in_git": false,
+  "closure_receipt": null,
+  "platform_off_independently_verified": false
+}

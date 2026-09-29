@@ -94,9 +94,11 @@ def main() -> None:
         "C2_minus_C0_headroom": headroom,
         "W4_recovery_fraction_descriptive_only": (successes["C3"] - successes["C0"]) / headroom
         if headroom > 0 else None,
-        "A1_support_gate": bool(complete and successes["C3"] > successes["C0"]
+        "within_condition_numerical_threshold_met": bool(complete and successes["C3"] > successes["C0"]
                                 and interval[0] > 0
                                 and sum(delta > 0 for delta in task_delta.values()) >= 2),
+        "independent_evaluation_condition_verified": None,
+        "A1_support_gate": None,
         "holdout_touched": False,
     }
     print(json.dumps(output, indent=2, sort_keys=True))

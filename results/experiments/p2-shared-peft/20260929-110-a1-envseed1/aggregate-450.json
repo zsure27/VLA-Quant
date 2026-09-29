@@ -1,0 +1,120 @@
+{
+  "A1_support_gate": null,
+  "C2_minus_C0_headroom": 20,
+  "C3_minus_C0": 21,
+  "W4_recovery_fraction_descriptive_only": 1.05,
+  "by_task": {
+    "0": {
+      "BF16": 45,
+      "C0": 45,
+      "C1": 45,
+      "C2": 45,
+      "C3": 45
+    },
+    "1": {
+      "BF16": 45,
+      "C0": 1,
+      "C1": 10,
+      "C2": 8,
+      "C3": 15
+    },
+    "2": {
+      "BF16": 44,
+      "C0": 42,
+      "C1": 29,
+      "C2": 45,
+      "C3": 45
+    },
+    "3": {
+      "BF16": 45,
+      "C0": 45,
+      "C1": 45,
+      "C2": 42,
+      "C3": 43
+    },
+    "4": {
+      "BF16": 43,
+      "C0": 43,
+      "C1": 44,
+      "C2": 44,
+      "C3": 44
+    },
+    "5": {
+      "BF16": 42,
+      "C0": 22,
+      "C1": 29,
+      "C2": 30,
+      "C3": 31
+    },
+    "6": {
+      "BF16": 45,
+      "C0": 44,
+      "C1": 43,
+      "C2": 45,
+      "C3": 41
+    },
+    "7": {
+      "BF16": 40,
+      "C0": 40,
+      "C1": 35,
+      "C2": 42,
+      "C3": 36
+    },
+    "8": {
+      "BF16": 45,
+      "C0": 42,
+      "C1": 45,
+      "C2": 44,
+      "C3": 45
+    },
+    "9": {
+      "BF16": 44,
+      "C0": 44,
+      "C1": 41,
+      "C2": 43,
+      "C3": 44
+    }
+  },
+  "classification": "same official initial states, different environment random stream; not blind holdout",
+  "episodes_per_case": 450,
+  "exact_mcnemar_p": 0.003801654409748778,
+  "full_preregistered_coverage": true,
+  "holdout_touched": false,
+  "independent_evaluation_condition_verified": null,
+  "new_failure": 14,
+  "paired_task_stratified_bootstrap_95ci_fraction": [
+    0.017777777777777778,
+    0.07555555555555556
+  ],
+  "rescue": 35,
+  "shards": [
+    "05-09",
+    "10-19",
+    "20-29",
+    "30-34",
+    "35-39",
+    "40-49"
+  ],
+  "successes": {
+    "BF16": 438,
+    "C0": 368,
+    "C1": 366,
+    "C2": 388,
+    "C3": 389
+  },
+  "task_C3_minus_C0": {
+    "0": 0,
+    "1": 14,
+    "2": 3,
+    "3": -2,
+    "4": 1,
+    "5": 9,
+    "6": -3,
+    "7": -4,
+    "8": 3,
+    "9": 0
+  },
+  "tasks_net_harmed": 3,
+  "tasks_net_improved": 5,
+  "within_condition_numerical_threshold_met": true
+}

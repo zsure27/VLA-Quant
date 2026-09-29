@@ -1,0 +1,110 @@
+{
+  "C2_minus_C0_headroom": 3,
+  "C3_minus_C0": 4,
+  "W4_recovery_fraction": 1.3333333333333333,
+  "by_task": {
+    "0": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 10,
+      "C2": 10,
+      "C3": 10
+    },
+    "1": {
+      "BF16": 10,
+      "C0": 1,
+      "C1": 1,
+      "C2": 1,
+      "C3": 1
+    },
+    "2": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 9,
+      "C2": 10,
+      "C3": 10
+    },
+    "3": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 10,
+      "C2": 9,
+      "C3": 9
+    },
+    "4": {
+      "BF16": 10,
+      "C0": 8,
+      "C1": 10,
+      "C2": 9,
+      "C3": 9
+    },
+    "5": {
+      "BF16": 10,
+      "C0": 4,
+      "C1": 5,
+      "C2": 6,
+      "C3": 7
+    },
+    "6": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 10,
+      "C2": 10,
+      "C3": 10
+    },
+    "7": {
+      "BF16": 9,
+      "C0": 8,
+      "C1": 8,
+      "C2": 8,
+      "C3": 7
+    },
+    "8": {
+      "BF16": 10,
+      "C0": 8,
+      "C1": 10,
+      "C2": 10,
+      "C3": 10
+    },
+    "9": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 9,
+      "C2": 9,
+      "C3": 10
+    }
+  },
+  "classification": "A1 same-official-initial-state different-env-randomness pilot; not new initial states or blind holdout",
+  "configs_complete": [
+    "C0",
+    "C3",
+    "C2",
+    "C1",
+    "BF16"
+  ],
+  "count_per_task": 10,
+  "episodes_per_case": 100,
+  "evaluator_log_sha256": {
+    "BF16": "ea272cbe65de015f73dd0465f80ee77eb278707465444d876c550fd1ff1e7492",
+    "C0": "8f148baa951595d822a2de6e9c92f5b8de80301e369378352ef5de27f248e15d",
+    "C1": "9ef4f4db743aaa8e576eb37a9b5433386fe17e2c3f06297b20c0a395377ce765",
+    "C2": "abdb5de4434afbb13b64d10627071d646c6093075a8b424038aa19ca8ffabb87",
+    "C3": "c0908cb1dfbcc83824f2c4f6c050afd4876390e186e5598596e7a14b10b360e3"
+  },
+  "exact_mcnemar_p": 0.34375,
+  "holdout_touched": false,
+  "new_failure": 3,
+  "offset": 40,
+  "paired_stratified_bootstrap_95ci_fraction": [
+    -0.02,
+    0.1
+  ],
+  "rescue": 7,
+  "successes": {
+    "BF16": 99,
+    "C0": 79,
+    "C1": 82,
+    "C2": 82,
+    "C3": 83
+  }
+}
