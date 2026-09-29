@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-09-29T04:34:06.572699+00:00",
+  "hostname": "autodl-container-5e9a44960d-2363ecb7",
+  "ssh_port": 21271,
+  "backup": "/root/autodl-tmp/qvla-repro/backups/a1preflight059-20260929-122953-852d350",
+  "local_backup": "backups/experiments/p2-shared-peft/20260929-059-a1-preflight/a1preflight059-20260929-122953-852d350",
+  "server_backup_sha_verified": true,
+  "local_backup_sha_verified": true,
+  "github_remote_sha_before_shutdown": "c194b545df005a90fddfb01053957ca42add60d8",
+  "native_request_receipt": {
+    "commit": "852d350",
+    "supervisor_pid": 837,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "execute": true,
+    "control_panel_off_verified": false
+  },
+  "ssh_result": "closed_by_remote_host_after_receipt",
+  "windows_local_shutdown": false
+}
