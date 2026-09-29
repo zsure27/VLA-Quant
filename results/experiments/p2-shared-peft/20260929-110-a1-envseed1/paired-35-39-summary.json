@@ -1,0 +1,110 @@
+{
+  "C2_minus_C0_headroom": 2,
+  "C3_minus_C0": -1,
+  "W4_recovery_fraction": -0.5,
+  "by_task": {
+    "0": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 5
+    },
+    "1": {
+      "BF16": 5,
+      "C0": 0,
+      "C1": 1,
+      "C2": 1,
+      "C3": 1
+    },
+    "2": {
+      "BF16": 5,
+      "C0": 4,
+      "C1": 3,
+      "C2": 5,
+      "C3": 5
+    },
+    "3": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 4
+    },
+    "4": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 5
+    },
+    "5": {
+      "BF16": 5,
+      "C0": 3,
+      "C1": 3,
+      "C2": 3,
+      "C3": 3
+    },
+    "6": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 3
+    },
+    "7": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 5
+    },
+    "8": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 5
+    },
+    "9": {
+      "BF16": 5,
+      "C0": 5,
+      "C1": 5,
+      "C2": 5,
+      "C3": 5
+    }
+  },
+  "classification": "A1 same-official-initial-state different-env-randomness pilot; not new initial states or blind holdout",
+  "configs_complete": [
+    "C0",
+    "C3",
+    "C2",
+    "C1",
+    "BF16"
+  ],
+  "count_per_task": 5,
+  "episodes_per_case": 50,
+  "evaluator_log_sha256": {
+    "BF16": "00cd3ead9f207d12b5b32f54a56d5066ddf5d558e935509d34d9fc7ef6111b45",
+    "C0": "175e166e6a8cc4724011837be977857f26c22ff7c21ca7bf148b09ef70313174",
+    "C1": "18d3a8ea359ac4742dff8f354c814cdeb2afe9f8058f9b85dbdd637b4d80fb87",
+    "C2": "db641a269a8f4f443777bbeaac6bae6f000635cd4877f857cc0c0af6bbc303a1",
+    "C3": "cd3b3248b15ae677e57a0a4b9bcc8c4ae2ad0e1b31109eef271840b486762986"
+  },
+  "exact_mcnemar_p": 1.0,
+  "holdout_touched": false,
+  "new_failure": 4,
+  "offset": 35,
+  "paired_stratified_bootstrap_95ci_fraction": [
+    -0.1,
+    0.08
+  ],
+  "rescue": 3,
+  "successes": {
+    "BF16": 50,
+    "C0": 42,
+    "C1": 42,
+    "C2": 44,
+    "C3": 41
+  }
+}
