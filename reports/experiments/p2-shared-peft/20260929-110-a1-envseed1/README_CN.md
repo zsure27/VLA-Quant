@@ -32,4 +32,6 @@
 
 ## 产物与备份
 
-小型配对结果、完整 450 汇总、交叉运行审计和真实顺序预检查在同名 `results/experiments/p2-shared-peft/20260929-110-a1-envseed1/`。服务器原始视频、日志与动作 trace 位于 `/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-{5-9,10-19,20-29,30-34,35-39,40-49}/`，大文件不入普通 Git。服务器持久盘完整归档为 `/root/autodl-tmp/qvla-repro/backups/a1-110-envseed1-complete-20260929-221049-852d350/`；本机同名副本位于被 Git 忽略的 `backups/experiments/p2-shared-peft/20260929-110-a1-envseed1/`，归档 10 项 SHA256 全部一致。真实顺序预检查 JSON 还保留服务器 `/root/autodl-tmp/qvla-repro/artifacts/a1-110-envseed1-preflight-20260929/evaluator-order-probe.json` 并提交 Git。本报告的 GitHub 提交和 110 原生关机回执在收尾后补记；未核验平台控制台 OFF/停计费前不宣称平台已停止。
+小型配对结果、完整 450 汇总、交叉运行审计和真实顺序预检查在同名 `results/experiments/p2-shared-peft/20260929-110-a1-envseed1/`。服务器原始视频、日志与动作 trace 位于 `/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-{5-9,10-19,20-29,30-34,35-39,40-49}/`，大文件不入普通 Git。服务器持久盘完整归档为 `/root/autodl-tmp/qvla-repro/backups/a1-110-envseed1-complete-20260929-221049-852d350/`；本机同名副本位于被 Git 忽略的 `backups/experiments/p2-shared-peft/20260929-110-a1-envseed1/`，归档 10 项 SHA256 全部一致。真实顺序预检查 JSON 还保留服务器 `/root/autodl-tmp/qvla-repro/artifacts/a1-110-envseed1-preflight-20260929/evaluator-order-probe.json` 并提交 Git。
+
+GitHub `zsure27/VLA-Quant` 在关机前已核验结果与分析提交 `8d410f308a6a726a552417a1408d8cb3b682749f`；关机回执提交 `764611b5d2c4fede013c4371bf9b0da19f719bd8` 也已核验远端 SHA。`closure.json` 记录 110 的原生 supervisor `837` 关机请求 `execute=true`，SSH 随后断开（退出码 −1），快速 fallback 没有准备错误；本轮低频心跳已设为 PAUSED。平台控制台 OFF 和停止计费未独立核验，不将原生请求回执等同于平台状态。本轮不关闭 Windows 本地电脑。
