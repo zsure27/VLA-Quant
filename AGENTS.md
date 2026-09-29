@@ -1,5 +1,9 @@
 # VLA-Quant experiment admission
 
+## Next boot A1/A2 audit (2026-09-30)
+
+Read [the next-boot audit and runbook](docs/NEXT_BOOT_A1_A2_AUDIT_AND_RUNBOOK_20260930_CN.md) before starting a new instance plan. The previous env_seed=1 condition and old launcher are invalid by default. A1 requires a genuinely observable, reproducible evaluation condition, actual model-input hashes, source/data-overlap audit, task validity, and a protocol-only first-shard gate. Perturbing reused official initial states is development stress evidence, not independent reset replication; cluster such analyses by base reset. A2 fixes global seed and Response-SVD and changes only the separately named distillation sample-order seed after a valid independent A1. Do not use post-divergence H17 as a same-state C0/C3 label. If no admissible condition exists on a paid instance, archive and shut it down rather than idle.
+
 ## Future A1/A2 minimal pairing (2026-09-29)
 
 For future A1/A2, run only strictly paired C0 versus C3 on a demonstrably new observable evaluation condition. C1 is excluded; C2/14L and BF16 are separate reference questions, not required replication controls. Record episode-level rescue (C0 fail, C3 success), break (C0 success, C3 fail), their net, task and preregistered within-task context strata, uncertainty, and costs. A2 may change only the C3 training random seed after a valid A1. The old five-configuration 110 run remains immutable historical evidence and `A1_INVALID_CONDITION`. Rescue and break alone do not prove predictable chunk-level contextual routing. Follow [the new protocol](docs/A1_A2_MINIMAL_REPLICATION_AND_CONFLICT_PROTOCOL_20260929_CN.md); P4/P5 remain locked.

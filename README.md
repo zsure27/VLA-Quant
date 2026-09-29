@@ -10,6 +10,8 @@
 
 后续 A1/A2 复现按[最小 C0/C3 配对与 rescue/break 协议](docs/A1_A2_MINIMAL_REPLICATION_AND_CONFLICT_PROTOCOL_20260929_CN.md)执行；C1 不再重跑，路由判断还需同任务可观测上下文证据。
 
+[2026-09-30 自查与下次开机执行卡](docs/NEXT_BOOT_A1_A2_AUDIT_AND_RUNBOOK_20260930_CN.md)补齐真实模型输入、训练随机源和统计门禁；没有合格的新评测条件时先做低成本审计，不派发长闭环。
+
 ## 实验记录入口
 
 最新综合报告：[2026-09-29 基线进展与后续规划](reports/summaries/20260929-baseline-progress/README_CN.md)。它区分静态 AWQ 基线、旧 PEFT 负结果、C3 的单条件收益和 A1 独立性失败。

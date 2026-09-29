@@ -322,13 +322,18 @@ def end_to_end_action_distill(args, calibration, teacher_targets, cfg, model, ac
 
     initial_mse, initial_per_sample = evaluate_training_set()
     trace = []
-    generator = torch.Generator(device="cpu").manual_seed(args.seed)
+    order_seed = (args.awq_e2e_distill_order_seed if args.awq_e2e_distill_order_seed is not None
+                  else args.seed)
+    generator = torch.Generator(device="cpu").manual_seed(order_seed)
     order = torch.randperm(len(cached), generator=generator).tolist()
+    initial_order = order[:]
+    sample_sequence = []
     with torch.enable_grad():
         for step in range(args.awq_e2e_distill_steps):
             if step and step % len(order) == 0:
                 order = torch.randperm(len(cached), generator=generator).tolist()
             sample_name, inputs, state, target = cached[order[step % len(order)]]
+            sample_sequence.append(sample_name)
             optimizer.zero_grad(set_to_none=True)
             prediction = forward_normalized(inputs, state)
             loss = e2e_distill_loss(
@@ -360,6 +365,11 @@ def end_to_end_action_distill(args, calibration, teacher_targets, cfg, model, ac
         "position_weight": args.awq_e2e_distill_position_weight,
         "steps": args.awq_e2e_distill_steps,
         "learning_rate": args.awq_e2e_distill_learning_rate,
+        "sample_order_seed": order_seed,
+        "initial_sample_order": initial_order,
+        "sample_sequence_sha256": hashlib.sha256(
+            json.dumps(sample_sequence, separators=(",", ":")).encode("utf-8")
+        ).hexdigest(),
         "samples": [name for name, _, _, _ in cached],
         "trainable_parameters": sum(p.numel() for p in parameters),
         "trainable_parameter_names": [name for name, _ in named],
@@ -473,6 +483,8 @@ def main():
     p.add_argument("--awq-e2e-distill-position-weight", type=float, default=1.0)
     p.add_argument("--awq-e2e-distill-samples-dir", type=Path)
     p.add_argument("--awq-e2e-distill-samples-count", type=int, default=0)
+    p.add_argument("--awq-e2e-distill-order-seed", type=int,
+                   help="Seed only the end-to-end distillation sample order; default follows --seed")
     p.add_argument("--smoothing-pairs-fp32", action="store_true")
     p.add_argument("--smoothing-vision-fp32", action="store_true")
     p.add_argument("--smoothing-bypass", action="store_true")
@@ -567,6 +579,9 @@ def main():
         p.error("Separate end-to-end samples require directory and count together")
     if args.awq_e2e_distill_samples_dir and not args.awq_e2e_distill_steps:
         p.error("Separate end-to-end samples require training steps")
+    if args.awq_e2e_distill_order_seed is not None and (args.awq_e2e_distill_order_seed < 0 or
+                                                        not args.awq_e2e_distill_steps):
+        p.error("End-to-end sample-order seed requires training steps and must be nonnegative")
     if residual_layers and (args.awq_residual_rank not in (4,8,16) or args.mode != "awq" or
             args.weight_bits != 2 or args.activation_bits != 16 or
             args.weight_scope != ("all" if args.awq_vision_bits != 16 else "language") or

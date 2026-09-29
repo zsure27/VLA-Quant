@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
+[[ "${VLA_ALLOW_INVALID_A1_REPLAY:-}" == "I_ACKNOWLEDGE_INVALID_CONDITION" ]] || {
+  echo 'Historical env_seed=1 plan is A1_INVALID_CONDITION; use a versioned new-condition plan.' >&2
+  exit 64
+}
 
 CONFIG=${1:?configuration required}
 OFFSET=${2:-5}

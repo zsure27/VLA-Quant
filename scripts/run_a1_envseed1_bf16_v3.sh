@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
+[[ "${VLA_ALLOW_INVALID_A1_REPLAY:-}" == "I_ACKNOWLEDGE_INVALID_CONDITION" ]] || {
+  echo 'Historical env_seed=1 plan is A1_INVALID_CONDITION; use a versioned new-condition plan.' >&2
+  exit 64
+}
 OFFSET=${1:-5}; COUNT=${2:-5}
 [[ "$OFFSET" =~ ^[0-9]+$ && "$COUNT" =~ ^[0-9]+$ ]] || exit 2
 (( OFFSET >= 5 && COUNT > 0 && OFFSET + COUNT <= 50 )) || exit 2

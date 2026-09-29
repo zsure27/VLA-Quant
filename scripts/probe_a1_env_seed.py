@@ -1,4 +1,7 @@
-"""CPU-side A1 preflight: does changing only env_seed alter observable LIBERO states?
+"""Historical incomplete A1 probe; never use as an experiment admission gate.
+
+This omits the evaluator's seed_all(model_seed) call after env.seed and can
+produce a false PASS. Use only to reproduce the 2026-09-29 failure audit.
 
 This never loads a policy or runs an evaluation episode. It reuses the frozen
 LIBERO environment/reset path and applies the same fixed dummy actions for
@@ -82,7 +85,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--reset", type=int, default=5)
+    parser.add_argument("--allow-historical-invalid-probe", action="store_true")
     args = parser.parse_args()
+    if not args.allow_historical_invalid_probe:
+        parser.error("this probe omits seed_all(model_seed) and is invalid for admission; historical audit only")
     if args.reset < 5 or args.reset > 49:
         parser.error("A1 probe must remain on development reset 5..49")
 
