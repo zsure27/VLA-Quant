@@ -24,7 +24,7 @@
 
 **2026-09-29 更新：**学生状态重标的 C3 rank8 Recovery-LoRA 在 12L 混精底座、未参与该候选训练的开发初态5–49上得到 `389/450`，同条件 C0 为 `368/450`、静态14L为 `388/450`；任务1/5收益集中，任务3/6/7退步。随后110的 `env_seed=1` 重跑虽得到相同数字，但真实评测顺序下没有建立新的策略可见条件，判为 `A1_INVALID_CONDITION`，**不计独立复现**。详见[107的C3结果](reports/experiments/p2-shared-peft/20260929-107-p25-student-state80-distill/POST_RUN_ANALYSIS_CN.md)与[110的A1审计](reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/README_CN.md)。下表中的旧 data80 LoRA 结果为不同训练方案的历史负基线，不能覆盖 C3，也不能与新候选的450回合相加。
 
-下一阶段先提高 12L/C3 并检验与 BF16 的同条件差距，纯 W2 后续再迁移；[新规划](docs/C3_TO_BF16_RECOVERY_ROADMAP_20260929_CN.md)明确了简单 C0/C3 路由的事后空间、共享恢复优先级和进入 Router 的证据门槛。
+下一阶段先提高 12L/C3 并检验与 BF16 的同条件差距，纯 W2 后续再迁移；[新规划](docs/C3_TO_BF16_RECOVERY_ROADMAP_20260929_CN.md)明确了简单 C0/C3 路由的事后空间、共享恢复优先级、条件性的扩层/多 LoRA 对照和进入 Router 的证据门槛。
 
 | 配置 | 成功回合 | 评估范围 |
 |---|---:|---|
