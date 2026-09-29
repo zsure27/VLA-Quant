@@ -1,5 +1,9 @@
 # VLA-Quant experiment admission
 
+## Low-frequency continuity for every future experiment (2026-09-29)
+
+Run each approved immutable stage plan through the recoverable server-side sequential supervisor. While a user-opened instance is actively experimenting, use a roughly 15-minute thread heartbeat to read only the supervisor status/revision, runner, and GPU processes. Stay silent when state is unchanged; inspect episode logs only for a stage event, failure, idle GPU with pending work, or quota closure. Do not repeatedly wake the conversation with one-minute sleeps or manual polling to wait for time to pass. A completed stage must be analyzed and the next admissible preregistered plan started within one heartbeat cycle; if none exists, archive and shut down the paid instance. Check the current five-hour quota at stage boundaries and near the closure threshold. Around 15% remaining, finish server/local/GitHub backup and SHA checks; around 10%, stop new experiments and shut down the current instance with at least 3% reserved. Pause the heartbeat after closure so it is silent between runs. A heartbeat does not guarantee quota checks or shutdown when the client is unavailable. Apply this rule to every future instance and session; use the current session's actual host, paths, and shutdown authorization.
+
 Before proposing, coding, launching, or extending any GPU experiment, execute the full [Research Governor](docs/VLA_RESEARCH_GOVERNOR_20260926.txt). This is a required admission gate, including for a resumed or automated stage.
 
 Read the current master plan, experiment log, latest accepted session report, canonical baseline table, and stage gate decision. Record the current primary stage, locked stages, and one main research question. Resolve conflicting results by source audit before using them as a baseline.

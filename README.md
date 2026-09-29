@@ -4,6 +4,8 @@
 
 后续每项实验在启动前先执行[研究方向自纠偏门禁](docs/VLA_RESEARCH_GOVERNOR_20260926.txt)，生成可核对的 pre-run card；结束后保存 post-run decision，再决定下一项。[当前阶段纠偏决定](docs/RESEARCH_DIRECTION_CORRECTION_20260927_CN.md)解释了 P2.5 的因果问题与门禁。仓库根目录 `AGENTS.md` 将此设为持续工作规则。
 
+运行中的实例使用服务器顺序执行器和约 15 分钟的低频静默心跳；阶段结束及时接续，收尾关机后暂停心跳。不得靠反复唤醒对话计时。完整约定见[自适应实验与备份分析协议](docs/ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)和[运行入口](scripts/README_CN.md)。
+
 ## 实验记录入口
 
 综合目录 [2026-09-18 实验总结](reports/summaries/20260918-experiment-overview/) 保留三个文件：
