@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-09-29T14:44:31.2712439Z",
+  "hostname": "autodl-container-d99b4b82b2-716e51d5",
+  "native_request_receipt": {
+    "time_utc": "2026-09-29T22:44:31.836283+08:00",
+    "commit": "852d350",
+    "backup": "/root/autodl-tmp/qvla-repro/backups/a1-110-envseed1-complete-20260929-221049-852d350",
+    "supervisor_pid": 837,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "execute": true,
+    "control_panel_off_verified": false,
+    "note": "Uses native supervisor termination; omits native Trash deletion"
+  },
+  "ssh_exit_code": -1,
+  "closure_mode": "verified_fallback_fast",
+  "preparation_error": null,
+  "requested_results": [
+    "/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-5-9",
+    "/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-10-19",
+    "/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-20-29",
+    "/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-30-34",
+    "/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-35-39",
+    "/root/autodl-tmp/qvla-repro/eval/a1-110-envseed1-40-49"
+  ],
+  "platform_off_independently_verified": false,
+  "billing_stop_independently_verified": false
+}
