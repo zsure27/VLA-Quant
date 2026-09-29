@@ -1,0 +1,110 @@
+{
+  "C2_minus_C0_headroom": 2,
+  "C3_minus_C0": 7,
+  "W4_recovery_fraction": 3.5,
+  "by_task": {
+    "0": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 10,
+      "C2": 10,
+      "C3": 10
+    },
+    "1": {
+      "BF16": 10,
+      "C0": 0,
+      "C1": 3,
+      "C2": 2,
+      "C3": 4
+    },
+    "2": {
+      "BF16": 9,
+      "C0": 9,
+      "C1": 4,
+      "C2": 10,
+      "C3": 10
+    },
+    "3": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 10,
+      "C2": 8,
+      "C3": 10
+    },
+    "4": {
+      "BF16": 9,
+      "C0": 10,
+      "C1": 9,
+      "C2": 10,
+      "C3": 10
+    },
+    "5": {
+      "BF16": 9,
+      "C0": 5,
+      "C1": 6,
+      "C2": 5,
+      "C3": 6
+    },
+    "6": {
+      "BF16": 10,
+      "C0": 9,
+      "C1": 9,
+      "C2": 10,
+      "C3": 10
+    },
+    "7": {
+      "BF16": 8,
+      "C0": 10,
+      "C1": 6,
+      "C2": 10,
+      "C3": 9
+    },
+    "8": {
+      "BF16": 10,
+      "C0": 9,
+      "C1": 10,
+      "C2": 9,
+      "C3": 10
+    },
+    "9": {
+      "BF16": 10,
+      "C0": 10,
+      "C1": 10,
+      "C2": 10,
+      "C3": 10
+    }
+  },
+  "classification": "A1 same-official-initial-state different-env-randomness pilot; not new initial states or blind holdout",
+  "configs_complete": [
+    "C0",
+    "C3",
+    "C2",
+    "C1",
+    "BF16"
+  ],
+  "count_per_task": 10,
+  "episodes_per_case": 100,
+  "evaluator_log_sha256": {
+    "BF16": "806b701c16bb6cc16977f456a32bbd19ab2dbb36651ca64ae2dac0710e76b237",
+    "C0": "b24a1b5ca5fe54d39f7e766b69cb1a6ffaa5daa52618034276cb8c72541257a9",
+    "C1": "1c670f39824adedb27361d16b2c40bd6e9de96c5644aa5e74f9901d87c2972a6",
+    "C2": "d5097b01d846288074b2ecc2f85a26b0a8c44bc0053ed55b11d7b613fb613545",
+    "C3": "17b8ababb93ac26985ecac861dd1e55a79ca46c2af44d6ea6c92ae1b68049391"
+  },
+  "exact_mcnemar_p": 0.0390625,
+  "holdout_touched": false,
+  "new_failure": 1,
+  "offset": 20,
+  "paired_stratified_bootstrap_95ci_fraction": [
+    0.02,
+    0.12
+  ],
+  "rescue": 8,
+  "successes": {
+    "BF16": 95,
+    "C0": 82,
+    "C1": 77,
+    "C2": 84,
+    "C3": 89
+  }
+}
