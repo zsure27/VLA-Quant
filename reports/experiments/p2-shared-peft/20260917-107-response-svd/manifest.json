@@ -1,5 +1,11 @@
 {
   "normalization": "LF for text; bytes otherwise",
+  "archival_source_replacement": {
+    "original_path": "scripts/backup_active_diagnostics.py",
+    "canonical_snapshot": "results/shared/source-snapshots/backup-active-diagnostics-eea5abdcc493.py",
+    "source_git_blob": "ad0c97f04130ace71003953d0ed2566654d9146f",
+    "reason": "The live maintenance script evolved after this session; the original matching bytes are retained as a historical snapshot."
+  },
   "files": {
     "reports/experiments/p2-shared-peft/20260917-107-response-svd/closure.json": "fc94ecaef7ab7e82d2ac0ba77715c6ab15ff262e677ba58161e05425e6596fab",
     "reports/experiments/p2-shared-peft/20260917-107-response-svd/README_CN.md": "7ee6712bdc15a22696ea8c073795e6962d366cb492a477bd4d41bdee2f50df49",
@@ -42,7 +48,7 @@
     "results/experiments/p2-shared-peft/20260917-107-response-svd/awq-response-svd-rms16-20260917-004327-2145/rank-16/scope.json": "bc8930b57158730bfd4bcb39023c19dfec0b9add003fb19208f1dc316ddbdddd",
     "scripts/run_awq_response_svd.sh": "179dedcdf9c10ae5155dfb11c47a3098fef1c33d5b23fefcc4aabab2e2430ee5",
     "scripts/run_awq_response_rms16.sh": "d385e8617b29c3338ec33a86b8ce53e130fa1b00a29898574d4bd85888595c35",
-    "scripts/backup_active_diagnostics.py": "eea5abdcc4932c590d822c954f64aaa9b590230475756da63a5ab596b9d8fa9f",
+    "results/shared/source-snapshots/backup-active-diagnostics-eea5abdcc493.py": "eea5abdcc4932c590d822c954f64aaa9b590230475756da63a5ab596b9d8fa9f",
     "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-input-diag-residual-20260916-235145-8370/rank-action/metrics.json": "3d659466096f061604088090d7bdf9d42f2b82afcbfdcdfaed6c6e6f457ac520",
     "results/experiments/p0-foundation-baselines/20260916-107-followup/awq-input-diag-residual-20260916-235145-8370/rank-action/scope.json": "6af3df197d43d381639283b0f962e082bf3dc9e8ae30a8d465dc5ab99e4265b7"
   }

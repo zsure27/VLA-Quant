@@ -14,6 +14,10 @@
 | 归档与收尾 | `sync_vla_remote_closure.ps1`、`backup_active_diagnostics.py`、`vla_push_local.ps1`、`close_vla_session.ps1`、`vla_shutdown_remote.py` |
 | 本地报告重建 | `build_experiment_summary.py`，只读取已取回数据，不连接服务器 |
 
+目录职责：`qvla/` 保存维护中的模型、量化、LoRA 与评估实现；`diagnostics/` 保存只读机制分析；本目录保存执行、归档与验证入口。历史命令在报告、服务器持久盘和复现清单中按原脚本路径引用，因此保留稳定文件名，按上表选择入口；已停用或失效的命令由原路径的拒绝执行保护拦截。`scripts/verify_deduplicated_results.py` 核验全部 `results/indexes/DEDUPLICATED_FILES_*.json`；`scripts/verify_session_manifests.py --session <会话名>` 可定点核验某轮，省去每次遍历全部会话；`scripts/validate_repository_layout.py` 只解析 Git 跟踪的 JSON，不碰被忽略的完整本机归档。
+
+2026-09-29 的 A1 `env_seed` 单变量已判为 `A1_INVALID_CONDITION`；相关历史入口不得当作独立条件复现实验直接运行。下一次长评测先完成 [`烟雾门禁`](../docs/EVALUATION_SMOKE_GATE_20260929_CN.md)，再解锁长片。
+
 `run-official-w4-smoke20.sh` 和 `run-official-quant-validation.sh` 是特意保留的**拒绝执行入口**。安装时把它们复制到服务器，是为了覆盖可能遗留的旧 v2 自动评估脚本；不得移除这些防误用保护，也不得把它们当作当前测试命令。
 
 实例刚开机并完成 SSH 身份核验后，先运行 `sync_vla_remote_closure.ps1 -ExpectedHostname <实际hostname>`。它把备份和关机辅助脚本上传到持久盘，逐文件比对 SHA256 并执行 Python 编译检查。`close_vla_session.ps1` 在任何备份工作前也会再次执行同一预检，并接受 `-SshHost`、`-SshPort`、`-IdentityFile`、`-KnownHostsFile` 和 `-ExpectedHostname`，不再写死 107 的端口或 known-hosts 文件。

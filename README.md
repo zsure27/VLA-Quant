@@ -22,7 +22,7 @@
 - [按实验名称整理的日志](reports/summaries/20260918-experiment-overview/EXPERIMENT_LOG_CN.md)：配置、结果和原始证据入口。
 - [证据索引](reports/summaries/20260918-experiment-overview/EVIDENCE_INDEX.json)：权威汇总、来源路径、字节数和 SHA256；原始数值保留在所指文件。
 
-[各轮记录](reports/README_CN.md)保存当轮数据与分析；[原始结果](results/README_CN.md)保存console、命令、manifest和逐回合指标。[精确重复文件清单](results/indexes/DEDUPLICATED_FILES_20260922.json)给出移除文件与规范副本的 SHA256 映射。较早的[分析归档](reports/archive/20260916-weekend-review/)保留历史证据，旧状态不覆盖最新结论。
+[各轮记录](reports/README_CN.md)保存当轮数据与分析；[原始结果](results/README_CN.md)保存console、命令、manifest和逐回合指标。[精确重复文件索引](results/indexes/README_CN.md)给出移除文件与规范副本的 SHA256 映射。较早的[分析归档](reports/archive/20260916-weekend-review/)保留历史证据，旧状态不覆盖最新结论。
 
 ## 当前结果
 
@@ -85,4 +85,4 @@ Recovery-LoRA 的 compute-vs-coverage 与 P2.5 闭环对齐诊断；固定观测
 [2026-09-25 主线协议](docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)，结果驱动的调整、
 历史实验教训和“数据+分析”备份验收见
 [自适应实验与备份分析协议](docs/ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)，证据设计见
-[2026-09-22 计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。结合 2026-09-28 配对结果的研究问题、阶段门禁与条件分支见[低比特恢复与 Contextual Routing 修订规划](docs/VLA_QUANT_CONTEXTUAL_RECOVERY_ROADMAP_20260928_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)，本次清理见[仓库整理记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)。
+[2026-09-22 计划](docs/PEFT_CONTEXTUAL_ROUTING_PLAN_20260922_CN.md)。结合 2026-09-28 配对结果的研究问题、阶段门禁与条件分支见[低比特恢复与 Contextual Routing 修订规划](docs/VLA_QUANT_CONTEXTUAL_RECOVERY_ROADMAP_20260928_CN.md)。技术变更见[CHANGELOG](CHANGELOG_CN.md)；仓库整理见[2026-09-22 记录](docs/REPOSITORY_CLEANUP_20260922_CN.md)和[2026-09-30 记录](docs/REPOSITORY_CLEANUP_20260930_CN.md)。

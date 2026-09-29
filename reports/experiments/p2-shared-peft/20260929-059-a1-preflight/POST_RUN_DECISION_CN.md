@@ -1,6 +1,6 @@
 # 059：A1 运行前门禁与停止决定
 
-状态：**A1_HOLD / 没有闭环回合 / 没有 GPU 策略实验**。本文件记录 2026-09-29 在新机 059 上的运行前检查；它不是 A1 成功率报告。预注册问题与统计判据见 [A1 PRE-RUN CARD](../20260929-a1-evaluation-replication/PRE_RUN_CARD_CN.md)。
+状态：**A1_HOLD / 没有闭环回合 / 没有 GPU 策略实验**。本文件记录 2026-09-29 在新机 059 上的运行前检查；它不是 A1 成功率报告。预注册问题与统计判据见 [A1 PRE-RUN CARD](../../../../docs/pre-run-cards/A1_EVALUATION_REPLICATION_20260929_CN.md)。
 
 ## 已完成
 

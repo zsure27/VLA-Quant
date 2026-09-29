@@ -2,7 +2,9 @@
 
 import json
 import re
+import subprocess
 from pathlib import Path
+from typing import Dict, Set
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,7 +20,7 @@ MODULES = {
 SESSION = re.compile(r"^\d{8}-[a-z0-9][a-z0-9_-]*$")
 
 
-def module_sessions(root: Path) -> dict[str, set[str]]:
+def module_sessions(root: Path) -> Dict[str, Set[str]]:
     found = {}
     actual_modules = {path.name for path in root.iterdir() if path.is_dir()}
     if actual_modules != MODULES:
@@ -66,9 +68,15 @@ def main() -> None:
     if backbone["vision"]["siglip"] != {"weight_bits": 2, "group_size": 128}:
         raise ValueError("SigLIP backbone contract changed")
 
-    for path in ROOT.rglob("*.json"):
-        if ".git" not in path.parts:
+    tracked = subprocess.check_output(["git", "ls-files", "-z", "--", "*.json"], cwd=ROOT)
+    for relative in tracked.decode("utf-8").split("\0"):
+        if not relative:
+            continue
+        path = ROOT / relative
+        try:
             json.loads(path.read_text(encoding="utf-8-sig"))
+        except (ValueError, UnicodeError) as error:
+            raise ValueError(f"invalid JSON: {relative}: {error}") from error
 
     print(json.dumps({
         "modules": sorted(MODULES),

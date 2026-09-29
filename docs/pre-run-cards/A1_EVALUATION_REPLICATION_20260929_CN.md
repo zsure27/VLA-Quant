@@ -1,6 +1,8 @@
 # A1 PRE-RUN CARD：冻结 C3 的独立评测条件复现
 
-**状态：HOLD；本卡尚未放行任何 GPU 回合。** 截至 2026-09-29，本地代码与 GitHub `zsure27/VLA-Quant` 的 `main` 均为 `9e33d4460a6458db555cef5cf3ced88a460765e9`，本地工作树在写本卡前干净。上一轮 107 的原生关机请求已有回执，但平台 OFF 未独立核验；本轮没有新的在线实例或运行产物。此卡遵循上传的 Research Governor A1，并以原始产物而非历史摘要为准。
+**历史卡片，禁止直接执行。** 本卡在 2026-09-29 写作时为 HOLD；之后 110 的真实评测顺序审计证明 `env_seed=1` 未改变策略可见条件，A1 被归类为 `A1_INVALID_CONDITION`。本卡保留原预注册内容以追溯设计错误；当前门禁见 [`EVALUATION_SMOKE_GATE_20260929_CN.md`](../EVALUATION_SMOKE_GATE_20260929_CN.md)，审计结果见 [`110 A1 报告`](../../reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/README_CN.md)。
+
+**原状态：HOLD；本卡尚未放行任何 GPU 回合。** 截至 2026-09-29，本地代码与 GitHub `zsure27/VLA-Quant` 的 `main` 均为 `9e33d4460a6458db555cef5cf3ced88a460765e9`，本地工作树在写本卡前干净。上一轮 107 的原生关机请求已有回执，但平台 OFF 未独立核验；本轮没有新的在线实例或运行产物。此卡遵循上传的 Research Governor A1，并以原始产物而非历史摘要为准。
 
 | 字段 | 预注册内容 |
 | --- | --- |

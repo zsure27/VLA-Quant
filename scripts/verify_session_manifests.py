@@ -1,7 +1,9 @@
 """Check the current-tree hashes in standardized VLA session manifests."""
 
+import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 
@@ -29,10 +31,21 @@ def verify(path):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--session", help="Verify only this session directory name")
+    args = parser.parse_args()
     counts = {}
+    failures = {}
     for path in sorted((ROOT / "reports/experiments").glob("*/*/manifest.json")):
+        if args.session and path.parent.name != args.session:
+            continue
         document = json.loads(path.read_text(encoding="utf-8-sig"))
         if document.get("files") is not None:
-            counts[path.parent.name] = verify(path)
+            try:
+                counts[path.parent.name] = verify(path)
+            except ValueError as error:
+                failures[path.parent.name] = str(error)
     print(json.dumps({"sessions_verified": len(counts), "files_verified": sum(counts.values()),
-                      "per_session": counts}))
+                      "per_session": counts, "failures": failures}))
+    if failures:
+        sys.exit(1)

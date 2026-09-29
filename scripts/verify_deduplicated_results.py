@@ -1,4 +1,4 @@
-"""Verify the exact-byte replacement map for removed duplicate result files."""
+"""Verify every exact-byte replacement map for deduplicated result files."""
 
 import hashlib
 import json
@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-MAP = ROOT / "results/indexes/DEDUPLICATED_FILES_20260922.json"
+INDEX_DIR = ROOT / "results/indexes"
 
 
 def inside_root(relative_path):
@@ -16,8 +16,8 @@ def inside_root(relative_path):
     return path
 
 
-def verify():
-    manifest = json.loads(MAP.read_text(encoding="utf-8"))
+def verify_map(index_path):
+    manifest = json.loads(index_path.read_text(encoding="utf-8"))
     canonical = {entry["path"]: entry for entry in manifest["canonical_files"]}
     if len(canonical) != len(manifest["canonical_files"]):
         raise ValueError("duplicate canonical path")
@@ -36,9 +36,19 @@ def verify():
         target = canonical.get(entry["replacement"])
         if not target or (entry["sha256"], entry["bytes"]) != (target["sha256"], target["bytes"]):
             raise ValueError("invalid replacement mapping: " + old)
-    return {"canonical_files": len(canonical), "removed_exact_duplicates": len(old_paths),
+    return {"index": index_path.name, "canonical_files": len(canonical), "removed_exact_duplicates": len(old_paths),
             "removed_bytes": sum(x["bytes"] for x in manifest["removed_exact_duplicates"]),
             "retained_bytes": sum(x["bytes"] for x in canonical.values())}
+
+
+def verify():
+    indexes = sorted(INDEX_DIR.glob("DEDUPLICATED_FILES_*.json"))
+    if not indexes:
+        raise ValueError("no deduplication indexes")
+    results = [verify_map(path) for path in indexes]
+    return {"indexes": results,
+            "removed_exact_duplicates": sum(x["removed_exact_duplicates"] for x in results),
+            "removed_bytes": sum(x["removed_bytes"] for x in results)}
 
 
 if __name__ == "__main__":

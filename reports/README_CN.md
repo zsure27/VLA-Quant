@@ -33,4 +33,6 @@ backups/experiments/<module>/YYYYMMDD-<host-or-scope>-<experiment>/
 
 同一会话的报告目录与结果目录必须使用相同名称。报告目录保存 `README_CN.md`、图、分析用数据、manifest 和复现脚本；其中 `README_CN.md` 必须写明目的、协议、结果与不确定性、失败分析、成本、基线比较、gate结论、下一步和备份位置，不能只列数据。结果目录保存实际命令、console、配置、逐回合指标、源码版本与哈希。完整本地归档位于被 Git 忽略的 `backups/experiments/`，目录规则见 [`backups/README_CN.md`](../backups/README_CN.md)。
 
+只有预注册方案、尚无实测结果时，将卡片放入 [`docs/pre-run-cards/`](../docs/pre-run-cards/README_CN.md)，不占用实验报告会话目录；真实执行后再建立同名报告与结果目录。
+
 历史 `backup/SHA256SUMS.txt` 和关机回执继续记录当时的服务器路径，不为新目录布局改写。每轮新实验必须在启动前选定模块；不确定归类时先放入当前门禁对应模块，不能重新创建 `reports/sessions/`、顶层 `results/<session>/` 或 `results/pending-*`。
