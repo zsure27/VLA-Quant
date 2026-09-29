@@ -7,8 +7,8 @@
 | 模块 | 状态 | 内容 |
 |---|---|---|
 | [`p0-foundation-baselines`](experiments/p0-foundation-baselines/README_CN.md) | 已完成 | BF16/W4 基线、W2 视觉与语言归因、实现与数值诊断 |
-| [`p1-data-contract`](experiments/p1-data-contract/README_CN.md) | 下一阶段 | 训练轨迹清单、按轨迹切分、泄漏审计、AWQ q/z/Δ 等价契约 |
-| [`p2-shared-peft`](experiments/p2-shared-peft/README_CN.md) | exact-12L训练已完成；Scale闭环扩大验证中 | shared Scale PEFT、Recovery LoRA、Response SVD 初始化 |
+| [`p1-data-contract`](experiments/p1-data-contract/README_CN.md) | 已通过 | 训练轨迹清单、按轨迹切分、泄漏审计、AWQ q/z/Δ 等价契约 |
+| [`p2-shared-peft`](experiments/p2-shared-peft/README_CN.md) | P2.5：C3单条件正收益；A1独立复现未通过 | shared Scale PEFT、Recovery LoRA、学生状态重标与评测条件审计 |
 | [`p3-static-backbone`](experiments/p3-static-backbone/README_CN.md) | 已冻结 | 视觉 group、W4 岛、层数裁剪与 16L/14L/12L Spatial500 |
 | [`p4-expert-complementarity`](experiments/p4-expert-complementarity/README_CN.md) | 有条件待做 | 两个等预算专家和完整 expert×context 矩阵 |
 | [`p5-contextual-routing`](experiments/p5-contextual-routing/README_CN.md) | 有条件待做 | H17 因果上下文、Top-1 Router 与必要对照 |
@@ -16,6 +16,7 @@
 
 ## 汇总与历史
 
+- [`summaries/20260929-baseline-progress/`](summaries/20260929-baseline-progress/README_CN.md)：截至 9 月 29 日的 AWQ、混精底座、PEFT、A1 独立性审计及后续门禁；当前应先读此报告。
 - [`summaries/20260918-experiment-overview/`](summaries/20260918-experiment-overview/)：综合结论、按实验名称的日志和证据索引。
 - [`archive/20260916-weekend-review/`](archive/20260916-weekend-review/)：早期完整分析归档，仅保留历史语境。
 - [`REPOSITORY_LAYOUT_MIGRATION_20260925.json`](../docs/REPOSITORY_LAYOUT_MIGRATION_20260925.json)：旧路径到新路径的机器可读映射。

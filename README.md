@@ -10,6 +10,8 @@
 
 ## 实验记录入口
 
+最新综合报告：[2026-09-29 基线进展与后续规划](reports/summaries/20260929-baseline-progress/README_CN.md)。它区分静态 AWQ 基线、旧 PEFT 负结果、C3 的单条件收益和 A1 独立性失败。
+
 综合目录 [2026-09-18 实验总结](reports/summaries/20260918-experiment-overview/) 保留三个文件：
 
 - [结论与研究计划](reports/summaries/20260918-experiment-overview/README_CN.md)：图表、问题分析和后续条件。
