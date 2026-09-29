@@ -1,0 +1,78 @@
+2026-09-29 12:26:31.866180: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-29 12:26:31.903392: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-29 12:26:31.903418: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-29 12:26:31.904715: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-29 12:26:31.910720: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-29 12:26:32.654502: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/wandb/analytics/sentry.py:90: SentryHubDeprecationWarning: `sentry_sdk.Hub` is deprecated and will be removed in a future major release. Please consult our 1.x to 2.x migration guide for details on how to migrate `Hub` usage to the new API: https://docs.sentry.io/platforms/python/migration/1.x-to-2.x
+  self.hub = sentry_sdk.Hub(client)
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+2026-09-29 12:26:36.142851: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:274] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/qvla-repro/control/a1-envseed-preflight-20260929/probe_a1_env_seed.py", line 121, in <module>
+    main()
+  File "/root/autodl-tmp/qvla-repro/control/a1-envseed-preflight-20260929/probe_a1_env_seed.py", line 94, in main
+    pair = {str(seed): capture(task, initial_state, task_id, args.reset, seed) for seed in (0, 1)}
+  File "/root/autodl-tmp/qvla-repro/control/a1-envseed-preflight-20260929/probe_a1_env_seed.py", line 94, in <dictcomp>
+    pair = {str(seed): capture(task, initial_state, task_id, args.reset, seed) for seed in (0, 1)}
+  File "/root/autodl-tmp/qvla-repro/control/a1-envseed-preflight-20260929/probe_a1_env_seed.py", line 32, in capture
+    env, _ = get_libero_env(task, "openvla", resolution=256)
+  File "/root/autodl-tmp/qvla-repro/overlays/awq-p0-stage-20260923/oft/experiments/robot/libero/libero_utils.py", line 23, in get_libero_env
+    env = OffScreenRenderEnv(**env_args)
+  File "/root/autodl-tmp/qvla-repro/src/LIBERO/libero/libero/envs/env_wrapper.py", line 161, in __init__
+    super().__init__(**kwargs)
+  File "/root/autodl-tmp/qvla-repro/src/LIBERO/libero/libero/envs/env_wrapper.py", line 56, in __init__
+    self.env = TASK_MAPPING[self.problem_name](
+  File "/root/autodl-tmp/qvla-repro/src/LIBERO/libero/libero/envs/problems/libero_tabletop_manipulation.py", line 40, in __init__
+    super().__init__(bddl_file_name, *args, **kwargs)
+  File "/root/autodl-tmp/qvla-repro/src/LIBERO/libero/libero/envs/bddl_base_domain.py", line 135, in __init__
+    super().__init__(
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/environments/manipulation/manipulation_env.py", line 162, in __init__
+    super().__init__(
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/environments/robot_env.py", line 214, in __init__
+    super().__init__(
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/environments/base.py", line 143, in __init__
+    self._reset_internal()
+  File "/root/autodl-tmp/qvla-repro/src/LIBERO/libero/libero/envs/bddl_base_domain.py", line 735, in _reset_internal
+    super()._reset_internal()
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/environments/robot_env.py", line 510, in _reset_internal
+    super()._reset_internal()
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/environments/base.py", line 296, in _reset_internal
+    render_context = MjRenderContextOffscreen(self.sim, device_id=self.render_gpu_device_id)
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/utils/binding_utils.py", line 210, in __init__
+    super().__init__(sim, offscreen=True, device_id=device_id, max_width=max_width, max_height=max_height)
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/utils/binding_utils.py", line 78, in __init__
+    self.gl_ctx = GLContext(max_width=max_width, max_height=max_height, device_id=self.device_id)
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 121, in __init__
+    EGL_DISPLAY = create_initialized_egl_device_display(device_id=device_id)
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 52, in create_initialized_egl_device_display
+    device_inds = [int(x) for x in selected_device.split(",")]
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 52, in <listcomp>
+    device_inds = [int(x) for x in selected_device.split(",")]
+ValueError: invalid literal for int() with base 10: ''
+Exception ignored in: <function EGLGLContext.__del__ at 0x7fe7737f1a20>
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 146, in free
+    if self._context:
+AttributeError: 'EGLGLContext' object has no attribute '_context'
+Exception ignored in: <function MjRenderContext.__del__ at 0x7fe7737f1bd0>
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/qvla-oft/lib/python3.10/site-packages/robosuite/utils/binding_utils.py", line 198, in __del__
+    self.con.free()
+AttributeError: 'MjRenderContextOffscreen' object has no attribute 'con'

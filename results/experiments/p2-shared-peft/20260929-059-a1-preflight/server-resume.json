@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-09-29T04:29:55.290009+00:00",
+  "label": "a1preflight059-20260929",
+  "hostname": "autodl-container-5e9a44960d-2363ecb7",
+  "base_commit": "852d350",
+  "result_directories": [
+    "/root/autodl-tmp/qvla-repro/artifacts/a1-preflight-059-20260929"
+  ],
+  "repo": "/root/VLA-Quant",
+  "instructions": "Restore overlay without overwriting old evaluator; inspect completed metrics and read session report before new tests."
+}
