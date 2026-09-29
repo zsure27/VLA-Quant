@@ -1,5 +1,9 @@
 # VLA-Quant experiment admission
 
+## Future A1/A2 minimal pairing (2026-09-29)
+
+For future A1/A2, run only strictly paired C0 versus C3 on a demonstrably new observable evaluation condition. C1 is excluded; C2/14L and BF16 are separate reference questions, not required replication controls. Record episode-level rescue (C0 fail, C3 success), break (C0 success, C3 fail), their net, task and preregistered within-task context strata, uncertainty, and costs. A2 may change only the C3 training random seed after a valid A1. The old five-configuration 110 run remains immutable historical evidence and `A1_INVALID_CONDITION`. Rescue and break alone do not prove predictable chunk-level contextual routing. Follow [the new protocol](docs/A1_A2_MINIMAL_REPLICATION_AND_CONFLICT_PROTOCOL_20260929_CN.md); P4/P5 remain locked.
+
 ## Mandatory evaluation smoke gate (2026-09-29)
 
 Before any long closed-loop evaluation, follow [the evaluation smoke gate](docs/EVALUATION_SMOKE_GATE_20260929_CN.md). A PRE-RUN CARD and source audit must establish the exact evaluator call order, fixed artifact hashes, one changed variable, and non-overlapping data. Run a small no-policy condition probe in that exact order, with same-condition repeats and policy-visible query0/after-eight-step hashes. Then run a paired policy micro-rollout and inspect actual commands, manifests, and traces. Stop at a first-shard gate (at most 50 episodes/configuration) before scheduling further shards. A failed condition or unchanged trace blocks expansion; identical success labels alone do not prove invalidity. A probe PASS is not a long-run approval. On an active paid instance with no admissible next step, archive and close it under the quota protocol. Do not run seed-only A1 again or start A2 until a truly new observable condition passes these gates.

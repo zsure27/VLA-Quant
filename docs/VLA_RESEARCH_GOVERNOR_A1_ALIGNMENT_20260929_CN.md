@@ -1,6 +1,6 @@
 # Research Governor v2 对齐：先复现共享恢复，再讨论路由
 
-更新：2026-09-29。本文保留 A1 运行前的研究设计；实际执行后已判为 `A1_INVALID_CONDITION`，不得再按下文原种子方案启动 GPU。原因、450 回合结果和停止决定见[110 A1 审计](../reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/README_CN.md)。以后必须先通过[真实评测顺序的烟雾门禁](EVALUATION_SMOKE_GATE_20260929_CN.md)，再考虑新版本 A1。
+更新：2026-09-29。本文保留 A1 运行前的研究设计；实际执行后已判为 `A1_INVALID_CONDITION`，不得再按下文原种子方案启动 GPU。原因、450 回合结果和停止决定见[110 A1 审计](../reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/README_CN.md)。**下文五配置方案仅属历史设计；未来 A1/A2 已收窄为 C0/C3 配对，不跑 C1，也不要求 C2/BF16，按[新协议](A1_A2_MINIMAL_REPLICATION_AND_CONFLICT_PROTOCOL_20260929_CN.md)执行。**以后必须先通过[真实评测顺序的烟雾门禁](EVALUATION_SMOKE_GATE_20260929_CN.md)，再考虑新版本 A1。
 
 ## 1. 目前可以说什么
 

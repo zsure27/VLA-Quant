@@ -8,6 +8,8 @@
 
 长闭环评测在执行前还必须通过[低成本烟雾门禁](docs/EVALUATION_SMOKE_GATE_20260929_CN.md)：真实评测顺序的无模型重复探针、配对策略微型闭环、首片复核依次通过后才扩展长片。
 
+后续 A1/A2 复现按[最小 C0/C3 配对与 rescue/break 协议](docs/A1_A2_MINIMAL_REPLICATION_AND_CONFLICT_PROTOCOL_20260929_CN.md)执行；C1 不再重跑，路由判断还需同任务可观测上下文证据。
+
 ## 实验记录入口
 
 最新综合报告：[2026-09-29 基线进展与后续规划](reports/summaries/20260929-baseline-progress/README_CN.md)。它区分静态 AWQ 基线、旧 PEFT 负结果、C3 的单条件收益和 A1 独立性失败。
