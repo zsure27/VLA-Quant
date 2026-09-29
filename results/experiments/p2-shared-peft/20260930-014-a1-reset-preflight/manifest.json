@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "phase": "A1_RESET_PREFLIGHT",
+  "gate": "HOLD_CONDITION",
+  "host": "autodl-container-3fbf46b812-2fdd6883",
+  "source": "/root/autodl-tmp/qvla-repro/artifacts/a1-014-preflight-20260930",
+  "files": [
+    {
+      "path": "fresh_reset_generation_pilot.json",
+      "bytes": 7525,
+      "sha256": "e9eaddeb79df513f996e0bf45b8bcaecd18a12b1910a11741c52faaa2805e87c"
+    },
+    {
+      "path": "fresh_reset_policy_input_smoke.json",
+      "bytes": 85329,
+      "sha256": "cdbe6b46c7588ecc2a19a93b3fe49e43fcb1110c4b6f78cdf371cca6e5ad2279"
+    },
+    {
+      "path": "fresh_reset_processor_pixel_smoke.json",
+      "bytes": 4672,
+      "sha256": "e6e44eafd93811c3e09cc5da5f14108b37ef7b3df059754b518aaafd18f5cd2d"
+    },
+    {
+      "path": "unpruned_policy_input_smoke.json",
+      "bytes": 85250,
+      "sha256": "5c34f5e1f0f31e1e9d17f4743c19a737653e65381df5094ae1af382211e3cb0d"
+    },
+    {
+      "path": "unpruned_raw_observation_smoke.json",
+      "bytes": 65010,
+      "sha256": "470baa7726aad4cd7f48c7ad825c07cfd48db885ed61a14c5aa8624654238628"
+    },
+    {
+      "path": "unpruned_state_inventory.json",
+      "bytes": 123147,
+      "sha256": "dbf9a3305c27bd009c38bef1ea92715e8d27cd531bc34efc5ec8afb63b07f253"
+    },
+    {
+      "path": "fresh-reset-pilot/task-00.npy",
+      "bytes": 1600,
+      "sha256": "6deed24fadf20a65354917d0703827b9ee1178fdb829000b76e261abbdc4a9bd"
+    },
+    {
+      "path": "fresh-reset-pilot/task-01.npy",
+      "bytes": 1600,
+      "sha256": "f08e8cf81e6fc37cb0f9708fce70cf798310cd0022df054a209e9140b862bb74"
+    },
+    {
+      "path": "fresh-reset-pilot/task-02.npy",
+      "bytes": 1600,
+      "sha256": "4f64908360fc298ac255d6a88f3ccf9d6ba51431f2df577a866a97be016ec69d"
+    },
+    {
+      "path": "fresh-reset-pilot/task-03.npy",
+      "bytes": 1600,
+      "sha256": "c6c45d2722da77e2131a71e264dbb020ddb7451948c3661b546c393e2a03bbec"
+    },
+    {
+      "path": "fresh-reset-pilot/task-04.npy",
+      "bytes": 1600,
+      "sha256": "31b4eb5b61430172779b42daa2fc8a08440043c1818abbdfbfd741b6e9782c86"
+    },
+    {
+      "path": "fresh-reset-pilot/task-05.npy",
+      "bytes": 1600,
+      "sha256": "64e91f807fa378a137e89d1e29fcc1922cf0374c853e559867f7be3d6b9ab16f"
+    },
+    {
+      "path": "fresh-reset-pilot/task-06.npy",
+      "bytes": 1600,
+      "sha256": "eecd749f729b9036f1a222821a326b0af097783de15878fabe4095dfad0e1980"
+    },
+    {
+      "path": "fresh-reset-pilot/task-07.npy",
+      "bytes": 1600,
+      "sha256": "1b3a640ae60794e16242d6ec26f9575883c7a772a1b61d6f56d58acb020aaf89"
+    },
+    {
+      "path": "fresh-reset-pilot/task-08.npy",
+      "bytes": 1600,
+      "sha256": "e05c2840b7386eb5f6bb961bb23d0f0baa9dc9c57d3db8702ca43caa7e49ba26"
+    },
+    {
+      "path": "fresh-reset-pilot/task-09.npy",
+      "bytes": 1600,
+      "sha256": "0a2791b8f55ec0aba7bb4c2efcbac83875351026cab772e7b630360098e6233c"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "classification": "processor_pixel_tensor_smoke_only",
+  "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+  "center_crop": true,
+  "task_solvability_proven": false,
+  "tasks": [
+    {
+      "task_id": 0,
+      "active": [
+        "7a7834e48cb1ffd9798ab76f69d6317ad47477109d0b5583e17178eb7eb3a1eb",
+        "4270e195122a74b6ce9de7733712b4acfeeb823f152ca42d57b28ba066d2924f"
+      ],
+      "fresh": [
+        "6a137713b5dacb5aabafbe74f7a086829be85438298758be5571e3b1b517b1e1",
+        "088c978729d8e3e141e5d60900d181e7b8b6197683853a05daa0027b34116d2b"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 1,
+      "active": [
+        "187fd884cb12a4be33b97279fd4d238f1e370d459856a987328a83d72d8735d8",
+        "6490e5ae08ae91dc6c0ecf3159c57a79254697d10f975d56e1cbedf961bf3207"
+      ],
+      "fresh": [
+        "272b4694df8629869a1feec0187c66b4853cec59422227da03142d654ae237cf",
+        "acac3a9aa4c81e04eb2602b7458410d8d293a0f96ec5692bc9be8bdd00da9eb2"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 2,
+      "active": [
+        "546263d56128620d58e6a27282706649dc3669548c56ca93a4ba882eb2fdda76",
+        "ce000aa0e9d0e8b7dfe7c5beaa48e93e1bb4e6abae9930fcebe8f417733511a0"
+      ],
+      "fresh": [
+        "b16cb35f73815161cb94348b09eab51376ef9eb9240d67a12b9805509f5c24b6",
+        "6700fe078e95ddf564b1f65e989232f98b08f83827426a23cbbbc387f50a5e33"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 3,
+      "active": [
+        "ba045d56933d4650adcb776739486e20dce652a2b5bbc71e9bf9c9a677ec1dbf",
+        "174a6b13e8f3be890d49d5194476fd3ed2243e9292ecfa67d5fe99ba9ddd2389"
+      ],
+      "fresh": [
+        "1c833449d5c5e33edaeda1c2aa73a4c7471cf628e60c339c5293929dbb57a0d9",
+        "7bb2e96371b5ee6fa303d387d658e3a13e2a608ece75f9359e9b30b5b8fd3544"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 4,
+      "active": [
+        "18b05bfc3e78c482aecb0266eff8d6098f11acf01563acf1593e8e8b6707c3c7",
+        "5dee315725bad86c8da7887a52e4ff8d3d8bcf752f938422b84fbed9c5062929"
+      ],
+      "fresh": [
+        "55c2ca5df7d2acf5edd4d1f091562603e5df9d43dac7311b5e7c5ff5c8ecdae6",
+        "3460795be9f95219d07faa038cc24f31c68d2e8a5b0629a214465d0d87d5b7c4"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 5,
+      "active": [
+        "6b4819fdc88a45dae7b0c01c068f49b09526496bb714cb5585acf80579f971f7",
+        "b025a1d99af6ddc6b89fb7c40edd3f6a80cb5287d348a57a4b01221c8d569a2a"
+      ],
+      "fresh": [
+        "a544b55a9c64a3a1581f5c89521348e9f54cc6f3b4c7d67e41068ed048e98154",
+        "16ab9f85143c7703604004887713acb0da2c54776bcc6a6ca7a720b12d61f8f1"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 6,
+      "active": [
+        "cb519b994d9a0be0391279728559f95d941e99fd0ce5bcf9e037cdff0802d213",
+        "03e7703e06e003900c0143aa86ec8e49b590bf8adf0ab4ddff7ccbea742b499d"
+      ],
+      "fresh": [
+        "eaee5669d6861cca9b1ad695a430ac85f879b00c7b89028bf06d2124cdb8cceb",
+        "d1b83fd693842fe9f1934482f19fb3332fcb500126b3f54a8ad0922bcf7daa95"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 7,
+      "active": [
+        "ef68ae7e53416840334dd6685f2c151940fb01c9fe5b4675ae0ed5c11e168285",
+        "5395047701a37df28242b53f40fec3b911e4f9439f890f96ec37a1ae8b8fbc97"
+      ],
+      "fresh": [
+        "82d9fd4ef1eddd963ba04d591953bb07de1bc2eb95481480bc16007bcfa3fc50",
+        "976f56528fefecd72ab2c67b530d6cfaab2691d81cc0764f3cbc2bf704ddc315"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 8,
+      "active": [
+        "9d09b20c75ae435c89bd37016dc8b7564b4861286e0519f329f63019e09ee05d",
+        "e92f56affb076f3d4ed0588e5eef24929af89fbe6bf11bb15bb1f8083458ecf6"
+      ],
+      "fresh": [
+        "a723ef16c357b523b5c5e46cbca9745fd66d53a236b73c52971e0386b8f15471",
+        "5893838ebe7bf86ec4b7ed47489525434b216c25763ce64d2a6b36c723daa747"
+      ],
+      "both_pixel_tensors_changed": true
+    },
+    {
+      "task_id": 9,
+      "active": [
+        "9a783aea3a0a8dc4df1be1e061bc4caba7c65795e1589109d5673b9d17a85182",
+        "eb5135e80eb80893b05d0b86e364b50d3ff92f372edb97d60280248dc429c46e"
+      ],
+      "fresh": [
+        "44f4f4d8e0b92bfbd5c839adc954afcf6d4059ace920ad485f1c6f8dd467e188",
+        "b43b1f8f7c4e149ce247f7e2ea846a9e2560c055efcf38ae668ac5b0c3446e32"
+      ],
+      "both_pixel_tensors_changed": true
+    }
+  ]
+}

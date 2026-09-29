@@ -1,0 +1,2569 @@
+{
+  "schema_version": 1,
+  "classification": "no_model_policy_input_smoke_only",
+  "training_independence_proven": false,
+  "task_solvability_proven": false,
+  "models_loaded": false,
+  "tasks": [
+    {
+      "task_id": 0,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "4e3eaf7a315bc3bafb6db4837c8eef0e5f8aea717782a2a3ea33139392d966ed",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "c782438d6234065e85ecf51495104998f805658d1fd97cdbbce6992031005c62",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "395dcef279e7c42cd7cdb550b66380a8ba9941d9d964b05dbcd6251728c818ee",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "373fb28631d2ca02dc917970aeca95d187979cdd8b76b35640b46c7908414c65",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "7d86b7f963b40f31a8f856c138bf72db5c1a5e0b604a1eab34e2382fe8410450",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "ac298eb7a2e3758b0344b0fbf0fa1582a16d209793fcf8cb3d42e59ce562f31e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "01673187c0bcceedc66a8a5e20c9efa5dee5b81100f615d74538cb36b1e854d6",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "c782438d6234065e85ecf51495104998f805658d1fd97cdbbce6992031005c62",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "395dcef279e7c42cd7cdb550b66380a8ba9941d9d964b05dbcd6251728c818ee",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "373fb28631d2ca02dc917970aeca95d187979cdd8b76b35640b46c7908414c65",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "7d86b7f963b40f31a8f856c138bf72db5c1a5e0b604a1eab34e2382fe8410450",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "ac298eb7a2e3758b0344b0fbf0fa1582a16d209793fcf8cb3d42e59ce562f31e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "01673187c0bcceedc66a8a5e20c9efa5dee5b81100f615d74538cb36b1e854d6",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 14,
+          "state_sha256": "5ef7b059328e4d2132e43689ee0d525bd6a4d613e8cf43fe5bffc4ce8e01b5ad",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "c80167c4cad76be494a256b47c7cef8ab465247854ad76375bf155fd68693b32",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "c4118554585784545d962088bb87ae7eac2fce677fa8585f9042bd04b49bc72c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "e92ff9a5d1be667a8cf1cfffeff647e8568ac9864882e2ac7bd8ce2b36cc403d",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "72d677354587c9a252217ffe434b1e76bc82770753b936e5688311e7705f7687",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "bca1bd450d3e4bc94051ad810440f97692fc5c5931d3a805b2e193827034eeaa",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "c3fcef9e9ccc73956113409984a55ab086df9ae2e3eeca4f4a214d14bb881740",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "c80167c4cad76be494a256b47c7cef8ab465247854ad76375bf155fd68693b32",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "c4118554585784545d962088bb87ae7eac2fce677fa8585f9042bd04b49bc72c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "e92ff9a5d1be667a8cf1cfffeff647e8568ac9864882e2ac7bd8ce2b36cc403d",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "72d677354587c9a252217ffe434b1e76bc82770753b936e5688311e7705f7687",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "bca1bd450d3e4bc94051ad810440f97692fc5c5931d3a805b2e193827034eeaa",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "c3fcef9e9ccc73956113409984a55ab086df9ae2e3eeca4f4a214d14bb881740",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 1,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "d116842e01703fbea595511db813a3816c8d9f2302b4e979ebec4f15b7a750a2",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "f58e127f41f12a20d6df501b2733ccb43a124a6684442546bdee0c91a49f6a7c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "977f2ca68f42df7c0cb7eca705f713157acb327391e59c115d316d1e555730ae",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "657087e94854247b7aa6133ab59f4d455a43c5bbaa84603bb5d7791ca50e6fe4",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "5bbd71fccb0fe69adc6d9fbba4798ade05f77fec5ced12bc79315718632f2e6a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "9559b506543facf27e2eac476a7efdfb9617988cb73c46b8914ee6b19e7516e0",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "7c376d8a940fa83581d536056e87048794ceb4bf0e2f44bec8943e3ff97f839b",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "f58e127f41f12a20d6df501b2733ccb43a124a6684442546bdee0c91a49f6a7c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "977f2ca68f42df7c0cb7eca705f713157acb327391e59c115d316d1e555730ae",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "657087e94854247b7aa6133ab59f4d455a43c5bbaa84603bb5d7791ca50e6fe4",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "5bbd71fccb0fe69adc6d9fbba4798ade05f77fec5ced12bc79315718632f2e6a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "9559b506543facf27e2eac476a7efdfb9617988cb73c46b8914ee6b19e7516e0",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "7c376d8a940fa83581d536056e87048794ceb4bf0e2f44bec8943e3ff97f839b",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "56d71efe6b6b63a4f7a0b91fa9a4d717e57dd2d18150db053a7bffd53bbe13e7",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "8c300020d4f56fcc0790963183816f7d1c8809352e17b07363f491b9b60102c8",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "dd9fc61520376ec80c3113502901529370f8fb6eeb4da0a2c02e288e224b6e0a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "4b48d7b3470d6a1c0d891ce940221c5464bb5a2430920b01605575650113ec61",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "7beeaacbfc76db0b5a901a8d38d0254bf5125eeb62e0f52a692712ef86d8b499",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "0b54d191d1879989eb272a0ed5e095f7c14d62d79aca732481a01c14fce7ae9f",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "ea6d0e4d49cf0093fd4a7c76ddf02062c85d54198f0e53d76a50ea5b863633b4",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "8c300020d4f56fcc0790963183816f7d1c8809352e17b07363f491b9b60102c8",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "dd9fc61520376ec80c3113502901529370f8fb6eeb4da0a2c02e288e224b6e0a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "4b48d7b3470d6a1c0d891ce940221c5464bb5a2430920b01605575650113ec61",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "7beeaacbfc76db0b5a901a8d38d0254bf5125eeb62e0f52a692712ef86d8b499",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "0b54d191d1879989eb272a0ed5e095f7c14d62d79aca732481a01c14fce7ae9f",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "ea6d0e4d49cf0093fd4a7c76ddf02062c85d54198f0e53d76a50ea5b863633b4",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 2,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "408c455fb617e5320060d643ef80ec2035d4e98600659cc3deb5a1e85482bf76",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "85e3bed0a36c53608f8016768556be20911969c64b71141832622bb40a3c1ced",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "765b0c813f9a80181179358e481ebed546cb81b097596c14984dc415207b5f50",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "183f2c7a52aa557d11579a18b77e102316d6ff4145c224a1e5aef5386526cd4c",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "fec3375295ccadc73e6f991747aaa432d51f7a909a368ea2e0c5905528a43237",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "d3ed86bb0e0c05c9a9ba0541909511aaf627d00339ca9313178923205b13ea61",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "b693e8d1eb1ce3b852913cd91f14f2a85b093174ffd3f1ed5131bdd940b31b09",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "85e3bed0a36c53608f8016768556be20911969c64b71141832622bb40a3c1ced",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "765b0c813f9a80181179358e481ebed546cb81b097596c14984dc415207b5f50",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "183f2c7a52aa557d11579a18b77e102316d6ff4145c224a1e5aef5386526cd4c",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "fec3375295ccadc73e6f991747aaa432d51f7a909a368ea2e0c5905528a43237",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "d3ed86bb0e0c05c9a9ba0541909511aaf627d00339ca9313178923205b13ea61",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "b693e8d1eb1ce3b852913cd91f14f2a85b093174ffd3f1ed5131bdd940b31b09",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 1,
+          "state_sha256": "f89c0304c7f3c75b7af900bada13fc5eb20e2ebb6a81c94c5890b02ed7a6c0d0",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "da7ba139062312ebc70cdcab7227356601f646216d2724ad7f874a4e48ee3821",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "e635d3f39645725e8a4e4a722ea3c3650d1e0d264d447c94b33bf3f666c52034",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "c8012e294f5a354cf94322fb0834e954f782d4426a8066929d7774cc91033ae0",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b2946e17f059da9794b6eb8de4e8efd6792334ee5e02a328d325a68876b96fac",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "4522e565f95c138a35f399bf77f6f93cfc65eee3d0264bb59730f5636570e1e3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "81cc7a9edc8c3a03297103e2632a84cc4402d764f2434c224ff7ccdcb6f48080",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "da7ba139062312ebc70cdcab7227356601f646216d2724ad7f874a4e48ee3821",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "e635d3f39645725e8a4e4a722ea3c3650d1e0d264d447c94b33bf3f666c52034",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "c8012e294f5a354cf94322fb0834e954f782d4426a8066929d7774cc91033ae0",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b2946e17f059da9794b6eb8de4e8efd6792334ee5e02a328d325a68876b96fac",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "4522e565f95c138a35f399bf77f6f93cfc65eee3d0264bb59730f5636570e1e3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "81cc7a9edc8c3a03297103e2632a84cc4402d764f2434c224ff7ccdcb6f48080",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 3,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "36424fa758f0e72399a35cefa285d0658e4b5bd17bfb3e2127f85aa2e0944517",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "b704efbf8f47c7cffdd1087b0ae0f61d8801abdba54149ea80c3a1627bead5e4",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "d50fda0c3d7618c3e983df68a874e2362e8ee79382b1cdb10d5fda32cf9f21b6",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "28ff044d0114819b41efdeafd09813f2e5a137db41d9e348edeff1152f20ff90",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b799eb11406985d3e0f4c9dbb7b5f58bdfaaa235b6a44f970c0d2db5e032432f",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "bb23ccaeb15b14afb5d48c5d6240b2e7403ad8caaeda4821b948877a53f7eca2",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "da989d1ae6c1f96367ebed548f2f39252ddded0f45abb67cd961db808f93377a",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "b704efbf8f47c7cffdd1087b0ae0f61d8801abdba54149ea80c3a1627bead5e4",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "d50fda0c3d7618c3e983df68a874e2362e8ee79382b1cdb10d5fda32cf9f21b6",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "28ff044d0114819b41efdeafd09813f2e5a137db41d9e348edeff1152f20ff90",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b799eb11406985d3e0f4c9dbb7b5f58bdfaaa235b6a44f970c0d2db5e032432f",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "bb23ccaeb15b14afb5d48c5d6240b2e7403ad8caaeda4821b948877a53f7eca2",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "da989d1ae6c1f96367ebed548f2f39252ddded0f45abb67cd961db808f93377a",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "69b70c3f670e48e4beaff84cdb75b182a35de1005e1d1f3646b7137264c0d9c1",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "cf3e3c5471d4456020121a31a4ea20cdd6684ab45d2ef166124af76ec9ea3c53",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "17f16db989dec89f645ee875c61be93d8db407c52e915ee402a943911b72a8e3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "ae4e481ee6f59685f40bf9a5cea1d55765db1ed271f3358b6650fbd06a0c420f",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "1d534479a68d545e810233b6d0cb6375ac2977c4a5b9c5f48104e34a9fd92375",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "c54abcac0f4ff9d120f08cc960987bfe90d71f90249ef10df799989a9681e9e8",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "beabbd10dda74bd5c72af656135bb048901a6bcb0e5886b42dd8f44ac0de5f31",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "cf3e3c5471d4456020121a31a4ea20cdd6684ab45d2ef166124af76ec9ea3c53",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "17f16db989dec89f645ee875c61be93d8db407c52e915ee402a943911b72a8e3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "ae4e481ee6f59685f40bf9a5cea1d55765db1ed271f3358b6650fbd06a0c420f",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "1d534479a68d545e810233b6d0cb6375ac2977c4a5b9c5f48104e34a9fd92375",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "c54abcac0f4ff9d120f08cc960987bfe90d71f90249ef10df799989a9681e9e8",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "beabbd10dda74bd5c72af656135bb048901a6bcb0e5886b42dd8f44ac0de5f31",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 4,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "2e3f91b350eaef1b23c2d4ee14c513b2158a106bff7ed6c249b58e2cf89367f4",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "0a519076052b67fd9fd0ab0ac8fd211d3d9dffd579ea39f12aca72955f64e397",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "f82bee7df073ef29a1374819d95ce3d0589919f7ba6a2552350aeedc982e9585",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "057a5dac493e165a994cfdb9fd3dae0a7d8ed2e7000edccf8ecf2bb9b20e3949",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "c7456841f9963fb39c773695513e866faa22d3bb999f9c129b293f5f055d992d",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "20c583e0c84b12db8efeabe1c6c5dd780950823227a36c3a5da9d4f66e10faf8",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "ad76f9c376a63cf2d249811f5632184977113da46d51e1e95f2426d28c24359e",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "0a519076052b67fd9fd0ab0ac8fd211d3d9dffd579ea39f12aca72955f64e397",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "f82bee7df073ef29a1374819d95ce3d0589919f7ba6a2552350aeedc982e9585",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "057a5dac493e165a994cfdb9fd3dae0a7d8ed2e7000edccf8ecf2bb9b20e3949",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "c7456841f9963fb39c773695513e866faa22d3bb999f9c129b293f5f055d992d",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "20c583e0c84b12db8efeabe1c6c5dd780950823227a36c3a5da9d4f66e10faf8",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "ad76f9c376a63cf2d249811f5632184977113da46d51e1e95f2426d28c24359e",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "cf4aba0fe4e16e9cfd810eac217c2915f99a1449019d0a0f79dbad6540475399",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "ce168776966b59f14b2e3fe8284596d6b773ceeea4651dfc6b99670b589a2317",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "51d2d34a53aad77e37dcdb7faf273624ad78132f90e03d3bfe947fbbb4b97de3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1deac232067fa44aed955b67870cb47c31bfda7e86f0a1a28110c7cdd85c8ee1",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "967680a098ab73248ea09c078979ca7071e26073d2ebc01ecc1f6e7c5e776ec5",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "edf326cb925ad3343b6049300c5af1cdfdba3f5cf58906644b6a72db37e5491e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "a6bdec1031b6f7f78bf89f49c9181b77d619c40b1f9b635c59eacd5821f3308e",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "ce168776966b59f14b2e3fe8284596d6b773ceeea4651dfc6b99670b589a2317",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "51d2d34a53aad77e37dcdb7faf273624ad78132f90e03d3bfe947fbbb4b97de3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1deac232067fa44aed955b67870cb47c31bfda7e86f0a1a28110c7cdd85c8ee1",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "967680a098ab73248ea09c078979ca7071e26073d2ebc01ecc1f6e7c5e776ec5",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "edf326cb925ad3343b6049300c5af1cdfdba3f5cf58906644b6a72db37e5491e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "a6bdec1031b6f7f78bf89f49c9181b77d619c40b1f9b635c59eacd5821f3308e",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 5,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "63f019944e240d60a5770936f1eaa3853e38bbfeb1c26c987826fb004ed4346c",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "9164530ccf3d6dd448ed63b0a1ba91c1019f5b98d9cbca27dac006a39c5a84a7",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "50d147aa032b685fcfccc037584e96aab415241ad731141e812c8447ecaaf25a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "d892052ce377910ffd7f53b2b46282e2e2502a31e28087d8ee4c10d94e306a77",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "24346892090cae0c4afa1348c3d724c389bbda5b35159a7dc21d28539b4a26f4",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "ba68e8c6c8b1ddda60a392b3253a061bac7d28244621d172893606c862eb8a40",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "56d8b82e867b52edeee43f64cef884a402c9bef95b95e87e2061c94ad22208eb",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "9164530ccf3d6dd448ed63b0a1ba91c1019f5b98d9cbca27dac006a39c5a84a7",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "50d147aa032b685fcfccc037584e96aab415241ad731141e812c8447ecaaf25a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "d892052ce377910ffd7f53b2b46282e2e2502a31e28087d8ee4c10d94e306a77",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "24346892090cae0c4afa1348c3d724c389bbda5b35159a7dc21d28539b4a26f4",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "ba68e8c6c8b1ddda60a392b3253a061bac7d28244621d172893606c862eb8a40",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "56d8b82e867b52edeee43f64cef884a402c9bef95b95e87e2061c94ad22208eb",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "eefad8d4b401eb2b12b76732513f3696a373fd0be7293444271b2f4c66c9fa00",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "5eb550295fb307a37aaa71a1cae7aeba28840d38870f23b7be02ea55b6ac939b",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "2b3ce602799c6c45d1dc1811a7ccb3674b5890be02af22c573c4c1764d0ebbe5",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "305c1c34719e0b02ee2dec12b3b36a15196fada0cef1f0e4f1c994cf3c6f88f4",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "665afce138d4b891da663f580ced194d175a82e0d5952ab80ebd9bf2a57062f9",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "4c5dfa217cbbfb96ef020c0d70459d0969aed2d99f6f79c145ad58d91952970e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1c0eaff6d7fdba895877f078f6e26aef55160a4f4fe0e81b6b0f839c493d159f",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "5eb550295fb307a37aaa71a1cae7aeba28840d38870f23b7be02ea55b6ac939b",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "2b3ce602799c6c45d1dc1811a7ccb3674b5890be02af22c573c4c1764d0ebbe5",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "305c1c34719e0b02ee2dec12b3b36a15196fada0cef1f0e4f1c994cf3c6f88f4",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "665afce138d4b891da663f580ced194d175a82e0d5952ab80ebd9bf2a57062f9",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "4c5dfa217cbbfb96ef020c0d70459d0969aed2d99f6f79c145ad58d91952970e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1c0eaff6d7fdba895877f078f6e26aef55160a4f4fe0e81b6b0f839c493d159f",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 6,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "d81530779b15be6bdfe4935a7a802102e3e3883823b29fefd40a2131e50fd515",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "d4232300fbe1c60768cc2c8cd0fc2af14d326cc537ed264f86d5f3f364cec4fd",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "42ca26cdddf34e5ca9855d2c07d00e5853a4d49adb0f4b47d99a30db311c7d4c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "e70c45779d84a95341423c892bd3761dd08481718f81c600d80892a5e7980f01",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "7c1406937d6767b8fc3cd98b67e13086e0ebe3d9cf8eeacafbd238dc7b4c258d",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "0649edfe761f887bad2c28c1695a378d419782fd1f9b9526512a97ede6117908",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "b76d30586c44ca061c7d789dd772ae973916ce2a3a4359874460224b5392cecc",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "d4232300fbe1c60768cc2c8cd0fc2af14d326cc537ed264f86d5f3f364cec4fd",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "42ca26cdddf34e5ca9855d2c07d00e5853a4d49adb0f4b47d99a30db311c7d4c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "e70c45779d84a95341423c892bd3761dd08481718f81c600d80892a5e7980f01",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "7c1406937d6767b8fc3cd98b67e13086e0ebe3d9cf8eeacafbd238dc7b4c258d",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "0649edfe761f887bad2c28c1695a378d419782fd1f9b9526512a97ede6117908",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "b76d30586c44ca061c7d789dd772ae973916ce2a3a4359874460224b5392cecc",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "7ae45add8d5bbc65fabb8ad1be09719df36e2721e21637f3c544952a7eacc766",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "7f01b280cda426a056a6cdbdbd00337978b35a641f1a328c20f4afe39cefcd99",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "e89b4bb3c5bafb7dc42977a4ef24e699dd452234468134826a45f77c069e30ce",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "8a8cfbca7f898d991a0405eb7bfc229f6ba31479d2e5a56468c70290815fc1cd",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "e0d4168ceb1910558b00bb9fa7808dea6de2c55de3fe3dc5148971749c5c55c7",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "83904cd2fadba7303713ded401cef51651d53c130c57c68ac73cae0fd1754edb",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "87abdcf291da70c4b3fc57fcfa0532dccd67508decc0afa4ecb8aabf37b796b7",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "7f01b280cda426a056a6cdbdbd00337978b35a641f1a328c20f4afe39cefcd99",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "e89b4bb3c5bafb7dc42977a4ef24e699dd452234468134826a45f77c069e30ce",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "8a8cfbca7f898d991a0405eb7bfc229f6ba31479d2e5a56468c70290815fc1cd",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "e0d4168ceb1910558b00bb9fa7808dea6de2c55de3fe3dc5148971749c5c55c7",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "83904cd2fadba7303713ded401cef51651d53c130c57c68ac73cae0fd1754edb",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "87abdcf291da70c4b3fc57fcfa0532dccd67508decc0afa4ecb8aabf37b796b7",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 7,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "501105aff4e1897d96cac0d0ee69fc702ad209e317511807e27df8b421ae1f2a",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "1dfd7e2370851bda192bf17f06411893c455e7a08c174c92c3190b4a3c3ec52c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "c8d213373bd107881ed705bb57154760f77d32c749831ab55bc9b5073a0b7672",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "8b37bb4c3e2014300f96c312970deeef6e5c3c046f34d105b0911781fe202f26",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "048e9086a1d298a09120db367193991cce443f18737d59e12e3c9d0f69db3889",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "1ef3359feb9074487855275442e0d7f9660cc76dc1e2a774fbc5bd6e2c0b9cf1",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "148d0a255f3b1ae34ba07be1300c2b295b1f645ec6ecbaf6d7f6afa9fcf0746f",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "1dfd7e2370851bda192bf17f06411893c455e7a08c174c92c3190b4a3c3ec52c",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "c8d213373bd107881ed705bb57154760f77d32c749831ab55bc9b5073a0b7672",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "8b37bb4c3e2014300f96c312970deeef6e5c3c046f34d105b0911781fe202f26",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "048e9086a1d298a09120db367193991cce443f18737d59e12e3c9d0f69db3889",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "1ef3359feb9074487855275442e0d7f9660cc76dc1e2a774fbc5bd6e2c0b9cf1",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "148d0a255f3b1ae34ba07be1300c2b295b1f645ec6ecbaf6d7f6afa9fcf0746f",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "6b95ea5ff3d75baed82b1b5e7958e71aa24f3a2db8e5a0e206933a7e47994918",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "dcaacaf25483cf74525f6d2423c102b6f6bfd5860cc2c1a9acce6585622a7a8a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "dc67f3e3ddc653ee2500a86a9bf8bcf1f14cd43d6afbc5f77f60dc04c616485e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "02f63149a4ec52f47e3f80b65aae6a0f2e5dde38c77689842761c3b14ae8d55b",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "f5b1b4c9172aff37421337fb542908fdbb8abc31f65bdd178a72e6a72d264929",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "3b2928f8fbd1a4db2df6a18a87fae63baabaa8674b6fe9f4c537de45d13c55ce",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "c51513478a925f506c87dfb5f47fc8a3b72d158aa3e9d4af97a2562024f3cdb6",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "dcaacaf25483cf74525f6d2423c102b6f6bfd5860cc2c1a9acce6585622a7a8a",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "dc67f3e3ddc653ee2500a86a9bf8bcf1f14cd43d6afbc5f77f60dc04c616485e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "02f63149a4ec52f47e3f80b65aae6a0f2e5dde38c77689842761c3b14ae8d55b",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "f5b1b4c9172aff37421337fb542908fdbb8abc31f65bdd178a72e6a72d264929",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "3b2928f8fbd1a4db2df6a18a87fae63baabaa8674b6fe9f4c537de45d13c55ce",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "c51513478a925f506c87dfb5f47fc8a3b72d158aa3e9d4af97a2562024f3cdb6",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 8,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "aef30979e2ee8c9893c9161c881264362f750a34df952f381e3969a567688451",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "677523f770f808e5122c3675e76bc02c9625a7521325471a332f31b5d61e9e30",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "381ddec4eb16e7bf094f78d1cc6a2b29028eade8395e7b82cde3df16a342f67e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1d962af819829a5629c4bdddd60c3ccb182a9c1a2b137b1ca33a93ce50060408",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b28d7e8f8d269d01a98e207eaf16c0a1ed908f63efcbe1538efc54a2e98a2b67",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "a80f13b2c07a2e214f17a4cbb3a1c687d7d3d894ba948a58bcd4129fbc7c70f3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "a3017802ac06aa843b615c1213ba25632839646834843a1acb3aa200886a578b",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "677523f770f808e5122c3675e76bc02c9625a7521325471a332f31b5d61e9e30",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "381ddec4eb16e7bf094f78d1cc6a2b29028eade8395e7b82cde3df16a342f67e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1d962af819829a5629c4bdddd60c3ccb182a9c1a2b137b1ca33a93ce50060408",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b28d7e8f8d269d01a98e207eaf16c0a1ed908f63efcbe1538efc54a2e98a2b67",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "a80f13b2c07a2e214f17a4cbb3a1c687d7d3d894ba948a58bcd4129fbc7c70f3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "a3017802ac06aa843b615c1213ba25632839646834843a1acb3aa200886a578b",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 12,
+          "state_sha256": "4772e860bacdc19931e696496bf4b61ca91d01026f37f17c648ce2d8d7ef8ed2",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "67434e2a39bbbcee0bc79b9711867945bc0fa543e4c12ab944b098270d902519",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "bde63f46c640babe6cbf037756ab08ed4a069ce3afe6e1774ac5207a9f8fb164",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "d4fba4ccc8241f848901c58d3db252c045aa318afa0a8197f3991f0843064a24",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "ecb15a617f0c4297487a40376d464f7860c9b56d609e5242be2e8a0e9b856eef",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "658cfa1f3c4b3b61d0a9eaf09bd3d7c5c23fa73cd42b5437633c1bfdcac23f85",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "0223602b6bec42f25a74b479707b81ac92a2737f0c0d382bff871e23a7d6cbd8",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "67434e2a39bbbcee0bc79b9711867945bc0fa543e4c12ab944b098270d902519",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "bde63f46c640babe6cbf037756ab08ed4a069ce3afe6e1774ac5207a9f8fb164",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "d4fba4ccc8241f848901c58d3db252c045aa318afa0a8197f3991f0843064a24",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "ecb15a617f0c4297487a40376d464f7860c9b56d609e5242be2e8a0e9b856eef",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "658cfa1f3c4b3b61d0a9eaf09bd3d7c5c23fa73cd42b5437633c1bfdcac23f85",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "0223602b6bec42f25a74b479707b81ac92a2737f0c0d382bff871e23a7d6cbd8",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    },
+    {
+      "task_id": 9,
+      "conditions": {
+        "active": {
+          "state_index": 0,
+          "state_sha256": "885cdd89e3d71824f79e4f0ae4711f9ca04367c0011147cb657ecc32be3f375b",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "cfb22d0550ea765511f104e0a12f754f3ae17ad45ce0a58d83ed88f13bd3ef8e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "08a3e106669a2e1db2ebfc9fc155d2a33aa900d8fd3228d45939e89ee924ae31",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "63f486e3363c0514b98b33f184d120c28079430c406c0f38f9937bded6cbd951",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b3e46ddde0c18fe0335bf552959bb5c3d148261350df5df0934f56adb8d10e4d",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "a0929f2e41d41a361762b1d74aff5e497bfa540df70aed4488eb3c00b60444b7",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "3cd7a9fffc6884eae9fc4811fffbcfdf57ef4d2d550b6eb9895eb61d06185cb7",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "cfb22d0550ea765511f104e0a12f754f3ae17ad45ce0a58d83ed88f13bd3ef8e",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "08a3e106669a2e1db2ebfc9fc155d2a33aa900d8fd3228d45939e89ee924ae31",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "63f486e3363c0514b98b33f184d120c28079430c406c0f38f9937bded6cbd951",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "b3e46ddde0c18fe0335bf552959bb5c3d148261350df5df0934f56adb8d10e4d",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "a0929f2e41d41a361762b1d74aff5e497bfa540df70aed4488eb3c00b60444b7",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "3cd7a9fffc6884eae9fc4811fffbcfdf57ef4d2d550b6eb9895eb61d06185cb7",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        },
+        "extra": {
+          "state_index": 50,
+          "state_sha256": "3e5c1fc85cd6623209f0262d1d3f5f02f2607b92ceabdc57b00c7afe4410cb01",
+          "repeat_equal": true,
+          "captures": [
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "92b834d7308eea5d8868eb2ef8d35d938e7e0f5a0ad5624c2fe4115ccdbb86f3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "d6101d7f971a322369f251848792797f0a72377a7b2fa5850a1d3f3be66e1a31",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "d28f4e5bb7f1fb18988eb21f5d067976afbdd0795edfad690f9a68753b8b6570",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "9ebb8b55c25ad194540b12faec10e73d438473c750d35ba2ac948123a3446479",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "1ad0af2a7f8438083a5ed0171b2bfbd2bbac6a53cbf0f04c4d1b6632265468ae",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1b97ce35a0219ccf4a26600422d36f0f99b50b17288fff79f67d2f56e44fddbe",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            },
+            {
+              "query0": {
+                "full_image": {
+                  "sha256": "92b834d7308eea5d8868eb2ef8d35d938e7e0f5a0ad5624c2fe4115ccdbb86f3",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "d6101d7f971a322369f251848792797f0a72377a7b2fa5850a1d3f3be66e1a31",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "d28f4e5bb7f1fb18988eb21f5d067976afbdd0795edfad690f9a68753b8b6570",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "after_fixed_8": {
+                "full_image": {
+                  "sha256": "9ebb8b55c25ad194540b12faec10e73d438473c750d35ba2ac948123a3446479",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "wrist_image": {
+                  "sha256": "1ad0af2a7f8438083a5ed0171b2bfbd2bbac6a53cbf0f04c4d1b6632265468ae",
+                  "shape": [
+                    224,
+                    224,
+                    3
+                  ],
+                  "finite": true
+                },
+                "state": {
+                  "sha256": "1b97ce35a0219ccf4a26600422d36f0f99b50b17288fff79f67d2f56e44fddbe",
+                  "shape": [
+                    8
+                  ],
+                  "finite": true
+                }
+              },
+              "initial_success": false,
+              "success_after_wait": false
+            }
+          ]
+        }
+      },
+      "policy_visible_changed": {
+        "full_image": true,
+        "wrist_image": true,
+        "state": true
+      }
+    }
+  ]
+}

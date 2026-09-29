@@ -5,9 +5,11 @@ import inspect
 import json
 import os
 import sys
+import hashlib
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import torch
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -43,6 +45,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--task_suite_name", default="libero_spatial")
     parser.add_argument("--num_trials_per_task", type=int, default=2)
     parser.add_argument("--initial-state-offset", type=int, default=0)
+    parser.add_argument("--a1-reset-dir", type=Path,
+                        help="Frozen per-task .npy reset arrays for preregistered A1; bypasses demo-success JSON")
     parser.add_argument("--local_log_dir", required=True)
     parser.add_argument("--libero_root", default=os.environ.get("LIBERO_ROOT", ""))
     parser.add_argument("--seed", type=int, default=7)
@@ -86,6 +90,20 @@ def parse_args() -> argparse.Namespace:
         parser.error("Invalid initial-state shard range")
     if args.initial_state_offset and args.seed_protocol != "paired":
         parser.error("Shard offset requires paired per-episode seeding")
+    if args.a1_reset_dir is not None:
+        if args.seed_protocol != "paired" or args.task_suite_name != "libero_spatial":
+            parser.error("A1 reset arrays require paired LIBERO Spatial evaluation")
+        reset_dir = args.a1_reset_dir.resolve()
+        for task_id in range(10):
+            reset_file = reset_dir / f"task-{task_id:02d}.npy"
+            if not reset_file.is_file():
+                parser.error(f"Missing A1 reset array: {reset_file}")
+            states = np.load(reset_file, allow_pickle=False, mmap_mode="r")
+            if (states.ndim != 2 or
+                    states.shape[0] < args.initial_state_offset + args.num_trials_per_task or
+                    not np.isfinite(states).all()):
+                parser.error(f"Invalid A1 reset array or shard range: {reset_file}")
+        args.a1_reset_dir = reset_dir
     if args.awq_candidate == "w2-attention-primary-g64-stage-w4":
         if (args.method, args.weight_bits, args.activation_bits, args.awq_scope) != ("awq", 2, 16, "all"):
             parser.error("Combined stage rescue requires full-scope AWQ W2A16")
@@ -350,6 +368,19 @@ def main() -> None:
     import experiments.robot.libero.run_libero_eval as L
     import experiments.robot.robot_utils as R
     from experiments.robot.libero.run_libero_eval import eval_libero
+    original_load_initial_states = L.load_initial_states
+    if args.a1_reset_dir is not None:
+        def load_a1_initial_states(cfg, task_suite, task_id, log_file=None):
+            if cfg.initial_states_path != "DEFAULT":
+                raise ValueError("A1 reset directory cannot be combined with custom demo JSON")
+            path = args.a1_reset_dir / f"task-{task_id:02d}.npy"
+            states = np.load(path, allow_pickle=False)
+            file_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+            L.log_message("A1_RESET_ARRAY " + json.dumps({"task_id": task_id,
+                "path": str(path), "sha256": file_hash, "shape": list(states.shape),
+                "dtype": str(states.dtype)}, sort_keys=True), log_file)
+            return states, None
+        L.load_initial_states = load_a1_initial_states
     from prismatic.extern.hf.configuration_prismatic import OpenVLAConfig
     from prismatic.extern.hf.modeling_prismatic import OpenVLAForActionPrediction
     from prismatic.extern.hf.processing_prismatic import PrismaticImageProcessor, PrismaticProcessor
@@ -606,6 +637,7 @@ def main() -> None:
     finally:
         L.get_action = original_get_action
         L.run_episode = original_run_episode
+        L.load_initial_states = original_load_initial_states
         if trace_file is not None:
             trace_file.close()
         if h17_recorder is not None:

@@ -1,0 +1,2059 @@
+{
+  "schema_version": 1,
+  "classification": "preliminary_cpu_stability_only",
+  "task_validity_proven": false,
+  "training_independence_proven": false,
+  "model_input_proven": false,
+  "tasks": [
+    {
+      "task_id": 0,
+      "alternate_index": 14,
+      "state_sha256": "5ef7b059328e4d2132e43689ee0d525bd6a4d613e8cf43fe5bffc4ce8e01b5ad",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "45a8182411335c1ab10a963a99ed10bf8c9197a8105778f899679298a2a73c86",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "978b97b86d9102d2d408ae02686cce45cb41763d446d7967de241dda55945819",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "0dac59917a5470fff19c5063f6733a3c91bda9ad0cdc92417b0debbe25ee9b74",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "5528d077f6c685519530a2469e65667af1b72a31fde70017d63fdbbc1ba1fc70",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "de42ca34b04673a0dc932408abe1338f36c7b32c2f2c76c486c7c07fb250b564",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "4a5b7b9f1c047ee221e29f1b961de1e3ea000ce179570d4a0afaffaf8d7b3664",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "38e7bac2d8408b677477e8c226d6144f109527fecc90ae82be41fdfc19eedf7a",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "266cf1c57ce63e10094727a944d09415639c77a1d96012d40f722c2839f05236",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "652a9abe283a623df76f4d1b0e18aab7eaa75f561f95d3bfbb4ac0dde128cfa1",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f640ce3c1cab3b14ba42a5e3325e8986fc6e311416ee42c763b1c62d3f7af2dd",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "999b85ea88a36c57ad0083cf293cd02be576efd49d728196d4b1d84d4dc5b6da",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "f3afaf808f539c904bbe2f3158e5587e3cfb7ce9811e12721becd862ba9fb896",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "45a8182411335c1ab10a963a99ed10bf8c9197a8105778f899679298a2a73c86",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "978b97b86d9102d2d408ae02686cce45cb41763d446d7967de241dda55945819",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "0dac59917a5470fff19c5063f6733a3c91bda9ad0cdc92417b0debbe25ee9b74",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "5528d077f6c685519530a2469e65667af1b72a31fde70017d63fdbbc1ba1fc70",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "de42ca34b04673a0dc932408abe1338f36c7b32c2f2c76c486c7c07fb250b564",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "4a5b7b9f1c047ee221e29f1b961de1e3ea000ce179570d4a0afaffaf8d7b3664",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "38e7bac2d8408b677477e8c226d6144f109527fecc90ae82be41fdfc19eedf7a",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "266cf1c57ce63e10094727a944d09415639c77a1d96012d40f722c2839f05236",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "652a9abe283a623df76f4d1b0e18aab7eaa75f561f95d3bfbb4ac0dde128cfa1",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f640ce3c1cab3b14ba42a5e3325e8986fc6e311416ee42c763b1c62d3f7af2dd",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "999b85ea88a36c57ad0083cf293cd02be576efd49d728196d4b1d84d4dc5b6da",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "f3afaf808f539c904bbe2f3158e5587e3cfb7ce9811e12721becd862ba9fb896",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 1,
+      "alternate_index": 50,
+      "state_sha256": "56d71efe6b6b63a4f7a0b91fa9a4d717e57dd2d18150db053a7bffd53bbe13e7",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "6553c547ec7691dd208dff0a4cb2cc734c52e4d45c49be79491b32697f4a4fad",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "a4cdbd97afb4eff69e5f2008b8bd04664fdefab908a37bb548ea25c357bc3b00",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "0834a025979f2324220bc31a6e3a15c7b14430f5c995a7b4c33cb493242f1ccf",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "1bc7fc837d707d668c86405739a5a41fbec5c04d91946798d7669a2052fbf628",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "4f39f76d72683ca1acd6d4be253f3388a7fa305d05b1a5ec12304b5a72eaa51b",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "ccd06fe68b242c1479a15a8d33ab718db6eb6294e7164f6a4cbbb2b1d55d2167",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "aa6953b966625458b7f5bfb37cfb2afd00c9ef1b505bfbbf9d3d9b2193f75ac7",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "446d2af135f695ec52a6314d81883802a203cee869161ad0bd7361cd1e3daf74",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "2fb48406dfb733389ab73cbeabc4dfee0900e5fe271bf5fcaa87bb0d90c57285",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f6a30bbc547a4da1eae3fec9d16f751d455295beee8d1ceb389364e13a076b3d",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "65d5e1d6d79efe977e664e1fb4268c50ec84d89a54538a28ea581b7b776573de",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "b2e9fc9cad994d2e748811850b292a4289be1901e6f653bd788f3534a3ba7636",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "6553c547ec7691dd208dff0a4cb2cc734c52e4d45c49be79491b32697f4a4fad",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "a4cdbd97afb4eff69e5f2008b8bd04664fdefab908a37bb548ea25c357bc3b00",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "0834a025979f2324220bc31a6e3a15c7b14430f5c995a7b4c33cb493242f1ccf",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "1bc7fc837d707d668c86405739a5a41fbec5c04d91946798d7669a2052fbf628",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "4f39f76d72683ca1acd6d4be253f3388a7fa305d05b1a5ec12304b5a72eaa51b",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "ccd06fe68b242c1479a15a8d33ab718db6eb6294e7164f6a4cbbb2b1d55d2167",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "aa6953b966625458b7f5bfb37cfb2afd00c9ef1b505bfbbf9d3d9b2193f75ac7",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "446d2af135f695ec52a6314d81883802a203cee869161ad0bd7361cd1e3daf74",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "2fb48406dfb733389ab73cbeabc4dfee0900e5fe271bf5fcaa87bb0d90c57285",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f6a30bbc547a4da1eae3fec9d16f751d455295beee8d1ceb389364e13a076b3d",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "65d5e1d6d79efe977e664e1fb4268c50ec84d89a54538a28ea581b7b776573de",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "b2e9fc9cad994d2e748811850b292a4289be1901e6f653bd788f3534a3ba7636",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 2,
+      "alternate_index": 1,
+      "state_sha256": "f89c0304c7f3c75b7af900bada13fc5eb20e2ebb6a81c94c5890b02ed7a6c0d0",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "8e63e561ececc97dc2e4564778767102dbeab2dde0f5576f4cdcf58a8dec2eb9",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "da5368c85362cb59ef07ac77de2d5c184fc24d90b4de5dbb2f8b69f885123b07",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "f1e371add8ca393ff42eef40eee4749478515b1934f32e302ce4f9e9e8f9cf9c",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "e675d8a0472821f3be075556a0db72c5a19fee8e980f9ce22af37f3a4976fd58",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "6ceb1beb602d06e4a253e07bb29b3f53f53425b4e4ee9c6ffdf44c1f278ccb28",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "be320824647818c16d08a2d2837b5d1653d4c8a979a15392bda52e5a0b5bea6e",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "72e1c88be0390299acc0f98c31b3120694d3b4ba3b6ec39971bb188e25aa3f95",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "b64d5cea20db024164a2468be1c49c0213bdfbf2ffcbfa5ec33ab19d6bde1343",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "52ef764dc906d1975f27e71c0e5e5ea9208d04d8c930d0cf8d0785779dc1900d",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f9b83c498aae656dacfa48fce015147a78b96bbe26f1049056da0d4ec8cc67b3",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "3d51875ee20a9f2c8f3c0173b3aad6e69d4165c0f2595666335184be1187b372",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "f9e51d127dfea7323c10f793e0add4313cbf692dedd09c7ef8d7b7b8a425b70e",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "8e63e561ececc97dc2e4564778767102dbeab2dde0f5576f4cdcf58a8dec2eb9",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "da5368c85362cb59ef07ac77de2d5c184fc24d90b4de5dbb2f8b69f885123b07",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "f1e371add8ca393ff42eef40eee4749478515b1934f32e302ce4f9e9e8f9cf9c",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "e675d8a0472821f3be075556a0db72c5a19fee8e980f9ce22af37f3a4976fd58",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "6ceb1beb602d06e4a253e07bb29b3f53f53425b4e4ee9c6ffdf44c1f278ccb28",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "be320824647818c16d08a2d2837b5d1653d4c8a979a15392bda52e5a0b5bea6e",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "72e1c88be0390299acc0f98c31b3120694d3b4ba3b6ec39971bb188e25aa3f95",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "b64d5cea20db024164a2468be1c49c0213bdfbf2ffcbfa5ec33ab19d6bde1343",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "52ef764dc906d1975f27e71c0e5e5ea9208d04d8c930d0cf8d0785779dc1900d",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f9b83c498aae656dacfa48fce015147a78b96bbe26f1049056da0d4ec8cc67b3",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "3d51875ee20a9f2c8f3c0173b3aad6e69d4165c0f2595666335184be1187b372",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "f9e51d127dfea7323c10f793e0add4313cbf692dedd09c7ef8d7b7b8a425b70e",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 3,
+      "alternate_index": 50,
+      "state_sha256": "69b70c3f670e48e4beaff84cdb75b182a35de1005e1d1f3646b7137264c0d9c1",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "e317b3947e3bf230aec0d4df1b9e618544f0c6475772a4dae606b8c0406350d6",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "427b56aec23fba757848662b7247c1db5aa018ab045ef800c85f0e04b67b58aa",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "923fa015ccebca69359d5de3295ad608ec64073a76279aee438ed4a638e4d150",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "511407a52c05f3e2a55b2f3a0a9a8be95d59625fb90284f85d4de56f56f18769",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "27d3f30e03e2733b5e51fa8772caa99e3364a898367122ef1b57841a3807619d",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "69b8b80748db739fef9a8aa8869ec3f979cfb5e2c0c386d3437148aa703e61a3",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "e23886f044978acf971a28a76bf1bdad5da85e9470a5d97f92e9ac6b1338866d",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "9e57ab4c8898b8f95262efa30c172573a9915454db3e67ba9da9db2eb02291bc",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "2c92c830ff2ffddf4fc706fc2645703aa0678ce8d76bcbe8b22e39eb24cacbcd",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "2f05bf982c60ea740321c98d13721a5483f88b1fafa55bf2fb32f288a3e4675c",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "c13f528ed4403beada6714b14a6e1289690653ff1fbe86ce75bf7bb1e1624b47",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "7024c38696796da4d1a9358c00c38bffa70178f0686f93242e605bfe2bc5b222",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "e317b3947e3bf230aec0d4df1b9e618544f0c6475772a4dae606b8c0406350d6",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "427b56aec23fba757848662b7247c1db5aa018ab045ef800c85f0e04b67b58aa",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "923fa015ccebca69359d5de3295ad608ec64073a76279aee438ed4a638e4d150",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "511407a52c05f3e2a55b2f3a0a9a8be95d59625fb90284f85d4de56f56f18769",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "27d3f30e03e2733b5e51fa8772caa99e3364a898367122ef1b57841a3807619d",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "69b8b80748db739fef9a8aa8869ec3f979cfb5e2c0c386d3437148aa703e61a3",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "e23886f044978acf971a28a76bf1bdad5da85e9470a5d97f92e9ac6b1338866d",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "9e57ab4c8898b8f95262efa30c172573a9915454db3e67ba9da9db2eb02291bc",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "2c92c830ff2ffddf4fc706fc2645703aa0678ce8d76bcbe8b22e39eb24cacbcd",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "2f05bf982c60ea740321c98d13721a5483f88b1fafa55bf2fb32f288a3e4675c",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "c13f528ed4403beada6714b14a6e1289690653ff1fbe86ce75bf7bb1e1624b47",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "7024c38696796da4d1a9358c00c38bffa70178f0686f93242e605bfe2bc5b222",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 4,
+      "alternate_index": 50,
+      "state_sha256": "cf4aba0fe4e16e9cfd810eac217c2915f99a1449019d0a0f79dbad6540475399",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "f9ce6e68a9d49c6fdfd16f72711e16e6ba6eab8b856dd6fb100b696bd0a06726",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "1e29d858f817456159b47a33521b39ecdb761bc9a050f171de11d41aaa9a6ef0",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "6a5b65159b11e0f6c65c23bcb7c311fed0f38e94e40a9427c7cf58dbf9e67ce2",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "9d6069c2c4191248f7ceeb53ffd73493e6b85771b692082155229d1387c21dd2",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "d51d732700a35e293728e7f3a39393ff4b2c699ea132678f1a8faf17ea350564",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "b25962e1ee601355542baf442f6070add47db44960f536285b90661a324c05ce",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "94ff2b6731aa30d05e1f747a8fbb429e1c226770e6c74ac6588e2881777488e8",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "f9ddcb3684e4ae2336e734d342b860433a8446f55f31ae9501774e352098de15",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "316c3ecd7db8e7ababcbc539ccfccfdab974c4a0dec0265c2330e30e26b3ddea",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "904544404de8f1533c0d5cf25da825ae157a0245d860c7d3772c9d470e953543",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "dbd33e5ed17f77b8fd39b38845b20c8f56b6aa5eb478ae72f6db4fee4fdde922",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "79c56a06ef6a1eeba03e32b00cea86ca6722cfc744a4b5028ac6f48b0810f4d5",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "f9ce6e68a9d49c6fdfd16f72711e16e6ba6eab8b856dd6fb100b696bd0a06726",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "1e29d858f817456159b47a33521b39ecdb761bc9a050f171de11d41aaa9a6ef0",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "6a5b65159b11e0f6c65c23bcb7c311fed0f38e94e40a9427c7cf58dbf9e67ce2",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "9d6069c2c4191248f7ceeb53ffd73493e6b85771b692082155229d1387c21dd2",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "d51d732700a35e293728e7f3a39393ff4b2c699ea132678f1a8faf17ea350564",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "b25962e1ee601355542baf442f6070add47db44960f536285b90661a324c05ce",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "94ff2b6731aa30d05e1f747a8fbb429e1c226770e6c74ac6588e2881777488e8",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "f9ddcb3684e4ae2336e734d342b860433a8446f55f31ae9501774e352098de15",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "316c3ecd7db8e7ababcbc539ccfccfdab974c4a0dec0265c2330e30e26b3ddea",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "904544404de8f1533c0d5cf25da825ae157a0245d860c7d3772c9d470e953543",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "dbd33e5ed17f77b8fd39b38845b20c8f56b6aa5eb478ae72f6db4fee4fdde922",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "79c56a06ef6a1eeba03e32b00cea86ca6722cfc744a4b5028ac6f48b0810f4d5",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 5,
+      "alternate_index": 50,
+      "state_sha256": "eefad8d4b401eb2b12b76732513f3696a373fd0be7293444271b2f4c66c9fa00",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "fba3d34edd971ded1114499e302a278f5de2c38dcd5cd61f0aca64c1d9ad948f",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "eb0266f0d6e66d103f67cfd85a36c733397190a75fcb672601016d6873f89907",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "f21f52b49b4a9253dbd8a6629e15c71e6e78e2cdad81fd1640c1a5044770b46e",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "d7bf54d725cedc54f43db3eb1be0a4a18839807dc042e0e63dcce3033cdbfcc8",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "6eada7517a3588e7d4115c5601ddb6c60ec9e98eb40839014088089bfeed9ae7",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "0ec212cff85ce4e46afa881f1b1f27faf56bb59504043d84b6224c72d82f9ed3",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "5fb82eafe1089b04cc4d63e8d87a3b6bab4d89cea036853353aed2f4026d545d",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "13f7a188d5e761752faac3ffcf7c1e0a6c5e760f91e6747529d3f3cc97433490",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "aa3a64f0e1e28fda5a7741fa122e95ecc377991733458fde318ef3296f9393c4",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "7b42d2c7c0132c34917f3003e1040640135cdf7e377059eaa6f578a2d1fb0880",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "b8c45ea4c3c725775cbf64732d31cd60083aa18ca1a9bcfb2062ff0208ae0ccc",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "0eefea4e6456e6a1382bc2643bce715b4aaffa9a36376dd90501d045a2936633",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "fba3d34edd971ded1114499e302a278f5de2c38dcd5cd61f0aca64c1d9ad948f",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "eb0266f0d6e66d103f67cfd85a36c733397190a75fcb672601016d6873f89907",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "f21f52b49b4a9253dbd8a6629e15c71e6e78e2cdad81fd1640c1a5044770b46e",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "d7bf54d725cedc54f43db3eb1be0a4a18839807dc042e0e63dcce3033cdbfcc8",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "6eada7517a3588e7d4115c5601ddb6c60ec9e98eb40839014088089bfeed9ae7",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "0ec212cff85ce4e46afa881f1b1f27faf56bb59504043d84b6224c72d82f9ed3",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "5fb82eafe1089b04cc4d63e8d87a3b6bab4d89cea036853353aed2f4026d545d",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "13f7a188d5e761752faac3ffcf7c1e0a6c5e760f91e6747529d3f3cc97433490",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "aa3a64f0e1e28fda5a7741fa122e95ecc377991733458fde318ef3296f9393c4",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "7b42d2c7c0132c34917f3003e1040640135cdf7e377059eaa6f578a2d1fb0880",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "b8c45ea4c3c725775cbf64732d31cd60083aa18ca1a9bcfb2062ff0208ae0ccc",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "0eefea4e6456e6a1382bc2643bce715b4aaffa9a36376dd90501d045a2936633",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 6,
+      "alternate_index": 50,
+      "state_sha256": "7ae45add8d5bbc65fabb8ad1be09719df36e2721e21637f3c544952a7eacc766",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "5100904995b1009e1cd375436dfe2794680781915172920290dc9a7751d91fb9",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "d9305cbf0eac0972b5865b5739038dab3cd5ca5128e59aa831436485ed0efb06",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "cd5483eea1f9c2c8219b3c3023bdf5b9f32afc3b136d7a62b8806dffbe81ad57",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "443652c4f859777db4a2401121cdc0caa439ed90e3e24adfd6b0780b716cd84f",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "154b3c5c69a0a0314e2654b72e82e540e4a31bc6d2477c7c914c5772aeb40a7d",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "ff7e89cc7d04071fa897905b10c0fc4f105e35a67216fb58f86f59ecfb76f825",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "3ff5e63e5be157b4c8f3889c2c33428e351fc94b56cd93aa6c9677df4d8dba6c",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "4bb16a55f95628eef364cd83c405cb8e1a51fdaf726e376fbaf7e4aef8612d4d",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "608a1bb8a43236e87baabfae33f503eb1eb5ec9a5ae20e6ed92a075a881158d1",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "65dd47b1abb667b2616919651b0089b58b61384d49ef7993ddd45a64f64ad886",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "edb8cd848f331ed7b74a9516664fb9674ff857c295b832b5bd4330f5304566b8",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "cbd2ff2c9e4a7d0dd429917f3ef02bb4b3b59c4846a1ab0030f2d611686da94f",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "5100904995b1009e1cd375436dfe2794680781915172920290dc9a7751d91fb9",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "d9305cbf0eac0972b5865b5739038dab3cd5ca5128e59aa831436485ed0efb06",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "cd5483eea1f9c2c8219b3c3023bdf5b9f32afc3b136d7a62b8806dffbe81ad57",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "443652c4f859777db4a2401121cdc0caa439ed90e3e24adfd6b0780b716cd84f",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "154b3c5c69a0a0314e2654b72e82e540e4a31bc6d2477c7c914c5772aeb40a7d",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "ff7e89cc7d04071fa897905b10c0fc4f105e35a67216fb58f86f59ecfb76f825",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "3ff5e63e5be157b4c8f3889c2c33428e351fc94b56cd93aa6c9677df4d8dba6c",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "4bb16a55f95628eef364cd83c405cb8e1a51fdaf726e376fbaf7e4aef8612d4d",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "608a1bb8a43236e87baabfae33f503eb1eb5ec9a5ae20e6ed92a075a881158d1",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "65dd47b1abb667b2616919651b0089b58b61384d49ef7993ddd45a64f64ad886",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "edb8cd848f331ed7b74a9516664fb9674ff857c295b832b5bd4330f5304566b8",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "cbd2ff2c9e4a7d0dd429917f3ef02bb4b3b59c4846a1ab0030f2d611686da94f",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 7,
+      "alternate_index": 50,
+      "state_sha256": "6b95ea5ff3d75baed82b1b5e7958e71aa24f3a2db8e5a0e206933a7e47994918",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "69ed4c2a8aac033c3c88b894626e0ea6ee2faabb7a354e5b7ce0fb47904ef2b0",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "0bcd19b4f064acfd7ddea5266027fc74b0cdaf86bf358df6c8b90a2f3f33e1bf",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "1fd5718780fad70ab5ff903112df8a494a24fad4e7b895286e926a54009068d6",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "ebf499448287fdc5be897b53f9c846461323331d926f8f0775f3ab64f5544df3",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "04d9c3dacf36c5255a16c29d86547ecb83df2041cb0b0462a2bc91242f8a4abe",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "834baa46fa47ca0767a57d0340e55dda3b25e13d94b419f054b17faf9131d8e5",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "2705cbc8351dd30401234af1e42f77fedd16ce745ffd4f749a1789b9a58b33d0",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "d203f2a063897b9fc72a5d5b6ae2be358ffe51446e4a1e489d58c25a1769ba90",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "05543d340905252fc8358cbd12cae27111aedf9067ab696525030430b07524f6",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f1cd78eb64c7bcdfd0fef456f14243d2ee70949d50a8818b86c119381fb2a481",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "6e37e7325351ff1f2aab854d400c15112a34ae6a397cfb76f343f391c2bd8c35",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "b097504ae87a4338309ce4e8fe47bfa8a16e168f2aa2aa4d092135b026a0aa70",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "69ed4c2a8aac033c3c88b894626e0ea6ee2faabb7a354e5b7ce0fb47904ef2b0",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "0bcd19b4f064acfd7ddea5266027fc74b0cdaf86bf358df6c8b90a2f3f33e1bf",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "1fd5718780fad70ab5ff903112df8a494a24fad4e7b895286e926a54009068d6",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "ebf499448287fdc5be897b53f9c846461323331d926f8f0775f3ab64f5544df3",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "04d9c3dacf36c5255a16c29d86547ecb83df2041cb0b0462a2bc91242f8a4abe",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "834baa46fa47ca0767a57d0340e55dda3b25e13d94b419f054b17faf9131d8e5",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "2705cbc8351dd30401234af1e42f77fedd16ce745ffd4f749a1789b9a58b33d0",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "d203f2a063897b9fc72a5d5b6ae2be358ffe51446e4a1e489d58c25a1769ba90",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "05543d340905252fc8358cbd12cae27111aedf9067ab696525030430b07524f6",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "f1cd78eb64c7bcdfd0fef456f14243d2ee70949d50a8818b86c119381fb2a481",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "6e37e7325351ff1f2aab854d400c15112a34ae6a397cfb76f343f391c2bd8c35",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "b097504ae87a4338309ce4e8fe47bfa8a16e168f2aa2aa4d092135b026a0aa70",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 8,
+      "alternate_index": 12,
+      "state_sha256": "4772e860bacdc19931e696496bf4b61ca91d01026f37f17c648ce2d8d7ef8ed2",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "1dccd4d0b24330b2c8c0303aaea36c28c58a6d96c778d2d3f8d96e1e8ec7d31f",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "05f991057b90fe3b716dcb562447cb81e0de6ff1eedff880c97b34aeb78e10e1",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "034379205ab38871315bfb08273f92c6e4114e989f156d3b6857e7fbd60b636b",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "7fce2ea844d0ef35448a7a3cb19b59c62622f57adac1bac5ef5a6d3409c6a9b1",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "d3bc3314b097795cff04c2b5efe11cbf60a7b7e23b617ca512df7562bdabf234",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "35b5a266d5a46f7b15ae1bb8251865659f96bc0eb6bf4b873f326bdc615c657c",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "7ddefad2f3d80fcfad48179e3d85e6e7c574657cfbfee464bbb549b40ca57378",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "f9fa1b9ef7f89f27ba9182d3eb80c39c7ab656c98e33a8fe286b357d5b91fb60",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "eadd5620c7388188309eb27bee3c37e937db1bef7de7cefd047618c14bb63f5d",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "baa3631098a18e7223ad108494e64f971f924d52344a4b2c4c2723052871f42f",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "819a2bf31b299fe528763f278b6f74f9d8748e0d1627662efea4c9b9423f15b4",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "507b27eb122db852e8a9d41ceb552cb01b2878db6550e025c30e3aef4fa3ca9a",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "1dccd4d0b24330b2c8c0303aaea36c28c58a6d96c778d2d3f8d96e1e8ec7d31f",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "05f991057b90fe3b716dcb562447cb81e0de6ff1eedff880c97b34aeb78e10e1",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "034379205ab38871315bfb08273f92c6e4114e989f156d3b6857e7fbd60b636b",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "7fce2ea844d0ef35448a7a3cb19b59c62622f57adac1bac5ef5a6d3409c6a9b1",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "d3bc3314b097795cff04c2b5efe11cbf60a7b7e23b617ca512df7562bdabf234",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "35b5a266d5a46f7b15ae1bb8251865659f96bc0eb6bf4b873f326bdc615c657c",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "7ddefad2f3d80fcfad48179e3d85e6e7c574657cfbfee464bbb549b40ca57378",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "f9fa1b9ef7f89f27ba9182d3eb80c39c7ab656c98e33a8fe286b357d5b91fb60",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "eadd5620c7388188309eb27bee3c37e937db1bef7de7cefd047618c14bb63f5d",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "baa3631098a18e7223ad108494e64f971f924d52344a4b2c4c2723052871f42f",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "819a2bf31b299fe528763f278b6f74f9d8748e0d1627662efea4c9b9423f15b4",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "507b27eb122db852e8a9d41ceb552cb01b2878db6550e025c30e3aef4fa3ca9a",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "task_id": 9,
+      "alternate_index": 50,
+      "state_sha256": "3e5c1fc85cd6623209f0262d1d3f5f02f2607b92ceabdc57b00c7afe4410cb01",
+      "repeat_equal": true,
+      "finite": true,
+      "captures": [
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "6c904ac292ed59d69575fecc44c1f7426ae168c1b480b748aa596a242c39a236",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "8d9c2cf0398783693f1654a55a6ea3974693bec4c6df85df11847d881c15fa11",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "11ebb694ecc368b35cdfb4e3826a3830ae9c6832b4226e6e22b766ac8c37f015",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "b49ab3ae74162c648c109bb5e1b9d4beaa3a4d4ba44483d767dd35c27da843af",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "57e5ce29be7eec93f36124414e9c11c4db1a286f67458c257dfd54058df239ef",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "8c68df17deb07546f1eb1d75d383ef6f6392b9afa7ee4364a064ed1fb5f347a5",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "afa24eb234dcef8bad02639f28436b810d4cd98e5fbe0f4273370c099afd8f6b",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "fd52ddb3f1102917b451c998c024fd215070e4e7195c0fdb3ea88d0a4db534bd",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "41d3fc84c4932a3a45a739dad3bc22b7da3700037f37835ebbf4fce05ed42360",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "5873d7a4ef14ed833491228a08d38f00a14468657f5504be0b177c06fb9f9de9",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "4eae7e8438c80892afe81d4619146b6d8d81376fd32f373aea6dc09f83a38568",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "3f6c73766c5010c0f9fd2db2a171aae465365f075c2ce307909861e9e439f5fb",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        },
+        {
+          "query0": {
+            "agentview_image": {
+              "sha256": "6c904ac292ed59d69575fecc44c1f7426ae168c1b480b748aa596a242c39a236",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "8d9c2cf0398783693f1654a55a6ea3974693bec4c6df85df11847d881c15fa11",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "11ebb694ecc368b35cdfb4e3826a3830ae9c6832b4226e6e22b766ac8c37f015",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "b49ab3ae74162c648c109bb5e1b9d4beaa3a4d4ba44483d767dd35c27da843af",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "57e5ce29be7eec93f36124414e9c11c4db1a286f67458c257dfd54058df239ef",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "8c68df17deb07546f1eb1d75d383ef6f6392b9afa7ee4364a064ed1fb5f347a5",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          },
+          "after_fixed_8": {
+            "agentview_image": {
+              "sha256": "afa24eb234dcef8bad02639f28436b810d4cd98e5fbe0f4273370c099afd8f6b",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eye_in_hand_image": {
+              "sha256": "fd52ddb3f1102917b451c998c024fd215070e4e7195c0fdb3ea88d0a4db534bd",
+              "shape": [
+                256,
+                256,
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_pos": {
+              "sha256": "41d3fc84c4932a3a45a739dad3bc22b7da3700037f37835ebbf4fce05ed42360",
+              "shape": [
+                3
+              ],
+              "finite": true
+            },
+            "robot0_eef_quat": {
+              "sha256": "5873d7a4ef14ed833491228a08d38f00a14468657f5504be0b177c06fb9f9de9",
+              "shape": [
+                4
+              ],
+              "finite": true
+            },
+            "robot0_gripper_qpos": {
+              "sha256": "4eae7e8438c80892afe81d4619146b6d8d81376fd32f373aea6dc09f83a38568",
+              "shape": [
+                2
+              ],
+              "finite": true
+            },
+            "sim_qpos": {
+              "sha256": "3f6c73766c5010c0f9fd2db2a171aae465365f075c2ce307909861e9e439f5fb",
+              "shape": [
+                48
+              ],
+              "finite": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "classification": "fresh_reset_generation_pilot_only",
+  "generation_rule": "seed_all(seed), env.seed(seed), repeated env.reset/get_sim_state",
+  "not_a1_qualified": true,
+  "tasks": [
+    {
+      "task_id": 0,
+      "candidate_index": 0,
+      "generation_seed": 2026093000,
+      "state_sha256": "e09b96bc1a4dc042899e3b7c84e12fe2b53db3a7d76f1214bc0384b7a4f4e103",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 0,
+      "candidate_index": 1,
+      "generation_seed": 2026093000,
+      "state_sha256": "27351806d10a38f3f2c134fa7bd20423c493f0a3a43c9af10f96e0004a34a018",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 1,
+      "candidate_index": 0,
+      "generation_seed": 2026093001,
+      "state_sha256": "a31897394f812b58917bbb064bc651fc0abf90a6398df9449bbb8d612186f035",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 1,
+      "candidate_index": 1,
+      "generation_seed": 2026093001,
+      "state_sha256": "b14675dbff87310921435036de51896bea2855cd093960a2f535fdeb3d7aafde",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 2,
+      "candidate_index": 0,
+      "generation_seed": 2026093002,
+      "state_sha256": "c851dd7f5bfc4e6b32fe63218799dddede905ca8e8b8505a5b4aec5dad342266",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 2,
+      "candidate_index": 1,
+      "generation_seed": 2026093002,
+      "state_sha256": "c4b93c6051e34d2a3acb90e44d355d2ff308256d9c535ef3c665f532599c133e",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 3,
+      "candidate_index": 0,
+      "generation_seed": 2026093003,
+      "state_sha256": "fa6c6fcf1132a47420be8a6dd82fe9eceaac35e9cc4b7dbd16e115e548728750",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 3,
+      "candidate_index": 1,
+      "generation_seed": 2026093003,
+      "state_sha256": "5d4666cdd4ac45f87c52de328b811b0af9e0b703bc078b1bd34a6c2daf088639",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 4,
+      "candidate_index": 0,
+      "generation_seed": 2026093004,
+      "state_sha256": "f6a636997d321106da2b502adc8514b19922e622b00598f5f046e5f307c098e6",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 4,
+      "candidate_index": 1,
+      "generation_seed": 2026093004,
+      "state_sha256": "7f9c355e3e90f48c743d09ba4020d3424145d61a67c185cb73cc1caac954f04d",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 5,
+      "candidate_index": 0,
+      "generation_seed": 2026093005,
+      "state_sha256": "ab2f55f2fa5187bc982b2a2d3216bbf93fa4bbbc081c33f84b4b862ddde20234",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 5,
+      "candidate_index": 1,
+      "generation_seed": 2026093005,
+      "state_sha256": "58dfdee47dcd3e2233ae1a61a596f90bd0c20db8887a3c44c2dde09c8e1403fa",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 6,
+      "candidate_index": 0,
+      "generation_seed": 2026093006,
+      "state_sha256": "b1bd04e2bd817fe229e47c68d63a137d91baf75efefb863d2fc328036a7a984c",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 6,
+      "candidate_index": 1,
+      "generation_seed": 2026093006,
+      "state_sha256": "c729f7bfb713d32365868068e46a62f2939e4829b838909bf7e5f45b9126f2a6",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 7,
+      "candidate_index": 0,
+      "generation_seed": 2026093007,
+      "state_sha256": "cf15611cf48b52e9816dc7ff0813374cc4860f3123add072f420ec1b1e692077",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 7,
+      "candidate_index": 1,
+      "generation_seed": 2026093007,
+      "state_sha256": "50acff76672a40e16dde203e27a25081cd8e24ac5cb6cb7674b957de46ce3c30",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 8,
+      "candidate_index": 0,
+      "generation_seed": 2026093008,
+      "state_sha256": "62f81cb66cdccf91dd16bc7406e44786c7b433868fe495d2e52ff41df7ccddd9",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 8,
+      "candidate_index": 1,
+      "generation_seed": 2026093008,
+      "state_sha256": "5f2b03787b37b919634f310a9b84a479a46ce22069cdfa89ab94f10990b2d036",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 9,
+      "candidate_index": 0,
+      "generation_seed": 2026093009,
+      "state_sha256": "4187893a804d74e2a7e3598e3281f50c30844e578c1658a193767eaf6b40eae4",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    },
+    {
+      "task_id": 9,
+      "candidate_index": 1,
+      "generation_seed": 2026093009,
+      "state_sha256": "bfd648ba64f4800e967d9dd0689da03d84c5f0c7dac2b942e8027d631d844b0e",
+      "official_exact_overlap": false,
+      "initial_success": false,
+      "success_after_wait": false,
+      "finite": true,
+      "shape": [
+        92
+      ]
+    }
+  ]
+}
