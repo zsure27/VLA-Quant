@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "a1-110-envseed1-10-19-20260929",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "READY_FOR_CLOSURE",
+  "stages": [
+    {"id":"C0", "command":["bash","/root/autodl-tmp/qvla-repro/control/a1-110-envseed1-20260929/run_a1_envseed1_shard.sh","C0","10","10"], "cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"C3", "command":["bash","/root/autodl-tmp/qvla-repro/control/a1-110-envseed1-20260929/run_a1_envseed1_shard.sh","C3","10","10"], "cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"C2", "command":["bash","/root/autodl-tmp/qvla-repro/control/a1-110-envseed1-20260929/run_a1_envseed1_shard.sh","C2","10","10"], "cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"C1", "command":["bash","/root/autodl-tmp/qvla-repro/control/a1-110-envseed1-20260929/run_a1_envseed1_shard.sh","C1","10","10"], "cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"},
+    {"id":"BF16", "command":["bash","/root/autodl-tmp/qvla-repro/control/a1-110-envseed1-20260929/run_a1_envseed1_bf16_v3.sh","10","10"], "cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}

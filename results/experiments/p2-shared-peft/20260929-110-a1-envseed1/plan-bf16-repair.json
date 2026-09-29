@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "a1-110-envseed1-bf16-repair-20260929",
+  "control_root": "/root/autodl-tmp/qvla-repro/control",
+  "terminal_state": "READY_FOR_CLOSURE",
+  "stages": [
+    {"id":"BF16-repair-v2", "command":["bash","/root/autodl-tmp/qvla-repro/control/a1-110-envseed1-20260929/run_a1_envseed1_bf16_v2.sh","BF16","5","5"], "cwd":"/root/autodl-tmp/VLA-Quant-p2c-20260925"}
+  ]
+}
