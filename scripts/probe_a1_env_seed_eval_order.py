@@ -93,6 +93,7 @@ def main():
         task = suite.get_task(task_id)
         initial_state = np.asarray(suite.get_task_init_states(task_id)[args.reset])
         pair = {str(seed): capture(task, initial_state, task_id, args.reset, seed) for seed in (0, 1)}
+        repeats = {str(seed): capture(task, initial_state, task_id, args.reset, seed) for seed in (0, 1)}
         rows.append({
             "task_id": task_id,
             "reset_id": args.reset,
@@ -101,6 +102,13 @@ def main():
             "env_seed_1": pair["1"]["derived_env_seed"],
             "query0_difference": compare(pair["0"]["query0"], pair["1"]["query0"]),
             "after_fixed_8_difference": compare(pair["0"]["after_fixed_8"], pair["1"]["after_fixed_8"]),
+            "within_seed_repeat": {
+                seed: {
+                    "query0": compare(pair[seed]["query0"], repeats[seed]["query0"]),
+                    "after_fixed_8": compare(pair[seed]["after_fixed_8"], repeats[seed]["after_fixed_8"]),
+                }
+                for seed in ("0", "1")
+            },
             "query0_hashes": {seed: {key: value["sha256"] for key, value in p["query0"].items()} for seed, p in pair.items()},
         })
 

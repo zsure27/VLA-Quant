@@ -1,6 +1,6 @@
 # Research Governor v2 对齐：先复现共享恢复，再讨论路由
 
-更新：2026-09-29。本文将本轮上传的 Research Governor 落到当前仓库证据上；执行前以本轮 [A1 PRE-RUN CARD](../reports/experiments/p2-shared-peft/20260929-a1-evaluation-replication/PRE_RUN_CARD_CN.md) 的门禁为准。当前只规划 A1，**未放行 GPU 实验**。
+更新：2026-09-29。本文保留 A1 运行前的研究设计；实际执行后已判为 `A1_INVALID_CONDITION`，不得再按下文原种子方案启动 GPU。原因、450 回合结果和停止决定见[110 A1 审计](../reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/README_CN.md)。以后必须先通过[真实评测顺序的烟雾门禁](EVALUATION_SMOKE_GATE_20260929_CN.md)，再考虑新版本 A1。
 
 ## 1. 目前可以说什么
 

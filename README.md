@@ -1,10 +1,12 @@
 # VLA 快速量化与微调：个人实验备份
 
-保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-28**。
+保存 OpenVLA-OFT 低比特量化的代码、配置、日志、结果数据与分析，用于复核已完成实验和恢复后续运行。最新实测截止北京时间 **2026-09-29**。
 
 后续每项实验在启动前先执行[研究方向自纠偏门禁](docs/VLA_RESEARCH_GOVERNOR_20260926.txt)，生成可核对的 pre-run card；结束后保存 post-run decision，再决定下一项。[当前阶段纠偏决定](docs/RESEARCH_DIRECTION_CORRECTION_20260927_CN.md)解释了 P2.5 的因果问题与门禁。仓库根目录 `AGENTS.md` 将此设为持续工作规则。
 
 运行中的实例使用服务器顺序执行器和约 15 分钟的低频静默心跳；阶段结束及时接续，收尾关机后暂停心跳。不得靠反复唤醒对话计时。完整约定见[自适应实验与备份分析协议](docs/ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)和[运行入口](scripts/README_CN.md)。
+
+长闭环评测在执行前还必须通过[低成本烟雾门禁](docs/EVALUATION_SMOKE_GATE_20260929_CN.md)：真实评测顺序的无模型重复探针、配对策略微型闭环、首片复核依次通过后才扩展长片。
 
 ## 实验记录入口
 
@@ -17,6 +19,8 @@
 [各轮记录](reports/README_CN.md)保存当轮数据与分析；[原始结果](results/README_CN.md)保存console、命令、manifest和逐回合指标。[精确重复文件清单](results/indexes/DEDUPLICATED_FILES_20260922.json)给出移除文件与规范副本的 SHA256 映射。较早的[分析归档](reports/archive/20260916-weekend-review/)保留历史证据，旧状态不覆盖最新结论。
 
 ## 当前结果
+
+**2026-09-29 更新：**学生状态重标的 C3 rank8 Recovery-LoRA 在 12L 混精底座、未参与该候选训练的开发初态5–49上得到 `389/450`，同条件 C0 为 `368/450`、静态14L为 `388/450`；任务1/5收益集中，任务3/6/7退步。随后110的 `env_seed=1` 重跑虽得到相同数字，但真实评测顺序下没有建立新的策略可见条件，判为 `A1_INVALID_CONDITION`，**不计独立复现**。详见[107的C3结果](reports/experiments/p2-shared-peft/20260929-107-p25-student-state80-distill/POST_RUN_ANALYSIS_CN.md)与[110的A1审计](reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/README_CN.md)。下表中的旧 data80 LoRA 结果为不同训练方案的历史负基线，不能覆盖 C3，也不能与新候选的450回合相加。
 
 | 配置 | 成功回合 | 评估范围 |
 |---|---:|---|
