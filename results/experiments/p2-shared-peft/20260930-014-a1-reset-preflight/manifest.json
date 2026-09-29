@@ -2,8 +2,12 @@
   "schema_version": 1,
   "phase": "A1_RESET_PREFLIGHT",
   "gate": "HOLD_CONDITION",
+  "gpu_episodes_completed": 0,
+  "bf16_attempt_exit_code": 2,
   "host": "autodl-container-3fbf46b812-2fdd6883",
   "source": "/root/autodl-tmp/qvla-repro/artifacts/a1-014-preflight-20260930",
+  "persistent_archive": "/root/autodl-tmp/qvla-repro/backups/20260930-014-a1-reset-preflight-final-033429-852d350",
+  "session_results_tar_sha256": "5559bb07a6d016a933b549b5678fa3f5c02e56cea2883451089212eacac04681",
   "files": [
     {
       "path": "fresh_reset_generation_pilot.json",
@@ -34,6 +38,31 @@
       "path": "unpruned_state_inventory.json",
       "bytes": 123147,
       "sha256": "dbf9a3305c27bd009c38bef1ea92715e8d27cd531bc34efc5ec8afb63b07f253"
+    },
+    {
+      "path": "bf16-failed-attempt/command.txt",
+      "bytes": 839,
+      "sha256": "eb9d3b06435e7c7926cb409cfa4da5b553a4f09b8a76c527ad77d462d9445da3"
+    },
+    {
+      "path": "bf16-failed-attempt/console.log",
+      "bytes": 5414,
+      "sha256": "c00c2e59f95591930aa0ae7dddfde8d38c1ae014bc029faa497c260d62f205e1"
+    },
+    {
+      "path": "bf16-failed-attempt/exit_code.txt",
+      "bytes": 2,
+      "sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+    },
+    {
+      "path": "bf16-failed-attempt/material_sha256_after.txt",
+      "bytes": 2063,
+      "sha256": "bd1749e5f94cdd876dd345c646783c6e52687441795a01a930bff5d591c76cd7"
+    },
+    {
+      "path": "bf16-failed-attempt/material_sha256_before.txt",
+      "bytes": 2063,
+      "sha256": "bd1749e5f94cdd876dd345c646783c6e52687441795a01a930bff5d591c76cd7"
     },
     {
       "path": "fresh-reset-pilot/task-00.npy",

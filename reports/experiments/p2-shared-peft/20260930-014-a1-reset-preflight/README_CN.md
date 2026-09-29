@@ -14,10 +14,14 @@
 
 ## 当前 gate 与下一步
 
-`A1_GATE=HOLD_CONDITION`。本轮先用冻结 BF16 对新条件 index 0/任务做 10 回合任务有效性微型诊断；其结果不用于从两条候选里挑选有利于 C3 的状态。只有任务有效性、真实命令/文件 SHA、query0 输入与动作 trace 全部核验，才会运行 C0/C3 每任务 1 个 reset 的严格配对微型闭环。微型闭环合格后，仍须预注册独立条件、完整样本量、配对区间和成本，首片最多 50/配置设硬门禁；未获放行不排队长片。不得将离线差异、BF16 成功率或旧 `env_seed` 数值变化写成 C3 独立收益。
+`A1_GATE=HOLD_CONDITION`。本轮预注册先用冻结 BF16 对新条件 index 0/任务做 10 回合任务有效性微型诊断；其结果不用于从两条候选里挑选有利于 C3 的状态。**该阶段未进入任何回合，退出码 2。**启动脚本没有把冻结 OFT overlay 放入 `PYTHONPATH`，实际导入旧版评测入口；模型加载后在解析 `--initial_state_offset 0` 时被拒，`policy-queries.jsonl` 为 0 字节、GPU 已空闲。这是环境入口错误，不能记为 BF16 的任务失败或成功。原命令、两份相同的物料 SHA、控制台错误和退出码均已保留在服务器 `bf16-failed-attempt/`。
+
+已把冻结 OFT overlay 加入未来重跑脚本的 `PYTHONPATH`，并以 CPU 独立断言实际导入路径为 `/root/autodl-tmp/qvla-repro/overlays/awq-p0-stage-20260923/oft/experiments/robot/libero/run_libero_eval.py`，其配置确含 `initial_state_offset`；断言通过。修复脚本保留为 `run_bf16_validity_retry1.sh`，**本轮未重跑**。五小时额度于门限检查时仅剩 14%，遂按约定停止扩展并归档。下次开机可从同一冻结状态、同一 10 回合诊断开始，仍须核对当轮实例及实时额度。
+
+只有后续任务有效性、真实命令/文件 SHA、query0 输入与动作 trace 全部核验，才会运行 C0/C3 每任务 1 个 reset 的严格配对微型闭环。微型闭环合格后，仍须预注册独立条件、完整样本量、配对区间和成本，首片最多 50/配置设硬门禁；未获放行不排队长片。不得将离线差异、BF16 成功率或旧 `env_seed` 数值变化写成 C3 独立收益。
 
 本轮另为量化评测入口增加 `--a1-reset-dir`，使冻结 `.npy` 直接替换初态读取；未使用旧专家示范 JSON 的 `success` 字段来伪造专家成功。该改动不改变模型、量化 profile、动作语义或 8 步 chunk。新入口代码已在 014 编译通过，SHA256 `b4efd426d521e0e44438df48b4e8aba39280d9e4c3160e0ac8ca1913d87207b6`。
 
 ## 归档范围和局限
 
-服务器原始审计与生成文件位于 `/root/autodl-tmp/qvla-repro/artifacts/a1-014-preflight-20260930/`；小型结构化数据与 20 个候选状态在同名 `results/experiments/p2-shared-peft/20260930-014-a1-reset-preflight/`。完整持久盘归档和本机副本在最终收尾后补入 SHA 路径。截止本段编写时，无新 C0/C3 配对收益可报告；不能把门禁前置检查当作 A1 复现。
+服务器原始审计与生成文件位于 `/root/autodl-tmp/qvla-repro/artifacts/a1-014-preflight-20260930/`；小型结构化数据与 20 个候选状态在同名 `results/experiments/p2-shared-peft/20260930-014-a1-reset-preflight/`。完整归档为 `/root/autodl-tmp/qvla-repro/backups/20260930-014-a1-reset-preflight-final-033429-852d350/`，本机副本为 `backups/experiments/p2-shared-peft/20260930-014-a1-state-source-preflight/20260930-014-a1-reset-preflight-final-033429-852d350/`；两端清单 10/10 文件 SHA 核验通过，`session-results.tar.gz` SHA256 为 `5559bb07a6d016a933b549b5678fa3f5c02e56cea2883451089212eacac04681`。大模型与校准原件留在服务器持久盘，未放入普通 Git；具体见归档 `LARGE_FILES_NOT_IN_GIT.json`。**本轮无完成的 GPU episode、无 C0/C3 配对收益、无 A1 复现证据。**预检阻止了再一次环境错误下的长运行。
