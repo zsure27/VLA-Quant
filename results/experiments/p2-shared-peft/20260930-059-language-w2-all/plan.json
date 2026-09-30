@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20260930-059-language-w2-all",
+  "status": "PREREGISTERED_BEFORE_GPU_SMOKE",
+  "machine": "059",
+  "backbone": "awq-w2a16-12l-mixed-spatial-v1",
+  "research_question": "Does rank-8 Recovery-LoRA over all eligible language W2 blocks improve paired closed-loop outcomes over same-condition C0 and C3, with measured rescue, break and cost?",
+  "single_treatment": "language_target_scope=all_W2_blocks_0-7_16-19_24-31; rank8 on Q/K/V/O and MLP gate/up/down",
+  "interpretation": "scope expansion necessarily increases adapter capacity; estimate total engineering effect, not an isolated coverage effect",
+  "fixed_training": {
+    "distribution": "existing student-state80 observations from train resets 0-3",
+    "labels": "frozen BF16 teacher on identical serialized observations",
+    "response_svd": "peft_train calibration80 only",
+    "optimizer": "AdamW",
+    "steps": 1000,
+    "learning_rate": 0.0001,
+    "loss": "SmoothL1 beta=0.1, uniform 8x7 action",
+    "seed": 7,
+    "action_chunk": 8
+  },
+  "evaluation": {
+    "conditions": ["C0_exact12L", "C3_blocks18_19_r8", "language_w2_all_r8", "BF16", "full_AWQ_W4"],
+    "tasks": 10,
+    "official_reset_indices": "20-49 inclusive",
+    "episodes_per_condition": 300,
+    "model_seed": 0,
+    "env_seed": 1,
+    "seed_protocol": "paired",
+    "classification": "DEVELOPMENT_STRESS_REUSED_INITIAL_STATES",
+    "offline_final_holdout_touched": false,
+    "smoke": "same-condition evaluator-input repeat, 10 paired policy episodes per condition, then fixed first shard offsets20-24=50 episodes per condition hard protocol gate; offsets25-49 only after protocol review"
+  },
+  "primary_metrics": ["success", "rescue", "break", "net", "task-cluster paired bootstrap 95% CI", "exact McNemar", "per-task net and worst task", "parameters", "adapter bytes", "training time", "peak VRAM", "8-step inference latency"],
+  "progression_gate_to_LV": {
+    "wide_vs_C0_net_min_pp": 5,
+    "wide_vs_C0_ci_lower_gt": 0,
+    "wide_vs_C3_net_min_pp": 3,
+    "wide_vs_C3_ci_lower_gt": 0,
+    "max_per_task_loss_vs_C3_successes_per_30": 2,
+    "must_report_rescue_and_break": true
+  },
+  "prohibitions": ["no new adapter variants", "no rank sweep", "no vision LoRA before L gate", "no W2 backbone experiment before 12L recovery gate", "no Router/P4/P5", "no static W4 search", "no offline_final_holdout"],
+  "expected_artifacts": {
+    "server_persistent": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20260930-059-language-w2-all/",
+    "server_control": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930/",
+    "local_backup": "backups/experiments/p2-shared-peft/20260930-059-language-w2-all/",
+    "report": "reports/experiments/p2-shared-peft/20260930-059-language-w2-all/",
+    "results": "results/experiments/p2-shared-peft/20260930-059-language-w2-all/"
+  }
+}

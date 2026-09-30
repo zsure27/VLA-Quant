@@ -547,9 +547,12 @@ def main():
     if bool(residual_layers) != bool(args.awq_residual_rank):
         p.error("Residual recovery requires rank and layers together")
     if args.awq_recovery_lora_state is not None:
-        if (residual_layers != {18, 19} or args.awq_residual_rank != 8 or
+        from qvla.run_eval_official_quant import RECOVERY_LORA_ALLOWED_LANGUAGE_W2_LAYERS
+        if (not residual_layers or
+                not residual_layers <= RECOVERY_LORA_ALLOWED_LANGUAGE_W2_LAYERS or
+                args.awq_residual_rank != 8 or
                 args.awq_residual_train_steps or args.awq_e2e_distill_steps):
-            p.error("A serialized Recovery-LoRA state is evaluation-only and pinned to rank8 blocks18-19")
+            p.error("A serialized Recovery-LoRA state is evaluation-only, rank8, and limited to language W2 blocks")
         if not args.awq_recovery_lora_state.is_file():
             p.error("Recovery-LoRA state does not exist")
     if (args.awq_residual_calibration_dir is not None or args.awq_residual_token_scope != "all") and not (residual_layers or scale_peft_layers):
@@ -875,7 +878,10 @@ def main():
         e2e_summary = None
         if args.awq_recovery_lora_state is not None:
             from qvla.run_eval_official_quant import load_recovery_lora_state
-            payload = load_recovery_lora_state(args.awq_recovery_lora_state)
+            payload = load_recovery_lora_state(
+                args.awq_recovery_lora_state,
+                expected_layers=residual_layers,
+            )
             named_parameters = dict(model.named_parameters())
             for name, value in payload.items():
                 if name not in named_parameters:

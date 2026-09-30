@@ -6,6 +6,7 @@ import json
 import os
 import sys
 import hashlib
+import re
 from pathlib import Path
 from typing import Any
 
@@ -155,19 +156,49 @@ def load_scale_peft_state(path: Path) -> dict[str, torch.Tensor]:
     return payload
 
 
-def load_recovery_lora_state(path: Path) -> dict[str, torch.Tensor]:
+RECOVERY_LORA_ALLOWED_LANGUAGE_W2_LAYERS = frozenset(
+    (*range(0, 8), *range(16, 20), *range(24, 32))
+)
+
+
+def load_recovery_lora_state(
+    path: Path,
+    expected_layers: set[int] | frozenset[int] | None = None,
+) -> dict[str, torch.Tensor]:
     payload = torch.load(path, map_location="cpu", weights_only=True)
+    key_pattern = re.compile(
+        r"^language_model\.model\.layers\.(\d+)\."
+        r"(?:self_attn\.(?:q_proj|k_proj|v_proj|o_proj)|"
+        r"mlp\.(?:gate_proj|up_proj|down_proj))\."
+        r"awq_recovery_lora\.[01]\.weight$"
+    )
+    if not isinstance(payload, dict) or not payload:
+        raise RuntimeError("Recovery-LoRA state must be a non-empty tensor mapping")
+    target_layers: set[int] = set()
+    for name in payload:
+        match = key_pattern.fullmatch(name) if isinstance(name, str) else None
+        if match is None:
+            raise RuntimeError(f"Invalid Recovery-LoRA state key: {name}")
+        target_layers.add(int(match.group(1)))
+    if not target_layers <= RECOVERY_LORA_ALLOWED_LANGUAGE_W2_LAYERS:
+        invalid = sorted(target_layers - RECOVERY_LORA_ALLOWED_LANGUAGE_W2_LAYERS)
+        raise RuntimeError(f"Recovery-LoRA may target only language W2 blocks: {invalid}")
+    if expected_layers is not None and target_layers != set(expected_layers):
+        raise RuntimeError(
+            f"Recovery-LoRA layer mismatch: expected={sorted(expected_layers)}, "
+            f"actual={sorted(target_layers)}"
+        )
     families = (
         "self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
         "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj",
     )
     expected = {
         f"language_model.model.layers.{layer}.{family}.awq_recovery_lora.{index}.weight"
-        for layer in (18, 19) for family in families for index in (0, 1)
+        for layer in target_layers for family in families for index in (0, 1)
     }
-    if not isinstance(payload, dict) or set(payload) != expected:
-        missing = sorted(expected - set(payload)) if isinstance(payload, dict) else sorted(expected)
-        extra = sorted(set(payload) - expected) if isinstance(payload, dict) else []
+    if set(payload) != expected:
+        missing = sorted(expected - set(payload))
+        extra = sorted(set(payload) - expected)
         raise RuntimeError(f"Recovery LoRA state key mismatch: missing={missing}, extra={extra}")
     for name, value in payload.items():
         if not isinstance(value, torch.Tensor) or not value.is_floating_point() or not torch.isfinite(value).all():
