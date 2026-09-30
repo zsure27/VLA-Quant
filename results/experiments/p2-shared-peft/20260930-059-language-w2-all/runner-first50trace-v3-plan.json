@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-language-w2-all-first50trace-v3-059-20260930",
+  "control_root": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id": "first50trace-c0-v3", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all_v3.sh", "eval", "C0", "20", "5", "first50trace"]},
+    {"id": "first50trace-c3-v3", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all_v3.sh", "eval", "C3", "20", "5", "first50trace"]},
+    {"id": "first50trace-wide-language-v3", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all_v3.sh", "eval", "LW", "20", "5", "first50trace"]},
+    {"id": "first50trace-bf16-v3", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all_v3.sh", "eval", "BF16", "20", "5", "first50trace"]},
+    {"id": "first50trace-full-w4-v3", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all_v3.sh", "eval", "W4", "20", "5", "first50trace"]}
+  ]
+}
