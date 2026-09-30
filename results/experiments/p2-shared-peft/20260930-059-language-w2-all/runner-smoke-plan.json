@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-language-w2-all-smoke-059-20260930",
+  "control_root": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {
+      "id": "train-structure-smoke-10",
+      "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930",
+      "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "train", "10"]
+    }
+  ]
+}

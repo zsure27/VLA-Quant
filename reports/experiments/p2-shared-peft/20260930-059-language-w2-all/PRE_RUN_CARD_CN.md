@@ -22,6 +22,7 @@
 | checkpoint shard 2 | `a00a7c5f2b6586ccfc89c693a9c36f3552ff455ff2b1bfea3e92642e4cd2b6d3` |
 | checkpoint shard 3 | `a894b7230a08b471af55c57dd7385fd3b51fae2c4d9307a36a8017ef57abf22a` |
 | checkpoint shard 4 | `a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60` |
+| exact-12L backbone config | `awq_w2a16_12l_mixed_spatial_v1.json` `a30d68788bc2aa101ffa4f46d76def7d93b4402fd293db704a305cf254d2d35c` |
 | base W2 profile | `4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc` |
 | full AWQ W4 profile | `ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4` |
 | primary vision G64 W2 profile | `947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8` |
@@ -38,6 +39,10 @@
 | action preparation source | `action_jacobian_batch.py` `9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886` |
 | preregistered experiment launcher | `run_20260930_059_language_w2_all.sh` SHA `f409988e409c78fcc11b0899abf441956bb8fae4f6308083dd8fcee5a7ae380e` |
 | training smoke verifier | `verify_20260930_059_lora_training_smoke.py` SHA `933135923a2df065b639b7a57b85240f45b8096c6eb44c8f2e3463b78b46dc88` |
+| immutable smoke plan | `runner-smoke-plan.json` SHA `8b91a96e1b7960de71f9f7c16c0e1ed9ad26fc73c6e5ab086719027e98f9889a` |
+| immutable full-train/micro plan | `runner-micro-plan.json` SHA `5435c0a0bf8c08b92c9a26ff1b59c090ee315ce3eedf9885454139a582423293` |
+| immutable first-50 hard-gate plan | `runner-first50-plan.json` SHA `982dc4d795a355157f60efd53247025ab10ff8b7fe52b0df1ef9d4f07a4c8615` |
+| immutable remaining-250 plan | `runner-remaining250-plan.json` SHA `bf7072ad55cc8f4f8ed93e06ab382fcda54cdbbf19b2d9e3ff0ec04d58a8d748` |
 
 配置来源：仓库 `configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json`；视觉 DINO W2/G64、SigLIP W2/G128；语言 blocks 8–15 与 20–23 为 W4，其余 W2；保护模块保持高精度。`w4.pt` profile 覆盖 422 个线性模块（视觉198、语言224），作为完整 W4 条件参照。BF16 使用已验证的 same-loader 命令 `--weight-bits 4 --profile w4.pt --awq-scope none`，因此并不应用 W4 量化；W4 对照使用同一 profile 且 `--awq-scope all`。训练样本为现有 80 个 student-visited 训练 reset0–3 观测；与评测 reset20–49 不重叠。Response-SVD 校准只来自 `peft_train` 80。不得重做或混入其他数据。
 

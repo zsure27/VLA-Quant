@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-language-w2-all-remaining250-059-20260930",
+  "control_root": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930",
+  "terminal_state": "READY_FOR_CLOSURE",
+  "stages": [
+    {"id": "remaining250-c0", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "C0", "25", "25", "remaining250"]},
+    {"id": "remaining250-c3", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "C3", "25", "25", "remaining250"]},
+    {"id": "remaining250-wide-language", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "LW", "25", "25", "remaining250"]},
+    {"id": "remaining250-bf16", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "BF16", "25", "25", "remaining250"]},
+    {"id": "remaining250-full-w4", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "W4", "25", "25", "remaining250"]}
+  ]
+}

@@ -14,6 +14,12 @@
     "training_smoke_verifier_sha256": "933135923a2df065b639b7a57b85240f45b8096c6eb44c8f2e3463b78b46dc88",
     "official_rollout_sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
   },
+  "immutable_runner_plans": {
+    "smoke": {"file": "runner-smoke-plan.json", "sha256": "8b91a96e1b7960de71f9f7c16c0e1ed9ad26fc73c6e5ab086719027e98f9889a"},
+    "train_and_micro": {"file": "runner-micro-plan.json", "sha256": "5435c0a0bf8c08b92c9a26ff1b59c090ee315ce3eedf9885454139a582423293"},
+    "first50_gate": {"file": "runner-first50-plan.json", "sha256": "982dc4d795a355157f60efd53247025ab10ff8b7fe52b0df1ef9d4f07a4c8615"},
+    "remaining250": {"file": "runner-remaining250-plan.json", "sha256": "bf7072ad55cc8f4f8ed93e06ab382fcda54cdbbf19b2d9e3ff0ec04d58a8d748"}
+  },
   "fixed_training": {
     "distribution": "existing student-state80 observations from train resets 0-3",
     "labels": "frozen BF16 teacher on identical serialized observations",
