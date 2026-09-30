@@ -1,0 +1,85 @@
+{
+  "gate": "PASS_FIRST_SHARD_PROTOCOL",
+  "claim": "development condition only; outcome estimate inconclusive",
+  "episodes_per_case": 50,
+  "successes": {
+    "C0": 42,
+    "C3": 45
+  },
+  "rescue": 4,
+  "break": 1,
+  "net": 3,
+  "task_stratified_bootstrap_95ci_fraction": [
+    -0.02,
+    0.14
+  ],
+  "exact_mcnemar_p": 0.375,
+  "per_task": {
+    "0": {
+      "C0": 5,
+      "C3": 5,
+      "rescue": 0,
+      "break": 0
+    },
+    "1": {
+      "C0": 0,
+      "C3": 1,
+      "rescue": 1,
+      "break": 0
+    },
+    "2": {
+      "C0": 5,
+      "C3": 5,
+      "rescue": 0,
+      "break": 0
+    },
+    "3": {
+      "C0": 5,
+      "C3": 5,
+      "rescue": 0,
+      "break": 0
+    },
+    "4": {
+      "C0": 5,
+      "C3": 5,
+      "rescue": 0,
+      "break": 0
+    },
+    "5": {
+      "C0": 3,
+      "C3": 5,
+      "rescue": 2,
+      "break": 0
+    },
+    "6": {
+      "C0": 4,
+      "C3": 5,
+      "rescue": 1,
+      "break": 0
+    },
+    "7": {
+      "C0": 5,
+      "C3": 4,
+      "rescue": 0,
+      "break": 1
+    },
+    "8": {
+      "C0": 5,
+      "C3": 5,
+      "rescue": 0,
+      "break": 0
+    },
+    "9": {
+      "C0": 5,
+      "C3": 5,
+      "rescue": 0,
+      "break": 0
+    }
+  },
+  "source_sha256": {
+    "backups\\experiments\\p2-shared-peft\\20260930-035-c0-c3-envseed1-micro\\a1-035-c0-c3-envseed1-micro-20260930\\paired-episodes.jsonl": "087a546b341feb3800e686e368f109d859861ed0ca9d1141e05b634e7fc0ae78",
+    "backups\\experiments\\p2-shared-peft\\20260930-035-envseed1-first50-tail40\\a1-035-envseed1-first50-tail40-20260930\\paired-episodes.jsonl": "1a0212ef1310c1e2bd6c66e6e3b95f97a70644535759e51ba1cd45d5f8c4d02c"
+  },
+  "no_duplicate_task_reset": true,
+  "tail40_protocol_audit": "40/40 first-query observations equal; 40/40 first actions different; all queries finite and 8-step chunks; before/after material SHA equal"
+}

@@ -1,0 +1,18 @@
+{
+  "plan_id": "a1-035-envseed1-10-19-20260930",
+  "status": "PRE_REGISTERED",
+  "gate_source": "a1-035-envseed1-first50-tail40-20260930",
+  "question": "Does frozen C3 retain paired rescue-minus-break under the corrected observable env_seed=1 condition on the next fixed development shard?",
+  "task_ids": "00-09",
+  "official_reset_indices": "10-19",
+  "episodes_per_case": 100,
+  "cases": ["C0", "C3"],
+  "model_seed": 0,
+  "env_seed": 1,
+  "backbone": "exact 12L AWQ W2A16 mixed",
+  "adapter": "frozen C3 rank8 Recovery-LoRA blocks18-19",
+  "evaluation_helper": "corrected model seed then environment seed",
+  "protocol_gate": ["pre/post SHA identical", "100 complete episodes per case", "strict task/reset/seed/state pairing", "no overlap with prior reset5-9", "first-query observation/action traces", "no episode errors"],
+  "next_stage": "analyze gate before any later fixed shard; no automatic long extension",
+  "classification": "development condition; no independent final holdout claim"
+}
