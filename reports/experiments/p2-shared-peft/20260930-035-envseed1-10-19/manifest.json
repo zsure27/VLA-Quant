@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "session": "20260930-035-envseed1-10-19",
+  "files": [
+    {
+      "path": "reports/experiments/p2-shared-peft/20260930-035-envseed1-10-19/POST_RUN_ANALYSIS_CN.md",
+      "bytes": 8110,
+      "sha256": "acd046cf004534d5d6329b2cf99c522f59ad6ea7bf66a4b3d7e7f0ed5b1a9580"
+    },
+    {
+      "path": "reports/experiments/p2-shared-peft/20260930-035-envseed1-10-19/PRE_RUN_CARD_CN.md",
+      "bytes": 1427,
+      "sha256": "aec995cf3d9f751705ca9563956d052ef2488972043eca40f1db6d41f7cdbfa5"
+    },
+    {
+      "path": "reports/experiments/p2-shared-peft/20260930-035-envseed1-10-19/manifest.py",
+      "bytes": 1643,
+      "sha256": "60ef8e3362fe6632241b4d0ab1cead0b8aeb23f6cd84600b552993277bb8fba1"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/SHA256SUMS.txt",
+      "bytes": 518,
+      "sha256": "05853cd317547990fcd64a01493d10679fe4fc5f6e4aebaa095eb7ffa21f7766"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/combined150-analysis.json",
+      "bytes": 2288,
+      "sha256": "d4447173ceba741c51f95b74548c1ac7f388b8ce9d6dbd28619125f57769c4bd"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/paired-episodes-150.jsonl",
+      "bytes": 28436,
+      "sha256": "2ac68c6682e364a986c1057a7077ba2e57cfc01d3f3d68d9c5c92b0f52eefd1d"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/plan.json",
+      "bytes": 1001,
+      "sha256": "bf53683ef6262508ae47f529d16ced04acdb1e3b01a896f5ce0bea337d229457"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/run-metadata.json",
+      "bytes": 1912,
+      "sha256": "7b1f9f90530a61bdcf85f92afae2c570eb6b1814dca32a2589b4a944701694f9"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/run.sh",
+      "bytes": 4548,
+      "sha256": "9264c7c247e81cf6b07f2778dc115d2642a66d5ef00a2e52920179efdcc997f2"
+    },
+    {
+      "path": "results/experiments/p2-shared-peft/20260930-035-envseed1-10-19/shard100-paired-summary.json",
+      "bytes": 1310,
+      "sha256": "b7fcad7fb418325aa99c466ec01e69e0e2429a1dc9227f554693741b3e8f5527"
+    }
+  ]
+}

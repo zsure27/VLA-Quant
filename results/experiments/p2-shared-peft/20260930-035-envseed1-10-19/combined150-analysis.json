@@ -1,0 +1,113 @@
+{
+  "C2_minus_C0_headroom": null,
+  "W4_recovery_fraction": null,
+  "bootstrap_replicates": 50000,
+  "bootstrap_seed": 20260930,
+  "break": 6,
+  "classification": "development evidence only; fixed official initial states with corrected env_seed=1; not blind holdout or independent new initial states",
+  "duplicate_pairs": 0,
+  "episodes_per_case": 150,
+  "exact_mcnemar_p": 0.1670684814453125,
+  "net": 7,
+  "net_rate_difference": 0.04666666666666667,
+  "offline_final_holdout_touched": false,
+  "per_task": {
+    "0": {
+      "C0": 15,
+      "C3": 15,
+      "break": 0,
+      "n": 15,
+      "rescue": 0
+    },
+    "1": {
+      "C0": 0,
+      "C3": 6,
+      "break": 0,
+      "n": 15,
+      "rescue": 6
+    },
+    "2": {
+      "C0": 15,
+      "C3": 15,
+      "break": 0,
+      "n": 15,
+      "rescue": 0
+    },
+    "3": {
+      "C0": 15,
+      "C3": 14,
+      "break": 1,
+      "n": 15,
+      "rescue": 0
+    },
+    "4": {
+      "C0": 15,
+      "C3": 15,
+      "break": 0,
+      "n": 15,
+      "rescue": 0
+    },
+    "5": {
+      "C0": 8,
+      "C3": 11,
+      "break": 0,
+      "n": 15,
+      "rescue": 3
+    },
+    "6": {
+      "C0": 13,
+      "C3": 15,
+      "break": 0,
+      "n": 15,
+      "rescue": 2
+    },
+    "7": {
+      "C0": 13,
+      "C3": 10,
+      "break": 4,
+      "n": 15,
+      "rescue": 1
+    },
+    "8": {
+      "C0": 15,
+      "C3": 15,
+      "break": 0,
+      "n": 15,
+      "rescue": 0
+    },
+    "9": {
+      "C0": 14,
+      "C3": 14,
+      "break": 1,
+      "n": 15,
+      "rescue": 1
+    }
+  },
+  "plan_ids": [
+    "a1-035-envseed1-first50-tail40-20260930",
+    "a1-035-envseed1-10-19-20260930"
+  ],
+  "rescue": 13,
+  "source_files": [
+    "results\\experiments\\p2-shared-peft\\20260930-035-envseed1-first50-tail40\\first50-paired-episodes.jsonl",
+    "backups\\experiments\\p2-shared-peft\\20260930-035-envseed1-10-19\\a1-035-envseed1-10-19-20260930\\paired-episodes.jsonl"
+  ],
+  "source_shards": [
+    {
+      "n_per_case": 50,
+      "resets": "5-9"
+    },
+    {
+      "n_per_case": 100,
+      "resets": "10-19"
+    }
+  ],
+  "successes": {
+    "C0": 123,
+    "C3": 130
+  },
+  "task_stratified_bootstrap_95ci_fraction": [
+    0.0,
+    0.1
+  ]
+}

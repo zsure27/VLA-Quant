@@ -1,0 +1,37 @@
+{
+  "combined_pairs": 150,
+  "condition_classification": "same official initial-state arrays with corrected env randomness; perturbation/development side evidence, not independent initial-state replication or blind holdout",
+  "exit_code": 0,
+  "holdout_touched": false,
+  "local_archive": "backups/experiments/p2-shared-peft/20260930-035-envseed1-10-19/a1-035-envseed1-10-19-20260930",
+  "local_archive_video_count": 0,
+  "local_server_archive_verification": {
+    "bytes": 488612762,
+    "files": 3020,
+    "tree_sha256": "98af60e1d7dd434b1ffd3c970cf2d1cbe0864d8cb2b371b8953532b09ee281e0"
+  },
+  "plan_id": "a1-035-envseed1-10-19-20260930",
+  "reset_indices": [
+    5,
+    19
+  ],
+  "revision": 3,
+  "rollout_video_note": {
+    "evaluator_logs_retained": true,
+    "files_in_local_and_server_eval_tree": 0,
+    "included_in_verified_archive": false,
+    "paths_referenced_by_evaluator_logs": 200,
+    "unrelated_mp4_found_in_checked_root": 10
+  },
+  "server_eval_path": "/root/autodl-tmp/qvla-repro/eval/a1-035-envseed1-10-19-20260930",
+  "server_persistent_experiment_archive": "/root/autodl-tmp/qvla-repro/backups/035-a1-envseed1-20260930-180739-852d350",
+  "server_persistent_experiment_archive_snapshot": "same-filesystem hardlink snapshot of the completed eval directory; manifests independently SHA256-verified by native shutdown helper",
+  "source_pairs": {
+    "first50": "results/experiments/p2-shared-peft/20260930-035-envseed1-first50-tail40/first50-paired-episodes.jsonl",
+    "first50_sha256": "17260dbbfd804779e71e4eca457a907ae0e0765385be3c5bf0168282894c7c00",
+    "shard100": "backups/experiments/p2-shared-peft/20260930-035-envseed1-10-19/a1-035-envseed1-10-19-20260930/paired-episodes.jsonl",
+    "shard100_sha256": "869a763269950ba33926d08ea9e50ffa89770ee5ca1a16ea59b081ec44d40976"
+  },
+  "terminal_status": "COMPLETE",
+  "unique_task_reset_pairs": 150
+}

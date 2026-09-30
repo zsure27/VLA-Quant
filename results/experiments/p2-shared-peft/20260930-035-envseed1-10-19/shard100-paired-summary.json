@@ -1,0 +1,71 @@
+{
+  "C2_minus_C0_headroom": null,
+  "C3_minus_C0": 4,
+  "W4_recovery_fraction": null,
+  "by_task": {
+    "0": {
+      "C0": 10,
+      "C3": 10
+    },
+    "1": {
+      "C0": 0,
+      "C3": 5
+    },
+    "2": {
+      "C0": 10,
+      "C3": 10
+    },
+    "3": {
+      "C0": 10,
+      "C3": 9
+    },
+    "4": {
+      "C0": 10,
+      "C3": 10
+    },
+    "5": {
+      "C0": 5,
+      "C3": 6
+    },
+    "6": {
+      "C0": 9,
+      "C3": 10
+    },
+    "7": {
+      "C0": 8,
+      "C3": 6
+    },
+    "8": {
+      "C0": 10,
+      "C3": 10
+    },
+    "9": {
+      "C0": 9,
+      "C3": 9
+    }
+  },
+  "classification": "A1 same-official-initial-state different-env-randomness pilot; not new initial states or blind holdout",
+  "configs_complete": [
+    "C0",
+    "C3"
+  ],
+  "count_per_task": 10,
+  "episodes_per_case": 100,
+  "evaluator_log_sha256": {
+    "C0": "5ca7526f4ba899ddd8bf97b2c8161ad0c1ad41b69ff5e35e899448bb2785124b",
+    "C3": "960ff147f38eb79965f08612eaeee1b93ce93fe9596d7dca2f0b29d107056fdd"
+  },
+  "exact_mcnemar_p": 0.4239501953125,
+  "holdout_touched": false,
+  "new_failure": 5,
+  "offset": 10,
+  "paired_stratified_bootstrap_95ci_fraction": [
+    -0.02,
+    0.1
+  ],
+  "rescue": 9,
+  "successes": {
+    "C0": 81,
+    "C3": 85
+  }
+}
