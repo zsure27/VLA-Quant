@@ -7,6 +7,13 @@
   "research_question": "Does rank-8 Recovery-LoRA over all eligible language W2 blocks improve paired closed-loop outcomes over same-condition C0 and C3, with measured rescue, break and cost?",
   "single_treatment": "language_target_scope=all_W2_blocks_0-7_16-19_24-31; rank8 on Q/K/V/O and MLP gate/up/down",
   "interpretation": "scope expansion necessarily increases adapter capacity; estimate total engineering effect, not an isolated coverage effect",
+  "implementation": {
+    "launcher": "scripts/run_20260930_059_language_w2_all.sh",
+    "launcher_sha256": "f409988e409c78fcc11b0899abf441956bb8fae4f6308083dd8fcee5a7ae380e",
+    "training_smoke_verifier": "scripts/verify_20260930_059_lora_training_smoke.py",
+    "training_smoke_verifier_sha256": "933135923a2df065b639b7a57b85240f45b8096c6eb44c8f2e3463b78b46dc88",
+    "official_rollout_sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
+  },
   "fixed_training": {
     "distribution": "existing student-state80 observations from train resets 0-3",
     "labels": "frozen BF16 teacher on identical serialized observations",

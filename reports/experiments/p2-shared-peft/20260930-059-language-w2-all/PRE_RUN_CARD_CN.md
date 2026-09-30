@@ -32,8 +32,14 @@
 | candidate loader `run_eval_official_quant.py` | `aaf92ce5257d120437ef9830a0ed57341f8714a83755dfdabebd77c1a38991cf` |
 | candidate loader/guard `diagnostics/probe.py` | `bea54c391ad4ec8dd1a88adb1fa04e0a065a1b7996128cd9186f98ee93fdfb26` |
 | connected target list | `513e1d937d1b345ec00fdb19eee73709b8704941b18c21e2258bdf795f495b3a` |
+| frozen official rollout evaluator | `run_libero_eval.py` `fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873` |
+| interventions source | `awq_interventions.py` `1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41` |
+| quantization adapter source | `official_quant_adapter.py` `6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171` |
+| action preparation source | `action_jacobian_batch.py` `9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886` |
+| preregistered experiment launcher | `run_20260930_059_language_w2_all.sh` SHA `f409988e409c78fcc11b0899abf441956bb8fae4f6308083dd8fcee5a7ae380e` |
+| training smoke verifier | `verify_20260930_059_lora_training_smoke.py` SHA `933135923a2df065b639b7a57b85240f45b8096c6eb44c8f2e3463b78b46dc88` |
 
-配置来源：仓库 `configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json`；视觉 DINO W2/G64、SigLIP W2/G128；语言 blocks 8–15 与 20–23 为 W4，其余 W2；保护模块保持高精度。`w4.pt` profile 覆盖 422 个线性模块（视觉198、语言224），作为完整 W4 条件参照。训练样本为现有 80 个 student-visited 训练 reset0–3 观测；与评测 reset20–49 不重叠。Response-SVD 校准只来自 `peft_train` 80。不得重做或混入其他数据。
+配置来源：仓库 `configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json`；视觉 DINO W2/G64、SigLIP W2/G128；语言 blocks 8–15 与 20–23 为 W4，其余 W2；保护模块保持高精度。`w4.pt` profile 覆盖 422 个线性模块（视觉198、语言224），作为完整 W4 条件参照。BF16 使用已验证的 same-loader 命令 `--weight-bits 4 --profile w4.pt --awq-scope none`，因此并不应用 W4 量化；W4 对照使用同一 profile 且 `--awq-scope all`。训练样本为现有 80 个 student-visited 训练 reset0–3 观测；与评测 reset20–49 不重叠。Response-SVD 校准只来自 `peft_train` 80。不得重做或混入其他数据。
 
 ## 训练协议与成本记录
 
@@ -44,7 +50,7 @@
 
 ## 烟雾、分片、统计与停走门槛
 
-1. EGL 显式 `MUJOCO_EGL_DEVICE_ID=0`；用真实评测器调用序列做无策略同条件重复，核对模型实际接收的两路相机/proprio 哈希及 reset 注入顺序；检查旧 seed A1 的无效性不被误当本轮独立性。条件烟雾只证明执行和输入记录有效，不主张环境独立。
+1. EGL 显式 `MUJOCO_EGL_DEVICE_ID=0`；真实 rollout 源码在 paired 协议下先 `env.seed(environment_seed)`，紧接着 `seed_all(model_seed)`，然后写入同一官方 `initial_state` 并按 8 步 chunk 执行。用实际评测入口与渲染、预处理检查同条件重复的两路相机/proprio 输入哈希与 reset 注入；检查旧 seed A1 的无效性不被误当本轮独立性。条件烟雾只证明执行/输入记录有效，不主张环境独立。
 2. 训练与 adapter save/reload smoke 通过后，先对 offsets20、每任务1回合做 10 对/配置的政策微型闭环，核对配对键、成功定义、8步 chunk trace 与评测命令/所有哈希；pilot 不并入主分析样本。
 3. 首个正式片严格为 offsets20–24，即 50回合/配置 × C0/C3/宽 LoRA/BF16/完整W4。片后硬停止，复核命令、profile/checkpoint/adapter SHA、逐回合 manifest、异常、配对完整性与真实 trace；不按正负结果改变余下样本量。通过协议门禁后才解锁已预注册 offsets25–49（再250回合/配置）；若 smoke/协议失败即停止扩展、保留产物、分析后收尾。
 4. 样本量固定为 offsets20–49，共300回合/配置，五种策略条件同片配对。逐配置及比较对象报告 `S_A/S_B`、双方成功/失败、rescue、break、net、按 task 聚类的配对 bootstrap 95% CI、精确 McNemar、每任务 net/worst task、reset/初态键和缺失/异常。主增量比较宽 LoRA–C3 与宽 LoRA–C0；不把 rescue+break 本身称作可路由冲突。
