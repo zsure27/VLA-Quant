@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "session": "20260930-059-language-w2-all",
+  "server_directory": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft",
+  "local_directory": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/backups/experiments/p2-shared-peft",
+  "archives": [
+    {
+      "file": "20260930-059-language-w2-all-full.tar",
+      "bytes": 885104640,
+      "sha256": "bb6c1607abc8552cdcc4b041bc44bd20f5dacd3de73d51ddcbf0da0690d232f8",
+      "scope": "complete training and paired-evaluation session before P2.5"
+    },
+    {
+      "file": "20260930-059-language-w2-all-p25-delta.tar",
+      "bytes": 18227200,
+      "sha256": "e93d615082f8d6403a31d2d4a4b05eead693ede99676970e0eba083700bb5797",
+      "scope": "P2.5 same-observation teacher responses, comparisons, hashes and runner status"
+    }
+  ],
+  "sha256_verified_on_server_and_local": true,
+  "independent_evaluation": false,
+  "holdout_touched": false
+}
