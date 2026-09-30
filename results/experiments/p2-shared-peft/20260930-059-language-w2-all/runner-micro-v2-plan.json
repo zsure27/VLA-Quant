@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-language-w2-all-micro-v2-059-20260930",
+  "control_root": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id": "train-response-svd-wide-r8-1000-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "train", "1000"]},
+    {"id": "micro-c0-reset20-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "C0", "20", "1", "micro"]},
+    {"id": "micro-c3-reset20-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "C3", "20", "1", "micro"]},
+    {"id": "micro-wide-language-reset20-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "LW", "20", "1", "micro"]},
+    {"id": "micro-bf16-reset20-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "BF16", "20", "1", "micro"]},
+    {"id": "micro-full-w4-reset20-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "W4", "20", "1", "micro"]}
+  ]
+}

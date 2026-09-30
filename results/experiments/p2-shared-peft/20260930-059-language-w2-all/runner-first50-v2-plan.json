@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "p2-language-w2-all-first50-v2-059-20260930",
+  "control_root": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "stages": [
+    {"id": "first50-c0-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "C0", "20", "5", "first50"]},
+    {"id": "first50-c3-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "C3", "20", "5", "first50"]},
+    {"id": "first50-wide-language-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "LW", "20", "5", "first50"]},
+    {"id": "first50-bf16-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "BF16", "20", "5", "first50"]},
+    {"id": "first50-full-w4-v2", "cwd": "/root/autodl-tmp/VLA-Quant-lora-expand-20260930", "command": ["bash", "/root/autodl-tmp/VLA-Quant-lora-expand-20260930/scripts/run_20260930_059_language_w2_all.sh", "eval", "W4", "20", "5", "first50"]}
+  ]
+}

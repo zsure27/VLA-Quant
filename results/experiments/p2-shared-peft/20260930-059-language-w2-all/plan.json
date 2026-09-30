@@ -9,16 +9,22 @@
   "interpretation": "scope expansion necessarily increases adapter capacity; estimate total engineering effect, not an isolated coverage effect",
   "implementation": {
     "launcher": "scripts/run_20260930_059_language_w2_all.sh",
-    "launcher_sha256": "f409988e409c78fcc11b0899abf441956bb8fae4f6308083dd8fcee5a7ae380e",
+    "launcher_sha256": "8eeebe3a9ffcbd49d933ce403f7bc7180015042fc1e9f05d4d4f9d675d46ce0b",
     "training_smoke_verifier": "scripts/verify_20260930_059_lora_training_smoke.py",
     "training_smoke_verifier_sha256": "933135923a2df065b639b7a57b85240f45b8096c6eb44c8f2e3463b78b46dc88",
     "official_rollout_sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873"
   },
-  "immutable_runner_plans": {
-    "smoke": {"file": "runner-smoke-plan.json", "sha256": "8b91a96e1b7960de71f9f7c16c0e1ed9ad26fc73c6e5ab086719027e98f9889a"},
-    "train_and_micro": {"file": "runner-micro-plan.json", "sha256": "5435c0a0bf8c08b92c9a26ff1b59c090ee315ce3eedf9885454139a582423293"},
-    "first50_gate": {"file": "runner-first50-plan.json", "sha256": "982dc4d795a355157f60efd53247025ab10ff8b7fe52b0df1ef9d4f07a4c8615"},
-    "remaining250": {"file": "runner-remaining250-plan.json", "sha256": "bf7072ad55cc8f4f8ed93e06ab382fcda54cdbbf19b2d9e3ff0ec04d58a8d748"}
+  "execution_amendment_v1": {
+    "smoke_plan": "p2-language-w2-all-smoke-059-20260930",
+    "state": "FAILED_BEFORE_CHECKPOINT_OR_GPU_TRAINING",
+    "reason": "launcher created probe output path before probe startup; probe correctly refused overwrite",
+    "evidence": "/root/autodl-tmp/qvla-repro/control/p2-language-w2-all-059-20260930/p2-language-w2-all-smoke-059-20260930/stage-00-train-structure-smoke-10.log"
+  },
+  "immutable_runner_plans_v2": {
+    "smoke": {"file": "runner-smoke-v2-plan.json", "sha256": "dd4bda770ba1dcc2010cbc6c8ea438fb5bcf84f29801d8ad0f4a8da440aebe4f"},
+    "train_and_micro": {"file": "runner-micro-v2-plan.json", "sha256": "ad001c9b56bc0db9a85d324b397fed658b64fc3e606a7888e174742df4ca5c5f"},
+    "first50_gate": {"file": "runner-first50-v2-plan.json", "sha256": "4dced9e1f9d81915d8076d269d15511d59e2fb97f4449ec9ae778e8e4999d4c2"},
+    "remaining250": {"file": "runner-remaining250-v2-plan.json", "sha256": "7825f46d7b598fc08953ba2c23ffba829a9aa21816a5edbf4a329e91a73257c2"}
   },
   "fixed_training": {
     "distribution": "existing student-state80 observations from train resets 0-3",

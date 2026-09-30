@@ -30,20 +30,22 @@ assert_idle_gpu() {
 train() {
   local steps=$1 out_name
   case "$steps" in
-    10) out_name=language-w2-all-r8-training-smoke10 ;;
+    10) out_name=language-w2-all-r8-training-smoke10-v2 ;;
     1000) out_name=language-w2-all-r8-e2e1000 ;;
     *) echo "only preregistered 10-step smoke or 1000-step training allowed" >&2; exit 2 ;;
   esac
   local out="$SESSION/$out_name"
+  local preflight="$SESSION/.${out_name}.preflight"
   test ! -e "$out"
+  test ! -e "$preflight"
   assert_idle_gpu
   for path in "$REPO/diagnostics/probe.py" "$REPO/diagnostics/low_rank_recovery.py" \
       "$CHECKPOINT/config.json" "$BASE" "$W4" "$G64" "$STUDENT/manifest.json" \
       "$CALIBRATION/manifest.json" "$ROOT/artifacts/awq-validation-20260913-132827-1162/teacher/manifest.json"; do
     test -s "$path" || { echo "missing preflight material: $path" >&2; exit 4; }
   done
-  mkdir -p "$out"
-  printf '%s\n' "$steps" > "$out/steps-preregistered.txt"
+  mkdir -p "$preflight"
+  printf '%s\n' "$steps" > "$preflight/steps-preregistered.txt"
   {
     hash_file "$REPO/diagnostics/probe.py"
     hash_file "$REPO/diagnostics/low_rank_recovery.py"
@@ -51,7 +53,7 @@ train() {
     hash_file "$CHECKPOINT/config.json"
     hash_file "$BASE"; hash_file "$W4"; hash_file "$G64"; hash_file "$C3"
     hash_file "$STUDENT/manifest.json"; hash_file "$CALIBRATION/manifest.json"
-  } > "$out/CONTRACT_SHA256SUMS.txt"
+  } > "$preflight/CONTRACT_SHA256SUMS.txt"
   local args=(
     --checkpoint "$CHECKPOINT" --samples-dir "$ROOT/artifacts/awq-validation-20260913-132827-1162/samples"
     --official-root "$ROOT/src/official-quantization" --targets-file "$REPO/configs/qvla-connected-422.txt"
@@ -70,15 +72,22 @@ train() {
     --awq-e2e-distill-samples-dir "$STUDENT" --awq-e2e-distill-samples-count 80
     --output "$out"
   )
-  printf '%q ' "$PY" -u "$REPO/diagnostics/probe.py" "${args[@]}" > "$out/command.txt"
-  printf '\n' >> "$out/command.txt"
+  printf '%q ' "$PY" -u "$REPO/diagnostics/probe.py" "${args[@]}" > "$preflight/command.txt"
+  printf '\n' >> "$preflight/command.txt"
   set +e
-  "$PY" -u "$REPO/diagnostics/probe.py" "${args[@]}" > "$out/console.log" 2>&1
+  "$PY" -u "$REPO/diagnostics/probe.py" "${args[@]}" > "$preflight/console.log" 2>&1
   local rc=$?
   set -e
+  mkdir -p "$out"
+  cp "$preflight/steps-preregistered.txt" "$preflight/CONTRACT_SHA256SUMS.txt" "$preflight/command.txt" "$preflight/console.log" "$out/"
   printf '%s\n' "$rc" > "$out/exit-code.txt"
   if [[ "$steps" == 10 && "$rc" == 0 ]]; then
-    "$PY" "$REPO/scripts/verify_20260930_059_lora_training_smoke.py" --output "$out" > "$out/structural-smoke.json"
+    set +e
+    "$PY" "$REPO/scripts/verify_20260930_059_lora_training_smoke.py" --output "$out" > "$out/structural-smoke.json" 2>&1
+    local verify_rc=$?
+    set -e
+    printf '%s\n' "$verify_rc" > "$out/structural-smoke-exit-code.txt"
+    if (( verify_rc != 0 )); then rc=$verify_rc; fi
   fi
   (cd "$out" && find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 -r sha256sum > SHA256SUMS.txt)
   return "$rc"

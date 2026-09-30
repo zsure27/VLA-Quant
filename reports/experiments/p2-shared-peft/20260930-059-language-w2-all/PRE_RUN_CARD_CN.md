@@ -37,12 +37,12 @@
 | interventions source | `awq_interventions.py` `1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41` |
 | quantization adapter source | `official_quant_adapter.py` `6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171` |
 | action preparation source | `action_jacobian_batch.py` `9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886` |
-| preregistered experiment launcher | `run_20260930_059_language_w2_all.sh` SHA `f409988e409c78fcc11b0899abf441956bb8fae4f6308083dd8fcee5a7ae380e` |
+| preregistered experiment launcher v2 | `run_20260930_059_language_w2_all.sh` SHA `8eeebe3a9ffcbd49d933ce403f7bc7180015042fc1e9f05d4d4f9d675d46ce0b` |
 | training smoke verifier | `verify_20260930_059_lora_training_smoke.py` SHA `933135923a2df065b639b7a57b85240f45b8096c6eb44c8f2e3463b78b46dc88` |
-| immutable smoke plan | `runner-smoke-plan.json` SHA `8b91a96e1b7960de71f9f7c16c0e1ed9ad26fc73c6e5ab086719027e98f9889a` |
-| immutable full-train/micro plan | `runner-micro-plan.json` SHA `5435c0a0bf8c08b92c9a26ff1b59c090ee315ce3eedf9885454139a582423293` |
-| immutable first-50 hard-gate plan | `runner-first50-plan.json` SHA `982dc4d795a355157f60efd53247025ab10ff8b7fe52b0df1ef9d4f07a4c8615` |
-| immutable remaining-250 plan | `runner-remaining250-plan.json` SHA `bf7072ad55cc8f4f8ed93e06ab382fcda54cdbbf19b2d9e3ff0ec04d58a8d748` |
+| immutable smoke plan v2 | `runner-smoke-v2-plan.json` SHA `dd4bda770ba1dcc2010cbc6c8ea438fb5bcf84f29801d8ad0f4a8da440aebe4f` |
+| immutable full-train/micro plan v2 | `runner-micro-v2-plan.json` SHA `ad001c9b56bc0db9a85d324b397fed658b64fc3e606a7888e174742df4ca5c5f` |
+| immutable first-50 hard-gate plan v2 | `runner-first50-v2-plan.json` SHA `4dced9e1f9d81915d8076d269d15511d59e2fb97f4449ec9ae778e8e4999d4c2` |
+| immutable remaining-250 plan v2 | `runner-remaining250-v2-plan.json` SHA `7825f46d7b598fc08953ba2c23ffba829a9aa21816a5edbf4a329e91a73257c2` |
 
 配置来源：仓库 `configs/backbones/awq_w2a16_12l_mixed_spatial_v1.json`；视觉 DINO W2/G64、SigLIP W2/G128；语言 blocks 8–15 与 20–23 为 W4，其余 W2；保护模块保持高精度。`w4.pt` profile 覆盖 422 个线性模块（视觉198、语言224），作为完整 W4 条件参照。BF16 使用已验证的 same-loader 命令 `--weight-bits 4 --profile w4.pt --awq-scope none`，因此并不应用 W4 量化；W4 对照使用同一 profile 且 `--awq-scope all`。训练样本为现有 80 个 student-visited 训练 reset0–3 观测；与评测 reset20–49 不重叠。Response-SVD 校准只来自 `peft_train` 80。不得重做或混入其他数据。
 
@@ -70,3 +70,7 @@
 - 本地忽略副本：`backups/experiments/p2-shared-peft/20260930-059-language-w2-all/`。
 - 报告与小型配对数据：`reports/experiments/p2-shared-peft/20260930-059-language-w2-all/` 与 `results/experiments/p2-shared-peft/20260930-059-language-w2-all/`。
 - 机器专属 PRE-RUN 卡不得替代执行中的逐命令、哈希、实际路径与偏差记录；完成后另写结果分析/停止门禁。
+
+## 执行偏差与预注册修订（2026-09-30）
+
+初次启动的 v1 结构烟雾在 checkpoint 加载前失败：启动器先创建了传给 `probe.py --output` 的目录，而训练入口要求该路径尚不存在（`ValueError: Output already exists`）。进程退出码 1，没有产生训练样本或 adapter；故不构成一次训练/评测观测。失败目录与 runner 状态保留，不删除、不复用。为避免污染，修正版把启动元数据放入独立 preflight 路径、由 probe 自行创建模型输出目录，并将 smoke 输出版本为 `...training-smoke10-v2`。修正版与新的 v2 不可变 runner plans 已在重跑前更新 GitHub；v1 计划终态保留为 FAILED。实际 CUDA 可见进程在失败后为零。
