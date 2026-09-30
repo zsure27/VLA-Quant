@@ -1,0 +1,45 @@
+{
+  "plan_id": "a1-035-envseed-order-fix-smoke-20260930",
+  "status": "SUPERSEDED_BEFORE_EXECUTION",
+  "superseded_by": "a1-035-envseed-order-fix-smoke-v2-20260930",
+  "supersession_reason": "v1 did not capture environment reset observations before set_init_state and therefore could not diagnose whether evaluator fixed-state injection erased seed effects; no GPU execution occurred under v1.",
+  "instance_hostname": "autodl-container-481a45991f-b03cd0b4",
+  "experiment_module": "p2-shared-peft",
+  "stage": "ENVSEED_ORDER_NO_POLICY_SMOKE",
+  "primary_question": "After fixing the evaluator call order, does env_seed 0 vs 1 produce repeatable changes in actual policy-visible inputs under the same task/reset?",
+  "primary_variable": "env_seed 0 vs 1; evaluator applies model seed first and LIBERO environment seed second",
+  "fixed": {
+    "suite": "libero_spatial",
+    "task_ids": "00-09",
+    "official_reset_index": 5,
+    "model_seed": 0,
+    "wait_dummy_steps": 10,
+    "post_query_noop_steps": 8,
+    "repeats_per_task_per_environment_seed": 2,
+    "policy": "none; processor-only observation hashing",
+    "training": false,
+    "offline_final_holdout": "untouched"
+  },
+  "policy_input_checks": [
+    "raw two-view images and robot state",
+    "same evaluator prepare_observation resized images and 7D proprio",
+    "center-cropped two-view processor pixel_values (BF16 values represented exactly in FP32 for hashing), input_ids, attention_mask",
+    "normalized proprio using frozen checkpoint statistics",
+    "sim qpos"
+  ],
+  "admission_gate": {
+    "within_seed_repeat": "all recorded model inputs repeat exactly (or below preregistered renderer noise floor)",
+    "across_seed_change": "actual processor-level image or normalized proprio changes beyond same-seed noise in at least 8/10 tasks at query0 and remains reproducibly different after 8 no-op steps",
+    "task_validity": "no pre-solved reset, early done, or simulator error",
+    "bf16_success_threshold": null
+  },
+  "stop_conditions": [
+    "modified helper import or SHA mismatch",
+    "seed call order differs from the versioned patch",
+    "repeatability fails",
+    "policy-visible input does not exceed same-seed noise",
+    "task/reset invalid or no-op rollout errors"
+  ],
+  "post_stage_action": "If seed smoke passes, pre-register C0/C3 paired micro on the unchanged 10 task/reset set; otherwise isolate whether set_init_state overwrites reset-seeded variation and do not launch C0/C3 env-seed evaluation.",
+  "bf16_gate": "No 10/10 requirement; the completed 9/10 BF16 result remains ancillary and task 4 is not excluded."
+}

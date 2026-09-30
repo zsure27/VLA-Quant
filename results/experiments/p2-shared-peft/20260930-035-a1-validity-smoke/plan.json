@@ -1,0 +1,33 @@
+{
+  "plan_id": "a1-035-fresh-reset-bf16-validity-20260930",
+  "status": "PRE_REGISTERED",
+  "instance_hostname": "autodl-container-481a45991f-b03cd0b4",
+  "experiment_module": "p2-shared-peft",
+  "stage": "BF16_VALIDITY_10_EPISODES",
+  "primary_question": "Are the frozen prospective index-0 reset states executable under the frozen BF16 policy, one episode per Spatial task?",
+  "primary_variable": "Initial state array only; all other evaluation semantics fixed.",
+  "configs": ["BF16"],
+  "expected_episodes": 10,
+  "task_ids": "00-09, one frozen reset per task",
+  "model_seed": 0,
+  "env_seed": 0,
+  "seed_protocol": "paired",
+  "auto_continue": false,
+  "holdout_access": false,
+  "adapter_training": false,
+  "router_or_experts": false,
+  "a1_independent_replication_claim": false,
+  "gate_after_stage": "HOLD_FOR_REVIEW",
+  "stop_conditions": [
+    "Any evaluator/helper/profile/reset hash mismatch",
+    "Actual OFT helper import or reset argument assertion fails",
+    "A reset is invalid or already complete before rollout",
+    "Expected 10 episodes or per-episode inputs/traces are missing",
+    "Nonzero evaluator exit or any material changes during the run"
+  ],
+  "candidate_state_source": "/root/autodl-tmp/qvla-repro/artifacts/a1-014-preflight-20260930/fresh-reset-pilot",
+  "evaluator_sha256": "b4efd426d521e0e44438df48b4e8aba39280d9e4c3160e0ac8ca1913d87207b6",
+  "oft_helper_sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873",
+  "profile_sha256": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc",
+  "post_stage_action": "Analyze protocol and task validity only; do not infer C3 benefit or start a long A1 run."
+}

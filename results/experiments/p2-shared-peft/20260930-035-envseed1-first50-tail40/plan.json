@@ -1,0 +1,17 @@
+{
+  "plan_id": "a1-035-envseed1-first50-tail40-20260930",
+  "status": "PRE_REGISTERED",
+  "gate_sources": ["a1-035-envseed-order-fix-smoke-v2-20260930", "a1-035-c0-c3-envseed1-micro-20260930"],
+  "question": "Does the corrected C0/C3 paired protocol remain valid through the first 50 development-condition episodes per case?",
+  "stage": "FIRST_50_PROTOCOL_GATE_TAIL_40",
+  "task_ids": "00-09",
+  "official_reset_indices_this_plan": "06-09",
+  "already_completed_micro_reset_index": 5,
+  "episodes_this_plan_per_case": 40,
+  "combined_first_shard_episodes_per_case": 50,
+  "cases": ["C0", "C3"],
+  "fixed": {"model_seed": 0, "env_seed": 1, "seed_protocol": "paired", "backbone": "exact 12L AWQ W2A16 mixed", "adapter": "frozen C3 rank8 Recovery-LoRA", "evaluation_helper": "corrected model seed then environment seed", "action_chunk": 8},
+  "protocol_gate": ["pre and post SHA identical", "C0 and C3 each 40 complete episodes", "strict task/reset/seed/state pairing", "no duplicates with reset5 micro", "first-query observation and action traces saved", "no episode errors"],
+  "long_extension": "forbidden within this plan; stop at hard gate",
+  "classification": "development-condition first-shard protocol gate; no independent holdout claim"
+}

@@ -430,9 +430,10 @@ def run_task(
         if cfg.seed_protocol == "paired":
             model_seed, environment_seed = episode_seeds(
                 cfg.seed, cfg.env_seed, cfg.task_suite_name, task_id, episode_idx)
-            # env.seed 可能修改全局 NumPy；先设置环境，再恢复独立模型随机流。
-            env.seed(environment_seed)
+            # LIBERO env.seed 重设全局 NumPy；必须在 seed_all 之后调用，
+            # 否则模型种子会覆盖环境种子，导致 env_seed 实际无效。
             seed_all(model_seed, strict=cfg.strict_determinism, tensorflow=True)
+            env.seed(environment_seed)
         import hashlib
         state_array = np.asarray(initial_state)
         log_message("EPISODE_MANIFEST " + json.dumps({

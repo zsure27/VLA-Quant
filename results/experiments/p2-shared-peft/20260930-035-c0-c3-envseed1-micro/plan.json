@@ -1,0 +1,14 @@
+{
+  "plan_id": "a1-035-c0-c3-envseed1-micro-20260930",
+  "status": "PRE_REGISTERED",
+  "condition_gate_source": "a1-035-envseed-order-fix-smoke-v2-20260930",
+  "question": "Does frozen C3 improve paired closed-loop success over C0 under corrected, observable env_seed=1?",
+  "changed_between_cases": "existing C3 rank8 Recovery-LoRA adapter loaded only in C3",
+  "fixed": {"suite": "libero_spatial", "task_ids": "00-09", "official_reset_index": 5, "model_seed": 0, "env_seed": 1, "seed_protocol": "paired", "backbone": "exact 12L AWQ W2A16 mixed", "evaluator": "corrected model-seed then environment-seed helper", "action_chunk": 8, "training": false},
+  "cases": ["C0", "C3"],
+  "episodes_per_case": 10,
+  "primary_metrics": ["C0 success", "C3 success", "rescue", "break", "C3-C0"],
+  "protocol_gate": ["all materials match frozen SHA", "10 complete episodes per case", "task/reset/seed/state hash strictly paired", "first-query observations and actions saved", "no evaluator error", "actual command and helper import recorded"],
+  "result_classification": "development-condition micro; no independence or final holdout claim",
+  "next_stage": "hard stop and analyze before at most 50 episodes per case; never auto-run a long shard"
+}

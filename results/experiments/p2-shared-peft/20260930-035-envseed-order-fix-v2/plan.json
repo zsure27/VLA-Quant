@@ -1,0 +1,35 @@
+{
+  "plan_id": "a1-035-envseed-order-fix-smoke-v2-20260930",
+  "status": "PRE_REGISTERED",
+  "supersedes": "a1-035-envseed-order-fix-smoke-20260930",
+  "instance_hostname": "autodl-container-481a45991f-b03cd0b4",
+  "stage": "ENVSEED_RESET_MASKING_NO_POLICY_SMOKE",
+  "question": "Does env_seed 0 versus 1 change policy-visible inputs after the corrected evaluator seed order and fixed official init state?",
+  "primary_variable": "env_seed 0 versus 1",
+  "fixed": {
+    "suite": "libero_spatial",
+    "task_ids": "00-09",
+    "official_reset_index": 5,
+    "model_seed": 0,
+    "repeats_per_task_per_seed": 2,
+    "wait_dummy_steps": 10,
+    "post_query_dummy_steps": 8,
+    "policy": "none",
+    "training": false,
+    "offline_final_holdout": "untouched"
+  },
+  "measurements": [
+    "raw reset images and state plus qpos/qvel before set_init_state",
+    "query0 and post-eight-step raw views, resized views, normalized proprio, processor BF16 pixel_values, input_ids, attention_mask",
+    "within-seed repeat differences and cross-seed differences",
+    "pre-solved and early-done validity flags"
+  ],
+  "admission_gate": {
+    "same_seed_repeat": "exact or below preregistered render noise",
+    "policy_visible_difference": "at least 8 of 10 tasks at query0 beyond repeat noise, reproducible after eight no-op steps",
+    "task_validity": "no pre-solved state, early done, or simulation error",
+    "bf16_success_threshold": null
+  },
+  "if_no_policy_visible_difference": "Do not run C0/C3 under env_seed 1 as a new condition. Use pre-init reset hashes to determine whether fixed init state erased changes, then preregister a separate valid reset-condition smoke.",
+  "if_gate_passes": "Preregister and run a frozen C0/C3 ten-pair micro on the same task/reset set; report rescue and break without task selection."
+}

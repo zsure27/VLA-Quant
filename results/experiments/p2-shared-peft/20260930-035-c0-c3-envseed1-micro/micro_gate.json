@@ -1,0 +1,33 @@
+{
+  "plan_id": "a1-035-c0-c3-envseed1-micro-20260930",
+  "gate": "PASS_POLICY_MICRO",
+  "interpretation_limit": "ten historical-development official reset states under corrected env-seed protocol; no closed-loop benefit claim from this tiny slice",
+  "pairs": 10,
+  "successes": {
+    "C0": 9,
+    "C3": 9
+  },
+  "rescue": 0,
+  "break": 0,
+  "net_gain": 0,
+  "first_observation_equal_pairs": 10,
+  "first_action_diff_pairs": 10,
+  "policy_queries": {
+    "C0": 138,
+    "C3": 139
+  },
+  "all_queries_finite_and_eight_step_chunks": true,
+  "material_sha256_before_after_identical": true,
+  "cases_differ_only_by_adapter_and_output_path": true,
+  "raw_paired_rows_sha256": "087a546b341feb3800e686e368f109d859861ed0ca9d1141e05b634e7fc0ae78",
+  "raw_result_hashes": {
+    "C0": {
+      "on_policy_events": "38760e394f533446805149245c5591ce0ee80f09edaae36fbc78ca1949837978",
+      "policy_queries": "fae4d874f203c329bbfa65fc0371b2e8f2e26e090106fbd12b14456a449788f7"
+    },
+    "C3": {
+      "on_policy_events": "a076ec434c7fa2824576a580559ce6b1e1745b3ea743ce47b8ff7257d1ac138f",
+      "policy_queries": "7b0566b6ea478468e5c0b798f6d6a3075a36223fbf6045ca059a1a9979aa2816"
+    }
+  }
+}

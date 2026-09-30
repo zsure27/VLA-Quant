@@ -1,8 +1,8 @@
-"""Audit A1 environment seed with the evaluator's exact seed call order.
+"""Historical reproduction of the invalid pre-fix A1 seed call order.
 
-This never loads a policy or runs an evaluation episode. It reuses the frozen
-LIBERO environment/reset path and applies the same fixed dummy actions for
-both environment seeds. The resulting JSON is diagnostic, not a success score.
+This intentionally applies env.seed before seed_all, reproducing the bug in
+the 2026-09-29 evaluator. It is archival evidence only, not an admission gate.
+Use probe_a1_env_seed_corrected.py for the corrected-order smoke.
 """
 
 from __future__ import annotations
