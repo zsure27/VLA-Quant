@@ -1,0 +1,21 @@
+{
+  "time_utc": "2026-10-04T18:02:46.741430+00:00",
+  "instance_label": "035",
+  "verified_hostname_before_shutdown": "autodl-container-481a45991f-b03cd0b4",
+  "native_shutdown_receipt": {
+    "execute": true,
+    "supervisor_pid": 837,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "backup": "/root/autodl-tmp/qvla-repro/backups/b2b3-035-preflight-20261005-020010-852d350",
+    "server_repo_commit": "852d350",
+    "control_panel_off_verified": false,
+    "ssh_closed_by_remote": true
+  },
+  "session_archive_server": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261005-035-b2-b3-preflight/20261005-035-b2-b3-preflight.tar.gz",
+  "session_archive_local": "backups/experiments/p2-shared-peft/20261005-035-b2-b3-preflight/20261005-035-b2-b3-preflight.tar.gz",
+  "session_archive_sha256": "065f1d7f117c242e117dfa4d0ae997c0b5b4ffcfe53e4cb4b95f17ab7e26432c",
+  "fallback_archive_local": "backups/experiments/p2-shared-peft/20261005-035-b2-b3-preflight/b2b3-035-preflight-20261005-020010-852d350",
+  "fallback_local_sha_check": "10/10 plus session-results.tar.gz",
+  "pre_shutdown_github_sha": "468af377a7acd760a120cf5c738c7f8fc01f1920",
+  "b2_or_b3_gpu_experiment_run": false
+}
