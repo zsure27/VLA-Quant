@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "classification": "contract_audit_no_gpu_experiment",
+  "instance_label": "035",
+  "verified_hostname": "autodl-container-481a45991f-b03cd0b4",
+  "gpu": "NVIDIA GeForce RTX 4090, 24564 MiB",
+  "b2_gate": "HOLD_CODE_AND_10STEP_SMOKE",
+  "b3_gate": "HOLD_CODE_AND_10STEP_SMOKE",
+  "b2_or_b3_training_started": false,
+  "b2_or_b3_closed_loop_episodes": 0,
+  "calibration80_gate": "PASS_SVD_CALIBRATION80_SOURCE",
+  "calibration80_samples": 80,
+  "calibration80_unique_trajectories": 80,
+  "calibration80_role": "peft_train",
+  "calibration80_manifest_sha256": "ae493d1fe3e32a5e64fb3658fee19b3528fb1c65ecd14c7f92f14ecb48d13742",
+  "trajectory_split_sha256": "d4903a2e9a1ee6b474f5215644ba68d494a8feb89354b3a2a88bbe13a9d48124",
+  "checkpoint_config_sha256": "bcb688a66f3e94a42311b77d37b7e1484886701f7b2aa8e36d165dfccac92ae6",
+  "w2_g128_profile_sha256": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc",
+  "w2_g64_profile_sha256": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8",
+  "w4_profile_sha256": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4",
+  "b1_adapter_sha256": "a231d7fb3cbb239e648547d466a68e32922a228e540f0b83bd9394e278389bf8",
+  "historical_development_300": {
+    "A3": 244, "B0": 260, "B1": 284, "BF16": 292, "A0": 294,
+    "note": "reused official development reset20-49, not independent replication"
+  },
+  "decision": "No B2/B3 GPU run; preserve strict gates and close paid 035 instead of idling during implementation"
+}
