@@ -1,3 +1,13 @@
+# 2026-10-05 模型命名与严格数据审计覆盖
+
+BF16保持不变；A0=W4、A1=16L、A2=14L、A3=12L/旧C0、A4=全合格AWQ W2（语言/DINO G64、SigLIP G128）；B0=旧C3、B1=旧LW、B2=A3+冻结B1+视觉增量、B3=A4+新语言32-block LoRA。后续按 `configs/model_registry_v1.json` 和 `docs/MODEL_NAMING_AND_DATA_AUDIT_20261005_CN.md`。旧实验阶段A1/A2写作EVAL_REPLICATION/TRAIN_ORDER_REPLICATION，原日志不改。
+
+用户已授权语言W2全范围扩展及预注册B2/B3探索，覆盖此前“所有PEFT只能blocks18–19”的当前范围描述；B0仍是18–19，B1是20个语言W2 blocks。B2/B3尚未通过实现与烟雾门禁，禁止直接长跑；Router/P4/P5仍锁定。新规范评测必须有model-id、注册profile/adapter SHA和训练manifest，拒绝训练reset与评测重叠。恢复训练必须在模型加载前通过role、轨迹划分和策略可见观测内容检查，路径/文件名不同不构成不重叠证据。
+
+历史W4 AWQ32校准与后续切分交叉核对为18条peft_train、8条router_dev、6条offline_final_holdout。因此75条仅是PEFT留出，不是全PTQ/基础checkpoint流程留出；其他profile和原checkpoint训练来源未完全排除。保留原切分/模型，不擅自重校准。未来独立性主张必须排除所有profile来源并建立实际新条件，不能把剩余69条自动命名最终盲测。禁止查询旧holdout前向/标签。
+
+B1的H17处于部分adapter之后，仅作P2.5分析，不可作为选择专家前的base-only Router输入。跨模型比较锁定共同task/reset/初态SHA/seed/protocol，报告rescue与break两数及任务区间，不拼历史500与当前300。最新开发300：A3=244、B0=260、B1=284、BF16=292、A0=294；历史411/412、430/431分来源保留。
+
 # VLA-Quant experiment admission
 
 ## Next boot A1/A2 audit (2026-09-30)

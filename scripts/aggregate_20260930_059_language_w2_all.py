@@ -8,7 +8,11 @@ import json
 import random
 import re
 import subprocess
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from qvla.paired_metrics import comparison
 
 CASES = ("C0", "C3", "LW", "BF16", "W4")
 PHASES = (("first50trace", 20, 5), ("remaining250", 25, 25))
@@ -59,12 +63,7 @@ def mcnemar(rescue: int, new_failure: int) -> float:
 
 
 def task_cluster_ci(rows: list[dict], candidate: str, baseline: str, draws: int = 20000) -> list[float]:
-    tasks = [sum(int(row[candidate]) - int(row[baseline]) for row in rows
-                 if row["task_id"] == task) for task in range(10)]
-    rng = random.Random(20260930)
-    values = [sum(rng.choice(tasks) for _ in range(10)) / 300 for _ in range(draws)]
-    values.sort()
-    return [values[int(0.025 * draws)], values[int(0.975 * draws)]]
+    return comparison(rows, candidate, baseline, draws)["task_cluster_bootstrap_95ci_fraction"]
 
 
 def main() -> None:
@@ -92,18 +91,9 @@ def main() -> None:
     by_task = {str(task): {case: sum(int(r[case]) for r in rows if r["task_id"] == task)
                            for case in CASES} for task in range(10)}
     comparisons = {}
-    for candidate in ("C3", "LW"):
-        rescue = sum(not r["C0"] and r[candidate] for r in rows)
-        broken = sum(r["C0"] and not r[candidate] for r in rows)
-        delta_by_task = {str(task): by_task[str(task)][candidate] - by_task[str(task)]["C0"]
-                         for task in range(10)}
-        comparisons[f"{candidate}_vs_C0"] = {
-            "rescue": rescue, "break": broken, "net": rescue - broken,
-            "exact_mcnemar_p": mcnemar(rescue, broken),
-            "task_cluster_bootstrap_95ci_fraction": task_cluster_ci(rows, candidate, "C0"),
-            "delta_by_task": delta_by_task,
-            "tasks_improved": sum(x > 0 for x in delta_by_task.values()),
-            "tasks_harmed": sum(x < 0 for x in delta_by_task.values())}
+    for candidate, baseline in (("C3", "C0"), ("LW", "C0"), ("LW", "C3"),
+                                 ("C3", "BF16"), ("C3", "W4"), ("LW", "BF16"), ("LW", "W4")):
+        comparisons[f"{candidate}_vs_{baseline}"] = comparison(rows, candidate, baseline)
     output = {
         "classification": "reused official development resets20–49; not independent A1 or blind holdout",
         "episodes_per_case": 300, "complete_strict_pairing": True,

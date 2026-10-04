@@ -1,0 +1,24 @@
+{
+  "verification": "13 dependency-light regression gates passed; archival audit passed; no GPU or new torch reload",
+  "files": {
+    "AGENTS.md": "356fe87f088548467bd6753007c9ab4f5ffae40ff864b5197ad45a3f0f29e0fd",
+    "README.md": "f5010c3b58700c0c5dad40b723992948ea57b2ce729c448734c12dd4b520b8d4",
+    "configs/model_registry_v1.json": "396a243f3937917a59122215d7385ddde77affa9db4a6cf155fae4f27ce770b0",
+    "docs/MODEL_NAMING_AND_DATA_AUDIT_20261005_CN.md": "310736c99a996e69d8d0560a11a4fd3de3b7668665138174bd8cdfb6f7f797f9",
+    "docs/PEFT_DATA_SPLIT_AUDIT_20261005_CN.md": "19b6c1582f234e7b9c06e4ddba46bfdf0832b14a44093bfd820b1a52baa06ac2",
+    "docs/pre-run-cards/VISUAL_INCREMENTAL_LORA_20261005_CN.md": "08643b55724d1c4566c6dbe110fd4224d5e903ee213f4bb8d68f43a7842c2256",
+    "docs/pre-run-cards/PURE_W2_RECOVERY_LORA_20261005_CN.md": "60d3aba1e0d244b3e86e0e631d4bcd5380b8cea8e05f964c79eca15197feba3e",
+    "qvla/model_registry.py": "b227d25937cc7f4ca4684d94d0c5355de4b3454a41e7ec4b821b16c27ac6dd47",
+    "qvla/data_roles.py": "4005d260b7d9ae48193438f34564a1e96789b607dbf1bfcebc91b5114bd2dcba",
+    "qvla/paired_metrics.py": "7021b38da127e6caf104233d814f18496b40b8f94705cbba11168cbfa4c896b6",
+    "qvla/state_metadata.py": "7a095fecc29e9b3e376944b79994303f60d8a0494ca0ff512a271c7b4fb7c72e",
+    "qvla/on_policy_capture.py": "162744c1fbb51abcc1095ccbeaaef65c6a76b580686adf4dedebe3d80d439b94",
+    "qvla/run_eval_official_quant.py": "745140fa9a8dfc115b3ce71b2425b5403fe838a010edb7b0fe3a2378a742c193",
+    "diagnostics/probe.py": "4189de7208106b8752bf7978c4686445640c54456fbee6b2acf26e59dd0a87e0",
+    "scripts/aggregate_20260930_059_language_w2_all.py": "2b8df91b352f947754ba91a9674a1dcf41667476a7cc4a8d4c3c3c120826201f",
+    "scripts/audit_model_registry.py": "174db2de35259bd7fa5ee77443e12f958c313d15dc49c164096eda4714b68f81",
+    "tests/test_registry_data_contract.py": "617e4a1882c5f27d249e32a0b74eacfaf0a8b4944524a5215218eb22687a7592",
+    "reports/experiments/p2-shared-peft/20261005-model-registry-audit/README_CN.md": "157ae72a4eb385b05ea4f8cd51165f45a5adce100461718da905324e650fc45c",
+    "results/experiments/p2-shared-peft/20261005-model-registry-audit/audit.json": "5a8f747529d46a7362278a0c1a4fda2081bce994b56317d0effb616703f49abc"
+  }
+}

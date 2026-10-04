@@ -454,6 +454,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--checkpoint", required=True)
     p.add_argument("--samples-dir", required=True, type=Path)
+    p.add_argument("--trajectory-split", type=Path,
+                   help="Required trajectory-role source for offline Recovery-LoRA calibration/training")
     p.add_argument("--official-root", required=True, type=Path)
     p.add_argument("--targets-file", required=True, type=Path)
     p.add_argument("--output", required=True, type=Path)
@@ -637,6 +639,20 @@ def main():
     args.samples = sorted(args.samples_dir.glob("sample-*.npz"))[args.offset:args.offset + args.num_samples]
     if len(args.samples) != args.num_samples:
         raise ValueError("Insufficient samples; adjust --offset/--num-samples explicitly")
+    if args.awq_residual_calibration_dir is not None:
+        from qvla.data_roles import audit_training_inputs, check_disjoint
+        calibration_inputs = sorted(args.awq_residual_calibration_dir.glob("sample-*.npz"))[:args.awq_residual_calibration_count]
+        if len(calibration_inputs) != args.awq_residual_calibration_count:
+            raise ValueError("Recovery calibration count mismatch")
+        input_audit = {"calibration": audit_training_inputs(calibration_inputs, args.trajectory_split)}
+        check_disjoint(calibration_inputs, args.samples)
+        if args.awq_e2e_distill_samples_dir is not None:
+            training_inputs = sorted(args.awq_e2e_distill_samples_dir.glob("sample-*.npz"))
+            if len(training_inputs) != args.awq_e2e_distill_samples_count:
+                raise ValueError("Recovery training count mismatch")
+            input_audit["training"] = audit_training_inputs(training_inputs, args.trajectory_split)
+            check_disjoint(training_inputs, calibration_inputs + args.samples)
+        save_json(args.output / "recovery-input-contract.json", input_audit)
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
     torch.backends.cuda.matmul.allow_tf32 = False
@@ -659,7 +675,7 @@ def main():
         entries, meta = load_profiles([args.awq_profile], "awq")
         if meta["checkpoint_identity"] != checkpoint_identity(args.checkpoint):
             raise ValueError("AWQ checkpoint 指纹不符")
-        if set(meta["sample_names"]) & {s.name for s in args.samples}:
+        if set(meta["sample_sha256"].values()) & {digest(s) for s in args.samples}:
             raise ValueError("AWQ 校准与探针帧重叠")
         if args.weight_scope not in ("all", "vision", "language") or args.activation_scope != "all":
             raise ValueError("AWQ 首轮只支持 all/vision/language；细粒度恢复另做受控实验")

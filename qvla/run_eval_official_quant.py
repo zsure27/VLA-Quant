@@ -75,7 +75,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--awq-w4-layers", default="")
     parser.add_argument("--awq-scale-peft-state", type=Path)
     parser.add_argument("--awq-recovery-lora-state", type=Path)
+    from qvla.model_registry import MODEL_IDS, validate_request
+    parser.add_argument("--model-id", choices=MODEL_IDS,
+                        help="Canonical registry identity; omit only for archived/diagnostic recipes")
+    parser.add_argument("--recovery-training-manifest", type=Path,
+                        help="Canonical B0/B1 training provenance; evaluation must exclude its resets")
     args = parser.parse_args()
+    validate_request(args)
+    from qvla.model_registry import validate_profile_provenance
+    validate_profile_provenance(args)
+    if args.model_id in ("B0", "B1"):
+        from qvla.model_registry import validate_training_provenance
+        validate_training_provenance(args)
     if args.awq_scope != "all" and args.method != "awq":
         parser.error("Scoped diagnostics are currently supported only for AWQ")
     primary_g64_candidates = {
@@ -441,7 +452,11 @@ def main() -> None:
             "serialized_bytes": args.awq_scale_peft_state.stat().st_size,
         })
     if args.awq_recovery_lora_state is not None:
-        recovery_lora_state = load_recovery_lora_state(args.awq_recovery_lora_state)
+        from qvla.model_registry import ADAPTER_LAYERS, validate_adapter_shapes
+        recovery_lora_state = load_recovery_lora_state(
+            args.awq_recovery_lora_state, ADAPTER_LAYERS.get(args.model_id))
+        if args.model_id in ADAPTER_LAYERS:
+            validate_adapter_shapes({k: tuple(v.shape) for k, v in recovery_lora_state.items()}, args.model_id)
         profile_manifest.append({
             "path": str(args.awq_recovery_lora_state),
             "sha256": source_sha256(args.awq_recovery_lora_state),
@@ -505,6 +520,11 @@ def main() -> None:
         scales, targets, removed = family_precision_plan(entries, metadata, parse_layers(args.awq_w4_layers), "all")
         targets.update(vision_plan(entries, metadata, 2))
         awq_plan = scales, targets, removed
+    from qvla.model_registry import validate_effective_plan
+    effective_targets = (awq_plan[1] if awq_plan is not None else
+                         {name: (entries[name], args.weight_bits, metadata.get("group_size", 128))
+                          for name in select_awq_scope(list(entries), args.awq_scope)})
+    validate_effective_plan(args.model_id, effective_targets)
     if checkpoint_identity(args.pretrained_checkpoint) != metadata["checkpoint_identity"]:
         raise RuntimeError("Profile 检查点内容指纹不符（允许迁移路径，不允许换权重）")
     current_sources = {
@@ -566,6 +586,8 @@ def main() -> None:
     )
     print("[official-quant] BF16 exclusions=projector,proprio_projector,action_head,embeddings,norms")
     print("[official-quant] candidate=" + json.dumps({
+        "model_id": args.model_id,
+        "identity_status": "canonical" if args.model_id else "archival_or_diagnostic_unregistered",
         "name": args.awq_candidate,
         "scope": args.awq_scope,
         "applied_targets": len(select_awq_scope(list(entries), args.awq_scope)) if args.method == "awq" else len(entries),

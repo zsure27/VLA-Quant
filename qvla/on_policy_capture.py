@@ -58,7 +58,11 @@ def file_sha256(path: Path) -> str:
 
 
 class H17SummaryRecorder:
-    """Keep causal pre-block18 pooled features for the current policy query."""
+    """Keep current-policy pre-block18 features for P2.5 diagnostics.
+
+    When the policy has adapters before block18 (e.g. B1), these features are
+    post-adapter and must not be used to select that adapter in a Router.
+    """
 
     def __init__(self, model: Any):
         self.value: dict[str, np.ndarray] | None = None

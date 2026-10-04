@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-05",
+  "ordering": "increasing quantization/recovery difficulty; not success-rate ranking",
+  "aliases": {
+    "C0": "A3",
+    "C3": "B0",
+    "LW": "B1",
+    "W4": "A0",
+    "16L": "A1",
+    "14L": "A2",
+    "12L": "A3"
+  },
+  "historical_stage_aliases": {
+    "A1": "EVAL_REPLICATION",
+    "A2": "TRAIN_ORDER_REPLICATION"
+  },
+  "profile_sha256": {
+    "w2_g128": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc",
+    "w2_g64": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8",
+    "w4": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4"
+  },
+  "models": {
+    "BF16": {
+      "status": "tested",
+      "quantized_targets": 0
+    },
+    "A0": {
+      "status": "tested",
+      "w4_language_blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "vision_bits": 4,
+      "protected_modules": "BF16/high precision; unchanged",
+      "activation_bits": 16
+    },
+    "A1": {
+      "status": "tested",
+      "w4_language_blocks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "vision_bits": 2,
+      "protected_modules": "BF16/high precision; unchanged",
+      "activation_bits": 16
+    },
+    "A2": {
+      "status": "tested",
+      "w4_language_blocks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "vision_bits": 2,
+      "protected_modules": "BF16/high precision; unchanged",
+      "activation_bits": 16
+    },
+    "A3": {
+      "status": "tested",
+      "w4_language_blocks": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        23
+      ],
+      "vision_bits": 2,
+      "protected_modules": "BF16/high precision; unchanged",
+      "activation_bits": 16
+    },
+    "A4": {
+      "status": "tested",
+      "w4_language_blocks": [],
+      "vision_bits": 2,
+      "protected_modules": "BF16/high precision; unchanged",
+      "activation_bits": 16
+    },
+    "B0": {
+      "base": "A3",
+      "status": "tested",
+      "rank": 8,
+      "language_adapter_blocks": [
+        18,
+        19
+      ],
+      "artifact": {
+        "adapter_sha256": "67cd6a6d4ec75d9173ce95b5f8f21c99b6562bfea58ea80947aa5640a335710a",
+        "serialized_bytes": 2508930,
+        "tensor_count": 28,
+        "parameters": 1249280,
+        "training_manifest_sha256": "858d844ed55bf3d56ba6c95d40be8480659d69dabe03ecda703ff0918856d642"
+      }
+    },
+    "B1": {
+      "base": "A3",
+      "status": "tested",
+      "rank": 8,
+      "language_adapter_blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        16,
+        17,
+        18,
+        19,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "artifact": {
+        "adapter_sha256": "a231d7fb3cbb239e648547d466a68e32922a228e540f0b83bd9394e278389bf8",
+        "serialized_bytes": 25086682,
+        "tensor_count": 280,
+        "parameters": 12492800,
+        "training_manifest_sha256": "858d844ed55bf3d56ba6c95d40be8480659d69dabe03ecda703ff0918856d642"
+      }
+    },
+    "B2": {
+      "base": "A3",
+      "status": "HOLD_CODE_SMOKE",
+      "rank": 8,
+      "scope": "frozen B1 plus new visual Linear adapter"
+    },
+    "B3": {
+      "base": "A4",
+      "status": "HOLD_CODE_SMOKE",
+      "rank": 8,
+      "scope": "new language32-block adapter; vision W2 frozen"
+    }
+  },
+  "audit_result": "results/experiments/p2-shared-peft/20261005-model-registry-audit/audit.json",
+  "alias_scope": "Display aliases only for hash-verified source sessions; never map unrelated historic same-label adapters."
+}
