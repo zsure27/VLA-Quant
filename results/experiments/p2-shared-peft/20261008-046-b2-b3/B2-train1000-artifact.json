@@ -1,0 +1,4404 @@
+{
+  "version": "b2-b3-v3-proprio-20261008",
+  "model_id": "B2",
+  "base": "A3",
+  "steps": 1000,
+  "gate": "PASS_TRAIN_CONTRACT",
+  "spec_sha256": "07ea74b6edf5f1e4614e09321142b27d74c42a4f2dd00b3f79ebac31e1ce479e",
+  "source_sha256": {
+    "scripts/train_extended_peft.py": "bf149112123a331196b45af33236ccb3e1448cbb03ff7cb7513db4070226da08",
+    "qvla/extended_peft.py": "038b8f1685a2d8900a25a187b20ff819a09e7bb90e009d3e160c470c21685316",
+    "qvla/recovery_lora.py": "2fabd32749f52e7b269e3fe66d0e939b2db17a004e1bc4b504e71191de5891f9",
+    "qvla/model_registry.py": "45f292eb3d5a0189d46d8ed697879f3b7a08cbd75353903492f8e44433de137d",
+    "qvla/run_eval_official_quant.py": "e7441b533ffdedcbf33aac555da1067487796fa48c7274d1bb6a723ce2bb3f8b",
+    "qvla/data_roles.py": "4005d260b7d9ae48193438f34564a1e96789b607dbf1bfcebc91b5114bd2dcba",
+    "qvla/action_jacobian_batch.py": "9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886",
+    "qvla/extended_proprio.py": "3b0b996934c448da3ecaf20bc062ee410477fdd8013dd803ac87e97d3413c2fa",
+    "diagnostics/probe.py": "b63ea50f36b491bbe2cc52ba54aa1f821a43ed44d887767712676c4512505f2d",
+    "diagnostics/low_rank_recovery.py": "8cd38967641c0c7bacf6ba3cca859fb55f471b0627dbe0db73bfb39306f99cd7",
+    "diagnostics/awq_interventions.py": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41"
+  },
+  "checkpoint_identity": {
+    "files": {
+      "action_head--150000_checkpoint.pt": "809858636cf0a65009dd567d2f4e116249442790f02b8fe31f24500ea6118908",
+      "added_tokens.json": "ab43123267b190cb7990bc9f2ae4ad32dcb7ed029fb0fccb1b4e062c6f54a2a1",
+      "config.json": "bcb688a66f3e94a42311b77d37b7e1484886701f7b2aa8e36d165dfccac92ae6",
+      "configuration_prismatic.py": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68",
+      "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282",
+      "generation_config.json": "67fbe17b12e8beb5be98eb911483971cc78589e51a37ac0cce9cd499d06a8bf1",
+      "lora_adapter/adapter_config.json": "30462bf8022279e5c8fe8c58db30d4c9c919b0a43feb0a99b5ca8f8b54c286df",
+      "lora_adapter/adapter_model.safetensors": "4bd2e808805f9b67af090c37e70f239b3b4da7a6473ec621ead6702b16a302ec",
+      "model-00001-of-00004.safetensors": "2809bd7be9422315c5ecbe91eea612f5b02925f37e0051728ad45bc993c79251",
+      "model-00002-of-00004.safetensors": "a00a7c5f2b6586ccfc89c693a9c36f3552ff455ff2b1bfea3e92642e4cd2b6d3",
+      "model-00003-of-00004.safetensors": "a894b7230a08b471af55c57dd7385fd3b51fae2c4d9307a36a8017ef57abf22a",
+      "model-00004-of-00004.safetensors": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60",
+      "model.safetensors.index.json": "ca8b53fed8133ee2afcd2fc483de8febf7f5bb0f6bcb09f91189772e59e8f659",
+      "modeling_prismatic.py": "f40ee7883e16aab1a2d89b6e8f31cc81f6b8055120b1fefe169e05c7031098fa",
+      "preprocessor_config.json": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da",
+      "processing_prismatic.py": "06563586bbc73d36501a14a231a3174904ede830d33174d0c625ece8e931ef1e",
+      "processor_config.json": "167e026d8121f6cb0bf5c18310b97ba8139152f970822bb3824213bd37dc7a76",
+      "proprio_projector--150000_checkpoint.pt": "438d28e81e125166d0771762424aaf017de3a8daaebde06a5cb71157e62b3bf3",
+      "special_tokens_map.json": "cb90ee5cf5793aa444039af9795b00db59d3fef8942e7eca9cf1990bab370d61",
+      "tokenizer.json": "8f5e2869e1807b8bb3c7717a294539c37e9de5d728ad60e31ef57e83cc5ea527",
+      "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "tokenizer_config.json": "f5f1d3ed015ebb71cf11686ff00bc8e0c25957bbf3952f95312cecc9b168fbea"
+    },
+    "sha256": "b909ec7ebc9d41890a7b956118763af4a78e408ba7a39106d2be4b3109918340"
+  },
+  "training_manifest_sha256": "858d844ed55bf3d56ba6c95d40be8480659d69dabe03ecda703ff0918856d642",
+  "training_state_space": "policy_normalized_proprio",
+  "adapter_sha256": "b3408497addd7561b9007d369baae70e1623f106dc832e01e9fd0816af31d63d",
+  "tensor_shapes": {
+    "vision_backbone.featurizer.blocks.0.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.0.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.0.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.0.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.0.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.0.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.0.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.0.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.1.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.1.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.1.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.1.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.1.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.1.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.1.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.1.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.2.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.2.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.2.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.2.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.2.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.2.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.2.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.2.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.3.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.3.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.3.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.3.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.3.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.3.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.3.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.3.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.4.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.4.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.4.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.4.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.4.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.4.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.4.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.4.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.5.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.5.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.5.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.5.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.5.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.5.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.5.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.5.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.6.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.6.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.6.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.6.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.6.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.6.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.6.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.6.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.7.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.7.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.7.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.7.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.7.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.7.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.7.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.7.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.8.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.8.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.8.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.8.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.8.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.8.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.8.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.8.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.9.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.9.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.9.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.9.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.9.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.9.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.9.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.9.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.10.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.10.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.10.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.10.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.10.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.10.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.10.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.10.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.11.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.11.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.11.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.11.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.11.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.11.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.11.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.11.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.12.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.12.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.12.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.12.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.12.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.12.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.12.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.12.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.13.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.13.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.13.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.13.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.13.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.13.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.13.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.13.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.14.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.14.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.14.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.14.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.14.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.14.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.14.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.14.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.15.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.15.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.15.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.15.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.15.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.15.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.15.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.15.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.16.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.16.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.16.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.16.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.16.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.16.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.16.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.16.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.17.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.17.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.17.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.17.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.17.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.17.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.17.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.17.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.18.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.18.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.18.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.18.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.18.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.18.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.18.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.18.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.19.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.19.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.19.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.19.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.19.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.19.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.19.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.19.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.20.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.20.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.20.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.20.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.20.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.20.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.20.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.20.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.21.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.21.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.21.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.21.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.21.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.21.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.21.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.21.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.22.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.22.attn.qkv.awq_recovery_lora.1.weight": [
+      3072,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.22.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.22.attn.proj.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.22.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1024
+    ],
+    "vision_backbone.featurizer.blocks.22.mlp.fc1.awq_recovery_lora.1.weight": [
+      4096,
+      8
+    ],
+    "vision_backbone.featurizer.blocks.22.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4096
+    ],
+    "vision_backbone.featurizer.blocks.22.mlp.fc2.awq_recovery_lora.1.weight": [
+      1024,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.0.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.1.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.2.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.3.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.4.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.5.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.6.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.7.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.8.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.9.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.10.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.11.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.12.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.13.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.14.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.15.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.16.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.17.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.18.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.19.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.20.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.21.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.22.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.23.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.24.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.attn.qkv.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.attn.qkv.awq_recovery_lora.1.weight": [
+      3456,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.attn.proj.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.attn.proj.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.mlp.fc1.awq_recovery_lora.0.weight": [
+      8,
+      1152
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.mlp.fc1.awq_recovery_lora.1.weight": [
+      4304,
+      8
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.mlp.fc2.awq_recovery_lora.0.weight": [
+      8,
+      4304
+    ],
+    "vision_backbone.fused_featurizer.blocks.25.mlp.fc2.awq_recovery_lora.1.weight": [
+      1152,
+      8
+    ]
+  },
+  "targets": [
+    {
+      "name": "vision_backbone.featurizer.blocks.0.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 16384
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 32768
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "bits": 2,
+      "group": 64,
+      "rank": 8,
+      "parameters": 40960
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 18432
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 36864
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "bits": 2,
+      "group": 128,
+      "rank": 8,
+      "parameters": 43648
+    }
+  ],
+  "target_sha256": "e58ab5eeee6e9b6502d0550f39651c386d170c3cbdba84eb136a41746f3fecbd",
+  "zero_output_equal": true,
+  "reload_output_equal": true,
+  "frozen_before_sha256": "b9cb85207135dbfa51a1ba33697fedaf1ca36a1981e4f222c0f975a7462b0938",
+  "frozen_after_sha256": "b9cb85207135dbfa51a1ba33697fedaf1ca36a1981e4f222c0f975a7462b0938",
+  "parameters": 6722048,
+  "serialized_bytes": 13581858,
+  "sample_sequence_sha256": "ae002ef4edf7e3ac930550864e0c1178f0d469aed89958b2180a73c8cfa9f735",
+  "trace": [
+    {
+      "step": 1,
+      "loss": 0.025998206809163094,
+      "gradient_norm": 0.041015625,
+      "sample": "sample-00015.npz"
+    },
+    {
+      "step": 10,
+      "loss": 0.017236290499567986,
+      "gradient_norm": 0.034423828125,
+      "sample": "sample-00039.npz"
+    },
+    {
+      "step": 20,
+      "loss": 0.015426453202962875,
+      "gradient_norm": 0.039306640625,
+      "sample": "sample-00010.npz"
+    },
+    {
+      "step": 30,
+      "loss": 0.016370583325624466,
+      "gradient_norm": 0.0712890625,
+      "sample": "sample-00079.npz"
+    },
+    {
+      "step": 40,
+      "loss": 0.012082415632903576,
+      "gradient_norm": 0.042724609375,
+      "sample": "sample-00023.npz"
+    },
+    {
+      "step": 50,
+      "loss": 0.032769519835710526,
+      "gradient_norm": 0.087890625,
+      "sample": "sample-00058.npz"
+    },
+    {
+      "step": 60,
+      "loss": 0.01282521989196539,
+      "gradient_norm": 0.1142578125,
+      "sample": "sample-00068.npz"
+    },
+    {
+      "step": 70,
+      "loss": 0.017639655619859695,
+      "gradient_norm": 0.07568359375,
+      "sample": "sample-00078.npz"
+    },
+    {
+      "step": 80,
+      "loss": 0.041508376598358154,
+      "gradient_norm": 0.12890625,
+      "sample": "sample-00028.npz"
+    },
+    {
+      "step": 90,
+      "loss": 0.008421043865382671,
+      "gradient_norm": 0.05859375,
+      "sample": "sample-00002.npz"
+    },
+    {
+      "step": 100,
+      "loss": 0.012351280078291893,
+      "gradient_norm": 0.052978515625,
+      "sample": "sample-00005.npz"
+    },
+    {
+      "step": 110,
+      "loss": 0.011856825090944767,
+      "gradient_norm": 0.062255859375,
+      "sample": "sample-00060.npz"
+    },
+    {
+      "step": 120,
+      "loss": 0.010411517694592476,
+      "gradient_norm": 0.043212890625,
+      "sample": "sample-00015.npz"
+    },
+    {
+      "step": 130,
+      "loss": 0.038337983191013336,
+      "gradient_norm": 0.07666015625,
+      "sample": "sample-00065.npz"
+    },
+    {
+      "step": 140,
+      "loss": 0.012766634114086628,
+      "gradient_norm": 0.052001953125,
+      "sample": "sample-00031.npz"
+    },
+    {
+      "step": 150,
+      "loss": 0.012250752188265324,
+      "gradient_norm": 0.05859375,
+      "sample": "sample-00037.npz"
+    },
+    {
+      "step": 160,
+      "loss": 0.02407783828675747,
+      "gradient_norm": 0.22265625,
+      "sample": "sample-00057.npz"
+    },
+    {
+      "step": 170,
+      "loss": 0.006171306129544973,
+      "gradient_norm": 0.04638671875,
+      "sample": "sample-00038.npz"
+    },
+    {
+      "step": 180,
+      "loss": 0.008420350961387157,
+      "gradient_norm": 0.037353515625,
+      "sample": "sample-00005.npz"
+    },
+    {
+      "step": 190,
+      "loss": 0.0037806115578860044,
+      "gradient_norm": 0.031982421875,
+      "sample": "sample-00003.npz"
+    },
+    {
+      "step": 200,
+      "loss": 0.003512487979605794,
+      "gradient_norm": 0.0556640625,
+      "sample": "sample-00019.npz"
+    },
+    {
+      "step": 210,
+      "loss": 0.003689255565404892,
+      "gradient_norm": 0.0267333984375,
+      "sample": "sample-00071.npz"
+    },
+    {
+      "step": 220,
+      "loss": 0.018013378605246544,
+      "gradient_norm": 0.1259765625,
+      "sample": "sample-00047.npz"
+    },
+    {
+      "step": 230,
+      "loss": 0.01646444760262966,
+      "gradient_norm": 0.09033203125,
+      "sample": "sample-00066.npz"
+    },
+    {
+      "step": 240,
+      "loss": 0.0070963152684271336,
+      "gradient_norm": 0.054931640625,
+      "sample": "sample-00035.npz"
+    },
+    {
+      "step": 250,
+      "loss": 0.005731711629778147,
+      "gradient_norm": 0.06298828125,
+      "sample": "sample-00010.npz"
+    },
+    {
+      "step": 260,
+      "loss": 0.009317143820226192,
+      "gradient_norm": 0.087890625,
+      "sample": "sample-00016.npz"
+    },
+    {
+      "step": 270,
+      "loss": 0.004236273933202028,
+      "gradient_norm": 0.05810546875,
+      "sample": "sample-00032.npz"
+    },
+    {
+      "step": 280,
+      "loss": 0.002488057827576995,
+      "gradient_norm": 0.022216796875,
+      "sample": "sample-00019.npz"
+    },
+    {
+      "step": 290,
+      "loss": 0.008332299999892712,
+      "gradient_norm": 0.0849609375,
+      "sample": "sample-00040.npz"
+    },
+    {
+      "step": 300,
+      "loss": 0.009881473146378994,
+      "gradient_norm": 0.09814453125,
+      "sample": "sample-00008.npz"
+    },
+    {
+      "step": 310,
+      "loss": 0.006920347455888987,
+      "gradient_norm": 0.049560546875,
+      "sample": "sample-00029.npz"
+    },
+    {
+      "step": 320,
+      "loss": 0.005645436234772205,
+      "gradient_norm": 0.0576171875,
+      "sample": "sample-00048.npz"
+    },
+    {
+      "step": 330,
+      "loss": 0.004230658523738384,
+      "gradient_norm": 0.0546875,
+      "sample": "sample-00031.npz"
+    },
+    {
+      "step": 340,
+      "loss": 0.004801057279109955,
+      "gradient_norm": 0.04736328125,
+      "sample": "sample-00077.npz"
+    },
+    {
+      "step": 350,
+      "loss": 0.003334619337692857,
+      "gradient_norm": 0.0262451171875,
+      "sample": "sample-00055.npz"
+    },
+    {
+      "step": 360,
+      "loss": 0.005627324804663658,
+      "gradient_norm": 0.072265625,
+      "sample": "sample-00057.npz"
+    },
+    {
+      "step": 370,
+      "loss": 0.0033505752217024565,
+      "gradient_norm": 0.033447265625,
+      "sample": "sample-00037.npz"
+    },
+    {
+      "step": 380,
+      "loss": 0.004144594073295593,
+      "gradient_norm": 0.076171875,
+      "sample": "sample-00079.npz"
+    },
+    {
+      "step": 390,
+      "loss": 0.004866003058850765,
+      "gradient_norm": 0.04150390625,
+      "sample": "sample-00029.npz"
+    },
+    {
+      "step": 400,
+      "loss": 0.0030364033300429583,
+      "gradient_norm": 0.0311279296875,
+      "sample": "sample-00020.npz"
+    },
+    {
+      "step": 410,
+      "loss": 0.0041016521863639355,
+      "gradient_norm": 0.046630859375,
+      "sample": "sample-00078.npz"
+    },
+    {
+      "step": 420,
+      "loss": 0.004679798148572445,
+      "gradient_norm": 0.01519775390625,
+      "sample": "sample-00067.npz"
+    },
+    {
+      "step": 430,
+      "loss": 0.002168886363506317,
+      "gradient_norm": 0.0419921875,
+      "sample": "sample-00068.npz"
+    },
+    {
+      "step": 440,
+      "loss": 0.004492852836847305,
+      "gradient_norm": 0.06884765625,
+      "sample": "sample-00030.npz"
+    },
+    {
+      "step": 450,
+      "loss": 0.005354014225304127,
+      "gradient_norm": 0.08349609375,
+      "sample": "sample-00047.npz"
+    },
+    {
+      "step": 460,
+      "loss": 0.005141233094036579,
+      "gradient_norm": 0.047607421875,
+      "sample": "sample-00046.npz"
+    },
+    {
+      "step": 470,
+      "loss": 0.004787012934684753,
+      "gradient_norm": 0.05078125,
+      "sample": "sample-00045.npz"
+    },
+    {
+      "step": 480,
+      "loss": 0.005009902641177177,
+      "gradient_norm": 0.04736328125,
+      "sample": "sample-00017.npz"
+    },
+    {
+      "step": 490,
+      "loss": 0.0009409867925569415,
+      "gradient_norm": 0.0126953125,
+      "sample": "sample-00009.npz"
+    },
+    {
+      "step": 500,
+      "loss": 0.005371807608753443,
+      "gradient_norm": 0.095703125,
+      "sample": "sample-00002.npz"
+    },
+    {
+      "step": 510,
+      "loss": 0.018178876489400864,
+      "gradient_norm": 0.10546875,
+      "sample": "sample-00064.npz"
+    },
+    {
+      "step": 520,
+      "loss": 0.007924197241663933,
+      "gradient_norm": 0.10595703125,
+      "sample": "sample-00000.npz"
+    },
+    {
+      "step": 530,
+      "loss": 0.00880221463739872,
+      "gradient_norm": 0.06787109375,
+      "sample": "sample-00028.npz"
+    },
+    {
+      "step": 540,
+      "loss": 0.002854886231943965,
+      "gradient_norm": 0.0306396484375,
+      "sample": "sample-00021.npz"
+    },
+    {
+      "step": 550,
+      "loss": 0.0013390319654718041,
+      "gradient_norm": 0.03125,
+      "sample": "sample-00069.npz"
+    },
+    {
+      "step": 560,
+      "loss": 0.003950211685150862,
+      "gradient_norm": 0.044189453125,
+      "sample": "sample-00044.npz"
+    },
+    {
+      "step": 570,
+      "loss": 0.00246450980193913,
+      "gradient_norm": 0.031005859375,
+      "sample": "sample-00032.npz"
+    },
+    {
+      "step": 580,
+      "loss": 0.0024715950712561607,
+      "gradient_norm": 0.0274658203125,
+      "sample": "sample-00026.npz"
+    },
+    {
+      "step": 590,
+      "loss": 0.0019323264714330435,
+      "gradient_norm": 0.024169921875,
+      "sample": "sample-00060.npz"
+    },
+    {
+      "step": 600,
+      "loss": 0.0017874148907139897,
+      "gradient_norm": 0.02880859375,
+      "sample": "sample-00010.npz"
+    },
+    {
+      "step": 610,
+      "loss": 0.004042701795697212,
+      "gradient_norm": 0.027099609375,
+      "sample": "sample-00040.npz"
+    },
+    {
+      "step": 620,
+      "loss": 0.0060452609322965145,
+      "gradient_norm": 0.1025390625,
+      "sample": "sample-00045.npz"
+    },
+    {
+      "step": 630,
+      "loss": 0.002803494455292821,
+      "gradient_norm": 0.0537109375,
+      "sample": "sample-00059.npz"
+    },
+    {
+      "step": 640,
+      "loss": 0.002835550345480442,
+      "gradient_norm": 0.06787109375,
+      "sample": "sample-00075.npz"
+    },
+    {
+      "step": 650,
+      "loss": 0.0016969370190054178,
+      "gradient_norm": 0.0224609375,
+      "sample": "sample-00043.npz"
+    },
+    {
+      "step": 660,
+      "loss": 0.0017942744307219982,
+      "gradient_norm": 0.02099609375,
+      "sample": "sample-00020.npz"
+    },
+    {
+      "step": 670,
+      "loss": 0.0026647141203284264,
+      "gradient_norm": 0.06201171875,
+      "sample": "sample-00041.npz"
+    },
+    {
+      "step": 680,
+      "loss": 0.001896827481687069,
+      "gradient_norm": 0.037109375,
+      "sample": "sample-00061.npz"
+    },
+    {
+      "step": 690,
+      "loss": 0.0014466100838035345,
+      "gradient_norm": 0.016357421875,
+      "sample": "sample-00055.npz"
+    },
+    {
+      "step": 700,
+      "loss": 0.00710683548822999,
+      "gradient_norm": 0.04443359375,
+      "sample": "sample-00000.npz"
+    },
+    {
+      "step": 710,
+      "loss": 0.0019523401279002428,
+      "gradient_norm": 0.03369140625,
+      "sample": "sample-00071.npz"
+    },
+    {
+      "step": 720,
+      "loss": 0.0011217402061447501,
+      "gradient_norm": 0.01318359375,
+      "sample": "sample-00015.npz"
+    },
+    {
+      "step": 730,
+      "loss": 0.0024734337348490953,
+      "gradient_norm": 0.0615234375,
+      "sample": "sample-00019.npz"
+    },
+    {
+      "step": 740,
+      "loss": 0.0026565806474536657,
+      "gradient_norm": 0.035400390625,
+      "sample": "sample-00017.npz"
+    },
+    {
+      "step": 750,
+      "loss": 0.003897625021636486,
+      "gradient_norm": 0.05322265625,
+      "sample": "sample-00042.npz"
+    },
+    {
+      "step": 760,
+      "loss": 0.0016556872287765145,
+      "gradient_norm": 0.026123046875,
+      "sample": "sample-00020.npz"
+    },
+    {
+      "step": 770,
+      "loss": 0.0013062558136880398,
+      "gradient_norm": 0.027587890625,
+      "sample": "sample-00031.npz"
+    },
+    {
+      "step": 780,
+      "loss": 0.0024238028563559055,
+      "gradient_norm": 0.051513671875,
+      "sample": "sample-00016.npz"
+    },
+    {
+      "step": 790,
+      "loss": 0.00394187169149518,
+      "gradient_norm": 0.030029296875,
+      "sample": "sample-00056.npz"
+    },
+    {
+      "step": 800,
+      "loss": 0.002072473056614399,
+      "gradient_norm": 0.021240234375,
+      "sample": "sample-00026.npz"
+    },
+    {
+      "step": 810,
+      "loss": 0.0026106431614607573,
+      "gradient_norm": 0.056640625,
+      "sample": "sample-00022.npz"
+    },
+    {
+      "step": 820,
+      "loss": 0.0016102568479254842,
+      "gradient_norm": 0.029541015625,
+      "sample": "sample-00003.npz"
+    },
+    {
+      "step": 830,
+      "loss": 0.0019815952982753515,
+      "gradient_norm": 0.0284423828125,
+      "sample": "sample-00017.npz"
+    },
+    {
+      "step": 840,
+      "loss": 0.0008918519015423954,
+      "gradient_norm": 0.01202392578125,
+      "sample": "sample-00035.npz"
+    },
+    {
+      "step": 850,
+      "loss": 0.0019455505535006523,
+      "gradient_norm": 0.04248046875,
+      "sample": "sample-00070.npz"
+    },
+    {
+      "step": 860,
+      "loss": 0.0021650802809745073,
+      "gradient_norm": 0.03564453125,
+      "sample": "sample-00045.npz"
+    },
+    {
+      "step": 870,
+      "loss": 0.001687865937128663,
+      "gradient_norm": 0.04296875,
+      "sample": "sample-00005.npz"
+    },
+    {
+      "step": 880,
+      "loss": 0.002705227816477418,
+      "gradient_norm": 0.048583984375,
+      "sample": "sample-00050.npz"
+    },
+    {
+      "step": 890,
+      "loss": 0.002138889394700527,
+      "gradient_norm": 0.040283203125,
+      "sample": "sample-00059.npz"
+    },
+    {
+      "step": 900,
+      "loss": 0.001333141466602683,
+      "gradient_norm": 0.019775390625,
+      "sample": "sample-00060.npz"
+    },
+    {
+      "step": 910,
+      "loss": 0.0008564031450077891,
+      "gradient_norm": 0.0155029296875,
+      "sample": "sample-00031.npz"
+    },
+    {
+      "step": 920,
+      "loss": 0.0015616824384778738,
+      "gradient_norm": 0.05908203125,
+      "sample": "sample-00018.npz"
+    },
+    {
+      "step": 930,
+      "loss": 0.0049860416911542416,
+      "gradient_norm": 0.10400390625,
+      "sample": "sample-00026.npz"
+    },
+    {
+      "step": 940,
+      "loss": 0.001649673329666257,
+      "gradient_norm": 0.0306396484375,
+      "sample": "sample-00062.npz"
+    },
+    {
+      "step": 950,
+      "loss": 0.0010745372856035829,
+      "gradient_norm": 0.01611328125,
+      "sample": "sample-00015.npz"
+    },
+    {
+      "step": 960,
+      "loss": 0.0028506347443908453,
+      "gradient_norm": 0.059326171875,
+      "sample": "sample-00004.npz"
+    },
+    {
+      "step": 970,
+      "loss": 0.0005203159525990486,
+      "gradient_norm": 0.00885009765625,
+      "sample": "sample-00049.npz"
+    },
+    {
+      "step": 980,
+      "loss": 0.0011563068255782127,
+      "gradient_norm": 0.01080322265625,
+      "sample": "sample-00025.npz"
+    },
+    {
+      "step": 990,
+      "loss": 0.0012213349109515548,
+      "gradient_norm": 0.027099609375,
+      "sample": "sample-00021.npz"
+    },
+    {
+      "step": 1000,
+      "loss": 0.001696375198662281,
+      "gradient_norm": 0.046875,
+      "sample": "sample-00075.npz"
+    }
+  ],
+  "training_seconds": 443.90045672655106,
+  "peak_cuda_bytes": 19441835008,
+  "reuse_files": {
+    "initial-adapter.pt": "02aa2951767e4b2ca1e604bdd5bbcce8c7cecd1efccaf9b99a332630ed99fd42",
+    "teacher-targets.pt": "b521af24980499641818621e3f38f3fb8bf22e617a05287dce79b28dbc5bc951",
+    "teacher-input-hashes.json": "4452bb1afaf6edfe0440f07808991dce338f5931f1782baa363a54e78d6f96f3"
+  },
+  "smoke_artifact_sha256": "8419bd75ab5c8071a73993a4eb086aded8758af24be1e28222f4d53124516a31",
+  "interpretation": "Training/structural evidence only; no closed-loop benefit claim"
+}
