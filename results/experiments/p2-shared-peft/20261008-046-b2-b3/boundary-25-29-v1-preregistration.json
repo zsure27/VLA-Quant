@@ -1,0 +1,49 @@
+{
+  "plan_id": "20261008-046-B2B3-boundary-25-29-v1",
+  "source_plan_sha256": {
+    "B2": "a82b9e2422fff5b736990e25c8cd271af5f402e624b1d32ba1b798ac4e6df852",
+    "B3": "b1da2360b285ea5a0eb7000d0a3ee03c509b9f85a2bdc4428659b91977fc5d2b"
+  },
+  "source_lock_sha256": {
+    "B2": "1ce0e52afc2d253263896efa3eb93223b4b0f76d51fbc202462045a8e89e9449",
+    "B3": "92f9e34e30f563b529a51791cb412739716f569b6ddb4978dcdef0160dbfd103"
+  },
+  "audit_script_sha256": "1d1fcc08a1a06891c8b177f6d9f5d43886c666045186c56adbca213c01b5c1bc",
+  "train_resets": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "eval_resets": [
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "cases": [
+    "A3",
+    "B1",
+    "B2",
+    "A4",
+    "B3",
+    "BF16",
+    "A0"
+  ],
+  "phases": [
+    {
+      "name": "micro",
+      "offset": 25,
+      "per_task": 1
+    },
+    {
+      "name": "first50",
+      "offset": 25,
+      "per_task": 5
+    }
+  ],
+  "micro_overlaps_first50": true,
+  "first50_per_case": 50,
+  "continuation_gate": "protocol validity only; success direction never gates continuation"
+}
