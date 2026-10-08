@@ -164,7 +164,10 @@ class ExtendedContracts(unittest.TestCase):
                     m={"task_id":t,"init_state_index":20,"init_state_sha256":str(t),"env_seed":1,"model_seed":t,"protocol":"paired"}
                     success=case!="B2"
                     logs += ["EPISODE_MANIFEST "+json.dumps(m), "Success: "+str(success)]
-                    image=np.full((1,1,3),t,np.uint8); wrist=np.zeros((1,1,3),np.uint8); state=np.zeros(8,np.float32); action=np.zeros((8,7),np.float32)
+                    image=np.full((1,1,3),t,np.uint8); wrist=np.zeros((1,1,3),np.uint8)
+                    raw_state=np.full(8,-1.0,np.float32)
+                    state=normalized_trace_state(raw_state,{"q01":[-1.0]*8,"q99":[1.0]*8})
+                    action=np.zeros((8,7),np.float32)
                     source=p/"policy-observations"/f"query-{t:06d}.npz"
                     np.savez(source,image=image,wrist_image=wrist,state=state,instruction=np.array(str(t)),student_action=action)
                     events.extend([{"record_type":"episode_start","episode_serial":t},
@@ -173,7 +176,7 @@ class ExtendedContracts(unittest.TestCase):
                          "observation_sha256":observation_hash(image,wrist,state,str(t))},
                         {"record_type":"episode_end","episode_serial":t,"queries":1,"success":success,"aborted":False}])
                     queries.append({"raw_policy_chunk":action.tolist(),"finite":True,"task":str(t),
-                                    "state_space":"raw_proprio_before_get_action","state":state.tolist()})
+                                    "state_space":"raw_proprio_before_get_action","state":raw_state.tolist()})
                 (p/"EVAL-fixture.txt").write_text("\n".join(logs))
                 for filename,rows in (("on-policy-events.jsonl",events),("policy-queries.jsonl",queries)):
                     (p/filename).write_text("\n".join(json.dumps(r) for r in rows))
