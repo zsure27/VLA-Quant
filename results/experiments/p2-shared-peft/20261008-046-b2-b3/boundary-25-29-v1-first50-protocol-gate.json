@@ -1,0 +1,758 @@
+{
+  "gate": "PASS_PROTOCOL_BOUNDARY_FIRST50",
+  "classification": "reused official development resets, not independent replication",
+  "offset": 25,
+  "per_task": 5,
+  "paired_episodes": 50,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 25,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 26,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 27,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 28,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 29,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": false,
+      "A4": false,
+      "B3": true,
+      "BF16": false,
+      "A0": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 26,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 27,
+      "A3": false,
+      "B1": false,
+      "B2": true,
+      "A4": false,
+      "B3": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 26,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 25,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 26,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 27,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 28,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 29,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "cases": {
+    "A3": {
+      "successes": 42,
+      "episodes": 50,
+      "query_count": 747,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-19_33_51.txt": "b03cb5b952a296983bc30bbb9cb7fbf0bc1a0674954fb2d2731f04a9895c2819",
+        "invocation.json": "8f0f7a3a7ff76fb8f39907e072ef6115df19696c139dc559932b9aec4fdcf57c",
+        "policy-queries.jsonl": "acaeb98977e8831c41f566becd54e78ab70a896a55eafa1814b901af6b5851a9",
+        "on-policy-events.jsonl": "8b8ec39f25e7ec1b8a2c780f8617ee7ce59ccdd8bfa56900d13952647e9eb334",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B1": {
+      "successes": 49,
+      "episodes": 50,
+      "query_count": 653,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-19_45_12.txt": "d6f2fe2e5aaf6259d986ad8089df20ab9727866a71df865f934e006f56026632",
+        "invocation.json": "b839994eec35a9e57dd87101bad2eddca6d26c126b5116539b1766b99edb6360",
+        "policy-queries.jsonl": "ce4b1f6b1fe994271ede8890911b8826755d34e9c2b740a17ef38333da9f6482",
+        "on-policy-events.jsonl": "0839bdbfe3c4fec6dee2b79b09c199c4732f50a8840abafa4a801f3e8092e283",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B2": {
+      "successes": 49,
+      "episodes": 50,
+      "query_count": 660,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-19_56_00.txt": "f45297322933e7b0f84aa6cb701e243e485fcce19ed8d819895a28c275a8155a",
+        "invocation.json": "22bf8ba0b5823030e92de877fd75ce781f9070b3e7ccdf0eedccdc72c8040b1f",
+        "policy-queries.jsonl": "9206c549c379dd292b1d4dbba68cb86d5161bcafd1f8a89ed690c9e6a214a540",
+        "on-policy-events.jsonl": "34db0650e504c3faea23708b319171f28a764399cd80a24004c21720c123dedb",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A4": {
+      "successes": 7,
+      "episodes": 50,
+      "query_count": 1297,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-20_07_03.txt": "00204bdf4ed38d68b9988d405ce54235b713b79e6c7ddfd747545f1d2484c955",
+        "invocation.json": "a8b15dd79e1e28008557d9d42fc9f9c01e65de337e64e57b014930f9f2073892",
+        "policy-queries.jsonl": "ab7afd9c446b0a1183defdcd3cfbbde3a7b7390011213dcc6595f2647d7fd777",
+        "on-policy-events.jsonl": "5c675e6543424f9266e1176a6378eef820727101db9b587f4ad19ce5574a9b11",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B3": {
+      "successes": 46,
+      "episodes": 50,
+      "query_count": 727,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-20_22_33.txt": "01fddee554ac9feec0b8f918ba51050e122c6560ddf332c82116e26a5a328bdc",
+        "invocation.json": "99fa7720f620385315c2dea505fe591244a27cfe6145a30a5330f3be7b885848",
+        "policy-queries.jsonl": "8d841533fac7f8911e4341262fcdc0b9aed433aa179318dae51a2b7a3918e892",
+        "on-policy-events.jsonl": "bb2cfffdcb4dddef4c8b42dc7c5ba710156e62b863e0cb57f5151273ea707c41",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "BF16": {
+      "successes": 46,
+      "episodes": 50,
+      "query_count": 709,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-20_33_47.txt": "72d9dc6f7b08f18201f9004a61dfca6e989c1c566187c286fd19d0a39d5334ac",
+        "invocation.json": "0e0c8feb46f5ccad4a4ded8a55791f80eb6f2bd5e604b7acee3b92a4011b1010",
+        "policy-queries.jsonl": "6f45058f4897dc09453806719e87785a24dd8248fa7498433d86fa1b3dee52c1",
+        "on-policy-events.jsonl": "8b8067b118cbf8a5887f85be2b477c0b04d8aecc0180af6be6cec466b29a1881",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 49,
+      "episodes": 50,
+      "query_count": 666,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-20_44_51.txt": "e1ec7fc82f382406df756ee83360e7b3c3fe8e7e9fd7ee5917bf6fb7701d5569",
+        "invocation.json": "de17b2dc829b82a697c82372b68eddc336404cc3a081863c0b7c7deb5e33d495",
+        "policy-queries.jsonl": "c1207b7b08c5e516449c2ff115d181df5f98dd3c1c978b6fbe43f4d18e0c76e2",
+        "on-policy-events.jsonl": "cb7e8c0d2bffb93f3e7df5971a225cb3fd3cdd7998801a2d48e575ff516ff2b7",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "B2_vs_B1": {
+    "episodes": 50,
+    "rescue": 1,
+    "break": 1,
+    "net": 0,
+    "delta_fraction": 0.0,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.06,
+      0.06
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": -1,
+      "5": 1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 1,
+    "tasks_harmed": 1
+  },
+  "B3_vs_A4": {
+    "episodes": 50,
+    "rescue": 39,
+    "break": 0,
+    "net": 39,
+    "delta_fraction": 0.78,
+    "exact_mcnemar_p": 3.637978807091713e-12,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.62,
+      0.92
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 5,
+      "1": 5,
+      "2": 2,
+      "3": 4,
+      "4": 5,
+      "5": 3,
+      "6": 5,
+      "7": 5,
+      "8": 2,
+      "9": 3
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "B3_vs_B1": {
+    "episodes": 50,
+    "rescue": 0,
+    "break": 3,
+    "net": -3,
+    "delta_fraction": -0.06,
+    "exact_mcnemar_p": 0.25,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.14,
+      0.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": -1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": -2
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 2
+  },
+  "B2_vs_B3": {
+    "episodes": 50,
+    "rescue": 4,
+    "break": 1,
+    "net": 3,
+    "delta_fraction": 0.06,
+    "exact_mcnemar_p": 0.375,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.04,
+      0.18
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": -1,
+      "5": 2,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 2
+    },
+    "tasks_improved": 2,
+    "tasks_harmed": 1
+  },
+  "next_expansion": "LOCKED; protocol-only audit and new preregistration required"
+}
