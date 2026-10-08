@@ -137,7 +137,9 @@ def train(args):
         raise ValueError("Full checkpoint content differs from profiles")
     for key, func in (("awq_auto_scale", "awq_auto_scale_block"), ("awq_auto_clip", "awq_auto_clip"),
                       ("awq_quantizer", "awq_quantize")):
-        if sha(inspect.getsourcefile(official[func])) != meta["official_sources"][key]["sha256"]:
+        # AWQ wraps some functions with torch.no_grad; hash the unwrapped official source.
+        source = inspect.getsourcefile(inspect.unwrap(official[func]))
+        if source is None or sha(source) != meta["official_sources"][key]["sha256"]:
             raise ValueError(f"Official source SHA mismatch: {key}")
     cfg, model, head, proprio, processor = initialize_readonly(materials["checkpoint"], spec["seed"])
     if sha(inspect.getsourcefile(type(model))) != meta["model_source_sha256"]:
