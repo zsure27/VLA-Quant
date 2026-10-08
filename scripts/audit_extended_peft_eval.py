@@ -18,6 +18,16 @@ def read_lines(path):
     return [json.loads(line) for line in path.read_text().splitlines() if line]
 
 
+def normalized_trace_state(raw, stats):
+    """Mirror the frozen OFT BOUNDS_Q99 proprio transform, then NPZ float32 storage."""
+    value = np.asarray(raw)
+    q01, q99 = np.asarray(stats["q01"]), np.asarray(stats["q99"])
+    mask = np.asarray(stats.get("mask", np.ones_like(q01, dtype=bool)), dtype=bool)
+    if value.shape != (8,) or q01.shape != (8,) or q99.shape != (8,) or mask.shape != (8,) or not np.isfinite(value).all():
+        raise ValueError("Malformed raw trace or frozen proprio statistics")
+    return np.clip(np.where(mask, 2 * (value - q01) / (q99 - q01 + 1e-8) - 1, value), -1, 1).astype(np.float32)
+
+
 def audit_case(directory, model_id, offset, count):
     if (directory / "exit-code.txt").read_text().strip() != "0": raise ValueError("Evaluation failed")
     command = json.loads((directory / "invocation.json").read_text())["command"]
@@ -28,6 +38,8 @@ def audit_case(directory, model_id, offset, count):
         if flag(key) != value: raise ValueError(f"Actual command differs: {model_id} {key}")
     if "--trace-observations" not in command or "--trace-actions" not in command:
         raise ValueError("Both traces must really be enabled")
+    statistics = Path(flag("--pretrained_checkpoint")) / "dataset_statistics.json"
+    norm = json.loads(statistics.read_text(encoding="utf-8"))["libero_spatial_no_noops"]["proprio"]
     logs = list(directory.glob("EVAL-*.txt"))
     if len(logs) != 1: raise ValueError("Expected exactly one evaluation log")
     log = logs[0].read_text()
@@ -65,8 +77,9 @@ def audit_case(directory, model_id, offset, count):
             fingerprint = observation_hash(sample["image"], sample["wrist_image"], sample["state"], str(sample["instruction"].item()))
             if not np.array_equal(sample["student_action"], action.astype(np.float32)):
                 raise ValueError("Saved observation action differs from execution trace")
-            if row["task"] != query["task"] or row["task"] != str(sample["instruction"].item()) or not np.array_equal(
-                    sample["state"], np.asarray(query["state"], dtype=np.float32)):
+            if (row["task"] != query["task"] or row["task"] != str(sample["instruction"].item())
+                    or query.get("state_space") != "raw_proprio_before_get_action"
+                    or not np.array_equal(sample["state"], normalized_trace_state(query["state"], norm))):
                 raise ValueError("Trace task/proprio differs from saved policy observation")
         if fingerprint != row["observation_sha256"]: raise ValueError("Observation fingerprint mismatch")
         if row["query_in_episode"] == 0: first[serial] = fingerprint
@@ -74,7 +87,7 @@ def audit_case(directory, model_id, offset, count):
         raise ValueError("Missing first observation or query count mismatch")
     return {"keys": keys, "success": successes, "first": first, "query_count": len(eq),
             "sha256": {p.name: sha(p) for p in (logs[0], directory / "invocation.json",
-                        directory / "policy-queries.jsonl", directory / "on-policy-events.jsonl")}}
+                        directory / "policy-queries.jsonl", directory / "on-policy-events.jsonl", statistics)}}
 
 
 def audit(root, model_id, phase):

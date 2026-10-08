@@ -13,7 +13,7 @@ from qvla.extended_peft import (target_names, descriptors, validate_shapes, load
     zero_state, attach_state, trainable_contract, student_contract, sha)
 from qvla.model_registry import W4_LAYERS, validate_request, validate_effective_plan
 from scripts.train_extended_peft import copy_state, frozen_digest
-from scripts.audit_extended_peft_eval import audit_case, audit
+from scripts.audit_extended_peft_eval import audit_case, audit, normalized_trace_state
 from qvla.on_policy_capture import observation_hash
 
 
@@ -130,7 +130,8 @@ class ExtendedContracts(unittest.TestCase):
                         np.savez(path, image=np.full((1,1,3), len(rows),np.uint8), wrist_image=np.zeros((1,1,3),np.uint8),
                                  state=np.zeros(8,np.float32),instruction=np.array(str(t)),action=np.zeros(7))
                         rows.append({"file":path.name,"task_id":t,"init_state_index":r,"query_in_episode":q,"sample_sha256":sha(path)})
-            manifest={"role":"student_state_train","source_model_id":"A4","source_run_sha256":"registered", "samples":rows}
+            manifest={"role":"student_state_train","source_model_id":"A4","source_run_sha256":"registered",
+                      "state_space":"policy_normalized_proprio", "samples":rows}
             p=directory/"manifest.json"; p.write_text(json.dumps(manifest)); student_contract(directory,"B3")
             manifest["source_model_id"]="A3"; p.write_text(json.dumps(manifest))
             with self.assertRaises(ValueError): student_contract(directory,"B3")
@@ -148,12 +149,15 @@ class ExtendedContracts(unittest.TestCase):
     def test_negative_result_passes_protocol_and_wrong_pair_fails(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
+            checkpoint=root/"checkpoint"; checkpoint.mkdir()
+            (checkpoint/"dataset_statistics.json").write_text(json.dumps({"libero_spatial_no_noops":{
+                "proprio":{"q01":[-1.0]*8,"q99":[1.0]*8}}}))
             for case in ("B1","B2","A3","BF16","A0"):
                 p=root/"eval-micro"/case; (p/"policy-observations").mkdir(parents=True)
                 (p/"exit-code.txt").write_text("0")
                 command=["python","evaluator","--model-id",case,"--initial-state-offset","20","--num_trials_per_task","1",
                          "--seed","0","--env-seed","1","--seed-protocol","paired","--task_suite_name","libero_spatial",
-                         "--trace-actions","--trace-observations"]
+                         "--trace-actions","--trace-observations","--pretrained_checkpoint",str(checkpoint)]
                 (p/"invocation.json").write_text(json.dumps({"command":command}))
                 logs=[]; events=[]; queries=[]
                 for t in range(10):
@@ -168,7 +172,8 @@ class ExtendedContracts(unittest.TestCase):
                          "executed_step_start":0,"task":str(t),"file":"policy-observations/"+source.name,"file_sha256":sha(source),
                          "observation_sha256":observation_hash(image,wrist,state,str(t))},
                         {"record_type":"episode_end","episode_serial":t,"queries":1,"success":success,"aborted":False}])
-                    queries.append({"raw_policy_chunk":action.tolist(),"finite":True,"task":str(t),"state":state.tolist()})
+                    queries.append({"raw_policy_chunk":action.tolist(),"finite":True,"task":str(t),
+                                    "state_space":"raw_proprio_before_get_action","state":state.tolist()})
                 (p/"EVAL-fixture.txt").write_text("\n".join(logs))
                 for filename,rows in (("on-policy-events.jsonl",events),("policy-queries.jsonl",queries)):
                     (p/filename).write_text("\n".join(json.dumps(r) for r in rows))
@@ -178,6 +183,19 @@ class ExtendedContracts(unittest.TestCase):
             p=root/"eval-micro/B2/EVAL-fixture.txt"
             p.write_text(p.read_text().replace('"init_state_sha256": "0"','"init_state_sha256": "changed"'))
             with self.assertRaisesRegex(ValueError,"pairing"): audit(root,"B2","micro")
+
+    def test_proprio_space_is_explicit_and_normalized_only_once(self):
+        from qvla.action_jacobian_batch import prepare_proprio
+        stats={"q01":[-2.0]*8,"q99":[2.0]*8}
+        raw=np.full(8,0.5,dtype=np.float32)
+        policy=normalized_trace_state(raw,stats)
+        self.assertTrue(np.array_equal(prepare_proprio(policy,stats,"policy_normalized_proprio"),policy))
+        self.assertTrue(np.array_equal(prepare_proprio(raw,stats,"raw_proprio_before_get_action").astype(np.float32),policy))
+        self.assertFalse(np.array_equal(prepare_proprio(policy,stats,"raw_proprio_before_get_action").astype(np.float32),policy))
+        with self.assertRaisesRegex(ValueError,"Unknown proprio state space"):
+            prepare_proprio(raw,stats,"unspecified")
+        with self.assertRaisesRegex(ValueError,"malformed"):
+            prepare_proprio(np.full(8,2.0,dtype=np.float32),stats,"policy_normalized_proprio")
 
     def test_plans_are_bounded_trace_complete_and_do_not_train_visual_b3(self):
         from scripts.prepare_extended_peft_plans import build_plan
@@ -211,10 +229,11 @@ class ExtendedContracts(unittest.TestCase):
             root=Path(tmp); adapter=root/"adapter.pt"; torch.save(state,adapter)
             training=root/"manifest.json"; training.write_text(json.dumps({"samples":[{"task_id":0,"init_state_index":0}]}))
             record={"version":VERSION,"model_id":"B3","steps":1000,"gate":"PASS_TRAIN_CONTRACT",
-                    "spec_sha256":sha(ROOT/"configs/experiments/b2_b3_v1_20261008.json"),
+                    "spec_sha256":sha(ROOT/"configs/experiments/b2_b3_v2_proprio_20261008.json"),
                     "source_sha256":{p:sha(ROOT/p) for p in ARTIFACT_SOURCES},"zero_output_equal":True,"reload_output_equal":True,
                     "smoke_artifact_sha256":"smoke","frozen_before_sha256":"same","frozen_after_sha256":"same",
                     "targets":rows,"target_sha256":canonical_sha(rows),"training_manifest_sha256":sha(training),
+                    "training_state_space":"policy_normalized_proprio",
                     "adapter_sha256":sha(adapter),"tensor_shapes":{k:list(v.shape) for k,v in state.items()}}
             manifest=root/"artifact.json"; manifest.write_text(json.dumps(record))
             args=SimpleNamespace(model_id="B3",extended_peft_manifest=manifest,recovery_training_manifest=training,

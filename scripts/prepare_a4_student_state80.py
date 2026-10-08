@@ -49,7 +49,7 @@ def prepare(run, output):
         if action.shape != (8, 7) or not np.isfinite(action).all() or row["chunk_execution_steps"] != 8:
             raise ValueError("A4 student must produce finite real 8x7 chunks")
         if observation_hash(image, wrist, state, instruction) != row["observation_sha256"]:
-            raise ValueError("Raw observation hash mismatch")
+            raise ValueError("Policy-normalized observation hash mismatch")
         target = output / f"sample-{index:05d}.npz"
         np.savez_compressed(target, image=image, wrist_image=wrist, state=state,
                             instruction=np.array(instruction), action=action[0])
@@ -58,7 +58,8 @@ def prepare(run, output):
             "episode_serial": row["episode_serial"], "query_in_episode": row["query_in_episode"],
             "init_state_sha256": pair["init_state_sha256"], "sample_sha256": sha(target),
             "observation_sha256": row["observation_sha256"], "source": row["file"], "source_sha256": sha(source)})
-    manifest = {"schema_version": "2.0", "role": "student_state_train", "source_model_id": "A4",
+    manifest = {"schema_version": "2.1", "role": "student_state_train", "source_model_id": "A4",
+        "state_space": "policy_normalized_proprio",
         "source_run_sha256": canonical_sha({name: sha(run / name) for name in
             ("invocation.json", "on-policy-events.jsonl", "policy-queries.jsonl", logs[0].name)}),
         "count": 80, "samples": rows, "dataset_action_role": "placeholder; BF16 same-observation teacher queried during smoke",

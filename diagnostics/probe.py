@@ -256,10 +256,11 @@ class Recorder:
         self.model._regression_or_discrete_prediction = self.original_prediction
 
 
-def predict(sample_path, cfg, model, action_head, proprio_projector, processor):
+def predict(sample_path, cfg, model, action_head, proprio_projector, processor,
+            state_space="raw_proprio_before_get_action"):
     from qvla.action_jacobian_batch import load_sample, prepare_inputs
     sample = load_sample(sample_path)
-    inputs, state = prepare_inputs(sample, cfg, model, processor, torch.device("cuda:0"))
+    inputs, state = prepare_inputs(sample, cfg, model, processor, torch.device("cuda:0"), state_space=state_space)
     input_hashes = {name: hashlib.sha256(value.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest()
                     for name, value in inputs.items()}
     input_hashes["normalized_proprio"] = hashlib.sha256(np.ascontiguousarray(state).tobytes()).hexdigest()

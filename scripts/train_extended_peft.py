@@ -22,8 +22,9 @@ from qvla.extended_peft import (VERSION, registry, sha, canonical_sha, descripto
 
 SOURCES = ("scripts/train_extended_peft.py", "qvla/extended_peft.py", "qvla/recovery_lora.py",
            "qvla/model_registry.py", "qvla/run_eval_official_quant.py", "qvla/data_roles.py",
-           "diagnostics/probe.py", "diagnostics/low_rank_recovery.py", "diagnostics/awq_interventions.py")
-SPEC = ROOT / "configs/experiments/b2_b3_v1_20261008.json"
+           "qvla/action_jacobian_batch.py", "diagnostics/probe.py", "diagnostics/low_rank_recovery.py",
+           "diagnostics/awq_interventions.py")
+SPEC = ROOT / "configs/experiments/b2_b3_v2_proprio_20261008.json"
 
 
 def save_json(path, value):
@@ -162,7 +163,8 @@ def train(args):
         targets = {}
         processed = {}
         for path in paths:
-            raw, normalized, hashes = predict(path, cfg, model, head, proprio, processor)
+            raw, normalized, hashes = predict(path, cfg, model, head, proprio, processor,
+                                               state_space="policy_normalized_proprio")
             if raw.shape != (8, 7) or normalized.shape != (8, 7) or not torch.isfinite(raw).all() or not torch.isfinite(normalized).all():
                 raise ValueError("BF16 same-observation teacher must be finite 8x7")
             targets[path.name] = normalized
@@ -251,20 +253,24 @@ def train(args):
     # Actual-model zero residual equality, including B3 before restoring its nonzero SVD init.
     if args.model_id == "B3" and not prior:
         copy_state(model, {k: torch.zeros_like(v) for k, v in initial.items()})
-        zero_with_branch = predict(paths[0], cfg, model, head, proprio, processor)[1]
+        zero_with_branch = predict(paths[0], cfg, model, head, proprio, processor,
+                                   state_space="policy_normalized_proprio")[1]
         hooks = {n: modules[n]._forward_hooks.copy() for n in target_names("B3")}
         try:
             for n in hooks: modules[n]._forward_hooks.clear()
-            zero_reference = predict(paths[0], cfg, model, head, proprio, processor)[1]
+            zero_reference = predict(paths[0], cfg, model, head, proprio, processor,
+                                     state_space="policy_normalized_proprio")[1]
         finally:
             for n, saved_hooks in hooks.items(): modules[n]._forward_hooks.update(saved_hooks)
         copy_state(model, initial)
     else:
-        zero_reference = predict(paths[0], cfg, model, head, proprio, processor)[1]
+        zero_reference = predict(paths[0], cfg, model, head, proprio, processor,
+                                 state_space="policy_normalized_proprio")[1]
         attach_state(model, initial, target_names(args.model_id))
         saved = {k: v.clone() for k, v in initial.items()}
         copy_state(model, {k: torch.zeros_like(v) for k, v in initial.items()})
-        zero_with_branch = predict(paths[0], cfg, model, head, proprio, processor)[1]
+        zero_with_branch = predict(paths[0], cfg, model, head, proprio, processor,
+                                   state_space="policy_normalized_proprio")[1]
         copy_state(model, saved)
     if not torch.equal(zero_reference, zero_with_branch):
         raise ValueError("Actual-model zero residual output is not exactly equal")
@@ -277,7 +283,8 @@ def train(args):
     frozen_modules = (("model", model), ("action_head", head), ("proprio", proprio))
     before = frozen_digest(frozen_modules, excluded)
     from qvla.action_jacobian_batch import load_sample, prepare_inputs
-    cached = [(p.name, *prepare_inputs(load_sample(p), cfg, model, processor, torch.device("cuda:0"))) for p in paths]
+    cached = [(p.name, *prepare_inputs(load_sample(p), cfg, model, processor, torch.device("cuda:0"),
+                                       state_space="policy_normalized_proprio")) for p in paths]
     optimizer = torch.optim.AdamW(list(named.values()), lr=spec["learning_rate"], weight_decay=spec["weight_decay"])
     generator = torch.Generator(device="cpu").manual_seed(spec["order_seed"])
     sequence, trace = [], []
@@ -319,16 +326,19 @@ def train(args):
     state = {n: p.detach().cpu().clone() for n, p in named.items()}
     state_path = args.output / "adapter.pt"
     torch.save(state, state_path)
-    reference = predict(paths[0], cfg, model, head, proprio, processor)[1]
+    reference = predict(paths[0], cfg, model, head, proprio, processor,
+                        state_space="policy_normalized_proprio")[1]
     reloaded = load_state(state_path, args.model_id, rows)
     copy_state(model, {k: torch.zeros_like(v) for k, v in state.items()})
     copy_state(model, reloaded)
-    if not torch.equal(reference, predict(paths[0], cfg, model, head, proprio, processor)[1]):
+    if not torch.equal(reference, predict(paths[0], cfg, model, head, proprio, processor,
+                                          state_space="policy_normalized_proprio")[1]):
         raise ValueError("Actual-model saved/reloaded adapter action mismatch")
     record = {"version": VERSION, "model_id": args.model_id, "base": "A3" if args.model_id == "B2" else "A4",
         "steps": args.steps, "gate": "PASS_SMOKE10" if args.steps == 10 else "PASS_TRAIN_CONTRACT",
         "spec_sha256": sha(SPEC), "source_sha256": source_hashes, "checkpoint_identity": identity,
         "training_manifest_sha256": sha(Path(materials["student80"]) / "manifest.json"),
+        "training_state_space": "policy_normalized_proprio",
         "adapter_sha256": sha(state_path), "tensor_shapes": {k: list(v.shape) for k, v in state.items()},
         "targets": rows, "target_sha256": canonical_sha(rows), "zero_output_equal": True,
         "reload_output_equal": True, "frozen_before_sha256": before, "frozen_after_sha256": after,

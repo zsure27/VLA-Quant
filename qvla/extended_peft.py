@@ -7,10 +7,11 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "b2-b3-v1-20261008"
+VERSION = "b2-b3-v2-proprio-20261008"
 ARTIFACT_SOURCES = ("scripts/train_extended_peft.py", "qvla/extended_peft.py", "qvla/recovery_lora.py",
     "qvla/model_registry.py", "qvla/run_eval_official_quant.py", "qvla/data_roles.py",
-    "diagnostics/probe.py", "diagnostics/low_rank_recovery.py", "diagnostics/awq_interventions.py")
+    "qvla/action_jacobian_batch.py", "diagnostics/probe.py", "diagnostics/low_rank_recovery.py",
+    "diagnostics/awq_interventions.py")
 FAMILIES = ("self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
             "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj")
 VISION = re.compile(r"^vision_backbone\.(?:fused_)?featurizer\.blocks\.\d+\.(?:attn\.(?:qkv|proj)|mlp\.(?:fc1|fc2))$")
@@ -131,7 +132,7 @@ def student_contract(directory, model_id):
     for path in paths:
         with np.load(path, allow_pickle=False) as sample:
             if sample["state"].shape != (8,) or not np.isfinite(sample["state"]).all():
-                raise ValueError("Student input must contain finite raw 8D proprio")
+                raise ValueError("Student input must contain finite 8D proprio")
             for key in ("image", "wrist_image"):
                 value = sample[key]
                 if value.dtype != np.uint8 or value.ndim != 3 or value.shape[-1] != 3 or min(value.shape) <= 0:
@@ -145,9 +146,14 @@ def student_contract(directory, model_id):
     if model_id == "B2":
         if sha(Path(directory) / "manifest.json") != registry()["models"]["B1"]["artifact"]["training_manifest_sha256"]:
             raise ValueError("B2 must reuse the exact archived B1 student-state80")
+        # The archived manifest predates state-space labels. Its pinned SHA and
+        # on-policy capture provenance identify the stored state as the policy's
+        # already normalized proprio, not the raw pre-get_action trace.
     elif model_id == "B3":
         if manifest.get("source_model_id") != "A4" or not manifest.get("source_run_sha256"):
             raise ValueError("B3 requires freshly captured, hash-registered A4 student states")
+        if manifest.get("state_space") != "policy_normalized_proprio":
+            raise ValueError("B3 capture must explicitly identify policy-normalized proprio")
     else:
         raise ValueError("Unknown training candidate")
     return paths, audit
@@ -159,9 +165,10 @@ def validate_artifact(args):
         raise ValueError("B2/B3 require --extended-peft-manifest")
     record = json.loads(path.read_text(encoding="utf-8"))
     if (record.get("version") != VERSION or record.get("model_id") != args.model_id or
-            record.get("steps") != 1000 or record.get("gate") != "PASS_TRAIN_CONTRACT"):
+            record.get("steps") != 1000 or record.get("gate") != "PASS_TRAIN_CONTRACT" or
+            record.get("training_state_space") != "policy_normalized_proprio"):
         raise ValueError("Require the versioned full-training artifact, not a smoke checkpoint")
-    spec_path = ROOT / "configs/experiments/b2_b3_v1_20261008.json"
+    spec_path = ROOT / "configs/experiments/b2_b3_v2_proprio_20261008.json"
     if record.get("spec_sha256") != sha(spec_path):
         raise ValueError("Experiment specification changed")
     if set(record["source_sha256"]) != set(ARTIFACT_SOURCES):
