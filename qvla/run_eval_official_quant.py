@@ -75,6 +75,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--awq-w4-layers", default="")
     parser.add_argument("--awq-scale-peft-state", type=Path)
     parser.add_argument("--awq-recovery-lora-state", type=Path)
+    parser.add_argument("--awq-visual-lora-state", type=Path,
+                        help="B2 only: visual increment, separately validated from frozen B1")
+    parser.add_argument("--extended-peft-manifest", type=Path,
+                        help="Versioned B2/B3 artifact with smoke, train, target and data hashes")
     from qvla.model_registry import MODEL_IDS, validate_request
     parser.add_argument("--model-id", choices=MODEL_IDS,
                         help="Canonical registry identity; omit only for archived/diagnostic recipes")
@@ -87,6 +91,11 @@ def parse_args() -> argparse.Namespace:
     if args.model_id in ("B0", "B1"):
         from qvla.model_registry import validate_training_provenance
         validate_training_provenance(args)
+    if args.model_id in ("B2", "B3"):
+        from qvla.extended_peft import validate_artifact
+        validate_artifact(args)
+    elif args.awq_visual_lora_state is not None or args.extended_peft_manifest is not None:
+        parser.error("Extended adapter flags require canonical B2/B3")
     if args.awq_scope != "all" and args.method != "awq":
         parser.error("Scoped diagnostics are currently supported only for AWQ")
     primary_g64_candidates = {
@@ -136,10 +145,11 @@ def parse_args() -> argparse.Namespace:
     if args.awq_scale_peft_state is not None and args.awq_recovery_lora_state is not None:
         parser.error("Select one PEFT state per paired evaluation")
     if args.awq_scale_peft_state is not None or args.awq_recovery_lora_state is not None:
-        if args.awq_candidate != "w2-attention-primary-g64-stage-w4":
+        is_b3 = args.model_id == "B3"
+        if not is_b3 and args.awq_candidate != "w2-attention-primary-g64-stage-w4":
             parser.error("PEFT state requires the exact attention/visual stage backbone")
         layers = {int(value) for value in args.awq_w4_layers.split(",") if value}
-        if layers != set(range(8, 16)) | set(range(20, 24)):
+        if not is_b3 and layers != set(range(8, 16)) | set(range(20, 24)):
             parser.error("PEFT state is pinned to the exact 12L backbone")
         state_path = args.awq_scale_peft_state or args.awq_recovery_lora_state
         if not state_path.is_file():
@@ -453,8 +463,13 @@ def main() -> None:
         })
     if args.awq_recovery_lora_state is not None:
         from qvla.model_registry import ADAPTER_LAYERS, validate_adapter_shapes
-        recovery_lora_state = load_recovery_lora_state(
-            args.awq_recovery_lora_state, ADAPTER_LAYERS.get(args.model_id))
+        if args.model_id == "B3":
+            from qvla.extended_peft import load_state, validate_artifact
+            record = validate_artifact(args)
+            recovery_lora_state = load_state(args.awq_recovery_lora_state, "B3", record["targets"])
+        else:
+            recovery_lora_state = load_recovery_lora_state(
+                args.awq_recovery_lora_state, ADAPTER_LAYERS.get("B1" if args.model_id == "B2" else args.model_id))
         if args.model_id in ADAPTER_LAYERS:
             validate_adapter_shapes({k: tuple(v.shape) for k, v in recovery_lora_state.items()}, args.model_id)
         profile_manifest.append({
@@ -465,6 +480,17 @@ def main() -> None:
             "parameters": sum(value.numel() for value in recovery_lora_state.values()),
             "serialized_bytes": args.awq_recovery_lora_state.stat().st_size,
         })
+    if args.model_id == "B2":
+        from qvla.extended_peft import load_state, validate_artifact
+        record = validate_artifact(args)
+        visual = load_state(args.awq_visual_lora_state, "B2", record["targets"])
+        if set(visual) & set(recovery_lora_state):
+            raise ValueError("Language/visual adapter keys overlap")
+        recovery_lora_state.update(visual)
+        profile_manifest.append({"path": str(args.awq_visual_lora_state),
+            "sha256": source_sha256(args.awq_visual_lora_state), "kind": "B2_visual_increment",
+            "parameter_tensors": len(visual), "parameters": sum(v.numel() for v in visual.values()),
+            "serialized_bytes": args.awq_visual_lora_state.stat().st_size})
     if args.awq_candidate == "w2-no-clip-primary-g64":
         if args.method != "awq" or args.weight_bits != 2 or args.activation_bits != 16 or len(args.profile) != 1:
             raise ValueError("w2-no-clip-primary-g64 requires one AWQ W2A16 base profile")
@@ -527,6 +553,10 @@ def main() -> None:
     validate_effective_plan(args.model_id, effective_targets)
     if checkpoint_identity(args.pretrained_checkpoint) != metadata["checkpoint_identity"]:
         raise RuntimeError("Profile 检查点内容指纹不符（允许迁移路径，不允许换权重）")
+    if args.model_id in ("B2", "B3"):
+        from qvla.extended_peft import validate_artifact
+        if validate_artifact(args)["checkpoint_identity"] != metadata["checkpoint_identity"]:
+            raise ValueError("Candidate/checkpoint identity mismatch")
     current_sources = {
         "awq_auto_scale": official["awq_parent"] / "awq/quantize/auto_scale.py",
         "awq_auto_clip": official["awq_parent"] / "awq/quantize/auto_clip.py",

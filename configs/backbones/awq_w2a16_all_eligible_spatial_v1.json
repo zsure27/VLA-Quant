@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "backbone_id": "awq-w2a16-all-eligible-spatial-v1",
+  "canonical_model_id": "A4",
+  "status": "VERSIONED_RECIPE_GPU_SMOKE_PENDING",
+  "quantization_family": "AWQ fake quant; BF16 storage",
+  "activation_precision": "A16",
+  "vision": {"dino": {"weight_bits": 2, "group_size": 64},
+             "siglip": {"weight_bits": 2, "group_size": 128}},
+  "language": {"weight_bits": 2, "group_size": 64, "blocks": "0-31", "w4_blocks": [],
+               "attention_vo_extra_clip": false, "mlp_clip": "frozen G64 recipe"},
+  "quantized_targets": 422,
+  "protected_high_precision_modules": ["projector", "action_head", "proprio", "embeddings", "norms", "existing exclusions"],
+  "profile_source": "frozen G128/G64 profile pair in model_registry_v1.json",
+  "adapter_policy": "B3 new rank8 language32-block adapter; vision frozen",
+  "claim_boundary": "All eligible AWQ targets W2; not every parameter of the complete model is 2bit"
+}

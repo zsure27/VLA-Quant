@@ -190,15 +190,19 @@
     },
     "B2": {
       "base": "A3",
-      "status": "HOLD_CODE_SMOKE",
+      "status": "CPU_CONTRACT_READY_GPU_SMOKE_PENDING",
       "rank": 8,
-      "scope": "frozen B1 plus new visual Linear adapter"
+      "scope": "frozen B1 plus new visual Linear adapter",
+      "implementation_version": "b2-b3-v1-20261008",
+      "pre_run_card": "docs/pre-run-cards/B2_VISUAL_INCREMENT_V2_20261008_CN.md"
     },
     "B3": {
       "base": "A4",
-      "status": "HOLD_CODE_SMOKE",
+      "status": "CPU_CONTRACT_READY_GPU_SMOKE_PENDING",
       "rank": 8,
-      "scope": "new language32-block adapter; vision W2 frozen"
+      "scope": "new language32-block adapter; vision W2 frozen",
+      "implementation_version": "b2-b3-v1-20261008",
+      "pre_run_card": "docs/pre-run-cards/B3_ALL_ELIGIBLE_W2_V2_20261008_CN.md"
     }
   },
   "audit_result": "results/experiments/p2-shared-peft/20261005-model-registry-audit/audit.json",

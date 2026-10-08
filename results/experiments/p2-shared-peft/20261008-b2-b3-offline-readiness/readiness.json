@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-08",
+  "classification": "offline_software_contract_readiness",
+  "version": "b2-b3-v1-20261008",
+  "B2": "CPU_CONTRACT_READY_GPU_SMOKE_PENDING",
+  "B3": "CPU_CONTRACT_READY_GPU_SMOKE_PENDING",
+  "real_model_training_steps": 0,
+  "new_closed_loop_episodes": 0,
+  "server_connected": false,
+  "cpu_tests": {
+    "passed": 29,
+    "failed": 0,
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.3",
+    "pytest": "9.1.1"
+  },
+  "static_targets": {
+    "B2_visual_linear": 196,
+    "B2_visual_matrices": 392,
+    "B3_language_linear": 224,
+    "B3_language_matrices": 448
+  },
+  "real_target_shapes": null,
+  "real_peak_cuda_bytes": null,
+  "long_evaluation": "LOCKED_AFTER_FIRST50",
+  "profiles_fingerprinted_implementations_unchanged": [
+    "official_quant_adapter.py",
+    "awq_block.py",
+    "action_jacobian_batch.py",
+    "runtime_contract.py"
+  ],
+  "next_boot": "bind actual instance; closure tools; B2 smoke10/train1000/micro/first50; analyze; B3 fresh A4 capture then same gates",
+  "github_target": "zsure27/VLA-Quant",
+  "branch": "codex/repository-cleanup-20260922",
+  "limitations": [
+    "CPU tests use small-channel fixtures, not the full checkpoint",
+    "GPU smoke, RAM/VRAM and OFT gradient interface unverified",
+    "reused development resets are not independent replication",
+    "80 observations are not 80 trajectories"
+  ]
+}

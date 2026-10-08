@@ -1,5 +1,7 @@
 # 运行、恢复与收尾入口
 
+当前B2/B3新入口为`prepare_extended_peft_plans.py`（冻结两份实例专属计划）、`train_extended_peft.py`、`prepare_a4_student_state80.py`、`audit_extended_peft_eval.py`与`run_locked_peft_stage.py`。见[开机执行卡](../docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)：CPU契约就绪，真实GPU烟雾待执行；不沿用历史端口，不绕过首片gate。
+
 先读根目录 [README](../README.md) 的实验范围。服务器上执行脚本前核对当前实例、GPU、checkpoint、profile、冻结评测器、官方初态和五小时额度；每次使用有限分片和独立输出目录。
 
 以后每轮实验默认用 `vla_stage_supervisor.py` 执行不可变顺序计划，并只在该轮活跃期间启用约 15 分钟的对话心跳。心跳只查 `status.json`/`--status`、runner 和 GPU；状态不变时静默，不用每分钟 `sleep` 唤醒对话计时，也不轮询逐回合日志。阶段事件、失败、GPU 空闲而计划未完成时及时深入处理；有合规下一计划须在一个心跳周期内接续，无可执行项则分析备份并关当前实例。五小时额度约 15% 完成服务器、本机、报告与 GitHub/SHA 备份，约 10% 停止新实验并关机，至少预留 3%。关机后暂停本轮心跳；新实例必须重新绑定实际身份和路径。客户端不活跃时心跳不能保证独立读取额度或关机。

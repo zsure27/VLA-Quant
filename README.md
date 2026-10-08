@@ -1,5 +1,7 @@
 # 2026-10-05 规范模型入口
 
+**2026-10-08：B2/B3离线前置已完成。** [运行卡](docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)与[代码审查/29项CPU测试](reports/experiments/p2-shared-peft/20261008-b2-b3-offline-readiness/README_CN.md)为当前入口；真实GPU烟雾待下次用户开机。旧B0/B1固定物料门禁保持严格，Router仍锁定。
+
 统一使用 **BF16、A0–A4（AWQ）、B0–B3（AWQ＋恢复微调）**。具体组成、四列结果表、数据污染审计和修复见[模型命名与审计](docs/MODEL_NAMING_AND_DATA_AUDIT_20261005_CN.md)及[注册表](configs/model_registry_v1.json)。C0/C3/LW 的历史证据分别映射 A3/B0/B1；旧评测阶段 A1/A2 与新模型名必须区分。
 
 最新同条件开发300回合：A3 244、B0 260、B1 284、BF16 292、A0 294。历史AWQ校准与后续轨迹切分交叉核验发现75条PEFT留出中6条曾用于W4 PTQ校准，不能声称全流程盲测；下方较早“封存/holdout”描述仅按当时新增PEFT使用解释。B2视觉增量与B3全W2恢复仍未通过代码/GPU烟雾门禁。后续规范评测必须使用 `--model-id` 及对应指纹，不能只看路径别名。

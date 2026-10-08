@@ -43,7 +43,7 @@ def validate_profile_provenance(args) -> None:
     registry = json.loads((Path(__file__).resolve().parent.parent / "configs/model_registry_v1.json").read_text(encoding="utf-8"))
     hashes = registry["profile_sha256"]
     expected = ([hashes["w4"]] if args.model_id in ("BF16", "A0") else
-                [hashes["w2_g128"], hashes["w2_g64"]] + ([] if args.model_id == "A4" else [hashes["w4"]]))
+                [hashes["w2_g128"], hashes["w2_g64"]] + ([] if BASE.get(args.model_id, args.model_id) == "A4" else [hashes["w4"]]))
     paths = list(args.profile) + [p for p in (args.awq_primary_group64_profile, args.awq_w4_profile) if p is not None]
     actual = [hashlib.sha256(p.read_bytes()).hexdigest() for p in paths]
     if sorted(actual) != sorted(expected):
@@ -57,13 +57,15 @@ def validate_request(args) -> None:
         return
     if name not in MODEL_IDS:
         raise ValueError(f"Unknown model ID: {name}")
-    if name in ("B2", "B3"):
-        raise ValueError(f"{name} is preregistered only; implementation/smoke gates remain closed")
+    if name in ("B2", "B3") and not getattr(args, "extended_peft_manifest", None):
+        raise ValueError(f"{name} requires a versioned, smoke-verified training manifest")
     if args.method != "awq" or args.activation_bits != 16 or args.awq_scale_peft_state:
         raise ValueError("Canonical registry requires AWQ A16, without Scale-PEFT")
     has_adapter = args.awq_recovery_lora_state is not None
-    if has_adapter != (name in ADAPTER_LAYERS):
+    if has_adapter != (name in BASE):
         raise ValueError("Model name and Recovery-LoRA presence disagree")
+    if bool(getattr(args, "awq_visual_lora_state", None)) != (name == "B2"):
+        raise ValueError("Only B2 requires the explicit visual adapter state")
     if name == "BF16":
         if args.awq_scope != "none" or args.awq_candidate != "profile":
             raise ValueError("BF16 must apply zero quantized targets")

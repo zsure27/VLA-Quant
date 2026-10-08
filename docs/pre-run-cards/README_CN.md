@@ -1,5 +1,7 @@
 # 实验运行前卡片
 
+当前B2/B3执行版本：[B2 V2](B2_VISUAL_INCREMENT_V2_20261008_CN.md)、[B3 V2](B3_ALL_ELIGIBLE_W2_V2_20261008_CN.md)。已补代码和CPU契约，GPU烟雾待下次开机；运行顺序见[20261008执行卡](../B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)。下面V1保留历史，不代表当前仍缺实现。
+
 本目录保存尚未产生配对结果的预注册方案。卡片不是实验成功率报告，也不单独创建 `reports/experiments/` 与 `results/experiments/` 会话目录。执行后，原始产物、分析和 gate 决定应进入同名的模块化会话目录，并在报告中回链对应卡片。
 
 - [`A1_EVALUATION_REPLICATION_20260929_CN.md`](A1_EVALUATION_REPLICATION_20260929_CN.md)：冻结 C3 的评测条件复现预案，当前为历史 HOLD；`env_seed` 单独变化已被实测判定无效，不能直接按此卡派发 GPU 长实验。

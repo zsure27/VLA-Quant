@@ -1,5 +1,7 @@
 # 实验报告索引
 
+最新软件准备：[20261008 B2/B3前置及代码审查](experiments/p2-shared-peft/20261008-b2-b3-offline-readiness/README_CN.md)，29项CPU契约通过，真实GPU烟雾与新闭环结果未运行。
+
 报告按研究计划模块归档，原始小结果使用相同的模块名和会话名保存在 [`results/experiments/`](../results/experiments/README_CN.md)。当前主线由 [`PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md`](../docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)约束；每轮报告的分析内容和结果驱动调整遵循[自适应实验与备份分析协议](../docs/ADAPTIVE_EXPERIMENT_AND_BACKUP_PROTOCOL_20260925_CN.md)。
 
 ## 模块
