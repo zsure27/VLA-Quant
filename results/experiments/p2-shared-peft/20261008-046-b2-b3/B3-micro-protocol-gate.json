@@ -1,0 +1,305 @@
+{
+  "gate": "PASS_PROTOCOL_MICRO",
+  "classification": "reused development resets, not independent replication",
+  "model_id": "B3",
+  "phase": "micro",
+  "paired_episodes": 10,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": false,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 20,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "cases": {
+    "A4": {
+      "successes": 3,
+      "episodes": 10,
+      "query_count": 240,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-17_28_42.txt": "a103c93477553fa4e5ac5e83471231553e12f09ef80b7bcd00b053c137b17fb4",
+        "invocation.json": "b90b9fa77d7a48a14ca84e5df71fe94a5db3fd2d4759457b40f957c56ec963e2",
+        "policy-queries.jsonl": "b61bf74e9db3f59052b4839eac74c900754fa13799b741d0852f014f2ca7e004",
+        "on-policy-events.jsonl": "22eed3a1efc748f2ae973fb68206d4d920496c1a914517edfc57e6e635eaff9a",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B3": {
+      "successes": 9,
+      "episodes": 10,
+      "query_count": 155,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-17_32_59.txt": "d336c00bb4453a3563db6231979650a6e0a0df35acb3477c83449f3bbfc8e02e",
+        "invocation.json": "dc474ee80460375151413c791e767984915f74ae520c2d0808acc989cc43cd3d",
+        "policy-queries.jsonl": "2bb52c5ab3d423e3a86dbe46185386526c23d79023ccdb8a78168b46d58d524d",
+        "on-policy-events.jsonl": "bfe78cfdace6e82094455909c0d08374ab609ef7243a9f15ce02a6a798708b23",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B1": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 129,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-17_36_38.txt": "03480e3fa8333e42af86b49a9c59f87407543e07e702e32e1fd022e53641c1e8",
+        "invocation.json": "862316fc7a149698037fa92f475272c9b82f9660bb381e69d1ac81a593869344",
+        "policy-queries.jsonl": "47b50c57dccbbbc043a90a4c48a3d6697c8e7499b4002d25a82267db5fb4b36a",
+        "on-policy-events.jsonl": "4a87fbd86a8d1b8cac0667ec9f2c54f105ea5f3836b80d4068deaf48e96c40fd",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "BF16": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 130,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-17_40_04.txt": "d8ac855c3c8eb24e606d756922087b0447ac4e70320e5f5f3d08b4c339735fc7",
+        "invocation.json": "93803eae8c3c1ae1f68f7e55dbf42471ebaf6628d7f3818a49bef18829cddd28",
+        "policy-queries.jsonl": "0ec6ef6a6f5e24d57ca49dfe7c697aabf304d6fdaa2907ded3c73d5ba4871b4d",
+        "on-policy-events.jsonl": "c64b14e0247b320cee72937eb4730932161c55fad167aaae6ff609a2faaec53d",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 9,
+      "episodes": 10,
+      "query_count": 141,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-17_43_22.txt": "6953085c4dffbf2b0f51e0994d03269c0707bb6968502701578cb37116d1e59c",
+        "invocation.json": "c4d38eed81ef27a200ba15d6a90dc1b50b103ba69baf01ad2af090cbc690dac2",
+        "policy-queries.jsonl": "fc2e3e5b7a3828110c197ed983379d9ff74d030ac122c1cda319f033c077fbd3",
+        "on-policy-events.jsonl": "7700f7abe3b6f8e5a082bc670e4651d765d12cdd68ff07161d92e15f2b875dbd",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "primary": {
+    "episodes": 10,
+    "rescue": 6,
+    "break": 0,
+    "net": 6,
+    "delta_fraction": 0.6,
+    "exact_mcnemar_p": 0.03125,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.3,
+      0.9
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 1,
+      "1": 1,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0,
+      "6": 1,
+      "7": 1,
+      "8": 0,
+      "9": 1
+    },
+    "tasks_improved": 6,
+    "tasks_harmed": 0
+  },
+  "references": {
+    "A4": {
+      "episodes": 10,
+      "rescue": 6,
+      "break": 0,
+      "net": 6,
+      "delta_fraction": 0.6,
+      "exact_mcnemar_p": 0.03125,
+      "task_cluster_bootstrap_95ci_fraction": [
+        0.3,
+        0.9
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 1,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 0,
+        "6": 1,
+        "7": 1,
+        "8": 0,
+        "9": 1
+      },
+      "tasks_improved": 6,
+      "tasks_harmed": 0
+    },
+    "B1": {
+      "episodes": 10,
+      "rescue": 0,
+      "break": 1,
+      "net": -1,
+      "delta_fraction": -0.1,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.3,
+        0.0
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": -1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 0,
+      "tasks_harmed": 1
+    },
+    "BF16": {
+      "episodes": 10,
+      "rescue": 0,
+      "break": 1,
+      "net": -1,
+      "delta_fraction": -0.1,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.3,
+        0.0
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": -1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 0,
+      "tasks_harmed": 1
+    },
+    "A0": {
+      "episodes": 10,
+      "rescue": 1,
+      "break": 1,
+      "net": 0,
+      "delta_fraction": 0.0,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.3,
+        0.3
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": -1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 1,
+      "tasks_harmed": 1
+    }
+  },
+  "first50_expansion": "protocol-only; no success-rate gate",
+  "remaining_long_expansion": "LOCKED; independent condition or new development preregistration required"
+}

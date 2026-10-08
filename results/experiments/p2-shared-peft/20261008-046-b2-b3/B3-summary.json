@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "phase": "first50",
+  "classification": "reused development resets, not independent replication",
+  "git_execution_commit": "85a0934f4b604d409b6a0b64b209a3f0ec4a88a2",
+  "gate": "PASS_PROTOCOL_FIRST50",
+  "paired_episodes": 50,
+  "successes": {
+    "A4": 10,
+    "B3": 47,
+    "B1": 48,
+    "BF16": 49,
+    "A0": 47
+  },
+  "B3_vs_A4": {
+    "episodes": 50,
+    "rescue": 37,
+    "break": 0,
+    "net": 37,
+    "delta_fraction": 0.74,
+    "exact_mcnemar_p": 1.4551915228366852E-11,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.52,
+      0.92
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 5,
+      "1": 5,
+      "2": 3,
+      "3": 0,
+      "4": 4,
+      "5": 3,
+      "6": 5,
+      "7": 5,
+      "8": 2,
+      "9": 5
+    },
+    "tasks_improved": 9,
+    "tasks_harmed": 0
+  },
+  "B3_vs_B1": {
+    "episodes": 50,
+    "rescue": 1,
+    "break": 2,
+    "net": -1,
+    "delta_fraction": -0.02,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.08,
+      0.04
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": -1,
+      "5": -1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 1,
+    "tasks_harmed": 2
+  },
+  "B3_vs_BF16": {
+    "episodes": 50,
+    "rescue": 0,
+    "break": 2,
+    "net": -2,
+    "delta_fraction": -0.04,
+    "exact_mcnemar_p": 0.5,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.1,
+      0.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": -1,
+      "5": -1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 2
+  },
+  "B3_vs_A0": {
+    "episodes": 50,
+    "rescue": 2,
+    "break": 2,
+    "net": 0,
+    "delta_fraction": 0.0,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.06,
+      0.06
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": -1,
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 1,
+    "tasks_harmed": 1
+  },
+  "training": {
+    "steps": 1000,
+    "gate": "PASS_TRAIN_CONTRACT",
+    "state_space": "policy_normalized_proprio",
+    "observations": 80,
+    "parameters": 19988480,
+    "adapter_bytes": 40133618,
+    "training_seconds": 361.96045208722353,
+    "zero_output_equal": true,
+    "reload_output_equal": true,
+    "frozen_hash_equal": true
+  },
+  "source_sha256": {
+    "B3-first50-protocol-gate.json": "c9bce5a40bddae4bd8f1c33a4a4b0188eb2a1939013fc235313319e7f5e39e58",
+    "B3-micro-protocol-gate.json": "a1e4e5078f2249c1af62748c9ad8d2902d502df79dee5ed27167b893aee0ebf8",
+    "B3-train1000-artifact.json": "489976277d66984dfa4ea957a4403f863f04778a85db3acab2e3fc2b80a8586f",
+    "B3-student-state80-manifest.json": "70af4d1f32de7099ac9d25565d9089f987897d6fd5e5d5b7a16d0084fe5f039e",
+    "B3-svd-storage-budget.json": "aab8568eda02e99e369fe86069ea4ddb92c796762c33b13f4bcf7fd07a59523c"
+  }
+}

@@ -1,0 +1,665 @@
+{
+  "gate": "PASS_PROTOCOL_FIRST50",
+  "classification": "reused development resets, not independent replication",
+  "model_id": "B3",
+  "phase": "first50",
+  "paired_episodes": 50,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 24,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 21,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 22,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 23,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 24,
+      "A4": true,
+      "B3": true,
+      "B1": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": false,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": false,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": false,
+      "B1": false,
+      "BF16": false,
+      "A0": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 20,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 21,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 24,
+      "A4": true,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 20,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 21,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 22,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 23,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 24,
+      "A4": false,
+      "B3": true,
+      "B1": true,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "cases": {
+    "A4": {
+      "successes": 10,
+      "episodes": 50,
+      "query_count": 1260,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-17_46_58.txt": "4a31bc76a4fe5e40f82df1f147e4f67b61ec8ee3c1b8732b9c9461b5f8f025a5",
+        "invocation.json": "ae5498f7f2e5af9adc4db809abc94552a5daf86bed5974d1d28c05bb430b8db0",
+        "policy-queries.jsonl": "aa2db29c5b469b96309a11f5f12d36b56b8ec2ae9f1494844e71e44d3de407b1",
+        "on-policy-events.jsonl": "5fd58fd69848d8045dec098d7799b3c6ba8c4ca7b52a0c5c5cfe89213ef4cdce",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B3": {
+      "successes": 47,
+      "episodes": 50,
+      "query_count": 712,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-18_02_23.txt": "1b530eaa837126ac0cdcc8ef239f3ebd663f72c361baf5abeab730f5d6b18751",
+        "invocation.json": "e6293930669473ac0f2c79d45c80e6bbc778e4514e2f86a8b45d440f5c4f14db",
+        "policy-queries.jsonl": "c94b69afb34addd03ac03d9fd5771a94dff3bd6bd44da44e1041ef3ce990e035",
+        "on-policy-events.jsonl": "614d8acc669b3caa354778866ba41bfffd0f2965ffd590846c273a1fb014423b",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B1": {
+      "successes": 48,
+      "episodes": 50,
+      "query_count": 678,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-18_13_39.txt": "d0b9dde402e34751dcf464d450888e3f31e9058bfbc842b79480ba1c121a3453",
+        "invocation.json": "f5c71aa976bd80361e672e2129423411430ba7311a899ed0a01ff1dd44d9b51b",
+        "policy-queries.jsonl": "464c95b9251d796ee5751896118de16074fe89741828cff1832000beaec268e0",
+        "on-policy-events.jsonl": "f8bc2cacfeb052c6b504d916b2ef6453325e19b71ee914f1e11e644ed613c582",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "BF16": {
+      "successes": 49,
+      "episodes": 50,
+      "query_count": 663,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-18_24_44.txt": "6955386bac61f86c571137df18e87f45abc919e80fa33468211aec6bd2289e5a",
+        "invocation.json": "aeab069f04b2d44bd233fb5c5ddd358f82202306aa9832ed5cdc27d12f7236d2",
+        "policy-queries.jsonl": "1872809b66c5e5ead4c4efbbb48e709b0dd81e2b8d44070fe018b84ed3b1ec66",
+        "on-policy-events.jsonl": "9e3a6c11f98fa9b1a72bb0a5682dd0fedc7db6117b350c7c389d9b4b58b22536",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 47,
+      "episodes": 50,
+      "query_count": 684,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-18_35_35.txt": "d32d060512962cf75fcf9e6004ae93a1facf92cca54dd3eeadd19d1559fc6adc",
+        "invocation.json": "8325685f9457d6d56338de995083df40c6a5ee0538f90a171a166029fd702d3c",
+        "policy-queries.jsonl": "db5974bf587535673f091a0d844e932900303019efe34d5417e33bf0f2f75026",
+        "on-policy-events.jsonl": "f7bafba99fa079ce8ee1b2fe2a14c08cbfca9dbd606c64aaf321859de0d9f8d7",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "primary": {
+    "episodes": 50,
+    "rescue": 37,
+    "break": 0,
+    "net": 37,
+    "delta_fraction": 0.74,
+    "exact_mcnemar_p": 1.4551915228366852e-11,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.52,
+      0.92
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 5,
+      "1": 5,
+      "2": 3,
+      "3": 0,
+      "4": 4,
+      "5": 3,
+      "6": 5,
+      "7": 5,
+      "8": 2,
+      "9": 5
+    },
+    "tasks_improved": 9,
+    "tasks_harmed": 0
+  },
+  "references": {
+    "A4": {
+      "episodes": 50,
+      "rescue": 37,
+      "break": 0,
+      "net": 37,
+      "delta_fraction": 0.74,
+      "exact_mcnemar_p": 1.4551915228366852e-11,
+      "task_cluster_bootstrap_95ci_fraction": [
+        0.52,
+        0.92
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 5,
+        "1": 5,
+        "2": 3,
+        "3": 0,
+        "4": 4,
+        "5": 3,
+        "6": 5,
+        "7": 5,
+        "8": 2,
+        "9": 5
+      },
+      "tasks_improved": 9,
+      "tasks_harmed": 0
+    },
+    "B1": {
+      "episodes": 50,
+      "rescue": 1,
+      "break": 2,
+      "net": -1,
+      "delta_fraction": -0.02,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.08,
+        0.04
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": -1,
+        "5": -1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 1,
+      "tasks_harmed": 2
+    },
+    "BF16": {
+      "episodes": 50,
+      "rescue": 0,
+      "break": 2,
+      "net": -2,
+      "delta_fraction": -0.04,
+      "exact_mcnemar_p": 0.5,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.1,
+        0.0
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": -1,
+        "5": -1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 0,
+      "tasks_harmed": 2
+    },
+    "A0": {
+      "episodes": 50,
+      "rescue": 2,
+      "break": 2,
+      "net": 0,
+      "delta_fraction": 0.0,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.06,
+        0.06
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": -1,
+        "6": 0,
+        "7": 1,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 1,
+      "tasks_harmed": 1
+    }
+  },
+  "first50_expansion": "protocol-only; no success-rate gate",
+  "remaining_long_expansion": "LOCKED; independent condition or new development preregistration required"
+}
