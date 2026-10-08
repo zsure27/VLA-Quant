@@ -9,6 +9,7 @@
 - 旧 `audit_extended_peft_eval.py` 直接比较原始 trace 与归一化 NPZ，导致全部微测完成后错误地失败。更重要的是，新 B2 训练入口经 `prepare_inputs` 对 NPZ 再次调用 `normalize_proprio`，使冻结 BF16 教师查询、学生训练和真实部署输入不一致。历史 B1 的 `student-state80` 使用同一捕获路径，存在相同风险；历史结果不因此被改写，但机制解释须降级并单独审计。
 - 旧 B2 v2 的 1000 步训练与五配置微测是诊断数据，禁止用于放行长片或声称视觉增量 LoRA 有闭环收益。旧 B2 锁定 checkout 为 `8bb02a4dffb89b5357f93c6aa789e109d32f7ef9`；B3 空间预检修正为 `8c15e0242784dece615aa21489ccea9a9d8af954`。
 - 额度实际刷新后，修正版在046原环境的12项CPU契约全部通过。它对旧微测原始产物重审得到 `PASS_PROTOCOL_MICRO`；B2 对 B1 为0 rescue、0 break（仅10回合）。这只证明评测记录语义可核对，**不能使旧的双重归一化训练变成合格候选**，亦不构成闭环收益证据。
+- 第一份修正版计划在烟雾开始时被 profile 来源哈希门禁阻止：`action_jacobian_batch.py` 被修改，而 AWQ profile 固定校验该文件。没有训练或评测产物。新版本恢复该文件原始哈希，把学生状态处理放入独立 `extended_proprio.py`；旧失败计划继续留存。
 
 ## 修复门禁
 

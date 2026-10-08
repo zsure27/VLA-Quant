@@ -7,10 +7,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = "b2-b3-v2-proprio-20261008"
+VERSION = "b2-b3-v3-proprio-20261008"
 ARTIFACT_SOURCES = ("scripts/train_extended_peft.py", "qvla/extended_peft.py", "qvla/recovery_lora.py",
     "qvla/model_registry.py", "qvla/run_eval_official_quant.py", "qvla/data_roles.py",
-    "qvla/action_jacobian_batch.py", "diagnostics/probe.py", "diagnostics/low_rank_recovery.py",
+    "qvla/action_jacobian_batch.py", "qvla/extended_proprio.py", "diagnostics/probe.py", "diagnostics/low_rank_recovery.py",
     "diagnostics/awq_interventions.py")
 FAMILIES = ("self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
             "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj")
@@ -168,7 +168,7 @@ def validate_artifact(args):
             record.get("steps") != 1000 or record.get("gate") != "PASS_TRAIN_CONTRACT" or
             record.get("training_state_space") != "policy_normalized_proprio"):
         raise ValueError("Require the versioned full-training artifact, not a smoke checkpoint")
-    spec_path = ROOT / "configs/experiments/b2_b3_v2_proprio_20261008.json"
+    spec_path = ROOT / "configs/experiments/b2_b3_v3_proprio_20261008.json"
     if record.get("spec_sha256") != sha(spec_path):
         raise ValueError("Experiment specification changed")
     if set(record["source_sha256"]) != set(ARTIFACT_SOURCES):

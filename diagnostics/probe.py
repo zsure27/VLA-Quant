@@ -260,7 +260,13 @@ def predict(sample_path, cfg, model, action_head, proprio_projector, processor,
             state_space="raw_proprio_before_get_action"):
     from qvla.action_jacobian_batch import load_sample, prepare_inputs
     sample = load_sample(sample_path)
-    inputs, state = prepare_inputs(sample, cfg, model, processor, torch.device("cuda:0"), state_space=state_space)
+    if state_space == "policy_normalized_proprio":
+        from qvla.extended_proprio import prepare_policy_inputs
+        inputs, state = prepare_policy_inputs(sample, cfg, model, processor, torch.device("cuda:0"))
+    elif state_space == "raw_proprio_before_get_action":
+        inputs, state = prepare_inputs(sample, cfg, model, processor, torch.device("cuda:0"))
+    else:
+        raise ValueError(f"Unknown proprio state space: {state_space}")
     input_hashes = {name: hashlib.sha256(value.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest()
                     for name, value in inputs.items()}
     input_hashes["normalized_proprio"] = hashlib.sha256(np.ascontiguousarray(state).tobytes()).hexdigest()

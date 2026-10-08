@@ -13,7 +13,7 @@ from qvla.extended_peft import sha, registry, VERSION
 
 
 def build_plan(model_id, materials, session, output, python, expected_hostname):
-    spec = json.loads((ROOT / "configs/experiments/b2_b3_v2_proprio_20261008.json").read_text())
+    spec = json.loads((ROOT / "configs/experiments/b2_b3_v3_proprio_20261008.json").read_text())
     directory = session / model_id
     student = Path(materials["student80"]) if model_id == "B2" else directory / "student-state80"
     m = dict(materials, student80=str(student))
@@ -25,7 +25,7 @@ def build_plan(model_id, materials, session, output, python, expected_hostname):
         *sorted((ROOT / "qvla").glob("*.py")), *(ROOT / "diagnostics" / n for n in
         ("probe.py", "low_rank_recovery.py", "awq_interventions.py")),
         ROOT / "configs/model_registry_v1.json", ROOT / "configs/qvla-connected-422.txt",
-        ROOT / "configs/experiments/b2_b3_v2_proprio_20261008.json", ROOT / "configs/backbones/awq_w2a16_all_eligible_spatial_v1.json",
+        ROOT / "configs/experiments/b2_b3_v3_proprio_20261008.json", ROOT / "configs/backbones/awq_w2a16_all_eligible_spatial_v1.json",
         material_file, Path(materials["trajectory_split"]), Path(materials["calibration80"]) / "manifest.json",
         Path(materials["checkpoint"]) / "config.json", Path(materials["w2_g128"]), Path(materials["w2_g64"]),
         Path(materials["w4"]), Path(materials["b1_adapter"]), Path(materials["student80"]) / "manifest.json",

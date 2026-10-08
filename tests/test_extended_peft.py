@@ -188,7 +188,7 @@ class ExtendedContracts(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"pairing"): audit(root,"B2","micro")
 
     def test_proprio_space_is_explicit_and_normalized_only_once(self):
-        from qvla.action_jacobian_batch import prepare_proprio
+        from qvla.extended_proprio import prepare_proprio
         stats={"q01":[-2.0]*8,"q99":[2.0]*8}
         raw=np.full(8,0.5,dtype=np.float32)
         policy=normalized_trace_state(raw,stats)
@@ -232,7 +232,7 @@ class ExtendedContracts(unittest.TestCase):
             root=Path(tmp); adapter=root/"adapter.pt"; torch.save(state,adapter)
             training=root/"manifest.json"; training.write_text(json.dumps({"samples":[{"task_id":0,"init_state_index":0}]}))
             record={"version":VERSION,"model_id":"B3","steps":1000,"gate":"PASS_TRAIN_CONTRACT",
-                    "spec_sha256":sha(ROOT/"configs/experiments/b2_b3_v2_proprio_20261008.json"),
+                    "spec_sha256":sha(ROOT/"configs/experiments/b2_b3_v3_proprio_20261008.json"),
                     "source_sha256":{p:sha(ROOT/p) for p in ARTIFACT_SOURCES},"zero_output_equal":True,"reload_output_equal":True,
                     "smoke_artifact_sha256":"smoke","frozen_before_sha256":"same","frozen_after_sha256":"same",
                     "targets":rows,"target_sha256":canonical_sha(rows),"training_manifest_sha256":sha(training),

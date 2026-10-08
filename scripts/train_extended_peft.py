@@ -22,9 +22,9 @@ from qvla.extended_peft import (VERSION, registry, sha, canonical_sha, descripto
 
 SOURCES = ("scripts/train_extended_peft.py", "qvla/extended_peft.py", "qvla/recovery_lora.py",
            "qvla/model_registry.py", "qvla/run_eval_official_quant.py", "qvla/data_roles.py",
-           "qvla/action_jacobian_batch.py", "diagnostics/probe.py", "diagnostics/low_rank_recovery.py",
+           "qvla/action_jacobian_batch.py", "qvla/extended_proprio.py", "diagnostics/probe.py", "diagnostics/low_rank_recovery.py",
            "diagnostics/awq_interventions.py")
-SPEC = ROOT / "configs/experiments/b2_b3_v2_proprio_20261008.json"
+SPEC = ROOT / "configs/experiments/b2_b3_v3_proprio_20261008.json"
 
 
 def save_json(path, value):
@@ -282,9 +282,10 @@ def train(args):
     excluded = set(named)
     frozen_modules = (("model", model), ("action_head", head), ("proprio", proprio))
     before = frozen_digest(frozen_modules, excluded)
-    from qvla.action_jacobian_batch import load_sample, prepare_inputs
-    cached = [(p.name, *prepare_inputs(load_sample(p), cfg, model, processor, torch.device("cuda:0"),
-                                       state_space="policy_normalized_proprio")) for p in paths]
+    from qvla.action_jacobian_batch import load_sample
+    from qvla.extended_proprio import prepare_policy_inputs
+    cached = [(p.name, *prepare_policy_inputs(load_sample(p), cfg, model, processor,
+                                              torch.device("cuda:0"))) for p in paths]
     optimizer = torch.optim.AdamW(list(named.values()), lr=spec["learning_rate"], weight_decay=spec["weight_decay"])
     generator = torch.Generator(device="cpu").manual_seed(spec["order_seed"])
     sequence, trace = [], []

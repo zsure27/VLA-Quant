@@ -191,19 +191,7 @@ def initialize(checkpoint: str, seed: int):
     return cfg, model, action_head, proprio_projector, processor
 
 
-def prepare_proprio(state: np.ndarray, stats: dict[str, Any], state_space: str) -> np.ndarray:
-    if state_space == "raw_proprio_before_get_action":
-        return normalize_proprio(state.copy(), stats)
-    if state_space == "policy_normalized_proprio":
-        result = state.copy()
-        if result.shape != (8,) or not np.isfinite(result).all() or np.any(np.abs(result) > 1.000001):
-            raise ValueError("Captured policy-normalized proprio is malformed")
-        return result
-    raise ValueError(f"Unknown proprio state space: {state_space}")
-
-
-def prepare_inputs(sample: dict[str, Any], cfg: Any, model: Any, processor: Any, device: torch.device,
-                   state_space: str = "raw_proprio_before_get_action"):
+def prepare_inputs(sample: dict[str, Any], cfg: Any, model: Any, processor: Any, device: torch.device):
     images = prepare_images_for_vla([sample["image"], sample["wrist_image"]], cfg)
     prompt = f"In: What action should the robot take to {sample['instruction'].lower()}?\nOut:"
     primary = processor(prompt, images[0], return_tensors="pt").to(device, dtype=torch.bfloat16)
@@ -213,7 +201,7 @@ def prepare_inputs(sample: dict[str, Any], cfg: Any, model: Any, processor: Any,
     if pixels.shape[1] != expected_channels:
         raise RuntimeError(f"Expected {expected_channels} pixel channels, got {pixels.shape[1]}")
     stats = model.norm_stats[cfg.unnorm_key]["proprio"]
-    state = prepare_proprio(sample["state"], stats, state_space)
+    state = normalize_proprio(sample["state"].copy(), stats)
     inputs = {
         "input_ids": primary["input_ids"],
         "attention_mask": primary["attention_mask"],
