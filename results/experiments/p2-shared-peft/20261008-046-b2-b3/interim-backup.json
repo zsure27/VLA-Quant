@@ -1,0 +1,16 @@
+{
+  "classification": "interim_failure_diagnostic",
+  "instance": "046",
+  "hostname": "autodl-container-90824aab47-6dc00ae3",
+  "plan_id": "20261008-046-b2-b3-v2-B2",
+  "status_revision": 25,
+  "status": "FAILED",
+  "failed_stage": "audit-micro",
+  "completed_stages": ["smoke10", "train1000", "micro-B1", "micro-B2", "micro-A3", "micro-BF16", "micro-A0"],
+  "first50_started": false,
+  "b3_started": false,
+  "archive_sha256": "6d37bac8655c4db10b45b88c64a4ab7e4f7a7ff0b7c00f686e926fe6168926e1",
+  "server_archive": "/root/autodl-tmp/qvla-repro/backups/transfer/20261008-046-b2v2-failed-micro.tar.gz",
+  "local_archive": "backups/experiments/p2-shared-peft/20261008-046-b2-b3/20261008-046-b2v2-failed-micro.tar.gz",
+  "analysis_report": "reports/experiments/p2-shared-peft/20261008-046-b2-b3/INTERIM_AUDIT_CN.md"
+}
