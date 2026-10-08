@@ -26,6 +26,6 @@ STOP CONDITION：A4状态缺失/非有限/来源错误、数据重叠、W4目标
 
 OUTPUT DIRECTORY：新实例同名归档下`B3/`；同名reports/results分析。
 
-ESTIMATED COST：A4训练状态40回合、Response-SVD校准80帧（spool至少24GiB空间）、烟雾10步、正式1000步、五配置各10+50开发回合。真实显存/秒数须实机烟雾核验；首片之后无自动长片。
+ESTIMATED COST：A4训练状态40回合、Response-SVD校准80帧（spool按目标维度×80帧×56个token×BF16两字节计算，另留6GiB）、烟雾10步、正式1000步、五配置各10+50开发回合。真实显存/秒数须实机烟雾核验；首片之后无自动长片。
 
 ADMISSION：CPU契约就绪，真实GPU烟雾待执行；不称整模型每个参数均2bit，不称独立复现。详见[执行卡](../B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)。本卡替代V1当前执行说明，保留旧记录。

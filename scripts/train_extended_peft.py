@@ -178,8 +178,17 @@ def train(args):
     spool = args.output / "svd-inputs"
     if args.model_id == "B3" and not prior:
         import shutil
-        if shutil.disk_usage(args.output).free < 24 * 1024**3:
-            raise ValueError("Require 24 GiB free for BF16 action-token SVD spool; do not delete unique data")
+        # Reserve measured BF16 activation bytes plus 6 GiB for file overhead and
+        # later stage outputs. The fixed 24 GiB check rejected otherwise safe clones.
+        anticipated = len(calibration) * 56 * 2 * sum(
+            modules[name].in_features for name in target_names("B3"))
+        available = shutil.disk_usage(args.output).free
+        required = anticipated + 6 * 1024**3
+        save_json(args.output / "svd-storage-budget.json", {
+            "anticipated_spool_bytes": anticipated, "reserve_bytes": 6 * 1024**3,
+            "required_free_bytes": required, "available_free_bytes": available})
+        if available < required:
+            raise ValueError("Insufficient persistent space for measured BF16 SVD spool plus reserve")
         spool.mkdir()
         recorder = Recorder(model, capture_traces=False)
         handles, calls = [], {}
@@ -188,7 +197,8 @@ def train(args):
             def hook(_module, inputs):
                 x = inputs[0].detach()
                 start, count = recorder.action_start, recorder.action_count
-                if start is None or count != 56 or x.ndim != 3 or x.shape[0] != 1 or start + count > x.shape[1]:
+                if (start is None or count != 56 or x.ndim != 3 or x.shape[0] != 1
+                        or start + count > x.shape[1] or x.dtype != torch.bfloat16):
                     raise ValueError("Real action-token slice unavailable")
                 x = x[:, start:start + count].reshape(-1, x.shape[-1]).cpu()
                 if not torch.isfinite(x).all():
