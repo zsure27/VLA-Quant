@@ -1,0 +1,318 @@
+{
+  "gate": "PASS_PROTOCOL_BOUNDARY_MICRO",
+  "classification": "reused official development resets, not independent replication",
+  "offset": 30,
+  "per_task": 1,
+  "paired_episodes": 10,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 30,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 30,
+      "A3": false,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": true,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 30,
+      "A3": true,
+      "B1": true,
+      "B2": true,
+      "A4": false,
+      "B3": true,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "cases": {
+    "A3": {
+      "successes": 8,
+      "episodes": 10,
+      "query_count": 157,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-20_59_45.txt": "c5ddca042733ca21e3973ba48afb0d4ef12571b4c37a1e89e5897ba9857d1faf",
+        "invocation.json": "b1e952eb165b1e80b241b45fe4ae0ddd373dba22352a464f1ba5aa0e6d1e7358",
+        "policy-queries.jsonl": "7e08a4885dcc8c2cee93a4c0e1d22d6031eab490072ecb0cf376f0ddc048a944",
+        "on-policy-events.jsonl": "e898442b8c69e54d3b248e90b3eae32961480a23493019bfefe9d892bf39edf0",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B1": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 127,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-21_03_25.txt": "52f845fbbcb24b20184e78c413def72df70ef0ae64b85c07cf906943c206bb56",
+        "invocation.json": "ebe9a645b1760726d96c1debc9fc41edaa2c8cd8dc58af1294f8ed3f2d222304",
+        "policy-queries.jsonl": "4551b914505179a101c525e847528057ee7017ad754a5f7ee902bb9814572fd2",
+        "on-policy-events.jsonl": "7d4a2d87eda23ff531a5e281ffbef77782c6c83a0a0420dc7ee4f85fa4ecfbf2",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B2": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 129,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-21_06_53.txt": "71bb95195e40d18e8f0a6194b24ebb8c30e4e52c7a221a37f08da0e25eab7da5",
+        "invocation.json": "14387df27ad53aaf1f58124424391b0fbc054f25713424d7f8ca9b1e1a50976d",
+        "policy-queries.jsonl": "eb13d7b9631fbb4380a3cd621a8a67bd8f688ac632a0a1c0d278bffd2a3f6a4a",
+        "on-policy-events.jsonl": "634f434bcf8da837bcfe254f82ed14b665c4b0ef062749eb17b09f23de9819be",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A4": {
+      "successes": 3,
+      "episodes": 10,
+      "query_count": 238,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-21_10_25.txt": "cf83bd63d648d1c7e265280aa0a1bbeadd677ecb98c81323be89f8cb3a54b446",
+        "invocation.json": "97f2f35deaace41494eca8f60e00e99117b22f4e9464ee95839658747f0cd844",
+        "policy-queries.jsonl": "695b26a11d83a74522843b6947bb1a4cedbcae8d83587e9b86e9ef519fab09bc",
+        "on-policy-events.jsonl": "5644f5a040e3cf3f6340e9a392190b06e17681646e5062012b40bf3d327cb95d",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B3": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 133,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-21_14_43.txt": "14eca70ab3a688e431c81e168d2fede914775fb59c36b996bd1022abd12f9126",
+        "invocation.json": "fc0ad7bb64f49575b95bfad5605d143c53ef07c3e083db106c03d8613c51ad3e",
+        "policy-queries.jsonl": "6bfc1d88035f5c9f726ecc9a951198d9c707862c1f56cd5e104df36ce8186fea",
+        "on-policy-events.jsonl": "3b3d878b68203665ad86f3b4ffaf58cc797e684fd07990cdac617cc9f0cb5a92",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "BF16": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 130,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-21_18_13.txt": "69890f25ac49c43fedb9cf874c59885be514bfa34ff5328764b4b7c9b05bc6f9",
+        "invocation.json": "5d80e48d7d52c46b28da30cbc28760246b2ed48654f96e7f34b8cea337d0764c",
+        "policy-queries.jsonl": "1fa032b6067cf92222b506059420e8da743e9d9bf741b30a994937bde9816260",
+        "on-policy-events.jsonl": "36b6354488c832b40a93c08561ec700a5a1693dcc09f61f2eadb465d673be500",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 10,
+      "episodes": 10,
+      "query_count": 128,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_08-21_21_35.txt": "1d578922cec3810d049e46f4efeb11c0b13822a5baf7b39b837610a0515bfb93",
+        "invocation.json": "bb23283dc0f5e26f9fcc22ffcb7c6a8931ed171a9b7e9e6013698c84c3dbee3b",
+        "policy-queries.jsonl": "6773890ffe20f511d680ea3c3b9c5701b5b1ae10e1dd1e27d1c7584c294bb40f",
+        "on-policy-events.jsonl": "318c5cfdd0f4a9195a616e8de6df3450419939fc1f0f3964fff65c67cf10565f",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "B2_vs_B1": {
+    "episodes": 10,
+    "rescue": 0,
+    "break": 0,
+    "net": 0,
+    "delta_fraction": 0.0,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 0
+  },
+  "B3_vs_A4": {
+    "episodes": 10,
+    "rescue": 7,
+    "break": 0,
+    "net": 7,
+    "delta_fraction": 0.7,
+    "exact_mcnemar_p": 0.015625,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.4,
+      1.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 1,
+      "1": 1,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 1,
+      "6": 0,
+      "7": 1,
+      "8": 1,
+      "9": 1
+    },
+    "tasks_improved": 7,
+    "tasks_harmed": 0
+  },
+  "B3_vs_B1": {
+    "episodes": 10,
+    "rescue": 0,
+    "break": 0,
+    "net": 0,
+    "delta_fraction": 0.0,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 0
+  },
+  "B2_vs_B3": {
+    "episodes": 10,
+    "rescue": 0,
+    "break": 0,
+    "net": 0,
+    "delta_fraction": 0.0,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 0
+  },
+  "next_expansion": "LOCKED; protocol-only audit and new preregistration required"
+}
