@@ -1,0 +1,17 @@
+{
+  "time_utc": "2026-10-09T13:43:20.365264+00:00",
+  "hostname": "autodl-container-90824aab47-6dc00ae3",
+  "backup": "/root/autodl-tmp/qvla-repro/backups/b2b3-046-final-20261009-0001",
+  "verified_counts": {
+    "SHA256SUMS.txt": 13,
+    "RESULTS_SHA256SUMS.txt": 18494
+  },
+  "supervisor_pid": 751,
+  "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+  "gpu_devices_found": false,
+  "active_experiments": [],
+  "execute": true,
+  "platform_off_independently_verified": false,
+  "ssh_exit_code_after_request": 1,
+  "note": "Native supervisor stop request; omits Trash deletion. SSH closed by remote host after printed receipt."
+}
