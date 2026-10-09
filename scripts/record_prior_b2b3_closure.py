@@ -58,9 +58,12 @@ def main():
             raise ValueError("Wrong GitHub target")
         env=dict(os.environ,GIT_TERMINAL_PROMPT="0",GCM_INTERACTIVE="never")
         head=subprocess.check_output([*git,"rev-parse","HEAD"],text=True).strip()
-        advertised=subprocess.check_output([*git,"ls-remote","origin","refs/heads/main"],text=True,
-                                          env=env,timeout=60).split()
-        if len(advertised)!=2 or advertised[0]!=head: raise ValueError("Current report commit not synchronized to GitHub")
+        # On this Windows host ls-remote can fail its Schannel handshake even when
+        # the authenticated fetch succeeds. FETCH_HEAD is the actual advertised
+        # main commit fetched in this invocation, not a stale tracking ref.
+        subprocess.check_call([*git,"fetch","origin","main"],env=env,timeout=60)
+        advertised=subprocess.check_output([*git,"rev-parse","FETCH_HEAD"],text=True,env=env).strip()
+        if advertised!=head: raise ValueError("Current report commit not synchronized to GitHub")
         record={"gate":"PASS_PRIOR_CLOSURE","server_gate":server["gate"],"local_gate":"PASS_LOCAL_ARCHIVE_SHA256",
             "server_archive":server["archive"],"local_archive":record["archive"],"verified_counts":record["verified_counts"],
             "server_manifest_sha256":server["manifest_sha256"],"local_manifest_sha256":record["manifest_sha256"],
