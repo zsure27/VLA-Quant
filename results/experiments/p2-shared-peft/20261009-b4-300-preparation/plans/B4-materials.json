@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+  "w2_g128": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+  "w2_g64": "/root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt",
+  "w4": "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+  "student80": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80",
+  "calibration80": "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260926-107-p1-data-contract/peft-train-calibration80",
+  "trajectory_split": "/root/autodl-tmp/qvla-repro/worktrees/20261009-046-b4-300-prerun-v2/results/experiments/p1-data-contract/20260925-107-p1-data-contract/trajectory-split.json",
+  "oft_root": "/root/autodl-tmp/qvla-repro/overlays/awq-p0-stage-20260923/oft",
+  "libero_root": "/root/autodl-tmp/qvla-repro/src/LIBERO",
+  "official_root": "/root/autodl-tmp/qvla-repro/src/official-quantization",
+  "closure_tools": "/root/autodl-tmp/qvla-repro/closure-tools",
+  "b3_train_dir": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/train1000",
+  "prior_server_archive": "/root/autodl-tmp/qvla-repro/backups/b2b3-046-final-20261009-0001",
+  "prior_closure_receipt": "/root/autodl-tmp/qvla-repro/backups/b4-300-prerun-046-prior-closure.json",
+  "data_scope_reference_runs": {
+    "first50": {
+      "gate": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/first50-protocol-gate.json",
+      "cases": {
+        "A4": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A4",
+        "BF16": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/BF16",
+        "A0": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A0"
+      }
+    },
+    "next50": {
+      "gate": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/first50-protocol-gate.json",
+      "cases": {
+        "A4": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A4",
+        "BF16": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/BF16",
+        "A0": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A0"
+      }
+    },
+    "last100": {
+      "gate": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/first100-protocol-gate.json",
+      "cases": {
+        "A4": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A4",
+        "BF16": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/BF16",
+        "A0": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A0"
+      }
+    }
+  }
+}

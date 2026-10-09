@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "prepared_utc": "2026-10-09T13:37:22.448455+00:00",
+  "instance_hostname": "autodl-container-90824aab47-6dc00ae3",
+  "code_commit": "5cb45abef6a11ef7cf07bb8c2e94ff071da53b60",
+  "gpu_present_at_registration": false,
+  "gpu_work_started": false,
+  "status": "CPU_READY_GPU_SMOKE_PENDING",
+  "fresh_models": [
+    "B3",
+    "B4"
+  ],
+  "formal_episodes_per_model": 300,
+  "micro_overlap_excluded": true,
+  "reference_models_archived_200_only": [
+    "A4",
+    "BF16",
+    "A0"
+  ],
+  "prior_closure_gate": "PASS_PRIOR_CLOSURE",
+  "data_scope_gate": "PASS_DATA_SCOPE",
+  "plans": {
+    "first50": {
+      "plan_id": "20261009-046-b4-pair300-v3r2-B4-first50-pair-v3",
+      "offset": 20,
+      "resets_per_task": 5,
+      "episodes_per_model": 50,
+      "stages": [
+        "verify-data-scope",
+        "smoke10",
+        "train1000",
+        "micro-B3",
+        "micro-B4",
+        "audit-micro",
+        "first50-B3",
+        "first50-B4",
+        "audit-first50"
+      ],
+      "sha256": "c0061eca19a5512e5a6e8194095fc6c0df0f7365f08fcddac189cb7a775605bf"
+    },
+    "next50": {
+      "plan_id": "20261009-046-b4-pair300-v3r2-B4-next50-pair-v3",
+      "offset": 25,
+      "resets_per_task": 5,
+      "episodes_per_model": 50,
+      "stages": [
+        "verify-first50",
+        "next50-B3",
+        "next50-B4",
+        "audit-next50"
+      ],
+      "sha256": "0b06c63b83b1a5a1acf52de5be1c54166cf21d7464a3b37b78fcd3db27f37bd0"
+    },
+    "last100": {
+      "plan_id": "20261009-046-b4-pair300-v3r2-B4-last100-pair-v3",
+      "offset": 30,
+      "resets_per_task": 10,
+      "episodes_per_model": 100,
+      "stages": [
+        "verify-next50",
+        "last100-B3",
+        "last100-B4",
+        "audit-last100"
+      ],
+      "sha256": "d25a41489326541ce7c82a8aa7e7fdc0a9a1ba85348be1b1145b4490be461acc"
+    },
+    "final100": {
+      "plan_id": "20261009-046-b4-pair300-v3r2-B4-final100-pair-v3",
+      "offset": 40,
+      "resets_per_task": 10,
+      "episodes_per_model": 100,
+      "stages": [
+        "verify-last100",
+        "final100-B3",
+        "final100-B4",
+        "audit-final100",
+        "audit-combined"
+      ],
+      "sha256": "03885b084e95d502c0af6a785bf5dd5d771f338d3c00cd313bf3142fade64582"
+    }
+  },
+  "runtime_lock_sha256": "5d5813ad04f8d1e2c805f9817da89bff5dc54ad2ef548db37c5ba01e8c085c77",
+  "material_manifest_sha256": "20ed1c35d704d48e340bef6e16654444c9a9ec76afee2a268c4e9b6bd8c046e4",
+  "prior_closure_receipt_sha256": "5b31f4041640df20f84a16c1548f7424f56eb1b1fc1d06b2b9882367ba04cbbc",
+  "data_scope_receipt_sha256": "b812203f62f0b2f8b21f2f7e63170cebad8796fa92410542b1c5259c6f04cca0"
+}

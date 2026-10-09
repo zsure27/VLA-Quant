@@ -1,0 +1,14 @@
+{
+  "archive": "/root/autodl-tmp/qvla-repro/backups/b2b3-046-final-20261009-0001",
+  "verified_counts": {
+    "SHA256SUMS.txt": 13,
+    "RESULTS_SHA256SUMS.txt": 18494
+  },
+  "manifest_sha256": {
+    "SHA256SUMS.txt": "c791822e4b4abd1adcd8a5d74d5769312e57c862d54979631e2c0b118d6db821",
+    "RESULTS_SHA256SUMS.txt": "d31a82e55f4de90712a94af206525f580e7c2f26cc8cecde6c4d13d86dfdf021"
+  },
+  "server_commit": "852d350",
+  "gate": "PASS_PERSISTENT_ARCHIVE",
+  "verified_hostname": "autodl-container-90824aab47-6dc00ae3"
+}

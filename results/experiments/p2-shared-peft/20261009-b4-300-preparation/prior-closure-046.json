@@ -1,0 +1,24 @@
+{
+  "gate": "PASS_PRIOR_CLOSURE",
+  "server_gate": "PASS_PERSISTENT_ARCHIVE",
+  "local_gate": "PASS_LOCAL_ARCHIVE_SHA256",
+  "server_archive": "/root/autodl-tmp/qvla-repro/backups/b2b3-046-final-20261009-0001",
+  "local_archive": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261008-046-b2-b3\\b2b3-046-final-20261009-0001",
+  "verified_counts": {
+    "SHA256SUMS.txt": 13,
+    "RESULTS_SHA256SUMS.txt": 18494
+  },
+  "server_manifest_sha256": {
+    "SHA256SUMS.txt": "c791822e4b4abd1adcd8a5d74d5769312e57c862d54979631e2c0b118d6db821",
+    "RESULTS_SHA256SUMS.txt": "d31a82e55f4de90712a94af206525f580e7c2f26cc8cecde6c4d13d86dfdf021"
+  },
+  "local_manifest_sha256": {
+    "SHA256SUMS.txt": "c791822e4b4abd1adcd8a5d74d5769312e57c862d54979631e2c0b118d6db821",
+    "RESULTS_SHA256SUMS.txt": "d31a82e55f4de90712a94af206525f580e7c2f26cc8cecde6c4d13d86dfdf021"
+  },
+  "server_verification_sha256": "b2f71e6299d0fab46573b4cae2a1593463857359aec678e2f129dcd0c1a55f77",
+  "github_repository": "zsure27/VLA-Quant",
+  "verified_remote_sha": "981f1c0553af05b1913b8e295603afdd8a965ded",
+  "server_commit": "852d350",
+  "note": "Archive and Git receipt; prior 046 shutdown remains user-reported, no independent platform OFF claim"
+}

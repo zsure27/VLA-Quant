@@ -1,0 +1,3787 @@
+{
+  "gate": "PASS_DATA_SCOPE",
+  "claim": "within_task_development",
+  "training_tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "evaluation_tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "shared_tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "training_episodes": 40,
+  "evaluation_episodes": 200,
+  "initial_state_overlap": 0,
+  "observation_overlap": 0,
+  "foundation_training_exclusion": "NOT_ESTABLISHED",
+  "final_evaluation": false,
+  "source_sha256": {
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/manifest.json": "70af4d1f32de7099ac9d25565d9089f987897d6fd5e5d5b7a16d0084fe5f039e",
+    "/root/autodl-tmp/qvla-repro/worktrees/20261009-046-b4-300-prerun/results/experiments/p2-shared-peft/20260930-014-a1-reset-preflight/unpruned_state_inventory.json": "dbf9a3305c27bd009c38bef1ea92715e8d27cd531bc34efc5ec8afb63b07f253",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00000.npz": "2c0557ad57c7dc0dc10353fa049b989527bb1346b84be1de824ea9af9a18b6ab",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00001.npz": "23f4a34ce969aad507aeac66db5c33536da76e89db88b2ffa1742990a0aff706",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00002.npz": "18331f54783a21f87f7b4ca95a9baf27e1745219a9282acf40ac9465a9d83c69",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00003.npz": "a24cfb6dd49ae21fc7bb25cb6519c86f38e153a1c1965a581144c7f74b528503",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00004.npz": "b9166f874e290fce951057bdf7ed7307600f1329bfc88ac19aef871f97b4fdd3",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00005.npz": "7c08b1e8db02183702da0d72731cc9462a9d5c29da59ca3dda7fdfd082d5f236",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00006.npz": "75749a6091cb8506a5fc831ca59296850944362e85000268fe74ae912135792c",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00007.npz": "61024a39a9bd413edd1e11d19e12ec281d43fda181ff01378cccf475f541949e",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00008.npz": "da83c38c09d36e0b8330d14d403ea2e3f0da00a668d636e73d238b8014f8b607",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00009.npz": "fb8996b5ff907e4c60c660e8ef76f65f27226102b9418d31fc81c90e48e6298a",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00010.npz": "c4af5703db4679b18e484d22250956e9118a50c81fcb069debfb0aea033b96dc",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00011.npz": "8974462e9c9c86972cb474d8da7600c66ac5f9c3e82fc8ca76cb5a9ebd1950f9",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00012.npz": "6a386844e0f2dfc9864c19249bed2a89292b66aa98eaad74fe89540ae060a03a",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00013.npz": "fe4ad1e812bcd77f1e7180ed23119848fe9a1c9743124fa7996240ce8dc0aee0",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00014.npz": "3087acd257c5de0cb7e7ca09d686bbd30e4180bc9c26f0711a71168bf5fb7570",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00015.npz": "7342eecdfcebe7893e718bb3f7f3b1ac8f7425f859ca9b37e13dae587b44bef2",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00016.npz": "b8bef261b7283561194182efc658207eaa11d9f197fbf91315de0b48b81ef45c",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00017.npz": "149c89598dee0161c08c985e28959f60ed445e12aa8c326c4810d754d315e6f1",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00018.npz": "c4fb8d5769fcb71abadd348cc12c68cc139f77731980df559b3c83b38521dcd8",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00019.npz": "db1fefc594e8a47ef024e92da474eedfb7beceb50cb615012edd051678f17da1",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00020.npz": "6b6120b3c40827fcf9113d24a5c059fefcca66e5befb63ec850a780da2600ef9",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00021.npz": "07bf613b9eb85648ea024f6b2f2d49b7b681dcaad518a992e5c878e6fff04612",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00022.npz": "dd40a94b9ab3e1d916a2aac5cab968004a3350130567a04354634878fde5f91d",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00023.npz": "c2c027867522ade29af42b04d80ddcaaee701468d9336a772442cc13b58e6866",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00024.npz": "ebd438acc0028e409d23b2f3f2b18ec26b78f6b2e4f5e54f3601454e6d8607dc",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00025.npz": "4dfc2b8853f55a3a412e9a3fda6e5347d292c9c81887a6199e4a911c4fe33b73",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00026.npz": "9026e38c9dafda469c00543b23eba15150449e852db8273fc10b8712da20ad9e",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00027.npz": "65b4574d2735006bda8c72abb9fe51ac48b033c3af258aebf1bda2cbb8ad1449",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00028.npz": "82420c95f91f655902b52d62d640d3e48dfe9a497ac2e1a0fb156922a6405429",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00029.npz": "1331439addeb672d783b991c4fe6464047d6a84f8e1bf2aa714054b37995a950",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00030.npz": "d0c6bb72b15a05d1afe16c3d3670f455be60aa4c535443043a35045b524e5a97",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00031.npz": "506ec07554ce0e56bd7eaede56ff0d571503bcbccbe2ba710202ff0b4f39954f",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00032.npz": "1d4cabc911bfa0d1ab52c1a5241b08f42315deeea00f622e2a5983b5d4a2d2c1",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00033.npz": "58b8b48b94773c8e358b4e2fbaab3f43e0d95256fba202e993cd656b21f57689",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00034.npz": "2b8ca5a64cccff0e377bfd2195aa4fa8d4457701ef7805c503723083ee6bd964",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00035.npz": "6e60c192f8e6ea0b1dbb89eb20197d37114893dbe5b4e3e8e4629edd5aad02db",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00036.npz": "22bb7a98dbfc13caefcb69047abb542fe6b26311fc73f1d900b51c63efc1c5e5",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00037.npz": "0fbb72910f9b3d60cff7b45dee1b314a7922461ccafc12df572c249db04a792b",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00038.npz": "417798d2c7397ab28a5286a75bad1d05e74ca680d636e6db5411cca51df20e26",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00039.npz": "e46c2cc1acaa86e82605517433ea10b6cf2c37c6703205faca533ad99c789c19",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00040.npz": "fabc6dba7b4eeec09b4518f85ea4ab5146f1989311217ffd4749b22e2eca75ad",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00041.npz": "377e7d688c7515c96b6e1695205bd995b8541bed65f099ed2bc1f86098ab0ac7",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00042.npz": "7b2deef7601b5133bd54a1de0137742a5e9021cbcb1feabb45bb912f9ce8644e",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00043.npz": "0eacf004b35919b211f3fdd580bd454fb08bca26f05cdc884928b266fb911b60",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00044.npz": "2403128cca06e69def638489fb9cc408a28424e935f4f67606bf2444593850b2",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00045.npz": "b13205a3b9cff5a3fbd7524b930ed06a618b8f866bb9702edc594d4fd6fb20d3",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00046.npz": "83e53431863f7c8d52c8a1a65ce9989fff87f16f0cc4f8c2a50ce34171be44af",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00047.npz": "d6beb60a673b1505f416ba7b6335315212a765417ab245677640a9de2d769e7d",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00048.npz": "e608ea8d282953ea65192fe91c3eb7c8b3571e6ff39403d81ae9a8eb08c783f7",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00049.npz": "48b10f6858640766d92a051e1624afcbcafd1d97c1d29fded914e848e097b2ca",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00050.npz": "57f2158685cf07248991020d8f8cc33aad55143b554787d1587db2b7fc6f277d",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00051.npz": "14f459aad4ed37596997f23ab9272dc4ed5bc11e23176ea5447eb67ab7aee4ad",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00052.npz": "bdf3408abdb82520752bdd147d6beb0cdede8e553f5abdb2fa83845647260af1",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00053.npz": "9022245f4013f715fc108531acf48d577c8b674ee2f4eec7953a70e1c31b505e",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00054.npz": "6514b1b982ec3cda83de786d4aa70ba4bfd6eaa30544e92c021a7a3fadc27a7d",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00055.npz": "701440c0a27a6adb70eb26d4260b4d6823df003254b4598d0336d7187ade383a",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00056.npz": "f21c873432c861352d63180bb52d076fe69fe8f8098ff76bc7d8b35e71513124",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00057.npz": "9e9b90afa4d80b5e17af8e30a0989604ed6f385351b34aecda510f714087e7e0",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00058.npz": "3f1bac52dc32ee6b22210b5a7dec95de22571f48d5aed6809f430e2db979329e",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00059.npz": "a2bbd5f5078c7ac5bbd0825035eaf14acefc6217901c96447e5213174d836bec",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00060.npz": "1a1d83252c6b118be03694bfacc7b173b655610720d2ed92a53a1d4d144b03d3",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00061.npz": "753038531f253a6c5e5be05bfbd5383a5367214ee12ce458af147850759c973c",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00062.npz": "2aa202879b6754e30014ba4accb01382d656c44cb3579b86d7ae2246bc1e452e",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00063.npz": "eb5105f2d95a8cdf0970297f03ae6f484fce3f82968c8bb8f8c57d5e1842323f",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00064.npz": "b6a1cf305330c9a14e82c329e557be365da073bb13ba4a80cfef6ddfaf6e702d",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00065.npz": "c63afe57743fa0e94e113f96f8af6b4d5a034b853c064322c0abac8606eb7b95",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00066.npz": "15fc3d97cf3fadfd4f37ae913d1028f1aed20cd6a21b7505fac281d57b18b7fb",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00067.npz": "8c11f31aec36b6725b3f5309dc6f015186b89dbf847c1c1e30d81a85a61c301f",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00068.npz": "9ae67b4baca8d5893c3382fd721cc8203c5d28da1bb317259f1021e22a1687c4",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00069.npz": "2c1046f1f605cb5db4833b8b4a7bb14721b0c91c10a26b0b92a1838dfcdeeb9d",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00070.npz": "43619fc25c2746b04c923aebb8bf22120229a80a425e9aaa2229617899181be2",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00071.npz": "7bbc8bcca969400caac5d9d816d91226cc76fa7e74a50fc50c7ecbb25a4359c3",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00072.npz": "ff2857e6b3632065cf23e076f240c906d1e409105d5dc3baf32f8697b1bd1235",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00073.npz": "556e4f81defca152a52952bc6015661ddc40aa92d54e60da5bdfc100a89326b0",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00074.npz": "33e74b8f757c8df0dfee7478a40eb88b75f6fe4c82577793de2d013869625072",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00075.npz": "8ad3c9f801c3ad99069d13cb1cb388d5a7f5b132c4bc5044e58dce8ef89ec5f7",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00076.npz": "d9dbe98f969851025083fc91a7ec1577f15befec93fc040a3ec125f37db87a1b",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00077.npz": "8ea5a21041ee03aea83d66a9f80609ea438021f0821dcb09797e7a3336a6dfab",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00078.npz": "02118a9ff8c96ca956dfe22dbaa264c050d8a23b3b553a9fa49e4cf1469a9126",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/sample-00079.npz": "1727d0f742ab4ac9660aade70566abaae953a6e99e0442e098645e028c256928",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/first50-protocol-gate.json": "c9bce5a40bddae4bd8f1c33a4a4b0188eb2a1939013fc235313319e7f5e39e58",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A4/EVAL-libero_spatial-openvla-2026_10_08-17_46_58.txt": "4a31bc76a4fe5e40f82df1f147e4f67b61ec8ee3c1b8732b9c9461b5f8f025a5",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A4/invocation.json": "ae5498f7f2e5af9adc4db809abc94552a5daf86bed5974d1d28c05bb430b8db0",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A4/policy-queries.jsonl": "aa2db29c5b469b96309a11f5f12d36b56b8ec2ae9f1494844e71e44d3de407b1",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A4/on-policy-events.jsonl": "5fd58fd69848d8045dec098d7799b3c6ba8c4ca7b52a0c5c5cfe89213ef4cdce",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/BF16/EVAL-libero_spatial-openvla-2026_10_08-18_24_44.txt": "6955386bac61f86c571137df18e87f45abc919e80fa33468211aec6bd2289e5a",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/BF16/invocation.json": "aeab069f04b2d44bd233fb5c5ddd358f82202306aa9832ed5cdc27d12f7236d2",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/BF16/policy-queries.jsonl": "1872809b66c5e5ead4c4efbbb48e709b0dd81e2b8d44070fe018b84ed3b1ec66",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/BF16/on-policy-events.jsonl": "9e3a6c11f98fa9b1a72bb0a5682dd0fedc7db6117b350c7c389d9b4b58b22536",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A0/EVAL-libero_spatial-openvla-2026_10_08-18_35_35.txt": "d32d060512962cf75fcf9e6004ae93a1facf92cca54dd3eeadd19d1559fc6adc",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A0/invocation.json": "8325685f9457d6d56338de995083df40c6a5ee0538f90a171a166029fd702d3c",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A0/policy-queries.jsonl": "db5974bf587535673f091a0d844e932900303019efe34d5417e33bf0f2f75026",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A0/on-policy-events.jsonl": "f7bafba99fa079ce8ee1b2fe2a14c08cbfca9dbd606c64aaf321859de0d9f8d7",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/first50-protocol-gate.json": "0a9c2cafa8f84dbd06aa8217b1edcd110188ab4e8c2eaa85953afb430c7508d9",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A4/EVAL-libero_spatial-openvla-2026_10_08-20_07_03.txt": "00204bdf4ed38d68b9988d405ce54235b713b79e6c7ddfd747545f1d2484c955",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A4/invocation.json": "a8b15dd79e1e28008557d9d42fc9f9c01e65de337e64e57b014930f9f2073892",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A4/policy-queries.jsonl": "ab7afd9c446b0a1183defdcd3cfbbde3a7b7390011213dcc6595f2647d7fd777",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A4/on-policy-events.jsonl": "5c675e6543424f9266e1176a6378eef820727101db9b587f4ad19ce5574a9b11",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/BF16/EVAL-libero_spatial-openvla-2026_10_08-20_33_47.txt": "72d9dc6f7b08f18201f9004a61dfca6e989c1c566187c286fd19d0a39d5334ac",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/BF16/invocation.json": "0e0c8feb46f5ccad4a4ded8a55791f80eb6f2bd5e604b7acee3b92a4011b1010",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/BF16/policy-queries.jsonl": "6f45058f4897dc09453806719e87785a24dd8248fa7498433d86fa1b3dee52c1",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/BF16/on-policy-events.jsonl": "8b8067b118cbf8a5887f85be2b477c0b04d8aecc0180af6be6cec466b29a1881",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A0/EVAL-libero_spatial-openvla-2026_10_08-20_44_51.txt": "e1ec7fc82f382406df756ee83360e7b3c3fe8e7e9fd7ee5917bf6fb7701d5569",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A0/invocation.json": "de17b2dc829b82a697c82372b68eddc336404cc3a081863c0b7c7deb5e33d495",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A0/policy-queries.jsonl": "c1207b7b08c5e516449c2ff115d181df5f98dd3c1c978b6fbe43f4d18e0c76e2",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A0/on-policy-events.jsonl": "cb7e8c0d2bffb93f3e7df5971a225cb3fd3cdd7998801a2d48e575ff516ff2b7",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/first100-protocol-gate.json": "28da4725f638a731f71d7afb7b8a2e05b2da713ef6c35c9487a4310984816ac7",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A4/EVAL-libero_spatial-openvla-2026_10_08-22_27_18.txt": "0c40b3e28323f6cb6c880794cb567ee46f4ffa368fc493a842801a85b3c22c89",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A4/invocation.json": "e4afda09b24e3898257dc0f1dee936d1bdedad82b8621f7832ec16881d3fed27",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A4/policy-queries.jsonl": "52bf40ab5bac7f7ef2c81a97a636cf4e41a36673ebc39bd512a18107f6f06765",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A4/on-policy-events.jsonl": "b1643f82c94ff17ccd7c700174c11105288f311b44938e43aa7c54e245d77ddb",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/BF16/EVAL-libero_spatial-openvla-2026_10_08-23_17_48.txt": "2a3602a359adeb09f22f77f11cc667a68ea81bf9765b11501bd5c62222f49951",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/BF16/invocation.json": "7eaf34f88903e93998adab4cb766f45c786c5d46b0a2c1d9c120df55ee7314be",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/BF16/policy-queries.jsonl": "b10483d5753516d56f163253f84d01b104e977d8fdbd6f3c7f20fc86c1235149",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/BF16/on-policy-events.jsonl": "a77d2526ec9f4dc64c57fb144ca30b55723f0cd6b362c8e6125cdfdeb7ce4a6c",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A0/EVAL-libero_spatial-openvla-2026_10_08-23_37_42.txt": "d6749f228da72c5646040c29f9b7fa9146b6db604528222614b5af7b8b9fb4e8",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A0/invocation.json": "ba6b29a341798dc1a8fa0942744bc674a177086b9dbcc41327db470cd55d46a3",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A0/policy-queries.jsonl": "c944a9f66c95c83b0515d174b43e287a20be42a9d1bacf2eef377abee1dcd39c",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A0/on-policy-events.jsonl": "7cae2ce1ff257b5de4a4386e31439fc4223557873deb625b5f431d94dd3cc4ff"
+  },
+  "training_manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/manifest.json",
+  "reference_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "key": [
+        0,
+        20,
+        "79a03d1a76b0b6beb5e3ac797dc63dcd4f8deda96cc70100fd352bf02b8b62b1",
+        644768396,
+        2314666808,
+        "paired"
+      ],
+      "first": "559bde090d4ee7f88d68495fcccfb24603b21108d1b487ac31ab058bf97cffe0",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 21,
+      "key": [
+        0,
+        21,
+        "05b91b73c5da09660bb91c279b9ed5a13be98f07fdf979ecda0ec92640d9e331",
+        3682354205,
+        4021272041,
+        "paired"
+      ],
+      "first": "11e9be405a9d3f964a5a75ad0e88dc79c968bf582c28fd1b9e61fae2649bcb76",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 22,
+      "key": [
+        0,
+        22,
+        "e7a1daaec3d35b65f3dbc4b7b981500c8247a321d3c1fea60f245589d7fcc345",
+        1810215896,
+        2723145541,
+        "paired"
+      ],
+      "first": "9f94f9ac2f601d76b9c0ea16082f34c3b8005afbb5c18bb2af7ba5d79c79eb4c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 23,
+      "key": [
+        0,
+        23,
+        "79cdb8ea384ce01c24d656b80a89d1dff625fc8259e77b68d4e206df1c397939",
+        2735182828,
+        2167003792,
+        "paired"
+      ],
+      "first": "6aedb006afbc4198934a7aa95affa72b362c904817cbb79d693c115b5bd1496a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 24,
+      "key": [
+        0,
+        24,
+        "58fff4a2c49c751e36ac3b459a980c981c8eee95ff4bf8b51fa3f778d8caf6c5",
+        1271211529,
+        2648567554,
+        "paired"
+      ],
+      "first": "d0e3a1ee2cdf579741c5d7b687f187ab0c78ac39f2b9b7e22ade6dfddc79f700",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 20,
+      "key": [
+        1,
+        20,
+        "aef97da3ecaba0f853f56a30e620566abeb607173e7ed1c51b969771f193e427",
+        1373906414,
+        125433153,
+        "paired"
+      ],
+      "first": "c76919dbf5aae64cd40de620ce46dc8d7159b6d17ed3a26263c776334ddc5e4f",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 21,
+      "key": [
+        1,
+        21,
+        "204f240ceac0e1d55281d9f5760d5810f02fe9bf2db5c259a4cdd3b0d696ae07",
+        973626867,
+        900983934,
+        "paired"
+      ],
+      "first": "bac85b117e3176f5a1410c878605057ff18bebb8c21d96c169a9d03360e1879e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 22,
+      "key": [
+        1,
+        22,
+        "f7b5b53bda496b303d061d6235521c331ea773edddeae4915ab9e515d1d9a946",
+        2413172997,
+        4203624039,
+        "paired"
+      ],
+      "first": "d9577636f0023d8ccb90d1f2de7676062f171ff3d19625e5b4633b4572f970f1",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 23,
+      "key": [
+        1,
+        23,
+        "9204c3a8b891069e31537d63dcd72e2a7607111c73cf8a4f038495e4b6d5cbfa",
+        1647343151,
+        1376077132,
+        "paired"
+      ],
+      "first": "ecca1eb5fb73c3d10f088a96e1c6aa3258fb0b2c80aa6672e6a6a5d6ddbad2b3",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 24,
+      "key": [
+        1,
+        24,
+        "d5457abae771c1553985928c9e7d8f29295a6d3e391efb9be37ab94de1c03651",
+        569132828,
+        4070818733,
+        "paired"
+      ],
+      "first": "8730cef69bc7d175a43bb093fd7f293c5553c259dc532a88cc235badcaf7b0f5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "key": [
+        2,
+        20,
+        "86c32e500c2d681050de51b451bf325b3c8abbefc58b02fc198edea233d4458c",
+        3872258972,
+        2848030071,
+        "paired"
+      ],
+      "first": "13437e7eb10f092f2efa46d50af3c34a6994c6dee68b00e9e30abe013de5418b",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 21,
+      "key": [
+        2,
+        21,
+        "42f7d963fbe9577ac9acd3193a0079e75915573d0a52a13ae5308d594ab2c398",
+        640731367,
+        2923225422,
+        "paired"
+      ],
+      "first": "5084154ece1894ce8e8679b6652c3c4294c982fbdfef078931cc3e0c906ea700",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 22,
+      "key": [
+        2,
+        22,
+        "0e39b547c3c98c40b90b7edc9f466ee2e05beceba75f60cba0ced4f3af6cc3bb",
+        472851188,
+        153838975,
+        "paired"
+      ],
+      "first": "33f6e2096a161ac625d9c791292fb6d80ab15f4aaf5e7824bdaff64269f72406",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 23,
+      "key": [
+        2,
+        23,
+        "851c8e19199bcf8e98e54b540bac566c6e151dad452b8db80428591474e76851",
+        2656765653,
+        1840263269,
+        "paired"
+      ],
+      "first": "0352fc1bc35794faeabc5db3f0f325f27848807a9790efe6028292c2b28e0f26",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 24,
+      "key": [
+        2,
+        24,
+        "18a6352b98f5b15f80b7104e38d8409d29a30b7662b378404ebadecc4e6dc256",
+        112848552,
+        2943093867,
+        "paired"
+      ],
+      "first": "5ead89a4dee291095254cd040605e4a5ff8452093830deb3505b811190aab6af",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "key": [
+        3,
+        20,
+        "f23e83808a0fc8511f8360b41b764ceb71492223a8f646094087ed6a6241b6e5",
+        693575890,
+        2587966869,
+        "paired"
+      ],
+      "first": "1622fcb409a4720bff865e54ffed44e823735f9655e6a8bb6b9049f4a15d075f",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 21,
+      "key": [
+        3,
+        21,
+        "5a225f422e1c897f0f3cc086530d18bf555b87916b9dc53511982099a452baa1",
+        2036968144,
+        2143382431,
+        "paired"
+      ],
+      "first": "d8c385b9c41c7e5068d3d76eba8f597ecaa4d263116157776e1b5588aaf73917",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 22,
+      "key": [
+        3,
+        22,
+        "23cbe8d139063c7a402eebde0cec2e486ccb8cefd6ba08b0dc1fa55917ba79c0",
+        605636453,
+        3900826560,
+        "paired"
+      ],
+      "first": "5c6518dbac734c6329c21072bbe28dc8b50c54cf84f772c8643d9e5f154351fe",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 23,
+      "key": [
+        3,
+        23,
+        "fa88150e97cd146fb482f33b8d99e6245ce3aa11a19719053a2de455235dc62d",
+        4165973265,
+        27036578,
+        "paired"
+      ],
+      "first": "1d952d955f42271f683331842ee7c0e9bf9a6fcb400fd6b96d1f2a90b91cf9ec",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 24,
+      "key": [
+        3,
+        24,
+        "8f2f7a03f736dbd1696f28b14a1f1ab8e06fef15a4be7ae925d975605c086b68",
+        252603391,
+        3820890312,
+        "paired"
+      ],
+      "first": "a870836cedea02640e65d1e6d1fbd91da0afc66313faa533f4fdaad75c76ada8",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "key": [
+        4,
+        20,
+        "ab224edee886b131234e99a0f368026164c95d0cf66b86e2b8e5d57f4752fd0c",
+        2634505517,
+        1670908685,
+        "paired"
+      ],
+      "first": "48d44cf7d376d78422a0a73c25179df124762278da39f193717b5901a4bf81a9",
+      "A4": false,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 21,
+      "key": [
+        4,
+        21,
+        "a1cf613529a200d3bb91c110552437fd8ca22808593bf4ac3474e3c045b972f9",
+        1831079188,
+        1335719344,
+        "paired"
+      ],
+      "first": "033d98c9db0da63143e82282cd9097c2020336ee49ce6ec6f369d31006778b94",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 22,
+      "key": [
+        4,
+        22,
+        "186efc26523a1312fad0cace8e20b362c572b5ea898249e5414147fe57593fe7",
+        80929360,
+        3568216841,
+        "paired"
+      ],
+      "first": "21a1c2d4e15dcf728e8fee9a51c626a82b861239bd51cd87330504496325074c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 23,
+      "key": [
+        4,
+        23,
+        "a908a6adf34b19db8ca2aadf44af35f23b19800ecc295882d55df41d51b3b9a0",
+        2339429422,
+        1283900926,
+        "paired"
+      ],
+      "first": "9c952bed255d9360c53e228013ee47b623e47ccc3e728ccffe57ac00835655eb",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 24,
+      "key": [
+        4,
+        24,
+        "beaa5adbb4f8eb5f1f7ac237eeffd5d8080fbf29ccefdd280b3a85edb7ebb4a8",
+        2814688076,
+        2088329899,
+        "paired"
+      ],
+      "first": "4c838eae17625776dbcd56b93140401d14065f038ac729ec461c4dbe862e05f0",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 20,
+      "key": [
+        5,
+        20,
+        "7a3297ec1b170ec45b15af3de0e9ea7980bc479cc017842d7e5d66b3362b2134",
+        3670992952,
+        1213222342,
+        "paired"
+      ],
+      "first": "228b3ac7ce53d70f14a7e5e29ff3f5b5af5002ef353c18ac247213c4cdfd2a66",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 21,
+      "key": [
+        5,
+        21,
+        "87f12a540d751c063931039d6c667170d2175b401711b1dafd44f04a4cce37fb",
+        1393392014,
+        2794476500,
+        "paired"
+      ],
+      "first": "953c3a7cef022d5cfa932f97ea8de9b632871b3dd16e7050891cd1e467053305",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 22,
+      "key": [
+        5,
+        22,
+        "ee8e4157331954c562a92ace1d7af51fb0099876a4eaa5ff8926374864c8164f",
+        482973241,
+        3630998236,
+        "paired"
+      ],
+      "first": "93e4bd08cbe666224e7559dc14a45f26b960ce1369645302012c7e92fb783a01",
+      "A4": false,
+      "BF16": false,
+      "A0": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 23,
+      "key": [
+        5,
+        23,
+        "bbef69f5116f7dfa488cfd39df356f328a5ba440318fcbbaf9e3ae64a27fe76f",
+        1418966080,
+        2128370540,
+        "paired"
+      ],
+      "first": "69ae9b5dc886ff683f4616a4c5f23dffff34d21e63b9d770d1b52bbb88510d22",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 24,
+      "key": [
+        5,
+        24,
+        "8999f5cec79ff0e9ea8952dd394f2d21a9f8b9f2243f389090d970761ba500ce",
+        4115303089,
+        482868109,
+        "paired"
+      ],
+      "first": "ea8b748cdef305b25190ff840e72cc6dcfedd8442efcab7f12fd439cfb45e3e2",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 20,
+      "key": [
+        6,
+        20,
+        "23c3cb4dbeceecf92d8d82905228c346e4b0ce5fad6d11f08a0686fb85522a13",
+        2255929364,
+        4065589618,
+        "paired"
+      ],
+      "first": "f9b3664efe5326a6aff12e685b24a8bd8943ce4eeb37de0b048d58053af63aea",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 21,
+      "key": [
+        6,
+        21,
+        "37374a758b8fe00057b18c282c0e94194cec7b1a2bc416563b17b5bb65f390dc",
+        77598581,
+        599463303,
+        "paired"
+      ],
+      "first": "241df6ed5580f257ca17146bb4e4a2f779b61616763d620166b51b0cd09a3c91",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 22,
+      "key": [
+        6,
+        22,
+        "9394427a6abc248436e265d430b257d6d6a812904e6cf5101d21a90694a3f052",
+        2994017527,
+        4257906431,
+        "paired"
+      ],
+      "first": "be3c8256a16f3ef31f2b3bab8d57a5151be8199c981fde11e22c191ecced7d5e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 23,
+      "key": [
+        6,
+        23,
+        "fea11f92c738a7c7314fd30344e0b8232d2e12c218a1864a26d47c6b81f16dc4",
+        3332073941,
+        1793467699,
+        "paired"
+      ],
+      "first": "bb9f9e93f79c62ce4a4afd83aa5797ad45e8c39c0eb5e45d590a95069f3bc193",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 24,
+      "key": [
+        6,
+        24,
+        "0e049e58bca8daf06ea4d88e13b2c2733c2c4444894717ecba36cfa5d1fa0d12",
+        4001737002,
+        448094624,
+        "paired"
+      ],
+      "first": "014f09e1355b0d976958eb9f3f239ff7f8788a46474e0779b7d32187b992d015",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "key": [
+        7,
+        20,
+        "5d4ab17c105939d8824d816e38358ac58c80cf8a6ba520dca725e9597fb18007",
+        2433071629,
+        2322073522,
+        "paired"
+      ],
+      "first": "3e5521dbe4ede73f9cf2633fc5f3ee493b73909d46db5f6d48bfdf47b69baca5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 21,
+      "key": [
+        7,
+        21,
+        "5c480ba571a4ea4d1d62571f012b7745817d0533c86b2c1ebbbec5c2cd6e5a64",
+        2496983692,
+        3109435903,
+        "paired"
+      ],
+      "first": "4919988edd3c075e2316748a72725e4a20f925e683488656524e3697d6389005",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 22,
+      "key": [
+        7,
+        22,
+        "82319d1154573849ec780b17a58b14939b058ae16c67beb9957ed1dd2ffd68cb",
+        2278736104,
+        2949563981,
+        "paired"
+      ],
+      "first": "9eada922de8b59a34d16f1137377c8e30df51ca3c0aaacd19affdc7e46eb9501",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 23,
+      "key": [
+        7,
+        23,
+        "384d1fd61d5ee71104cc9fa2327517a8233032c023e67954c500d8089be44c8a",
+        1105201830,
+        3430609134,
+        "paired"
+      ],
+      "first": "71e0ee643750f0c343b749c8058461cce2beee6ffb705ec93fb4a961bab732b0",
+      "A4": false,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 24,
+      "key": [
+        7,
+        24,
+        "b95bcc7b8869d8343e98e4533444d7378e1d87db67549954b12449ea0e870a30",
+        4255193328,
+        1667478000,
+        "paired"
+      ],
+      "first": "a351f9174afa93fcc433d894c3b3605d1771d9c3374de2771e3bc41bcfbc03a1",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 20,
+      "key": [
+        8,
+        20,
+        "47b148cb2752229f0a1533d2d00af3c37e856e444cc1bd9a05d77f221f8108a8",
+        282054626,
+        1460665727,
+        "paired"
+      ],
+      "first": "1e54956d2d972bc5de4e9d319a4c4190efc35778b8680dfb3216795cb890e9cf",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 21,
+      "key": [
+        8,
+        21,
+        "d81096691fa3b69dbf5ccce36661289db9e3fdc77ba1471ea82f89751742d023",
+        699717238,
+        470801494,
+        "paired"
+      ],
+      "first": "247c9df20bcbb2c7a92ef9c8fe6affe7b27e24b1b974a9ca0abb7b815d4d153b",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 22,
+      "key": [
+        8,
+        22,
+        "e876b55c1fd564acbd8aa5d9753b2ac4f2cb77a222ee0d2ee3b4c4a51c8e6201",
+        2331391350,
+        906307654,
+        "paired"
+      ],
+      "first": "eaf52223bccd194701430333cb0d99ed006cae5f38ff1f0889c3ceb4aded2595",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 23,
+      "key": [
+        8,
+        23,
+        "d9a409c02879424306d08896d9cfc5df4446d437190667c3bffa6f6a633e6bae",
+        2525850209,
+        524255958,
+        "paired"
+      ],
+      "first": "b13af32839d812cc5c4fd87a09f1a9ec3ced47760bf9ad0270a3e389ad2a83b2",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 24,
+      "key": [
+        8,
+        24,
+        "5a3616236ad0838dca6ccf0ef19727712c1876e7c16e1030856b6dc6b3bf59c0",
+        1464572881,
+        273502852,
+        "paired"
+      ],
+      "first": "9bc2c4e5bcbcacc4191ba5b6364effa0bec46c672b251e8d349d3352f4536647",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 20,
+      "key": [
+        9,
+        20,
+        "25ac47d9a340464d54f544a9049de58edef2020ce168053c1f839275aa8305c0",
+        2386752717,
+        2435183153,
+        "paired"
+      ],
+      "first": "1c6729852314262860536b22f61cd00c00c9022235d8b383688c116324325e77",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 21,
+      "key": [
+        9,
+        21,
+        "460f4016e92ad4bb831bbdb3ed58a2cd57f80006390d07a9130b9ce9ec484490",
+        1679336903,
+        2848406996,
+        "paired"
+      ],
+      "first": "a6751eb840983283e50175761ba9dc4454212eb1ad76693fa26eee12b49a26fc",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 22,
+      "key": [
+        9,
+        22,
+        "20984208ef7319c8e406639c4b99b3c207db600882ca52f02a31a0bfb14e87db",
+        2479189781,
+        2247227004,
+        "paired"
+      ],
+      "first": "20ff5b3e641717c7aa713fe8b6a99dc3f9c3eb1d9888c1d2a7c5d247ff9653df",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 23,
+      "key": [
+        9,
+        23,
+        "bd4a3d61ac174006d7b661eaff87c117416a8f362dc2db692e645cb62c5a8bd6",
+        4005392916,
+        1268263828,
+        "paired"
+      ],
+      "first": "bddb37c845c86c60fe9afa09df0a0b0a10ad5adc9bd10b81dc5f33ab6de8e503",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 24,
+      "key": [
+        9,
+        24,
+        "a17f8d750e4c1b53e6793d067837fbd8d8572628f04e50deb307ee9aa15d8c71",
+        1041018844,
+        2125966794,
+        "paired"
+      ],
+      "first": "7b8db0c713b1567d827178118c468e800a7707e4c0a0690d208fd2ba53adbdc0",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 25,
+      "key": [
+        0,
+        25,
+        "270c59a4982faf1124a068e1ede6ed6a2e2c4b782d6662152853c8b37308a777",
+        1532093220,
+        3554350326,
+        "paired"
+      ],
+      "first": "5968982eb4c4b63badb39f0c181d9e08ef95b0e62bf465630550022f42cd6eb4",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 26,
+      "key": [
+        0,
+        26,
+        "abcb7b355a728397586ea87e3ff7a8922f27d1ce87137cbb7fad7519c1c8da0b",
+        4066502466,
+        1482064110,
+        "paired"
+      ],
+      "first": "332702a0a8caf326d466f7d101e4ab79e9db05268641e19160c27ce0fd50de00",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 27,
+      "key": [
+        0,
+        27,
+        "87a5c5b1f34db4f44115b14420e64b69ce42fb10bdff86f6fa7d3082cea7030a",
+        376007290,
+        584996665,
+        "paired"
+      ],
+      "first": "9d076a1032042c1ea03479e1e1f967647b139ecfb077d72a9d30a2cf985ef85a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 28,
+      "key": [
+        0,
+        28,
+        "9af4a846b8a8625eabd163110d717eb1cf99be156cae4a8ea5f8eb55b6a7b7ae",
+        3411358153,
+        1553279041,
+        "paired"
+      ],
+      "first": "c7cec47141456df269de1b2339b883700cf4a8a6c0c827ba0e38e3f1fba94274",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 29,
+      "key": [
+        0,
+        29,
+        "aee904d9b1ab6993ed2d44907c9c93aa6d66f37bc12863a849e8f1608c824304",
+        3568418523,
+        3478293673,
+        "paired"
+      ],
+      "first": "e004d2bbfdb6e1492da8c72b8c5d337f34a35f325472ebb688de730ac5c6637c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 25,
+      "key": [
+        1,
+        25,
+        "d39dedeb4a7a1d5f7b937db9c174463a89b5019e2b2e3fb3cc4256d2eec8f1b1",
+        610614387,
+        4145811711,
+        "paired"
+      ],
+      "first": "d52c46583414b01e81e91b55eed53f9d66e4173b33b98762104696a8e7dfe92f",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 26,
+      "key": [
+        1,
+        26,
+        "f71d05cda4b40bf08846f79046760d7f190ecb9d4669f439190fc099b001bbd2",
+        1643102385,
+        498797251,
+        "paired"
+      ],
+      "first": "9a7cd7dc90d9d195c762ddac878423216cde9537e6f01e72e591846f764782a6",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 27,
+      "key": [
+        1,
+        27,
+        "957bff2d8f541b8cba0c7c5365aa706023c2f9b09a0cd498029eaa4666328024",
+        1072709083,
+        2719972782,
+        "paired"
+      ],
+      "first": "4e644e30e6cfd2fa8ef1476f746f015ff53677bd796f7a0853966f033edeb770",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 28,
+      "key": [
+        1,
+        28,
+        "73c4de51f7a3d44d0d1ccdb2180f85923de83e1e730e34c56d73e94c53d14850",
+        299823282,
+        3696227378,
+        "paired"
+      ],
+      "first": "1cef11840026debf99024c432c96f3d904881a941f228504d9bf3fee116eb346",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 29,
+      "key": [
+        1,
+        29,
+        "f12a50bbad24f97fe53ff1f8f08405b68fb52fa59a366a7273011c74c43682a8",
+        1886093193,
+        2551401112,
+        "paired"
+      ],
+      "first": "e3e9eec065146452da406bb50071123ff116ee229a0e0aee467aec4b9c1fe99a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 25,
+      "key": [
+        2,
+        25,
+        "5d5b2450208eba54e1581541d9ffac4be1569c97a5384845afc00b526fa2672b",
+        3882861135,
+        3207143251,
+        "paired"
+      ],
+      "first": "8351294f15d24ebdd7f8973d4bf57c9aa385a02c11abed057cfa5bc5c38ae592",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 26,
+      "key": [
+        2,
+        26,
+        "be6662154a0d0e253ab8a4b6efdfe69cb35ce9c940b925a4de07ddf2c7c9cbf7",
+        2361238277,
+        3757510209,
+        "paired"
+      ],
+      "first": "d04e1d4b495f73818cf0771322990a5e2a94d62fbfde340f207873f6b4848d07",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 27,
+      "key": [
+        2,
+        27,
+        "854bdfcd51ad77834b2872be857a610c949dee635c402d31fb482ba8b0fcdabf",
+        1671142337,
+        2252168369,
+        "paired"
+      ],
+      "first": "a11ba4fad3e27cd5ba3fbfca3703a1bfcd74d7c23d339f2a70d1d6b678c7237a",
+      "A4": false,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 28,
+      "key": [
+        2,
+        28,
+        "d342a333056d9f2b9db652157baeaa6b9c00e3d4b45ff819a1d3ead89d4c2848",
+        880617661,
+        1068705458,
+        "paired"
+      ],
+      "first": "216ca6e5d57e0b90984acfa8293841e944400c37e57961a7b24c9512882c034c",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 29,
+      "key": [
+        2,
+        29,
+        "a5ab7d0571112cfb7d130ab437587f8a8e7dd26b4b9957b030b1b1a734719749",
+        944154381,
+        990356161,
+        "paired"
+      ],
+      "first": "0809d2f1dd8f2d0cade397c8dbd3f62ebba29c1dd6df58dcad0ec6e309ab625e",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 25,
+      "key": [
+        3,
+        25,
+        "b3cb958c8ea76d267a5d54ebe4b34c21d625f8ba184f90dc4fbe3c06aada8b2d",
+        548767539,
+        818075498,
+        "paired"
+      ],
+      "first": "194a633b3f9765b1853bd472f0bd4b4a6208a276ab007199b7db8965e8bb56cf",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 26,
+      "key": [
+        3,
+        26,
+        "3215e3983a35e04d336484f1af05ec753b0d3f58bb1c7c4a97530ed8f9773886",
+        1942500909,
+        2101975792,
+        "paired"
+      ],
+      "first": "eb912346020c29d22235dffabc700248b9829623817083da7295311c61b6e3e8",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 27,
+      "key": [
+        3,
+        27,
+        "eec7887f489991d9b015f2b8ef700a4646d6d1856f8c8d814f43a84f051f08a1",
+        434964616,
+        4169899133,
+        "paired"
+      ],
+      "first": "9b0dbd42243f61212186d19496804019fb4025f8ed237568d0b45ba35992d111",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 28,
+      "key": [
+        3,
+        28,
+        "7c8bd743586f0acef34692ff70f845451d73e1eed874752fcf874a2c54a0271c",
+        2510018774,
+        1108794834,
+        "paired"
+      ],
+      "first": "9e5c919ee78ac17e6c2a19f32bd96e9309a7cbfa540cb3a8bb54b3989dea8f5e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 29,
+      "key": [
+        3,
+        29,
+        "d1bdda12ba47e7f29beb1a6ba20b3804d2391e26dc962bc84c01bbdcf71f3a6b",
+        607142630,
+        2039204845,
+        "paired"
+      ],
+      "first": "fe5f556f22b99c20951482050915059222f2960aa31f537b27a2120f27011c21",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 25,
+      "key": [
+        4,
+        25,
+        "b5100aef09b3d87b2b93b58bfa06cbb5c61fda7364b64dd7efc9d70e3bfbba81",
+        2835017735,
+        1189434570,
+        "paired"
+      ],
+      "first": "4ed9c7cdc95b4c81f0efe26db3e0486b4f786c86667f066ae1ddba712c058677",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 26,
+      "key": [
+        4,
+        26,
+        "9fab525b2ee6351067ed27aaed745583c3c6b0cfacd1a5f8bb6dd21194a2a722",
+        1108721756,
+        3181375758,
+        "paired"
+      ],
+      "first": "0a628dd750b2ee846c077569b00e1e14a3854be68adc9e4eec57230ab804b54d",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 27,
+      "key": [
+        4,
+        27,
+        "1c0fa0d900d58a6a0efbe318c135ae37ab90eedcf2fa24287e9666303ea0c46c",
+        3718355417,
+        1932296949,
+        "paired"
+      ],
+      "first": "02c871f4226d7ccd7c4bce196b50e765192cd0a1596553ead629f36384e2618b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 28,
+      "key": [
+        4,
+        28,
+        "c5bba3de534c81d5f9a204f86e2c0a29b1be669c46019016301232383e65f0a1",
+        676190801,
+        3535398324,
+        "paired"
+      ],
+      "first": "7f7aed81e4c9b90ffd049fa3b3ca21a75ec041308369c5de75ab9ec503249518",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 29,
+      "key": [
+        4,
+        29,
+        "e1d2890e5b2b1750595cbdbb0b1f2ebefee3d95af09f8d76876e753868fbd943",
+        456164084,
+        684213494,
+        "paired"
+      ],
+      "first": "5f25cfca262e86c79261d5f6291dad18a62410a4a8bcc1ba541c4bcad4bff56d",
+      "A4": false,
+      "BF16": false,
+      "A0": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 25,
+      "key": [
+        5,
+        25,
+        "d8d91e52f2e9ca98ebb9fd1b3b7978404fb3bdfad0308e35a45cfa59808e184b",
+        1270662644,
+        226649746,
+        "paired"
+      ],
+      "first": "5c54fd511727d2151accb949a9ea0e964a75ff677f0ae5cdb84e6d7b7e17a1b6",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 26,
+      "key": [
+        5,
+        26,
+        "641c9a051b6e04f34c64fbdfa8f3a9f26f1a88d2f0bd175c75f9e0065ae40258",
+        3251994820,
+        3415934877,
+        "paired"
+      ],
+      "first": "acc0d56b0a78f0c5606ccf2ea0b69fdc4748a52148b56097ccca52c9ccc86994",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 27,
+      "key": [
+        5,
+        27,
+        "36966af29d69349d848a32aa0591e7740293629fed04712075b4169eadda314c",
+        3893506202,
+        284295501,
+        "paired"
+      ],
+      "first": "d9be54c333c766db6b6c2156a69d0e81f3c37c2521984058736a47fcca3c6c3e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 28,
+      "key": [
+        5,
+        28,
+        "128214cd1fbbedd86b42babf956c09b574fcd7954fcf00e0b0d3842cfe385d31",
+        3626487671,
+        4214488515,
+        "paired"
+      ],
+      "first": "0a34edbef390ec3404354b30fae3aa9c3a0d1b8983533e8e1fa122d11260c4c4",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 29,
+      "key": [
+        5,
+        29,
+        "07d76b98db72ec16f25ac6ae0bb5be5c828d8b744e208014233e5130dcf74133",
+        2489818287,
+        2037431572,
+        "paired"
+      ],
+      "first": "5cebc32da525bdf39084c458ad5fd353a8c05df54129bdc4d266bd7da3dd3f55",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 25,
+      "key": [
+        6,
+        25,
+        "e122617d9fa3be784e0ca60cb2e0a6d375b6a5ea54b59c7535b8d8570c5c97e4",
+        1781539500,
+        4189468127,
+        "paired"
+      ],
+      "first": "133afabda39068314adb3aecf00cea6f4e8b1c2b74062daa1d616c0376e984d5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 26,
+      "key": [
+        6,
+        26,
+        "5dcdcf0d1d2ac2bfafb4f0f83366b5d3d358136a224843d8ec54d3d8d4c84945",
+        872202576,
+        1297923177,
+        "paired"
+      ],
+      "first": "6a8a88b44af1614c6493b620e41647b9a6b463eca83a8d8da7788f4131b8f03b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 27,
+      "key": [
+        6,
+        27,
+        "c43a42745192e830675e6248a2e5153319513279add1be7f67a605059e505794",
+        687435697,
+        739939217,
+        "paired"
+      ],
+      "first": "8253899efe1e8b745fbb79c5c072f716768f1f91116c9325b831fe9489cf1e4d",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 28,
+      "key": [
+        6,
+        28,
+        "cb9b814a7a6b13be388f54eddef7bf1ad500f6f3c7f40a3340fafe1189865d32",
+        1121974501,
+        3176932502,
+        "paired"
+      ],
+      "first": "fd1be98b77b867223721bde0a5a27c4e920f74c79dd34be7f5069091e5f943db",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 29,
+      "key": [
+        6,
+        29,
+        "11724f9c314c93c6eda96cfa722793277ecc7da9251f709a052035e672d26130",
+        3125615835,
+        1752240316,
+        "paired"
+      ],
+      "first": "38e1e8e9c0ad679b9f7c1637d48c5eede8f1abcfa2c540c554490435ef13d77e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 25,
+      "key": [
+        7,
+        25,
+        "2b579b50672d9baf9acae29e1feddfd03c89f2cb03bfe5d84a8bb0014f423fa1",
+        3235727639,
+        2414791188,
+        "paired"
+      ],
+      "first": "55c4a7f15f00e5cda0c7d99c5e1b5837780615654accd1c3d32934c9c81a20a5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 26,
+      "key": [
+        7,
+        26,
+        "82f71abf47a98c811d74a2f6ff617160ba85662961fdec814deb3ef3669a8978",
+        788534121,
+        3579546510,
+        "paired"
+      ],
+      "first": "823c5b528b6b78d7001b1c1f498eb9036922ae871afdacf7b6b4347533883d0b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 27,
+      "key": [
+        7,
+        27,
+        "ee2fa18b5fe2e029b1fa00443b40969b849c6332d740ea4db06dfb3d015f0c54",
+        3006986151,
+        2959701623,
+        "paired"
+      ],
+      "first": "a8899fc9705f899f1e1b5841241767f8f06a01c4b4ebffb18c4c1ae1f7b04485",
+      "A4": false,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 28,
+      "key": [
+        7,
+        28,
+        "66f8759612ad75f50c11bf7d7f60f9b9b36959665aa1ca761c678a755bd3b8bc",
+        2430446882,
+        3679169043,
+        "paired"
+      ],
+      "first": "016bd633678d8b2ba3ce71c5149741a2aab1b9626521b3a70cfb881c63c44264",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 29,
+      "key": [
+        7,
+        29,
+        "5737e0e0049de05b3e65796bd74c4a12d3778341f4186ba5bd307675e61d0ad2",
+        2635473650,
+        2230086718,
+        "paired"
+      ],
+      "first": "b2c32d34bf6462524708c5622979c2309d9f3a149ab2572affd3285df7e7eb00",
+      "A4": false,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 25,
+      "key": [
+        8,
+        25,
+        "fe096098d6a030e74debaf2a903dfe806764de660d92272e2bd348ee80abc88c",
+        1151739154,
+        4048776773,
+        "paired"
+      ],
+      "first": "dd8d27ce51fce204bae31ae191bc97dd15e92687634350b40aa5c79a9595b4e3",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 26,
+      "key": [
+        8,
+        26,
+        "141a55577c8e4d8997fafc634b9ed086c60729a2de6ec8099b1788c58f391e9b",
+        1154748782,
+        3892409617,
+        "paired"
+      ],
+      "first": "dc370f119194bb53f54a67d7cc1691064c119d3b21fd2c1a3816b371626e6bb7",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 27,
+      "key": [
+        8,
+        27,
+        "5cdd063f39f2b0a3641ac13fe7b9181345357a38fede67d9bf84cd452d2ac4d9",
+        4168121747,
+        2498498988,
+        "paired"
+      ],
+      "first": "5b3f1f44e9e0683c179d3dd74a2b5e9fb5dee6e002bd6b0c152cd49969d6783e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 28,
+      "key": [
+        8,
+        28,
+        "b195c46e607629663606165e5878fa2945831f991267c2c2bfd67ca02490e3bc",
+        1968551446,
+        339821326,
+        "paired"
+      ],
+      "first": "686e889115ce32b6ea42df4e19a85180404ad55f510082243a0c92fe7ed84851",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 29,
+      "key": [
+        8,
+        29,
+        "05b63859ca7284a002ebbd606266d68c1108336c531b270007f3f6f863e93c0c",
+        3902565372,
+        1457373977,
+        "paired"
+      ],
+      "first": "8a08a2519125066c1da3c75353125b612caa6f3059b8c7b13110568103393ffd",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 25,
+      "key": [
+        9,
+        25,
+        "5812abe2c5d424cde29a54cf19f1e651a7213816428783d6a037aebe84da0eaf",
+        2956805860,
+        2798581617,
+        "paired"
+      ],
+      "first": "4bc8e5bb62e811a41c205ddd235b0578352fcdaeb3e0b9b5388ae77b79f8eb03",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 26,
+      "key": [
+        9,
+        26,
+        "0fb1686974bd5aed359c6cd0ac65066c384881431f9d156b1bb63fd80d4f8551",
+        540113780,
+        1230389013,
+        "paired"
+      ],
+      "first": "f4502dbe5574151d60776911a6fe6485a7c4d7463221a318f3c93990ea864aca",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 27,
+      "key": [
+        9,
+        27,
+        "c357e9dbdc7c0f9debda428f808cb4c0a4d587eabc5afb3f49d5cb7e0b60d044",
+        602394856,
+        2161745626,
+        "paired"
+      ],
+      "first": "e00810e16da6c6684600905e04e0aa5d1cf5817908d69a6295bf14409afcdd0b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 28,
+      "key": [
+        9,
+        28,
+        "74ed16befad96e7807b7467c9d4b327c35b72a70e7ceeff2e83a7f1096b0ff09",
+        792477805,
+        393126214,
+        "paired"
+      ],
+      "first": "e7040f0e8355baa3011685c6af9c937637f16145f5c996c72ddb53c9c414c82b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 29,
+      "key": [
+        9,
+        29,
+        "aedb0a9ed60362ed678799a1d541ff0656fa2d643deab83750810344d0039aaf",
+        736335080,
+        1568937167,
+        "paired"
+      ],
+      "first": "e66b166f1b01cd9e18f9d0e396c780cac2f19c31156bf477655a259c9db84380",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 30,
+      "key": [
+        0,
+        30,
+        "60373ae3ea0f921f6e0e7ad9b70c93086584c0e40e2c729d198ac04e6f4741d1",
+        1704061182,
+        1819856238,
+        "paired"
+      ],
+      "first": "9348d5f1157ccc7931ae04b19130278dd86cc748642411b88c916b658c1aad16",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 31,
+      "key": [
+        0,
+        31,
+        "dca9d9879195a74cffd26499d9ff1d6f566adaf1dbc1b9abe412d55d8e9c1782",
+        1021014574,
+        3588750296,
+        "paired"
+      ],
+      "first": "0de2484e1ca3b0110fba548cd05192fbaa10d493b72b90c098dc5c96ab570f69",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 32,
+      "key": [
+        0,
+        32,
+        "a13fabf87ee32c1993174729953b7a47b46aadc29474f109224017888d72fa80",
+        334860831,
+        2143513019,
+        "paired"
+      ],
+      "first": "2b96e9682c7bc0a2a2d30609307909d4716d6b61f55088fc99c3ced70e13b8f9",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 33,
+      "key": [
+        0,
+        33,
+        "7462d09856ec150e6403873bd1497a818d36d6d9175cf9c41697d986fd971fdf",
+        2309788545,
+        3763690868,
+        "paired"
+      ],
+      "first": "f5a015b6351ce131e2f44b44ee960824228792616af9fa6a3832e0cb757066f8",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 34,
+      "key": [
+        0,
+        34,
+        "0fab22e4ac5a4f8f3e5380a56d03d7f2d26c9ed14d4ddd15c3c401ac2756f22b",
+        3141599712,
+        3861600599,
+        "paired"
+      ],
+      "first": "e89820cc41fc1ebd84b57adac35b7d2307cbde2957770dc2fe008d2b51080036",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 35,
+      "key": [
+        0,
+        35,
+        "da423a72804324ba67dd5ae2aa9cb7e5142796aba92c25c0276ecac12d40f41d",
+        1887695884,
+        3388046208,
+        "paired"
+      ],
+      "first": "07c0666499e62a2d896de85b52c4e7ba312a18e32a0940df9834ed15596a419f",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 36,
+      "key": [
+        0,
+        36,
+        "fe0d28c5f781190e1a52e36fa525ac2eeac39b7ccb9b5baf618c9215bc3e68ed",
+        699339392,
+        3906460454,
+        "paired"
+      ],
+      "first": "b5b6f7ca51debb2dc82d4402a768e04e196054608ab718791699c1e28b0f374e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 37,
+      "key": [
+        0,
+        37,
+        "8592d46aef5af2e7a2b3b3eefa2116104f427465cf06e6408a4f0b61392ea283",
+        1832160563,
+        3989587465,
+        "paired"
+      ],
+      "first": "1a5501d0ae8542925fd778fbb20c5c725fbbc1ad976e547eead5f31eb9ad4e09",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 38,
+      "key": [
+        0,
+        38,
+        "b9b135d04e69e25d777b4b97c5adc768214d09d4c7752f86468896170603f859",
+        472144893,
+        1388213477,
+        "paired"
+      ],
+      "first": "cf66c07e6d001bb6ed865dfb9b4a56c5e5c54f6e803bae5f0be5ad8c00af0087",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 39,
+      "key": [
+        0,
+        39,
+        "efff0c45548163d49a2f35590a4a24d26115f4dd8a76ba412dc8e60ba738ce7a",
+        1668304155,
+        1547667213,
+        "paired"
+      ],
+      "first": "00ab5395319bba07a90a9150df7b19a3c0833c8ed910a19c93fb09f4cd3e743e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 30,
+      "key": [
+        1,
+        30,
+        "3036089344aa3de23f7a3661c4881337ed5e278d98c5379b950d9cb00c3ed13e",
+        1760121872,
+        2148046501,
+        "paired"
+      ],
+      "first": "39e3cc3f8f9721828d0f328be3da24de1c2452c643eea611e5b31d5f7f497fa6",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 31,
+      "key": [
+        1,
+        31,
+        "8a60a693678e7959209f6070471a12fe613bb54f61355402f19eecd32db53e29",
+        3952557376,
+        2121512973,
+        "paired"
+      ],
+      "first": "9afab451e0fd669d553fa44626930224922e0b50e6b3e79b5dc64e8d2ab3d9b8",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 32,
+      "key": [
+        1,
+        32,
+        "c86ee635d79d02e4d33c5aa8939999f827d85099b2851d1178bd9f23e231528b",
+        3421200923,
+        4007555682,
+        "paired"
+      ],
+      "first": "0394fa0c7bffa860ea62d65f6ea349d07dfc5866a961174aa9b6c0f711dd8c4c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 33,
+      "key": [
+        1,
+        33,
+        "dc62576220d23cd72d86cbaf994459d768774c160c3c7605a7c7822de55e70e6",
+        1415148373,
+        2446284193,
+        "paired"
+      ],
+      "first": "7b198da4a809c8d1681223cf66d58274d88da4c9f988072667f3dd03176ac224",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 34,
+      "key": [
+        1,
+        34,
+        "63821e171711e8b17ce30496fe2d02a5b1e39cbbc1abea294e7558df9e3db1e7",
+        332941353,
+        2563757835,
+        "paired"
+      ],
+      "first": "2487f261183c8170bf7723f878068f034a3e14ac33f0c68fb719fbfd3599e80c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 35,
+      "key": [
+        1,
+        35,
+        "70c13ed9b72e4a50a457aa546114435b5a37cf32ed8343de02d45226f5553387",
+        357352586,
+        3208143311,
+        "paired"
+      ],
+      "first": "629166c1104573869594cda1ac8a3354acd84c782cec34e255b8a9ce1f2754b9",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 36,
+      "key": [
+        1,
+        36,
+        "2d46859e597481982403d4c61db844c29c05f16c25cb9d79197100b37fb90831",
+        2615023155,
+        76383673,
+        "paired"
+      ],
+      "first": "1012ed842832dd3922956a0dd740272ffc21d0cc42ed317babf5a951b5bf3133",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 37,
+      "key": [
+        1,
+        37,
+        "f968e145d8a87892b639b752d6d8483e6b81e0fe7e110ef823a2432bd8c56554",
+        4182808778,
+        620524098,
+        "paired"
+      ],
+      "first": "c2400c3fa62e3eba6d0b7d518e9853e630460a0f30b6e3d7b615055e7d407fbd",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 38,
+      "key": [
+        1,
+        38,
+        "6c1c5cde9ed5f8c2af0fa723c42b0ea72196d0a9e0bdac692d95f4f1cca814ca",
+        339982302,
+        240695310,
+        "paired"
+      ],
+      "first": "08b15196777ad82d68218a97e891b0422f444a7a934d87cb71be20a54c49f4ad",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 39,
+      "key": [
+        1,
+        39,
+        "0a95a68f036442d14f81a27c286dce0f5a9345a1977f2ad5d225cb1184d26411",
+        3496960199,
+        3100577966,
+        "paired"
+      ],
+      "first": "ae5301cbc11d7d48c0009ba4725798a5cbe6d71183c9190ed310ee32dbbb3b7a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 30,
+      "key": [
+        2,
+        30,
+        "54acfd0b97b5ce95e16fdd601862cf604f66ad922e4e1f3fccdc79c05bda087d",
+        1853267600,
+        1823811941,
+        "paired"
+      ],
+      "first": "06e6f54a707ecac81ce6d375e421afbd77111986673e4ccaa9b5e138cf52ddee",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 31,
+      "key": [
+        2,
+        31,
+        "c976c7363518d54a34633001b7207956139afa1061ff6a217ab65eb24fecfb0c",
+        3705997185,
+        1357376687,
+        "paired"
+      ],
+      "first": "15ff46cf84dbef0258edf215e8eb4809b24ed900ca3aac6d40a3fac4fe884ecb",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 32,
+      "key": [
+        2,
+        32,
+        "b7ea348f4b1c978f8476504e79de2a2c661b881a8961aa4ef59500598eae84bf",
+        6683515,
+        1626843166,
+        "paired"
+      ],
+      "first": "76f960b9849b9554374e2c1e818727124be985144f13f262526072c83913af58",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 33,
+      "key": [
+        2,
+        33,
+        "6be1ae79dc28427bcaf62fef6d406f341661284652d3c60117ed1ad86e339e70",
+        475711922,
+        1171475189,
+        "paired"
+      ],
+      "first": "d20e9e6a8286fa988421d6f262541b9f766b7f65d91ec010f22477a37a6ebc4e",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 34,
+      "key": [
+        2,
+        34,
+        "886ed201e403ef7ece6e8b3461672186ddc2bbe2576905f887a13718421796fd",
+        1593413956,
+        2428114754,
+        "paired"
+      ],
+      "first": "0c69595fa1a71a8304b62e307ecba4f3db2bae0742601f538834cd8b1df50595",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 35,
+      "key": [
+        2,
+        35,
+        "2ada1866e53646f8f275b5a1559704d46a2044c63cbd6632d2649341a94ec593",
+        1531032561,
+        3078748672,
+        "paired"
+      ],
+      "first": "bd1ae30ae9bc72595e56d1d3ba1903852026bbb653b589e6d9ed61898b890a24",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 36,
+      "key": [
+        2,
+        36,
+        "2f82f1f21c3698a59e4e57101c16da738dc169941e3b9026f0795cb1f1de1a90",
+        3765665825,
+        1178715452,
+        "paired"
+      ],
+      "first": "85df6396f9c67c3aa0f748bca9f11e35b26c285f79cc27d0e5eecf92586bf065",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 37,
+      "key": [
+        2,
+        37,
+        "72800350719936fe650c42cd38f5415a156b2bedc4903660bf0912d850434a61",
+        1343564814,
+        2546164076,
+        "paired"
+      ],
+      "first": "5c95c33c9e85addecf12e8387a2452f68b819777b16abb6d5878a1b378898efd",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 38,
+      "key": [
+        2,
+        38,
+        "7954755ba559e17078dbc53baa9ed07f4dda0dd3e75d7278f831ba8f2c6b8ac2",
+        2637870722,
+        4037299804,
+        "paired"
+      ],
+      "first": "e6bf1edcf68086a074423dbbfac4d273f534707ecb096bdb7f58f80592bf9665",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 39,
+      "key": [
+        2,
+        39,
+        "43da41f66bda661223e66438d0d71d0f450c5058d1f206a7c98f4ad1f0da2b15",
+        3447686344,
+        3461130254,
+        "paired"
+      ],
+      "first": "079c02b643df766ccb42f63909b49297450f5b861f8a06b997e0a727347c2198",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 30,
+      "key": [
+        3,
+        30,
+        "c8f6ac536a9738937dd62b03558c47ab581e0153936b9c98452a519f21195672",
+        2264494523,
+        2754778619,
+        "paired"
+      ],
+      "first": "08091487f3bbf99f797a54139f4e8ca71d683f81296ecf360f0ef6b07383ce28",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 31,
+      "key": [
+        3,
+        31,
+        "fa32f8fd267af8197d89c23adab4d9512c5c40f170e3451c47cf1d5c51a52816",
+        4223340453,
+        1712531958,
+        "paired"
+      ],
+      "first": "8fc7a6fa345ca4b46f87bee456ea57061ae3f34db98547d2e53b21de2347b847",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 32,
+      "key": [
+        3,
+        32,
+        "f23ec4da8824dd14187ec6b468d57b8dd8c645f5ca693562a5154b9597eef22a",
+        1724478385,
+        3606164437,
+        "paired"
+      ],
+      "first": "db4a59d059d17b5eb005e989723811da87c969ee3a9b053bfcf9f9de43b7ad2d",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 33,
+      "key": [
+        3,
+        33,
+        "429e55bad968feaff73d88329f524a35ade9d7e203b4168016963b8e591a55fa",
+        637709827,
+        338580859,
+        "paired"
+      ],
+      "first": "dd7891b6fce0cebdd341c5f210dc8f9a4c91a7f7ba4045d47b15996a0d84adb9",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 34,
+      "key": [
+        3,
+        34,
+        "bbf8d1e321fc5519c9ea447a4a08bdfb52a87d882ade0807ccf9d86f492215eb",
+        1436709417,
+        57059378,
+        "paired"
+      ],
+      "first": "f92093fa5890bbeaedac74c43aea932720520afd14db7f8d0443862251661a40",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 35,
+      "key": [
+        3,
+        35,
+        "f55c5e51f01ca6bf7559c299c7e3fb27d3cf29cf399cae771e087cfcaec9ba46",
+        883722567,
+        3733495461,
+        "paired"
+      ],
+      "first": "820eae7a1beb15dde0076c7828afa412d7fb366cd25cbe1f4ef4c573a7081ef4",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 36,
+      "key": [
+        3,
+        36,
+        "dde1535e84d97fd635b176fe8062397324afe0a7990008eadf466459bce4f4a4",
+        1165874237,
+        3793126638,
+        "paired"
+      ],
+      "first": "be0676cc833984dff0ce3fb4dde53aa8909a3c6fb84ecaf4e923c6052c3907c0",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 37,
+      "key": [
+        3,
+        37,
+        "f8c0209fed2dc87f2c6546ec96e5197747ff61017256b7db4856b91c955665e9",
+        2671174706,
+        2428382250,
+        "paired"
+      ],
+      "first": "56e89a16cf4378c3da18a020808f0cf5b6b5bf6fa153c510a3482850f5876027",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 38,
+      "key": [
+        3,
+        38,
+        "517a0f9e30018b2db8e22f646bd57c793cad27c16014e99d5e607d80936b8cc7",
+        1738874278,
+        1273295247,
+        "paired"
+      ],
+      "first": "aa63f2e28aa84be538d8e753611340bac6125ac9d2f4ca9a3e087408e476683b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 39,
+      "key": [
+        3,
+        39,
+        "ff6b0a3ad81c4e46e134af6492095ec05f0570215218f195768ca2640aed1f01",
+        3883551267,
+        3459646538,
+        "paired"
+      ],
+      "first": "13fb2f6ff83b395ed4f2fc0bde67be5c0f04a394bcf97b0e3db5bd3913cfc917",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 30,
+      "key": [
+        4,
+        30,
+        "ee926cef9c7408f1360d1fc83dee60af20751b6bb6ed12a1870819c0ced8552c",
+        3695933145,
+        264611168,
+        "paired"
+      ],
+      "first": "605fb2bc3661b015a5b3fa76403d9561373a3b29d2b3d27cee1a334d445a6124",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 31,
+      "key": [
+        4,
+        31,
+        "caf7ad508329331a10ccfc61fdcee5d9be438c13e250c25763736a544d7c109a",
+        1159693969,
+        1267726617,
+        "paired"
+      ],
+      "first": "8997b67984c3fef78cce302e121ae35e4d4d27f3fae743f72da3895a507ce407",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 32,
+      "key": [
+        4,
+        32,
+        "bae4595249c3121a21a7ac5ead939c4152d5bf453cf68308fc55dbfdaad17b2b",
+        472082707,
+        143794931,
+        "paired"
+      ],
+      "first": "d6c14e2faa5027671c2b9df4e04e13ed0a1207f8f88868e5e5ebdbf4f980ecf9",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 33,
+      "key": [
+        4,
+        33,
+        "e9ebf57f6d40206ef42640e22e18982888c07b9d89aca2bfac172fea0dda89bb",
+        340799971,
+        2551998591,
+        "paired"
+      ],
+      "first": "0de0bfd88200124b191d4285e16a868c05c485544716df657cc7afa0c93a9e27",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 34,
+      "key": [
+        4,
+        34,
+        "4900682211a5db89178d5c6d5fe17a2f8387ecc13a31b4683b74fd7829dc8772",
+        3547738889,
+        4018642711,
+        "paired"
+      ],
+      "first": "9639da515bb7839df165f28ca87920ed94cff0e5c9b31de0e48f3a87d83cf824",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 35,
+      "key": [
+        4,
+        35,
+        "a7238facfdff29124305c5be4b2979e0dd56fb53aa7d2a703904a5b2fee9601d",
+        2892600073,
+        1692798383,
+        "paired"
+      ],
+      "first": "c56bfd9af3672293501d4c672c3dee3e0c7b11dfa353ae8a6dc1228afecc1432",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 36,
+      "key": [
+        4,
+        36,
+        "f24cc47b571058e41d5962625453cb0033aa041c9597a7355d27771f4bbb85a6",
+        4001677300,
+        1469026486,
+        "paired"
+      ],
+      "first": "fbc005750c77c72a94246f0f6b0fd6e32f3e6f7061bfafb4d7ebe5abc7ee0997",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 37,
+      "key": [
+        4,
+        37,
+        "83b3459613e796fdcdce97a98cc904636b70e983c367b8f6e9d99880167b6003",
+        1229615641,
+        3810316480,
+        "paired"
+      ],
+      "first": "0a5e8c4ff83a872022942072a8c11d2098ee2a1aa297eb93c56b0c27109cef74",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 38,
+      "key": [
+        4,
+        38,
+        "5b87f8233f2a90f7df82a59b76388edd8178a139b13e282b695b24e7b1998948",
+        1348610825,
+        3798477086,
+        "paired"
+      ],
+      "first": "f1f2939fe67b52a2eaa967aec655ebc6461b70867f1b0142d71b64df9e141082",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 39,
+      "key": [
+        4,
+        39,
+        "20be1f17ff694fcfdb8308ffd11410850a57da98cd59df52ed1f499a94e52d56",
+        3502896121,
+        2531137840,
+        "paired"
+      ],
+      "first": "14b85a758d2563dcaf251b49779d708d87117b494ada32970d2dbcfe9026e271",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 30,
+      "key": [
+        5,
+        30,
+        "64154536615a439824870c8cf64e89398b68ef06f23a5fd4a530e65cb8cfb0b0",
+        2617213384,
+        1280506367,
+        "paired"
+      ],
+      "first": "25195095dcd92eeaf55f399099a694ced13885a54824a01995bdce466a563dfd",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 31,
+      "key": [
+        5,
+        31,
+        "b35f68c7d99cca813baf26e7221b52e2797fec4bcbcedfcf6ac8951171ccf6f2",
+        3412222903,
+        4222566003,
+        "paired"
+      ],
+      "first": "3825747ddb6579c444d0c3c8097b1f775fd5a4e6551c4f38fc49a4f428eec228",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 32,
+      "key": [
+        5,
+        32,
+        "ccc7916734b145dde26e79cf75c17eacad1a5dcb831623fac7c9c95100413aba",
+        601120488,
+        2515965542,
+        "paired"
+      ],
+      "first": "1ec77168a78f1d51eb54cf3e8dae5d3e5a8235a417424ea6eb530fe07349a8be",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 33,
+      "key": [
+        5,
+        33,
+        "88307025691a0e638e62ea5ddab825e8cab81602cfb015f7c2a0dec2e5357899",
+        39932061,
+        2437665168,
+        "paired"
+      ],
+      "first": "800f8eb91de409eb3c9c5d9bb4a5d0ae8d8a45328d491bd8f84b0694a726d6c3",
+      "A4": false,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 34,
+      "key": [
+        5,
+        34,
+        "376b74124fdf64c56fe887e1da504a380f66cf19a34a53d8d88d3c3a96a0adc9",
+        2814439936,
+        2527150742,
+        "paired"
+      ],
+      "first": "a3d710fb4cb40fa66a086b6117cd3a32541198e8e504c2a780f645705eb48a4c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 35,
+      "key": [
+        5,
+        35,
+        "f70104a9c4cc3671c4d82c9d580aaae2523f99eccd4d2c5a16862d554e5c2dc9",
+        166678541,
+        3006664297,
+        "paired"
+      ],
+      "first": "5ac96f8abdcd2c01124d30a21c7875b5c6ef7498a1eef6967656d15b580dc0fe",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 36,
+      "key": [
+        5,
+        36,
+        "6751c83b8ee7c3018d678f8e9f0aa264fc34139441b7a5510d6704e48552e9f5",
+        92302990,
+        2621645383,
+        "paired"
+      ],
+      "first": "49bbccb66e4b67455225b4f576fe1c4834634e1811de563bc6eed36bedc22242",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 37,
+      "key": [
+        5,
+        37,
+        "a14d4912b8b4fa61d5e73b2e2283556e335f03e7cbb03cad3b54625fc931e37a",
+        3761325124,
+        927237764,
+        "paired"
+      ],
+      "first": "c04047a881c321cc8d53427ea5be78fc7aa631256403824dcd790f3eef568034",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 38,
+      "key": [
+        5,
+        38,
+        "31c8df345a5636602d00e3f3b2c307ea7be2b8ef9eccea68336b7563495651fb",
+        4280611069,
+        417368793,
+        "paired"
+      ],
+      "first": "6927c92706b12850d2ceddeb1205b46b120f07a423f700e00b4372b963d0987b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 39,
+      "key": [
+        5,
+        39,
+        "887a4032d21b66f49f5b80ec84abfaf391ea123f1148bb1cbf585661ac122e78",
+        2187237303,
+        3219253959,
+        "paired"
+      ],
+      "first": "8013cce618eecb47f206d9f4893cb00e80de33b0ce00e4157e052b3e79596ae8",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 30,
+      "key": [
+        6,
+        30,
+        "c47e7ade03860cb5bf009d563ff70af43d1415fbd3d34b05f770f719b2dc3c9b",
+        3565857744,
+        555303445,
+        "paired"
+      ],
+      "first": "2c401ce0d61db5ae83ccb2a7dcfc68e7d2cfb9252654e3c5db95df11b15d8d77",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 31,
+      "key": [
+        6,
+        31,
+        "6ad396a15dda3ae18c29134e0f4dea11f92a2176292d9826050a957d0028dd74",
+        3821583410,
+        2037932255,
+        "paired"
+      ],
+      "first": "d568b461ec3946254077784e22d38323dd088ff463bbc3ccf7697c2eb144abf5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 32,
+      "key": [
+        6,
+        32,
+        "c6bbb7ce6061546e8a21ed6abaced470e118caddbff73f431f2e8992992b8128",
+        4111929547,
+        1074734847,
+        "paired"
+      ],
+      "first": "6d9cc77728b29c08f1b395aae312b7b67e9eddddfa496cf2732eea67b0dd5aa4",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 33,
+      "key": [
+        6,
+        33,
+        "5677164d19f6dff7f4bec822888d089225c674da7991296d639f3013ed7cd295",
+        4223897330,
+        1096322309,
+        "paired"
+      ],
+      "first": "772b4aa9b7ca2cecd545ced70e5da89f993b08a04a7c2b8559310a7cb86c6fd5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 34,
+      "key": [
+        6,
+        34,
+        "d77fb589b075a79e4988ca368c4b31a1611d129ec282fc2bf03e50dc909a92c3",
+        394519080,
+        2182454536,
+        "paired"
+      ],
+      "first": "81b7bd1c522aec2315ce8a20a443dfe7525e354d7c789e963ff9242812762da7",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 35,
+      "key": [
+        6,
+        35,
+        "0d4bb4a3c1075a5d853390878fbb07885c89f2a06277de6bdbf80e83010400d6",
+        1761452176,
+        3358964321,
+        "paired"
+      ],
+      "first": "c478d9c0fea3d2d92e1164f9f348de6bba60959a61ec8f893053267882747257",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 36,
+      "key": [
+        6,
+        36,
+        "c9ac368b6f0df99a323ba4fa26c7791a4c5998413f01171c7725f436a6292897",
+        3212478124,
+        1263304411,
+        "paired"
+      ],
+      "first": "35d1ad684dd03f4e007c08de3a49759701644a07452b6951a6fb6ef8227a9d05",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 37,
+      "key": [
+        6,
+        37,
+        "3f39880e9a2c7a1fb5ab8c5df91675362754b7cdba01380c08b4a0c7020f4e67",
+        2880815649,
+        2917433197,
+        "paired"
+      ],
+      "first": "6fb33d476c6b38b5c9c5a64f5e155e9fce5612946bd9416d778fecf569f3be7f",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 38,
+      "key": [
+        6,
+        38,
+        "34b2cae54e001a871920420ba5fc17ee9a3752786aead9e1354e0d15e91f8720",
+        2010611578,
+        988418538,
+        "paired"
+      ],
+      "first": "a640e4273483da81f63c1b575050358197c3016d2fefc27784fafadd584a7e5f",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 39,
+      "key": [
+        6,
+        39,
+        "e04805de25e13d5031de0fb8dab7229412116df7ecfa8ac5b42fd5b6fa5aa7d2",
+        273879003,
+        2478594168,
+        "paired"
+      ],
+      "first": "627bf1bb58a5fdbc77c6deeb5b7d2766d98e05afe0d83bc5899fbe8abd0caf04",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 30,
+      "key": [
+        7,
+        30,
+        "cb1e0ed994fc5215b4deeb46c498597a5b0f09f2d4a8091bc8ddc616260e398b",
+        1093361803,
+        702203286,
+        "paired"
+      ],
+      "first": "c04bd0889105fa1f1a6bc748a702ced81c4a1035eb0db0173fa5099b4b37f983",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 31,
+      "key": [
+        7,
+        31,
+        "05312e1d2a8dd073d6660d60daee7be86b40a4bb5c3af0db76f95818420ab827",
+        1633846373,
+        1214176192,
+        "paired"
+      ],
+      "first": "49a60891bff4e798d3b82daab67f50c29b4ababd558b8815326e05f0d157b822",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 32,
+      "key": [
+        7,
+        32,
+        "282efe30f2a0cdc80c4b697aa6991155e489aced3c4e14a4e6dcc875fafba610",
+        639905013,
+        3342811240,
+        "paired"
+      ],
+      "first": "5b4fbe1d5dcd301719dc361b2742d9a4e0ccafc5d0ad2f336c5ac6f02dc7d36d",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 33,
+      "key": [
+        7,
+        33,
+        "925a077ab488c5c4b235e137d519bdaceef419970082094947d834d4c9031e02",
+        491980427,
+        3779348431,
+        "paired"
+      ],
+      "first": "d00670fe41ac238cf456929211401de3cb909a9e33cdde64fcfb37bae38b5ad5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 34,
+      "key": [
+        7,
+        34,
+        "c33b45a5c854cd93c78a0b0072fab82040f099649fa1a8560c7a062d12075556",
+        3988652052,
+        2543448603,
+        "paired"
+      ],
+      "first": "0a153763f1223fe1cac35436aec337fc330069b6dd602a2c35ba0c267793381d",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 35,
+      "key": [
+        7,
+        35,
+        "34aa218b2adf0d8a60e6ebca53ffb597b820c35a576587de2c428123d42e82a3",
+        2033116862,
+        1253233029,
+        "paired"
+      ],
+      "first": "274706da38637027b16a86315e74cc156c9978c30b6b91f69eaafb4af52259fc",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 36,
+      "key": [
+        7,
+        36,
+        "fa3ae3e218e050b022bf87a1fecaa1d5ac408ac8a8a4180a214e2fe827950270",
+        3541114412,
+        2136814328,
+        "paired"
+      ],
+      "first": "6a2e287a5fc39a549b6333051986a92b1fee3b4225d8c1f4a65a8d7c70ea1751",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 37,
+      "key": [
+        7,
+        37,
+        "30df6afe03bc0610bde2e7782f44c54d70f1df2791aa3bd0a50135121a455ea3",
+        3238148934,
+        3777427635,
+        "paired"
+      ],
+      "first": "578744fdfe8f08cb1b2b00765b0a64ecbc0bb38604599aaa8dafed72c1031b2a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 38,
+      "key": [
+        7,
+        38,
+        "a15fdabeda6cc7f3e7e821fa080c817cb7b8cf2c277076647c27833a80e4c160",
+        416730790,
+        2092767160,
+        "paired"
+      ],
+      "first": "dafb84d68d7ba360150ec87d7bcf3b56f14345cdeac8f12d01376291e55848c5",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 39,
+      "key": [
+        7,
+        39,
+        "bb4cfacf5861790ae5fc6adf4e5483edafa33d92881121b89a63aacaca15d96e",
+        1840599274,
+        1781799578,
+        "paired"
+      ],
+      "first": "2427128859b3079d7aad5c35cafe48d03d10320e262a64478f91638898db5fb8",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 30,
+      "key": [
+        8,
+        30,
+        "69f3c2ff71929c95b05c8a0b1c34f160ee4658e562d2efc70380f468cb4ee73e",
+        3702117748,
+        2661172173,
+        "paired"
+      ],
+      "first": "0114270985ef93b5474ecb27c3b91ca82791aa4bb9e98860fbfcbbc11f5c019b",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 31,
+      "key": [
+        8,
+        31,
+        "6c1626b5e168565c0f5d999e66e5fae66c8a2ded61c17031e6b49fa63f47c1c9",
+        3471112414,
+        1046144879,
+        "paired"
+      ],
+      "first": "b59630c8bdbe6c69a0abbc7b81dd5a95fcf538df6ee6816ba37fe07860b5fe6a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 32,
+      "key": [
+        8,
+        32,
+        "834df855735fd4eaa87c11c8f5899f9dfc795a74bcefc8f6c1bb1411a05fa8c9",
+        4231245879,
+        1812310846,
+        "paired"
+      ],
+      "first": "e307e1a73b7391ba2d90fbafef86c4e5df4cbfebf75516160e5e033223656647",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 33,
+      "key": [
+        8,
+        33,
+        "6a2b2180b68de784a078cef544e82ce974744d1b54867a918e8b06e5777d1829",
+        443628327,
+        1688937136,
+        "paired"
+      ],
+      "first": "dc08bffaa59e733ea02ded1563f8f12a36a54d24cbc31e00c7011b1804630445",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 34,
+      "key": [
+        8,
+        34,
+        "0c3e9ed985b376b83b939b8b84d73a9ca8de8090e325bc44204bb11cccb99ba3",
+        3670948260,
+        979892435,
+        "paired"
+      ],
+      "first": "44d1b891e11973957a33172b17c1b352e8a1988950802f24f8d748f646ad5c3d",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 35,
+      "key": [
+        8,
+        35,
+        "ce27ff3ffcffaa1d8c82a5e16bb8a331efc6ad494cdb2c55f716988a3786e2e6",
+        4099704818,
+        4107914936,
+        "paired"
+      ],
+      "first": "99b9653b103cf512aca4cb31e6288c48b5141a0108a597737ab35bf1fd199475",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 36,
+      "key": [
+        8,
+        36,
+        "e791e850b22a3795f8ec7df396c23db29e6bc087d320adfc114266dfb2eddd98",
+        1114636287,
+        3904961676,
+        "paired"
+      ],
+      "first": "2a6130fb3c7b7b1a8eb7b39d6faf510b87260be5b46718d9923c43640fd298e4",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 37,
+      "key": [
+        8,
+        37,
+        "4f179c57d4c901ff1f82c730357d8275d68dc9207f36e84339850ac259ec8cdb",
+        236358742,
+        1757586818,
+        "paired"
+      ],
+      "first": "a6a8f33fa80796c6d314baaac4662c26e1460173e11ee21de4559a996d3c5a15",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 38,
+      "key": [
+        8,
+        38,
+        "c4c6435abb9f0388e51f13ec26c8cf51b267cfd917d73892f2e6a8a80069103c",
+        686152307,
+        3888338479,
+        "paired"
+      ],
+      "first": "c0e8b0fa9f54ff22af281b26427b900b012b6f646c75aba69f271aa6714babca",
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 39,
+      "key": [
+        8,
+        39,
+        "5a3d2e588c3ffc469e190972bc56a59d6733f399d0a3e16a8166a7f0b0718f0a",
+        1316233514,
+        363159328,
+        "paired"
+      ],
+      "first": "8966e37236245c3800a7b78bbf64101c9106b5d64ca36dc7bd3a25564ce983d6",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 30,
+      "key": [
+        9,
+        30,
+        "b355b821bd2820810eaefbcd9be254a4673e6bd73904d716e05c635e4675614c",
+        1499515,
+        3958497019,
+        "paired"
+      ],
+      "first": "7a3bf19a89079049083bb1f30edde56048ff1de9913dc22ab2ae43743f9381f8",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 31,
+      "key": [
+        9,
+        31,
+        "64496d1b371573196c4ff47fe9511594f26be263c9bb9a1de435f3fcd67419c2",
+        3259742391,
+        3759713427,
+        "paired"
+      ],
+      "first": "e82ac5635046d11ea6fa05c03a1ac5cd36c18f9b94e6d9ed6e38df1a9e8ead8c",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 32,
+      "key": [
+        9,
+        32,
+        "b9c27568a6cda670f94c9baafe8edc96c57eb95a72fabd80919f6303e5bd9c37",
+        3132845240,
+        136419749,
+        "paired"
+      ],
+      "first": "c6dadfdc312def64b59b124bf908c4e20cbec0ac0bb168099cbb08f58a098e15",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 33,
+      "key": [
+        9,
+        33,
+        "f983471e8db60ffd0669f4f86089ee5cf4bf24287d471b6a9c7f05da81477d1f",
+        3638438778,
+        3121327144,
+        "paired"
+      ],
+      "first": "8b3581c32239f91760a5f3b072d0b341bef40baf30ec6f11e8b5f457b1125340",
+      "A4": false,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 34,
+      "key": [
+        9,
+        34,
+        "ece4fbd9a0f3d3b302617ca973866bf91f065b04eed243b655337230b84e6033",
+        2636714134,
+        1550284034,
+        "paired"
+      ],
+      "first": "cbdd7ad690179896c5bc8c2b9923ea94a272e8801b18a3ced76239dbeaa51158",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 35,
+      "key": [
+        9,
+        35,
+        "6ca029ce574ce3ebfb81bf3d6836ffc6b536a3763b0ee2eea9102efb14ae7d71",
+        492861102,
+        1179271778,
+        "paired"
+      ],
+      "first": "d192664691430187c7f6ffdfc366e1b0e1fee2e679534fc2bb9381faa49d9a81",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 36,
+      "key": [
+        9,
+        36,
+        "0a443b426f850862531c356933ea63d95fad70adf8318932beec5f25f35f47f9",
+        1644878170,
+        4089702134,
+        "paired"
+      ],
+      "first": "1a192f810a35b531f13640ae7f99a8f60f1a50201f00581b8d487603b1f1ce9a",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 37,
+      "key": [
+        9,
+        37,
+        "9e65b5cb6f1dc64c8848a2eb2140761be6a51f0ff4c7afc469e393da84f675ee",
+        2258589766,
+        1255449329,
+        "paired"
+      ],
+      "first": "f36f320484bba2edc614f871c0e054fb853195aacec808a9fed19631bf707f05",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 38,
+      "key": [
+        9,
+        38,
+        "61f09e621f6e633579ffb27eaab5d456e415515ad97e29878032e37239e2d7b1",
+        1877176897,
+        3621537563,
+        "paired"
+      ],
+      "first": "7a65f9c26b559cbbc431b9fb1d851851f12f089c46194a06ff105f69c89554da",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 39,
+      "key": [
+        9,
+        39,
+        "05ade0d8e73b0502f182fe38054ef3784c2b7f8be0e1eb46cc54509675202e5e",
+        699630832,
+        969432174,
+        "paired"
+      ],
+      "first": "1ef278c19dd838b25adf28186f721198d362d30f97c26eaa1da5f4f0d571cda4",
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "reference_invocations": {
+    "first50/A4": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "A4",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "2",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "20",
+        "--num_trials_per_task",
+        "5",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "all",
+        "--awq-candidate",
+        "w2-attention-no-clip-primary-g64",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A4",
+        "--awq-primary-group64-profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt"
+      ],
+      "lock_sha256": "92f9e34e30f563b529a51791cb412739716f569b6ddb4978dcdef0160dbfd103",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791452789.122947
+    },
+    "first50/BF16": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "BF16",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "4",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "20",
+        "--num_trials_per_task",
+        "5",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "none",
+        "--awq-candidate",
+        "profile",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/BF16"
+      ],
+      "lock_sha256": "92f9e34e30f563b529a51791cb412739716f569b6ddb4978dcdef0160dbfd103",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791455056.4243886
+    },
+    "first50/A0": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "A0",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "4",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "20",
+        "--num_trials_per_task",
+        "5",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "all",
+        "--awq-candidate",
+        "profile",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/eval-first50/A0"
+      ],
+      "lock_sha256": "92f9e34e30f563b529a51791cb412739716f569b6ddb4978dcdef0160dbfd103",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791455707.4126277
+    },
+    "next50/A4": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "A4",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "2",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "25",
+        "--num_trials_per_task",
+        "5",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "all",
+        "--awq-candidate",
+        "w2-attention-no-clip-primary-g64",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A4",
+        "--awq-primary-group64-profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt"
+      ],
+      "lock_sha256": "673616a4a8096c83aa7532aae6e25722182179af96d1029fd07ee8fb1f2bc763",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791461195.6451085
+    },
+    "next50/BF16": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "BF16",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "4",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "25",
+        "--num_trials_per_task",
+        "5",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "none",
+        "--awq-candidate",
+        "profile",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/BF16"
+      ],
+      "lock_sha256": "673616a4a8096c83aa7532aae6e25722182179af96d1029fd07ee8fb1f2bc763",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791462800.7987912
+    },
+    "next50/A0": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "A0",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "4",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "25",
+        "--num_trials_per_task",
+        "5",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "all",
+        "--awq-candidate",
+        "profile",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-25-29-v1/eval-first50/A0"
+      ],
+      "lock_sha256": "673616a4a8096c83aa7532aae6e25722182179af96d1029fd07ee8fb1f2bc763",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791463465.2332542
+    },
+    "last100/A4": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "A4",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "2",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "30",
+        "--num_trials_per_task",
+        "10",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "all",
+        "--awq-candidate",
+        "w2-attention-no-clip-primary-g64",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A4",
+        "--awq-primary-group64-profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt"
+      ],
+      "lock_sha256": "fe1474579f9a80879ba086c26f7a0cfb4925cb0087bccb9e1fd21c6d54bfa7f1",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791469610.8727083
+    },
+    "last100/BF16": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "BF16",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "4",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "30",
+        "--num_trials_per_task",
+        "10",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "none",
+        "--awq-candidate",
+        "profile",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/BF16"
+      ],
+      "lock_sha256": "fe1474579f9a80879ba086c26f7a0cfb4925cb0087bccb9e1fd21c6d54bfa7f1",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791472640.9876993
+    },
+    "last100/A0": {
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/worktrees/20261008-046-b2b3-proprio-v4/qvla/run_eval_official_quant.py",
+        "--model-id",
+        "A0",
+        "--method",
+        "awq",
+        "--weight-bits",
+        "4",
+        "--activation-bits",
+        "16",
+        "--pretrained_checkpoint",
+        "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial",
+        "--profile",
+        "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt",
+        "--official-root",
+        "/root/autodl-tmp/qvla-repro/src/official-quantization",
+        "--libero_root",
+        "/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "--task_suite_name",
+        "libero_spatial",
+        "--initial-state-offset",
+        "30",
+        "--num_trials_per_task",
+        "10",
+        "--seed",
+        "0",
+        "--env-seed",
+        "1",
+        "--seed-protocol",
+        "paired",
+        "--trace-actions",
+        "--trace-observations",
+        "--awq-scope",
+        "all",
+        "--awq-candidate",
+        "profile",
+        "--local_log_dir",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-boundary-30-39-v1/eval-first100/A0"
+      ],
+      "lock_sha256": "fe1474579f9a80879ba086c26f7a0cfb4925cb0087bccb9e1fd21c6d54bfa7f1",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1791473835.260283
+    }
+  },
+  "scope": "Same-task development; references are archived, not new concurrent runs",
+  "limits": "Checks training against archived A4 visited observations; future B3/B4 traces require their own overlap check"
+}
