@@ -1,3 +1,5 @@
+> **300回合覆盖：**用户已将下一轮正式新鲜配对评测改为B3/B4各300（reset20–49）。训练定义沿用本卡，评测/成本/对照口径以[新PRE-RUN CARD](../20261009-b4-300-preparation/PRE_RUN_CARD_B4_PAIR_300_CN.md)为准；本卡200回合与同期五配置安排为旧版本。
+
 > **2026-10-09后续修订：**本卡的训练定义保留，五配置重新评测安排由[数据范围/效率新协议](../../../../docs/DATA_SCOPE_AND_EFFICIENT_EVALUATION_20261009_CN.md)覆盖。实际训练/测试共享全部十任务，只作同任务开发证据。新正式GPU回合仅B3/B4各200；全内容数据范围审计尚待原始归档，未通过前不得启动GPU。旧CPU7项仍为历史准备证据，新修订CPU13项与源文件SHA见[新审计](../20261009-data-scope-audit/README_CN.md)。
 
 # PRE-RUN CARD：B4视觉＋语言联合Recovery-LoRA
