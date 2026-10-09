@@ -1,0 +1,34 @@
+{
+  "date_local": "2026-10-09",
+  "instance": "046",
+  "shutdown": {
+    "source": "user_reported_manual_shutdown",
+    "native_execution_receipt": false,
+    "platform_off_independently_verified": false
+  },
+  "heartbeat": "PAUSED",
+  "evaluation": {
+    "role": "reused_official_development_resets_20_39",
+    "rollouts_per_configuration": 200,
+    "protocol_gates": ["PASS_PROTOCOL_BOUNDARY_FIRST50", "PASS_PROTOCOL_BOUNDARY_FIRST100"],
+    "successes": {"A3": 164, "B1": 194, "B2": 190, "A4": 30, "B3": 192, "BF16": 194, "A0": 195},
+    "B2_minus_B1": {"rescue": 3, "break": 7},
+    "B3_minus_A4": {"rescue": 162, "break": 0}
+  },
+  "server_archive": {
+    "path": "/root/autodl-tmp/qvla-repro/backups/b2b3-046-final-20261009-0001",
+    "gate": "PASS_PERSISTENT_ARCHIVE",
+    "sha256_manifest_entries": 13,
+    "results_sha256_manifest_entries": 18494,
+    "independent_physical_copy_of_source": false
+  },
+  "local_archive": {
+    "state": "INCOMPLETE_DO_NOT_USE",
+    "observed_files": 1285,
+    "sha256_manifest_present": false,
+    "results_sha256_manifest_present": false,
+    "essential_tar_observed_bytes": 209715200
+  },
+  "github": {"repository": "zsure27/VLA-Quant", "pre_closure_remote_sha": "9e9ce6d4220053b68f4969e4bc0e238a46329b42"},
+  "next_required_action": "After user starts an instance with the same persistent disk, complete local transfer and verify both manifests before claiming dual backup."
+}
