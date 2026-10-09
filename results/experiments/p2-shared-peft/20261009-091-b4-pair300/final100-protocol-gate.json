@@ -1,0 +1,663 @@
+{
+  "gate": "PASS_PROTOCOL_B4_PAIR_V3_FINAL100",
+  "phase": "final100",
+  "classification": "same-task reused development reset40-49; no concurrent reference",
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 45,
+      "B3": false,
+      "B4": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 40,
+      "B3": false,
+      "B4": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 40,
+      "B3": false,
+      "B4": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 42,
+      "B3": false,
+      "B4": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 45,
+      "B3": false,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 43,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 42,
+      "B3": false,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 43,
+      "B3": false,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 43,
+      "B3": false,
+      "B4": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 40,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 41,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 42,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 43,
+      "B3": false,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 44,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 45,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 46,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 47,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 48,
+      "B3": true,
+      "B4": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 49,
+      "B3": true,
+      "B4": true
+    }
+  ],
+  "paired_episodes": 100,
+  "data_scope_sha256": "a1e233bf2f79b4fb922fc50a8d97941bc9b30bcf5bcef8a530efe1b3d647e2cb",
+  "cases": {
+    "B3": {
+      "successes": 91,
+      "episodes": 100,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_10-00_12_21.txt": "827c15b795cf4263d77880b80ffeaa55cb276d7c26fa2e2e5bd0a1c21db298f8",
+        "invocation.json": "0e50f28c122f9ff25033839c812cd896c5ef4ab2d94bc3c3508ed89a79bb4e2a",
+        "policy-queries.jsonl": "4f85874d930595d751ef1db8d329acb78fd0d90e5c0bebb260b53c7b2c347d7f",
+        "on-policy-events.jsonl": "e8e4654b4f36eaba5df6e9cd6755c0800bc07999a21aea7e4e0420dd56f9e0df",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B4": {
+      "successes": 95,
+      "episodes": 100,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_10-00_45_07.txt": "d8186306773bc918950840d1f1fdac859a30f74079fab2f4276d5812189c772c",
+        "invocation.json": "ab0a97f805f29244df945989e64dc3bf207849f721ad377d2414f1ea1dad7625",
+        "policy-queries.jsonl": "84b7810d4e3e680ac367edef5896b17f09e37f4e58637c8d9a83e97094055c89",
+        "on-policy-events.jsonl": "2a296ffb155d7b579d566a50f6ae7c259391234df5f1a09c3b02e15ef1664eee",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "primary": {
+    "episodes": 100,
+    "rescue": 4,
+    "break": 0,
+    "net": 4,
+    "delta_fraction": 0.04,
+    "exact_mcnemar_p": 0.125,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.0,
+      0.08
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1,
+      "6": 0,
+      "7": 2,
+      "8": 0,
+      "9": 1
+    },
+    "tasks_improved": 3,
+    "tasks_harmed": 0
+  },
+  "archival_references": null,
+  "continue_rule": "protocol only, never success direction"
+}
