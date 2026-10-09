@@ -89,8 +89,13 @@ def main() -> None:
                          text=True, capture_output=True, check=False)
     if gpu.returncode == 0 and gpu.stdout.strip():
         raise ValueError("GPU busy; recover current plan")
-    if gpu.returncode != 0 and "No devices were found" not in gpu.stderr:
-        raise ValueError("Cannot distinguish GPU absence from an unexpected GPU error")
+    if gpu.returncode != 0:
+        message = (gpu.stdout + gpu.stderr).lower()
+        if "no devices were found" not in message and "no devices found" not in message:
+            raise ValueError("Cannot distinguish GPU absence from an unexpected GPU error")
+        listing = subprocess.run(["nvidia-smi", "-L"], text=True, capture_output=True, check=False)
+        if listing.returncode != 0 or listing.stdout.strip().lower() != "no devices found.":
+            raise ValueError("GPU absence check is inconsistent; do not register")
     if shutil.disk_usage(a.session.parent).free < 12 * 1024**3:
         raise ValueError("Require 12 GiB free with archive reserve")
     a.session.mkdir(parents=True)
