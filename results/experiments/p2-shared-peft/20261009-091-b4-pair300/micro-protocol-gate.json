@@ -1,0 +1,241 @@
+{
+  "gate": "PASS_PROTOCOL_B4_PAIR_V3_MICRO",
+  "root": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261009-091-b4-pair300-python-v4",
+  "phase": "micro",
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": false,
+      "A4": false,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 20,
+      "B3": false,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 20,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "paired_episodes": 10,
+  "data_scope_sha256": "a1e233bf2f79b4fb922fc50a8d97941bc9b30bcf5bcef8a530efe1b3d647e2cb",
+  "cases": {
+    "B3": {
+      "successes": 9,
+      "episodes": 10,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_09-22_20_41.txt": "688837186c999d78567efd41bf0b8b7f2e8ed9a7b8caa5b15a7bb4b2be49b54d",
+        "invocation.json": "aa08361c3f351688ccce5fb96a82ccc7b51493481c5787a24747aa4b59a9ab5e",
+        "policy-queries.jsonl": "2bb52c5ab3d423e3a86dbe46185386526c23d79023ccdb8a78168b46d58d524d",
+        "on-policy-events.jsonl": "bfe78cfdace6e82094455909c0d08374ab609ef7243a9f15ce02a6a798708b23",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B4": {
+      "successes": 9,
+      "episodes": 10,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_09-22_24_27.txt": "1402aa009f49fe5a4269d9a9917122489a1b8616b15375f527e840112e70ca6a",
+        "invocation.json": "fb206b064b612a5e48a85d810cb301bb6b0eff591ffc222c26ee49b4903de862",
+        "policy-queries.jsonl": "80382d1e747a655e5b7203e8134b5308dda8ddf995591c41a818fadc008450bc",
+        "on-policy-events.jsonl": "ca1a3dbfdeae5614b89a80425a4106624626280ebc1ebea0696118ac199ec1e8",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "primary": {
+    "episodes": 10,
+    "rescue": 1,
+    "break": 1,
+    "net": 0,
+    "delta_fraction": 0.0,
+    "exact_mcnemar_p": 1.0,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.3,
+      0.3
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": -1,
+      "5": 1,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "tasks_improved": 1,
+    "tasks_harmed": 1
+  },
+  "archival_references": {
+    "A4": {
+      "episodes": 10,
+      "rescue": 6,
+      "break": 0,
+      "net": 6,
+      "delta_fraction": 0.6,
+      "exact_mcnemar_p": 0.03125,
+      "task_cluster_bootstrap_95ci_fraction": [
+        0.3,
+        0.9
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 1,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 0,
+        "9": 1
+      },
+      "tasks_improved": 6,
+      "tasks_harmed": 0
+    },
+    "BF16": {
+      "episodes": 10,
+      "rescue": 0,
+      "break": 1,
+      "net": -1,
+      "delta_fraction": -0.1,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.3,
+        0.0
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": -1,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 0,
+      "tasks_harmed": 1
+    },
+    "A0": {
+      "episodes": 10,
+      "rescue": 0,
+      "break": 0,
+      "net": 0,
+      "delta_fraction": 0.0,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        0.0,
+        0.0
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 0,
+      "tasks_harmed": 0
+    }
+  },
+  "classification": "within-task reused development; B3/B4 fresh, A4/BF16/A0 archival matched inputs",
+  "reference_limit": "No claim of a concurrent rerun or independent reproduction of reference trajectories",
+  "continue_rule": "protocol only, never success direction",
+  "cohort_limit": "Archived references cover reset20-39 only; never extend them to reset40-49"
+}

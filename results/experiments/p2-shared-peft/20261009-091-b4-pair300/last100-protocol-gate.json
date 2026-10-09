@@ -1,0 +1,1051 @@
+{
+  "gate": "PASS_PROTOCOL_B4_PAIR_V3_LAST100",
+  "root": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261009-091-b4-pair300-python-v4",
+  "phase": "last100",
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": false,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": false,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": false,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 36,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 30,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 31,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 32,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 33,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 34,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 35,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 36,
+      "B3": false,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 37,
+      "B3": true,
+      "B4": false,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 38,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 39,
+      "B3": true,
+      "B4": true,
+      "A4": false,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "paired_episodes": 100,
+  "data_scope_sha256": "a1e233bf2f79b4fb922fc50a8d97941bc9b30bcf5bcef8a530efe1b3d647e2cb",
+  "cases": {
+    "B3": {
+      "successes": 99,
+      "episodes": 100,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_09-23_27_00.txt": "888088bfe72c0bacb8a8191cfb924606b7c682dc0d04aa86dc7d006d998c33fb",
+        "invocation.json": "73c22933f5e2a4b64ec0abe012b763fee83bad32f9e274418fa58a0acfadabbd",
+        "policy-queries.jsonl": "374ca53f455c6ea02c65352138d2d259b099506aeef47faeca91c07a88b566e5",
+        "on-policy-events.jsonl": "c58b66f9b63404ef6326c0547a2daad819286b83fd93753957d044153c837aae",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "B4": {
+      "successes": 96,
+      "episodes": 100,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_09-23_48_25.txt": "6ef23af28be5cdf3cc21ea9c0c92b35f5db9d07dcd77f7a301ed4f464b38d551",
+        "invocation.json": "05f9a6c840eba3c6613bf199dd437bace853b582e7ede312595e44a1c24578cf",
+        "policy-queries.jsonl": "c9f4697a560e8eb51546e11d0f4931479e838074e0cdf3ca4613c6a3533704f3",
+        "on-policy-events.jsonl": "e8c13468e32ef2b806461c29ae2ab0167af4412270ced6e5ab6b1f0545617b7d",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "primary": {
+    "episodes": 100,
+    "rescue": 1,
+    "break": 4,
+    "net": -3,
+    "delta_fraction": -0.03,
+    "exact_mcnemar_p": 0.375,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.07,
+      0.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": -2,
+      "8": -1,
+      "9": 0
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 2
+  },
+  "archival_references": {
+    "A4": {
+      "episodes": 100,
+      "rescue": 83,
+      "break": 0,
+      "net": 83,
+      "delta_fraction": 0.83,
+      "exact_mcnemar_p": 2.0679515313825692e-25,
+      "task_cluster_bootstrap_95ci_fraction": [
+        0.69,
+        0.93
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 10,
+        "1": 10,
+        "2": 3,
+        "3": 8,
+        "4": 9,
+        "5": 10,
+        "6": 9,
+        "7": 8,
+        "8": 7,
+        "9": 9
+      },
+      "tasks_improved": 10,
+      "tasks_harmed": 0
+    },
+    "BF16": {
+      "episodes": 100,
+      "rescue": 1,
+      "break": 4,
+      "net": -3,
+      "delta_fraction": -0.03,
+      "exact_mcnemar_p": 0.375,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.08,
+        0.01
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": -2,
+        "8": -1,
+        "9": -1
+      },
+      "tasks_improved": 1,
+      "tasks_harmed": 3
+    },
+    "A0": {
+      "episodes": 100,
+      "rescue": 1,
+      "break": 4,
+      "net": -3,
+      "delta_fraction": -0.03,
+      "exact_mcnemar_p": 0.375,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.07,
+        0.0
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": -2,
+        "8": -1,
+        "9": 0
+      },
+      "tasks_improved": 0,
+      "tasks_harmed": 2
+    }
+  },
+  "classification": "within-task reused development; B3/B4 fresh, A4/BF16/A0 archival matched inputs",
+  "reference_limit": "No claim of a concurrent rerun or independent reproduction of reference trajectories",
+  "continue_rule": "protocol only, never success direction",
+  "cohort_limit": "Archived references cover reset20-39 only; never extend them to reset40-49"
+}
