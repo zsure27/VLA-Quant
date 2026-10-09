@@ -1,0 +1,106 @@
+{
+  "version": "b4-joint-v1-20261009",
+  "student_proprio_state_space": "policy_normalized_proprio; already transformed by frozen OFT get_vla_action before capture",
+  "primary_stage": "P2 shared PEFT recovery",
+  "classification": "MODEL-SELECTION / DEVELOPMENT; reused official reset20-39",
+  "rank": 8,
+  "alpha_over_rank": 1,
+  "seed": 7,
+  "order_seed": 7,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "learning_rate": 0.0001,
+  "loss": "normalized_action_smooth-l1_8x7",
+  "beta": 0.1,
+  "gradient_clip_norm": 1,
+  "batch_size": 1,
+  "smoke_steps": 10,
+  "train_steps": 1000,
+  "training_resets": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "training_observations": 80,
+  "training_episodes": 40,
+  "queries_per_episode": [
+    0,
+    1
+  ],
+  "teacher": "frozen BF16 on the exact same observations; normalized 8x7 actions",
+  "evaluation": {
+    "suite": "libero_spatial",
+    "seed": 0,
+    "env_seed": 1,
+    "protocol": "paired",
+    "cases": [
+      "B3",
+      "B4",
+      "A4",
+      "BF16",
+      "A0"
+    ],
+    "micro_offset": 20,
+    "micro_per_task": 1,
+    "phases": {
+      "first50": [
+        20,
+        5
+      ],
+      "next50": [
+        25,
+        5
+      ],
+      "last100": [
+        30,
+        10
+      ]
+    },
+    "episodes_per_case": 200,
+    "trace_actions": true,
+    "trace_observations": true,
+    "gate": "protocol only; never select on success direction"
+  },
+  "max_variants_per_candidate": 1,
+  "max_stage_seconds": 10800,
+  "max_plan_seconds": 21600,
+  "stop_rule": "contract failure, nonfinite action/gradient, missing trace, quota threshold, no admissible continuation",
+  "locked": [
+    "Router",
+    "P4",
+    "P5",
+    "offline_final_holdout",
+    "scale/clip/group search"
+  ],
+  "base": "A4",
+  "model_id": "B4",
+  "intended_variable": "add 196 visual Linear rank8 factors to joint trainable scope; capacity and compute also grow",
+  "primary_control": "frozen accepted B3",
+  "targets": {
+    "language": 224,
+    "vision": 196,
+    "total": 420,
+    "matrices": 840,
+    "parameters": 26710528
+  },
+  "initialization": {
+    "language": "exact B3 pre-training Response-SVD state",
+    "vision": "deterministic standard zero-output"
+  },
+  "B3_training_artifact_sha256": "489976277d66984dfa4ea957a4403f863f04778a85db3acab2e3fc2b80a8586f",
+  "B3_training_manifest_sha256": "70af4d1f32de7099ac9d25565d9089f987897d6fd5e5d5b7a16d0084fe5f039e",
+  "B3_reuse_sha256": {
+    "initial-adapter.pt": "be0384bdce5570f6ff42ac49cbc2d42df63cf9e771ae49c7e81bcdacd8eca458",
+    "teacher-targets.pt": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+    "teacher-input-hashes.json": "c05679faf3b31f1a678c99994e059395e9b656b0d975b746d7c6dc77e3865683"
+  },
+  "B4_status": "CPU_CONTRACT_PASS; actual GPU smoke and complete prior archive pending",
+  "max_total_gpu_seconds": 21600,
+  "max_variants": 1,
+  "decision": {
+    "development_candidate": "B4-B3 net > 0; report rescue/break, uncertainty and added cost; no independent replication claim",
+    "supported_increment": "task-cluster 95% paired lower bound > 0",
+    "negative_or_uncertain": "retain B3 as simpler default; diagnose regressions on development traces, no new adapter/router search"
+  }
+}

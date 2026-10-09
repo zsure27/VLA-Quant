@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "model_id": "B4",
+  "base": "A4",
+  "status": "CPU_CONTRACT_PASS_GPU_PENDING",
+  "definition": "A4 + rank8 per-Linear visual and language factors, jointly trained for 1000 steps",
+  "targets": {
+    "language": 224,
+    "vision": 196,
+    "total": 420,
+    "matrices": 840,
+    "parameters": 26710528
+  },
+  "spec": "configs/experiments/b4_joint_v1_20261009.json",
+  "artifact": null,
+  "test_successes": null,
+  "training_data": "exact B3 A4 student-state80; reuse its initial language factors and BF16 targets",
+  "evaluation": "libero_spatial reused development reset20-39; 200 episodes/config",
+  "entrypoints": {
+    "train": "scripts/train_b4_joint_peft.py",
+    "evaluate": "qvla/run_eval_b4_joint.py",
+    "register": "scripts/prepare_b4_joint_plans.py"
+  },
+  "old_registry": "configs/model_registry_v1.json",
+  "note": "Separate registry extension preserves archived B3 source/profile hashes"
+}

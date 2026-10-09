@@ -1,5 +1,7 @@
 # 实验日志：按实验名称组织
 
+> 2026-10-09最新增量：046开发20–39各200：A3=164、B1=194、B2=190、A4=30、B3=192、BF16=194、A0=195；B2−B1 3 rescue/7 break，B3−A4 162 rescue/0 break。原始配对及限制见[046分析](../../experiments/p2-shared-peft/20261008-046-b2-b3/DEV_BOUNDARY_30_39_AND_COMBINED_ANALYSIS_CN.md)。用户授权下次先补旧归档再跑B4视觉/语言联合LoRA，准备见[PRE-RUN CARD](../../experiments/p2-shared-peft/20261009-b4-joint-preparation/PRE_RUN_CARD_B4_JOINT_CN.md)；本条没有新增GPU结果，B4待实机门禁。下面早期范围/下一步均为历史。
+
 > **2026-09-25 增量结果与执行覆盖：** 完整 W2/W4 混合底座在同一 Spatial500 上得到 16L 434/500、14L 431/500、12L 412/500；完整证据见[2026-09-24 至 25 会话报告](../../experiments/p3-static-backbone/20260924-107-awq-stage-complete/README_CN.md)。静态 block 搜索现已冻结，12L 固定为 blocks18–19 shared PEFT 主底座；后续因果顺序见[主线执行协议](../../../docs/PEFT_CONTEXTUAL_ROUTING_EXECUTION_20260925_CN.md)。本日志中较早的“下一步”仅保留历史语境。
 
 更新：2026-09-18；覆盖已提交且本地可核对的实验，最新实测截止北京时间03:37。本文件为索引化日志：记录配置、实际结果、解释与原始证据入口，完整console/manifest/命令仍保留在链接的`results/`。拒绝或失败启动不计作完成实验；重复控制不增加样本量。

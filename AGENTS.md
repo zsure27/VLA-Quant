@@ -1,3 +1,11 @@
+# 2026-10-09 B4联合微调与下次开机顺序覆盖
+
+用户授权B4=A4全合格W2底座＋224语言和196视觉transformer Linear的rank8 LoRA联合训练；PRIMARY=P2，主问题B4−B3闭环增量。执行docs/B4_NEXT_BOOT_RUNBOOK_20261009_CN.md及独立PRE-RUN CARD。精确复用B3的80观测、BF16教师cache、训练前Response-SVD语言初始化；视觉零输出，联合1000步。不得从已训练B3续训、重采样或改量化配方；新增范围同时增加容量/计算，只解释工程总效果。独立注册configs/model_registry_b4_v1.json，保持旧B3哈希绑定源文件字节。
+
+下次用户自行开机后，先补齐046完整本机归档，核验服务器13项/18494项与本机全部文件、完善旧结果/收尾报告，推送固定zsure27/VLA-Quant并核验远端SHA，取得PASS_PRIOR_CLOSURE；之后才注册B4、真实GPU10步烟雾、1000步训练和配对评测。B3/B4/A4/BF16/A0各200，官方开发reset20–39，分50+50+100，微测不相加，不称独立复现。续跑门禁只依据协议与资源，不按成绩方向选择。P4/P5/Router/holdout继续锁定。
+
+当前7项CPU契约通过，真实GPU烟雾待开机；046由用户手动关闭，本机完整归档未通过。启动前≥12GiB持久盘空闲并留6GiB归档余量；视觉反传显存需实测。按实际hostname/端口同步收尾工具；活跃期约15分钟低频读status/runner/GPU，无变化静默，禁止频繁唤醒等待。约15%实时五小时额度备份、约10%关当前实例、留3%；无合规项或不可修复问题需审阅则报告后备份关机，不空等。旧Windows关机许可不继承。
+
 # 2026-10-08 B2/B3 前置执行覆盖
 
 B2/B3当前实现与CPU契约见`docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md`和两张20261008 V2 PRE-RUN CARD；GPU烟雾尚待实机，不把CPU PASS当GPU PASS。B2=A3+冻结B1+196个视觉transformer Linear增量rank8；B3=A4+新32-block语言rank8，必须单独采集A4 student-state80。使用版本化入口与不可变计划，10步烟雾通过才正式1000步；正式训练重新从烟雾前初始化开始。规范装载必须有artifact/profile/训练manifest SHA，旧B0/B1门禁不放宽。微测与first50重叠不得叠加样本；首片之后硬停止并分析，不默认启动remaining250。只在用户自行开机后绑定当前hostname/端口，先同步收尾工具，再启用本轮约15分钟低频心跳；无合规项立即备份关机。Router/P4/P5及holdout继续锁定。历史本机关机许可不沿用。

@@ -1,0 +1,65 @@
+{
+  "gate": "CPU_CONTRACT_PASS_GPU_PENDING",
+  "date": "2026-10-09",
+  "primary_stage": "P2 shared static PEFT recovery",
+  "question": "B4 minus B3 from joint visual+language trainable scope",
+  "locked": [
+    "P4",
+    "P5",
+    "Router",
+    "offline_final_holdout"
+  ],
+  "classification": "development preparation; no GPU run",
+  "cpu_tests": {
+    "command": "python -m unittest tests.test_b4_joint_peft -v",
+    "tests": 7,
+    "status": "PASS",
+    "runtime": "Python 3.12.14, PyTorch 2.14.0+cpu; workspace audit environment"
+  },
+  "syntax_compile": "PASS",
+  "source_sha256": {
+    "configs/experiments/b4_joint_v1_20261009.json": "fc48c7f342ea8f4ac1b2c1d84fc4b4f68a7c1c8ff0138b35a1d09bffa6ca04c1",
+    "configs/model_registry_b4_v1.json": "fd71504136e713b81b8a1a8c10d382d72de3b13bc45515570df09a22a98f4782",
+    "configs/backbones/awq_w2a16_all_eligible_spatial_v1.json": "36f2e478857e0fa49676d05de3992d27c52c3296858aa5df5cfebf30b7fefe60",
+    "qvla/b4_joint_peft.py": "f10b667e5c948f8ede067acc75f45a29df2860859542e23a810f7627145ed8af",
+    "qvla/run_eval_b4_joint.py": "598e2f66e84a1d87d1e09d0fbd3e5d480d4142a14d8a268274e347976b3e7b06",
+    "scripts/train_b4_joint_peft.py": "3d25bd6e576f5ccf19cd08ef2fe5e3bc7252a37f239f3423a5aa2c59e472b473",
+    "scripts/prepare_b4_joint_plans.py": "170e767e5dd4a246c35c62fb925ccdc02f287e0fa6e0e252294040dd5bbd0bcf",
+    "scripts/audit_b4_joint_eval.py": "43941214aa6f145d17ccdaa14f001da6b53b7232d49e8071daa23094d07eb668",
+    "scripts/record_prior_b2b3_closure.py": "9ec81927508fa5a15cb5df11602d1a2bfccb6ae1dfc32e705397d5cf5168ef9b",
+    "tests/test_b4_joint_peft.py": "c70eee325aa8d4ec7f6a80b6b7165761d916efe0af3465f932d9dc8580c457d4"
+  },
+  "profile_sha256": {
+    "w2_g128": "4fe1d2aa9a4e89fbaa5f9eb358ac6526d899195f774378b476742b801c7f4ccc",
+    "w2_g64": "947a849114a402978ae60995a652cd3212ded8d66f6ee7e0f3eeb3484712b3b8",
+    "w4": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4"
+  },
+  "B4": {
+    "base": "A4",
+    "targets": 420,
+    "matrices": 840,
+    "parameters": 26710528,
+    "formal_episodes_per_configuration": 200,
+    "configurations": [
+      "B3",
+      "B4",
+      "A4",
+      "BF16",
+      "A0"
+    ],
+    "successes": null,
+    "training_seconds": null,
+    "peak_cuda_bytes": null
+  },
+  "prior_closure": "PENDING_COMPLETE_LOCAL_ARCHIVE_AND_FRESH_SERVER_LOCAL_SHA_RECEIPT",
+  "actual_gpu_smoke": "NOT_RUN",
+  "server_connection": "NONE",
+  "old_B3_source_hashes": "MATCH_ACCEPTED_ARTIFACT",
+  "reference_B3_artifact_sha256": "489976277d66984dfa4ea957a4403f863f04778a85db3acab2e3fc2b80a8586f",
+  "limitations": [
+    "CPU toy modules are not real OpenVLA GPU training",
+    "Official reset20-39 are reused development inputs",
+    "Scope also changes capacity and compute",
+    "Prior disk only about 3GB free; need >=12GiB before B4"
+  ]
+}
