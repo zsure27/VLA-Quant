@@ -1,3 +1,5 @@
+**2026-10-09数据范围与高效验证覆盖：student-state80训练与历史评测是同一十任务；不同reset仅支持同任务新初态开发恢复，不等于未见任务泛化。B3训练初态SHA与开发20–39无交集，但完整观测内容待补齐旧归档再验。下一次开机先完成旧收尾及真实CPU数据内容审计；B4注册用scripts/prepare_b4_pair_v2_plans.py，正式只新跑B3/B4各200，A4/BF16/A0历史匹配输入参照单列；保留10步烟雾、配对微测、首50硬审计与所有rescue/break。数据交集、任务指令映射或协议失败不放行GPU。8/2任务留出仅为单独DIAGNOSTIC设计，要重新训练同子集B3-T/B4-T并重建train-task-only SVD，基础OFT/冻结PTQ已有任务暴露不得声称端到端未见任务。历史开发数据不重命名为final；offline_final_holdout不读标签、不改角色。执行docs/DATA_SCOPE_AND_EFFICIENT_EVALUATION_20261009_CN.md；后续仍低频15分钟、无合规工作即备份关实例，不继承旧本机关机授权。**
+
 # 2026-10-09 B4联合微调与下次开机顺序覆盖
 
 用户授权B4=A4全合格W2底座＋224语言和196视觉transformer Linear的rank8 LoRA联合训练；PRIMARY=P2，主问题B4−B3闭环增量。执行docs/B4_NEXT_BOOT_RUNBOOK_20261009_CN.md及独立PRE-RUN CARD。精确复用B3的80观测、BF16教师cache、训练前Response-SVD语言初始化；视觉零输出，联合1000步。不得从已训练B3续训、重采样或改量化配方；新增范围同时增加容量/计算，只解释工程总效果。独立注册configs/model_registry_b4_v1.json，保持旧B3哈希绑定源文件字节。

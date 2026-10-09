@@ -1,0 +1,23 @@
+{
+  "gate": "PASS_CPU_CONTRACTS_DATA_RAW_PENDING",
+  "tests": 14,
+  "test_command": "python -m unittest tests.test_split_scope tests.test_b4_joint_peft -v",
+  "compile": "PASS",
+  "actual_GPU_smoke": "NOT_RUN",
+  "raw_archive_content_audit": "PENDING",
+  "new_formal_evaluation_episodes": 400,
+  "source_sha256": {
+    "qvla/split_scope.py": "f3c85e28681bd4aa41440af1e97659d74f0b719c88006c713ed1bfe89a9596ff",
+    "scripts/audit_b4_data_scope.py": "7411ca23221469733c28756256e8b9f41fdfea5eed2349820b4c7e154e300a08",
+    "scripts/audit_b4_pair_v2.py": "8e561cbf704f4e3f2d3ddfce4bb4ec6b611990ff99369bdde301274aa760aa50",
+    "scripts/prepare_b4_pair_v2_plans.py": "a7f540fbf51135a6400dd17bf43f830f84a2d6fe76a9d764e84eaf6758bfc4ab",
+    "scripts/audit_20261009_data_split.py": "2dfe1fbce2970db9dcf8b06cbd0479b75269c06cc62e494aea8d18cf198bc0cc",
+    "scripts/prepare_b4_joint_plans.py": "be98d237833e7dde50ceeef1a2b8628a6b294e43063274312fc4c079531e218f",
+    "tests/test_split_scope.py": "b4acebe7f53b319d61af90c50dc4a19cc99865425cbebb98754f4e81d64945b9",
+    "configs/experiments/b4_eval_pair_v2_20261009.json": "e65f77bb6a604608cb573c7b79ce6c8fb11a46967c65d6b3d311fa7c8ee8e3c8",
+    "configs/experiments/b4_pair_v2_materials.template.json": "49bf4d273ef8d670a8aa0e47f643a6094eb7c0f51d74a4ff1b8aaf1376a083f6",
+    "configs/data/recovery_task_transfer_v1_20261009.json": "248b0bbf4d6efd330fc2054f94b4ff2cbb8ed812c5df95f2107dd6ba21ce176c",
+    "docs/DATA_SCOPE_AND_EFFICIENT_EVALUATION_20261009_CN.md": "956221f0ecb8f8668639510cbf3810a09001d6b8d4b5d6fcbe057c375a56c657",
+    "results/experiments/p2-shared-peft/20261009-data-scope-audit/audit.json": "a3aff2b083cdbbaeaa1c1dd5810a86b39f0bba97c4f05daca39bb3b47ed26c81"
+  }
+}

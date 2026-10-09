@@ -1,3 +1,5 @@
+> **2026-10-09数据审计：**实际训练/评测十任务重合。B3训练初态与开发20–39的内容哈希0交集；全观测内容审计待旧原始归档，不能宣称全流程无泄露。B4正式新回合改为B3/B4各200，保留硬门禁；历史三个参照单列。8/2 Recovery任务留出清单另建，仅设计未运行。没有新GPU结果，详见[审计](../../experiments/p2-shared-peft/20261009-data-scope-audit/README_CN.md)。
+
 # 实验日志：按实验名称组织
 
 > 2026-10-09最新增量：046开发20–39各200：A3=164、B1=194、B2=190、A4=30、B3=192、BF16=194、A0=195；B2−B1 3 rescue/7 break，B3−A4 162 rescue/0 break。原始配对及限制见[046分析](../../experiments/p2-shared-peft/20261008-046-b2-b3/DEV_BOUNDARY_30_39_AND_COMBINED_ANALYSIS_CN.md)。用户授权下次先补旧归档再跑B4视觉/语言联合LoRA，准备见[PRE-RUN CARD](../../experiments/p2-shared-peft/20261009-b4-joint-preparation/PRE_RUN_CARD_B4_JOINT_CN.md)；本条没有新增GPU结果，B4待实机门禁。下面早期范围/下一步均为历史。

@@ -1,0 +1,291 @@
+{
+  "gate": "PASS_METADATA_AUDIT_NOT_FULL_DATA_CLEARANCE",
+  "primary_stage": "P2",
+  "GPU_started": false,
+  "task_map": [
+    {
+      "task_id": 0,
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 1,
+      "task_name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 2,
+      "task_name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 3,
+      "task_name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 4,
+      "task_name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 5,
+      "task_name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 6,
+      "task_name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 7,
+      "task_name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 8,
+      "task_name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+    },
+    {
+      "task_id": 9,
+      "task_name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+    }
+  ],
+  "training": {
+    "B0_B1_training": {
+      "observations": 80,
+      "unique_observation_hashes": 80,
+      "episodes": 40,
+      "tasks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "resets": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "init_hash_against_inventory": "MISSING_IN_ARCHIVED_MANIFEST",
+      "init_hash_overlap_with_development20_39": null,
+      "full_evaluation_observation_overlap": "PENDING_RAW_ARCHIVE_CHECK"
+    },
+    "B3_training": {
+      "observations": 80,
+      "unique_observation_hashes": 80,
+      "episodes": 40,
+      "tasks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "resets": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "init_hash_against_inventory": "PASS",
+      "init_hash_overlap_with_development20_39": 0,
+      "full_evaluation_observation_overlap": "PENDING_RAW_ARCHIVE_CHECK"
+    }
+  },
+  "evaluation_tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "evaluation_resets": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "shared_task_count": 10,
+  "claim_allowed": "within-task development recovery",
+  "offline_trajectories": 432,
+  "offline_transitions": 52970,
+  "offline_roles": {
+    "peft_train": 298,
+    "router_dev": 59,
+    "offline_final_holdout": 75
+  },
+  "offline_by_task": {
+    "0": {
+      "peft_train": 31,
+      "router_dev": 6,
+      "offline_final_holdout": 8
+    },
+    "1": {
+      "peft_train": 31,
+      "router_dev": 6,
+      "offline_final_holdout": 8
+    },
+    "2": {
+      "peft_train": 32,
+      "router_dev": 6,
+      "offline_final_holdout": 8
+    },
+    "3": {
+      "peft_train": 30,
+      "router_dev": 6,
+      "offline_final_holdout": 7
+    },
+    "4": {
+      "peft_train": 29,
+      "router_dev": 6,
+      "offline_final_holdout": 7
+    },
+    "5": {
+      "peft_train": 27,
+      "router_dev": 5,
+      "offline_final_holdout": 7
+    },
+    "6": {
+      "peft_train": 32,
+      "router_dev": 6,
+      "offline_final_holdout": 8
+    },
+    "7": {
+      "peft_train": 24,
+      "router_dev": 5,
+      "offline_final_holdout": 6
+    },
+    "8": {
+      "peft_train": 32,
+      "router_dev": 7,
+      "offline_final_holdout": 8
+    },
+    "9": {
+      "peft_train": 30,
+      "router_dev": 6,
+      "offline_final_holdout": 8
+    }
+  },
+  "known_historical_awq_calibration_exposure": [
+    {
+      "dataset_order_index": 378,
+      "trajectory_id": "cc9be4167c66161fe865ea0c2225455fba1f98fe378dc9144867430ac49bb242",
+      "later_role": "offline_final_holdout",
+      "frame_sha256": "b926a38b058fd307f913551370419f264b5d49f29987da3f9310172de8548202"
+    },
+    {
+      "dataset_order_index": 277,
+      "trajectory_id": "a6c328dfcfea5d4050e46253ff569f102be53afc5fee0e91bf03a8d165f51c82",
+      "later_role": "router_dev",
+      "frame_sha256": "2906b8a6bde173e0b64ccd5fc8ac7dfa0f0759094796d7b1ca5620d4ba51fd59"
+    },
+    {
+      "dataset_order_index": 1,
+      "trajectory_id": "e81b71394bc8fc0c64a223a63f2924624e915c98db747cc68d78d53af2b396a7",
+      "later_role": "offline_final_holdout",
+      "frame_sha256": "9f209e0b105611cd55165ebf134f726d6e884c57e7701bc778acaab642bb74a8"
+    },
+    {
+      "dataset_order_index": 36,
+      "trajectory_id": "c73fbe5584dfbe61206ef809ec78eab42a2cc0cf52a1103ca97fa1f1184701a9",
+      "later_role": "router_dev",
+      "frame_sha256": "beefd603e7bbcb95f42bf61d52132e7a34500c73c0e53cf43f9b2199ddac88f2"
+    },
+    {
+      "dataset_order_index": 361,
+      "trajectory_id": "e945577eb4122e737318c17a7cf0501861ccfb7ac899d4bd2870a1b7af2de396",
+      "later_role": "offline_final_holdout",
+      "frame_sha256": "eb4e80c07e11da8cee6c5ff371e6de873ef0c3bdf3b8cba07c68548fe57179ea"
+    },
+    {
+      "dataset_order_index": 366,
+      "trajectory_id": "dfb6ebc79dd99c4df8d284fc3a6cc40d789aa74d0e9a1f26b7271172de46ecb2",
+      "later_role": "router_dev",
+      "frame_sha256": "3714a7ec938bfb27e4bd175b97c05fe658c4c49a14a75981293ab71d8d2897eb"
+    },
+    {
+      "dataset_order_index": 390,
+      "trajectory_id": "da0db986e3a8a58d9b2b28afc1f5c5f4bd172c877fd6cd6b4af0f414ce7c8e0b",
+      "later_role": "router_dev",
+      "frame_sha256": "0b98899477de7bc48b8acecc60e947d74d2100fe6614388b88bb05c15c22f9a7"
+    },
+    {
+      "dataset_order_index": 89,
+      "trajectory_id": "c737df546556614dcc02b60b12bb1c48c77b6c6af19364ad54d6f3582188ef26",
+      "later_role": "router_dev",
+      "frame_sha256": "c401e220d508bb7d05a63a8c5e7db59fb34dbfd61a1f3a1f06ff2eeb7ac34661"
+    },
+    {
+      "dataset_order_index": 186,
+      "trajectory_id": "e4e1b0dd4080f9275b708d5eb1174a28fd7548721b632343f4df36fdaaea664b",
+      "later_role": "offline_final_holdout",
+      "frame_sha256": "a6f8edf43f21e8eecbd8e07489a8fbae22a4872f28e912e96e9ce9ec85897a39"
+    },
+    {
+      "dataset_order_index": 262,
+      "trajectory_id": "ce11d0744933a2d979c1b14f240cb507b39316997d454839b15956b9e6f83130",
+      "later_role": "router_dev",
+      "frame_sha256": "eb7741cbac2a7737691ece61795508547933f484acee376a20b9adc5ff8d68c6"
+    },
+    {
+      "dataset_order_index": 116,
+      "trajectory_id": "cccdf2fbb01310dbf085c7623c05206c58b72b16627b7bc474abf53557473f5f",
+      "later_role": "router_dev",
+      "frame_sha256": "9d16a64d1b7e8c37dad0318e04df10a630e87ac74e2148cc175d42b1b8cf7c98"
+    },
+    {
+      "dataset_order_index": 258,
+      "trajectory_id": "d2885790de4b9c6175549bbe803994ce0489befa206893948c9c4f46c97d9276",
+      "later_role": "offline_final_holdout",
+      "frame_sha256": "41c562a9da9023c6941ad5aca1d272aff9ae6f5767baa16673a4902370814cc4"
+    },
+    {
+      "dataset_order_index": 410,
+      "trajectory_id": "a735a229c8b5ebbc83babff73f538294980d6b24f50478bb08f6553f8d61875e",
+      "later_role": "router_dev",
+      "frame_sha256": "4a3389e750142ae00f9cc2f2c77442bb0b3b983e03a2186c1e4df5825f7d5ef4"
+    },
+    {
+      "dataset_order_index": 44,
+      "trajectory_id": "e506afb1588df22405521f6bd11ed730ab1255b7232aa2afc3f4de35dd0ee518",
+      "later_role": "offline_final_holdout",
+      "frame_sha256": "da414cb2f1565540fac345a1cd0b859ff85c756f98c3e035a6bbfe1d51ba1492"
+    }
+  ],
+  "full_pipeline_final_holdout": "NOT_CERTIFIED: known PTQ exposure; other profiles/base checkpoint exclusions unresolved",
+  "repair": "Versioned development/Recovery-task-transfer contracts; B4 GPU admission requires actual archived input-content audit",
+  "source_sha256": {
+    "results\\experiments\\p2-shared-peft\\20260930-014-a1-reset-preflight\\unpruned_state_inventory.json": "dbf9a3305c27bd009c38bef1ea92715e8d27cd531bc34efc5ec8afb63b07f253",
+    "results\\experiments\\p1-data-contract\\20260925-107-p1-data-contract\\trajectory-split.json": "3560425653ef4b297a48a3854aae20348898129b6673db1474943e95897606a2",
+    "results\\experiments\\p2-shared-peft\\20260929-107-p25-student-state80-distill\\student-state80-manifest.json": "858d844ed55bf3d56ba6c95d40be8480659d69dabe03ecda703ff0918856d642",
+    "results\\experiments\\p2-shared-peft\\20261008-046-b2-b3\\B3-student-state80-manifest.json": "70af4d1f32de7099ac9d25565d9089f987897d6fd5e5d5b7a16d0084fe5f039e",
+    "results\\experiments\\p2-shared-peft\\20261005-model-registry-audit\\audit.json": "5a8f747529d46a7362278a0c1a4fda2081bce994b56317d0effb616703f49abc"
+  }
+}

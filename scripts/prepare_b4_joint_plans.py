@@ -100,33 +100,7 @@ def build_plans(materials, session, output, python, hostname):
 
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--materials", type=Path, required=True)
-    p.add_argument("--session", type=Path, required=True)
-    p.add_argument("--output", type=Path, required=True)
-    p.add_argument("--python", required=True)
-    p.add_argument("--expected-hostname", required=True)
-    a = p.parse_args()
-    if socket.gethostname() != a.expected_hostname: raise ValueError("Wrong current instance hostname")
-    if a.output.exists() or a.session.exists(): raise ValueError("Recover existing plan; never register over old output")
-    materials = json.loads(a.materials.read_text())
-    from scripts.train_b4_joint_peft import materials_contract
-    materials_contract(materials, "B4")
-    for name in ("backup_active_diagnostics.py", "vla_shutdown_remote.py"):
-        if sha(Path(materials["closure_tools"]) / name) != sha(ROOT / "scripts" / name):
-            raise ValueError("Sync and verify current native closure helpers first")
-    for key in ("oft_root", "libero_root", "official_root"):
-        if not Path(materials[key]).is_dir(): raise ValueError(f"Missing runtime: {key}")
-    if subprocess.check_output(["nvidia-smi", "--query-compute-apps=pid", "--format=csv,noheader"], text=True).strip():
-        raise ValueError("GPU busy; recover active plan rather than starting another")
-    if shutil.disk_usage(a.session.parent).free < 12 * 1024**3:
-        raise ValueError("B4 requires >=12 GiB persistent free space including >=6 GiB archive reserve")
-    a.output.mkdir(parents=True)
-    from scripts.vla_stage_supervisor import validate_plan
-    for phase, plan in build_plans(materials, a.session, a.output, a.python, a.expected_hostname).items():
-        validate_plan(plan)
-        (a.output / f"B4-{phase}-plan.json").write_text(json.dumps(plan, indent=2) + "\n")
-    print(json.dumps({"gate": "PASS_B4_PLANS_REGISTERED", "GPU_started": False, "output": str(a.output)}))
+    raise RuntimeError('B4 five-case evaluation superseded; use scripts/prepare_b4_pair_v2_plans.py with data-scope audit')
 
 
 if __name__ == "__main__": main()
