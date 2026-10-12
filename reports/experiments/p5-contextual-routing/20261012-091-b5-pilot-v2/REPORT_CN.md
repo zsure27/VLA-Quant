@@ -14,6 +14,10 @@
 
 21:24已启动注册micro-plan.json：BF16/A0/B3/B4/B5/task-only各reset5十回合。微测与正式首片重叠，不增加最终样本量；协议通过后接续first50及后续分片，正式每模型reset5–49共450回合。当前没有B5正式闭环效果，不能宣称路由收益。
 
+21:44微测完整结束，revision23、七阶段退出码0，PASS_B5_PHASE_PROTOCOL；六配置同task/reset初态与首查询输入严格配对，动作finite及chunk生命周期通过。BF16/A0/B3/B4/task-only均10/10，B5为9/10，相对B3/B4/task-only均0 rescue/1 break。唯一新增失败为任务9/reset5，无程序异常，执行220步、28查询，最后4动作discard；query0选B3，其余27查询选B4，仅一次切换。这是实际选择轨迹，尚不能将切换、首个选择或某个输入特征认定为失败因果。
+
+21:52已接续注册first50-plan.json，runner31097，七配置各reset5–9的50回合，含random。文件SHA d15f7948b1a19c348e4ec2135ccc3d475589a60e8814ebd5619106ec5fce487d与本机预注册一致。先按协议放行，不因9/10或未来成绩改变实验条件。原计划审计只列四核心策略；首片结束后须用相同冻结audit_b5_protocol.py额外纳入random输入执行完整控制审计，保存独立first50-all-controls-gate.json，再接后片，不重复GPU回合。当前微测60回合仍不拼入正式样本。
+
 基线协议归因范围仍见P0同轮报告：paired/upstream小片A0相差一个成功，不能称4.2pp已完全归因或QVLA严格复现。B5为经项目基线与bank等价门禁后的探索性pilot；必须保留最佳固定B3/B4、task-only及random控制，报告全部异容量bank成本，当前伪量化不声称真实INT2部署收益。
 
 ## 阶段备份与额度

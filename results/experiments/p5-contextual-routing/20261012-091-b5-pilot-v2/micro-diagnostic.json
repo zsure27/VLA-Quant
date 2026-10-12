@@ -1,0 +1,66 @@
+{
+  "policies": {
+    "fixed-e0": {
+      "successes": 10,
+      "failures": []
+    },
+    "fixed-e1": {
+      "successes": 10,
+      "failures": []
+    },
+    "router": {
+      "successes": 9,
+      "failures": [
+        {
+          "episode": "9:5",
+          "query_count": 28,
+          "e0_queries": 1,
+          "e1_queries": 27,
+          "switches": 1,
+          "end": [
+            {
+              "event": "episode_end",
+              "episode_key": "9:5",
+              "queries": 28,
+              "executed_steps": 220,
+              "discarded_actions": 4,
+              "aborted": false,
+              "success": false,
+              "manifest": {
+                "env_seed": 1862382340,
+                "init_state_dtype": "float64",
+                "init_state_index": 5,
+                "init_state_sha256": "3696f68817ba2c2ce9da0453042f1ba257245c07b7a4a814be58e0903b20efcf",
+                "init_state_shape": [
+                  92
+                ],
+                "model_seed": 3542413795,
+                "protocol": "paired",
+                "task_id": 9
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "task-only": {
+      "successes": 10,
+      "failures": []
+    }
+  },
+  "comparisons": {
+    "router_vs_fixed-e0": {
+      "rescue": 0,
+      "break": 1
+    },
+    "router_vs_fixed-e1": {
+      "rescue": 0,
+      "break": 1
+    },
+    "router_vs_task-only": {
+      "rescue": 0,
+      "break": 1
+    }
+  },
+  "claim": "Micro reset5 only, overlapping first50; no added samples, no success-based continuation, switches not causal diagnosis"
+}

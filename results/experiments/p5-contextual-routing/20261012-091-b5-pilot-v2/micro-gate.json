@@ -1,0 +1,76 @@
+{
+  "gate": "PASS_B5_PHASE_PROTOCOL",
+  "offset": 5,
+  "count": 1,
+  "policies": {
+    "fixed-e0": {
+      "episodes": 10,
+      "successes": 10,
+      "manifest_sha256": "af0d93bbe1fd464ba5775190b6634c2b001631fdf6533e3c8b604db300a577e1"
+    },
+    "fixed-e1": {
+      "episodes": 10,
+      "successes": 10,
+      "manifest_sha256": "818e18ccad21d89137d2198fa5d18dd0f88614f952569dce60f34487eed49869"
+    },
+    "router": {
+      "episodes": 10,
+      "successes": 9,
+      "manifest_sha256": "82c7938a63dd9a323d0cb5ac4ffbf895199100af0001de318f5d2b293fda625f"
+    },
+    "task-only": {
+      "episodes": 10,
+      "successes": 10,
+      "manifest_sha256": "672cdd59cca927efcafdae296b1c48780d500c932b88f80e1462ebdc3f84697e"
+    }
+  },
+  "first_observation_sha256": {
+    "0:5": "a5bfa335896b917623d49e5ea291c1ec049cf12a98240b3d4fd062b402063fe5",
+    "1:5": "0c65ee87b57da906e6a21fdc345c5f4d15dd4fb751b1eba19899791a20572838",
+    "2:5": "6321a28d98e2516077812aee953447eef37fd61f00fb86a1be787bf092683cc4",
+    "3:5": "c96e09a12741e6cefa126c58b12b627e829df41ebf9d4021b44ac2358c2de0a6",
+    "4:5": "6b14cd1eefcec69e1f9da0ea27a641cc7e0489991b27f51e37207dec002c064b",
+    "5:5": "a8e882164bab1935ee9b04964ecbeb1e064ffd3775122e9e14209aa3ffaa520e",
+    "6:5": "0c5220021ff9c52be8ed703c9cdd5311ab3e89bc3dc8ef38d4c5785dd1bf8301",
+    "7:5": "40aa07d8a3358a91007ea5e58f8a7e6a36fa7cd3517a3d1b498f89264ceed495",
+    "8:5": "6a5464aab5ad966a5497e6cd2f64af7db03695d86125db5d8b2b43378fea998c",
+    "9:5": "98e6850a12b895f2bd54511e608076ce67620dda1c9484205c79a7e934c34839"
+  },
+  "source_sha256": {
+    "qvla/b5_contract.py": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+    "qvla/b5_features.py": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+    "qvla/b5_route_state.py": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+    "qvla/b5_expert_bank.py": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+    "qvla/b5_runtime.py": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+    "qvla/run_eval_b5.py": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+    "scripts/train_b5_router.py": "296e0cc527c6c1214d68145a278a090f13298a8c3ba361294717f1b2b6933186",
+    "scripts/label_b5_observations.py": "6522e8e87663b5bdef6f3a5a1a95aafe1f1d3e13614ad92294d81582bf24213b",
+    "scripts/prepare_b5_router_data.py": "7ced310bfe233e434e8fd95c738b667b919a7fc9babe9bf0ebb3c47b33d12864",
+    "scripts/smoke_b5_gpu.py": "0e20415a8040185388e76ca047c8d12f4d38ed483b7e10cd39f093c165af16d3",
+    "scripts/audit_b5_protocol.py": "592126be6342983be5a391e65c4dc36b5f9c186e62d2ec34ed741bd24940d39f",
+    "configs/experiments/b5_pilot_v1_20261012.json": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151"
+  },
+  "criterion": "protocol only; no success-rate continuation selection",
+  "references": {
+    "BF16": {
+      "successes": 10,
+      "files": {
+        "EVAL-libero_spatial-openvla-2026_10_12-21_25_22.txt": "00c23a8e970943918a805923dec111fddf4bef225b26b311b134319a3f7f9a09",
+        "invocation.json": "557a1ed541ad4b80fa5a975f0fccc44b5fc16fc6f77de228785db930d10b2a8d",
+        "policy-queries.jsonl": "bb679b6630ca9527978903073ab8537c387baf9d2eea971749cf0cd9cd206e65",
+        "on-policy-events.jsonl": "c4622f10e580670f34a7dda5ea166799c5eb1e6b8519a122f62501fdb8d840ca",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 10,
+      "files": {
+        "EVAL-libero_spatial-openvla-2026_10_12-21_28_42.txt": "3f4dc4ad740f0135464a013fe8ed6e475afa63412cb81353cdf260359f2833a3",
+        "invocation.json": "54cec4d1d78573b81833e1dcae4a077fc3886339dc9ea7f5a1205b2273f8bef5",
+        "policy-queries.jsonl": "cdccc0117bc0a2077822f870ee427b45934d2e548b95fec34a7db56f98edc25c",
+        "on-policy-events.jsonl": "184a196d1739ad31f0b4053cfee144daef043abc6629b552047d310ce0d88005",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  }
+}
