@@ -1,0 +1,16 @@
+{
+  "state": "FIRST_PRE_REFRESH_THRESHOLD_SAVED_KEEP_RUNNING",
+  "live_used_percent_at_save": 86,
+  "resets_at": 1791807485,
+  "refresh_expected_beijing": "2026-10-12 20:18",
+  "refresh_confirmed": false,
+  "server_archive": "/root/autodl-tmp/qvla-repro/backups/gpu-091-pre-refresh-20261012-v1",
+  "archive_sha256": "74e6d64b79d9ccc7dd3c941ff3d19bd18c840de859fdb5d9999c20a507cea764",
+  "local_sha_counts": {
+    "primary": 2,
+    "results": 267
+  },
+  "running_stage_snapshot": "may contain incomplete live prefixes; not final results or GPU gate",
+  "gpu_and_runner_stopped": false,
+  "native_shutdown_executed_this_gpu_round": false
+}
