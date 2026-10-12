@@ -1,0 +1,8 @@
+{
+  "state": "PRELAUNCH_FAILED_NO_GPU_STAGE_STARTED",
+  "entry": "scripts/launch_b5_final_slice_091_v1.py",
+  "cause": "Preflight attempted Git HEAD in frozen source deployed as Git archive without .git",
+  "evidence": "git rev-parse failed before nvidia-smi, log creation, Popen and receipt creation",
+  "repair": "Separate v2 launcher verifies deployed source_commit and every runtime-lock file SHA; registered plan and frozen source remain unchanged",
+  "original_entry_retained": true
+}
