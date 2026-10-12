@@ -85,6 +85,8 @@ class FrozenExpertBank(torch.nn.Module):
                 branch.requires_grad_(False)
                 self.branches[self._key(index, expert)] = branch
         self.requires_grad_(False)
+        model.requires_grad_(False)
+        model.eval()
         self.eval()
         try:
             for index, name in enumerate(self.target_names):

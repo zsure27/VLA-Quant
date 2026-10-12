@@ -122,6 +122,8 @@ def run(args, specification):
     os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
     os.environ.setdefault("OMP_NUM_THREADS", "1")
     os.environ.setdefault("MKL_NUM_THREADS", "1")
+    os.environ.setdefault("TF_NUM_INTRAOP_THREADS", "1")
+    os.environ.setdefault("TF_NUM_INTEROP_THREADS", "1")
     if str(ROOT) not in sys.path:
         sys.path.insert(0, str(ROOT))
     for root in (args.oft_root, args.libero_root):
@@ -131,6 +133,8 @@ def run(args, specification):
     import torch
     import tensorflow as tf
     torch.set_num_threads(1)
+    tf.config.threading.set_intra_op_parallelism_threads(1)
+    tf.config.threading.set_inter_op_parallelism_threads(1)
     tf.config.set_visible_devices([], "GPU")
     if torch.cuda.is_available() or tf.config.get_visible_devices("GPU"):
         raise RuntimeError("CPU bridge refuses a visible GPU")
@@ -319,7 +323,7 @@ def main():
     specification = plan(args)
     try:
         result = {"gate": "DRY_RUN_ONLY", "plan": specification} if args.dry_run else run(args, specification)
-    except Exception as exc:
+    except BaseException as exc:
         result = {"gate": "FAIL_CPU_BRIDGE", "plan": specification,
                   "error_type": type(exc).__name__, "error": str(exc), "gpu_admission": False}
     args.output.parent.mkdir(parents=True, exist_ok=True)

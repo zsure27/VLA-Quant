@@ -82,7 +82,7 @@ class CausalFeatureEncoder:
         return {"version": FEATURE_VERSION, "dimension": FEATURE_DIM,
                 "input_keys": sorted(OBSERVATION_KEYS), "grid": [8, 8, 3],
                 "feature_order": ["full_image", "wrist_image", "normalized_proprio", "instruction_one_hot"],
-                "image_preparation": "mean_grid_of_pre_get_action_camera_uint8",
+                "image_preparation": "mean_grid_of_policy_center_crop_prepared_camera_uint8",
                 "instruction_vocabulary": list(self.instruction_vocabulary)}
 
     @property

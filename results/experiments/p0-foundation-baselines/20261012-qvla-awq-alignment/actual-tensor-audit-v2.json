@@ -1,0 +1,7642 @@
+{
+  "gate": "PASS_CPU_ACTUAL_PROFILE_CHECKPOINT_AND_ROW_QUANTIZATION",
+  "profile_sha256": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4",
+  "checkpoint_identity": {
+    "files": {
+      "action_head--150000_checkpoint.pt": "809858636cf0a65009dd567d2f4e116249442790f02b8fe31f24500ea6118908",
+      "added_tokens.json": "ab43123267b190cb7990bc9f2ae4ad32dcb7ed029fb0fccb1b4e062c6f54a2a1",
+      "config.json": "bcb688a66f3e94a42311b77d37b7e1484886701f7b2aa8e36d165dfccac92ae6",
+      "configuration_prismatic.py": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68",
+      "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282",
+      "generation_config.json": "67fbe17b12e8beb5be98eb911483971cc78589e51a37ac0cce9cd499d06a8bf1",
+      "lora_adapter/adapter_config.json": "30462bf8022279e5c8fe8c58db30d4c9c919b0a43feb0a99b5ca8f8b54c286df",
+      "lora_adapter/adapter_model.safetensors": "4bd2e808805f9b67af090c37e70f239b3b4da7a6473ec621ead6702b16a302ec",
+      "model-00001-of-00004.safetensors": "2809bd7be9422315c5ecbe91eea612f5b02925f37e0051728ad45bc993c79251",
+      "model-00002-of-00004.safetensors": "a00a7c5f2b6586ccfc89c693a9c36f3552ff455ff2b1bfea3e92642e4cd2b6d3",
+      "model-00003-of-00004.safetensors": "a894b7230a08b471af55c57dd7385fd3b51fae2c4d9307a36a8017ef57abf22a",
+      "model-00004-of-00004.safetensors": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60",
+      "model.safetensors.index.json": "ca8b53fed8133ee2afcd2fc483de8febf7f5bb0f6bcb09f91189772e59e8f659",
+      "modeling_prismatic.py": "f40ee7883e16aab1a2d89b6e8f31cc81f6b8055120b1fefe169e05c7031098fa",
+      "preprocessor_config.json": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da",
+      "processing_prismatic.py": "06563586bbc73d36501a14a231a3174904ede830d33174d0c625ece8e931ef1e",
+      "processor_config.json": "167e026d8121f6cb0bf5c18310b97ba8139152f970822bb3824213bd37dc7a76",
+      "proprio_projector--150000_checkpoint.pt": "438d28e81e125166d0771762424aaf017de3a8daaebde06a5cb71157e62b3bf3",
+      "special_tokens_map.json": "cb90ee5cf5793aa444039af9795b00db59d3fef8942e7eca9cf1990bab370d61",
+      "tokenizer.json": "8f5e2869e1807b8bb3c7717a294539c37e9de5d728ad60e31ef57e83cc5ea527",
+      "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+      "tokenizer_config.json": "f5f1d3ed015ebb71cf11686ff00bc8e0c25957bbf3952f95312cecc9b168fbea"
+    },
+    "sha256": "b909ec7ebc9d41890a7b956118763af4a78e408ba7a39106d2be4b3109918340"
+  },
+  "targets_checked": 422,
+  "targets": [
+    {
+      "name": "language_model.model.layers.0.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43977,
+      "quantization_only_changed_elements": 43461,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.0.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.0.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16175,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.0.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16356,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.0.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16360,
+      "quantization_only_changed_elements": 16248,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.0.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16382,
+      "quantization_only_changed_elements": 16339,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.0.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16258,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 44031,
+      "quantization_only_changed_elements": 43542,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16382,
+      "quantization_only_changed_elements": 16176,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16134,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16250,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16317,
+      "quantization_only_changed_elements": 16226,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16267,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.1.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16194,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43965,
+      "quantization_only_changed_elements": 43442,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16276,
+      "quantization_only_changed_elements": 16166,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16315,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16197,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16249,
+      "quantization_only_changed_elements": 16156,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.10.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43946,
+      "quantization_only_changed_elements": 43460,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16293,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16304,
+      "quantization_only_changed_elements": 16140,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16148,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16259,
+      "quantization_only_changed_elements": 16160,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16183,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.11.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16371,
+      "quantization_only_changed_elements": 16172,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43759,
+      "quantization_only_changed_elements": 43424,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16198,
+      "quantization_only_changed_elements": 16125,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16238,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16187,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16271,
+      "quantization_only_changed_elements": 16127,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16186,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.12.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16381,
+      "quantization_only_changed_elements": 16162,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43902,
+      "quantization_only_changed_elements": 43444,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16238,
+      "quantization_only_changed_elements": 16182,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16368,
+      "quantization_only_changed_elements": 16162,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16206,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16248,
+      "quantization_only_changed_elements": 16156,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.13.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16382,
+      "quantization_only_changed_elements": 16138,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43844,
+      "quantization_only_changed_elements": 43475,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16276,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16221,
+      "quantization_only_changed_elements": 16174,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16195,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16303,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.14.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16361,
+      "quantization_only_changed_elements": 16167,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43977,
+      "quantization_only_changed_elements": 43409,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16244,
+      "quantization_only_changed_elements": 16145,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16336,
+      "quantization_only_changed_elements": 16143,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16155,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16268,
+      "quantization_only_changed_elements": 16156,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16183,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.15.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16372,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43983,
+      "quantization_only_changed_elements": 43497,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16277,
+      "quantization_only_changed_elements": 16141,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16371,
+      "quantization_only_changed_elements": 16185,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16209,
+      "quantization_only_changed_elements": 16156,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16178,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.16.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16133,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43894,
+      "quantization_only_changed_elements": 43481,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16187,
+      "quantization_only_changed_elements": 16168,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16341,
+      "quantization_only_changed_elements": 16160,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16349,
+      "quantization_only_changed_elements": 16177,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16204,
+      "quantization_only_changed_elements": 16199,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16357,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.17.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16343,
+      "quantization_only_changed_elements": 16130,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43980,
+      "quantization_only_changed_elements": 43450,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16164,
+      "quantization_only_changed_elements": 16177,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16152,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16353,
+      "quantization_only_changed_elements": 16207,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16257,
+      "quantization_only_changed_elements": 16137,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16362,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.18.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16363,
+      "quantization_only_changed_elements": 16157,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43978,
+      "quantization_only_changed_elements": 43413,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16160,
+      "quantization_only_changed_elements": 16198,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16309,
+      "quantization_only_changed_elements": 16145,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16191,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16259,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16382,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.19.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16188,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43962,
+      "quantization_only_changed_elements": 43470,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16376,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16198,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16266,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16174,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.2.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16374,
+      "quantization_only_changed_elements": 16153,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43998,
+      "quantization_only_changed_elements": 43419,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16199,
+      "quantization_only_changed_elements": 16151,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16154,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16353,
+      "quantization_only_changed_elements": 16194,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16301,
+      "quantization_only_changed_elements": 16178,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16354,
+      "quantization_only_changed_elements": 16149,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.20.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16375,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43877,
+      "quantization_only_changed_elements": 43431,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16142,
+      "quantization_only_changed_elements": 16154,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16347,
+      "quantization_only_changed_elements": 16174,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16183,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16258,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16157,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.21.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16381,
+      "quantization_only_changed_elements": 16196,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43702,
+      "quantization_only_changed_elements": 43430,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16316,
+      "quantization_only_changed_elements": 16137,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16358,
+      "quantization_only_changed_elements": 16138,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16162,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16287,
+      "quantization_only_changed_elements": 16159,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16146,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.22.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16352,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43763,
+      "quantization_only_changed_elements": 43462,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16349,
+      "quantization_only_changed_elements": 16156,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16376,
+      "quantization_only_changed_elements": 16140,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16181,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16209,
+      "quantization_only_changed_elements": 16155,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16186,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.23.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16149,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43924,
+      "quantization_only_changed_elements": 43443,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16221,
+      "quantization_only_changed_elements": 16175,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16337,
+      "quantization_only_changed_elements": 16179,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16369,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16319,
+      "quantization_only_changed_elements": 16164,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16369,
+      "quantization_only_changed_elements": 16182,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.24.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16195,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43967,
+      "quantization_only_changed_elements": 43408,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16342,
+      "quantization_only_changed_elements": 16175,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16139,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16319,
+      "quantization_only_changed_elements": 16176,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16341,
+      "quantization_only_changed_elements": 16157,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16313,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.25.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16335,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43938,
+      "quantization_only_changed_elements": 43449,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16171,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16163,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16193,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16333,
+      "quantization_only_changed_elements": 16191,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16175,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.26.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16160,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43921,
+      "quantization_only_changed_elements": 43403,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16321,
+      "quantization_only_changed_elements": 16132,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16372,
+      "quantization_only_changed_elements": 16167,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16252,
+      "quantization_only_changed_elements": 16159,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16329,
+      "quantization_only_changed_elements": 16133,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16235,
+      "quantization_only_changed_elements": 16178,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.27.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16357,
+      "quantization_only_changed_elements": 16152,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43965,
+      "quantization_only_changed_elements": 43405,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16347,
+      "quantization_only_changed_elements": 16162,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16382,
+      "quantization_only_changed_elements": 16133,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16359,
+      "quantization_only_changed_elements": 16175,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16247,
+      "quantization_only_changed_elements": 16148,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16355,
+      "quantization_only_changed_elements": 16192,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.28.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16363,
+      "quantization_only_changed_elements": 16174,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43873,
+      "quantization_only_changed_elements": 43457,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16350,
+      "quantization_only_changed_elements": 16173,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16378,
+      "quantization_only_changed_elements": 16186,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16343,
+      "quantization_only_changed_elements": 16139,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.29.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16336,
+      "quantization_only_changed_elements": 16160,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43910,
+      "quantization_only_changed_elements": 43428,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16175,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16189,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16255,
+      "quantization_only_changed_elements": 16180,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16198,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.3.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16143,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43899,
+      "quantization_only_changed_elements": 43468,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16218,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16374,
+      "quantization_only_changed_elements": 16152,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16164,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16330,
+      "quantization_only_changed_elements": 16198,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16200,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.30.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 44008,
+      "quantization_only_changed_elements": 43441,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16323,
+      "quantization_only_changed_elements": 16156,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16375,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16241,
+      "quantization_only_changed_elements": 16151,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16245,
+      "quantization_only_changed_elements": 16151,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16239,
+      "quantization_only_changed_elements": 16181,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.31.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16216,
+      "quantization_only_changed_elements": 16154,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43936,
+      "quantization_only_changed_elements": 43438,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16150,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16174,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16207,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16199,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.4.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16148,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43781,
+      "quantization_only_changed_elements": 43459,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16343,
+      "quantization_only_changed_elements": 16132,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16382,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16174,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16272,
+      "quantization_only_changed_elements": 16145,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16181,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.5.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16379,
+      "quantization_only_changed_elements": 16159,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43846,
+      "quantization_only_changed_elements": 43453,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16329,
+      "quantization_only_changed_elements": 16192,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16162,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16171,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16294,
+      "quantization_only_changed_elements": 16167,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16183,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.6.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16383,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43772,
+      "quantization_only_changed_elements": 43441,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16231,
+      "quantization_only_changed_elements": 16155,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16337,
+      "quantization_only_changed_elements": 16111,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16157,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16262,
+      "quantization_only_changed_elements": 16144,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16384,
+      "quantization_only_changed_elements": 16184,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.7.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16367,
+      "quantization_only_changed_elements": 16169,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43723,
+      "quantization_only_changed_elements": 43450,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16215,
+      "quantization_only_changed_elements": 16152,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16229,
+      "quantization_only_changed_elements": 16164,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16359,
+      "quantization_only_changed_elements": 16176,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16228,
+      "quantization_only_changed_elements": 16172,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16370,
+      "quantization_only_changed_elements": 16178,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.8.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16379,
+      "quantization_only_changed_elements": 16161,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.mlp.down_proj",
+      "shape": [
+        4096,
+        11008
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 43961,
+      "quantization_only_changed_elements": 43425,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.mlp.gate_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16274,
+      "quantization_only_changed_elements": 16153,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.mlp.up_proj",
+      "shape": [
+        11008,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        3669,
+        7338,
+        11007
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16325,
+      "quantization_only_changed_elements": 16158,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.self_attn.k_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16327,
+      "quantization_only_changed_elements": 16157,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.self_attn.o_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16239,
+      "quantization_only_changed_elements": 16179,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.self_attn.q_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16355,
+      "quantization_only_changed_elements": 16179,
+      "primitive_equal": true
+    },
+    {
+      "name": "language_model.model.layers.9.self_attn.v_proj",
+      "shape": [
+        4096,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16342,
+      "quantization_only_changed_elements": 16127,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4051,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4085,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4067,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.0.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16303,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4044,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4080,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4066,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.1.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16238,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4040,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4061,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4042,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.10.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16188,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4046,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4048,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4039,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.11.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16167,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4046,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4057,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4043,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.12.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16172,
+      "quantization_only_changed_elements": 16382,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4048,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4058,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4060,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.13.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16194,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4050,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4055,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4029,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.14.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16179,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4041,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4057,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4042,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.15.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16184,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4036,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4041,
+      "quantization_only_changed_elements": 4095,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4036,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.16.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16170,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4042,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4061,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4033,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.17.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16156,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4048,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4052,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4030,
+      "quantization_only_changed_elements": 4095,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.18.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16161,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4035,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4060,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4051,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.19.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16184,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4057,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4078,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4035,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.2.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16246,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4040,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4046,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4033,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.20.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16170,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4024,
+      "quantization_only_changed_elements": 4089,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4052,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4038,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.21.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16201,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4036,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4047,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4034,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.22.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16189,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4042,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4061,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4057,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.3.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16227,
+      "quantization_only_changed_elements": 16382,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4056,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4064,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4048,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.4.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16226,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4039,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4065,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4050,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.5.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16157,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4047,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4040,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4040,
+      "quantization_only_changed_elements": 4095,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.6.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16166,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4046,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4049,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4045,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.7.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16188,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4049,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4049,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4033,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.8.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16171,
+      "quantization_only_changed_elements": 16383,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.attn.proj",
+      "shape": [
+        1024,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4039,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.attn.qkv",
+      "shape": [
+        3072,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1024,
+        2048,
+        3071
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4046,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.mlp.fc1",
+      "shape": [
+        4096,
+        1024
+      ],
+      "sampled_rows": [
+        0,
+        1365,
+        2730,
+        4095
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4062,
+      "quantization_only_changed_elements": 4096,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.blocks.9.mlp.fc2",
+      "shape": [
+        1024,
+        4096
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16174,
+      "quantization_only_changed_elements": 16384,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.featurizer.patch_embed.proj",
+      "shape": [
+        1024,
+        3,
+        14,
+        14
+      ],
+      "sampled_rows": [
+        0,
+        341,
+        682,
+        1023
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 2325,
+      "quantization_only_changed_elements": 2351,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4561,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4568,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4573,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.0.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17091,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4577,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4575,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.1.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17062,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4545,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4557,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4550,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.10.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16996,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4544,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4549,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4559,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.11.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16988,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4557,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4537,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4553,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.12.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17024,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4545,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4547,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.13.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16997,
+      "quantization_only_changed_elements": 17214,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4562,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4559,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4532,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.14.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16962,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4557,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4532,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.15.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16996,
+      "quantization_only_changed_elements": 17214,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4539,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4547,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.16.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17040,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4558,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4546,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4544,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.17.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17055,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4550,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4551,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4556,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.18.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17093,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4560,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4555,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4557,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.19.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17098,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4555,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4578,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4556,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.2.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17019,
+      "quantization_only_changed_elements": 17215,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4550,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4558,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.20.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17099,
+      "quantization_only_changed_elements": 17214,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4544,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4564,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4557,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.21.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17125,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4530,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4558,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4550,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.22.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17054,
+      "quantization_only_changed_elements": 17215,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4541,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4540,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.23.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17020,
+      "quantization_only_changed_elements": 17208,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4532,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4543,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4546,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.24.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17076,
+      "quantization_only_changed_elements": 17214,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4555,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4541,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4532,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.25.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17117,
+      "quantization_only_changed_elements": 17215,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4561,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4553,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.3.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17019,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4552,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4551,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4553,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.4.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17018,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4556,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4562,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4553,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.5.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 16990,
+      "quantization_only_changed_elements": 17215,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4546,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4566,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4545,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.6.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17000,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4559,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4563,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4555,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.7.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17011,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4554,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4542,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4553,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.8.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17032,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.attn.proj",
+      "shape": [
+        1152,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4543,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.attn.qkv",
+      "shape": [
+        3456,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1152,
+        2304,
+        3455
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4555,
+      "quantization_only_changed_elements": 4608,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.mlp.fc1",
+      "shape": [
+        4304,
+        1152
+      ],
+      "sampled_rows": [
+        0,
+        1434,
+        2869,
+        4303
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 4548,
+      "quantization_only_changed_elements": 4607,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.blocks.9.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 17013,
+      "quantization_only_changed_elements": 17216,
+      "primitive_equal": true
+    },
+    {
+      "name": "vision_backbone.fused_featurizer.patch_embed.proj",
+      "shape": [
+        1152,
+        3,
+        14,
+        14
+      ],
+      "sampled_rows": [
+        0,
+        384,
+        768,
+        1151
+      ],
+      "code_min": 0,
+      "code_max": 15,
+      "changed_elements": 2304,
+      "quantization_only_changed_elements": 2352,
+      "primitive_equal": true
+    }
+  ],
+  "official_quantizer_sha256": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+  "elapsed_seconds": 42.11593594029546,
+  "scope": "every target shape; four spread rows per tensor; complete checkpoint file hashes",
+  "limits": [
+    "No full-model forward, GPU parity, or packed INT4 kernel check.",
+    "Sampled rows do not constitute an exhaustive tensor numerical audit.",
+    "Protected parameters may change under compensated high-precision block scaling; no extra protected target quantized."
+  ]
+}
