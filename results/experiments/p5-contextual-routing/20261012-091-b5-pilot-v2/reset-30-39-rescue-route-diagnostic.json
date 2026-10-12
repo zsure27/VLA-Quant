@@ -1,0 +1,14 @@
+{
+  "episode": "6:30",
+  "source_archive": "091-b5-reset-30-39-complete-20261013-v1",
+  "archive_sha256": "0798f28c37c1b19c3a7d863fbf748d1da526c8e4f8d6b02c4a788de8397d45f7",
+  "queries": 15,
+  "expert0_query_indices": [0],
+  "expert1_query_indices": [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+  "switches": 1,
+  "B3": true,
+  "B4": false,
+  "B5": true,
+  "task_only": false,
+  "interpretation": "Same early B3-to-B4 sequence also occurs among earlier breaks. Observed selection sequence does not identify causal benefit or harm. Posthoc diagnostic, not model input or continuation criterion."
+}

@@ -1,0 +1,14 @@
+{
+  "gate": "PASS_LOCAL_ARCHIVE_SHA256",
+  "archive": "D:\\ProjectData\\Triton\\vla-quant-sync-20260915\\backups\\experiments\\p5-contextual-routing\\20261012-091-b5-pilot-v2\\091-b5-reset-30-39-complete-20261013-v1",
+  "files": {
+    "SHA256SUMS.txt": 3076,
+    "RESULTS_SHA256SUMS.txt": 2880
+  },
+  "server_commit": "852d35052526f79229362ac43571a009db0167e7",
+  "export_sha256": "0798f28c37c1b19c3a7d863fbf748d1da526c8e4f8d6b02c4a788de8397d45f7",
+  "export_bytes": 487115678,
+  "video_count": 200,
+  "server_archive": "/root/autodl-tmp/qvla-repro/backups/091-b5-reset-30-39-complete-20261013-v1",
+  "scope": "Complete reset30-39 increment plus all completed wrapper receipts; active reset40-49 excluded"
+}

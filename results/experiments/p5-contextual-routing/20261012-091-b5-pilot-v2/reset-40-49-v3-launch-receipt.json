@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-10-12T21:07:51.384389+00:00",
+  "runner_pid": 350051,
+  "plan": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/plans/reset-40-49-plan.json",
+  "status": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/plans/control/20261012-091-b5-pilot-v2-reset-40-49-continuation-v3/status.json",
+  "log": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/reset-40-49-runner.log",
+  "plan_file_sha256": "ecb7b89d4a4b35e2ab2fa91ae480940abcda6ddd06b323c8b6f3c90ecf385990",
+  "free_bytes": 14998134784,
+  "previous_gate": "PASS_B5_PHASE_PROTOCOL",
+  "continuation": "Preregistered protocol/resource/quota, not success direction"
+}
