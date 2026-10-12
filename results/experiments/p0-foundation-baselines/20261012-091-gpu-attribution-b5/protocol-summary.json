@@ -1,0 +1,40 @@
+{
+  "gate": "PASS_CPU_PROTOCOL_OBSERVATION_BRIDGE",
+  "elapsed_seconds": 799.5176070071757,
+  "within_protocol": {
+    "upstream_stream": {
+      "repeat_equal": true,
+      "mismatch_episode_keys": []
+    },
+    "historical_paired": {
+      "repeat_equal": true,
+      "mismatch_episode_keys": []
+    },
+    "corrected_paired": {
+      "repeat_equal": true,
+      "mismatch_episode_keys": []
+    }
+  },
+  "cross_protocol": {
+    "upstream_stream__vs__historical_paired": {
+      "changed_episodes": 20
+    },
+    "upstream_stream__vs__corrected_paired": {
+      "changed_episodes": 20
+    },
+    "historical_paired__vs__corrected_paired": {
+      "changed_episodes": 20
+    }
+  },
+  "source_file_sha256": "a04d8f2b559b88eb753388efd2e56bf5862e6a67db0f9a78a101ddee016cb313",
+  "complete_runs": 6,
+  "episodes_per_run": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "limits": "Fixed-action input probe only; success-rate causality and GPU baseline gate pending"
+}
