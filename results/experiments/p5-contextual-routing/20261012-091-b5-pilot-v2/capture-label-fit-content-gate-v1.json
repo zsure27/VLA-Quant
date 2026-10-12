@@ -1,0 +1,173 @@
+{
+  "gate": "PASS_B5_CAPTURE_LABEL_FIT_CONTENT_AUDIT",
+  "train_dev_observation_intersection": 0,
+  "results": {
+    "router_train": {
+      "samples": 400,
+      "episodes": 80,
+      "manifest_sha256": "0097e098c0ddc7082f1a091eccca35bf5803ae3c9cec003fda41376a2775df4e",
+      "expert_receipt_sha256": "6825cb01817d329152bd33f49ae453afcd67db8aea40d3bc4f9709c7738d0feb"
+    },
+    "router_dev": {
+      "samples": 100,
+      "episodes": 20,
+      "manifest_sha256": "06d7f3b1685ff264d1dae3e75f4dfaaff1a6a969b73aceceb47c0e1e4c164613",
+      "expert_receipt_sha256": "98cbc9d9e571a86d1a0678950da61ae35d047c9f952b4055b693929f660e628a"
+    },
+    "router": {
+      "version": "b5-causal-frozen-bank-pilot-v1-20261012",
+      "gate": "PASS_B5_ROUTER_TRAIN_CONTRACT",
+      "steps": 500,
+      "task_only": false,
+      "architecture": [
+        402,
+        64,
+        2
+      ],
+      "parameters": 25922,
+      "adapter_sha256": "553a9dc50b6ea36ca46640f94df0490cad666599011dca9de80d12761ff8db24",
+      "feature_schema": {
+        "version": "b5-causal-grid8-proprio8-instruction10-v1",
+        "dimension": 402,
+        "input_keys": [
+          "full_image",
+          "state",
+          "wrist_image"
+        ],
+        "grid": [
+          8,
+          8,
+          3
+        ],
+        "feature_order": [
+          "full_image",
+          "wrist_image",
+          "normalized_proprio",
+          "instruction_one_hot"
+        ],
+        "image_preparation": "mean_grid_of_policy_center_crop_prepared_camera_uint8",
+        "instruction_vocabulary": [
+          "pick up the black bowl between the plate and the ramekin and place it on the plate",
+          "pick up the black bowl next to the ramekin and place it on the plate",
+          "pick up the black bowl from table center and place it on the plate",
+          "pick up the black bowl on the cookie box and place it on the plate",
+          "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+          "pick up the black bowl on the ramekin and place it on the plate",
+          "pick up the black bowl next to the cookie box and place it on the plate",
+          "pick up the black bowl on the stove and place it on the plate",
+          "pick up the black bowl next to the plate and place it on the plate",
+          "pick up the black bowl on the wooden cabinet and place it on the plate"
+        ]
+      },
+      "feature_sha256": "73f7d23fb9720469162d957f177bea4cc3ddc1e523028f53fc28dc13877598ca",
+      "norm_stats_sha256": "df0001428c9cf66792d5cf97678ec8611d261de2f7fcdab3389bb022baad0deb",
+      "source_sha256": {
+        "qvla/b5_contract.py": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+        "qvla/b5_features.py": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+        "qvla/b5_route_state.py": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+        "qvla/b5_expert_bank.py": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+        "qvla/b5_runtime.py": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+        "qvla/run_eval_b5.py": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+        "scripts/train_b5_router.py": "296e0cc527c6c1214d68145a278a090f13298a8c3ba361294717f1b2b6933186",
+        "scripts/label_b5_observations.py": "6522e8e87663b5bdef6f3a5a1a95aafe1f1d3e13614ad92294d81582bf24213b",
+        "scripts/prepare_b5_router_data.py": "7ced310bfe233e434e8fd95c738b667b919a7fc9babe9bf0ebb3c47b33d12864",
+        "scripts/smoke_b5_gpu.py": "0e20415a8040185388e76ca047c8d12f4d38ed483b7e10cd39f093c165af16d3",
+        "scripts/audit_b5_protocol.py": "592126be6342983be5a391e65c4dc36b5f9c186e62d2ec34ed741bd24940d39f",
+        "configs/experiments/b5_pilot_v1_20261012.json": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151"
+      },
+      "train_capture_sha256": "0097e098c0ddc7082f1a091eccca35bf5803ae3c9cec003fda41376a2775df4e",
+      "dev_capture_sha256": "06d7f3b1685ff264d1dae3e75f4dfaaff1a6a969b73aceceb47c0e1e4c164613",
+      "train_label_sha256": "6825cb01817d329152bd33f49ae453afcd67db8aea40d3bc4f9709c7738d0feb",
+      "dev_label_sha256": "98cbc9d9e571a86d1a0678950da61ae35d047c9f952b4055b693929f660e628a",
+      "train_accuracy": 0.8600000143051147,
+      "dev_accuracy": 0.8799999952316284,
+      "claim": "CPU selector fit only; no closed-loop benefit; no dev checkpoint selection",
+      "tie_rule": "E1"
+    },
+    "task-only": {
+      "version": "b5-causal-frozen-bank-pilot-v1-20261012",
+      "gate": "PASS_B5_ROUTER_TRAIN_CONTRACT",
+      "steps": 500,
+      "task_only": true,
+      "architecture": [
+        10,
+        64,
+        2
+      ],
+      "parameters": 834,
+      "adapter_sha256": "008deecc151afa31e2b1e2dcd83e07bbd9c6033cd5d9fe3a6626bcef4c37bf4c",
+      "feature_schema": {
+        "version": "b5-causal-grid8-proprio8-instruction10-v1",
+        "dimension": 402,
+        "input_keys": [
+          "full_image",
+          "state",
+          "wrist_image"
+        ],
+        "grid": [
+          8,
+          8,
+          3
+        ],
+        "feature_order": [
+          "full_image",
+          "wrist_image",
+          "normalized_proprio",
+          "instruction_one_hot"
+        ],
+        "image_preparation": "mean_grid_of_policy_center_crop_prepared_camera_uint8",
+        "instruction_vocabulary": [
+          "pick up the black bowl between the plate and the ramekin and place it on the plate",
+          "pick up the black bowl next to the ramekin and place it on the plate",
+          "pick up the black bowl from table center and place it on the plate",
+          "pick up the black bowl on the cookie box and place it on the plate",
+          "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+          "pick up the black bowl on the ramekin and place it on the plate",
+          "pick up the black bowl next to the cookie box and place it on the plate",
+          "pick up the black bowl on the stove and place it on the plate",
+          "pick up the black bowl next to the plate and place it on the plate",
+          "pick up the black bowl on the wooden cabinet and place it on the plate"
+        ]
+      },
+      "feature_sha256": "73f7d23fb9720469162d957f177bea4cc3ddc1e523028f53fc28dc13877598ca",
+      "norm_stats_sha256": "df0001428c9cf66792d5cf97678ec8611d261de2f7fcdab3389bb022baad0deb",
+      "source_sha256": {
+        "qvla/b5_contract.py": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+        "qvla/b5_features.py": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+        "qvla/b5_route_state.py": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+        "qvla/b5_expert_bank.py": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+        "qvla/b5_runtime.py": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+        "qvla/run_eval_b5.py": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+        "scripts/train_b5_router.py": "296e0cc527c6c1214d68145a278a090f13298a8c3ba361294717f1b2b6933186",
+        "scripts/label_b5_observations.py": "6522e8e87663b5bdef6f3a5a1a95aafe1f1d3e13614ad92294d81582bf24213b",
+        "scripts/prepare_b5_router_data.py": "7ced310bfe233e434e8fd95c738b667b919a7fc9babe9bf0ebb3c47b33d12864",
+        "scripts/smoke_b5_gpu.py": "0e20415a8040185388e76ca047c8d12f4d38ed483b7e10cd39f093c165af16d3",
+        "scripts/audit_b5_protocol.py": "592126be6342983be5a391e65c4dc36b5f9c186e62d2ec34ed741bd24940d39f",
+        "configs/experiments/b5_pilot_v1_20261012.json": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151"
+      },
+      "train_capture_sha256": "0097e098c0ddc7082f1a091eccca35bf5803ae3c9cec003fda41376a2775df4e",
+      "dev_capture_sha256": "06d7f3b1685ff264d1dae3e75f4dfaaff1a6a969b73aceceb47c0e1e4c164613",
+      "train_label_sha256": "6825cb01817d329152bd33f49ae453afcd67db8aea40d3bc4f9709c7738d0feb",
+      "dev_label_sha256": "98cbc9d9e571a86d1a0678950da61ae35d047c9f952b4055b693929f660e628a",
+      "train_accuracy": 0.8349999785423279,
+      "dev_accuracy": 0.8399999737739563,
+      "claim": "CPU selector fit only; no closed-loop benefit; no dev checkpoint selection",
+      "tie_rule": "E1"
+    }
+  },
+  "source_sha256": {
+    "qvla/b5_contract.py": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+    "qvla/b5_features.py": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+    "qvla/b5_route_state.py": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+    "qvla/b5_expert_bank.py": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+    "qvla/b5_runtime.py": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+    "qvla/run_eval_b5.py": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+    "scripts/train_b5_router.py": "296e0cc527c6c1214d68145a278a090f13298a8c3ba361294717f1b2b6933186",
+    "scripts/label_b5_observations.py": "6522e8e87663b5bdef6f3a5a1a95aafe1f1d3e13614ad92294d81582bf24213b",
+    "scripts/prepare_b5_router_data.py": "7ced310bfe233e434e8fd95c738b667b919a7fc9babe9bf0ebb3c47b33d12864",
+    "scripts/smoke_b5_gpu.py": "0e20415a8040185388e76ca047c8d12f4d38ed483b7e10cd39f093c165af16d3",
+    "scripts/audit_b5_protocol.py": "592126be6342983be5a391e65c4dc36b5f9c186e62d2ec34ed741bd24940d39f",
+    "configs/experiments/b5_pilot_v1_20261012.json": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151"
+  },
+  "continuation": "Protocol/content only; no selection by accuracy or success direction"
+}

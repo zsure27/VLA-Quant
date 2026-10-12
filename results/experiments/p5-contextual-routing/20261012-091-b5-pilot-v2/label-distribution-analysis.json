@@ -1,0 +1,34 @@
+{
+  "router_train": {
+    "samples": 400,
+    "lower_teacher_loss_e0_e1_counts": [
+      66,
+      334
+    ],
+    "exact_ties": 0,
+    "constant_majority_label_accuracy": 0.835,
+    "mean_expert_losses": [
+      0.06141467019915581,
+      0.05528392270207405
+    ],
+    "mean_oracle_loss": 0.054649561643600464,
+    "mean_best_fixed_loss": 0.05528392270207405,
+    "claim": "Teacher imitation loss labels; no closed-loop benefit or deployable oracle claim"
+  },
+  "router_dev": {
+    "samples": 100,
+    "lower_teacher_loss_e0_e1_counts": [
+      16,
+      84
+    ],
+    "exact_ties": 0,
+    "constant_majority_label_accuracy": 0.84,
+    "mean_expert_losses": [
+      0.06237103417515755,
+      0.0570678748190403
+    ],
+    "mean_oracle_loss": 0.05537743866443634,
+    "mean_best_fixed_loss": 0.0570678748190403,
+    "claim": "Teacher imitation loss labels; no closed-loop benefit or deployable oracle claim"
+  }
+}

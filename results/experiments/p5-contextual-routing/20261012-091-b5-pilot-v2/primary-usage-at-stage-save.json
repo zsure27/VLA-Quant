@@ -1,0 +1,13 @@
+{
+  "gate": "PASS_RECENT_CURRENT_TASK_PRIMARY_RESPONSE_METADATA",
+  "source": "Current task API response token_count.rate_limits; not an estimate or auth file",
+  "task_id": "01a0c822-c941-7521-ab48-c2dc25f66df3",
+  "response_timestamp_utc": "2026-10-12T13:31:37.788Z",
+  "read_timestamp_utc": "2026-10-12T13:31:56.493686+00:00",
+  "age_seconds": 18.705686,
+  "used_percent": 34.0,
+  "remaining_percent": 66.0,
+  "resets_at": 1791825629,
+  "window_duration_minutes": 300,
+  "session_file": "rollout-2026-10-09T20-59-55-01a0c822-c941-7521-ab48-c2dc25f66df3_01a120bf-ad52-7dd1-881a-23ff2d0b1ca4.jsonl"
+}
