@@ -1,0 +1,107 @@
+{
+  "gate": "PASS_ARCHIVED_A0_PROVENANCE_AND_METRICS",
+  "classification": "historical same-task development, not a new GPU run",
+  "inputs": {
+    "reports\\experiments\\p0-foundation-baselines\\20260917-107-baseline-validation\\awq-profile-metadata.json": "583660f13fc5bb696985ffcec43f61fe0435bcad82829a4dd1a62ec48f0dbc99",
+    "reports\\experiments\\p0-foundation-baselines\\20260917-107-baseline-continuation\\data\\paired_episodes.csv": "5f71e213c57d7fa77838c92b73e28475ee30a252690a36d9b6b34a74f2ed9b19",
+    "configs\\qvla-connected-422.txt": "513e1d937d1b345ec00fdb19eee73709b8704941b18c21e2258bdf795f495b3a"
+  },
+  "profile_sha256_from_archived_metadata": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4",
+  "profile_binary_rehashed_this_run": false,
+  "implementation_source_checks": {
+    "official_quant_adapter.py": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\qvla\\official_quant_adapter.py",
+      "expected": "6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171",
+      "raw_sha256": "6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171",
+      "lf_sha256": "6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171",
+      "match": "exact_bytes"
+    },
+    "awq_block.py": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\qvla\\awq_block.py",
+      "expected": "745ae6830080ef11400fb47f3bc9f2ba6a75e1fed80dcd5365189b18d076a0bb",
+      "raw_sha256": "745ae6830080ef11400fb47f3bc9f2ba6a75e1fed80dcd5365189b18d076a0bb",
+      "lf_sha256": "745ae6830080ef11400fb47f3bc9f2ba6a75e1fed80dcd5365189b18d076a0bb",
+      "match": "exact_bytes"
+    },
+    "action_jacobian_batch.py": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\qvla\\action_jacobian_batch.py",
+      "expected": "9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886",
+      "raw_sha256": "9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886",
+      "lf_sha256": "9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886",
+      "match": "exact_bytes"
+    },
+    "runtime_contract.py": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\qvla\\runtime_contract.py",
+      "expected": "efeadd4c72438c4ca83c36a9fc0f363c9dcf554950988f6e10b76a48f930028f",
+      "raw_sha256": "efeadd4c72438c4ca83c36a9fc0f363c9dcf554950988f6e10b76a48f930028f",
+      "lf_sha256": "efeadd4c72438c4ca83c36a9fc0f363c9dcf554950988f6e10b76a48f930028f",
+      "match": "exact_bytes"
+    }
+  },
+  "official_primitive_source_checks": {
+    "awq_auto_scale": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\openvla-official-quant-adapter\\awq\\quantize\\auto_scale.py",
+      "expected": "b6cf9bc5c7de67a03f56366046d473c1f6633ee6df3f59748b4559d47df858e8",
+      "raw_sha256": "b6cf9bc5c7de67a03f56366046d473c1f6633ee6df3f59748b4559d47df858e8",
+      "lf_sha256": "b6cf9bc5c7de67a03f56366046d473c1f6633ee6df3f59748b4559d47df858e8",
+      "match": "exact_bytes"
+    },
+    "awq_auto_clip": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\openvla-official-quant-adapter\\awq\\quantize\\auto_clip.py",
+      "expected": "fca53998885661c4930c7a373f52d9dc25e58fb15ad74c87678673ed5209157d",
+      "raw_sha256": "fca53998885661c4930c7a373f52d9dc25e58fb15ad74c87678673ed5209157d",
+      "lf_sha256": "fca53998885661c4930c7a373f52d9dc25e58fb15ad74c87678673ed5209157d",
+      "match": "exact_bytes"
+    },
+    "awq_quantizer": {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\openvla-official-quant-adapter\\awq\\quantize\\quantizer.py",
+      "expected": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+      "raw_sha256": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+      "lf_sha256": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+      "match": "exact_bytes"
+    }
+  },
+  "scope": {
+    "language": 224,
+    "DINO": 93,
+    "SigLIP": 105
+  },
+  "full_reset0_49": {
+    "episodes": 500,
+    "BF16_success": 487,
+    "A0_success": 486,
+    "BF16_percentage": 97.4,
+    "A0_percentage": 97.2,
+    "A0_vs_BF16_rescue": 9,
+    "A0_vs_BF16_break": 10,
+    "net": -1
+  },
+  "filtered_reset5_49": {
+    "episodes": 450,
+    "BF16_success": 440,
+    "A0_success": 439,
+    "BF16_percentage": 97.77777777777777,
+    "A0_percentage": 97.55555555555556,
+    "A0_vs_BF16_rescue": 8,
+    "A0_vs_BF16_break": 9,
+    "net": -1
+  },
+  "paper_table2": {
+    "source": "https://arxiv.org/html/2602.03782v1#S4.T2",
+    "OpenVLA_OFT_Spatial": {
+      "FP": 97.6,
+      "AWQ_W4A16": 93.0
+    },
+    "four_suite_average": {
+      "FP": 97.1,
+      "AWQ_W4A16": 92.5
+    }
+  },
+  "unresolved": [
+    "QVLA table2 AWQ recipe/calibration/actual command and checkpoint revision are not publicly fixed.",
+    "Our vision adaptation and per-episode paired seeding are not proven to match the paper.",
+    "This audit checks source bytes and archived declared coverage, not tensor-level quantization or GPU parity.",
+    "Packed W4/W2 storage, kernels and latency are not certified.",
+    "Reset5-49 does not automatically exclude offline PTQ calibration exposure."
+  ]
+}
