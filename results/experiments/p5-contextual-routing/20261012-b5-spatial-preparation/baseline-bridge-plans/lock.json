@@ -1,0 +1,16 @@
+{
+  "version": "p0-091-protocol-bridge-v1",
+  "expected_hostname": "autodl-container-dfbc4bb0ff-1e85dd94",
+  "files": {
+    "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/plans/materials.json": "a2d9cd9c342d40ce13a85fac391883e3eced83491a6facab51d5ef70aae8e248",
+    "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/source/scripts/prepare_baseline_gpu_bridge_plans.py": "bc227788a509a4e03499d2025344c6cdcbb875afb88ee53898f7325f3429ed8b",
+    "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/source/scripts/run_locked_peft_stage.py": "fdb3f22a6a3d7633fac34fc03ef08277306d42516f60e6e7d3798c70e5029128",
+    "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/source/qvla/run_eval_official_quant.py": "e7441b533ffdedcbf33aac555da1067487796fa48c7274d1bb6a723ce2bb3f8b",
+    "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/source/scripts/check_b5_gpu_start.py": "1b122e59f604ddf9da504e3b3c2efe1917db6969773f7b3487162eba2573132f",
+    "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/source/scripts/audit_baseline_gpu_bridge.py": "b51c65f9d724292de2c2b1ad7f6bd81978c0b8ce2c368c37cf8c75b36a93f05f",
+    "/root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w4.pt": "ea3faca6130c88bd38fbe20be28eafc742d66605d339f8d9acfedb8da4703ea4",
+    "/root/autodl-tmp/qvla-repro/control/cpu-audit-20261012/oft-corrected-v1/experiments/robot/libero/run_libero_eval.py": "a4061279eebe82944f048bebfc9e85fa85acf0d7a9cf5d6ce18aea1102694fe2"
+  },
+  "max_stage_seconds": 14400,
+  "max_plan_seconds": 86400
+}

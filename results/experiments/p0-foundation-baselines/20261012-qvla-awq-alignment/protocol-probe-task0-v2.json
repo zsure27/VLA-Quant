@@ -1,0 +1,37 @@
+{
+  "gate": "FAIL_CPU_BRIDGE",
+  "plan": {
+    "classification": "CPU no-model fixed-action environment/preprocessing diagnostic",
+    "protocols": [
+      "upstream_stream",
+      "historical_paired",
+      "corrected_paired"
+    ],
+    "tasks": 1,
+    "reset_indices": [
+      0,
+      1
+    ],
+    "repeats": 2,
+    "model_seed": 7,
+    "env_seed": 0,
+    "episodes": 12,
+    "queries_per_episode": 2,
+    "wait_steps": 10,
+    "fixed_execution_steps": 16,
+    "chunk": [
+      8,
+      7
+    ],
+    "historical_evaluator_sha256": "fe37e8097c286e1946e5194a1f817a2b2362d167a6a5a49443c5aa20314d8873",
+    "limits": [
+      "Upstream environment/preprocessing stream only; 7B model initialization and forward RNG are excluded.",
+      "Fixed sixteen-step episode length differs from real success-dependent rollout lengths.",
+      "No success-rate, quantization, independence or long-evaluation admission claim.",
+      "Historical seed order is bound to the archived evaluator; current utility sources are separately recorded."
+    ]
+  },
+  "error_type": "RuntimeError",
+  "error": "Current evaluator is not the corrected paired-order version",
+  "gpu_admission": false
+}

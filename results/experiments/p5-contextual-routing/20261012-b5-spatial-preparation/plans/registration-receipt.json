@@ -1,0 +1,23 @@
+{
+  "gate": "PASS_B5_IMMUTABLE_PLANS_CPU_REGISTERED",
+  "gpu_started": false,
+  "formal_episode_budget": 2750,
+  "additional_baseline_episodes": 100,
+  "micro_overlap": "excluded from formal totals",
+  "spec_sha256": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151",
+  "source_sha256": {
+    "qvla/b5_contract.py": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+    "qvla/b5_features.py": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+    "qvla/b5_route_state.py": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+    "qvla/b5_expert_bank.py": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+    "qvla/b5_runtime.py": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+    "qvla/run_eval_b5.py": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+    "scripts/train_b5_router.py": "296e0cc527c6c1214d68145a278a090f13298a8c3ba361294717f1b2b6933186",
+    "scripts/label_b5_observations.py": "6522e8e87663b5bdef6f3a5a1a95aafe1f1d3e13614ad92294d81582bf24213b",
+    "scripts/prepare_b5_router_data.py": "7ced310bfe233e434e8fd95c738b667b919a7fc9babe9bf0ebb3c47b33d12864",
+    "scripts/smoke_b5_gpu.py": "0e20415a8040185388e76ca047c8d12f4d38ed483b7e10cd39f093c165af16d3",
+    "scripts/audit_b5_protocol.py": "592126be6342983be5a391e65c4dc36b5f9c186e62d2ec34ed741bd24940d39f",
+    "configs/experiments/b5_pilot_v1_20261012.json": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151"
+  },
+  "pending": "actual CPU environment probe; baseline GPU gate; bank smoke; data content intersections; >=12GiB free before GPU start"
+}

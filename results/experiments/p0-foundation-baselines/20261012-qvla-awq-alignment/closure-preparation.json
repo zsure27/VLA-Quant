@@ -1,0 +1,28 @@
+{
+  "status": "CPU_FEASIBLE_WORK_COMPLETE_REAL_INPUT_AND_GPU_GATES_PENDING",
+  "executing_code_git": "eb196183a3b1e5d012ea6dbaed6ee3297ee9ce5d",
+  "CPU_contract_tests": {"basic": 9, "protocol": 4, "B5": 8, "total": 21},
+  "actual_profile_gate": "PASS_CPU_ACTUAL_PROFILE_CHECKPOINT_AND_ROW_QUANTIZATION",
+  "actual_input_gate": "NOT_PASSED_SYSTEM_KILLED_IN_2GiB_NO_GPU_ENVIRONMENT",
+  "kernel_oom_kill_independently_confirmed": false,
+  "W4_spatial_gap_pp": 4.2,
+  "W4_gap_causal_explanation": "PENDING_GPU_PROTOCOL_AND_RECIPE_ATTRIBUTION",
+  "B5_plan_registration": "PASS_B5_IMMUTABLE_PLANS_CPU_REGISTERED",
+  "B5_GPU_started": false,
+  "final_plan_root": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/plans",
+  "current_complete_backup": "/root/autodl-tmp/qvla-repro/backups/cpu-audit-091-final-20261012-v1",
+  "local_backup": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/backups/experiments/p0-foundation-baselines/20261012-qvla-awq-alignment/cpu-audit-091-final-20261012-v1",
+  "prior_export_bytes": 6706503680,
+  "prior_export_server_and_local_SHA256": "8399ed0ff145c1162cf3eca1c9414aa184f9cfe7e08417bef323000e40c78668",
+  "prior_per_file_local_verification": {
+    "046": {"SHA256SUMS": 13, "RESULTS_SHA256SUMS": 18494, "gate": "PASS_LOCAL_ARCHIVE_SHA256"},
+    "091": {"SHA256SUMS": 8952, "RESULTS_SHA256SUMS": 8897, "gate": "PASS_LOCAL_ARCHIVE_SHA256"}
+  },
+  "prior_local_root": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/backups/experiments/p2-shared-peft",
+  "only_deleted_file": "Remote temporary duplicate prior-full-archives.tar after full local verification; original directories and local package preserved",
+  "persistent_free_bytes_after_duplicate_export_cleanup": 10779123712,
+  "GPU_start_minimum_free_bytes": 12884901888,
+  "GPU_smoke_and_paper_replication_passed": false,
+  "remote_native_shutdown": "PENDING_BACKUP_AND_GITHUB_VERIFICATION",
+  "Windows_shutdown_authorized_this_round": false
+}
