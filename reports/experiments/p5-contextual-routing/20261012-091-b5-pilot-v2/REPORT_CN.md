@@ -18,6 +18,8 @@
 
 21:52已接续注册first50-plan.json，runner31097，七配置各reset5–9的50回合，含random。文件SHA d15f7948b1a19c348e4ec2135ccc3d475589a60e8814ebd5619106ec5fce487d与本机预注册一致。先按协议放行，不因9/10或未来成绩改变实验条件。原计划审计只列四核心策略；首片结束后须用相同冻结audit_b5_protocol.py额外纳入random输入执行完整控制审计，保存独立first50-all-controls-gate.json，再接后片，不重复GPU回合。当前微测60回合仍不拼入正式样本。
 
+检查尚未运行的10–49分片发现：旧生成器重复使用stage-records/verify-prior和stage-records/audit-phase，冻结wrapper拒绝已有输出，后续会在首个审计阶段被阻断。独立continuation-plans-v3改为各分片唯一审计目录、独立control_root/plan_id，下一10–19的前片审计纳入random并绑定first50-all-controls-gate.json。逐阶段比较确认所有GPU命令、模型/训练/评测语义完全保持，41个wrapper输出跨当前首片及四后片无重复。旧计划、正在运行首片及冻结源码均保留；后片必须使用新版本注册路径，不能启动旧10–49计划。本修正属于执行/审计目录修复，不重新训练、不重跑已完成评测，也不放宽门禁。
+
 基线协议归因范围仍见P0同轮报告：paired/upstream小片A0相差一个成功，不能称4.2pp已完全归因或QVLA严格复现。B5为经项目基线与bank等价门禁后的探索性pilot；必须保留最佳固定B3/B4、task-only及random控制，报告全部异容量bank成本，当前伪量化不声称真实INT2部署收益。
 
 ## 阶段备份与额度
