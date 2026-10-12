@@ -1,0 +1,13 @@
+{
+  "gate": "PASS_LOCAL_ARCHIVE_SHA256",
+  "archive": "D:\\ProjectData\\Triton\\vla-quant-sync-20260915\\backups\\experiments\\p5-contextual-routing\\20261012-091-b5-pilot-v2\\091-b5-first50-complete-20261012-v1",
+  "files": {
+    "SHA256SUMS.txt": 1818,
+    "RESULTS_SHA256SUMS.txt": 1795
+  },
+  "server_commit": "852d35052526f79229362ac43571a009db0167e7",
+  "export_sha256": "37290e27fb8b4aa366dda5d90410e9dd04413b30c5f5c0016d56231fa6fc2a50",
+  "export_bytes": 316067938,
+  "baseline_videos": 120,
+  "scope": "Completed micro/first50, active reset10-19 excluded"
+}

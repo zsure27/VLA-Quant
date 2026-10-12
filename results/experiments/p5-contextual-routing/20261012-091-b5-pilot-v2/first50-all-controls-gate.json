@@ -1,0 +1,121 @@
+{
+  "gate": "PASS_B5_PHASE_PROTOCOL",
+  "offset": 5,
+  "count": 5,
+  "policies": {
+    "fixed-e0": {
+      "episodes": 50,
+      "successes": 47,
+      "manifest_sha256": "df03b40096c581064df2d73f6c736c32f45a35e43742ef59168b00f3a65cf548"
+    },
+    "fixed-e1": {
+      "episodes": 50,
+      "successes": 49,
+      "manifest_sha256": "d141a802978dad851d281cd36990410c924f854372b3643f33456beacd60625b"
+    },
+    "router": {
+      "episodes": 50,
+      "successes": 48,
+      "manifest_sha256": "4e0d207296e47f0bade7b0aeec28c8f931320f0aad7bf4f1c09a829b47b5942e"
+    },
+    "task-only": {
+      "episodes": 50,
+      "successes": 49,
+      "manifest_sha256": "aebd3b13f5d2158263e5831c14440b89abc98c4124c5e3063a753c955083cb79"
+    },
+    "random": {
+      "episodes": 50,
+      "successes": 49,
+      "manifest_sha256": "81b6c92ec6e8199a06cd08c6eed689f4b0892ae9aed3d532481beb3eda02e14a"
+    }
+  },
+  "first_observation_sha256": {
+    "0:5": "a5bfa335896b917623d49e5ea291c1ec049cf12a98240b3d4fd062b402063fe5",
+    "0:6": "4dc00975df44c42bc5de38427e1fcb14b35553a5035e3c03344c92fc83279c7f",
+    "0:7": "3b7678771a28958dee83d7d88a872365e43237d1de8a0d1019eb8df32354a987",
+    "0:8": "a535f8dd1bff1aae1c6239ed9f6371b4353164155c4967dda6950c66bbac1680",
+    "0:9": "4f30bad0f080ab8711a4d83983d61be86b9ea5c170e225c65fdafac9540d633c",
+    "1:5": "0c65ee87b57da906e6a21fdc345c5f4d15dd4fb751b1eba19899791a20572838",
+    "1:6": "7c54bd5b25c45c1cde3798e53a07da0f191f7b91605a140482e35f443aa08bd0",
+    "1:7": "09d1f658a5ab43d044cd8660e5b57ffa96821a924594babcf5cae02b321612be",
+    "1:8": "29659e74d8643a57eed99f302d38a882a39b7e7bda72b1419de181e03346b801",
+    "1:9": "3a2a16202c54c6b1e8c71ec71e31d497d6a3fe04b066d97474e236a449b026aa",
+    "2:5": "6321a28d98e2516077812aee953447eef37fd61f00fb86a1be787bf092683cc4",
+    "2:6": "fb1ad89110d11750dc55fd547773c5bb00fd960492572b9b65295eaa689e0347",
+    "2:7": "cf592cb991e223ae2ccede5f528aeb9aad281d7744c2e77b0fbfe4d0866a4bb1",
+    "2:8": "c9d63fbda25b21b1eda9144bb29cd52c2a4661519d52499109c1d3c60e856507",
+    "2:9": "3eef336b5ab541173c5c10bfa9bca3b788cb2f1dabae3acb0ae80f942c009558",
+    "3:5": "c96e09a12741e6cefa126c58b12b627e829df41ebf9d4021b44ac2358c2de0a6",
+    "3:6": "aa7edc343c1575174f773c0100e41d33a4151f2654e560d692cab2ece12d73cb",
+    "3:7": "a527b842e22f5c060478c8a051377423edd22f1ea144d2af63662693929f69fa",
+    "3:8": "33d77de55c72c5ba0a35a31c043f2cc5051820bf1e1b35d8e488aaaa7476be25",
+    "3:9": "91b48c081f31e4dca5ca636839b1bcfd25a9775fab35471190edd5292db71f7d",
+    "4:5": "6b14cd1eefcec69e1f9da0ea27a641cc7e0489991b27f51e37207dec002c064b",
+    "4:6": "14007cae5b51488db8029f45c575f5cd636eb085d06ef88d82e5b5f408534493",
+    "4:7": "b6fff2862661271ed5eba73360cbb7edac0ab7e9a87f09825999f5e6045753cf",
+    "4:8": "e862ca2894b55652cf6c004dddbd8c9ecf0ae1f0436bbaedb8363acbc05a5132",
+    "4:9": "2d31f4cd877859ec26da591026d56390ec976ce69e6bb39e422eb2d15f0bf3fa",
+    "5:5": "a8e882164bab1935ee9b04964ecbeb1e064ffd3775122e9e14209aa3ffaa520e",
+    "5:6": "9a8716112a8e66b7f398fe481c35da300d52fcd4fd1ac06b2f6534b6419a3fd1",
+    "5:7": "98364f54659c04a1479415a50c90cfb41fad27a7fa8d52d819646df4367e27fa",
+    "5:8": "7801e2f6f168508a6060f8dace1cd4d93b21f8c13006abe641506f79c87cf90c",
+    "5:9": "2aeb148f9d1ff9f10cb201c3f63660a7f629b750bb26119dbaf151b554b8bd53",
+    "6:5": "0c5220021ff9c52be8ed703c9cdd5311ab3e89bc3dc8ef38d4c5785dd1bf8301",
+    "6:6": "8785daca4844d17006f9c6468f6ce7fe339a1bef2167282837c26cb6f78bdd86",
+    "6:7": "6e2427cc25f26461e2bf75395da3c3d2920c90a49238be73c8dcacc616ea951f",
+    "6:8": "034805ba62f26b16f2cc73e2d3089d0731181be062a3ce6d443b2e8c7a9c8258",
+    "6:9": "549ee17c4da32d8ebb1bb294670bd848a923c3ce4a5b30d70162f4b5d58e9c7d",
+    "7:5": "40aa07d8a3358a91007ea5e58f8a7e6a36fa7cd3517a3d1b498f89264ceed495",
+    "7:6": "370217298a1cf34b9a342e61283d2278f3f666660d079530ba77fc5850916ff9",
+    "7:7": "efa31307ff4ba30c2157027a074a75ca88b34997bde6a7203e23a78fcbc8bfb6",
+    "7:8": "c9b2055b8ff1d27fc759218efd29bc8ef275a0081dab0d51ed842496dbcd1382",
+    "7:9": "9609c2220701546e9d0064c8cb3b8ebd5b1e1314ae41d9efbe7c3369911d77dc",
+    "8:5": "6a5464aab5ad966a5497e6cd2f64af7db03695d86125db5d8b2b43378fea998c",
+    "8:6": "0ed2b907d38b3b621a8532866151e1591e3362af6c65e4e671ae38143f2f9cd9",
+    "8:7": "73e72b9f8407e508801279235ba4cdb49911c257a7dc69121b2739d7f94c9c9b",
+    "8:8": "fd742bf0d0c0749223096b2631bcc1c16d6a26d120c57cdd3179e0e880b49cdd",
+    "8:9": "876b03be583d170cff521c1472c6bd07c988465a6219b72954764b474e33810f",
+    "9:5": "98e6850a12b895f2bd54511e608076ce67620dda1c9484205c79a7e934c34839",
+    "9:6": "1845f592ec62bbc65a4def041dc00b67969e65d3d15639a5d6a4878304aacc1b",
+    "9:7": "9c3447c18304707346ae57f7148bcc79a9b7eccca5931e96e81bb9e05dae5644",
+    "9:8": "cf7564fb45883dbb717b9050ae8bded8a410af25c0b3b3f84a75fcd7013a8a5e",
+    "9:9": "2208bb9152c75988a1ecd0a848919a7980b5af9a3e292a8367b9660050b1c383"
+  },
+  "source_sha256": {
+    "qvla/b5_contract.py": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+    "qvla/b5_features.py": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+    "qvla/b5_route_state.py": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+    "qvla/b5_expert_bank.py": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+    "qvla/b5_runtime.py": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+    "qvla/run_eval_b5.py": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+    "scripts/train_b5_router.py": "296e0cc527c6c1214d68145a278a090f13298a8c3ba361294717f1b2b6933186",
+    "scripts/label_b5_observations.py": "6522e8e87663b5bdef6f3a5a1a95aafe1f1d3e13614ad92294d81582bf24213b",
+    "scripts/prepare_b5_router_data.py": "7ced310bfe233e434e8fd95c738b667b919a7fc9babe9bf0ebb3c47b33d12864",
+    "scripts/smoke_b5_gpu.py": "0e20415a8040185388e76ca047c8d12f4d38ed483b7e10cd39f093c165af16d3",
+    "scripts/audit_b5_protocol.py": "592126be6342983be5a391e65c4dc36b5f9c186e62d2ec34ed741bd24940d39f",
+    "configs/experiments/b5_pilot_v1_20261012.json": "474d11beb1a8988db073e7fe24a6ef00ff446c9fa079374275ae49de6247f151"
+  },
+  "criterion": "protocol only; no success-rate continuation selection",
+  "references": {
+    "BF16": {
+      "successes": 48,
+      "files": {
+        "EVAL-libero_spatial-openvla-2026_10_12-21_52_45.txt": "410f637bb51f749896e261dc4e70a9afcf47c50d05071b0c03d433601e6c98fe",
+        "invocation.json": "df09433f84d00f298d52cd90b26bcabd6abf6ca9458e2a0c251cd1d68079137e",
+        "policy-queries.jsonl": "f6b32e824933d1a910c868070e3a9b7741394418cde5360e8a862eddc430d88d",
+        "on-policy-events.jsonl": "ba59bc2d669c7ed712346b3a24a253c763980fc88b60fb3a775002ee68e4d99e",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 49,
+      "files": {
+        "EVAL-libero_spatial-openvla-2026_10_12-22_03_24.txt": "aa5cd40c872f21387bd323a953ac8341be3b1681e28d9620f0a5f031bb4bc7ad",
+        "invocation.json": "9c557a15ed0a3d8a323887b067e877d115d2f973e720e9f6011dbc146f80c862",
+        "policy-queries.jsonl": "83d384c1b1cce0bbf054378d33e711741f6cc1bfd5b72684ff872cb9b2ad618d",
+        "on-policy-events.jsonl": "455bf0aae2360960e98a755db425ac2197369c94460d4de9edb4b4992f794ce4",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  }
+}
