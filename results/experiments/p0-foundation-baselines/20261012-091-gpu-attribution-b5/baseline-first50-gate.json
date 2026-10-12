@@ -1,0 +1,31 @@
+{
+  "gate": "PASS_GPU_BASELINE_INPUT_AND_QUANTIZATION",
+  "checkpoint_sha256": "b909ec7ebc9d41890a7b956118763af4a78e408ba7a39106d2be4b3109918340",
+  "cpu_receipt_sha256": "c7baeb0ca43b07ee75b192a3f680a950483d283b860b0c03afab631065755a55",
+  "runtime_evaluator_sha256": "a4061279eebe82944f048bebfc9e85fa85acf0d7a9cf5d6ce18aea1102694fe2",
+  "paired_episodes": 50,
+  "cases": {
+    "BF16": {
+      "successes": 50,
+      "files": {
+        "EVAL-libero_spatial-openvla-2026_10_12-19_25_44.txt": "b4284ad8e58907b706d8d0d141cb62c780897c51062a0026eaa12e715fc0529b",
+        "invocation.json": "01f9df08a14c84363080df8172dc58292b96cbd882a606b4146c8469fb73fe45",
+        "policy-queries.jsonl": "f6b1d6cb9fd9d0676731786025679f8b1f5c99fd6994e888a33dbec96611b34d",
+        "on-policy-events.jsonl": "a5fa9fc77a4edd4f81d407464c60d1bd9abebaa662a1cc8c2653fa2666424e1f",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "A0": {
+      "successes": 50,
+      "files": {
+        "EVAL-libero_spatial-openvla-2026_10_12-19_36_19.txt": "04aca683131b31b8288db0af7d16c44f78f6975757fa36b1a411e0360671adc3",
+        "invocation.json": "72038607d493df94984c9da010f560c36463d8be22c21994e947b65b57fb28a3",
+        "policy-queries.jsonl": "1e9e21916df950b5d0352b0e9343f37a039de856348e977c9ff7424af512c2d4",
+        "on-policy-events.jsonl": "b1f476ee2b22c8bc7b291b4e4d91c1450aa4fbc0d8a5c78101c99a47afda1602",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "criterion": "hash/command/scope/trace/finite/complete pairing; not target success rate",
+  "limits": "Current project baseline admission, not unpublished QVLA AWQ recipe reproduction"
+}

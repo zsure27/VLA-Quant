@@ -1,0 +1,26 @@
+{
+  "quota_refresh_live_confirmed": true,
+  "old_resets_at": 1791807485,
+  "new_resets_at": 1791825629,
+  "used_percent_at_confirmation": 1,
+  "next_thresholds": "15% final save, 10% stop new GPU and native shutdown, reserve >=3%; task completion may close earlier",
+  "protocol_effect_slice": {
+    "BF16": {
+      "changed_first_observations": 50,
+      "gains_on_matched_reset_keys": 0,
+      "losses_on_matched_reset_keys": 0,
+      "success_count_delta_upstream_minus_paired": 0
+    },
+    "A0": {
+      "changed_first_observations": 50,
+      "gains_on_matched_reset_keys": 0,
+      "losses_on_matched_reset_keys": 1,
+      "success_count_delta_upstream_minus_paired": -1
+    }
+  },
+  "paper_gap_fully_explained": false,
+  "b5_classification": "Exploratory comparison against audited project references, not QVLA replication",
+  "b5_runner_pid_at_launch": 16492,
+  "b5_plan": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-v2/plans/capture-label-fit-plan.json",
+  "audit_v1_failure": "New auditor erroneously expected CLI constants in paired manifests; corrected v2 validates derived episode seeds; old artifacts and source preserved."
+}
