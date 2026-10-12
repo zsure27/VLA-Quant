@@ -1,5 +1,7 @@
 # 091 无卡审计续跑记录
 
+**本阶段已于2026-10-12北京时间17:46取得091原生关机执行回执，心跳PAUSED。以下为阶段中途记录，不是当前在线状态。CPU可行工作和B5 v2注册完成，真实输入/GPU门禁仍待用户开卡；请先看[下次执行卡](C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/docs/091_B5_NEXT_GPU_GATE_20261012_CN.md)及P0的CLOSURE_CN.md。最新双份归档144项SHA通过；最终可用持久盘约9.0GiB，尚不足12GiB起跑门槛。平台OFF未独立核验，Windows未关闭。**
+
 ## 当前目标
 
 先审阅并解决BF16/AWQ-W4与QVLA表2的差异，再完成B5前置。无卡阶段不启动GPU烟雾、训练或真实策略评测；完成后通知用户开卡。
