@@ -1,0 +1,19 @@
+{
+  "state": "RUNNING",
+  "plan_id": "20261012-091-b5-pilot-v2-baseline-and-bank-smoke",
+  "runner_pid": 1499,
+  "code_git": "eb196183a3b1e5d012ea6dbaed6ee3297ee9ce5d",
+  "plan_sha256": "44cb7a6e8614c06787ce678931144453c02d0ae7b020899b4b827cbaa94f4236",
+  "observed_revision": 6,
+  "observed_current_stage": "actual-protocol-observation-bridge",
+  "completed": [
+    "gpu-resource-gate"
+  ],
+  "actual_gpu": "RTX4090 24564MiB",
+  "memory_limit_bytes": 128849018880,
+  "cpu_quota": "1600000/100000",
+  "hostname": "autodl-container-dfbc4bb0ff-1e85dd94",
+  "closure_tools_sha_and_compile": "PASS",
+  "quota_override": "First threshold before Beijing 20:18 save/keep running; confirm reset via live interface, later normal closure; no Windows shutdown",
+  "gpu_started_baseline_forward": false
+}
