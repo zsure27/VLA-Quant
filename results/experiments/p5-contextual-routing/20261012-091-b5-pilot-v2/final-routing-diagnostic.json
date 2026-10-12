@@ -1,0 +1,186 @@
+{
+  "gate": "PASS_COMPLETED_B5_POSTHOC_DIAGNOSTICS",
+  "episodes": 450,
+  "combined_sha256": "346de370495f1f992fd68f58068443ab0048b58b6d53ae1b383d4529071de4d8",
+  "policies": {
+    "fixed-e0": {
+      "queries": 6361,
+      "expert0_queries": 6361,
+      "expert1_queries": 0,
+      "episodes": 450,
+      "switches": 0,
+      "episodes_starting_e0": 450
+    },
+    "fixed-e1": {
+      "queries": 6241,
+      "expert0_queries": 0,
+      "expert1_queries": 6241,
+      "episodes": 450,
+      "switches": 0,
+      "episodes_starting_e0": 0
+    },
+    "router": {
+      "queries": 6207,
+      "expert0_queries": 331,
+      "expert1_queries": 5876,
+      "episodes": 450,
+      "switches": 249,
+      "episodes_starting_e0": 241
+    },
+    "task-only": {
+      "queries": 6241,
+      "expert0_queries": 0,
+      "expert1_queries": 6241,
+      "episodes": 450,
+      "switches": 0,
+      "episodes_starting_e0": 0
+    }
+  },
+  "task_only_fixed_B4_exact_query_trace_identical_phases": 3,
+  "phase_count": 5,
+  "B5_failures": [
+    {
+      "episode": "7:7",
+      "queries": 28,
+      "e0_indices": [],
+      "switches": 0,
+      "fixed_B3_success": true,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "9:5",
+      "queries": 28,
+      "e0_indices": [
+        0
+      ],
+      "switches": 1,
+      "fixed_B3_success": true,
+      "fixed_B4_success": true
+    },
+    {
+      "episode": "0:14",
+      "queries": 28,
+      "e0_indices": [],
+      "switches": 0,
+      "fixed_B3_success": true,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "6:15",
+      "queries": 28,
+      "e0_indices": [
+        0
+      ],
+      "switches": 1,
+      "fixed_B3_success": false,
+      "fixed_B4_success": true
+    },
+    {
+      "episode": "6:16",
+      "queries": 28,
+      "e0_indices": [
+        0
+      ],
+      "switches": 1,
+      "fixed_B3_success": true,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "4:20",
+      "queries": 28,
+      "e0_indices": [
+        0,
+        1
+      ],
+      "switches": 1,
+      "fixed_B3_success": false,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "5:22",
+      "queries": 28,
+      "e0_indices": [],
+      "switches": 0,
+      "fixed_B3_success": false,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "5:27",
+      "queries": 28,
+      "e0_indices": [],
+      "switches": 0,
+      "fixed_B3_success": false,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "6:24",
+      "queries": 28,
+      "e0_indices": [
+        0
+      ],
+      "switches": 1,
+      "fixed_B3_success": true,
+      "fixed_B4_success": true
+    },
+    {
+      "episode": "8:26",
+      "queries": 28,
+      "e0_indices": [
+        0
+      ],
+      "switches": 1,
+      "fixed_B3_success": true,
+      "fixed_B4_success": true
+    },
+    {
+      "episode": "4:40",
+      "queries": 28,
+      "e0_indices": [
+        0,
+        1
+      ],
+      "switches": 1,
+      "fixed_B3_success": false,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "4:46",
+      "queries": 28,
+      "e0_indices": [
+        0,
+        1
+      ],
+      "switches": 1,
+      "fixed_B3_success": false,
+      "fixed_B4_success": true
+    },
+    {
+      "episode": "5:40",
+      "queries": 28,
+      "e0_indices": [],
+      "switches": 0,
+      "fixed_B3_success": false,
+      "fixed_B4_success": false
+    },
+    {
+      "episode": "5:45",
+      "queries": 28,
+      "e0_indices": [],
+      "switches": 0,
+      "fixed_B3_success": true,
+      "fixed_B4_success": false
+    }
+  ],
+  "fixed_episode_oracle_successes": 445,
+  "best_fixed_successes": 435,
+  "B5_failures_where_a_fixed_succeeds": 9,
+  "both_fixed_fail_episodes": 5,
+  "B5_rescues_both_fixed_fail": 0,
+  "limitations": [
+    "Posthoc complete outcome diagnostic; no model input or continuation decision",
+    "Fixed whole-episode oracle is not deployable or an absolute dynamic routing upper bound",
+    "Exact equality of observed task-only/B4 traces supports collapse on this development cohort only",
+    "Selection sequence is not causal proof; same early B3 then B4 pattern occurs in rescues and breaks",
+    "Same ten tasks, no unseen-task or blind-test claim"
+  ]
+}
