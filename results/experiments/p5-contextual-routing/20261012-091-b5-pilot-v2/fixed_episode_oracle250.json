@@ -1,0 +1,12 @@
+{
+  "episodes": 250,
+  "fixed_episode_oracle_successes": 247,
+  "best_fixed_successes": 241,
+  "B5_successes": 240,
+  "both_fixed_failures": 3,
+  "B5_success_when_both_fixed_fail": 0,
+  "B5_fail_when_some_fixed_success": 7,
+  "source": "combined250-paired-analysis.json",
+  "source_sha256": "dae84a89b2fbb220808ea9759646367bb32f6abe4bb03d759e23c3f080cf56a1",
+  "claim": "Post-hoc fixed whole-episode policy oracle using completed outcomes; not deployable, not dynamic-routing upper bound, never selector input or continuation criterion"
+}

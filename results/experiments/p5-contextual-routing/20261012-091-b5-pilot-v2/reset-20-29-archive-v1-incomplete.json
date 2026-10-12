@@ -1,0 +1,9 @@
+{
+  "state": "INCOMPLETE_NOT_A_VALID_BACKUP",
+  "path": "/root/autodl-tmp/qvla-repro/backups/091-b5-reset-20-29-complete-20261013-v1",
+  "cause": "SSH next-plan launch closed before execution; dependent archive attempted before next-launch receipt existed",
+  "error": "FileNotFoundError: reset-30-39-v3-launch-receipt.json",
+  "source_and_incomplete_directory_retained": true,
+  "same_preregistered_gpu_plan_resumed_with_no_duplicate_rollouts": true,
+  "replacement": "091-b5-reset-20-29-complete-20261013-v2"
+}
