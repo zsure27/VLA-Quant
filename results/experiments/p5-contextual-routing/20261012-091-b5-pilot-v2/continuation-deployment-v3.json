@@ -1,0 +1,40 @@
+{
+  "gate": "PASS_REMOTE_CONTINUATION_PLAN_SHA_AND_OUTPUT_PATHS",
+  "registration_git": "df8f5c0e7f7f1ac1cd15f84c6b7b00218b78ce1e",
+  "plans": [
+    {
+      "name": "reset-10-19",
+      "old_file_sha256": "016f21b3867eafd79ea01b450d19ab96d291d29229b8ed4983957d6c30b25bde",
+      "new_file_sha256": "b0073a82b4f2b16defc8db074e8d36678fc7e030210e0dc18fdac6d97c782121",
+      "plan_id": "20261012-091-b5-pilot-v2-reset-10-19-continuation-v3",
+      "remote_path": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/plans/reset-10-19-plan.json",
+      "gpu_commands_exactly_preserved": true
+    },
+    {
+      "name": "reset-20-29",
+      "old_file_sha256": "8f5ab65a0b42d7a7d5b4bf035c1b6c7d17eb9155a7f747f4d5931cdea7a6f9f4",
+      "new_file_sha256": "1eaf1d120f863612c443b52ecbbced7f0d96b3517bba4cad8c8bc44361b0e2f4",
+      "plan_id": "20261012-091-b5-pilot-v2-reset-20-29-continuation-v3",
+      "remote_path": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/plans/reset-20-29-plan.json",
+      "gpu_commands_exactly_preserved": true
+    },
+    {
+      "name": "reset-30-39",
+      "old_file_sha256": "c588f4577de34a6e9935b9eb7a8a411ab8deb99ab8b464d55105418542a73e46",
+      "new_file_sha256": "2cf1ab83558ac460aae7829f3cbf065f15f4a494813d33b60908e5206c66551b",
+      "plan_id": "20261012-091-b5-pilot-v2-reset-30-39-continuation-v3",
+      "remote_path": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/plans/reset-30-39-plan.json",
+      "gpu_commands_exactly_preserved": true
+    },
+    {
+      "name": "reset-40-49",
+      "old_file_sha256": "b7100ed1dddbef204b9d498aa420e691a4b634ddad700a513f239c1d2346b377",
+      "new_file_sha256": "ecb7b89d4a4b35e2ab2fa91ae480940abcda6ddd06b323c8b6f3c90ecf385990",
+      "plan_id": "20261012-091-b5-pilot-v2-reset-40-49-continuation-v3",
+      "remote_path": "/root/autodl-tmp/qvla-repro/control/b5-pilot-091-20261012-continuation-v3/plans/reset-40-49-plan.json",
+      "gpu_commands_exactly_preserved": true
+    }
+  ],
+  "source_commit": "eb196183a3b1e5d012ea6dbaed6ee3297ee9ce5d",
+  "current_first50_unchanged": true
+}
