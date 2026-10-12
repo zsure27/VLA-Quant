@@ -1,0 +1,1844 @@
+{
+  "gate": "PASS_AUDITED_DISJOINT_B5_PAIRED_COMBINED",
+  "episodes": 150,
+  "rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 7,
+      "B3": false,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 6,
+      "B3": false,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 9,
+      "B3": false,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": false,
+      "B5": false,
+      "task-only": false,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "B3": true,
+      "B4": true,
+      "B5": false,
+      "task-only": true,
+      "random": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 6,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 7,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 8,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 9,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "random": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": false,
+      "B5": false,
+      "task-only": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 15,
+      "B3": false,
+      "B4": true,
+      "B5": false,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": false,
+      "B5": false,
+      "task-only": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": false,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": false,
+      "A0": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": false,
+      "A0": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": false,
+      "B5": true,
+      "task-only": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 19,
+      "B3": false,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 11,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 12,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 14,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 15,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 16,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 17,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 18,
+      "B3": true,
+      "B4": false,
+      "B5": true,
+      "task-only": false,
+      "BF16": true,
+      "A0": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 19,
+      "B3": true,
+      "B4": true,
+      "B5": true,
+      "task-only": true,
+      "BF16": true,
+      "A0": true
+    }
+  ],
+  "summary": {
+    "BF16": {
+      "successes": 142,
+      "episodes": 150,
+      "success_by_task": {
+        "0": 15,
+        "1": 14,
+        "2": 14,
+        "3": 14,
+        "4": 15,
+        "5": 14,
+        "6": 15,
+        "7": 11,
+        "8": 15,
+        "9": 15
+      }
+    },
+    "A0": {
+      "successes": 147,
+      "episodes": 150,
+      "success_by_task": {
+        "0": 15,
+        "1": 15,
+        "2": 15,
+        "3": 14,
+        "4": 15,
+        "5": 15,
+        "6": 15,
+        "7": 13,
+        "8": 15,
+        "9": 15
+      }
+    },
+    "B3": {
+      "successes": 145,
+      "episodes": 150,
+      "success_by_task": {
+        "0": 15,
+        "1": 14,
+        "2": 15,
+        "3": 15,
+        "4": 15,
+        "5": 13,
+        "6": 14,
+        "7": 15,
+        "8": 14,
+        "9": 15
+      }
+    },
+    "B4": {
+      "successes": 145,
+      "episodes": 150,
+      "success_by_task": {
+        "0": 14,
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15,
+        "5": 15,
+        "6": 14,
+        "7": 14,
+        "8": 14,
+        "9": 14
+      }
+    },
+    "B5": {
+      "successes": 145,
+      "episodes": 150,
+      "success_by_task": {
+        "0": 14,
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15,
+        "5": 15,
+        "6": 13,
+        "7": 14,
+        "8": 15,
+        "9": 14
+      }
+    },
+    "task-only": {
+      "successes": 145,
+      "episodes": 150,
+      "success_by_task": {
+        "0": 14,
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15,
+        "5": 15,
+        "6": 14,
+        "7": 14,
+        "8": 14,
+        "9": 14
+      }
+    }
+  },
+  "comparisons": {
+    "B5_vs_B3": {
+      "episodes": 150,
+      "rescue": 4,
+      "break": 4,
+      "net": 0,
+      "delta_fraction": 0.0,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.04,
+        0.04
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": -1,
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 2,
+        "6": -1,
+        "7": -1,
+        "8": 1,
+        "9": -1
+      },
+      "tasks_improved": 3,
+      "tasks_harmed": 4
+    },
+    "B5_vs_B4": {
+      "episodes": 150,
+      "rescue": 2,
+      "break": 2,
+      "net": 0,
+      "delta_fraction": 0.0,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.02,
+        0.02
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": -1,
+        "7": 0,
+        "8": 1,
+        "9": 0
+      },
+      "tasks_improved": 1,
+      "tasks_harmed": 1
+    },
+    "B5_vs_task-only": {
+      "episodes": 150,
+      "rescue": 2,
+      "break": 2,
+      "net": 0,
+      "delta_fraction": 0.0,
+      "exact_mcnemar_p": 1.0,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.02,
+        0.02
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": -1,
+        "7": 0,
+        "8": 1,
+        "9": 0
+      },
+      "tasks_improved": 1,
+      "tasks_harmed": 1
+    },
+    "B5_vs_BF16": {
+      "episodes": 150,
+      "rescue": 8,
+      "break": 5,
+      "net": 3,
+      "delta_fraction": 0.02,
+      "exact_mcnemar_p": 0.5810546875,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.03333333333333333,
+        0.07333333333333333
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": -1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": -2,
+        "7": 3,
+        "8": 0,
+        "9": -1
+      },
+      "tasks_improved": 5,
+      "tasks_harmed": 3
+    },
+    "B4_vs_BF16": {
+      "episodes": 150,
+      "rescue": 8,
+      "break": 5,
+      "net": 3,
+      "delta_fraction": 0.02,
+      "exact_mcnemar_p": 0.5810546875,
+      "task_cluster_bootstrap_95ci_fraction": [
+        -0.02666666666666667,
+        0.07333333333333333
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": -1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": -1,
+        "7": 3,
+        "8": -1,
+        "9": -1
+      },
+      "tasks_improved": 5,
+      "tasks_harmed": 4
+    },
+    "A0_vs_BF16": {
+      "episodes": 150,
+      "rescue": 6,
+      "break": 1,
+      "net": 5,
+      "delta_fraction": 0.03333333333333333,
+      "exact_mcnemar_p": 0.125,
+      "task_cluster_bootstrap_95ci_fraction": [
+        0.006666666666666667,
+        0.06
+      ],
+      "bootstrap_seed": 20260930,
+      "bootstrap_draws": 20000,
+      "delta_by_task": {
+        "0": 0,
+        "1": 1,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 2,
+        "8": 0,
+        "9": 0
+      },
+      "tasks_improved": 4,
+      "tasks_harmed": 0
+    }
+  },
+  "inputs": [
+    {
+      "file": "first50-paired-analysis.json",
+      "sha256": "14abd3933bd5d795f44ee7df90a3d8190e349569150307ef475d8661081be263"
+    },
+    {
+      "file": "reset-10-19-paired-analysis.json",
+      "sha256": "ca2f41176fa0b7a42e1ed0c6ffa0707b697f4cc50ecd21073d8fa9fcb1390e4e"
+    }
+  ],
+  "random": "first50 diagnostic only; not extended or pooled as six-policy comparison",
+  "micro_excluded": true,
+  "limitations": [
+    "Same ten-task development, registered disjoint reset slice, not unseen tasks or blind test",
+    "Micro reset5 overlaps and is excluded",
+    "Ten task clusters; bootstrap uncertainty not independent-episode population guarantee",
+    "Failure states/actions saved; B5 evaluator has no videos, physical failure mechanism unclassified",
+    "Wall time includes setup and tracing; GPU forward and selector latency not separately instrumented",
+    "Heterogeneous full bank cost; pseudoquantized weights do not establish INT2 deployment benefit"
+  ]
+}
