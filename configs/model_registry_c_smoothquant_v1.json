@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "namespace": "C-SQ-v1",
+  "status": "PLANNED_NOT_IMPLEMENTED_NOT_GPU_VALIDATED",
+  "design_document": "reports/experiments/p2-shared-peft/20261013-quant-finetuning-research-plan/REPORT_CN.md",
+  "historical_C_aliases_unchanged": true,
+  "runtime_plan": null,
+  "checkpoint_sha256": null,
+  "quantization_profile_sha256": null,
+  "target_scope": {
+    "expected_weight_targets": 422,
+    "expected_language_linear_targets": 224,
+    "expected_vision_linear_targets": 196,
+    "expected_patch_conv_targets": 2,
+    "protected_modules_high_precision": true,
+    "qk_pv_int4_claim": false,
+    "requires_actual_target_manifest": true
+  },
+  "primary_lora_contract": {
+    "rank": 8,
+    "language_linear_count": 224,
+    "parameters": 19988480,
+    "tensor_bytes_if_bf16": 39976960,
+    "quantized_input_shared_with_base": true,
+    "residual_branch_precision": "BF16",
+    "fresh_adapter_per_base_required": true,
+    "forward_quantizer_and_STE_contract_required": true,
+    "activation_statistics_rule_frozen": true
+  },
+  "entries": [
+    {
+      "id": "C-SQ-v1/C0",
+      "display_alias": "C0",
+      "weight_bits": 16,
+      "activation_bits": 16,
+      "role": "smoothing_only_equivalence_gate",
+      "status": "PLANNED",
+      "conditional": false
+    },
+    {
+      "id": "C-SQ-v1/C1",
+      "display_alias": "C1",
+      "weight_bits": 8,
+      "activation_bits": 16,
+      "role": "weight_only_anchor",
+      "status": "PLANNED",
+      "conditional": false
+    },
+    {
+      "id": "C-SQ-v1/C2",
+      "display_alias": "C2",
+      "weight_bits": 8,
+      "activation_bits": 8,
+      "role": "original_smoothquant_precision_anchor",
+      "status": "PLANNED",
+      "conditional": false
+    },
+    {
+      "id": "C-SQ-v1/C3",
+      "display_alias": "C3",
+      "weight_bits": 4,
+      "activation_bits": 8,
+      "role": "first_recovery_comparison",
+      "status": "PLANNED",
+      "conditional": false
+    },
+    {
+      "id": "C-SQ-v1/C4",
+      "display_alias": "C4",
+      "weight_bits": 4,
+      "activation_bits": 4,
+      "role": "historical_failure_recovery_target",
+      "status": "PLANNED",
+      "conditional": false
+    },
+    {
+      "id": "C-SQ-v1/C5",
+      "display_alias": "C5",
+      "weight_bits": 2,
+      "activation_bits": 4,
+      "role": "conditional_lower_weight_exploration",
+      "status": "PLANNED",
+      "conditional": true
+    },
+    {
+      "id": "C-SQ-v1/C6",
+      "display_alias": "C6",
+      "weight_bits": 2,
+      "activation_bits": 2,
+      "role": "conditional_lower_activation_exploration",
+      "status": "PLANNED",
+      "conditional": true
+    }
+  ],
+  "cross_controls": [
+    {
+      "id": "C-SQ-v1/C-D-W4A16",
+      "weight_bits": 4,
+      "activation_bits": 16,
+      "status": "PLANNED"
+    },
+    {
+      "id": "C-SQ-v1/C-D-W16A8",
+      "weight_bits": 16,
+      "activation_bits": 8,
+      "status": "PLANNED"
+    },
+    {
+      "id": "C-SQ-v1/C-D-W16A4",
+      "weight_bits": 16,
+      "activation_bits": 4,
+      "status": "PLANNED"
+    }
+  ],
+  "launch_gates": [
+    "User manually opens instance and reports current identity.",
+    "CPU and true-input/GPU resource/closure gates.",
+    "C0 equivalence before low-bit recovery.",
+    "Actual profile, checkpoint, input and evaluator SHA binding.",
+    "Gradient/finite/reload and paired first50 gates."
+  ],
+  "not_claimed": [
+    "Uniform low bits in all tensors.",
+    "Pure INT4 LoRA computation.",
+    "Packed deployment savings.",
+    "Paper recipe reproduction."
+  ]
+}

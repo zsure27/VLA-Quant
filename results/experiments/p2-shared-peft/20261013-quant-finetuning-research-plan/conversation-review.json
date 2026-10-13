@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "thread_id": "01a0c822-c941-7521-ab48-c2dc25f66df3",
+  "scope": "Same task; scientific user messages and assistant final answers. Heartbeats, AGENTS copies and credential-bearing messages excluded. Conversation statements checked against experiment artifacts.",
+  "review_date": "2026-10-13",
+  "source_count": 7,
+  "matched_scientific_message_count": 29,
+  "sources": [
+    {
+      "source_file": "rollout-2026-09-22T16-01-58-01a0c822-c941-7521-ab48-c2dc25f66df3.jsonl",
+      "matched_scientific_messages": 2,
+      "reviewed_timestamps": [
+        "2026-09-22T08:05:10.318Z",
+        "2026-09-22T08:08:42.867Z"
+      ],
+      "roles": [
+        "user",
+        "assistant"
+      ],
+      "matched_terms": [
+        "W4A4",
+        "量化微调"
+      ]
+    },
+    {
+      "source_file": "rollout-2026-09-24T12-26-30-01a0c822-c941-7521-ab48-c2dc25f66df3_01a0d1aa-3d59-79b1-875a-2c7e0740856e.jsonl",
+      "matched_scientific_messages": 8,
+      "reviewed_timestamps": [
+        "2026-09-24T07:23:12.146Z",
+        "2026-09-25T03:41:45.941Z",
+        "2026-09-25T03:53:43.054Z",
+        "2026-09-25T04:11:41.583Z",
+        "2026-09-25T14:20:30.848Z",
+        "2026-09-25T15:30:18.668Z",
+        "2026-09-25T15:37:51.615Z",
+        "2026-09-27T16:44:29.088Z"
+      ],
+      "roles": [
+        "assistant",
+        "assistant",
+        "user",
+        "assistant",
+        "assistant",
+        "user",
+        "assistant",
+        "assistant"
+      ],
+      "matched_terms": [
+        "SVD",
+        "SmoothQuant",
+        "量化微调"
+      ]
+    },
+    {
+      "source_file": "rollout-2026-09-28T18-09-02-01a0c822-c941-7521-ab48-c2dc25f66df3_01a0e77d-498b-7c51-962a-47c27a0f2844.jsonl",
+      "matched_scientific_messages": 3,
+      "reviewed_timestamps": [
+        "2026-09-28T13:53:17.692Z",
+        "2026-09-29T02:06:29.208Z",
+        "2026-09-29T17:41:45.458Z"
+      ],
+      "roles": [
+        "assistant",
+        "assistant",
+        "assistant"
+      ],
+      "matched_terms": [
+        "SVD",
+        "SmoothQuant"
+      ]
+    },
+    {
+      "source_file": "rollout-2026-09-30T02-27-35-01a0c822-c941-7521-ab48-c2dc25f66df3_01a0ee6c-1230-75b0-947a-f0489f0d872c.jsonl",
+      "matched_scientific_messages": 4,
+      "reviewed_timestamps": [
+        "2026-09-30T14:31:09.644Z",
+        "2026-10-04T17:30:02.980Z",
+        "2026-10-04T17:38:22.119Z",
+        "2026-10-08T02:28:45.924Z"
+      ],
+      "roles": [
+        "assistant",
+        "assistant",
+        "assistant",
+        "assistant"
+      ],
+      "matched_terms": [
+        "SVD"
+      ]
+    },
+    {
+      "source_file": "rollout-2026-10-08T13-19-34-01a0c822-c941-7521-ab48-c2dc25f66df3_01a119f3-db59-73d1-9ea2-883c704cc04f.jsonl",
+      "matched_scientific_messages": 6,
+      "reviewed_timestamps": [
+        "2026-10-09T07:07:25.229Z",
+        "2026-10-09T07:23:51.226Z",
+        "2026-10-09T09:13:50.675Z",
+        "2026-10-09T11:45:09.769Z",
+        "2026-10-09T11:53:06.588Z",
+        "2026-10-09T12:37:54.473Z"
+      ],
+      "roles": [
+        "assistant",
+        "assistant",
+        "assistant",
+        "assistant",
+        "assistant",
+        "assistant"
+      ],
+      "matched_terms": [
+        "SVD"
+      ]
+    },
+    {
+      "source_file": "rollout-2026-10-09T20-59-55-01a0c822-c941-7521-ab48-c2dc25f66df3_01a120bf-ad52-7dd1-881a-23ff2d0b1ca4.jsonl",
+      "matched_scientific_messages": 5,
+      "reviewed_timestamps": [
+        "2026-10-10T04:31:58.961Z",
+        "2026-10-11T08:52:40.399Z",
+        "2026-10-11T09:22:44.521Z",
+        "2026-10-12T02:20:48.312Z",
+        "2026-10-13T03:19:44.612Z"
+      ],
+      "roles": [
+        "assistant",
+        "user",
+        "assistant",
+        "assistant",
+        "user"
+      ],
+      "matched_terms": [
+        "SVD",
+        "量化微调"
+      ]
+    },
+    {
+      "source_file": "rollout-2026-10-13T14-15-31-01a0c822-c941-7521-ab48-c2dc25f66df3_01a133e6-e034-74f3-94c4-92b2af0dc942.jsonl",
+      "matched_scientific_messages": 1,
+      "reviewed_timestamps": [
+        "2026-10-13T06:15:46.197Z"
+      ],
+      "roles": [
+        "user"
+      ],
+      "matched_terms": [
+        "量化微调"
+      ]
+    }
+  ],
+  "raw_dialogue_included": false,
+  "research_intent_summary": [
+    "Fast VLA quantization finetuning is the objective; routing is optional and now paused.",
+    "Student-visited teacher relabeling and exact data roles must be distinguished from demonstration-only KD.",
+    "Execution-sensitive residual recovery is a proposed mechanism, not a completed GPU experiment.",
+    "AWQ/SQ identity, actual seed call order, calibration and paired traces precede causal claims.",
+    "Current request authorizes B3 initialization comparison and C-SQ preparation; no GPU boot authorization.",
+    "Historical Spatial development results and offline_final_holdout roles remain unchanged."
+  ]
+}

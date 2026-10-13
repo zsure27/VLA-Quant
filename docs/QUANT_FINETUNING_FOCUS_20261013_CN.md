@@ -48,3 +48,7 @@ B2新增视觉参数6,722,048，约12.82MiB。B4从初始语言因子和视觉�
 优先在固定底座、数据和训练预算下优化单模型微调：先检查训练覆盖与闭环访问分布、动作损失对关键阶段/维度的权重，再比较同预算适配器结构/初始化。每项需单独预注册、真实重复性门禁与同条件PTQ对照；容量增加应单独报告。暂不以专家互补不足为理由继续增加routing复杂度。
 
 参考：LIBERO https://libero-project.github.io/main.html；OpenVLA-OFT https://openvla-oft.github.io/（同时报告任务成功率、延迟、吞吐）；QLoRA https://arxiv.org/abs/2305.14314（冻结低位底座与可训练低秩分支的基本范式，具体量化格式与本项目不同）。
+
+## 2026-10-13具体研究计划更新
+
+用户进一步授权B3标准零输出LoRA与Response-SVD初始化对照、执行敏感量化残差恢复方案优化，以及C-SQ-v1 SmoothQuant/激活量化恢复的研究设计。完整历史审阅、控制变量、C0–C6精度链、A/QVLA差距识别与评测预算见[详细计划](../reports/experiments/p2-shared-peft/20261013-quant-finetuning-research-plan/REPORT_CN.md)。C模块不再以Router成功为前提，先通过只平滑等价、W/A分离、梯度/重载契约，再做W4A4恢复；当前只有设计身份登记，没有新的GPU实验。

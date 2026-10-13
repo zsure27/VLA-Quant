@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-13",
+  "experiment_status": "RESEARCH_PLAN_ONLY_NO_NEW_GPU",
+  "base_commit_before_plan": "1cc0666f912aa553e2586e54c48840010ce7bcb7",
+  "historical_sources": [
+    {
+      "repository_path": "docs/QUANT_FINETUNING_FOCUS_20261013_CN.md",
+      "sha256": "23eb143e43941981170bb346977d76fd725d1c44847bb0542b229c5cfb48f681",
+      "supports": "Final B5 statistics, data roles, parameter budgets and latest focus"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20260929-107-p25-student-state80-distill/POST_RUN_ANALYSIS_CN.md",
+      "sha256": "abbd5d96b298f90a75a935a9d489ffaa5ae6aaa181dee1f8f85b7aab86e63b4a",
+      "supports": "Student-visited teacher relabeling controlled recovery"
+    },
+    {
+      "repository_path": "docs/pre-run-cards/B3_ALL_ELIGIBLE_W2_V2_20261008_CN.md",
+      "sha256": "f1c4fd90c699c52519edfcd174a0f8a02311f471f583d8dcd6da4917a5557606",
+      "supports": "B3 frozen recipe, 224 modules, rank8 and 1000 steps"
+    },
+    {
+      "repository_path": "scripts/train_extended_peft.py",
+      "sha256": "bf149112123a331196b45af33236ccb3e1448cbb03ff7cb7513db4070226da08",
+      "supports": "B3 currently hardcodes response-svd and captures scaled teacher coordinates"
+    },
+    {
+      "repository_path": "diagnostics/low_rank_recovery.py",
+      "sha256": "8cd38967641c0c7bacf6ba3cca859fb55f471b0627dbe0db73bfb39306f99cd7",
+      "supports": "Exact zero-output and Response-SVD implementation"
+    },
+    {
+      "repository_path": "qvla/extended_peft.py",
+      "sha256": "038b8f1685a2d8900a25a187b20ff819a09e7bb90e009d3e160c470c21685316",
+      "supports": "B2/B3 adapter identity and reload"
+    },
+    {
+      "repository_path": "qvla/official_quant_adapter.py",
+      "sha256": "6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171",
+      "supports": "Official primitive versus custom vision adaptation"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20261009-091-b4-pair300/REPORT_CN.md",
+      "sha256": "671ccf5b8029aabe4f84e9e8e519e3de54afaa6bebce6b01cc377cc34b9a02de",
+      "supports": "B3/B4 300 paired results and unequal capacities"
+    },
+    {
+      "repository_path": "reports/experiments/p5-contextual-routing/20261012-091-b5-pilot-v2/REPORT_CN.md",
+      "sha256": "85af54ffb34a8a121f6653642de550e7be7b13eed4064c9411d54fe1858401ab",
+      "supports": "450 final results, pairing and routing interpretation"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20261012-091-gpu-attribution-b5/REPORT_CN.md",
+      "sha256": "dbee7f8f4b74bd041ec4ebfbdfe179279869f45e55ca160d0e924a9905c9fc62",
+      "supports": "A0 content and upstream/paired protocol attribution audit"
+    },
+    {
+      "repository_path": "docs/QVLA_AWQ_ALIGNMENT_AND_B5_SPATIAL_20261012_CN.md",
+      "sha256": "6dca4eba467e662c93706dcf1cc05211ec3b60ac2941193e930958c56908592f",
+      "supports": "Paper alignment scope and unknown author recipe"
+    },
+    {
+      "repository_path": "docs/AUDIT_CN.md",
+      "sha256": "c50caca75e863ecff82990c2b2e4cbfd055dff69df33e46ca686f9dd37c397be",
+      "supports": "Early SQ 20-rollout results and primitive audit"
+    },
+    {
+      "repository_path": "docs/SMOOTHING_ABLATION_20260912_CN.md",
+      "sha256": "a37805f83dc85872e1219c767a9f6cb7359ab87708eb5edd3dfa91a8f43c1868",
+      "supports": "Smoothing group and unsmoothed activation scope"
+    },
+    {
+      "repository_path": "reports/experiments/p0-foundation-baselines/20260916-107-diagnostics/data/sq_control_summary.csv",
+      "sha256": "846c580d1761aed53935b6938c5c984072135b9b3d869b6928168ab01b14a641",
+      "supports": "Smooth-only numerical control failure"
+    },
+    {
+      "repository_path": "docs/P2_5_ON_POLICY_ALIGNMENT_PLAN_20260926_CN.md",
+      "sha256": "65fd8a5d1b07ca3d487aa3080e37260cb6e4c6de29cfd265ae0f40e1e6421aa7",
+      "supports": "Teacher/student distribution and action target design"
+    },
+    {
+      "repository_path": "docs/EVALUATION_SMOKE_GATE_20260929_CN.md",
+      "sha256": "08a500a56feb285bf4b82c5e0dcb495f428671d8ed86b4f32b44ae2b8b8f0ce7",
+      "supports": "Real call-order smoke gate and invalid independent-seed evidence"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20261011-quantization-finetuning-literature/REPORT_CN.md",
+      "sha256": "2f5c6ac5b6673c58feb2732ebd719ad329a6b6cbd12c248aa920b052bb2dc98e",
+      "supports": "Prior literature and execution-sensitive proposal; existing uncommitted draft"
+    },
+    {
+      "repository_path": "reports/experiments/p2-shared-peft/20261012-progress-summary/REPORT_CN.md",
+      "sha256": "cfc93bd9e5114f42f75c1538ae421a9e768d0e624c8434140b113dfce602327a",
+      "supports": "Prior progress summary; existing uncommitted draft"
+    }
+  ],
+  "conversation_manifest": "conversation-review.json",
+  "control_facts": {
+    "spatial_tasks": 10,
+    "official_initial_states_per_task": 50,
+    "formal_development_resets": [
+      5,
+      49
+    ],
+    "formal_rollouts_per_model": 450,
+    "b3_train_episodes": 40,
+    "b3_train_observations": 80,
+    "b3_svd_calibration_trajectories": 80,
+    "b5_selector_train_episodes": 80,
+    "b5_selector_train_observations": 400,
+    "final_successes": {
+      "BF16": 433,
+      "A0": 439,
+      "B3": 425,
+      "B4": 435,
+      "B5": 436,
+      "task_only": 435
+    },
+    "b5_vs_b4": {
+      "rescue": 6,
+      "break": 5,
+      "net_pp": 0.2222222222222222,
+      "task_cluster_95ci_pp": [
+        -0.889,
+        1.333
+      ]
+    },
+    "historical_student_relabel_net_pp": 4.666666666666667
+  },
+  "interpretation_limits": [
+    "Different protocols are not pooled.",
+    "Final 450 has no complete matched A4-450 recovery denominator.",
+    "C identities are plans, not executable or GPU validated.",
+    "Pseudoquant bits do not establish packed storage or kernel speed.",
+    "Unknown author AWQ recipe retained as unknown."
+  ],
+  "source_sha_scope": "Local working-copy bytes at review time. Git text normalization may change CRLF/LF without a semantic change; these are review hashes, not new runtime locks."
+}
