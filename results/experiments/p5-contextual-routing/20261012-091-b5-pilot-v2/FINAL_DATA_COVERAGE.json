@@ -1,0 +1,107 @@
+{
+  "gate": "PASS_FINAL_450_REGISTERED_DATA_COVERAGE",
+  "task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "reset_indices": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "models": [
+    "BF16",
+    "A0",
+    "B3",
+    "B4",
+    "B5",
+    "task-only"
+  ],
+  "episodes_per_model": 450,
+  "formal_total_with_random50": 2750,
+  "micro_excluded": true,
+  "combined_sha256": "346de370495f1f992fd68f58068443ab0048b58b6d53ae1b383d4529071de4d8",
+  "phase_gates": [
+    {
+      "file": "first50-all-controls-gate.json",
+      "sha256": "6913ebe159cee06089694c9a431ac21473b7194c8c81edc8a4e975cebf8b7bef",
+      "offset": 5,
+      "count": 5
+    },
+    {
+      "file": "reset-10-19-gate.json",
+      "sha256": "845bbf168256e506187b0629794f55f45dafb121caf9f58f8753b4bd37507e6a",
+      "offset": 10,
+      "count": 10
+    },
+    {
+      "file": "reset-20-29-gate.json",
+      "sha256": "f4dc4ca2e31ae9e6d6363634c1885a4c1cee17c07e590c5d73e52e526cfcc3c7",
+      "offset": 20,
+      "count": 10
+    },
+    {
+      "file": "reset-30-39-gate.json",
+      "sha256": "221005b2decee306991477aae7cfb7e3810963ed6339a0b5ef808321e01adc47",
+      "offset": 30,
+      "count": 10
+    },
+    {
+      "file": "reset-40-49-gate.json",
+      "sha256": "61edb8aea76766a26189f00007ddc0766980435ded95a6c798dfde238a69bb31",
+      "offset": 40,
+      "count": 10
+    }
+  ],
+  "scope": "Same-task development, no unseen-task or blind-test claim; full checkpoint remains server with checksum identity"
+}

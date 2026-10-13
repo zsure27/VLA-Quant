@@ -1,0 +1,8 @@
+{
+  "state": "INCOMPLETE_NETWORK_COPY_NOT_VALID_FALLBACK",
+  "bytes_received": 1072365568,
+  "scp_exit_code": 1,
+  "error": "Connection closed by remote host",
+  "source_full_archive_retained": true,
+  "recovery": "Versioned bounded SSH range download: validate original prefix SHA against source, append independently SHA-verified ranges; retain range files and journal; full export SHA required before extraction"
+}

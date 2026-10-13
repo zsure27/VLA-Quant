@@ -1,0 +1,58 @@
+{
+  "gate": "PASS_COMPLETE_CURRENT_SESSION_DOUBLE_ARCHIVE_INDEX",
+  "server_directory": "/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1",
+  "local_directory": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\backups\\experiments\\p5-contextual-routing\\20261012-091-b5-pilot-v2\\091-gpu-b5-final-20261013-v1",
+  "local_physical_directory": "D:\\ProjectData\\Triton\\vla-quant-sync-20260915\\backups\\experiments\\p5-contextual-routing\\20261012-091-b5-pilot-v2\\091-gpu-b5-final-20261013-v1",
+  "export_sha256": "31ae496b9e14ba7573a703c7123cc8b690e5ffbde33c9b99fed965fdee8121ad",
+  "export_bytes": 4201438552,
+  "root_manifest_files": 22244,
+  "data_manifest_files": 15389,
+  "formal_episodes_per_model": 450,
+  "formal_total_with_random50": 2750,
+  "micro_excluded": true,
+  "original_video_count": 1140,
+  "analysis_git": "fb92de80b0708b4d93ed3ea6c54a739fae47e523",
+  "execution_git": "eb196183a3b1e5d012ea6dbaed6ee3297ee9ce5d",
+  "checkpoint_full_local_replica": false,
+  "checkpoint_scope": "7B base preserved server with full prior checksums and model identity; experiment package includes q profiles, trained experts/router, all original experiment data/code/controls. External LIBERO/OFT dependencies remain recorded references.",
+  "archive_index_scope": "Full current GPU session package supersedes completed stage increments. Original stage archives, old 046/091 training archives and v1 incomplete attempts retained; incomplete archives excluded from valid fallback. Final closing receipts/report supplement and latest Git incremental bundle are separate small final records.",
+  "transport_recovery": "Original failed SCP prefix SHA verified, only independently hashed ranges appended; original prefix and range files retained. v1 extraction completed member bytes then failed directory attributes; independent v2 full SHA passed, no content overwrite.",
+  "references": [
+    {
+      "file": "final-archive-server-receipt.json",
+      "sha256": "18a2fd0ec229e8916a6def33a053d8913dc8db7254183a5642e3ab7ba79cadf6"
+    },
+    {
+      "file": "final-archive-local-verification.json",
+      "sha256": "7deb0cdb10a5a0fd679744197aed18055a687919f2015418ab191f0346bdeadf"
+    },
+    {
+      "file": "FINAL_DATA_COVERAGE.json",
+      "sha256": "e1610ee93c01068c4f2bfc8a9f679800885430cc0e6d0f5ac8aaefc9dca0c5b8"
+    },
+    {
+      "file": "FINAL_VIDEO_COVERAGE.json",
+      "sha256": "50b6cfdc812bbe6588deaa75bfdfb6e4342add285f0217f6f24e318e56f8e0e1"
+    },
+    {
+      "file": "native-shutdown-dry-run.json",
+      "sha256": "a66ea1ae4c48d8ca7d6e0f97a7e685ba50bac8d8dca80c56052c888580d5c7b8"
+    },
+    {
+      "file": "closure-heartbeat-review.json",
+      "sha256": "a1defb68f0db3bab1b6901cc45d5d5c3480877ef5c271cd28eb87b14e3a88b01"
+    },
+    {
+      "file": "full-download-scp-v1-failure.json",
+      "sha256": "df14ca8803008480b2c0e96aefcc54c55750f38ef6ce8648b2c64164e84d4c77"
+    },
+    {
+      "file": "full-extraction-v1-metadata-failure.json",
+      "sha256": "19659962120e7842d94952cbcb1ddadef7fcab6bc228335e06223fc35eac9319"
+    },
+    {
+      "file": "full-download-resume-v2.jsonl",
+      "sha256": "c0d5e58a21e2a475c771e527b71adc70d4dd9d4e209df712768170bebefcaa35"
+    }
+  ]
+}

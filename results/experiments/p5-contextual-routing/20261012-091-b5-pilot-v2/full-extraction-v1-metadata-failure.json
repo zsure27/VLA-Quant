@@ -1,0 +1,8 @@
+{
+  "state": "EXTRACTED_MEMBERS_PENDING_INDEPENDENT_SHA_VERIFICATION",
+  "error": "WinError 123 during tarfile final directory lstat attributes pass using an over-escaped Windows extended path",
+  "observed_files": 22246,
+  "expected_manifest_files_plus_two_manifests": 22246,
+  "archive_export_sha_verified": true,
+  "repair": "Independent v2 verifier uses normal resolved directory and checks all master/data SHA and coverage. Original v1 entry and extracted data retained, no overwrite or new GPU."
+}

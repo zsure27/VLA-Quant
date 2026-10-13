@@ -1,0 +1,6 @@
+{
+  "state": "PAUSED_BEFORE_FINAL_BACKUP_COMPLETION",
+  "automatic_approval_rejection": "Keeping heartbeat ACTIVE rejected because GPU experimental stages were complete and user required pause after run",
+  "safer_alternative": "Pause heartbeat; continue current active conversation full archive, verification, native 091 shutdown then Windows shutdown. No new GPU or unauthorized continued automation.",
+  "backup_and_shutdown_completed": false
+}

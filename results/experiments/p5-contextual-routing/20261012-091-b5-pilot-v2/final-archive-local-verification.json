@@ -1,0 +1,18 @@
+{
+  "gate": "PASS_LOCAL_FULL_SESSION_SHA_DATA_AND_VIDEO_COVERAGE",
+  "archive": "D:\\ProjectData\\Triton\\vla-quant-sync-20260915\\backups\\experiments\\p5-contextual-routing\\20261012-091-b5-pilot-v2\\091-gpu-b5-final-20261013-v1",
+  "files": {
+    "SHA256SUMS.txt": 22244,
+    "RESULTS_SHA256SUMS.txt": 15389
+  },
+  "server_commit": "852d35052526f79229362ac43571a009db0167e7",
+  "archive_alias": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\backups\\experiments\\p5-contextual-routing\\20261012-091-b5-pilot-v2\\091-gpu-b5-final-20261013-v1",
+  "export_sha256": "31ae496b9e14ba7573a703c7123cc8b690e5ffbde33c9b99fed965fdee8121ad",
+  "export_bytes": 4201438552,
+  "formal_episodes_per_model": 450,
+  "formal_total_with_random50": 2750,
+  "original_video_count": 1140,
+  "base_checkpoint_full_local_copy": false,
+  "server_archive": "/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1",
+  "extraction_recovery": "v1 final directory metadata failed; v2 verified all existing content and coverage without overwriting"
+}
