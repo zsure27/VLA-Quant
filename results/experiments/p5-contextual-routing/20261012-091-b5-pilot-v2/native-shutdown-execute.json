@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-10-13T00:18:16.095562+00:00",
+  "commit": "852d350",
+  "backup": "/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1",
+  "supervisor_pid": 837,
+  "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+  "execute": true,
+  "control_panel_off_verified": false,
+  "ssh_exit_code": 1,
+  "ssh_observation": "Connection closed by remote host after flushed native execution receipt; no preparation traceback",
+  "note": "Native known supervisor termination requested; no Trash deletion. Platform OFF/billing is not independently verified."
+}
