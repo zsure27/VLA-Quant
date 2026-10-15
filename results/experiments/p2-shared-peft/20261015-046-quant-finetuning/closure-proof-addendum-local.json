@@ -1,0 +1,20 @@
+{
+  "time_utc": "2026-10-15T17:39:13.952101+00:00",
+  "gate": "PASS_LOCAL_CLOSURE_PROOF_ADDENDUM_SHA",
+  "research_closure_commit": "51d11a2af8ecc827c3be66aab7c54689f1e8059a",
+  "windows_shutdown_authorized": false,
+  "remote_046_shutdown_authorized": true,
+  "base_index_sha256": "ef0341f630e08a66ef902d645d0b50f1679101aa3d713d8c2a31b02ba961abcb",
+  "files": [
+    {
+      "name": "closure-proof-addendum-v1.tar.gz",
+      "bytes": 48647,
+      "sha256": "bcee09815f14bc753a7b3788673abe6157d7fcac0216df30c661c3a173e04ecc"
+    },
+    {
+      "name": "VLA-Quant-closure-51d11a2af8ecc827c3be66aab7c54689f1e8059a.bundle",
+      "bytes": 48988809,
+      "sha256": "5052e9f2dd82032240a868a58d540f69d515eb73c57ddd4d089cd76c4057146e"
+    }
+  ]
+}

@@ -45,3 +45,8 @@ S另使用80独立校准轨迹及教师前向/分解，非等总校准信息与�
 ## 最新关机授权变更
 
 用户取消本地Windows关机，并明确046仍按收尾约定关闭。本地电脑保持开启；服务器完整双份备份及Git核验后执行046原生关机，保留执行回执并暂停本轮心跳。此前Windows授权已撤销，回执见同名results/windows-shutdown-authorization-v1.json。
+
+
+## 046原生关机与本机关机取消回执
+
+2026-10-16北京时间01:41:32，标准工具取得execute=true、supervisor757回执，SSH随后由远端关闭；平台OFF/停计费未独立核验。本轮automation已PAUSED。本地Windows保持开启，未请求本机关机。原始回执native-shutdown-execute.json，完整收尾closure-complete-v1.json。完整归档核心及后加closure-proof补充均服务器/本机SHA通过，补充研究Git51d11a2已远端核验。

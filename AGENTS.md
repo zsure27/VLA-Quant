@@ -1,3 +1,5 @@
+**2026-10-16 046收尾完成覆盖：正式Z2/450、S426/450；完整服务器/本机归档、920视频和源码及GitHub51d11a2远端SHA均核验。北京时间01:41:32执行046原生关机取得execute=true/supervisor757回执，SSH随后远端关闭；平台OFF/停计费未独立核验。automation已PAUSED。本机Windows关机已按用户最新指令取消，保持开启，未请求Windows关机。详见同名results/closure-complete-v1.json。**
+
 **2026-10-16 最新用户指令覆盖：用户明确“仅取消本机关机，046按收尾约定关闭”。本轮Windows关机授权已撤销，本地电脑保持开启，禁止执行本机关机helper；046仍按完整归档/本机副本/分析/GitHub远端SHA核验后原生关机，取得execute=true回执并暂停心跳。覆盖本文件所有此前相反本机关机授权。**
 
 **2026-10-16 046完整会话双份封存覆盖：正式Z2/450、S426/450，424救回0新增失败、任务经验95%[90.667,97.333]pp。最终自包含集合服务器/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-final-20261016-v1，本机repo .local/archives/20261015-046-quant-finetuning/同名，逻辑3996197207字节，10个核心文件、六完整阶段包、920原始视频、358源码、531补充成员和两Git bundle均SHA/恢复验证通过；INDEX SHAef0341f630e08a66ef902d645d0b50f1679101aa3d713d8c2a31b02ba961abcb。本机硬链接权限不足，完整集合使用复制压缩包；服务器硬链接集合不计额外物理副本。研究bundle固定1d7da54，root bundle852d350，7B仅服务器完整checksum。GPU空闲，后续新候选资源/门禁不足，收尾中；原生关机/PAUSED/完整总结/本机关机仍须依次完成。**
