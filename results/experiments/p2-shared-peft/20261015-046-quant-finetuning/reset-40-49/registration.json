@@ -1,0 +1,12 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_CONTINUATION_COMMANDS_UNCHANGED",
+  "phase": "reset-40-49",
+  "plan": "/root/autodl-tmp/qvla-repro/control/20261015-046-quant-finetuning-v1/B3-continuation-v1/reset-40-49/plan.json",
+  "plan_sha256": "01fc357c712a3a3965b89c286293acce18bbbd0f48786ee310d06a6d29785938",
+  "GPU_started": false,
+  "unique_wrapper_outputs": [
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/reset-40-49/standard-zero",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/reset-40-49/response-svd",
+    "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/stage-records/reset-40-49-audit"
+  ]
+}

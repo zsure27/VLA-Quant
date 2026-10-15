@@ -1,0 +1,210 @@
+{
+  "time_utc": "2026-10-15T16:16:20.901907+00:00",
+  "gate": "PASS_RESET_30_39_REVIEW",
+  "phase_successes": {
+    "standard-zero": 0,
+    "response-svd": 95
+  },
+  "phase_comparison": {
+    "episodes": 100,
+    "rescue": 95,
+    "break": 0,
+    "net": 95,
+    "delta_fraction": 0.95,
+    "exact_mcnemar_p": 5.048709793414476e-29,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.89,
+      1.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 10,
+      "1": 10,
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 7,
+      "6": 9,
+      "7": 10,
+      "8": 10,
+      "9": 9
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "cumulative_successes": {
+    "standard-zero": 2,
+    "response-svd": 334
+  },
+  "cumulative_comparison": {
+    "episodes": 350,
+    "rescue": 332,
+    "break": 0,
+    "net": 332,
+    "delta_fraction": 0.9485714285714286,
+    "exact_mcnemar_p": 2.28597478256455e-100,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.9171428571428571,
+      0.9771428571428571
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 34,
+      "1": 35,
+      "2": 35,
+      "3": 34,
+      "4": 33,
+      "5": 30,
+      "6": 31,
+      "7": 34,
+      "8": 35,
+      "9": 31
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "S_failures": [
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 22,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 27,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 24,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 22,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 31,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 37,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 38,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 39,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 36,
+      "standard-zero": false,
+      "response-svd": false
+    }
+  ],
+  "Z_successes": [
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "standard-zero": true,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 28,
+      "standard-zero": true,
+      "response-svd": true
+    }
+  ],
+  "phase_queries": {
+    "standard-zero": 2800,
+    "response-svd": 1400
+  },
+  "adapter_bytes_each": 40133618,
+  "parameters_each": 19988480,
+  "limits": [
+    "Same ten-task reused development, not blind or unseen-task",
+    "Micro overlaps and excluded",
+    "SVD extra calibration/teacher cost not equal total forward budget",
+    "No causal grasp/placement attribution from success flags",
+    "Stage wall includes setup/env/video/trace; no INT2 kernel speed claim"
+  ],
+  "quota_primary_remaining_percent": 87,
+  "quota_resets_at": 1792095433,
+  "quota_response_utc": "2026-10-15T16:14:44.706Z",
+  "disk_free_before": 8958566400,
+  "next": "reset40-49 same fixed candidates, decision by protocol/resources not score",
+  "invocation_metadata": {
+    "standard-zero": {
+      "lock_sha256": "5301a0de1b36af350ae49aa3a8f42cc8a262cde39428a65c35a74f13294f41a4",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1792077480.6726058
+    },
+    "response-svd": {
+      "lock_sha256": "5301a0de1b36af350ae49aa3a8f42cc8a262cde39428a65c35a74f13294f41a4",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1792079391.4611259
+    }
+  }
+}

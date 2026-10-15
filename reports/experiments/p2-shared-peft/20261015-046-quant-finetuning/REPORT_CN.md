@@ -1,3 +1,5 @@
+> 2026-10-16最新覆盖：reset30–39全部exit0/硬门禁通过，本片Z0/S95，累计350 Z2/S334；332救回0新增失败、任务经验95%[91.714,97.714]pp。最后reset40–49各100已于00:16:21启动，实测revision3/Z侧，supervisor46423/GPU46425仅历史；唯一活动B3-continuation-v1/reset-40-49/plan.json，文件SHA01fc357c712a3a3965b89c286293acce18bbbd0f48786ee310d06a6d29785938。详见RESET_30_39_ANALYSIS_CN.md。
+
 > 最新覆盖：累计250为Z2/S239，237救回0新增失败、任务经验95%[92,97.6]pp。reset20–29全部exit0/硬门禁通过；按顺序已启动reset30–39各100。北京时间23:17:59启动supervisor35871，23:20实测revision3/Z侧、GPU35873及约16GB显存；均仅历史。当前唯一活动计划B3-continuation-v1/reset-30-39/plan.json，文件SHAe90771f255576b64e798f45aa261f962b147ef6c8f21b2de38cade363194c0a0。详见RESET_20_29_ANALYSIS_CN.md。
 
 > 2026-10-15最新覆盖：reset10–19已完成全部exit0/配对门禁，本片Z0/S95（各100），累计150为Z1/S144，143救回0新增失败、任务95%[92,98.667]pp。已按协议/资源接reset20–29各100，09:30UTC实测RUNNING revision3/Z侧，supervisor21885/GPU21887仅历史。唯一活动计划B3-continuation-v1/reset-20-29/plan.json，SHA7ba43a6a179e9d0cf6bd02983884b725ccbc5927020b7d696a6da54c1038cc3c。详见RESET_10_19_ANALYSIS_CN.md。
@@ -61,3 +63,9 @@ reset10–19完整增量服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-res
 reset20–29服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-20-29-complete-20261015-v1`；本机repo `.local/archives/20261015-046-quant-finetuning/`同名目录。`complete.tar.gz` 682,350,520字节、SHA256 `d044dee2fcb755080de58208f63b85d6abce49a30920069f70ab7229b6764d74`；服务器压缩成员及本机4780项SHA/4781成员、200原始视频逐项通过。归档含完成片全部轨迹/命令/退出码/门禁、358源码、累计250分析；活动30–39不含。CN报告后续执行连续性补充另存Git与控制根，不改已冻结归档和硬链接来源。
 
 为满足最后分片的磁盘门禁，重新核对首50与10–19两个归档的固定tar SHA、完整本机回执、每个暂存文件与原始文件SHA及绝对路径后，回收两目录的非唯一copied payload暂存。对应服务器压缩包、清单/回执、原始评测数据和完整本机副本均保留，回收约1.109GB，实测空闲9,583,177,728字节（后续须重读）。详见同名results/verified-staging-reclaim-v1.json。训练包硬链接和当前活动数据没有清理。索引同步更新，阶段包仍不是最终原生关机fallback；最终需完整会话、root短HEAD bundle和Git远端核验。
+
+## 完整双份增量回执
+
+30–39完整增量服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-30-39-complete-20261016-v1`，本机repo `.local/archives/20261015-046-quant-finetuning/`同名目录。685,081,029字节，SHA256 `06f3f20ebbf472acf9708d6964ae980c2da23bd7bec16fade37e0cd31cfd3aaa`；服务器压缩成员/本机4791项SHA、4792成员、200原始视频逐项核验通过，活动40–49排除。五包完成索引同名results/COMPLETED_STAGE_BACKUP_INDEX_V1.json。
+
+最终归档集合的具体门禁和省空间封存步骤见FINAL_ARCHIVE_SET_PLAN_CN.md，尚未执行最终封存或关机。服务器root短HEAD bundle已准备并验证：closure-materials-v1/VLA-Quant-852d350.bundle，47,469,061字节、SHAe134858c069064667c1a79c05016ed99bbd7249cd06b66065ca4586dde211bd2。必须在最终目录纳入SHA，再额外保存当前研究Git bundle；不能拿这份旧root身份代替新执行源码或最新报告Git。

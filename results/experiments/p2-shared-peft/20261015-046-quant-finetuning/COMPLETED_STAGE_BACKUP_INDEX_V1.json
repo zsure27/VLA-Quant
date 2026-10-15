@@ -1,5 +1,5 @@
 {
-  "scope": "All completed current046 training, micro, formal reset5-29; active reset30-39 excluded",
+  "scope": "All completed current046 training, micro, formal reset5-39; active reset40-49 excluded",
   "archives": [
     {
       "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-training-complete-20261015-v1",
@@ -36,6 +36,15 @@
       "bytes": 682350520,
       "sha256": "d044dee2fcb755080de58208f63b85d6abce49a30920069f70ab7229b6764d74",
       "sha_entries": 4780,
+      "all_tar_members_and_local_files_verified": true,
+      "staging_mode": "hardlinks; portable server tar and local verified copy retained"
+    },
+    {
+      "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-30-39-complete-20261016-v1",
+      "local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-reset-30-39-complete-20261016-v1",
+      "bytes": 685081029,
+      "sha256": "06f3f20ebbf472acf9708d6964ae980c2da23bd7bec16fade37e0cd31cfd3aaa",
+      "sha_entries": 4791,
       "all_tar_members_and_local_files_verified": true,
       "staging_mode": "hardlinks; portable server tar and local verified copy retained"
     }
