@@ -70,7 +70,12 @@ def main():
     for name in ("train-10-pair-gate.json", "train-1000-pair-gate.json", "resume-content-gate.json",
                  "actual-observation-repeatability.json", "actual-observation-repeatability-v2.json"):
         add_file(a.session / name, "payload/gates/" + name)
-    add_tree(a.control / "source-v2", "payload/source-v2")
+    source_manifest = json.loads((a.control / "source-v2-SHA256.json").read_text())
+    for name, expected in source_manifest.items():
+        source_file = a.control / "source-v2" / name
+        if digest(source_file) != expected:
+            raise ValueError("Frozen source mismatch: " + name)
+        add_file(source_file, "payload/source-v2/" + name)
     for path in sorted(a.control.iterdir()):
         if (path.is_file() and path.suffix in (".json", ".py", ".gz", ".log")
                 and path.name not in ("B3-supervisor-v1.log", "archive-training-v1.log")):

@@ -1,10 +1,12 @@
+> 最新覆盖（2026-10-15）：首50计划12阶段全部结束，Z=1/50、S=49/50，48 rescue/0 break，任务经验95%区间[90,100]pp，配对硬门禁通过。按既定顺序已启动reset10–19每侧100；当前唯一活动计划为控制根B3-continuation-v1/reset-10-19/plan.json，文件SHA8767cb6907d99142aa64910b00282e3de7d02d2499969131433edba84b1fedc9；status为同目录control/20261015-046-quant-finetuning-v1-reset-10-19/status.json。08:52 UTC实测revision6、S侧已接续，supervisor11229、wrapper16378、策略进程16379，磁盘12,359,987,200字节；PID及阶段只代表当时历史。源/已训练adapter不变，不重跑首50。详细解释见FIRST50_ANALYSIS_CN.md。
+
 # 046量化微调对照：启动与门禁回执
 
 日期：2026-10-15。状态为**真实GPU计划已启动，训练与闭环结果待完成**；不能将启动或CPU PASS当作新增成功率。
 
 > 最新GPU门禁更新：两侧10步烟雾及`PASS_B3_INITIALIZATION_SMOKE_PAIR`已完成。真实零输出/保存重载/冻结参数、两侧相同目标白名单/参数数目/教师/训练序列均通过；每侧19,988,480参数。最新观测revision12为`train-1000-standard-zero`，执行器已自动进入正式训练；尚无新闭环成功率。门禁回执已同步同名results目录。
 
-> 后续覆盖：两侧正式1000步及`PASS_B3_INITIALIZATION_TRAIN_PAIR`均已完成；micro协议通过，Z=0/10、S=10/10（与正式重叠，不加总）。当前首50 Z侧正常运行revision30。训练完整增量双份756,868,488字节、SHA d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39、664项本机逐文件核验通过；活动评测不含。详见同目录`TRAINING_ANALYSIS_CN.md`，不能将微测当最终450结论或复用历史B3成绩替代新S。
+> 后续覆盖：两侧正式1000步及`PASS_B3_INITIALIZATION_TRAIN_PAIR`均已完成；micro协议通过，Z=0/10、S=10/10（与正式重叠，不加总）。当前首50 Z侧正常运行revision30。训练完整增量双份756,868,488字节、SHA d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39、664项本机逐文件核验通过；完整活动评测未纳入；另含35个已完成视频，见范围补充。详见同目录`TRAINING_ANALYSIS_CN.md`，不能将微测当最终450结论或复用历史B3成绩替代新S。
 
 ## 已完成
 
@@ -20,7 +22,7 @@
 
 R0-v1在环境初始化因空EGL设备值失败（`invalid literal for int() with base 10: ''`），没有进入策略评测。保留失败回执；v2显式`MUJOCO_EGL_DEVICE_ID=0`，科学参数不变，通过完整原定探针。CPU测试第一次用模块名寻找`tests.test_b3_initialization_v1`失败，未执行测试；改为标准unittest discover后相同源码3项通过。最后部署补强了成对审计的实际派生seed和程序错误检查，独立source-v2再次通过CPU契约。所有旧版本保留。
 
-## 当前唯一GPU计划
+## 首50原始GPU计划（已完成）
 
 - 源码：`/root/autodl-tmp/qvla-repro/control/20261015-046-quant-finetuning-v1/source-v2`；tar SHA `7e46f0403260a0c0297496c57050af9a11f75a7d9cdadb82f686a376c7594c1d`。
 - 计划：同控制根`B3-plans-v1/first50-plan.json`，文件SHA `f6d2bf0a19cd6b6054f9ee6c4f77e18a07c99802624971bd69974c6ef5be8992`；canonical计划SHA `480acaf70e2a7cea2f4aabef755d3e06b4162d2be6859f7330634f64f688199f`。
@@ -37,3 +39,9 @@ R0-v1在环境初始化因空EGL设备值失败（`invalid literal for int() wit
 先完成基础初始化对照，再分别推进时间覆盖、动作目标/执行敏感残差方向及C-SQ-v1等价/梯度/恢复；这些后续项仍受各自门禁约束，当前没有宣称已全部实现或放行。暂停扩展routing，不触碰offline_final_holdout标签。
 
 本轮046心跳15分钟ACTIVE，阶段未变静默；完成/失败/空闲待接续/额度门限时处理。只看实时五小时primary：约15%停扩展并完整分析双份归档、固定GitHub SHA；约10%停新GPU并原生关当前046，留至少3%。运行保留6GiB。当前不关闭Windows，不继承091本机关机许可。
+
+## 首50完整评测双份增量
+
+服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1`；本机repo `.local/archives/20261015-046-quant-finetuning/`下同名物理目录。`complete.tar.gz` 399,964,959字节，SHA256 `9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952`。服务器压缩成员与本机2995项SHA/2996成员全部核验通过，含micro与first50完整轨迹/观测动作/命令/退出码及120原始视频（每个视频episode ordinal和成败与gate逐项一致）。实际冻结源码仅按358项清单逐文件纳入；当前reset10–19不包含，后续仍需完成片增量。与训练增量和091来源归档共同保存当前完成材料，不声称本机有完整7B checkpoint。
+
+训练包范围已附SCOPE_SUPPLEMENT_V2.json：原训练包意外包含35个已完成视频，全部原SHA有效，压缩包保持不变，不将它当成完整评测归档。源码归档工具已改为清单白名单，未改变活动GPU冻结源码。

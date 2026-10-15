@@ -1,0 +1,15 @@
+{
+  "gate": "TRAINING_ARCHIVE_SCOPE_SUPPLEMENT_V2",
+  "time_utc": "2026-10-15T08:55:49.842987+00:00",
+  "archive_sha256": "d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39",
+  "archive_bytes": 756868488,
+  "training_complete": true,
+  "incidental_original_videos": 35,
+  "incidental_video_breakdown": {
+    "micro": 20,
+    "first50_standard_zero": 15
+  },
+  "correction": "Original source snapshot recursively included generated rollouts. The earlier statement that all active evaluation products were excluded was overbroad. Complete training and every recorded SHA remain valid; this is not a complete evaluation archive. Preserve original tar unchanged; a separate complete 120-video evaluation increment follows.",
+  "source_manifest_files": 358,
+  "original_archive_unchanged": true
+}

@@ -21,7 +21,7 @@
 
 补充：历史B3与新S的训练输入清单及训练顺序SHA相同，首步loss同为0.1092993096，但首步gradient norm分别为1.625与1.6171875，第1000步单观测loss分别为0.0048805191与0.0079795662。差异原因尚未识别，不能仅凭同一seed假定逐位确定性，也不能把差异直接归因于某个CUDA内核。当前Z/S来自同一新入口，严格配对训练gate已通过；历史B3的425/450不能替代本轮新S评测，仍按预注册完成新S全部评测。
 
-继续原定配对micro与每侧首50，依据命令/退出码、严格配对、finite、异常、实时额度/磁盘门禁接续，不按成绩方向调整。首50结束后计算rescue/break、任务聚类区间/McNemar、全部失败及成本，再预注册后续到各450；micro不加总。当前训练完整增量归档排除全部活动评测，评测完成后仍需完整增量。
+继续原定配对micro与每侧首50，依据命令/退出码、严格配对、finite、异常、实时额度/磁盘门禁接续，不按成绩方向调整。首50结束后计算rescue/break、任务聚类区间/McNemar、全部失败及成本，再预注册后续到各450；micro不加总。当前训练增量完整，另意外含35个已完成视频（见范围补充），评测完成后仍需完整增量。
 
 ## 已完成micro与首50状态
 
@@ -37,4 +37,8 @@ micro已通过`PASS_B3_INITIALIZATION_PAIRED_PROTOCOL`：同十任务reset5，Z=
 - 本机物理目录：repo `.local/archives/20261015-046-quant-finetuning/046-b3-initialization-training-complete-20261015-v1`。标准`backups/experiments` junction无法创建新目录，使用既有046物理替代路径，未改junction或删除旧数据。
 - `complete.tar.gz` 756,868,488字节，SHA256 `d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39`；服务器压缩成员和本机解压后664项SHA清单全部通过，本机共恢复665个成员（含清单本身），662项payload、6项已完成wrapper记录。
 - 包含两侧smoke/正式训练/五份checkpoint、80训练观测/80独立SVD校准输入、继承初始化/教师cache、实际source-v2/不可变计划/退出码和训练分析。服务器staging硬链接不计独立物理副本；压缩包和核验的本机副本为可迁移归档。
-- 这是训练完整增量；micro及活动first50评测全部不包含，后续还须完整评测增量。7B基座保留服务器并绑定完整SHA，不声称本机完整checkpoint副本。服务器和本机核验回执已写同名results目录。
+- 这是训练完整增量；完整micro/first50评测轨迹不包含，另意外含35个已完成视频（见范围补充），后续还须完整评测增量。7B基座保留服务器并绑定完整SHA，不声称本机完整checkpoint副本。服务器和本机核验回执已写同名results目录。
+
+## 归档范围补充V2
+
+原归档source-v2递归快照额外包含35个完成视频（micro20、首50 Z侧15）。原SHA和全部训练成员校验有效，压缩包保持不变；“全部活动评测排除”的旧描述过宽，以同名results的training-archive-scope-supplement-v2.json为准。另建120视频完整评测增量，排除当前reset10–19。后续源码归档仅按358项冻结清单。

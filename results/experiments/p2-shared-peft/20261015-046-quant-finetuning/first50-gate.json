@@ -1,0 +1,359 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_PAIRED_PROTOCOL",
+  "paired_episodes": 50,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "standard-zero": true,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 6,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 8,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 9,
+      "standard-zero": false,
+      "response-svd": true
+    }
+  ],
+  "comparison_S_minus_Z": {
+    "episodes": 50,
+    "rescue": 48,
+    "break": 0,
+    "net": 48,
+    "delta_fraction": 0.96,
+    "exact_mcnemar_p": 7.105427357601002e-15,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.9,
+      1.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 4,
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 5,
+      "6": 4,
+      "7": 5,
+      "8": 5,
+      "9": 5
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "cases": {
+    "standard-zero": {
+      "successes": 1,
+      "queries": 1384,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_15-15_40_34.txt": "bf0d7b574ee99729481c911ae956a6e13ef4276697bcfdd5c65b8731d92716dd",
+        "invocation.json": "3d770d769b18d695e56e1fc0ae26761d6efd572dd11d9a4e86189b5bb2ede851",
+        "policy-queries.jsonl": "33fb65b5e2df320f59fbf25c273f7bf627965185b258173e37a1ca4464c8ab63",
+        "on-policy-events.jsonl": "41a49219cc4f2f51cf78e2b3577b2bd4ca99ab0042bb05d506755c6972b2ea4a",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "response-svd": {
+      "successes": 49,
+      "queries": 678,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_15-15_57_44.txt": "23c85fc6ce0f09e25d97ea4db1429e62f3a699fb9df10cd69cdd37a259208dbc",
+        "invocation.json": "0909e2b0023b19832f32458b108d28da96f7b74c69059ef13ccce7ec22354483",
+        "policy-queries.jsonl": "d5168ea5ca35526c8fa8026428bf06279f96083f01ee44cb35b8a9ec1cb1de45",
+        "on-policy-events.jsonl": "b891ba2866c6a2df90f257b50262a740caf96c5c8e893558a8799030bd45a48f",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "limits": "Reused same-task development; continuation decided by protocol/resources, not score direction"
+}
