@@ -1,0 +1,12 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_SMOKE_PAIR",
+  "steps": 10,
+  "records": {
+    "standard-zero": "376a631a2bc3d963d82515afe1747b78b830b957fd462656edd2abbc0ba739b1",
+    "response-svd": "18ac0f0efd9201c8528d7175542f35712b0158bafce01b70fa044edf28ffcf08"
+  },
+  "parameters_each": 19988480,
+  "sample_sequence_sha256": "2b8a8cdb8c67852078c0102b789f5aef3d4e385dc1adac3d710a648cf233a28e",
+  "teacher_cache_sha256": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+  "limits": "Training and structural admission only; no closed-loop benefit conclusion"
+}
