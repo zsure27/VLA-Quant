@@ -1,0 +1,14 @@
+{
+  "gate": "PASS_SERVER_COMPLETE_ARCHIVE_SET_SHA_COVERAGE",
+  "server_directory": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-final-20261016-v1",
+  "set_files": 10,
+  "set_bytes": 3996197207,
+  "all_set_files_sha_verified": true,
+  "all_session_files_covered": true,
+  "original_videos_verified": 920,
+  "source_files_verified": 358,
+  "supplement_tar_members_verified": 531,
+  "research_commit": "1d7da54df37c42055c6293d36f4b2bf32f8a2434",
+  "index_sha256": "ef0341f630e08a66ef902d645d0b50f1679101aa3d713d8c2a31b02ba961abcb",
+  "free_bytes_after": 6768390144
+}

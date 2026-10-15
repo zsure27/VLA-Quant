@@ -30,12 +30,15 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--directory', type=Path, required=True)
     p.add_argument('--repository', type=Path, required=True)
+    p.add_argument('--expected-index-sha256', required=True)
     a = p.parse_args()
     display = a.directory.resolve()
     root = Path('\\\\?\\' + str(display)) if os.name == 'nt' else display
     server = json.loads((root / 'SERVER_SET_VERIFICATION.json').read_text())
     index = json.loads((root / 'ARCHIVE_SET_INDEX.json').read_text())
-    if server['gate'] != 'PASS_SERVER_COMPLETE_ARCHIVE_SET_SHA_COVERAGE' or sha(root / 'ARCHIVE_SET_INDEX.json') != server['index_sha256']:
+    if (server['gate'] != 'PASS_SERVER_COMPLETE_ARCHIVE_SET_SHA_COVERAGE'
+            or server['index_sha256'] != a.expected_index_sha256
+            or sha(root / 'ARCHIVE_SET_INDEX.json') != a.expected_index_sha256):
         raise ValueError('Trusted server final index mismatch')
     if len(index['stages']) != 6 or index['original_videos_verified'] != 920 or index['frozen_source_files_verified'] != 358:
         raise ValueError('Incomplete final set coverage')

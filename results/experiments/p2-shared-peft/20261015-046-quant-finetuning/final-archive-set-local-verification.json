@@ -1,0 +1,19 @@
+{
+  "gate": "PASS_LOCAL_COMPLETE_ARCHIVE_SET_SHA_COVERAGE",
+  "time_utc": "2026-10-15T17:33:25.477776+00:00",
+  "directory": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-initialization-final-20261016-v1",
+  "server_directory": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-final-20261016-v1",
+  "all_set_files_sha_verified": true,
+  "all_session_files_covered": true,
+  "all_stage_archives_locally_restored_and_verified": true,
+  "original_videos_verified": 920,
+  "frozen_source_files_verified": 358,
+  "supplement_members_restored_and_verified": 531,
+  "stages": 6,
+  "root_git_bundle_verified": true,
+  "research_git_bundle_verified": true,
+  "research_commit": "1d7da54df37c42055c6293d36f4b2bf32f8a2434",
+  "index_sha256": "ef0341f630e08a66ef902d645d0b50f1679101aa3d713d8c2a31b02ba961abcb",
+  "scope": "Complete current046 initialization run training+micro+900formal episodes; all920 original videos; stage tars plus supplement; hardlinks not new physical replicas",
+  "checkpoint_scope": "Full7B checkpoint remains server-side with existing full checksums; no complete local7B copy claim"
+}

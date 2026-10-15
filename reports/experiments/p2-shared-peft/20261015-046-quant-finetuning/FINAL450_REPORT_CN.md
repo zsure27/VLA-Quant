@@ -34,3 +34,14 @@ S另使用80独立校准轨迹及教师前向/分解，非等总校准信息与�
 后续仍按10-13研究计划：先同80观测预算改变时间覆盖（每条轨迹早期query0/1与均匀时刻对照，初始化固定、数据角色/教师重标单列）；再单变量动作目标/执行敏感残差，先局部梯度/零残差/保存重载再烟雾与首50；C-SQ先只平滑等价、W/A拆分和STE梯度重载，再C3=W4A8/C4=W4A4的PTQ-Z-S恢复，不让LoRA掩盖未通过的等价实现。标准Z的优化步数/初始化尺度诊断应独立预注册，不能用本轮开发成败挑checkpoint。不开routing，不覆盖旧结果。下轮由用户自行开机并提供满足门禁的资源。
 
 用户已授权本轮收尾后关闭Windows。当前报告尚不宣称最终归档/远端关机/本机关机完成；先完成服务器与本机完整集合及Git远端SHA核验、取得046原生execute=true回执、暂停心跳、发送完整总结，随后请求Windows原生关机。任何关键失败保留本机运行继续处理。
+
+## 完整会话集合最终核验
+
+服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-final-20261016-v1`，本机repo `.local/archives/20261015-046-quant-finetuning/046-b3-initialization-final-20261016-v1`，核心文件逻辑总字节3,996,197,207。六完整阶段tar、920原始视频SHA、所有当前会话文件覆盖、358源码、531补充成员、本机恢复及两份Git bundle验证通过。完整INDEX SHA256 `ef0341f630e08a66ef902d645d0b50f1679101aa3d713d8c2a31b02ba961abcb`；10核心文件SHA见集合SHA256SUMS.txt。服务器集合使用硬链接，不计新增独立物理副本；本机硬链接权限不足后复制已有压缩包，完整本机集合已逐文件通过。
+
+研究Git bundle绑定远端已核验1d7da54df37c42055c6293d36f4b2bf32f8a2434（完整450科学结果及源码），旧服务器root bundle绑定852d350，仅用于原生门禁。完整7B checkpoint仍服务器全checksum，不称本机checkpoint副本。封存后关机核验/授权与原生执行回执采用小补充和append-only回执，不重写已验证科学数据tar。当前尚未执行远端或Windows关机。
+
+
+## 最新关机授权变更
+
+用户取消本地Windows关机，并明确046仍按收尾约定关闭。本地电脑保持开启；服务器完整双份备份及Git核验后执行046原生关机，保留执行回执并暂停本轮心跳。此前Windows授权已撤销，回执见同名results/windows-shutdown-authorization-v1.json。
