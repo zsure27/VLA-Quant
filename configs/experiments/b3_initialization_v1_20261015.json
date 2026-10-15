@@ -1,0 +1,32 @@
+{
+  "version": "b3-initialization-v1-20261015",
+  "rank": 8,
+  "alpha_over_rank": 1,
+  "seed": 7,
+  "order_seed": 7,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "beta": 0.1,
+  "gradient_clip_norm": 1,
+  "batch_size": 1,
+  "smoke_steps": 10,
+  "train_steps": 1000,
+  "checkpoint_steps": [0, 100, 250, 500, 1000],
+  "training_resets": [0, 1, 2, 3],
+  "training_observations": 80,
+  "training_episodes": 40,
+  "queries_per_episode": [0, 1],
+  "initializations": ["standard-zero", "response-svd"],
+  "loss": "normalized_action_smooth-l1_8x7",
+  "evaluation": {"suite": "libero_spatial", "seed": 0, "env_seed": 1, "protocol": "paired", "resets": [5, 49], "formal_per_variant": 450, "first_gate_per_variant": 50},
+  "inherited_cache_sha256": {
+    "initial-adapter.pt": "be0384bdce5570f6ff42ac49cbc2d42df63cf9e771ae49c7e81bcdacd8eca458",
+    "teacher-targets.pt": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+    "teacher-input-hashes.json": "c05679faf3b31f1a678c99994e059395e9b656b0d975b746d7c6dc77e3865683"
+  },
+  "SVD_cost": "reuse the pinned pre-training factors; report historical acquisition/decomposition/IO separately from this run incremental cost",
+  "max_stage_seconds": 10800,
+  "max_plan_seconds": 21600,
+  "classification": "same-task development; initialization-only controlled comparison, no new independent environment claim"
+}
