@@ -1,5 +1,5 @@
 {
-  "scope": "All completed current-046 training/micro/formal reset5-19; active reset20-29 excluded",
+  "scope": "All completed current046 training, micro, formal reset5-29; active reset30-39 excluded",
   "archives": [
     {
       "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-training-complete-20261015-v1",
@@ -17,7 +17,8 @@
       "sha256": "9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952",
       "sha_entries": 2995,
       "all_tar_members_and_local_files_verified": true,
-      "scope_supplement": null
+      "scope_supplement": null,
+      "server_staging_payload": "Reclaimed after pinned tar/local/original-file SHA revalidation; server complete.tar.gz and original evaluation data intact"
     },
     {
       "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-10-19-complete-20261015-v1",
@@ -26,12 +27,47 @@
       "sha256": "2cec7fcaf7059a61b18c8d25a6df97947801a61524fdc929b76a264a97e0da56",
       "sha_entries": 4777,
       "all_tar_members_and_local_files_verified": true,
-      "scope_supplement": null
+      "scope_supplement": null,
+      "server_staging_payload": "Reclaimed after pinned tar/local/original-file SHA revalidation; server complete.tar.gz and original evaluation data intact"
+    },
+    {
+      "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-20-29-complete-20261015-v1",
+      "local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-reset-20-29-complete-20261015-v1",
+      "bytes": 682350520,
+      "sha256": "d044dee2fcb755080de58208f63b85d6abce49a30920069f70ab7229b6764d74",
+      "sha_entries": 4780,
+      "all_tar_members_and_local_files_verified": true,
+      "staging_mode": "hardlinks; portable server tar and local verified copy retained"
     }
   ],
   "prior_091_archive": "/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1",
   "prior_091_sha256": "31ae496b9e14ba7573a703c7123cc8b690e5ffbde33c9b99fed965fdee8121ad",
   "prior_091_current_boot_manifest_verification": "22244 main and15389 data SHA passed",
   "checkpoint_scope": "Complete7B checkpoint server-side and full SHA verified; no complete local7B copy claim",
-  "not_shutdown_fallback_yet": "Final session archive and current root Git short-HEAD bundle must be prepared before native shutdown; these stage increments alone are not a shutdown admission receipt."
+  "not_shutdown_fallback_yet": "Final session archive and current root Git short-HEAD bundle must be prepared before native shutdown; these stage increments alone are not a shutdown admission receipt.",
+  "verified_duplicate_staging_reclaim": {
+    "time_utc": "2026-10-15T15:24:02.762844+00:00",
+    "reviewed": [
+      {
+        "archive": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1",
+        "payload": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1/payload",
+        "files": 2992,
+        "payload_bytes": 405377324,
+        "tar_sha256": "9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952",
+        "local_receipt_sha256": "e26a63fe5b9dd06a3bd6594aa7d21a5a4a6e3e1bd295c7e31c2a5871b483b298"
+      },
+      {
+        "archive": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-10-19-complete-20261015-v1",
+        "payload": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-10-19-complete-20261015-v1/payload",
+        "files": 4774,
+        "payload_bytes": 687528672,
+        "tar_sha256": "2cec7fcaf7059a61b18c8d25a6df97947801a61524fdc929b76a264a97e0da56",
+        "local_receipt_sha256": "c548f1cec30a875d6227ab1d37326f3586719f0321d65be61d21fc3555ace384"
+      }
+    ],
+    "execute": true,
+    "free_bytes_before": 8473993216,
+    "retained": "Original source/evaluation data, pinned complete.tar.gz, manifest/checksums/receipts and verified local full copies",
+    "free_bytes_after": 9583177728
+  }
 }

@@ -4,6 +4,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -18,6 +19,7 @@ def main():
         p.add_argument('--' + name, type=Path, required=True)
     p.add_argument('--expected-hostname', required=True)
     p.add_argument('--phase', choices=('reset-10-19', 'reset-20-29', 'reset-30-39', 'reset-40-49'))
+    p.add_argument('--hardlink-staging', action='store_true', help='Completed immutable files only; compressed tar remains the portable copy')
     a = p.parse_args()
     phases = ((a.phase, 100),) if a.phase else (('micro', 10), ('first50', 50))
     if socket.gethostname() != a.expected_hostname or a.archive.exists():
@@ -38,7 +40,13 @@ def main():
         if not source.is_file() or target.exists():
             raise ValueError('Missing source or duplicate: ' + str(source))
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, target)
+        if a.hardlink_staging:
+            try:
+                os.link(source, target)
+            except OSError:
+                shutil.copy2(source, target)
+        else:
+            shutil.copy2(source, target)
         origins[relative] = {'source': str(source), 'sha256': digest(target), 'bytes': target.stat().st_size}
     def tree(source, relative):
         source = Path(source)
@@ -115,6 +123,7 @@ def main():
     scope = {'time_utc': datetime.now(timezone.utc).isoformat(), 'hostname': socket.gethostname(),
              'scope': 'Complete Z/S raw traces, observations/actions, commands, exits, gates, original external videos, exact 358 frozen source files and analysis',
              'phases': [name for name, _ in phases], 'original_videos': len(video_rows),
+             'staging_mode': 'hardlinks where possible; not an independent physical server replica' if a.hardlink_staging else 'copied files',
              'excluded_active': 'All evaluations outside explicitly listed completed phases',
              'prior_first50_archive': '/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1',
              'prior_first50_tar_sha256': '9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952',

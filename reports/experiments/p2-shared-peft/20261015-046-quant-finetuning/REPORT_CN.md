@@ -1,3 +1,5 @@
+> 最新覆盖：累计250为Z2/S239，237救回0新增失败、任务经验95%[92,97.6]pp。reset20–29全部exit0/硬门禁通过；按顺序已启动reset30–39各100。北京时间23:17:59启动supervisor35871，23:20实测revision3/Z侧、GPU35873及约16GB显存；均仅历史。当前唯一活动计划B3-continuation-v1/reset-30-39/plan.json，文件SHAe90771f255576b64e798f45aa261f962b147ef6c8f21b2de38cade363194c0a0。详见RESET_20_29_ANALYSIS_CN.md。
+
 > 2026-10-15最新覆盖：reset10–19已完成全部exit0/配对门禁，本片Z0/S95（各100），累计150为Z1/S144，143救回0新增失败、任务95%[92,98.667]pp。已按协议/资源接reset20–29各100，09:30UTC实测RUNNING revision3/Z侧，supervisor21885/GPU21887仅历史。唯一活动计划B3-continuation-v1/reset-20-29/plan.json，SHA7ba43a6a179e9d0cf6bd02983884b725ccbc5927020b7d696a6da54c1038cc3c。详见RESET_10_19_ANALYSIS_CN.md。
 
 > 最新覆盖（2026-10-15）：首50计划12阶段全部结束，Z=1/50、S=49/50，48 rescue/0 break，任务经验95%区间[90,100]pp，配对硬门禁通过。按既定顺序已启动reset10–19每侧100；当前唯一活动计划为控制根B3-continuation-v1/reset-10-19/plan.json，文件SHA8767cb6907d99142aa64910b00282e3de7d02d2499969131433edba84b1fedc9；status为同目录control/20261015-046-quant-finetuning-v1-reset-10-19/status.json。08:52 UTC实测revision6、S侧已接续，supervisor11229、wrapper16378、策略进程16379，磁盘12,359,987,200字节；PID及阶段只代表当时历史。源/已训练adapter不变，不重跑首50。详细解释见FIRST50_ANALYSIS_CN.md。
@@ -53,3 +55,9 @@ R0-v1在环境初始化因空EGL设备值失败（`invalid literal for int() wit
 reset10–19完整增量服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-10-19-complete-20261015-v1`，本机repo `.local/archives/20261015-046-quant-finetuning/`下同名目录。679,500,413字节，SHA256 `2cec7fcaf7059a61b18c8d25a6df97947801a61524fdc929b76a264a97e0da56`；4777项SHA/4778成员和200个原始视频逐项核验通过，保存全部轨迹/实际命令/退出码/门禁/358源码/150配对分析。活动reset20–29不包含。CN报告和最新本机回执另同步控制根，与冻结归档分开保存，不改原tar。
 
 训练、micro/首50和本片的完整服务器/本机索引见同名results/COMPLETED_STAGE_BACKUP_INDEX_V1.json；原091来源归档及7B checkpoint保持原角色。阶段增量不是最终原生关机许可回执，最终仍须完整会话归档及服务器root短HEAD bundle。
+
+## 完整双份增量与资源回执
+
+reset20–29服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-20-29-complete-20261015-v1`；本机repo `.local/archives/20261015-046-quant-finetuning/`同名目录。`complete.tar.gz` 682,350,520字节、SHA256 `d044dee2fcb755080de58208f63b85d6abce49a30920069f70ab7229b6764d74`；服务器压缩成员及本机4780项SHA/4781成员、200原始视频逐项通过。归档含完成片全部轨迹/命令/退出码/门禁、358源码、累计250分析；活动30–39不含。CN报告后续执行连续性补充另存Git与控制根，不改已冻结归档和硬链接来源。
+
+为满足最后分片的磁盘门禁，重新核对首50与10–19两个归档的固定tar SHA、完整本机回执、每个暂存文件与原始文件SHA及绝对路径后，回收两目录的非唯一copied payload暂存。对应服务器压缩包、清单/回执、原始评测数据和完整本机副本均保留，回收约1.109GB，实测空闲9,583,177,728字节（后续须重读）。详见同名results/verified-staging-reclaim-v1.json。训练包硬链接和当前活动数据没有清理。索引同步更新，阶段包仍不是最终原生关机fallback；最终需完整会话、root短HEAD bundle和Git远端核验。
