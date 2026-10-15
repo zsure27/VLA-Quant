@@ -69,3 +69,7 @@ reset20–29服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-20-29-com
 30–39完整增量服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-30-39-complete-20261016-v1`，本机repo `.local/archives/20261015-046-quant-finetuning/`同名目录。685,081,029字节，SHA256 `06f3f20ebbf472acf9708d6964ae980c2da23bd7bec16fade37e0cd31cfd3aaa`；服务器压缩成员/本机4791项SHA、4792成员、200原始视频逐项核验通过，活动40–49排除。五包完成索引同名results/COMPLETED_STAGE_BACKUP_INDEX_V1.json。
 
 最终归档集合的具体门禁和省空间封存步骤见FINAL_ARCHIVE_SET_PLAN_CN.md，尚未执行最终封存或关机。服务器root短HEAD bundle已准备并验证：closure-materials-v1/VLA-Quant-852d350.bundle，47,469,061字节、SHAe134858c069064667c1a79c05016ed99bbd7249cd06b66065ca4586dde211bd2。必须在最终目录纳入SHA，再额外保存当前研究Git bundle；不能拿这份旧root身份代替新执行源码或最新报告Git。
+
+## 本轮Windows关机授权更新
+
+用户明确要求本轮运行结束后关闭本地电脑。本条覆盖本轮旧“不关Windows”，只限当前046完整运行，不继承未来。继续当前实验及实时15%/10%/3%门限。最终先核验全部实验终止/GPU空闲、服务器完整持久盘归档/本机完整副本/同名分析/GitHub远端SHA，再取得046原生关机执行回执，暂停本轮心跳，向用户发送完整结果与本机关机即将执行摘要，随后请求Windows原生关机。任何关键备份/GitHub/远端关机失败则保持本机运行，保留数据并继续处理或通知，不重复要求许可。当前只登记授权，尚未执行Windows关机。
