@@ -1,0 +1,34 @@
+{
+  "standard-zero": {
+    "A": {
+      "matrices": 224,
+      "changed_matrices": 224,
+      "nonzero_final_matrices": 224,
+      "final_l2": 25.545007461274977,
+      "delta_l2": 8.850964249848284
+    },
+    "B": {
+      "matrices": 224,
+      "changed_matrices": 224,
+      "nonzero_final_matrices": 224,
+      "final_l2": 8.438540461637885,
+      "delta_l2": 8.438540461637885
+    }
+  },
+  "response-svd": {
+    "A": {
+      "matrices": 224,
+      "changed_matrices": 224,
+      "nonzero_final_matrices": 224,
+      "final_l2": 260.4607935353862,
+      "delta_l2": 3.5199985842684094
+    },
+    "B": {
+      "matrices": 224,
+      "changed_matrices": 224,
+      "nonzero_final_matrices": 224,
+      "final_l2": 42.446678663427534,
+      "delta_l2": 4.483714016771842
+    }
+  }
+}

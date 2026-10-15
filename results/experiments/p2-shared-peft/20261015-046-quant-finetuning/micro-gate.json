@@ -1,0 +1,119 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_PAIRED_PROTOCOL",
+  "paired_episodes": 10,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "standard-zero": false,
+      "response-svd": true
+    }
+  ],
+  "comparison_S_minus_Z": {
+    "episodes": 10,
+    "rescue": 10,
+    "break": 0,
+    "net": 10,
+    "delta_fraction": 1.0,
+    "exact_mcnemar_p": 0.001953125,
+    "task_cluster_bootstrap_95ci_fraction": [
+      1.0,
+      1.0
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "cases": {
+    "standard-zero": {
+      "successes": 0,
+      "queries": 280,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_15-15_32_07.txt": "9686f144530143ff7cdd6c65fe490c665bdb346e58f823afd19d37537e173ac3",
+        "invocation.json": "1c35d39cd9b2d6c423a6f715fc31193b34cb56640b6b4f009c6cd61a9c302aae",
+        "policy-queries.jsonl": "3eb8584ef330fe4a3a266bad503727f8d7027a841360e5e3d3f70b99f947532c",
+        "on-policy-events.jsonl": "0381e990701de68695d8c2e96f4642323f740942616e3d5c03f4e454a6bd36e6",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "response-svd": {
+      "successes": 10,
+      "queries": 130,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_15-15_36_58.txt": "546dbeed202b436249c5192bed4e763936330b1fa4fbf2f2fbd3bbb72d34f7e2",
+        "invocation.json": "3c61546d9d27d38c2ec56af8dd7c6aec7b4789bcbffdc24eca5b567771ac4495",
+        "policy-queries.jsonl": "b4802fee594e4482a884fbf7694c32b949233de0eb42b37025b9e23ad50cd136",
+        "on-policy-events.jsonl": "bd05d594b499f63533b23af190d49a2514b1fda18e738fc12550f21c50e635da",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "limits": "Reused same-task development; continuation decided by protocol/resources, not score direction"
+}

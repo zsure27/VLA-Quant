@@ -4,6 +4,8 @@
 
 > 最新GPU门禁更新：两侧10步烟雾及`PASS_B3_INITIALIZATION_SMOKE_PAIR`已完成。真实零输出/保存重载/冻结参数、两侧相同目标白名单/参数数目/教师/训练序列均通过；每侧19,988,480参数。最新观测revision12为`train-1000-standard-zero`，执行器已自动进入正式训练；尚无新闭环成功率。门禁回执已同步同名results目录。
 
+> 后续覆盖：两侧正式1000步及`PASS_B3_INITIALIZATION_TRAIN_PAIR`均已完成；micro协议通过，Z=0/10、S=10/10（与正式重叠，不加总）。当前首50 Z侧正常运行revision30。训练完整增量双份756,868,488字节、SHA d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39、664项本机逐文件核验通过；活动评测不含。详见同目录`TRAINING_ANALYSIS_CN.md`，不能将微测当最终450结论或复用历史B3成绩替代新S。
+
 ## 已完成
 
 - 用户开启046并明确授权按10-13研究计划实验。SSH端口38230，实际hostname `autodl-container-90824aab47-6dc00ae3`；ED25519公钥与已有可信记录匹配。本轮使用独立known_hosts。

@@ -1,0 +1,12 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_TRAIN_PAIR",
+  "steps": 1000,
+  "records": {
+    "standard-zero": "6118d616319a03c8b4e570520236f75bc37703fca06cbefef4b2f5a55cfe798a",
+    "response-svd": "48ff6ad289bd99368a6de5c5644530abd8f751713237aa0b8698ee3894897af6"
+  },
+  "parameters_each": 19988480,
+  "sample_sequence_sha256": "ae002ef4edf7e3ac930550864e0c1178f0d469aed89958b2180a73c8cfa9f735",
+  "teacher_cache_sha256": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+  "limits": "Training and structural admission only; no closed-loop benefit conclusion"
+}

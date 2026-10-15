@@ -1,0 +1,62 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_TRAIN_PAIR",
+  "stage": "completed training only; active rollouts excluded",
+  "cases": {
+    "standard-zero": {
+      "parameters": 19988480,
+      "serialized_bytes": 40133618,
+      "training_seconds": 377.5198794975877,
+      "peak_cuda_bytes": 19310084608,
+      "sample_sequence_sha256": "ae002ef4edf7e3ac930550864e0c1178f0d469aed89958b2180a73c8cfa9f735",
+      "teacher_cache_sha256": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+      "zero_output_equal": true,
+      "reload_output_equal": true,
+      "trace_first": {
+        "step": 1,
+        "loss": 0.15369759500026703,
+        "gradient_norm": 0.1455078125,
+        "sample": "sample-00015.npz"
+      },
+      "trace_last": {
+        "step": 1000,
+        "loss": 0.03210185095667839,
+        "gradient_norm": 0.79296875,
+        "sample": "sample-00075.npz"
+      },
+      "artifact_sha256": "6118d616319a03c8b4e570520236f75bc37703fca06cbefef4b2f5a55cfe798a"
+    },
+    "response-svd": {
+      "parameters": 19988480,
+      "serialized_bytes": 40133618,
+      "training_seconds": 380.59127132594585,
+      "peak_cuda_bytes": 19310084608,
+      "sample_sequence_sha256": "ae002ef4edf7e3ac930550864e0c1178f0d469aed89958b2180a73c8cfa9f735",
+      "teacher_cache_sha256": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+      "zero_output_equal": true,
+      "reload_output_equal": true,
+      "trace_first": {
+        "step": 1,
+        "loss": 0.10929930955171585,
+        "gradient_norm": 1.6171875,
+        "sample": "sample-00015.npz"
+      },
+      "trace_last": {
+        "step": 1000,
+        "loss": 0.007979566231369972,
+        "gradient_norm": 0.38671875,
+        "sample": "sample-00075.npz"
+      },
+      "artifact_sha256": "48ff6ad289bd99368a6de5c5644530abd8f751713237aa0b8698ee3894897af6"
+    }
+  },
+  "new_S_vs_historical_B3": {
+    "same_keys": true,
+    "tensor_count": 448,
+    "changed_tensors": 448,
+    "all_tensors_equal": false,
+    "interpretation": "internal consistency diagnostic, not independent environment replication"
+  },
+  "loss_limits": "first/last trace losses are one training observation each, not full-training mean or dev/closed-loop metrics; same last observation sample-00075.npz permits only a local matched diagnostic",
+  "cost_limits": "stage wall time includes model/profile/checkpoint and IO, not pure optimizer speed; inherited SVD calibration/decomposition/IO excluded from incremental wall times and must be reported separately; historical smoke388.72s also includes teacher and smoke, not pure SVD",
+  "decision": "continue preregistered paired micro and first50 on protocol/resource gates, regardless of score direction; no closed-loop benefit claim yet"
+}
