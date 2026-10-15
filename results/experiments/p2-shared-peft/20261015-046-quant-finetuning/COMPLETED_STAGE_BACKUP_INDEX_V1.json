@@ -1,5 +1,5 @@
 {
-  "scope": "All completed current046 training, micro, formal reset5-39; active reset40-49 excluded",
+  "scope": "All current046 completed training+micro+900formal episodes, all920 original video files; GPU experiments terminated",
   "archives": [
     {
       "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-training-complete-20261015-v1",
@@ -47,6 +47,15 @@
       "sha_entries": 4791,
       "all_tar_members_and_local_files_verified": true,
       "staging_mode": "hardlinks; portable server tar and local verified copy retained"
+    },
+    {
+      "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-40-49-complete-20261016-v1",
+      "local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-reset-40-49-complete-20261016-v1",
+      "bytes": 689037579,
+      "sha256": "1ba0d07f9c9a80a5fb2a8c265deff8b8956f4d61a94a3ef735fb22c59ce2858f",
+      "sha_entries": 4833,
+      "all_tar_members_and_local_files_verified": true,
+      "staging_mode": "hardlinks; complete portable tar and verified local copy"
     }
   ],
   "prior_091_archive": "/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1",

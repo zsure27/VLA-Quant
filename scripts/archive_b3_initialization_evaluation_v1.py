@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import shutil
 import socket
+import subprocess
 import tarfile
 from archive_b3_initialization_training_v1 import digest
 
@@ -20,11 +21,39 @@ def main():
     p.add_argument('--expected-hostname', required=True)
     p.add_argument('--phase', choices=('reset-10-19', 'reset-20-29', 'reset-30-39', 'reset-40-49'))
     p.add_argument('--hardlink-staging', action='store_true', help='Completed immutable files only; compressed tar remains the portable copy')
+    p.add_argument('--completed-final-idle', action='store_true', help='Bounded last-phase archive only after all450 pairs and GPU termination')
     a = p.parse_args()
     phases = ((a.phase, 100),) if a.phase else (('micro', 10), ('first50', 50))
     if socket.gethostname() != a.expected_hostname or a.archive.exists():
         raise ValueError('Wrong host or existing archive; preserve prior attempt')
-    if shutil.disk_usage(a.session).free < 8 * 1024**3:
+    if a.completed_final_idle:
+        if a.phase != 'reset-40-49' or not a.hardlink_staging:
+            raise ValueError('Idle final archive requires last phase and immutable hardlink staging')
+        if subprocess.check_output(['nvidia-smi', '--query-compute-apps=pid', '--format=csv,noheader'], text=True).strip():
+            raise ValueError('GPU must be empty for completed-final-idle admission')
+        rows = []
+        for phase_name in ('first50', 'reset-10-19', 'reset-20-29', 'reset-30-39', 'reset-40-49'):
+            gate = json.loads((a.session / (phase_name + '-gate.json')).read_text())
+            if gate['gate'] != 'PASS_B3_INITIALIZATION_PAIRED_PROTOCOL':
+                raise ValueError('All completed phase gates required')
+            rows.extend(gate['paired_rows'])
+        if len(rows) != 450 or {(x['task_id'], x['init_state_index']) for x in rows} != {(t, k) for t in range(10) for k in range(5, 50)}:
+            raise ValueError('Exact completed450 coverage required')
+        # Already-compressed raw files dominate this stage. Account for the complete
+        # last-stage tree, both exact video stamps, source/analysis, tar headers and
+        # compression overhead before admitting the CPU archive with a 6GiB reserve.
+        estimate_files = set(f for f in (a.session / a.phase).rglob('*') if f.is_file())
+        estimate_files.update(f for f in a.analysis.rglob('*') if f.is_file())
+        for variant in ('standard-zero', 'response-svd'):
+            log = next((a.session / a.phase / variant).glob('EVAL-*.txt'))
+            stamp = re.search(r'\d{4}_\d{2}_\d{2}-\d{2}_\d{2}_\d{2}', log.name).group()
+            estimate_files.update((a.control / 'source-v2/rollouts').rglob(stamp + '--*.mp4'))
+        source_manifest = json.loads((a.control / 'source-v2-SHA256.json').read_text())
+        estimate_files.update(a.control / 'source-v2' / n for n in source_manifest)
+        bound = int(sum(f.stat().st_size for f in estimate_files) * 1.02) + 64 * 1024**2
+        if shutil.disk_usage(a.session).free - bound < 6 * 1024**3:
+            raise ValueError('Final idle archive cannot preserve 6GiB after conservative size bound')
+    elif shutil.disk_usage(a.session).free < 8 * 1024**3:
         raise ValueError('Preserve running reserve plus archive space')
     gates = {phase: json.loads((a.session / (phase + '-gate.json')).read_text())
              for phase, _ in phases}

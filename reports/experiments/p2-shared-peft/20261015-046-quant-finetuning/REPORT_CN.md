@@ -1,3 +1,5 @@
+> 最终正式结果：Z2/450、S426/450，424救回0新增失败；全部计划结束/GPU空闲，六阶段包双份已核验。完整解释见FINAL450_REPORT_CN.md。正在完整集合封存及两份Git恢复核验；尚未执行远端/本机关机。
+
 > 2026-10-16最新覆盖：reset30–39全部exit0/硬门禁通过，本片Z0/S95，累计350 Z2/S334；332救回0新增失败、任务经验95%[91.714,97.714]pp。最后reset40–49各100已于00:16:21启动，实测revision3/Z侧，supervisor46423/GPU46425仅历史；唯一活动B3-continuation-v1/reset-40-49/plan.json，文件SHA01fc357c712a3a3965b89c286293acce18bbbd0f48786ee310d06a6d29785938。详见RESET_30_39_ANALYSIS_CN.md。
 
 > 最新覆盖：累计250为Z2/S239，237救回0新增失败、任务经验95%[92,97.6]pp。reset20–29全部exit0/硬门禁通过；按顺序已启动reset30–39各100。北京时间23:17:59启动supervisor35871，23:20实测revision3/Z侧、GPU35873及约16GB显存；均仅历史。当前唯一活动计划B3-continuation-v1/reset-30-39/plan.json，文件SHAe90771f255576b64e798f45aa261f962b147ef6c8f21b2de38cade363194c0a0。详见RESET_20_29_ANALYSIS_CN.md。
