@@ -1,3 +1,5 @@
+> 2026-10-15最新覆盖：reset10–19已完成全部exit0/配对门禁，本片Z0/S95（各100），累计150为Z1/S144，143救回0新增失败、任务95%[92,98.667]pp。已按协议/资源接reset20–29各100，09:30UTC实测RUNNING revision3/Z侧，supervisor21885/GPU21887仅历史。唯一活动计划B3-continuation-v1/reset-20-29/plan.json，SHA7ba43a6a179e9d0cf6bd02983884b725ccbc5927020b7d696a6da54c1038cc3c。详见RESET_10_19_ANALYSIS_CN.md。
+
 > 最新覆盖（2026-10-15）：首50计划12阶段全部结束，Z=1/50、S=49/50，48 rescue/0 break，任务经验95%区间[90,100]pp，配对硬门禁通过。按既定顺序已启动reset10–19每侧100；当前唯一活动计划为控制根B3-continuation-v1/reset-10-19/plan.json，文件SHA8767cb6907d99142aa64910b00282e3de7d02d2499969131433edba84b1fedc9；status为同目录control/20261015-046-quant-finetuning-v1-reset-10-19/status.json。08:52 UTC实测revision6、S侧已接续，supervisor11229、wrapper16378、策略进程16379，磁盘12,359,987,200字节；PID及阶段只代表当时历史。源/已训练adapter不变，不重跑首50。详细解释见FIRST50_ANALYSIS_CN.md。
 
 # 046量化微调对照：启动与门禁回执
@@ -45,3 +47,9 @@ R0-v1在环境初始化因空EGL设备值失败（`invalid literal for int() wit
 服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1`；本机repo `.local/archives/20261015-046-quant-finetuning/`下同名物理目录。`complete.tar.gz` 399,964,959字节，SHA256 `9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952`。服务器压缩成员与本机2995项SHA/2996成员全部核验通过，含micro与first50完整轨迹/观测动作/命令/退出码及120原始视频（每个视频episode ordinal和成败与gate逐项一致）。实际冻结源码仅按358项清单逐文件纳入；当前reset10–19不包含，后续仍需完成片增量。与训练增量和091来源归档共同保存当前完成材料，不声称本机有完整7B checkpoint。
 
 训练包范围已附SCOPE_SUPPLEMENT_V2.json：原训练包意外包含35个已完成视频，全部原SHA有效，压缩包保持不变，不将它当成完整评测归档。源码归档工具已改为清单白名单，未改变活动GPU冻结源码。
+
+## 完成分片的双份归档回执
+
+reset10–19完整增量服务器`/root/autodl-tmp/qvla-repro/backups/046-b3-reset-10-19-complete-20261015-v1`，本机repo `.local/archives/20261015-046-quant-finetuning/`下同名目录。679,500,413字节，SHA256 `2cec7fcaf7059a61b18c8d25a6df97947801a61524fdc929b76a264a97e0da56`；4777项SHA/4778成员和200个原始视频逐项核验通过，保存全部轨迹/实际命令/退出码/门禁/358源码/150配对分析。活动reset20–29不包含。CN报告和最新本机回执另同步控制根，与冻结归档分开保存，不改原tar。
+
+训练、micro/首50和本片的完整服务器/本机索引见同名results/COMPLETED_STAGE_BACKUP_INDEX_V1.json；原091来源归档及7B checkpoint保持原角色。阶段增量不是最终原生关机许可回执，最终仍须完整会话归档及服务器root短HEAD bundle。

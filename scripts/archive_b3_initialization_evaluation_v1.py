@@ -17,14 +17,16 @@ def main():
     for name in ('control', 'session', 'archive', 'analysis'):
         p.add_argument('--' + name, type=Path, required=True)
     p.add_argument('--expected-hostname', required=True)
+    p.add_argument('--phase', choices=('reset-10-19', 'reset-20-29', 'reset-30-39', 'reset-40-49'))
     a = p.parse_args()
+    phases = ((a.phase, 100),) if a.phase else (('micro', 10), ('first50', 50))
     if socket.gethostname() != a.expected_hostname or a.archive.exists():
         raise ValueError('Wrong host or existing archive; preserve prior attempt')
     if shutil.disk_usage(a.session).free < 8 * 1024**3:
         raise ValueError('Preserve running reserve plus archive space')
     gates = {phase: json.loads((a.session / (phase + '-gate.json')).read_text())
-             for phase in ('micro', 'first50')}
-    for phase, n in (('micro', 10), ('first50', 50)):
+             for phase, _ in phases}
+    for phase, n in phases:
         if (gates[phase]['gate'] != 'PASS_B3_INITIALIZATION_PAIRED_PROTOCOL'
                 or gates[phase]['paired_episodes'] != n):
             raise ValueError('Completed paired gate required')
@@ -46,7 +48,7 @@ def main():
             if f.is_file() and '__pycache__' not in f.parts:
                 add(f, relative + '/' + f.relative_to(source).as_posix())
     video_rows = []
-    for phase, n in (('micro', 10), ('first50', 50)):
+    for phase, n in phases:
         add(a.session / (phase + '-gate.json'), 'payload/gates/' + phase + '-gate.json')
         for variant in ('standard-zero', 'response-svd'):
             case = a.session / phase / variant
@@ -76,7 +78,7 @@ def main():
                 video_rows.append({'phase': phase, 'variant': variant, 'ordinal': ordinal,
                                    **row, 'archive_path': relative, 'sha256': origins[relative]['sha256']})
             tree(case, 'payload/evaluation/' + phase + '/' + variant)
-        wrapper = a.session / 'stage-records' / ('audit-' + phase)
+        wrapper = a.session / 'stage-records' / (phase + '-audit' if a.phase else 'audit-' + phase)
         if (wrapper / 'exit-code.txt').read_text().strip() != '0':
             raise ValueError('Audit wrapper exit must be zero')
         tree(wrapper, 'payload/wrapper-records/audit-' + phase)
@@ -98,12 +100,24 @@ def main():
     if len(state['completed_stage_ids']) != 12:
         raise ValueError('Original plan not fully complete')
     add(status, 'payload/control/completed-first50-status.json')
+    if a.phase:
+        directory = a.control / 'B3-continuation-v1' / a.phase
+        for name in ('plan.json', 'runtime-lock.json', 'registration.json', 'launch.json'):
+            add(directory / name, 'payload/control/' + a.phase + '/' + name)
+        status = directory / 'control' / ('20261015-046-quant-finetuning-v1-' + a.phase) / 'status.json'
+        state = json.loads(status.read_text())
+        if len(state['completed_stage_ids']) != 3 or state['last_exit_code'] != 0:
+            raise ValueError('Continuation not fully complete')
+        add(status, 'payload/control/' + a.phase + '/completed-status.json')
     tree(a.analysis, 'payload/analysis')
     (a.archive / 'VIDEO_MANIFEST.json').write_text(json.dumps(video_rows, indent=2) + '\n')
     (a.archive / 'MANIFEST.json').write_text(json.dumps(origins, indent=2) + '\n')
     scope = {'time_utc': datetime.now(timezone.utc).isoformat(), 'hostname': socket.gethostname(),
-             'scope': 'Complete micro plus first50 Z/S raw traces, observations/actions, commands, exits, gates, 120 original external videos, exact 358 frozen source files and analysis',
-             'excluded_active': 'All reset10-19 and later evaluation products',
+             'scope': 'Complete Z/S raw traces, observations/actions, commands, exits, gates, original external videos, exact 358 frozen source files and analysis',
+             'phases': [name for name, _ in phases], 'original_videos': len(video_rows),
+             'excluded_active': 'All evaluations outside explicitly listed completed phases',
+             'prior_first50_archive': '/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1',
+             'prior_first50_tar_sha256': '9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952',
              'training_archive': '/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-training-complete-20261015-v1',
              'training_tar_sha256': 'd0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39',
              'prior_archive': '/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1',

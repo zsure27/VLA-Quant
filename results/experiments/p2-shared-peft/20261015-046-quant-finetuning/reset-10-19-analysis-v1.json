@@ -1,0 +1,116 @@
+{
+  "time_utc": "2026-10-15T09:30:10.023439+00:00",
+  "gate": "PASS_RESET_10_19_REVIEW",
+  "phase_successes": {
+    "standard-zero": 0,
+    "response-svd": 95
+  },
+  "cumulative_successes": {
+    "standard-zero": 1,
+    "response-svd": 144
+  },
+  "cumulative_comparison": {
+    "episodes": 150,
+    "rescue": 143,
+    "break": 0,
+    "net": 143,
+    "delta_fraction": 0.9533333333333334,
+    "exact_mcnemar_p": 1.793662034335766e-43,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.92,
+      0.9866666666666667
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 14,
+      "1": 15,
+      "2": 15,
+      "3": 15,
+      "4": 14,
+      "5": 15,
+      "6": 13,
+      "7": 14,
+      "8": 15,
+      "9": 13
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "S_failures": [
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": false
+    }
+  ],
+  "Z_successes": [
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "standard-zero": true,
+      "response-svd": true
+    }
+  ],
+  "phase_queries": {
+    "standard-zero": 2800,
+    "response-svd": 1387
+  },
+  "adapter_bytes_each": 40133618,
+  "parameters_each": 19988480,
+  "limits": [
+    "Same ten-task reused development; not blind or unseen-task",
+    "Micro overlaps and excluded",
+    "SVD extra calibration/teacher cost not equal total forward budget",
+    "No causal grasp/placement attribution from success flags",
+    "Stage wall includes setup/env/video/trace; no INT2 kernel speed claim"
+  ],
+  "quota_read_utc": "2026-10-15T09:28:55Z",
+  "quota_primary_remaining_percent": 30,
+  "quota_response_utc": "2026-10-15T09:27:41.473Z",
+  "disk_free_before": 11312607232,
+  "next": "reset20-29 same fixed candidates, decision by protocol/resources not score",
+  "invocation_metadata": {
+    "standard-zero": {
+      "lock_sha256": "606cebe293a491a643673a5a1252c57d6c3b25f9996943ebb91b569331f25cf7",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1792052355.3393464
+    },
+    "response-svd": {
+      "lock_sha256": "606cebe293a491a643673a5a1252c57d6c3b25f9996943ebb91b569331f25cf7",
+      "hostname": "autodl-container-90824aab47-6dc00ae3",
+      "started_unix": 1792054324.6752717
+    }
+  }
+}

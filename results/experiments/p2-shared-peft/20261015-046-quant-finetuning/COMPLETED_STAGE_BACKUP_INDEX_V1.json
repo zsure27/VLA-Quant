@@ -1,0 +1,37 @@
+{
+  "scope": "All completed current-046 training/micro/formal reset5-19; active reset20-29 excluded",
+  "archives": [
+    {
+      "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-training-complete-20261015-v1",
+      "local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-initialization-training-complete-20261015-v1",
+      "bytes": 756868488,
+      "sha256": "d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39",
+      "sha_entries": 664,
+      "all_tar_members_and_local_files_verified": true,
+      "scope_supplement": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-initialization-training-complete-20261015-v1\\SCOPE_SUPPLEMENT_V2.json"
+    },
+    {
+      "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-first50-complete-20261015-v1",
+      "local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-initialization-first50-complete-20261015-v1",
+      "bytes": 399964959,
+      "sha256": "9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952",
+      "sha_entries": 2995,
+      "all_tar_members_and_local_files_verified": true,
+      "scope_supplement": null
+    },
+    {
+      "server": "/root/autodl-tmp/qvla-repro/backups/046-b3-reset-10-19-complete-20261015-v1",
+      "local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\archives\\20261015-046-quant-finetuning\\046-b3-reset-10-19-complete-20261015-v1",
+      "bytes": 679500413,
+      "sha256": "2cec7fcaf7059a61b18c8d25a6df97947801a61524fdc929b76a264a97e0da56",
+      "sha_entries": 4777,
+      "all_tar_members_and_local_files_verified": true,
+      "scope_supplement": null
+    }
+  ],
+  "prior_091_archive": "/root/autodl-tmp/qvla-repro/backups/091-gpu-b5-final-20261013-v1",
+  "prior_091_sha256": "31ae496b9e14ba7573a703c7123cc8b690e5ffbde33c9b99fed965fdee8121ad",
+  "prior_091_current_boot_manifest_verification": "22244 main and15389 data SHA passed",
+  "checkpoint_scope": "Complete7B checkpoint server-side and full SHA verified; no complete local7B copy claim",
+  "not_shutdown_fallback_yet": "Final session archive and current root Git short-HEAD bundle must be prepared before native shutdown; these stage increments alone are not a shutdown admission receipt."
+}

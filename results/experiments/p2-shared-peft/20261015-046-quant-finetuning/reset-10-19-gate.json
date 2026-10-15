@@ -1,0 +1,659 @@
+{
+  "gate": "PASS_B3_INITIALIZATION_PAIRED_PROTOCOL",
+  "paired_episodes": 100,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 11,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 12,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "standard-zero": false,
+      "response-svd": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 14,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 15,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 16,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 17,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 18,
+      "standard-zero": false,
+      "response-svd": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 19,
+      "standard-zero": false,
+      "response-svd": true
+    }
+  ],
+  "comparison_S_minus_Z": {
+    "episodes": 100,
+    "rescue": 95,
+    "break": 0,
+    "net": 95,
+    "delta_fraction": 0.95,
+    "exact_mcnemar_p": 5.048709793414476e-29,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.91,
+      0.99
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 10,
+      "1": 10,
+      "2": 10,
+      "3": 10,
+      "4": 9,
+      "5": 10,
+      "6": 9,
+      "7": 9,
+      "8": 10,
+      "9": 8
+    },
+    "tasks_improved": 10,
+    "tasks_harmed": 0
+  },
+  "cases": {
+    "standard-zero": {
+      "successes": 0,
+      "queries": 2800,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_15-16_19_43.txt": "216b2cbf64b01865640ea9c2e8ba5d3c7e41a9f8a1715448cd49e8353f85a44a",
+        "invocation.json": "495d7a8fa810e7005a788962e836265ee0b73efcac47f259263b0149e10c7e03",
+        "policy-queries.jsonl": "328ce09d856ab969c4e9ef304833ca8cf257768d4d5a08261e37f1fe08176f54",
+        "on-policy-events.jsonl": "8babf580f96af2911566efb0241904885521adefaef5e6024cbe9736592cf3b7",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    },
+    "response-svd": {
+      "successes": 95,
+      "queries": 1387,
+      "sha256": {
+        "EVAL-libero_spatial-openvla-2026_10_15-16_52_32.txt": "1be2ed56d8a080618efc6e6f33ce657d3670e6fabc6839ef48b4b5796bd036e2",
+        "invocation.json": "67a68e03c9cb622d83bb09336e85739de064fad55fe1aae3b5f1dfa8f70c524e",
+        "policy-queries.jsonl": "9738c3b8b2d883253aef61fc5055a79a2e0c1107fd2c1e568922e2ae005be4dd",
+        "on-policy-events.jsonl": "281b176397ca96e2a0511a44f9bb4c796abd4bf2ef8cd002f8beadc65d8f397d",
+        "dataset_statistics.json": "3f8b7854c8634ea6ccfd6ef6b8f983e3b30b067c2cdaf690b152c0899d5d9282"
+      }
+    }
+  },
+  "limits": "Reused same-task development; continuation decided by protocol/resources, not score direction"
+}
