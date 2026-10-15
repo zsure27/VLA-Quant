@@ -1,0 +1,13 @@
+{
+  "state": "GPU_PLAN_SUPERVISOR_STARTED",
+  "dispatcher_pid": 2153,
+  "source_root": "/root/autodl-tmp/qvla-repro/control/20261015-046-quant-finetuning-v1/source-v2",
+  "gpu_experiment_started": "supervisor started; inspect actual stage/GPU process for execution",
+  "time_utc": "2026-10-15T07:13:57.825491+00:00",
+  "plan": "/root/autodl-tmp/qvla-repro/control/20261015-046-quant-finetuning-v1/B3-plans-v1/first50-plan.json",
+  "plan_file_sha256": "f6d2bf0a19cd6b6054f9ee6c4f77e18a07c99802624971bd69974c6ef5be8992",
+  "source_tar_sha256": "7e46f0403260a0c0297496c57050af9a11f75a7d9cdadb82f686a376c7594c1d",
+  "registered_source_commit": "fc3e451d4c42de0b44fb7c36562531079e651eed",
+  "status": "/root/autodl-tmp/qvla-repro/control/20261015-046-quant-finetuning-v1/B3-plans-v1/control/20261015-046-quant-finetuning-v1-first50/status.json",
+  "supervisor_pid": 2156
+}
