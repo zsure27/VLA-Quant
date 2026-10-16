@@ -1,5 +1,5 @@
 {
-  "scope": "Completed M0 stages only; active reset10-19 excluded; micro overlap never added",
+  "scope": "Completed formal first50 + reset10-19 and historical D0/micro references only; active reset20-29 excluded; micro not added",
   "entries": [
     {
       "phase": "recovered-first50",
@@ -10,6 +10,17 @@
       "sha256": "30c48668178c8fb209e140c86c3e7643be9d13f77ca451f376ee3716155eb544",
       "raw_files": 2575,
       "original_videos": 100,
+      "all_members_verified": true
+    },
+    {
+      "phase": "reset-10-19",
+      "formal_per_candidate": 100,
+      "server": "/root/autodl-tmp/qvla-repro/backups/091-residual-reset-10-19-complete-20261017-v1",
+      "local": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-reset-10-19-complete-20261017-v1",
+      "bytes": 766266127,
+      "sha256": "7c66004e215b51164198ab59666b408c9a9cfd3d1d2460acc1bfbfe05305213c",
+      "raw_files": 4959,
+      "original_videos": 200,
       "all_members_verified": true
     }
   ],
