@@ -1,0 +1,378 @@
+"""Fixed-A4 temporal Early80/Phase80 controlled training; independent identity.
+
+Run in the frozen OFT overlay on a user-opened server. Existing probe.py and
+the four profile-fingerprinted quantization implementations stay unchanged.
+"""
+from __future__ import annotations
+
+import argparse
+import inspect
+import json
+import os
+from pathlib import Path
+import sys
+import time
+from types import SimpleNamespace
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+ROOT = Path(os.environ["VLA_FROZEN_SOURCE"]).resolve()
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "diagnostics"))
+from qvla.extended_peft import (registry, sha, canonical_sha, descriptors,
+    target_names, student_contract, zero_state, attach_state, load_state, trainable_contract)
+
+from qvla.b3_initialization_v1 import VERSION, SPEC, SOURCES, INITIALIZATIONS, inherited_cache_contract
+PARENT_MATERIALS_CONTRACT = None
+PARENT_INHERITED_CACHE_CONTRACT = inherited_cache_contract
+VERSION = "b1-temporal80-v1-20261017"
+SPEC = Path(__file__).resolve().with_name("b1_temporal80_v1.json")
+SOURCES = tuple(SOURCES) + (str(Path(__file__).resolve()), str(SPEC), str(Path(__file__).with_name("prepare_b1_temporal80_091_v1.py")))
+
+def inherited_cache_contract(materials):
+    parent = dict(materials, student80=materials["parent_student80"])
+    return PARENT_INHERITED_CACHE_CONTRACT(parent)
+
+
+
+def save_json(path, value):
+    Path(path).write_text(json.dumps(value, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+
+
+def parent_materials_contract(materials, model_id):
+    """All roles/bytes checked before model loading; never accept a clone claim."""
+    from qvla.data_roles import check_disjoint, audit_training_inputs
+    from scripts.audit_peft_calibration80 import audit
+    expected = registry()["profile_sha256"]
+    for key in ("w2_g128", "w2_g64", "w4"):
+        if sha(materials[key]) != expected[key]:
+            raise ValueError(f"Profile SHA mismatch: {key}")
+    if sha(Path(materials["checkpoint"]) / "config.json") != "bcb688a66f3e94a42311b77d37b7e1484886701f7b2aa8e36d165dfccac92ae6":
+        raise ValueError("Checkpoint config SHA mismatch")
+    if sha(Path(materials["calibration80"]) / "manifest.json") != "ae493d1fe3e32a5e64fb3658fee19b3528fb1c65ecd14c7f92f14ecb48d13742":
+        raise ValueError("Frozen SVD calibration manifest mismatch")
+    if sha(materials["trajectory_split"]) not in {
+            "d4903a2e9a1ee6b474f5215644ba68d494a8feb89354b3a2a88bbe13a9d48124",
+            "3560425653ef4b297a48a3854aae20348898129b6673db1474943e95897606a2"}:
+        raise ValueError("Frozen trajectory split mismatch")
+    calibration_audit = audit(Path(materials["calibration80"]), Path(materials["trajectory_split"]))
+    directory = Path(materials["student80"])
+    paths, input_audit = student_contract(directory, model_id)
+    calibration = sorted(Path(materials["calibration80"]).glob("sample-*.npz"))
+    if len(calibration) != 80:
+        raise ValueError("SVD inputs must contain exactly 80 files")
+    calibration_audit["content_audit"] = audit_training_inputs(calibration, Path(materials["trajectory_split"]))
+    check_disjoint(paths, calibration)
+    if model_id == "B2":
+        if sha(materials["b1_adapter"]) != registry()["models"]["B1"]["artifact"]["adapter_sha256"]:
+            raise ValueError("Frozen B1 state mismatch")
+    return paths, calibration, {"training": input_audit, "calibration": calibration_audit}
+
+
+def materials_contract(materials, model_id):
+    from qvla.data_roles import audit_training_inputs, check_disjoint
+    from qvla.on_policy_capture import observation_hash
+    from prepare_b1_temporal80_091_v1 import select_queries
+    import numpy as np
+    parent = dict(materials, student80=materials["parent_student80"])
+    _, calibration, parent_audit = parent_materials_contract(parent, model_id)
+    gatepath = Path(materials["data_gate"])
+    if sha(gatepath) != materials["data_gate_sha256"]:
+        raise ValueError("Temporal data admission changed")
+    gate = json.loads(gatepath.read_text())
+    if gate["gate"] != "PASS_B1_TEMPORAL80_SOURCE_AND_CONTENT" or not gate["early80_parent_content_equal"]:
+        raise ValueError("Missing complete temporal content gate")
+    variant = materials["temporal_variant"]
+    directory = Path(materials["student80"])
+    if sha(directory / "manifest.json") != gate["cohorts"][variant]["sha256"]:
+        raise ValueError("Temporal manifest differs from admission")
+    manifest = json.loads((directory / "manifest.json").read_text())
+    if (manifest["variant"] != variant or manifest["role"] != "student_state_train"
+            or manifest["state_space"] != "policy_normalized_proprio"
+            or manifest["success_filtering"] or manifest["holdout_touched"]):
+        raise ValueError("Wrong temporal cohort/role/state convention")
+    rows = manifest["samples"]
+    keys = {(r["task_id"], r["init_state_index"], r["slot_in_episode"]) for r in rows}
+    if len(rows) != 80 or keys != {(t,r,s) for t in range(10) for r in range(4) for s in (0,1)}:
+        raise ValueError("Need exactly two ordered temporal slots per same40 training episodes")
+    paths = sorted(directory.glob("sample-*.npz"))
+    audit = audit_training_inputs(paths, None)
+    if audit["count"] != 80 or audit["unique_observations"] != 80:
+        raise ValueError("Need80 unique policy-visible inputs")
+    for r in rows:
+        if r["query_in_episode"] != select_queries(r["trajectory_queries"], variant)[r["slot_in_episode"]]:
+            raise ValueError("Selection differs from fixed temporal preregistration")
+        source = Path(manifest["source_run"]) / r["source"]
+        if not source.resolve().is_relative_to(Path(manifest["source_run"]).resolve()) or sha(source) != r["source_sha256"]:
+            raise ValueError("Original temporal source changed")
+        with np.load(directory / r["file"],allow_pickle=False) as z:
+            if z["state"].shape != (8,) or not np.isfinite(z["state"]).all():
+                raise ValueError("Need finite normalized8D proprio")
+            if any(z[k].dtype != np.uint8 or z[k].ndim != 3 or z[k].shape[-1] != 3 for k in ("image","wrist_image")):
+                raise ValueError("Invalid uint8 camera observations")
+    check_disjoint(paths, calibration)
+    return paths, calibration, {"parent":parent_audit,"temporal":audit,"variant":variant,"data_gate_sha256":sha(gatepath)}
+
+
+def frozen_digest(modules, excluded):
+    """Stream every frozen parameter AND buffer, including action/proprio/B1."""
+    import hashlib
+    import torch
+    h = hashlib.sha256()
+    for prefix, model in modules:
+        for name, value in sorted(model.state_dict().items()):
+            if prefix == "model" and name in excluded:
+                continue
+            if not torch.isfinite(value).all():
+                raise ValueError(f"Nonfinite frozen tensor: {prefix}.{name}")
+            h.update(f"{prefix}.{name}:{value.dtype}:{tuple(value.shape)}".encode())
+            h.update(value.detach().cpu().contiguous().reshape(-1).view(torch.uint8).numpy().tobytes())
+    return h.hexdigest()
+
+
+def copy_state(model, state):
+    import torch
+    params = dict(model.named_parameters())
+    with torch.no_grad():
+        for name, value in state.items():
+            if name not in params or params[name].shape != value.shape:
+                raise ValueError(f"Reload shape/name mismatch: {name}")
+            params[name].copy_(value.to(params[name]))
+
+
+def train(args):
+    import numpy as np
+    import torch
+    from qvla.baseline_contract import checkpoint_identity
+    from qvla.official_quant_adapter import load_official_functions, apply_awq_entry, validate_targets
+    from qvla.awq_block import apply_block_scales, apply_llama_entry
+    from qvla.run_eval_official_quant import load_profiles, load_recovery_lora_state
+    from qvla.model_registry import W4_LAYERS, validate_effective_plan
+    from diagnostics.awq_interventions import attention_visual_stage_plan, attention_no_clip_primary_g64_plan
+    from diagnostics.probe import initialize_readonly, predict, Recorder
+
+    spec = json.loads(SPEC.read_text())
+    materials = json.loads(args.materials.read_text())
+    paths, calibration, input_audit = materials_contract(materials, args.model_id)
+    inherited = inherited_cache_contract(materials)
+    source_hashes = {p: sha(ROOT / p) for p in SOURCES}
+    if args.output.exists():
+        raise ValueError("Output exists; never overwrite or repeat a completed stage")
+    prior = None
+    if args.steps == 1000:
+        if args.smoke_dir is None:
+            raise ValueError("Full training requires --smoke-dir")
+        prior = json.loads((args.smoke_dir / "artifact.json").read_text())
+        if (prior.get("steps") != 10 or prior.get("gate") != "PASS_SMOKE10" or
+                prior.get("model_id") != args.model_id or prior.get("version") != VERSION or
+                prior.get("initialization") != args.initialization or
+                prior.get("source_sha256") != source_hashes or prior.get("spec_sha256") != sha(SPEC) or
+                prior.get("training_manifest_sha256") != sha(Path(materials["student80"]) / "manifest.json")):
+            raise ValueError("Smoke gate changed or belongs to another candidate/data/version")
+        for name, expected in prior["reuse_files"].items():
+            if sha(args.smoke_dir / name) != expected:
+                raise ValueError(f"Smoke reuse SHA mismatch: {name}")
+    args.output.mkdir(parents=True)
+    save_json(args.output / "input-audit.json", input_audit)
+    save_json(args.output / "invocation.json", {"argv": sys.argv, "model_id": args.model_id,
+        "steps": args.steps, "initialization": args.initialization,
+        "materials_sha256": sha(args.materials), "spec_sha256": sha(SPEC),
+        "source_sha256": source_hashes})
+    torch.set_grad_enabled(False)
+    started = time.monotonic()
+    official = load_official_functions(Path(materials["official_root"]))
+    entries, meta = load_profiles([Path(materials["w2_g128"])], "awq")
+    g64 = load_profiles([Path(materials["w2_g64"])], "awq")
+    if args.model_id == "B2":
+        plan = attention_visual_stage_plan(entries, meta, g64,
+            load_profiles([Path(materials["w4"])], "awq"), W4_LAYERS["A3"])
+    else:
+        plan = attention_no_clip_primary_g64_plan(entries, meta, g64)
+    validate_effective_plan(args.model_id, plan[1])
+    identity = checkpoint_identity(materials["checkpoint"])
+    if identity != meta["checkpoint_identity"]:
+        raise ValueError("Full checkpoint content differs from profiles")
+    for key, func in (("awq_auto_scale", "awq_auto_scale_block"), ("awq_auto_clip", "awq_auto_clip"),
+                      ("awq_quantizer", "awq_quantize")):
+        # AWQ wraps some functions with torch.no_grad; hash the unwrapped official source.
+        source = inspect.getsourcefile(inspect.unwrap(official[func]))
+        if source is None or sha(source) != meta["official_sources"][key]["sha256"]:
+            raise ValueError(f"Official source SHA mismatch: {key}")
+    cfg, model, head, proprio, processor = initialize_readonly(materials["checkpoint"], spec["seed"])
+    if sha(inspect.getsourcefile(type(model))) != meta["model_source_sha256"]:
+        raise ValueError("Loaded model class differs from profile")
+    if model.language_model.config._attn_implementation != meta["llm_attention"]:
+        raise ValueError("Attention implementation changed")
+    torch.backends.cuda.matmul.allow_tf32 = False
+    modules = dict(model.named_modules())
+    validate_targets(model, list(plan[1]))
+    rows = descriptors(args.model_id, modules, plan[1])
+    save_json(args.output / "targets.json", rows)
+    if prior and (prior["checkpoint_identity"] != identity or prior["targets"] != rows):
+        raise ValueError("Actual backbone/target descriptors differ from smoke")
+
+    # BF16 teacher queried before any quantization or adapter on the SAME observations.
+    if prior:
+        targets = torch.load(args.smoke_dir / "teacher-targets.pt", map_location="cpu", weights_only=True)
+        save_json(args.output / "teacher-input-hashes.json", json.loads((args.smoke_dir / "teacher-input-hashes.json").read_text()))
+    else:
+        targets = {}
+        processed = {}
+        for path in paths:
+            raw, normalized, hashes = predict(path, cfg, model, head, proprio, processor,
+                                               state_space="policy_normalized_proprio")
+            if raw.shape != (8, 7) or normalized.shape != (8, 7) or not torch.isfinite(raw).all() or not torch.isfinite(normalized).all():
+                raise ValueError("BF16 same-observation teacher must be finite 8x7")
+            targets[path.name] = normalized
+            processed[path.name] = hashes
+        save_json(args.output / "teacher-input-hashes.json", processed)
+        # Both cohorts receive fresh BF16 labels; Early80 additionally bridges all80 parent labels.
+        if materials["temporal_variant"] == "early80":
+            cache = Path(materials["shared_b3_smoke_dir"])
+            shared_targets = torch.load(cache / "teacher-targets.pt", map_location="cpu", weights_only=True)
+            if (processed != json.loads((cache / "teacher-input-hashes.json").read_text())
+                    or set(shared_targets) != set(targets)
+                    or any(not torch.equal(targets[k].cpu(), shared_targets[k].cpu()) for k in targets)):
+                raise ValueError("Early80 fresh BF16 teacher differs from all80 pinned labels")
+        for path in (paths[0], paths[-1]):
+            again = predict(path, cfg, model, head, proprio, processor, state_space="policy_normalized_proprio")
+            if not torch.equal(again[1].cpu(), targets[path.name].cpu()) or again[2] != processed[path.name]:
+                raise ValueError("Temporal teacher/input repeatability failed")
+    if set(targets) != {p.name for p in paths} or any(v.shape != (8, 7) or not torch.isfinite(v).all() for v in targets.values()):
+        raise ValueError("Teacher target coverage/shape/finite mismatch")
+    torch.save(targets, args.output / "teacher-targets.pt")
+    for prefix, scales in plan[0].items():
+        apply_block_scales(modules[prefix], scales, official)
+
+    # Use the preregistered pre-training SVD factors, never the trained B3 state.
+    # Z is generated in an isolated per-layer RNG; no activation spool is rebuilt.
+    if prior:
+        initial = load_state(args.smoke_dir / "initial-adapter.pt", "B3", rows)
+    elif args.initialization == "response-svd":
+        initial = load_state(Path(materials["shared_b3_smoke_dir"]) / "initial-adapter.pt", "B3", rows)
+    else:
+        initial = {f"{n}.awq_recovery_lora.{j}.weight": value.cpu()
+                   for n in sorted(target_names("B3"))
+                   for j, value in enumerate(zero_state(modules[n], n))}
+    for name, (entry, bits, group) in plan[1].items():
+        module = modules[name]
+        (apply_llama_entry if name.startswith("language_model.") else apply_awq_entry)(module, entry, official, bits, group)
+        if not torch.isfinite(module.weight).all():
+            raise ValueError(f"Quantization produced nonfinite weights: {name}")
+    zero_reference = predict(paths[0], cfg, model, head, proprio, processor,
+                             state_space="policy_normalized_proprio")[1]
+    with torch.random.fork_rng(devices=[torch.cuda.current_device()]):
+        attach_state(model, initial, target_names("B3"))
+    zero_branch = {k: (torch.zeros_like(v) if ".awq_recovery_lora.1." in k else v)
+                   for k, v in initial.items()}
+    copy_state(model, zero_branch)
+    zero_with_branch = predict(paths[0], cfg, model, head, proprio, processor,
+                               state_space="policy_normalized_proprio")[1]
+    copy_state(model, initial)
+    if not torch.equal(zero_reference, zero_with_branch):
+        raise ValueError("Actual-model zero-output branch is not exactly equal")
+    # Existing SVD attachments are trainable; frozen B1 never becomes trainable.
+    for n in target_names(args.model_id):
+        modules[n].awq_recovery_lora.requires_grad_(True)
+    named = trainable_contract(model, args.model_id)
+    torch.save(initial, args.output / "initial-adapter.pt")
+    torch.save(initial, args.output / "checkpoint-0000.pt")
+    excluded = set(named)
+    frozen_modules = (("model", model), ("action_head", head), ("proprio", proprio))
+    before = frozen_digest(frozen_modules, excluded)
+    from qvla.action_jacobian_batch import load_sample
+    from qvla.extended_proprio import prepare_policy_inputs
+    cached = [(p.name, *prepare_policy_inputs(load_sample(p), cfg, model, processor,
+                                              torch.device("cuda:0"))) for p in paths]
+    optimizer = torch.optim.AdamW(list(named.values()), lr=spec["learning_rate"], weight_decay=spec["weight_decay"])
+    generator = torch.Generator(device="cpu").manual_seed(spec["order_seed"])
+    sequence, trace = [], []
+    order = []
+    with torch.enable_grad():
+        for step in range(args.steps):
+            if step % len(paths) == 0:
+                order = torch.randperm(len(paths), generator=generator).tolist()
+            name, inputs, state = cached[order[step % len(paths)]]
+            optimizer.zero_grad(set_to_none=True)
+            _, hidden = model.predict_action(**inputs, unnorm_key=cfg.unnorm_key, do_sample=False,
+                proprio=state, proprio_projector=proprio, action_head=head, noisy_action_projector=None, use_film=False)
+            prediction = head.predict_action(hidden).reshape(-1, 7).float()
+            if prediction.shape != (8, 7) or not torch.isfinite(prediction).all():
+                raise ValueError("Nonfinite/malformed training action")
+            loss = torch.nn.functional.smooth_l1_loss(prediction, targets[name].cuda().float(), beta=spec["beta"])
+            if not torch.isfinite(loss): raise ValueError("Nonfinite loss")
+            loss.backward()
+            if any(p.grad is None or not torch.isfinite(p.grad).all() for p in named.values()):
+                raise ValueError("Missing or nonfinite gradient on an expected adapter parameter")
+            norm = torch.nn.utils.clip_grad_norm_(list(named.values()), spec["gradient_clip_norm"], error_if_nonfinite=True)
+            optimizer.step()
+            if any(not torch.isfinite(p).all() for p in named.values()): raise ValueError("Nonfinite updated adapter")
+            sequence.append(name)
+            if step + 1 in spec["checkpoint_steps"]:
+                torch.save({n: p.detach().cpu().clone() for n, p in named.items()},
+                           args.output / f"checkpoint-{step + 1:04d}.pt")
+            if step == 0 or (step + 1) % 10 == 0:
+                trace.append({"step": step + 1, "loss": float(loss), "gradient_norm": float(norm), "sample": name})
+            if (step + 1) % 100 == 0 or step + 1 == args.steps:
+                temporary = args.output / "progress-adapter.tmp"
+                torch.save({n: p.detach().cpu() for n, p in named.items()}, temporary)
+                temporary.replace(args.output / "progress-adapter.pt")
+                save_json(args.output / "progress.json", {"completed_steps": step + 1,
+                    "source_sha256": source_hashes, "spec_sha256": sha(SPEC),
+                    "note": "Safety checkpoint, not a canonical artifact or automatic resume approval"})
+                print(json.dumps(trace[-1]), flush=True)
+            if time.monotonic() - started > spec["max_stage_seconds"]:
+                raise TimeoutError("Preregistered stage time budget exhausted")
+    after = frozen_digest(frozen_modules, excluded)
+    if before != after: raise ValueError("Frozen base/head/proprio/B1 changed during training")
+    state = {n: p.detach().cpu().clone() for n, p in named.items()}
+    state_path = args.output / "adapter.pt"
+    torch.save(state, state_path)
+    reference = predict(paths[0], cfg, model, head, proprio, processor,
+                        state_space="policy_normalized_proprio")[1]
+    reloaded = load_state(state_path, args.model_id, rows)
+    copy_state(model, {k: torch.zeros_like(v) for k, v in state.items()})
+    copy_state(model, reloaded)
+    if not torch.equal(reference, predict(paths[0], cfg, model, head, proprio, processor,
+                                          state_space="policy_normalized_proprio")[1]):
+        raise ValueError("Actual-model saved/reloaded adapter action mismatch")
+    record = {"version": VERSION, "model_id": args.model_id, "base": "A4",
+        "initialization": args.initialization, "inherited_smoke_sha256": sha(Path(materials["shared_b3_smoke_dir"]) / "artifact.json"),
+        "inherited_initial_factor_sha256": inherited["reuse_files"]["initial-adapter.pt"] if args.initialization == "response-svd" else None,
+        "teacher_cache_sha256": sha(args.output / "teacher-targets.pt"),
+        "temporal_variant": materials["temporal_variant"], "parent_teacher_cache_sha256": inherited["reuse_files"]["teacher-targets.pt"],
+        "initialization_cost_scope": "Incremental reuse only; inherited Response-SVD acquisition/decomposition/IO is an additional historical cost, not measured as zero",
+        "historical_smoke_wall_seconds_including_SVD_teacher_and_10_steps": inherited.get("training_seconds"),
+        "steps": args.steps, "gate": "PASS_SMOKE10" if args.steps == 10 else "PASS_TRAIN_CONTRACT",
+        "spec_sha256": sha(SPEC), "source_sha256": source_hashes, "checkpoint_identity": identity,
+        "training_manifest_sha256": sha(Path(materials["student80"]) / "manifest.json"),
+        "training_state_space": "policy_normalized_proprio",
+        "adapter_sha256": sha(state_path), "tensor_shapes": {k: list(v.shape) for k, v in state.items()},
+        "targets": rows, "target_sha256": canonical_sha(rows), "zero_output_equal": True,
+        "reload_output_equal": True, "frozen_before_sha256": before, "frozen_after_sha256": after,
+        "parameters": sum(p.numel() for p in named.values()), "serialized_bytes": state_path.stat().st_size,
+        "sample_sequence_sha256": canonical_sha(sequence), "trace": trace,
+        "training_seconds": time.monotonic() - started, "peak_cuda_bytes": torch.cuda.max_memory_allocated(),
+        "reuse_files": {n: sha(args.output / n) for n in ("initial-adapter.pt", "teacher-targets.pt", "teacher-input-hashes.json")},
+        "smoke_artifact_sha256": sha(args.smoke_dir / "artifact.json") if prior else None,
+        "interpretation": "Temporal-coverage-only training/structural evidence; no closed-loop benefit claim"}
+    save_json(args.output / "artifact.json", record)
+    print(json.dumps({k: record[k] for k in ("model_id", "steps", "gate", "parameters", "training_seconds")}))
+
+
+def sha_name(name):
+    import hashlib
+    return hashlib.sha256(name.encode()).hexdigest()
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--model-id", choices=("B3",), required=True)
+    p.add_argument("--initialization", choices=INITIALIZATIONS, required=True)
+    p.add_argument("--materials", type=Path, required=True)
+    p.add_argument("--steps", type=int, choices=(10, 1000), required=True)
+    p.add_argument("--smoke-dir", type=Path)
+    p.add_argument("--output", type=Path, required=True)
+    train(p.parse_args())
+
+
+if __name__ == "__main__": main()

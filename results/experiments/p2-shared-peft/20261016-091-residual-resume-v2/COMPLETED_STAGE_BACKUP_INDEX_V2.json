@@ -1,5 +1,5 @@
 {
-  "scope": "Completed formal first50 + reset10-19 + reset20-29 + reset30-39 and historical D0/micro references only; active reset40-49 excluded; micro not added",
+  "scope": "All five completed M0 formal shards:450 per candidate,900 original formal videos; historical D0/micro dependencies separate; B1 temporal training excluded",
   "entries": [
     {
       "phase": "recovered-first50",
@@ -42,6 +42,17 @@
       "bytes": 771484449,
       "sha256": "571fa738e7cc1eb9befbd1b579b0f556f78112228bbb8754ff91e671a1e4af5a",
       "raw_files": 5008,
+      "original_videos": 200,
+      "all_members_verified": true
+    },
+    {
+      "phase": "reset-40-49",
+      "formal_per_candidate": 100,
+      "server": "/root/autodl-tmp/qvla-repro/backups/091-residual-reset-40-49-complete-20261017-v1",
+      "local": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-reset-40-49-complete-20261017-v1",
+      "bytes": 772320594,
+      "sha256": "32ca73b81545815142436901a74e9e0e53745b9c8b442d2242d8fb06502b2b3c",
+      "raw_files": 5009,
       "original_videos": 200,
       "all_members_verified": true
     }

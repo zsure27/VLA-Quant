@@ -1,0 +1,737 @@
+{
+  "gate": "PASS_B1_TEMPORAL_CPU_CONTRACTS",
+  "cohorts": {
+    "early80": {
+      "input_audit": {
+        "parent": {
+          "training": {
+            "count": 80,
+            "unique_observations": 80,
+            "student_training_resets": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                7,
+                1
+              ],
+              [
+                7,
+                2
+              ],
+              [
+                7,
+                3
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                1
+              ],
+              [
+                8,
+                2
+              ],
+              [
+                8,
+                3
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                9,
+                1
+              ],
+              [
+                9,
+                2
+              ],
+              [
+                9,
+                3
+              ]
+            ],
+            "manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/manifest.json"
+          },
+          "calibration": {
+            "gate": "PASS_SVD_CALIBRATION80_SOURCE",
+            "manifest_sha256": "ae493d1fe3e32a5e64fb3658fee19b3528fb1c65ecd14c7f92f14ecb48d13742",
+            "trajectory_split_sha256": "3560425653ef4b297a48a3854aae20348898129b6673db1474943e95897606a2",
+            "sample_count": 80,
+            "unique_trajectories": 80,
+            "trajectory_roles": {
+              "peft_train": 80
+            },
+            "content_audit": {
+              "count": 80,
+              "unique_observations": 80,
+              "student_training_resets": [],
+              "manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260926-107-p1-data-contract/peft-train-calibration80/manifest.json"
+            }
+          }
+        },
+        "temporal": {
+          "count": 80,
+          "unique_observations": 80,
+          "student_training_resets": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              3
+            ]
+          ],
+          "manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/data/early80/manifest.json"
+        },
+        "variant": "early80",
+        "data_gate_sha256": "13a7d3dbbc6ce75943f54c65113b121563367e32766ad5d62be9ac42b7c3cef0"
+      },
+      "inherited_initial_factor_sha256": "be0384bdce5570f6ff42ac49cbc2d42df63cf9e771ae49c7e81bcdacd8eca458",
+      "materials_sha256": "fe4e31b86f9cf5bbd716432a19ec30e41f17264e6c98a3e5fa10b0e9c09c3562"
+    },
+    "phase80": {
+      "input_audit": {
+        "parent": {
+          "training": {
+            "count": 80,
+            "unique_observations": 80,
+            "student_training_resets": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                6,
+                2
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                7,
+                1
+              ],
+              [
+                7,
+                2
+              ],
+              [
+                7,
+                3
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                1
+              ],
+              [
+                8,
+                2
+              ],
+              [
+                8,
+                3
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                9,
+                1
+              ],
+              [
+                9,
+                2
+              ],
+              [
+                9,
+                3
+              ]
+            ],
+            "manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/manifest.json"
+          },
+          "calibration": {
+            "gate": "PASS_SVD_CALIBRATION80_SOURCE",
+            "manifest_sha256": "ae493d1fe3e32a5e64fb3658fee19b3528fb1c65ecd14c7f92f14ecb48d13742",
+            "trajectory_split_sha256": "3560425653ef4b297a48a3854aae20348898129b6673db1474943e95897606a2",
+            "sample_count": 80,
+            "unique_trajectories": 80,
+            "trajectory_roles": {
+              "peft_train": 80
+            },
+            "content_audit": {
+              "count": 80,
+              "unique_observations": 80,
+              "student_training_resets": [],
+              "manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p1-data-contract/20260926-107-p1-data-contract/peft-train-calibration80/manifest.json"
+            }
+          }
+        },
+        "temporal": {
+          "count": 80,
+          "unique_observations": 80,
+          "student_training_resets": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              3
+            ]
+          ],
+          "manifest": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/data/phase80/manifest.json"
+        },
+        "variant": "phase80",
+        "data_gate_sha256": "13a7d3dbbc6ce75943f54c65113b121563367e32766ad5d62be9ac42b7c3cef0"
+      },
+      "inherited_initial_factor_sha256": "be0384bdce5570f6ff42ac49cbc2d42df63cf9e771ae49c7e81bcdacd8eca458",
+      "materials_sha256": "fdc9188bcae7501a8b28eb6d56313249174f15c525af9ab21d67ba0772eaf94c"
+    }
+  },
+  "source_sha256": {
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/train_b1_temporal80_091_v1.py": "be439f55401bed499643c2a697ade74f1cf5e15d94c7d1768956c8576704b312",
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/prepare_b1_temporal80_091_v1.py": "40079c2278ca006b25c7fe0eea0e9d33c5a7d4abc4b4a4ee61453ec44443e84b",
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/audit_b1_temporal_train_091_v1.py": "c591de8ff8beb066db8a1405ad779bf3163b062d6e56aa068ea3457695cd6ad3",
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/b1_temporal80_v1.json": "525aae4b1f123a7b85b2738314f95d00a37ec82ff3ee8d626e6cb76a64f8586d",
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/early80-materials.json": "fe4e31b86f9cf5bbd716432a19ec30e41f17264e6c98a3e5fa10b0e9c09c3562",
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/phase80-materials.json": "fdc9188bcae7501a8b28eb6d56313249174f15c525af9ab21d67ba0772eaf94c"
+  },
+  "initial_tensor_count": 448,
+  "initial_parameters": 19988480,
+  "variant_substitution_rejected": true,
+  "gpu_used": false
+}

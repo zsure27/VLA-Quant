@@ -1,0 +1,8 @@
+{
+  "gate": "PASS_TEMPORAL_STATIC_CORE_REVIEW",
+  "optimizer_training_and_gradient_and_freeze_and_reload_body_exact_parent": true,
+  "AST_all_four_helpers": true,
+  "selection_negative_tests": "short/unknown variant rejected; actual CPU cohort substitution rejected",
+  "new_identity": "b1-temporal80-v1-20261017",
+  "limits": "CPU/static only; actual BF16 teacher, zero branch, gradients and reload await10step GPU smoke"
+}
