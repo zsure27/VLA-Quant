@@ -1,0 +1,5 @@
+# B1时间覆盖六阶段启动
+
+预注册38c08b802c2aaeb505b39a1b74639d53328aaf32已固定GitHub远端核验。CPU门禁PASS_B1_TEMPORAL_CPU_CONTRACTS与数据门禁PASS_B1_TEMPORAL80_SOURCE_AND_CONTENT通过；两侧各80唯一/父Early内容完全一致/校准无交集/448父因子与19988480参数/错误候选替换拒绝均通过。旧336源码不变。
+
+04:32:52在GPU空闲/盘>=12GiB/新鲜primary剩25%条件启动supervisor48551，plan SHA4cabb3279cc86dbe71be68ac68221de7b8b55ebb0be5c52e9334046270af0471。启动实测RUNNING revision3/train-10-early80，初始模型加载中，不能以启动回执冒称真实教师/梯度门禁已过。两侧10步及配对结构gate通过后自动各1000，重置初始不累计烟雾；本plan没有闭环回合，后续独立加载器/数值/micro/首50门禁仍须完成。首窗口额度延期和最终收尾顺序保持。
