@@ -40,7 +40,7 @@ def main():
     def tree(d,prefix):
         for f in sorted(d.rglob('*')):
             if f.is_file() and '__pycache__' not in f.parts:add(f,prefix+'/'+f.relative_to(d).as_posix())
-    tree(root/a.phase,'first50')
+    tree(root/a.phase,a.phase)
     tree(root/'stage-records'/('audit-'+a.phase),'audit')
     add(gate,a.phase+'-gate.json');add(a.analysis,'analysis/'+a.analysis.name)
     for v in ('early80','phase80'):
@@ -53,7 +53,7 @@ def main():
         vids=list((a.control.parent/'20261016-091-residual-vla-adaptation-v1/source-v1/rollouts').rglob(stamp+'--*.mp4'))
         if len(vids)!=100:raise ValueError('Original100 videos missing')
         for f in vids:add(f,'videos/'+v+'/'+f.name)
-    if (root/'stage-records/audit-eval-v2-first50/exit-code.txt').read_text().strip()!='0':raise ValueError('Audit incomplete')
+    if (root/'stage-records'/('audit-'+a.phase)/'exit-code.txt').read_text().strip()!='0':raise ValueError('Shard audit incomplete')
     for f in ev.glob('*.py'):add(f,'eval-source/'+f.name)
     for f in entry.glob('*.py'):add(f,'continuation-source/'+f.name)
     for n in ('plan.json','runtime-lock.json','cpu-admission.json','launch.json','previous-backup-admission.json'):
