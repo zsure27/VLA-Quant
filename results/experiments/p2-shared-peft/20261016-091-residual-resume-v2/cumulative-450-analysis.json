@@ -1,0 +1,7397 @@
+{
+  "gate": "PASS_M0_CUMULATIVE_450_PAIRED_ANALYSIS",
+  "episodes": 450,
+  "successes": {
+    "ptq": 77,
+    "svd-init-only": 184
+  },
+  "comparison_S0_minus_PTQ": {
+    "episodes": 450,
+    "rescue": 119,
+    "break": 12,
+    "net": 107,
+    "delta_fraction": 0.23777777777777778,
+    "exact_mcnemar_p": 2.587003859247397e-23,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.09555555555555556,
+      0.39111111111111113
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 29,
+      "1": 0,
+      "2": 22,
+      "3": 0,
+      "4": 17,
+      "5": 4,
+      "6": 2,
+      "7": 25,
+      "8": 6,
+      "9": 2
+    },
+    "tasks_improved": 8,
+    "tasks_harmed": 0
+  },
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 6,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 8,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 6,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 7,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 8,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 6,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 9,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 13,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 11,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 13,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 15,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 19,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 10,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 11,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 12,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 13,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 17,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 18,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 11,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 11,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 14,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 15,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 23,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 24,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 25,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 29,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 21,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 22,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 23,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 25,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 26,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 28,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 29,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 20,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 22,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 23,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 24,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 26,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 28,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 32,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 33,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 35,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 36,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 38,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 39,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 30,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 31,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 34,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 35,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 36,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 37,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 38,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 30,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 36,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 38,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 30,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 31,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 34,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 33,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 41,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 42,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 43,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 44,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 46,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 47,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 49,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 40,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 42,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 44,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 45,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 46,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 47,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 48,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 49,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 44,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 41,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 45,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 44,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": false
+    }
+  ],
+  "rescue_pairs": [
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 7,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 9,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 6,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 11,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 10,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 15,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 13,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 12,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 14,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 17,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 18,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 19,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 16,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 34,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 37,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 30,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 31,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 32,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 39,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 35,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 36,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 38,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 46,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 48,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 41,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 43,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 45,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 47,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 42,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 49,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 40,
+      "ptq": false,
+      "svd-init-only": true
+    }
+  ],
+  "break_pairs": [
+    {
+      "task_id": 8,
+      "init_state_index": 6,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 13,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 10,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 12,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 26,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 36,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 38,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 31,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 44,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 47,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 48,
+      "ptq": true,
+      "svd-init-only": false
+    }
+  ],
+  "failures": {
+    "ptq": [
+      {
+        "task_id": 0,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      }
+    ],
+    "svd-init-only": [
+      {
+        "task_id": 0,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 6,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 5,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 6,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 7,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 8,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 9,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 13,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 10,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 12,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 16,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 10,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 11,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 12,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 13,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 14,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 15,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 17,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 18,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 19,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 20,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 26,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 36,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 38,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 31,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 30,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 31,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 32,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 33,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 34,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 35,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 36,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 37,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 38,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 39,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 44,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 47,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 48,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 40,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 41,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 42,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 43,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 44,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 45,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 46,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 47,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 48,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 49,
+        "ptq": false,
+        "svd-init-only": false
+      }
+    ]
+  },
+  "costs_current_shard": {
+    "ptq": {
+      "queries": 2557,
+      "wrapper_wall_seconds": 1762.6982123851776,
+      "videos": 100,
+      "optimization_steps": 0,
+      "wall_scope": "Includes startup/checksum/admission/trace/video, not packed low-bit kernel speed"
+    },
+    "svd-init-only": {
+      "queries": 2177,
+      "wrapper_wall_seconds": 1600.6478817462921,
+      "videos": 100,
+      "optimization_steps": 0,
+      "wall_scope": "Includes startup/checksum/admission/trace/video, not packed low-bit kernel speed"
+    }
+  },
+  "costs_full_shards": {
+    "ptq": {
+      "queries": 10191,
+      "wall_seconds": 7073.909424543381,
+      "scope": "Four completed100-episode shards; recoveredfirst50 mixed old/new attempt timing remains separately in report"
+    },
+    "svd-init-only": {
+      "queries": 8629,
+      "wall_seconds": 6430.078627824783,
+      "scope": "Four completed100-episode shards; recoveredfirst50 mixed old/new attempt timing remains separately in report"
+    }
+  },
+  "scope": "Same ten-task development; micro excluded, old046 outcomes not pooled"
+}
