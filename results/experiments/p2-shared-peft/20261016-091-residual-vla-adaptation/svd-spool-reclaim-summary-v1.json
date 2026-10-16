@@ -1,0 +1,22 @@
+{
+  "gate": "PASS_SVD_SPOOL_RECLAIM_BACKED_BY_LOCAL_COPY",
+  "time_utc": "2026-10-16T07:01:36.032867+00:00",
+  "hostname": "autodl-container-dfbc4bb0ff-1e85dd94",
+  "target": "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/smoke10/svd-inputs",
+  "execute": true,
+  "content_manifest_sha256": "4af126600e2cb4976563ac10a5fbbaeddf675ec3fe36ea905d37508c74974b52",
+  "file_count": 17920,
+  "logical_bytes": 10222284800,
+  "unique_allocated_bytes": 10276044800,
+  "estimated_reclaimable_allocated_bytes": 10276044800,
+  "free_bytes_before": 22815354880,
+  "local_backup_receipt_sha256": "ba2f05aab069f69372bdf941de96741abbd55abccf59f47df14507a60aac3d05",
+  "independent_local_backup_verified": true,
+  "free_bytes_after": 33076080640,
+  "deleted_files": 17920,
+  "parent_materials_unchanged": true,
+  "full_execution_receipt_sha256": "f12a99243592e4066fa5d6326636276efa9a2c9e59e00111b26c5e50257c0518",
+  "actual_freed_bytes": 10260725760,
+  "full_execution_receipt_local": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\control\\20261016-091-residual-vla-adaptation-v1\\svd-spool-reclaim-executed-v1.json",
+  "preserved_materials": "7B/profiles/raw training and calibration/initial factors/teacher/checkpoints/videos/portable archives retained"
+}

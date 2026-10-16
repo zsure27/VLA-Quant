@@ -4,6 +4,8 @@ import argparse
 import json
 import socket
 import sys
+import shutil
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,9 +20,17 @@ def main():
         p.add_argument('--' + name, type=Path, required=True)
     p.add_argument('--expected-hostname', required=True)
     p.add_argument('--preregistration-commit', required=True)
+    p.add_argument('--include-training80-diagnostic', action='store_true')
     a = p.parse_args()
     if socket.gethostname() != a.expected_hostname:
         raise ValueError('Wrong current instance')
+    if (a.control / 'STOP_NEW_GPU').exists():
+        raise ValueError('Client requested no new GPU work')
+    if shutil.disk_usage(a.control).free < 12 * 1024**3:
+        raise ValueError('Need12GiB persistent disk before new GPU candidate')
+    if subprocess.check_output(['nvidia-smi', '--query-compute-apps=pid',
+            '--format=csv,noheader'], text=True).strip():
+        raise ValueError('GPU is occupied; never duplicate a running experiment')
     checks = ((a.cpu_gate, 'PASS_B3_INIT_ONLY_CPU_METADATA_CONTRACTS'),
               (a.observation_gate, 'PASS_CPU_PROTOCOL_OBSERVATION_BRIDGE'),
               (a.reclaim_gate, 'PASS_SVD_SPOOL_RECLAIM_BACKED_BY_LOCAL_COPY'))
@@ -65,6 +75,13 @@ def main():
         stages.append({'id': name, 'cwd': str(ROOT), 'env': env,
             'command': list(map(str, [py, ROOT / 'scripts/run_locked_peft_stage.py',
                 '--lock', lock, '--output', directory, '--', *command]))})
+    if a.include_training80_diagnostic:
+        add('training80-checkpoint-diagnostic',
+            [py, ROOT / 'scripts/diagnose_b3_checkpoints_091_v1.py',
+             '--materials', a.materials,
+             '--old-session', old.parent.parent,
+             '--output', a.session / 'diagnostics' / 'training80'],
+            a.session / 'stage-records' / 'training80-checkpoint-diagnostic')
     for phase, count in (('micro', 1), ('first50', 5)):
         for candidate, model in (('ptq', 'A4'), ('svd-init-only', 'B3-S0-091-v1')):
             directory = a.session / phase / candidate
