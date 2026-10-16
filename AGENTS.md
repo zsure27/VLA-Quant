@@ -1,3 +1,5 @@
+**2026-10-16 091重新开启恢复授权覆盖：用户要求继续实验并在本轮结束关闭本地电脑；仅当前20261016-091-residual-resume-v2有效，覆盖此前本轮不关Windows。先核验上轮中断47完整S0回合、仅补task9/reset7–9，旧PTQ50和D0/micro不重跑，不覆盖旧输出；本次R0/CPU/数值桥接及严格分段gate通过后按原M0后片顺序继续。收尾顺序为实验终止/GPU闲、完整双份SHA/分析/Git远端SHA、091原生execute=true、心跳PAUSED、发送完整总结，最后Windows正常关机，不强制关闭应用；关键步骤失败不关本机。详见20261016-091-residual-resume-v2/PRE_RUN_CARD_CN.md。**
+
 **2026-10-16 091额度关机完成覆盖：13%停扩展、10%保存终止，D0/micro完成；首50 PTQ exit0而S0额度中断，无最终配对gate。完整双份091-residual-quota-final-20261016-v1，551906824字节SHAdb4f39bc331c819dabbf82f430f5127d2973bc97a05f0697e281c67b4a0689bd，3074文件/117已保存视频均SHA过，研究Git1c87b48远端核验。16:19:08原生execute=true/supervisor839，SSH远端关闭；平台OFF/计费未独立核验。automation已PAUSED，Windows保持开启。下轮先审阅中断恢复和唯一计划，不重跑旧已完成片、不拼接分母。**
 
 **2026-10-16 091额度收尾覆盖：实时primary剩13%停止扩展并备份，剩10%于08:11:30UTC保存状态后终止当前GPU，已空闲。D0/micro完成；首50 PTQ exit0，S0中断且无最终配对gate，不声称首50/450完成，不拼接旧结果。Windows保持开启。停止后完整双份归档/Git核验/原生关091/暂停心跳按顺序完成。详见QUOTA_CLOSURE_ANALYSIS_CN.md。**

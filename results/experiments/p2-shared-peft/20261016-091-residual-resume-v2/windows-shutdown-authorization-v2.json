@@ -1,0 +1,17 @@
+{
+  "time_utc": "2026-10-16T15:56:11.568397+00:00",
+  "user_request": "091机已开启，继续按约定和计划开展实验，本轮运行结束后帮我关闭本地电脑",
+  "scope": "Current 20261016-091-residual-resume-v2 execution only",
+  "windows_shutdown_authorized": true,
+  "sequence": [
+    "all experiment processes stopped/GPU idle",
+    "server persistent archive and local full copy SHA",
+    "reports/results and zsure27/VLA-Quant remote SHA verified",
+    "091 native execute=true receipt",
+    "automation PAUSED",
+    "send full result and imminent Windows shutdown summary",
+    "request native Windows shutdown without forcing apps"
+  ],
+  "failure_rule": "Do not shut Windows if any critical backup/Git/native remote shutdown fails",
+  "does_not_authorize_auto_boot_or_console_or_reset_credit": true
+}
