@@ -1,0 +1,18 @@
+{
+  "gate": "PASS_B1_TEMPORAL_EVAL_CPU_CONTRACTS",
+  "variants": {
+    "early80": {
+      "artifact_sha256": "1d62cb3b942e9f245e1cd9e941c0585918691f02a319bc00841cdca56c6bb5ce",
+      "adapter_sha256": "459174ac508397133f3a323e85189b84c065d53637535af0985efe0574bae2ac",
+      "wrong_steps_rejected": true,
+      "loaded_state_tensor_contract": true
+    },
+    "phase80": {
+      "artifact_sha256": "fb56883e9db67f093cf36b0cea105ba22692082ffaf4ed3bdb98316cf12385d7",
+      "adapter_sha256": "bc7ed6751e13f0e8c8c109ae1ed7efa55b4f011fdaa9336a721b50f0f3d565f1",
+      "wrong_steps_rejected": true,
+      "loaded_state_tensor_contract": true
+    }
+  },
+  "gpu_used": false
+}
