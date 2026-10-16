@@ -15,3 +15,5 @@ micro PTQ0/10、S0仅初始化4/10，4救回0新增失败，McNemar p=.125；微
 运行中快照091-residual-quota-checkpoint-20261016-v1已双份逐成员核验：472406097字节，SHA51007fc025322d7210df9acd859a22ff3edf1dbc8391491dcc22601a7fdc0168，2894文件/111视频。该快照不是最终停止后归档。停止后完整归档另建091-residual-quota-final-20261016-v1，纳入新会话全部已保存数据、控制/冻结源码、父初始因子、分析和两Git身份bundle；7B仍仅服务器完整checksum，不声称本机完整7B。原D0和micro完整双份包保留。
 
 先完成停止后全会话双份SHA、Git远端SHA和标准shutdown dry-run，再原生关091、暂停本心跳。原生执行回执不等于独立确认平台OFF/停计费。后续科学顺序仍为完整M0机制控制、Early80/Phase80覆盖、动作敏感残差方向、独立动作目标及C-SQ门禁；不扩routing，不读holdout标签。
+
+停止后完整归档已服务器/本机逐文件验证：551906824字节SHA db4f39bc331c819dabbf82f430f5127d2973bc97a05f0697e281c67b4a0689bd，3074原始文件/3075成员、117已保存视频，无不稳定文件排除。未完成S0最后3视频对应回合不得补造完成。标准shutdown dry-run已通过，原生execute尚待执行。旧status的RUNNING是停前原样保留记录，当前事实以quota-stop-receipt及GPU空闲检查为准。
