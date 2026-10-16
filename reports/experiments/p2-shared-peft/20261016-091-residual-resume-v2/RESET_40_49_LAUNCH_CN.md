@@ -1,0 +1,5 @@
+# reset40–49启动回执
+
+前片30–39三阶段exit0/严格配对门禁通过，累计350完整分析已保存并GitHub3f6c441ee04f952e7ecd37232a7f0a5cf97da0ff远端SHA核验。注册使用新鲜primary剩47%/reset1792183963，GPU空闲且磁盘满足续片8GiB。唯一plan SHAd361dbc6b8a264d43c17e3fe9b3afde881a6e83f2cee5d1ef0e52e3455573f15。
+
+北京时间03:23:08启动supervisor36763；03:24实测RUNNING revision3/PTQ，wrapper36764/策略36765 CPU190%、GPU显存16585MiB/盘24079523840字节，仅当次历史。只改offset/count/output/lock，旧336科学源码和材料保持。此为最后M0片，完成后正式各450；不重复旧片、不按成绩方向调整、不添加micro。之后先完整450分析和备份，再依研究计划审查新方法门禁；当前窗口首次15/10延期仍有效，未确认自然刷新，不提前关Windows。

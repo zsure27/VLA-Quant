@@ -1,5 +1,5 @@
 {
-  "scope": "Completed formal first50 + reset10-19 + reset20-29 and historical D0/micro references only; active reset30-39 excluded; micro not added",
+  "scope": "Completed formal first50 + reset10-19 + reset20-29 + reset30-39 and historical D0/micro references only; active reset40-49 excluded; micro not added",
   "entries": [
     {
       "phase": "recovered-first50",
@@ -31,6 +31,17 @@
       "bytes": 756212845,
       "sha256": "4d15e0068944eccfeab1c09f4fedb6b108bbbfb866863a4e3cf445d8569cd9e1",
       "raw_files": 4911,
+      "original_videos": 200,
+      "all_members_verified": true
+    },
+    {
+      "phase": "reset-30-39",
+      "formal_per_candidate": 100,
+      "server": "/root/autodl-tmp/qvla-repro/backups/091-residual-reset-30-39-complete-20261017-v1",
+      "local": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-reset-30-39-complete-20261017-v1",
+      "bytes": 771484449,
+      "sha256": "571fa738e7cc1eb9befbd1b579b0f556f78112228bbb8754ff91e671a1e4af5a",
+      "raw_files": 5008,
       "original_videos": 200,
       "all_members_verified": true
     }
