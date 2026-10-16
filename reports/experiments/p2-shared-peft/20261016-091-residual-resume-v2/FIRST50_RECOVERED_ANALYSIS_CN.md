@@ -21,3 +21,7 @@ svd-init-only: task0/reset5, task0/reset9, task1/reset5, task1/reset6, task1/res
 ## 下一片
 
 按原预注册顺序接reset10–19各100，随后20–29/30–39/40–49，总各450；只改offset/count/output/lock。续跑取决于协议、实时primary额度与磁盘，不按成绩方向。首50完整恢复备份在新服务器包及D:/VLA-Backups/20261016-091-residual-resume-v2，取得逐文件核验才称双份。原数据和原归档不可变。
+
+## 完整双份归档完成
+
+服务器/backups/091-residual-recovered-first50-complete-20261017-v1，本机D:/VLA-Backups/20261016-091-residual-resume-v2/同名；424158612字节SHA30c48668178c8fb209e140c86c3e7643be9d13f77ca451f376ee3716155eb544，2575文件/2576解压成员、100原始视频逐项SHA通过。包括原S0未完成残段作为证据但不计正式样本；活动reset10–19全部排除。原始tar不随此补充分析改动，补充回执以同名results/Git和控制根保存。

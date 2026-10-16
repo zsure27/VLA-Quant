@@ -1,0 +1,14 @@
+{
+  "gate": "PASS_LOCAL_RESIDUAL_SESSION_ARCHIVE",
+  "phase": "recovered-first50",
+  "archive": "/root/autodl-tmp/qvla-repro/backups/091-residual-recovered-first50-complete-20261017-v1",
+  "bytes": 424158612,
+  "sha256": "30c48668178c8fb209e140c86c3e7643be9d13f77ca451f376ee3716155eb544",
+  "files_verified": 2575,
+  "videos": 100,
+  "members": 2576,
+  "active_later_phases_excluded": true,
+  "members_verified": 2576,
+  "local_directory": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-recovered-first50-complete-20261017-v1",
+  "verification": "All decompressed member SHA checked; tar retained, no duplicate extraction"
+}
