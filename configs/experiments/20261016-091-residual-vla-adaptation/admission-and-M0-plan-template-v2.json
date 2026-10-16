@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "20261016-091-residual-vla-adaptation-v1-admission-and-M0-v2",
+  "control_root": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "expected_hostname": "autodl-container-dfbc4bb0ff-1e85dd94",
+  "stages": [
+    {
+      "id": "R0-actual-observation-bridge",
+      "cwd": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1",
+      "env": {
+        "PYTHONPATH": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1:/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/diagnostics:/root/autodl-tmp/qvla-repro/control/cpu-audit-20261012/oft-corrected-v1:/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "MUJOCO_EGL_DEVICE_ID": "0",
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "TOKENIZERS_PARALLELISM": "false",
+        "TF_NUM_INTRAOP_THREADS": "1",
+        "TF_NUM_INTEROP_THREADS": "1"
+      },
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/vla_stage_supervisor.py",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/R0-plan-v2.json"
+      ]
+    },
+    {
+      "id": "CPU-init-only-metadata",
+      "cwd": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1",
+      "env": {
+        "PYTHONPATH": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1:/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/diagnostics:/root/autodl-tmp/qvla-repro/control/cpu-audit-20261012/oft-corrected-v1:/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "MUJOCO_EGL_DEVICE_ID": "0",
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "TOKENIZERS_PARALLELISM": "false",
+        "TF_NUM_INTRAOP_THREADS": "1",
+        "TF_NUM_INTEROP_THREADS": "1"
+      },
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/check_b3_init_only_091_cpu_v1.py",
+        "--output",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/cpu-contracts-runtime.json"
+      ]
+    },
+    {
+      "id": "register-M0-after-admission",
+      "cwd": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1",
+      "env": {
+        "PYTHONPATH": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1:/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/diagnostics:/root/autodl-tmp/qvla-repro/control/cpu-audit-20261012/oft-corrected-v1:/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "MUJOCO_EGL_DEVICE_ID": "0",
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "TOKENIZERS_PARALLELISM": "false",
+        "TF_NUM_INTRAOP_THREADS": "1",
+        "TF_NUM_INTEROP_THREADS": "1"
+      },
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/prepare_b3_init_only_091_plan_v1.py",
+        "--control",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1",
+        "--materials",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/materials.json",
+        "--session",
+        "/root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-vla-adaptation-v1",
+        "--cpu-gate",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/cpu-contracts-runtime.json",
+        "--observation-gate",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/actual-observation-repeatability.json",
+        "--reclaim-gate",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/svd-spool-reclaim-executed-v1.json",
+        "--source-manifest",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1-SHA256.json",
+        "--expected-hostname",
+        "autodl-container-dfbc4bb0ff-1e85dd94",
+        "--preregistration-commit",
+        "DEPLOYMENT_JSON_VERIFIED_COMMIT",
+        "--include-training80-diagnostic"
+      ]
+    },
+    {
+      "id": "run-M0-diagnostic-micro-first50",
+      "cwd": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1",
+      "env": {
+        "PYTHONPATH": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1:/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/diagnostics:/root/autodl-tmp/qvla-repro/control/cpu-audit-20261012/oft-corrected-v1:/root/autodl-tmp/qvla-repro/src/LIBERO",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "MUJOCO_EGL_DEVICE_ID": "0",
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "TOKENIZERS_PARALLELISM": "false",
+        "TF_NUM_INTRAOP_THREADS": "1",
+        "TF_NUM_INTEROP_THREADS": "1"
+      },
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/vla_stage_supervisor.py",
+        "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/first50-plan.json"
+      ]
+    }
+  ],
+  "gpu_prerequisite": "Verified clone/source/complete archival SHA, completed local-backed spool cleanup, R0 actual observation gate, CPU contracts and12GiB/GPUidle at registration. Each failure stops all later stages.",
+  "no_windows_shutdown": true,
+  "quota_ownership": "Only client15minute active heartbeat reads fresh current primary and writes STOP_NEW_GPU; no claim of independent server quota API."
+}
