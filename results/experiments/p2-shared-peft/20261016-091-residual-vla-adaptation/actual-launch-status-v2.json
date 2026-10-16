@@ -1,0 +1,19 @@
+{
+  "observed_utc": "2026-10-16T07:09:00.804485+00:00",
+  "outer_revision": 3,
+  "outer_state": "RUNNING",
+  "outer_stage": "R0-actual-observation-bridge",
+  "outer_supervisor_pid": 2246,
+  "R0_supervisor_pid": 2247,
+  "actual_probe_pid": 2248,
+  "actual_probe_cpu_percent_at_observation": 106,
+  "gpu_model_stage_started": false,
+  "R0_cpu_bridge_gate_passed": false,
+  "v1_launch": "Rejected Linux absolute cwd validation before any stage execution; retained original log",
+  "effective_plan": "admission-and-M0-plan-v2.json",
+  "file_sha256": "e33d333308ab094cd96fd6b0665166b5f8367b61b8b30d024874e0dff03c7059",
+  "canonical_plan_sha256": "2bafffdf2688c4c56cc1b009ce029720fd293e468075eedba3cde0897c661db4",
+  "automation_id": "vla-091-vla",
+  "automation_status": "ACTIVE",
+  "windows_shutdown_authorized": false
+}

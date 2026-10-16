@@ -1,0 +1,11 @@
+{
+  "gate": "PASS_091_POSIX_PLAN_V2_VALIDATED_LAUNCHED",
+  "plan": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/admission-and-M0-plan-v2.json",
+  "plan_sha256": "e33d333308ab094cd96fd6b0665166b5f8367b61b8b30d024874e0dff03c7059",
+  "supervisor_pid": 2246,
+  "time_utc": "2026-10-16T07:09:00.703884+00:00",
+  "preregistration_commit": "291255d5350dbb7d5a1164feaf0b5504453564c1",
+  "source": "source-v1 frozen336 files; unchanged",
+  "v1_failure": "Rejected cwd absolute-path validation before any stage/GPU execution",
+  "windows_shutdown_authorized": false
+}

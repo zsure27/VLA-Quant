@@ -50,3 +50,8 @@ GitHub固定zsure27/VLA-Quant，提交代码/配置/规划/小结果/清理SHA�
 ## 启动预检路径修正V2
 
 原入口在vla_stage_supervisor.validate_plan因Windows路径分隔符被拒绝，尚未创建status/执行R0/启动GPU。保留原计划及错误日志，新增显式POSIX绝对路径V2入口与R0计划，不覆盖原科学代码、材料、输出或已完成数据。只在实际无runner/GPU占用并逐路径校验后启动V2。
+
+
+## 当前已执行启动状态
+
+北京时间15:09:00，V2真实RUNNING/revision3，外层supervisor2246、R0 supervisor2247、真实观测探针2248/CPU106%。这是无模型真实输入前置桥接，尚未通过R0、尚未启动GPU模型阶段；后续由已注册顺序计划在门禁通过后自动诊断/micro/first50。冻结336源码文件、旧SVD/教师及原046 SOURCES一致。活跃15分钟心跳id vla-091-vla，旧091/046心跳仍暂停。Windows保持开启。
