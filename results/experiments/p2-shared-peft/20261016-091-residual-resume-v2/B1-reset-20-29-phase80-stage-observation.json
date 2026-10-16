@@ -1,0 +1,425 @@
+{
+  "observed_at": "2026-10-16T23:38:24.722905+00:00",
+  "status": {
+    "child_pid": 78456,
+    "completed_stage_ids": [
+      "reset-20-29-early80"
+    ],
+    "current_stage": "reset-20-29-phase80",
+    "last_exit_code": null,
+    "log": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-continuation-v1/reset-20-29/control/20261017-091-B1-temporal80-reset-20-29-v1/stage-01-reset-20-29-phase80.log",
+    "message": "child launched",
+    "plan_id": "20261017-091-B1-temporal80-reset-20-29-v1",
+    "plan_path": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-continuation-v1/reset-20-29/plan.json",
+    "plan_sha256": "e560e6ffe7746579bed0e6eae25143a411b56ad1bbb1c7c4bea6dddcb82b9a0f",
+    "revision": 6,
+    "schema_version": "1.0",
+    "state": "RUNNING",
+    "supervisor_pid": 73104,
+    "time_utc": "2026-10-16T23:32:33.693829+00:00"
+  },
+  "plan_file_sha256": "100dd3792b204b78f2831e10606c74a7a69f7e0feaa628fe1580e6a3ce5b057f",
+  "early80_exit_code": 0,
+  "disk_free_bytes": 18183659520,
+  "primary_usage_observation": {
+    "used_percent": 71,
+    "remaining_percent": 29,
+    "resets_at": 1792201971,
+    "source": "current get_usage_limits API at heartbeat 2026-10-16T23:37:33Z"
+  },
+  "processes": "   PID   PPID     ELAPSED %CPU %MEM COMMAND\n 73104      1       26:55  0.0  0.0 /root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/vla_stage_supervisor.py /root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-continuation-v1/reset-20-29/plan.json\n 78456  73104       05:51  0.4  0.0 /root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/run_locked_peft_stage.py --lock /root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-continuation-v1/reset-20-29/runtime-lock.json --output /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/reset-20-29/phase80 -- /root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-eval-v2/run_eval_b1_temporal_091_v2.py --candidate phase80 --model-id B1-temporal-Phase80-v1 --method awq --weight-bits 2 --activation-bits 16 --profile /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt --awq-primary-group64-profile /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt --awq-candidate w2-attention-no-clip-primary-g64 --official-root /root/autodl-tmp/qvla-repro/src/official-quantization --pretrained_checkpoint /root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial --libero_root /root/autodl-tmp/qvla-repro/src/LIBERO --task_suite_name libero_spatial --initial-state-offset 20 --num_trials_per_task 10 --seed 0 --env-seed 1 --seed-protocol paired --trace-actions --trace-observations --local_log_dir /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/reset-20-29/phase80 --trained-artifact /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/phase80/steps-1000/artifact.json --trained-artifact-sha256 fb56883e9db67f093cf36b0cea105ba22692082ffaf4ed3bdb98316cf12385d7 --adapter-state /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/phase80/steps-1000/adapter.pt --recovery-training-manifest /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/data/phase80/manifest.json --training-spec /root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/b1_temporal80_v1.json --training-pair-gate /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/train-1000-pair-gate.json --ptq-reference-sample /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/reset-20-29/ptq/policy-observations/query-000000.npz --ptq-reference-sha256 3541f97de0fc1b0f733894b2ba80e5c6229164099a1d617a959c0d7bfe978e4f\n 78459  78456       05:49  251  0.3 /root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-eval-v2/run_eval_b1_temporal_091_v2.py --candidate phase80 --model-id B1-temporal-Phase80-v1 --method awq --weight-bits 2 --activation-bits 16 --profile /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt --awq-primary-group64-profile /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt --awq-candidate w2-attention-no-clip-primary-g64 --official-root /root/autodl-tmp/qvla-repro/src/official-quantization --pretrained_checkpoint /root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial --libero_root /root/autodl-tmp/qvla-repro/src/LIBERO --task_suite_name libero_spatial --initial-state-offset 20 --num_trials_per_task 10 --seed 0 --env-seed 1 --seed-protocol paired --trace-actions --trace-observations --local_log_dir /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/reset-20-29/phase80 --trained-artifact /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/phase80/steps-1000/artifact.json --trained-artifact-sha256 fb56883e9db67f093cf36b0cea105ba22692082ffaf4ed3bdb98316cf12385d7 --adapter-state /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/phase80/steps-1000/adapter.pt --recovery-training-manifest /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/data/phase80/manifest.json --training-spec /root/autodl-tmp/qvla-repro/control/20261016-091-residual-resume-v2/B1-temporal-v1/b1_temporal80_v1.json --training-pair-gate /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-v1/train-1000-pair-gate.json --ptq-reference-sample /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-resume-v2/reset-20-29/ptq/policy-observations/query-000000.npz --ptq-reference-sha256 3541f97de0fc1b0f733894b2ba80e5c6229164099a1d617a959c0d7bfe978e4f\n",
+  "gpu": "16661 MiB, 36 %\n",
+  "gpu_processes": "78459, 16643 MiB\n",
+  "early80_first_query_gate": {
+    "gate": "PASS_B1_TEMPORAL_ACTUAL_MODEL",
+    "version": "b1-temporal80-eval-v2-20261017",
+    "optimization_steps": 1000,
+    "frozen_sha256": "36d41eb329862e8c8a6f302a88655b729b85ebe750aaf93dc32de92b2ba984b6",
+    "reload_output_equal": true,
+    "all_parameters_frozen": true,
+    "raw_state": [
+      -0.2069539207046558,
+      -0.0016295515787035403,
+      1.1845516379902914,
+      3.1410724501997223,
+      0.0013150519513050426,
+      -0.0871788658726918,
+      0.0387246894964197,
+      -0.03872089076035439
+    ],
+    "state_space": "raw_proprio_before_get_action",
+    "single_proprio_normalization_equal": true,
+    "proprio_path": "deployed get_action on separate raw copies; one normalization per call",
+    "reference_action": [
+      [
+        0.0704359864464068,
+        0.0630373399018449,
+        0.08359157377426629,
+        -0.004492879754948914,
+        0.014591940600270553,
+        -0.00019147236002922674,
+        1.0078125
+      ],
+      [
+        0.1342254377705131,
+        0.13660911886498062,
+        0.10002398175632865,
+        -0.00598728205169391,
+        0.012906323981492995,
+        0.0015004222133226108,
+        1.0078125
+      ],
+      [
+        0.26858389563191587,
+        0.2550371610224773,
+        0.14156145748876425,
+        -0.0037585613849966393,
+        0.013280905452332459,
+        0.0026283519288904933,
+        1.0078125
+      ],
+      [
+        0.43951086343113144,
+        0.3864153377423625,
+        0.1470389268161183,
+        -0.004853597550714947,
+        0.012157161039814096,
+        0.005367609809555363,
+        1.0
+      ],
+      [
+        0.6055072456207541,
+        0.44647393281431014,
+        0.14064854593420506,
+        -0.0006280462288842797,
+        0.014591940600270553,
+        0.005851008259084439,
+        1.0
+      ],
+      [
+        0.7632859851277224,
+        0.4975237386254656,
+        0.12695487261581984,
+        5.474102738714515e-05,
+        0.021334407075380757,
+        0.00504534417653596,
+        1.0078125
+      ],
+      [
+        0.8191659553697735,
+        0.5245501064078419,
+        0.11965158017934763,
+        0.0009951838520628753,
+        0.019461499721183467,
+        0.006173273892103842,
+        1.015625
+      ],
+      [
+        0.8388882978081448,
+        0.5365618254222315,
+        0.10960955307919851,
+        0.0008405905110202838,
+        0.005040113093864429,
+        0.003434016011438973,
+        1.0078125
+      ]
+    ],
+    "zero_branch_action": [
+      [
+        0.2274956822186428,
+        0.20398735521132183,
+        0.0721801793422785,
+        -0.005549267585406581,
+        -0.017493303511321584,
+        0.019869563295428133,
+        0.72265625
+      ],
+      [
+        0.28666270953375583,
+        0.2963274451344412,
+        0.07126726778771952,
+        -0.014489915809036122,
+        -0.0044648917286867484,
+        0.03324358706573302,
+        0.88671875
+      ],
+      [
+        0.4197885209927602,
+        0.31284355877922676,
+        0.05369372036245834,
+        -0.018509342676143348,
+        -0.015280931699176048,
+        0.027120540038364532,
+        0.84375
+      ],
+      [
+        0.44608497757725496,
+        0.32335381291681764,
+        0.022426499618811824,
+        -0.015726662537376812,
+        -0.005682281508914977,
+        0.026476008772325726,
+        0.828125
+      ],
+      [
+        0.4378673348946004,
+        0.31434502365602546,
+        -0.001480371716202633,
+        -0.01103733119241837,
+        -0.00324750194845852,
+        0.030987727634597256,
+        0.85546875
+      ],
+      [
+        0.46580732001562597,
+        0.31884941828642155,
+        -0.026414268550095876,
+        -0.01258326460284423,
+        -0.009100337430325012,
+        0.03388811833177183,
+        0.85546875
+      ],
+      [
+        0.5151131761115536,
+        0.31584648853282415,
+        -0.02949534504673257,
+        -0.01129498676082269,
+        -0.015550162131341888,
+        0.03582171212988819,
+        0.84375
+      ],
+      [
+        0.5085390619654299,
+        0.2542864285840779,
+        -0.08484060804187332,
+        -0.011964891238673891,
+        -0.025909680934245588,
+        0.026476008772325726,
+        0.859375
+      ]
+    ],
+    "zero_branch_comparison": "Pair with canonical A4 on the exact same initial observation",
+    "limits": "Versioned temporal training1000; actual query admission only, no benefit claim",
+    "matching_PTQ_input_and_zero_action_equal": true,
+    "ptq_reference_sha256": "3541f97de0fc1b0f733894b2ba80e5c6229164099a1d617a959c0d7bfe978e4f",
+    "candidate": "early80"
+  },
+  "early80_first_query_bridge": {
+    "checks": {
+      "instruction": true,
+      "image": true,
+      "wrist_image": true,
+      "normalized_state_as_capture_float32": true,
+      "zero_action_as_capture_float32": true
+    },
+    "reference_sha256": "3541f97de0fc1b0f733894b2ba80e5c6229164099a1d617a959c0d7bfe978e4f",
+    "raw_state": [
+      -0.2069539207046558,
+      -0.0016295515787035403,
+      1.1845516379902914,
+      3.1410724501997223,
+      0.0013150519513050426,
+      -0.0871788658726918,
+      0.0387246894964197,
+      -0.03872089076035439
+    ],
+    "normalizer_dtype": "float64",
+    "capture_dtype": "float32"
+  },
+  "phase80_first_query_gate": {
+    "gate": "PASS_B1_TEMPORAL_ACTUAL_MODEL",
+    "version": "b1-temporal80-eval-v2-20261017",
+    "optimization_steps": 1000,
+    "frozen_sha256": "36d41eb329862e8c8a6f302a88655b729b85ebe750aaf93dc32de92b2ba984b6",
+    "reload_output_equal": true,
+    "all_parameters_frozen": true,
+    "raw_state": [
+      -0.2069539207046558,
+      -0.0016295515787035403,
+      1.1845516379902914,
+      3.1410724501997223,
+      0.0013150519513050426,
+      -0.0871788658726918,
+      0.0387246894964197,
+      -0.03872089076035439
+    ],
+    "state_space": "raw_proprio_before_get_action",
+    "single_proprio_normalization_equal": true,
+    "proprio_path": "deployed get_action on separate raw copies; one normalization per call",
+    "reference_action": [
+      [
+        0.3770567790429563,
+        0.2685503449136655,
+        0.03726131238039587,
+        9.338936264778608e-05,
+        0.005040113093864429,
+        0.007945734873710503,
+        1.03125
+      ],
+      [
+        0.5299049329403319,
+        0.35938896995998615,
+        0.03543548927127782,
+        -0.0020966829687888433,
+        0.009722381479357639,
+        0.013101985002020838,
+        1.0234375
+      ],
+      [
+        0.6811095583011765,
+        0.417946100155135,
+        0.0023709739045932876,
+        -0.009542928895673375,
+        0.010846125891876002,
+        0.016163508515705083,
+        1.0234375
+      ],
+      [
+        0.7435636426893514,
+        0.39992852163355086,
+        -0.04558541119583537,
+        -0.011604173442907859,
+        0.007474892654320886,
+        0.011490656836923852,
+        1.015625
+      ],
+      [
+        0.7961565558583409,
+        0.3729021538511743,
+        -0.09396972358746347,
+        -0.010470488941928896,
+        0.00101336228234028,
+        0.011168391203904476,
+        1.0078125
+      ],
+      [
+        0.8290271265889592,
+        0.35338311045279136,
+        -0.13505074354261948,
+        -0.008460775508375276,
+        0.0053210491969940266,
+        0.011007258387394775,
+        1.015625
+      ],
+      [
+        0.852036526100392,
+        0.32335381291681764,
+        -0.1679155595067443,
+        -0.008100057712609243,
+        0.012531742510653532,
+        0.008429133323239607,
+        1.015625
+      ],
+      [
+        0.8651847543926393,
+        0.28056206392805494,
+        -0.19256417147983795,
+        -0.004905128664395811,
+        0.00569563066783349,
+        0.008912531772768711,
+        1.015625
+      ]
+    ],
+    "zero_branch_action": [
+      [
+        0.2274956822186428,
+        0.20398735521132183,
+        0.0721801793422785,
+        -0.005549267585406581,
+        -0.017493303511321584,
+        0.019869563295428133,
+        0.72265625
+      ],
+      [
+        0.28666270953375583,
+        0.2963274451344412,
+        0.07126726778771952,
+        -0.014489915809036122,
+        -0.0044648917286867484,
+        0.03324358706573302,
+        0.88671875
+      ],
+      [
+        0.4197885209927602,
+        0.31284355877922676,
+        0.05369372036245834,
+        -0.018509342676143348,
+        -0.015280931699176048,
+        0.027120540038364532,
+        0.84375
+      ],
+      [
+        0.44608497757725496,
+        0.32335381291681764,
+        0.022426499618811824,
+        -0.015726662537376812,
+        -0.005682281508914977,
+        0.026476008772325726,
+        0.828125
+      ],
+      [
+        0.4378673348946004,
+        0.31434502365602546,
+        -0.001480371716202633,
+        -0.01103733119241837,
+        -0.00324750194845852,
+        0.030987727634597256,
+        0.85546875
+      ],
+      [
+        0.46580732001562597,
+        0.31884941828642155,
+        -0.026414268550095876,
+        -0.01258326460284423,
+        -0.009100337430325012,
+        0.03388811833177183,
+        0.85546875
+      ],
+      [
+        0.5151131761115536,
+        0.31584648853282415,
+        -0.02949534504673257,
+        -0.01129498676082269,
+        -0.015550162131341888,
+        0.03582171212988819,
+        0.84375
+      ],
+      [
+        0.5085390619654299,
+        0.2542864285840779,
+        -0.08484060804187332,
+        -0.011964891238673891,
+        -0.025909680934245588,
+        0.026476008772325726,
+        0.859375
+      ]
+    ],
+    "zero_branch_comparison": "Pair with canonical A4 on the exact same initial observation",
+    "limits": "Versioned temporal training1000; actual query admission only, no benefit claim",
+    "matching_PTQ_input_and_zero_action_equal": true,
+    "ptq_reference_sha256": "3541f97de0fc1b0f733894b2ba80e5c6229164099a1d617a959c0d7bfe978e4f",
+    "candidate": "phase80"
+  },
+  "phase80_first_query_bridge": {
+    "checks": {
+      "instruction": true,
+      "image": true,
+      "wrist_image": true,
+      "normalized_state_as_capture_float32": true,
+      "zero_action_as_capture_float32": true
+    },
+    "reference_sha256": "3541f97de0fc1b0f733894b2ba80e5c6229164099a1d617a959c0d7bfe978e4f",
+    "raw_state": [
+      -0.2069539207046558,
+      -0.0016295515787035403,
+      1.1845516379902914,
+      3.1410724501997223,
+      0.0013150519513050426,
+      -0.0871788658726918,
+      0.0387246894964197,
+      -0.03872089076035439
+    ],
+    "normalizer_dtype": "float64",
+    "capture_dtype": "float32"
+  }
+}
