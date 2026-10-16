@@ -1,0 +1,21 @@
+{
+  "gate": "PASS_B1_TEMPORAL_SHARD_AUDIT_CPU",
+  "actual_completed_first50_reaudit": {
+    "early80": {
+      "episodes": 50,
+      "successes": 48,
+      "queries": 693,
+      "videos": 50,
+      "wrong_offset_count_rejected": true
+    },
+    "phase80": {
+      "episodes": 50,
+      "successes": 19,
+      "queries": 1111,
+      "videos": 50,
+      "wrong_offset_count_rejected": true
+    }
+  },
+  "parameterized_runtime_lock": true,
+  "GPU_used": false
+}

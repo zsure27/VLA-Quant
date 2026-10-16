@@ -1,0 +1,16 @@
+{
+  "gate": "PASS_LOCAL_RESIDUAL_SESSION_ARCHIVE",
+  "phase": "B1-temporal-v2-first50",
+  "archive": "/root/autodl-tmp/qvla-repro/backups/091-residual-b1-temporal-v2-first50-complete-20261017-v1",
+  "bytes": 359113114,
+  "sha256": "d6d61ee531e12aaa4d3998a8cd2a84872ff1e99daaab96b73ea8d8baa6ef4098",
+  "files_verified": 1955,
+  "members": 1956,
+  "videos": 100,
+  "paired_episodes": 50,
+  "formal_episodes_added": 50,
+  "future_evaluations_excluded": true,
+  "members_verified": 1956,
+  "local_directory": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-b1-temporal-v2-first50-complete-20261017-v1",
+  "verification": "All decompressed member SHA checked; tar retained, no duplicate extraction"
+}
