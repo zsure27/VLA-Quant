@@ -1,0 +1,9 @@
+{
+  "gate": "PASS_091_REBOOT_AND_RECOVERY_CPU_ADMISSION",
+  "new_R0_sha256": "4f3f490457be732830a8e87d39124a83da9fadda39e61e387921f9e0c332636a",
+  "old_R0_sha256": "16c18bc9168c821493bce90e6cb2c44ffb7637dbef30bfd6094579f5769c9c1f",
+  "actual_no_model_observations_equal_across_reboot": true,
+  "preflight_sha256": "2750ab2f097dad0040df1a3c72255c7d410d60f8202a9d130286382a79df5143",
+  "free_persistent_bytes": 29166845952,
+  "actual_first_query_GPU_bridge": "Pending; not represented as CPU success"
+}
