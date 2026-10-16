@@ -1,0 +1,1983 @@
+{
+  "scope": "B1 same ten-task development, fixed1000; micro overlap excluded, failedv1 excluded, no M0/046 pooling",
+  "formal_per_candidate": 150,
+  "successes": {
+    "early80": 146,
+    "phase80": 65
+  },
+  "comparison_Phase_minus_Early": {
+    "episodes": 150,
+    "rescue": 0,
+    "break": 81,
+    "net": -81,
+    "delta_fraction": -0.54,
+    "exact_mcnemar_p": 8.271806125530277e-25,
+    "task_cluster_bootstrap_95ci_fraction": [
+      -0.7466666666666667,
+      -0.32666666666666666
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": -8,
+      "1": -15,
+      "2": 0,
+      "3": 0,
+      "4": -5,
+      "5": -12,
+      "6": -6,
+      "7": -10,
+      "8": -10,
+      "9": -15
+    },
+    "tasks_improved": 0,
+    "tasks_harmed": 8
+  },
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 7,
+      "early80": false,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 5,
+      "early80": false,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 13,
+      "early80": false,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 16,
+      "early80": false,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": true
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    }
+  ],
+  "rescue_pairs": [],
+  "break_pairs": [
+    {
+      "task_id": 0,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 5,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 6,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 7,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 8,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 9,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 10,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 11,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 12,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 13,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 14,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 15,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 16,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 17,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 18,
+      "early80": true,
+      "phase80": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 19,
+      "early80": true,
+      "phase80": false
+    }
+  ],
+  "failures": {
+    "early80": [
+      {
+        "task_id": 4,
+        "init_state_index": 7,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 5,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 13,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 16,
+        "early80": false,
+        "phase80": false
+      }
+    ],
+    "phase80": [
+      {
+        "task_id": 0,
+        "init_state_index": 5,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 8,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 5,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 6,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 8,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 5,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 7,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 5,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 6,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 8,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 5,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 8,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 5,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 8,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 5,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 6,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 7,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 8,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 9,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 13,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 14,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 12,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 13,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 14,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 15,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 16,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 17,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 18,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 19,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 19,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 12,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 13,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 14,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 15,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 16,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 17,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 18,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 19,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 14,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 16,
+        "early80": false,
+        "phase80": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 17,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 13,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 15,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 16,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 17,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 12,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 13,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 16,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 17,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 18,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 10,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 11,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 12,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 13,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 14,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 15,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 16,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 17,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 18,
+        "early80": true,
+        "phase80": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 19,
+        "early80": true,
+        "phase80": false
+      }
+    ]
+  },
+  "costs": {
+    "early80": {
+      "queries": 2052,
+      "wrapper_wall_seconds": 1950.038988828659,
+      "scope": "Includes loading,checksums,numeric gate,trace,video; training/teacher/failed-v1 separate"
+    },
+    "phase80": {
+      "queries": 3218,
+      "wrapper_wall_seconds": 2475.7406544685364,
+      "scope": "Includes loading,checksums,numeric gate,trace,video; training/teacher/failed-v1 separate"
+    }
+  },
+  "phase_gates": [
+    "B1-temporal-eval-v2-first50-gate.json",
+    "B1-reset-10-19-gate.json"
+  ]
+}

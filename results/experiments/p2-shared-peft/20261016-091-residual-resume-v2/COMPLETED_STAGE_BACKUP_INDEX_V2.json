@@ -136,5 +136,21 @@
     "members_verified": 1956,
     "local_directory": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-b1-temporal-v2-first50-complete-20261017-v1",
     "verification": "All decompressed member SHA checked; tar retained, no duplicate extraction"
+  },
+  "b1_temporal_reset-10-19": {
+    "gate": "PASS_LOCAL_RESIDUAL_SESSION_ARCHIVE",
+    "phase": "reset-10-19",
+    "archive": "/root/autodl-tmp/qvla-repro/backups/091-residual-b1-temporal-reset-10-19-complete-20261017-v1",
+    "bytes": 631717620,
+    "sha256": "7a9812590e6773ecf8d1a7f1150e4fcd979f52f026da787d7d7665bc6f167b9b",
+    "files_verified": 3717,
+    "members": 3718,
+    "videos": 200,
+    "paired_episodes": 100,
+    "formal_episodes_added": 100,
+    "future_evaluations_excluded": true,
+    "members_verified": 3718,
+    "local_directory": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-b1-temporal-reset-10-19-complete-20261017-v1",
+    "verification": "All decompressed member SHA checked; tar retained, no duplicate extraction"
   }
 }
