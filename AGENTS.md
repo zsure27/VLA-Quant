@@ -1,3 +1,5 @@
+**2026-10-16 新091克隆机实验授权覆盖：用户已开启091端口18575并要求先规划、精简数据盘、GitHub同步后实验；hostname autodl-container-dfbc4bb0ff-1e85dd94与可信ED25519已核验。主线两方向为残差补偿方向与VLA适配，先补A4 PTQ/SVD-init-only机制参照、诊断既有checkpoint，再单变量覆盖/动作敏感方向/C-SQ门禁；新会话20261016-091-residual-vla-adaptation-v1，旧046/091完成计划不重跑。旧SVD激活缓存仅在本机完整逐文件备份及路径/无占用门禁后删除；7B/原始观测/参数/视频/portable archives保留，GitHub备份规划/代码/小结果与清理回执。新候选12GiB/运行6GiB，实时5h15%备份/10%原生关当前091/留3%；15分钟活跃心跳。Windows关机授权已撤销，本轮不关本机。详见同轮RESEARCH_PLAN_CN.md。**
+
 **2026-10-16 046收尾完成覆盖：正式Z2/450、S426/450；完整服务器/本机归档、920视频和源码及GitHub51d11a2远端SHA均核验。北京时间01:41:32执行046原生关机取得execute=true/supervisor757回执，SSH随后远端关闭；平台OFF/停计费未独立核验。automation已PAUSED。本机Windows关机已按用户最新指令取消，保持开启，未请求Windows关机。详见同名results/closure-complete-v1.json。**
 
 **2026-10-16 最新用户指令覆盖：用户明确“仅取消本机关机，046按收尾约定关闭”。本轮Windows关机授权已撤销，本地电脑保持开启，禁止执行本机关机helper；046仍按完整归档/本机副本/分析/GitHub远端SHA核验后原生关机，取得execute=true回执并暂停心跳。覆盖本文件所有此前相反本机关机授权。**

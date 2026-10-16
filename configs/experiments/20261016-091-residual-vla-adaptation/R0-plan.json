@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "20261016-091-residual-vla-adaptation-v1-R0",
+  "control_root": "\\root\\autodl-tmp\\qvla-repro\\control\\20261016-091-residual-vla-adaptation-v1\\control",
+  "terminal_state": "AWAITING_GATE_REVIEW",
+  "expected_hostname": "autodl-container-dfbc4bb0ff-1e85dd94",
+  "stages": [
+    {
+      "id": "actual-observation-repeatability",
+      "cwd": "\\root\\autodl-tmp\\qvla-repro\\control\\b5-pilot-091-20261012-v2\\source",
+      "env": {
+        "PYTHONPATH": "\\root\\autodl-tmp\\qvla-repro\\control\\b5-pilot-091-20261012-v2\\source:\\root\\autodl-tmp\\qvla-repro\\control\\b5-pilot-091-20261012-v2\\source\\diagnostics:\\root\\autodl-tmp\\qvla-repro\\control\\cpu-audit-20261012\\oft-corrected-v1:\\root\\autodl-tmp\\qvla-repro\\src\\LIBERO",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "MUJOCO_EGL_DEVICE_ID": "0",
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "TOKENIZERS_PARALLELISM": "false",
+        "TF_NUM_INTRAOP_THREADS": "1",
+        "TF_NUM_INTEROP_THREADS": "1"
+      },
+      "command": [
+        "/root/miniconda3/envs/qvla-oft/bin/python",
+        "\\root\\autodl-tmp\\qvla-repro\\control\\b5-pilot-091-20261012-v2\\source\\scripts\\probe_qvla_baseline_protocol_cpu_20261012.py",
+        "--model-dir",
+        "\\root\\autodl-tmp\\qvla-repro\\models\\openvla-7b-oft-finetuned-libero-spatial",
+        "--oft-root",
+        "\\root\\autodl-tmp\\qvla-repro\\control\\cpu-audit-20261012\\oft-corrected-v1",
+        "--libero-root",
+        "\\root\\autodl-tmp\\qvla-repro\\src\\LIBERO",
+        "--tasks",
+        "10",
+        "--resets",
+        "2",
+        "--output",
+        "\\root\\autodl-tmp\\qvla-repro\\control\\20261016-091-residual-vla-adaptation-v1\\actual-observation-repeatability.json"
+      ]
+    }
+  ]
+}

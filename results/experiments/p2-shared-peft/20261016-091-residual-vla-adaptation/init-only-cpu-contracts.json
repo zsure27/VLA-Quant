@@ -1,0 +1,25 @@
+{
+  "gate": "PASS_B3_INIT_ONLY_CPU_METADATA_CONTRACTS",
+  "contracts": [
+    "valid_original_parent_and_pretraining_factor_role",
+    "final_adapter_cannot_be_substituted",
+    "steps_zero_cannot_impersonate_completed_parent",
+    "wrong_proprio_state_space_rejected",
+    "changed_frozen_base_rejected",
+    "changed_rank_rejected",
+    "changed_scaling_rejected",
+    "changed_budget_rejected",
+    "missing_target_rejected",
+    "wrong_shape_rejected",
+    "dev_role_in_training_rejected",
+    "wrong_sampling_policy_rejected"
+  ],
+  "count": 12,
+  "gpu_started": false,
+  "sources": {
+    "qvla/b3_init_only_091_v1.py": "fc509b8e8bb9608d83ed33206d97685f2d59d7ac2c94d188bda00ffffb5a6d3c",
+    "qvla/run_eval_b3_init_only_091_v1.py": "b1b15dbea661ad5dd803990b19a8b30b70b151845fca15b5ab3b7b608f54a542",
+    "scripts/check_b3_init_only_091_cpu_v1.py": "0a953ed536195e5e97a8a6912e6e7de5f3211cee0c91cb69eec8001db3c041ef"
+  },
+  "limits": "Metadata contracts only; real initial-state tensors/model/proprio/reload remain GPU gates"
+}
