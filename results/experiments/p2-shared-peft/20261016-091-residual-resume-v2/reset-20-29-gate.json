@@ -1,0 +1,1679 @@
+{
+  "gate": "PASS_B3_INIT_ONLY_FULL_SHARD_PAIRED_PROTOCOL",
+  "offset": 20,
+  "paired_episodes": 100,
+  "paired_rows": [
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 1,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 23,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 24,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 25,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 29,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 21,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 22,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 23,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 25,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 26,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 28,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 29,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 20,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 22,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 23,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 24,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 26,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 28,
+      "ptq": true,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 9,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": false
+    }
+  ],
+  "successes": {
+    "ptq": 18,
+    "svd-init-only": 44
+  },
+  "comparison_S0_minus_PTQ": {
+    "episodes": 100,
+    "rescue": 28,
+    "break": 2,
+    "net": 26,
+    "delta_fraction": 0.26,
+    "exact_mcnemar_p": 8.67992639541626e-07,
+    "task_cluster_bootstrap_95ci_fraction": [
+      0.09,
+      0.44
+    ],
+    "bootstrap_seed": 20260930,
+    "bootstrap_draws": 20000,
+    "delta_by_task": {
+      "0": 7,
+      "1": 0,
+      "2": 6,
+      "3": -1,
+      "4": 5,
+      "5": 1,
+      "6": 1,
+      "7": 6,
+      "8": 1,
+      "9": 0
+    },
+    "tasks_improved": 7,
+    "tasks_harmed": 1
+  },
+  "rescue_pairs": [
+    {
+      "task_id": 0,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 23,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 0,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 2,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 22,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 27,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 4,
+      "init_state_index": 28,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 5,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 6,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 20,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 21,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 24,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 26,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 7,
+      "init_state_index": 29,
+      "ptq": false,
+      "svd-init-only": true
+    },
+    {
+      "task_id": 8,
+      "init_state_index": 25,
+      "ptq": false,
+      "svd-init-only": true
+    }
+  ],
+  "break_pairs": [
+    {
+      "task_id": 3,
+      "init_state_index": 20,
+      "ptq": true,
+      "svd-init-only": false
+    },
+    {
+      "task_id": 3,
+      "init_state_index": 26,
+      "ptq": true,
+      "svd-init-only": false
+    }
+  ],
+  "failures": {
+    "ptq": [
+      {
+        "task_id": 0,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 2,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": true
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      }
+    ],
+    "svd-init-only": [
+      {
+        "task_id": 0,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 0,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 1,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 20,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 26,
+        "ptq": true,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 3,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 4,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 5,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 6,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 7,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 8,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 20,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 21,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 22,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 23,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 24,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 25,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 26,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 27,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 28,
+        "ptq": false,
+        "svd-init-only": false
+      },
+      {
+        "task_id": 9,
+        "init_state_index": 29,
+        "ptq": false,
+        "svd-init-only": false
+      }
+    ]
+  },
+  "costs": {
+    "ptq": {
+      "queries": 2527,
+      "wrapper_wall_seconds": 1769.4954159259796,
+      "videos": 100,
+      "optimization_steps": 0,
+      "wall_scope": "Includes startup/checksum/admission/trace/video, not packed low-bit kernel speed"
+    },
+    "svd-init-only": {
+      "queries": 2120,
+      "wrapper_wall_seconds": 1603.692345380783,
+      "videos": 100,
+      "optimization_steps": 0,
+      "wall_scope": "Includes startup/checksum/admission/trace/video, not packed low-bit kernel speed"
+    }
+  },
+  "classification": "Same ten-task development; no micro overlap added and no independent-replication claim",
+  "sources": {
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/qvla/run_eval_b3_init_only_091_v1.py": "b1b15dbea661ad5dd803990b19a8b30b70b151845fca15b5ab3b7b608f54a542",
+    "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/qvla/b3_init_only_091_v1.py": "fc509b8e8bb9608d83ed33206d97685f2d59d7ac2c94d188bda00ffffb5a6d3c"
+  },
+  "next": "Analyze cumulative rescue/break, task interval, McNemar, all failures and cost; fresh primary quota/disk then next registered shard"
+}
