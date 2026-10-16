@@ -54,7 +54,7 @@ def main():
     out.mkdir(parents=True, exist_ok=False)
     lockpath = out / 'runtime-lock.json'
     for f in (previous, a.analysis, c / 'audit_b3_complete_phase_091_v2.py',
-              c / 'audit_b3_segmented_091_v2.py', c / 'prepare_b3_init_only_continuation_091_v2.py', c / 'runtime-admission.json'):
+              c / 'audit_b3_segments_091_v3.py', c / 'prepare_b3_init_only_continuation_091_v2.py', c / 'runtime-admission.json'):
         lock['files'][str(f)] = sha(f)
     lock['version'] = '091-init-only-continuation-v2-' + phase
     lockpath.write_text(json.dumps(lock, indent=2) + '\n')

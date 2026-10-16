@@ -12,7 +12,7 @@ def main():
     p.add_argument('--offset', type=int, choices=(10, 20, 30, 40), required=True)
     a = p.parse_args()
     sys.path.insert(0, str(a.frozen_source))
-    from audit_b3_segmented_091_v2 import segment
+    from audit_b3_segments_091_v3 import segment
     from qvla.paired_metrics import comparison
     from qvla.b3_init_only_091_v1 import sha
     from scripts.audit_b3_init_only_091_v1 import validate_first_query_pair

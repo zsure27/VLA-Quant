@@ -24,9 +24,6 @@ def segment(directory, expected_pairs, source, allow_interrupted=False):
     args = parse_args(command[command.index('--candidate'):])
     if args.local_log_dir != directory:
         raise ValueError('Actual output differs from segment directory')
-    resets = sorted({r for _, r in expected_pairs})
-    if (args.initial_state_offset, args.num_trials_per_task) != (min(resets), len(resets)):
-        raise ValueError('Actual reset offset/count differs from registered segment')
     parent = validate_provenance(args)
     if allow_interrupted:
         if (directory / 'exit-code.txt').exists():
