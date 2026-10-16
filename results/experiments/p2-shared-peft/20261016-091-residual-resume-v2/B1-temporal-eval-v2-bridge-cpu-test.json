@@ -1,0 +1,13 @@
+{
+  "gate": "PASS_B1_TEMPORAL_V2_BRIDGE_CPU_TEST",
+  "serialization_equal_without_tolerance": true,
+  "altered_fields_rejected": [
+    "full_image",
+    "wrist_image",
+    "state",
+    "action",
+    "instruction"
+  ],
+  "fatal_bypasses_episode_Exception": true,
+  "gpu_used": false
+}

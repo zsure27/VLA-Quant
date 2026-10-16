@@ -88,5 +88,21 @@
     "selected_inputs": 160,
     "all_members_verified": true,
     "scope": "Complete training artifacts/checkpoints/teacher/input/source; future evaluations excluded"
+  },
+  "b1_temporal_eval_v1_failed": {
+    "gate": "PASS_LOCAL_RESIDUAL_SESSION_ARCHIVE",
+    "phase": "B1-temporal-eval-v1-failed",
+    "archive": "/root/autodl-tmp/qvla-repro/backups/091-residual-b1-temporal-eval-v1-failed-20261017-v1",
+    "bytes": 89285,
+    "sha256": "fc946baa8bc9a9732dc7f00722f7a60743657bb3bb32b000b48ae190c995fa43",
+    "files_verified": 35,
+    "members": 36,
+    "videos": 10,
+    "admitted_queries": 0,
+    "formal_episodes": 0,
+    "future_evaluations_excluded": true,
+    "members_verified": 36,
+    "local_directory": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-b1-temporal-eval-v1-failed-20261017-v1",
+    "verification": "All decompressed member SHA checked; tar retained, no duplicate extraction"
   }
 }

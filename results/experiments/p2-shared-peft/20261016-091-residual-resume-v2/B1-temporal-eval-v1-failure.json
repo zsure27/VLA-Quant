@@ -1,0 +1,22 @@
+{
+  "gate": "FAIL_B1_TEMPORAL_EVAL_V1_PROTOCOL",
+  "state": "FAILED",
+  "revision": 4,
+  "last_exit_code": 1,
+  "failed_stage": "micro-early80",
+  "failed_at": "2026-10-16T21:17:09.778881+00:00",
+  "later_stages_started": false,
+  "admitted_queries": 0,
+  "formal_episodes": 0,
+  "invalid_episode_attempts": 10,
+  "gpu_idle_observed_at": "2026-10-16T21:23:03.711509+00:00",
+  "cpu_reference_storage_probe": {
+    "archived_state_dtype": "float32",
+    "normalizer_dtype": "float64",
+    "direct_equal": false,
+    "capture_float32_equal": true,
+    "max_direct_difference": 2.398526843805371e-08
+  },
+  "cause": "Bridge compared float64 normalized state with float32 capture without applying original capture serialization; first model query rejected. Official evaluator caught ordinary Exception and tried all 10 tasks before outer exit1. These labels are protocol errors, not model failures.",
+  "v2": "Preserve original capture float32 exact representation; no tolerance. Persist field checks and actual input; fatal admission BaseException bypasses official per-episode Exception handler. Original v1 retained unchanged."
+}
