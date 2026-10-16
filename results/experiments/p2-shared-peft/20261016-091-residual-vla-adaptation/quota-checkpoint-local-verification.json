@@ -1,0 +1,35 @@
+{
+  "gate": "PASS_LOCAL_RESIDUAL_SESSION_ARCHIVE",
+  "final": false,
+  "archive": "/root/autodl-tmp/qvla-repro/backups/091-residual-quota-checkpoint-20261016-v1",
+  "bytes": 472406097,
+  "sha256": "51007fc025322d7210df9acd859a22ff3edf1dbc8391491dcc22601a7fdc0168",
+  "files_verified": 2894,
+  "videos": 111,
+  "unstable_files_excluded": [],
+  "observed_status": {
+    "child_pid": 7970,
+    "completed_stage_ids": [
+      "training80-checkpoint-diagnostic",
+      "micro-ptq",
+      "micro-svd-init-only",
+      "audit-micro",
+      "first50-ptq"
+    ],
+    "current_stage": "first50-svd-init-only",
+    "last_exit_code": null,
+    "log": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/control/20261016-091-residual-vla-adaptation-v1-M0-first50/stage-05-first50-svd-init-only.log",
+    "message": "child launched",
+    "plan_id": "20261016-091-residual-vla-adaptation-v1-M0-first50",
+    "plan_path": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/first50-plan.json",
+    "plan_sha256": "94f70ca0eb6d8d39ef3127fb312c04cd9810b7e68196b998dccb65ce16e4fda4",
+    "revision": 18,
+    "schema_version": "1.0",
+    "state": "RUNNING",
+    "supervisor_pid": 2739,
+    "time_utc": "2026-10-16T07:56:55.276268+00:00"
+  },
+  "members_verified": 2895,
+  "local_directory": ".local\\archives\\20261016-091-residual-vla-adaptation\\091-residual-quota-checkpoint-20261016-v1",
+  "verification": "All decompressed member SHA checked; tar retained, no duplicate extraction"
+}

@@ -1,0 +1,47 @@
+{
+  "time_utc": "2026-10-16T08:11:30.066915+00:00",
+  "reason": "current 5h primary remaining10%; authorized quota stop",
+  "processes": [
+    [
+      2246,
+      "/root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/vla_stage_supervisor.py /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/admission-and-M0-plan-v2.json "
+    ],
+    [
+      2739,
+      "/root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/vla_stage_supervisor.py /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/first50-plan.json "
+    ],
+    [
+      7970,
+      "/root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/scripts/run_locked_peft_stage.py --lock /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/runtime-lock.json --output /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-vla-adaptation-v1/first50/svd-init-only -- /root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/qvla/run_eval_b3_init_only_091_v1.py --candidate svd-init-only --model-id B3-S0-091-v1 --method awq --weight-bits 2 --activation-bits 16 --profile /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt --awq-primary-group64-profile /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt --awq-candidate w2-attention-no-clip-primary-g64 --official-root /root/autodl-tmp/qvla-repro/src/official-quantization --pretrained_checkpoint /root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial --libero_root /root/autodl-tmp/qvla-repro/src/LIBERO --task_suite_name libero_spatial --initial-state-offset 5 --num_trials_per_task 5 --seed 0 --env-seed 1 --seed-protocol paired --trace-actions --trace-observations --local_log_dir /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-vla-adaptation-v1/first50/svd-init-only --initial-artifact /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/response-svd/steps-1000/artifact.json --initial-artifact-sha256 48ff6ad289bd99368a6de5c5644530abd8f751713237aa0b8698ee3894897af6 --initial-state /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/response-svd/steps-1000/initial-adapter.pt --recovery-training-manifest /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/manifest.json "
+    ],
+    [
+      7971,
+      "/root/miniconda3/envs/qvla-oft/bin/python /root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/source-v1/qvla/run_eval_b3_init_only_091_v1.py --candidate svd-init-only --model-id B3-S0-091-v1 --method awq --weight-bits 2 --activation-bits 16 --profile /root/autodl-tmp/qvla-repro/artifacts/awq-spatial-20260912-163735-1136/profiles/w2.pt --awq-primary-group64-profile /root/autodl-tmp/qvla-repro/artifacts/awq-primary-group-20260913-213127-3342/profiles/w2-g64.pt --awq-candidate w2-attention-no-clip-primary-g64 --official-root /root/autodl-tmp/qvla-repro/src/official-quantization --pretrained_checkpoint /root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial --libero_root /root/autodl-tmp/qvla-repro/src/LIBERO --task_suite_name libero_spatial --initial-state-offset 5 --num_trials_per_task 5 --seed 0 --env-seed 1 --seed-protocol paired --trace-actions --trace-observations --local_log_dir /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261016-091-residual-vla-adaptation-v1/first50/svd-init-only --initial-artifact /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/response-svd/steps-1000/artifact.json --initial-artifact-sha256 48ff6ad289bd99368a6de5c5644530abd8f751713237aa0b8698ee3894897af6 --initial-state /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261015-046-quant-finetuning-v1/response-svd/steps-1000/initial-adapter.pt --recovery-training-manifest /root/autodl-tmp/qvla-repro/backups/experiments/p2-shared-peft/20261008-046-b2-b3-proprio-v4/B3/student-state80/manifest.json "
+    ]
+  ],
+  "original_status": {
+    "child_pid": 7970,
+    "completed_stage_ids": [
+      "training80-checkpoint-diagnostic",
+      "micro-ptq",
+      "micro-svd-init-only",
+      "audit-micro",
+      "first50-ptq"
+    ],
+    "current_stage": "first50-svd-init-only",
+    "last_exit_code": null,
+    "log": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/control/20261016-091-residual-vla-adaptation-v1-M0-first50/stage-05-first50-svd-init-only.log",
+    "message": "child launched",
+    "plan_id": "20261016-091-residual-vla-adaptation-v1-M0-first50",
+    "plan_path": "/root/autodl-tmp/qvla-repro/control/20261016-091-residual-vla-adaptation-v1/M0-plans-v1/first50-plan.json",
+    "plan_sha256": "94f70ca0eb6d8d39ef3127fb312c04cd9810b7e68196b998dccb65ce16e4fda4",
+    "revision": 18,
+    "schema_version": "1.0",
+    "state": "RUNNING",
+    "supervisor_pid": 2739,
+    "time_utc": "2026-10-16T07:56:55.276268+00:00"
+  },
+  "gpu_processes": "",
+  "formal_pair_complete": false,
+  "windows_shutdown": false
+}
