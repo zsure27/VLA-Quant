@@ -1,0 +1,83 @@
+{
+  "gate": "PASS_B3_TRAINING80_CHECKPOINT_DIAGNOSTIC",
+  "dataset_role": "Same 80 optimization observations, not held-out development or closed-loop evaluation",
+  "cases": [
+    {
+      "case": "A4-PTQ-no-adapter",
+      "normalized_mse": 0.05453911081803134,
+      "normalized_smooth_l1": 0.11012884456825695,
+      "gripper_disagreement": 0.0046875,
+      "BA_norm": null
+    },
+    {
+      "case": "standard-zero-step-0000",
+      "normalized_mse": 0.05453911081803134,
+      "normalized_smooth_l1": 0.11012884456825695,
+      "gripper_disagreement": 0.0046875,
+      "BA_norm": 0.0
+    },
+    {
+      "case": "standard-zero-step-0100",
+      "normalized_mse": 0.04110630546934512,
+      "normalized_smooth_l1": 0.057219926797520845,
+      "gripper_disagreement": 0.0140625,
+      "BA_norm": 2.376930982256726
+    },
+    {
+      "case": "standard-zero-step-0250",
+      "normalized_mse": 0.11679366995708408,
+      "normalized_smooth_l1": 0.1823207559581319,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 3.9885661194161113
+    },
+    {
+      "case": "standard-zero-step-0500",
+      "normalized_mse": 0.03339184968689811,
+      "normalized_smooth_l1": 0.09052569192638202,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 5.357639554339187
+    },
+    {
+      "case": "standard-zero-step-1000",
+      "normalized_mse": 0.00644373027851738,
+      "normalized_smooth_l1": 0.025002741229643886,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 7.386391716074052
+    },
+    {
+      "case": "response-svd-step-0000",
+      "normalized_mse": 0.0253155152541532,
+      "normalized_smooth_l1": 0.07389322408263783,
+      "gripper_disagreement": 0.0046875,
+      "BA_norm": 260.45837385288326
+    },
+    {
+      "case": "response-svd-step-0100",
+      "normalized_mse": 0.005083641756255019,
+      "normalized_smooth_l1": 0.020148627699131148,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 261.01054294562005
+    },
+    {
+      "case": "response-svd-step-0250",
+      "normalized_mse": 0.002020893425287795,
+      "normalized_smooth_l1": 0.008608493006977368,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 261.22301165471634
+    },
+    {
+      "case": "response-svd-step-0500",
+      "normalized_mse": 0.0005212432817188528,
+      "normalized_smooth_l1": 0.0024516056228055406,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 261.31549178470783
+    },
+    {
+      "case": "response-svd-step-1000",
+      "normalized_mse": 0.001190312970152263,
+      "normalized_smooth_l1": 0.00581092465796311,
+      "gripper_disagreement": 0.0,
+      "BA_norm": 261.63969062472313
+    }
+  ]
+}

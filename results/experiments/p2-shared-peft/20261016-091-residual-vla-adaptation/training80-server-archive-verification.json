@@ -1,0 +1,10 @@
+{
+  "gate": "PASS_SERVER_COMPLETED_DIAGNOSTIC_ARCHIVE",
+  "archive": "/root/autodl-tmp/qvla-repro/backups/091-training80-diagnostic-complete-20261016-v1",
+  "bytes": 1365069,
+  "sha256": "cbf2506a7a7825140f35bf3ddc1930e45edf3c6b1f8c966dbcb71fe4b1b2881f",
+  "files_verified": 43,
+  "members": 44,
+  "active_micro_first50_excluded": true,
+  "scope": "Completed R0 + training80 checkpoint diagnostic only; active micro/first50 excluded"
+}

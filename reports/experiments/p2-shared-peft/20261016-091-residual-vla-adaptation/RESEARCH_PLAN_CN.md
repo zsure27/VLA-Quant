@@ -55,3 +55,8 @@ GitHub固定zsure27/VLA-Quant，提交代码/配置/规划/小结果/清理SHA�
 ## 当前已执行启动状态
 
 北京时间15:09:00，V2真实RUNNING/revision3，外层supervisor2246、R0 supervisor2247、真实观测探针2248/CPU106%。这是无模型真实输入前置桥接，尚未通过R0、尚未启动GPU模型阶段；后续由已注册顺序计划在门禁通过后自动诊断/micro/first50。冻结336源码文件、旧SVD/教师及原046 SOURCES一致。活跃15分钟心跳id vla-091-vla，旧091/046心跳仍暂停。Windows保持开启。
+
+
+## 已完成R0、全80诊断与micro
+
+R0及D0门禁已过，详见TRAINING80_DIAGNOSTIC_CN.md；PTQ0/10、S0 4/10配对micro全部协议门禁通过，详见MICRO_ANALYSIS_CN.md。两阶段完整双份归档逐文件验证通过，micro含20原始视频，活动first50排除。已自动接首50PTQ；不依据成绩方向改变条件。15:45实时primary剩21%仅当时历史，后续重读15/10/3门限。
