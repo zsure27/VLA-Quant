@@ -73,5 +73,20 @@
       "scope": "micro overlaps formal, no added denominator"
     }
   ],
-  "checkpoint_scope": "Full7B remains server with full checksum; no claim of full local checkpoint"
+  "checkpoint_scope": "Full7B remains server with full checksum; no claim of full local checkpoint",
+  "b1_temporal_training": {
+    "phase": "B1-temporal-training",
+    "formal_episodes": 0,
+    "server": "/root/autodl-tmp/qvla-repro/backups/091-residual-b1-temporal-training-complete-20261017-v1",
+    "local": "D:\\VLA-Backups\\20261016-091-residual-resume-v2\\091-residual-b1-temporal-training-complete-20261017-v1",
+    "bytes": 976484948,
+    "sha256": "ee92f741b069980f8d0c6a1922ee8344f253c9119eea090dd4877e9999f5fa3a",
+    "raw_files": 1292,
+    "members": 1293,
+    "original_videos": 0,
+    "source_queries": 1020,
+    "selected_inputs": 160,
+    "all_members_verified": true,
+    "scope": "Complete training artifacts/checkpoints/teacher/input/source; future evaluations excluded"
+  }
 }

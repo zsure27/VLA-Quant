@@ -3,12 +3,12 @@
   "automation_id": "vla-091-vla",
   "user_instruction": "本轮运行第一次到达额度阈值时先不收尾，4：52时间会刷新额度，待用量刷新后再次到达阈值后再完成收尾并帮我关闭本地电脑",
   "recorded_at_utc": "2026-10-16T17:54:50+00:00",
-  "status": "ARMED_CURRENT_WINDOW",
+  "status": "EXPIRED_AFTER_CONFIRMED_NATURAL_REFRESH",
   "exempt_current_primary_resets_at": 1792183963,
   "scheduled_refresh_beijing": "2026-10-17T04:52:43+08:00",
   "fresh_primary_used_percent_at_ack": 35,
   "fresh_primary_remaining_percent_at_ack": 65,
-  "refresh_actually_confirmed": false,
+  "refresh_actually_confirmed": true,
   "first_window_threshold_observed": false,
   "first_window_threshold_policy": {
     "remaining15": "Save progress and complete server/local/report/Git backups; do not perform quota-triggered closure",
@@ -34,5 +34,10 @@
     "native Windows shutdown without forcing apps"
   ],
   "science_and_resource_gates_unchanged": true,
-  "does_not_authorize_auto_boot_console_or_reset_credit": true
+  "does_not_authorize_auto_boot_console_or_reset_credit": true,
+  "refresh_observed_at": "2026-10-16T20:52:52+00:00",
+  "refreshed_primary_resets_at": 1792201971,
+  "refreshed_primary_used_percent": 2,
+  "remaining_percent": 98,
+  "first_window_exemption_renewed": false
 }

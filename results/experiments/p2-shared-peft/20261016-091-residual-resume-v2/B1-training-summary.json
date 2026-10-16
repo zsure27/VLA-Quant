@@ -1,0 +1,120 @@
+{
+  "early80-10": {
+    "parameters": 19988480,
+    "training_seconds": 128.79984379559755,
+    "peak_cuda_bytes": 19309169152,
+    "adapter_sha256": "d4689a6611c07f60714265d004087c63d30fe110378eb7623e624260f03cb1ef",
+    "teacher_cache_sha256": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+    "sample_sequence_sha256": "2b8a8cdb8c67852078c0102b789f5aef3d4e385dc1adac3d710a648cf233a28e",
+    "training_manifest_sha256": "b70944048cb8792bd3e35b7d6bc311862bf94ffd0389ac0b217199820a0e19f0",
+    "trace_first_last": [
+      {
+        "step": 1,
+        "loss": 0.10929930955171585,
+        "gradient_norm": 1.6328125,
+        "sample": "sample-00015.npz"
+      },
+      {
+        "step": 10,
+        "loss": 0.0343291275203228,
+        "gradient_norm": 0.64453125,
+        "sample": "sample-00039.npz"
+      }
+    ]
+  },
+  "early80-1000": {
+    "parameters": 19988480,
+    "training_seconds": 353.8273797556758,
+    "peak_cuda_bytes": 19310084608,
+    "adapter_sha256": "459174ac508397133f3a323e85189b84c065d53637535af0985efe0574bae2ac",
+    "teacher_cache_sha256": "ed14483c6b27f583fbc77e5fb2b90621c85a5ac2557bd9b1a9e1804298bde852",
+    "sample_sequence_sha256": "ae002ef4edf7e3ac930550864e0c1178f0d469aed89958b2180a73c8cfa9f735",
+    "training_manifest_sha256": "b70944048cb8792bd3e35b7d6bc311862bf94ffd0389ac0b217199820a0e19f0",
+    "trace_first_last": [
+      {
+        "step": 1,
+        "loss": 0.10929930955171585,
+        "gradient_norm": 1.625,
+        "sample": "sample-00015.npz"
+      },
+      {
+        "step": 1000,
+        "loss": 0.006370997056365013,
+        "gradient_norm": 0.54296875,
+        "sample": "sample-00075.npz"
+      }
+    ]
+  },
+  "phase80-10": {
+    "parameters": 19988480,
+    "training_seconds": 128.4203224144876,
+    "peak_cuda_bytes": 19309169152,
+    "adapter_sha256": "de966df0d0422a49408da3dcf56de3543cf91871a1a26a66481beb6db8d33f67",
+    "teacher_cache_sha256": "707ae2c370a438383fa07a0e88e6d053922498791ba1d39d21a2524b6e891562",
+    "sample_sequence_sha256": "2b8a8cdb8c67852078c0102b789f5aef3d4e385dc1adac3d710a648cf233a28e",
+    "training_manifest_sha256": "0bf72958f5fbaf5e81ef460ba7f32e3372afc9708feefbf494ef031d5bf173d2",
+    "trace_first_last": [
+      {
+        "step": 1,
+        "loss": 0.10454287379980087,
+        "gradient_norm": 0.88671875,
+        "sample": "sample-00015.npz"
+      },
+      {
+        "step": 10,
+        "loss": 0.050525836646556854,
+        "gradient_norm": 0.6171875,
+        "sample": "sample-00039.npz"
+      }
+    ]
+  },
+  "phase80-1000": {
+    "parameters": 19988480,
+    "training_seconds": 355.4055424295366,
+    "peak_cuda_bytes": 19310084608,
+    "adapter_sha256": "bc7ed6751e13f0e8c8c109ae1ed7efa55b4f011fdaa9336a721b50f0f3d565f1",
+    "teacher_cache_sha256": "707ae2c370a438383fa07a0e88e6d053922498791ba1d39d21a2524b6e891562",
+    "sample_sequence_sha256": "ae002ef4edf7e3ac930550864e0c1178f0d469aed89958b2180a73c8cfa9f735",
+    "training_manifest_sha256": "0bf72958f5fbaf5e81ef460ba7f32e3372afc9708feefbf494ef031d5bf173d2",
+    "trace_first_last": [
+      {
+        "step": 1,
+        "loss": 0.10454287379980087,
+        "gradient_norm": 0.88671875,
+        "sample": "sample-00015.npz"
+      },
+      {
+        "step": 1000,
+        "loss": 0.031126074492931366,
+        "gradient_norm": 0.115234375,
+        "sample": "sample-00075.npz"
+      }
+    ]
+  },
+  "gate-10": {
+    "gate": "PASS_B1_TEMPORAL_SMOKE_PAIR",
+    "steps": 10,
+    "parameters_each": 19988480,
+    "same_initial_tensor_values": true,
+    "same_training_order_slots": true,
+    "teacher_labels_scope": "Separate fresh BF16 labels for each cohort; Early80 all80 bridges parent cache",
+    "artifacts": {
+      "early80": "96fd0b651f46fdc08fb6b406df3dbb19918ff4862794e97ecc7d162c4190798a",
+      "phase80": "7bde9fb36951e7dd7f91e6910992bc802e7046e3eb805ec025a4d7cf19ba2240"
+    },
+    "scope": "Structural training gate only, no closed-loop claim"
+  },
+  "gate-1000": {
+    "gate": "PASS_B1_TEMPORAL_TRAIN_PAIR",
+    "steps": 1000,
+    "parameters_each": 19988480,
+    "same_initial_tensor_values": true,
+    "same_training_order_slots": true,
+    "teacher_labels_scope": "Separate fresh BF16 labels for each cohort; Early80 all80 bridges parent cache",
+    "artifacts": {
+      "early80": "1d62cb3b942e9f245e1cd9e941c0585918691f02a319bc00841cdca56c6bb5ce",
+      "phase80": "fb56883e9db67f093cf36b0cea105ba22692082ffaf4ed3bdb98316cf12385d7"
+    },
+    "scope": "Structural training gate only, no closed-loop claim"
+  }
+}
