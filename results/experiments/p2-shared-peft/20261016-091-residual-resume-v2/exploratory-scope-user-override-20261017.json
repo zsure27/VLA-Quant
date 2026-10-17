@@ -1,0 +1,15 @@
+{
+  "source": "direct user instruction 2026-10-17",
+  "b1_formal_each": 250,
+  "b1_successes": {
+    "early80": 241,
+    "phase80": 110
+  },
+  "b1_extension_to450_cancelled": true,
+  "resume_reset30_cancelled": true,
+  "reset40_registration_cancelled": true,
+  "research_mode": "breadth-first small single-variable exploratory tests; enlarge selected promising directions only",
+  "score_based_screening_allowed": true,
+  "gpu_or_instance_start_authorized": false,
+  "automation_status": "PAUSED"
+}
