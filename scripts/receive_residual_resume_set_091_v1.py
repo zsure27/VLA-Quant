@@ -27,6 +27,11 @@ def main():
     remote = 'root@connect.nmb1.seetacloud.com:/root/autodl-tmp/qvla-repro/backups/'+a.name+'/'
     for n in ('SET_INDEX.json', 'SHA256SUMS.txt', 'RESULTS_SHA256SUMS.txt', 'VLA-Quant-852d350.bundle', 'research.bundle'):
         subprocess.run(['scp', *options, remote+n, str(a.destination/n)], check=True)
+    for line in (a.destination/'SHA256SUMS.txt').read_text().splitlines():
+        _, n = line.split(maxsplit=1)
+        assert not Path(n).is_absolute() and '..' not in Path(n).parts
+        if '/' not in n and not (a.destination/n).exists():
+            subprocess.run(['scp', *options, remote+n, str(a.destination/n)], check=True)
     index = json.loads((a.destination/'SET_INDEX.json').read_text())
     for item in index['stage_archives']:
         name = Path(item.get('archive', item.get('server'))).name
