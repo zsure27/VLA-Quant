@@ -35,7 +35,31 @@ function Get-ExactFullPath([string]$Path) {
 function Get-AllowedBackupRoots {
     return @(
         (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/.local/archives'),
-        (Get-ExactFullPath 'D:/VLA-Backups/20261016-091-residual-resume-v2')
+        (Get-ExactFullPath 'D:/VLA-Backups/20261016-091-residual-resume-v2'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/backups'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/.codex-work/091-archive-range-download-v2'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/.codex-work/091-final-closing-documents-20261013-v1'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/.codex-work/091-final-closure-supplement-20261013-v1')
+    )
+}
+
+function Get-AllowedBackupFiles {
+    # These twelve exact tmp archive paths were audited in the 2026-10-18
+    # upload-private-extra-backups plan. The surrounding tmp directory is not
+    # an allowed root, and this list cannot be expanded by runtime arguments.
+    return @(
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/sq-local-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/fixed-rollout-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/stage50-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/p25-sync-20260927.tar'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/sq-branch-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/fp32-pairs-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/stage-fixed-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/low-rank-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/input-diag-small.tar.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/vla-p2-93cde52.bundle'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/vla-p2-3aa8f67.bundle.gz'),
+        (Get-ExactFullPath 'C:/Users/zsure/Documents/Triton/tmp/vla-p2-3aa8f67.bundle')
     )
 }
 
@@ -57,7 +81,11 @@ function Assert-NoReparseAncestors([string]$Path) {
 function Assert-EligibleFilePath([string]$Path, [string[]]$Roots) {
     $full = Get-ExactFullPath $Path
     $matching = @($Roots | Where-Object { Test-UnderRoot $full $_ })
-    Assert-Condition ($matching.Count -eq 1) "Deletion target is outside the exact allowed roots: $full"
+    $matchingExact = @()
+    if ($matching.Count -eq 0) {
+        $matchingExact = @(Get-AllowedBackupFiles | Where-Object { [string]::Equals($full, $_, [StringComparison]::OrdinalIgnoreCase) })
+    }
+    Assert-Condition ($matching.Count -eq 1 -or $matchingExact.Count -eq 1) "Deletion target is outside the exact allowed roots and files: $full"
     Assert-NoReparseAncestors $full
     $item = Get-Item -LiteralPath $full -Force -ErrorAction Stop
     Assert-Condition (-not $item.PSIsContainer) "Directory deletion is forbidden: $full"
@@ -207,6 +235,7 @@ function Invoke-VerifiedBackupRemoval {
           [string]$CoverageCatalogPath, [string]$ReceiptPath, [switch]$Execute)
     Assert-Condition ([Environment]::OSVersion.Platform -eq [PlatformID]::Win32NT) 'This exact-path removal tool is for Windows only.'
     $roots = @(Get-AllowedBackupRoots)
+    $exactFiles = @(Get-AllowedBackupFiles)
     $plan = Read-JsonObject $PlanPath
     $cloud = Read-JsonObject $CloudReceiptPath
     $publication = Read-JsonObject $PublishedCatalogReceiptPath
@@ -254,7 +283,7 @@ function Invoke-VerifiedBackupRemoval {
     [long]$deletedBytes = 0
     [int]$deletedCount = 0
     try {
-        Write-DurableEvent $writer $stream ([ordered]@{ event = 'start'; execute = [bool]$Execute; plan_sha256 = Get-FileSha256 $PlanPath; cloud_receipt_sha256 = $plan.cloud_receipt_sha256; private_catalog_commit = $plan.private_catalog_commit; published_catalog_receipt_sha256 = Get-FileSha256 $PublishedCatalogReceiptPath; allowed_roots = $roots; files_planned = $plan.files.Count; logical_bytes_planned = $plannedBytes; disk_before = $before })
+        Write-DurableEvent $writer $stream ([ordered]@{ event = 'start'; execute = [bool]$Execute; plan_sha256 = Get-FileSha256 $PlanPath; cloud_receipt_sha256 = $plan.cloud_receipt_sha256; private_catalog_commit = $plan.private_catalog_commit; published_catalog_receipt_sha256 = Get-FileSha256 $PublishedCatalogReceiptPath; allowed_roots = $roots; allowed_exact_files = $exactFiles; files_planned = $plan.files.Count; logical_bytes_planned = $plannedBytes; disk_before = $before })
         foreach ($entry in $plan.files) {
             $full = Assert-LocalFileContent $entry $roots
             if ($Execute) {

@@ -456,6 +456,25 @@ class GitHub:
 def run_parts(parts, client, receipt, workers=4):
     if not 1 <= workers <= MAX_WORKERS:
         raise ArchiveError("Workers must be between 1 and " + str(MAX_WORKERS))
+    by_file = {}
+    for part in parts:
+        by_file.setdefault(part.whole_sha256, []).append(part)
+
+    def complete_file_if_ready(part):
+        # Completion is durable per archive, so a later archive failure cannot
+        # hide an already recoverable file. Hold the receipt's RLock across the
+        # readiness check and full part/source validation to avoid racing peers.
+        with receipt.lock:
+            file = receipt.state["files"].get(part.whole_sha256)
+            expected = by_file[part.whole_sha256]
+            if file is None or len(file.get("parts", [])) != len(expected):
+                return
+            was_complete = file.get("remote_download_sha256_verified") is True
+            receipt.verified_complete(expected)
+            if not was_complete:
+                report(verified_archive=part.source.name, bytes=part.file_bytes,
+                       sha256=part.whole_sha256)
+
     def one(part):
         source_unchanged(part)
         with client.name_lock(part.name):
@@ -463,11 +482,13 @@ def run_parts(parts, client, receipt, workers=4):
             validate_asset(asset, part)
             if receipt.verified(part, asset):
                 report(reused_verified_part=part.name, file=part.source.name)
+                complete_file_if_ready(part)
                 return
             client.verify_download(asset, part)
             source_unchanged(part)
             receipt.record(part, asset)
             report(verified_part=part.index + 1, of=part.count, file=part.source.name)
+            complete_file_if_ready(part)
     # At most `workers` submitted tasks; failure does not start the remaining plan.
     iterator = iter(parts)
     with ThreadPoolExecutor(max_workers=workers) as pool:

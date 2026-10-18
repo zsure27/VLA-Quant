@@ -18,7 +18,7 @@
 
 此前自动审批拒绝把完整实验内部归档直接公开发布，原因为概括备份授权未明确具体公开载荷。用户随后明确选择私有归档仓库，现已创建并核验[zsure27/VLA-Quant-Archives](https://github.com/zsure27/VLA-Quant-Archives)，原公开上传阻断保留为历史记录。
 
-完整归档正在上传至私有库的[backup-archive-20261017 Release](https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017)，并逐项流式下载校验SHA；当前尚未完成全部上传，本地删除尚未执行。实际逐文件进度由`.local/audit-20261017/github-private-remote-verification.json`记录，最终恢复目录和回执由[云端索引](../backups/github/README_CN.md)提供。只有对应内容完整恢复核验通过后才清理本地。GitHub支持Release单附件小于2GiB，本项目按1GiB分块，不放入普通Git或默认引入付费LFS。
+完整归档正在上传至私有库的[backup-archive-20261017 Release](https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017)，并逐项流式下载校验SHA；当前尚未完成全部上传；2026-10-18首批已按完整门禁清理812个文件、575,685,418逻辑字节。实际逐文件进度由`.local/audit-20261017/github-private-remote-verification.json`记录，最终恢复目录和回执由[云端索引](../backups/github/README_CN.md)提供。只有对应内容完整恢复核验通过后才清理本地。GitHub支持Release单附件小于2GiB，本项目按1GiB分块，不放入普通Git或默认引入付费LFS。
 
 ## 核验
 

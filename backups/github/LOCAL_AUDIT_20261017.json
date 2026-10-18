@@ -1,5 +1,5 @@
 {
-  "scope": "Local backup audit and approved private GitHub migration; upload in progress; no local archive deleted",
+  "scope": "Initial full local audit plus continuing private migration; verified subsets are being removed with exact native receipts",
   "roots": [
     {
       "root": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/.local/archives",
@@ -85,6 +85,22 @@
     }
   ],
   "cloud_archive_upload_status": "in_progress",
-  "local_archive_deletion_status": "pending_complete_remote_restoration_verification",
-  "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remote-verification.json"
+  "local_archive_deletion_status": "in_progress_verified_subsets",
+  "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remote-verification.json",
+  "actual_local_deletions": {
+    "files": 812,
+    "logical_bytes": 575685418,
+    "receipt_scope": "removed-initial-20261018-*.jsonl",
+    "private_catalog_commit": "501aeb2288d60dd3d50eb6c837c1054ea1c7bfd7"
+  },
+  "cloud_snapshot": {
+    "verified_objects": 59,
+    "verified_bytes": 1528348532,
+    "all_migration_objects_complete": false
+  },
+  "additional_scope": {
+    "historical_partial_b5_range_bytes": 3129072984,
+    "not_a_full_b5_restore": true,
+    "original_full_path_missing": true
+  }
 }

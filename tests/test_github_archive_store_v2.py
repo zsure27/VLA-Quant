@@ -118,6 +118,33 @@ class StoreTests(unittest.TestCase):
                                               "sha256": "0" * 64}]}, chunk_size=4)
         self.assertEqual(source.read_bytes(), b"unchanged local original")
 
+    def test_completed_archive_remains_complete_when_later_archive_fails_and_resumes(self):
+        parts = self.parts((b"abcdefghijkl", b"mnopqrstuvwx"))
+        client = FakeGitHub()
+        receipt_path = self.root / "receipt.json"
+        receipt = archive.Receipt(receipt_path, RELEASE)
+        client.fail_name = parts[4].name
+        with self.assertRaises(ConnectionError):
+            archive.run_parts(parts, client, receipt, workers=1)
+        saved = json.loads(receipt_path.read_text())
+        first = saved["files"][parts[0].whole_sha256]
+        second = saved["files"][parts[3].whole_sha256]
+        self.assertTrue(first["remote_download_sha256_verified"])
+        self.assertEqual(len(first["parts"]), 3)
+        self.assertFalse(second["remote_download_sha256_verified"])
+        self.assertEqual(len(second["parts"]), 1)
+
+        client.fail_name = None
+        resumed = archive.Receipt(receipt_path, RELEASE)
+        archive.run_parts(parts, client, resumed, workers=1)
+        final = json.loads(receipt_path.read_text())
+        self.assertTrue(all(file["remote_download_sha256_verified"]
+                            for file in final["files"].values()))
+        # The first archive stays usable without a second upload or download.
+        for part in parts[:3]:
+            self.assertEqual(client.uploads.count(part.name), 1)
+            self.assertEqual(client.downloads.count(part.name), 1)
+
     def test_remote_hash_mismatch_never_checkpoints_or_completes(self):
         parts = self.parts((b"abcd",))
         client = FakeGitHub()
