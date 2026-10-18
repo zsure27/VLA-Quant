@@ -70,8 +70,8 @@ function Test-UnderRoot([string]$Path, [string]$Root) {
 function Assert-NoReparseAncestors([string]$Path) {
     $cursor = Get-ExactFullPath $Path
     while (-not [string]::IsNullOrEmpty($cursor)) {
-        $item = Get-Item -LiteralPath $cursor -Force -ErrorAction Stop
-        Assert-Condition (($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -eq 0) "Reparse path is forbidden: $cursor"
+        $attributes = [IO.File]::GetAttributes($cursor)
+        Assert-Condition (($attributes -band [IO.FileAttributes]::ReparsePoint) -eq 0) "Reparse path is forbidden: $cursor"
         $parent = [IO.Path]::GetDirectoryName($cursor)
         if ($parent -eq $cursor) { break }
         $cursor = $parent

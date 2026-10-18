@@ -175,6 +175,17 @@ class StoreTests(unittest.TestCase):
         archive.run_parts(parts, client, receipt, workers=1)
         self.assertEqual(client.downloads.count(parts[0].name), 2)
 
+    def test_stale_client_refreshes_and_reuses_other_uploader_asset_before_post(self):
+        part = self.parts((b"abcd",))[0]
+        asset = FakeGitHub().ensure_asset(part)
+        client = archive.GitHub.__new__(archive.GitHub)
+        with patch.object(client, 'get_asset', side_effect=[None, asset]), \
+                patch.object(client, 'refresh_assets') as refresh, \
+                patch.object(client, 'upload') as upload:
+            self.assertEqual(client.ensure_asset(part), asset)
+        refresh.assert_called_once_with()
+        upload.assert_not_called()
+
     def test_transient_retries_bounded_and_hash_failure_is_not_retried(self):
         attempts = []
         pauses = []

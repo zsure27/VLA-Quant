@@ -1,5 +1,5 @@
 {
-  "scope": "Initial full local audit plus continuing private migration; verified subsets are being removed with exact native receipts",
+  "scope": "Initial 2026-10-17 C/D audit baseline plus 2026-10-19 in-progress migration checkpoint; original root sizes are historical, not current occupancy",
   "roots": [
     {
       "root": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/.local/archives",
@@ -49,7 +49,7 @@
     "unique_archives": 54,
     "unique_archive_bytes": 29503224146,
     "all_sha256_computed": true,
-    "local_deletions": 0
+    "local_deletions_at_initial_audit": 0
   },
   "historical_instruction_preservation": [
     {
@@ -84,23 +84,38 @@
       "current_relevance": "Historical public upload refusal; resolved by user selection of a verified private archive repository"
     }
   ],
-  "cloud_archive_upload_status": "in_progress",
+  "cloud_archive_upload_status": "in_progress_four_large_archives",
   "local_archive_deletion_status": "in_progress_verified_subsets",
-  "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remote-verification.json",
+  "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remaining-verified-20261019.json",
   "actual_local_deletions": {
-    "files": 812,
-    "logical_bytes": 575685418,
-    "receipt_scope": "removed-initial-20261018-*.jsonl",
-    "private_catalog_commit": "501aeb2288d60dd3d50eb6c837c1054ea1c7bfd7"
+    "files": 24346,
+    "logical_bytes": 36852151982,
+    "byte_measurement": "Sum of exact deleted file lengths; final disk free-space change is reported separately",
+    "receipt_scope": "Native per-file removal receipts, accumulated through the 2026-10-19 checkpoint",
+    "private_catalog_commit": "d6f6f66928d5636059198440b1dc474cfe35f533",
+    "is_final_deletion_total": false
   },
   "cloud_snapshot": {
-    "verified_objects": 59,
-    "verified_bytes": 1528348532,
-    "all_migration_objects_complete": false
+    "verified_objects": 89,
+    "verified_bytes": 15963223602,
+    "all_migration_objects_complete": false,
+    "large_archives_still_transferring": 4,
+    "admission": "Only complete objects with remote download SHA verification and contiguous parts in the published catalog"
   },
   "additional_scope": {
     "historical_partial_b5_range_bytes": 3129072984,
     "not_a_full_b5_restore": true,
     "original_full_path_missing": true
+  },
+  "progress_date": "2026-10-19",
+  "initial_audit_scope_note": "Original two backup roots only; additional historical backups and partial B5 ranges are catalogued separately. Root file/byte counts are initial measurements.",
+  "published_remote_verification_path": "catalog/20261017/remote-verification.json",
+  "published_catalog_checkpoint": {
+    "repository": "zsure27/VLA-Quant-Archives",
+    "private": true,
+    "commit": "d6f6f66928d5636059198440b1dc474cfe35f533",
+    "remote_head_verified": true,
+    "committed_paths_verified": true,
+    "is_final_migration_catalog": false
   }
 }

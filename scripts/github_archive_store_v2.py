@@ -395,6 +395,15 @@ class GitHub:
                 return asset
             try:
                 if asset is None:
+                    # Another independent uploader may have created this asset
+                    # since our startup listing. Refresh before sending its body.
+                    self.refresh_assets()
+                    asset = self.get_asset(part.name)
+                    if asset is not None:
+                        if asset.get("state") == "uploaded":
+                            validate_asset(asset, part)
+                            return asset
+                        raise HTTPFailure(503)
                     asset = self.upload(part)
                     validate_asset(asset, part)
                     return asset

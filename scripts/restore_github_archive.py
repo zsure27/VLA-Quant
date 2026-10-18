@@ -211,6 +211,7 @@ def main(argv=None):
         require(args.sha256 is None and args.destination is None, "Use --list without restore options")
         for digest, record in sorted(files.items()):
             print(json.dumps({"sha256": digest, "source_name": record.get("source_name", ""),
+                              "source_path": record.get("source_path", ""),
                               "bytes": record["bytes"], "parts": len(record["parts"])}, ensure_ascii=True))
         return
     require(args.sha256 is not None and args.destination is not None,

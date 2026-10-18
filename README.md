@@ -2,11 +2,13 @@
 
 保存 OpenVLA-OFT 低比特量化的实现、配置、结果和分析。当前研究重点是通过多类、小规模、单变量实验，寻找有效的量化补偿与微调方法。
 
-## 当前入口 · 2026-10-17
+## 当前入口 · 2026-10-19
 
 - **先读结论：**[近三轮实验总结与短期计划](reports/experiments/p2-shared-peft/20261017-three-rounds-summary-and-short-plan/REPORT_CN.md)。
 - **后续怎么做：**[小规模探索策略](docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)。差异已清楚的候选及时收束，仅有明确价值的少数方向扩大验证。
-- **数据在哪里：**[GitHub 备份策略](docs/GITHUB_BACKUP_POLICY_20261017_CN.md)与[云端归档索引](backups/github/README_CN.md)。代码、小结果和清单保存在 Git；完整压缩包、视频和参数使用 GitHub Release 附件，本机按需下载。
+- **数据在哪里：**公开的 [VLA-Quant](https://github.com/zsure27/VLA-Quant) 保存代码、报告、小结果和导航；完整原始归档保存在私有 [VLA-Quant-Archives](https://github.com/zsure27/VLA-Quant-Archives) 的 Release 附件。位置、逐项核验进度和[恢复命令](backups/github/RESTORE_CN.md)见[云端归档索引](backups/github/README_CN.md)与[备份策略](docs/GITHUB_BACKUP_POLICY_20261017_CN.md)。
+
+备份迁移和本地清理仍在进行。2026-10-19 检查点已有 89 个完整对象通过远端下载 SHA 核验；4 个大归档继续传输。已清理文件及恢复范围按索引中的实际回执记录，本机按需恢复所需材料。
 
 091 已取得原生关机 `execute=true` 回执，心跳暂停。B1 时间覆盖实验以正式各 **250** 回合收束；中断的 reset30–39 残余保留并排除，不恢复旧续片。本仓库的整理不启动实例或实验。
 
