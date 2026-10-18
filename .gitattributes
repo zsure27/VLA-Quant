@@ -4,6 +4,9 @@
 *.json text eol=lf
 *.csv text eol=lf
 *.txt text eol=lf
+docs/archive/AGENTS_WORKSPACE_BEFORE_20261017.md -text
+docs/archive/AGENTS_REPO_BEFORE_20261017.md -text
+docs/archive/README_BEFORE_CLEANUP_20261017.md -text
 results/awq-visual-diagnostics-20260915/** -text
 results/awq-baseline-gate-20260916/** -text -eol
 results/awq-block-audit-20260916/** -text -eol

@@ -1,6 +1,6 @@
 # 原始结果与可复核性
 
-`results/` 只保存适合普通 Git 的实测小文件。实验结果统一进入 [`experiments/`](experiments/README_CN.md)，共享不可变材料进入 [`shared/`](shared/README_CN.md)，索引进入 [`indexes/`](indexes/)。完整压缩归档、视频、NPZ、模型和大 profile 保存在本地 [`backups/experiments/`](../backups/README_CN.md)及服务器持久盘。
+`results/`保存适合普通Git的实测小文件。实验结果统一进入[`experiments/`](experiments/README_CN.md)，共享不可变材料进入[`shared/`](shared/README_CN.md)，索引进入[`indexes/`](indexes/)。完整压缩归档、视频、NPZ、模型和大profile优先使用GitHub Release附件；位置、大小、SHA256与恢复记录见[云端归档索引](../backups/github/README_CN.md)和[备份策略](../docs/GITHUB_BACKUP_POLICY_20261017_CN.md)。本机只保留当前工作所需数据和临时下载，远端完整核验后再清理。
 
 ## 固定结构
 

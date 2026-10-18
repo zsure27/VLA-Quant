@@ -51,8 +51,23 @@ def main() -> None:
 
     report_sessions = module_sessions(ROOT / "reports/experiments")
     result_sessions = module_sessions(ROOT / "results/experiments")
+    roles = json.loads((ROOT / "configs/repository_report_roles_v1.json").read_text(encoding="utf-8"))
+    summary_sessions = {module: set() for module in MODULES}
+    for item in roles["cross_run_summaries"]:
+        module, session = item["module"], item["session"]
+        if module not in MODULES or not SESSION.fullmatch(session):
+            raise ValueError("invalid cross-run summary declaration")
+        if item["new_experiment_executed"] is not False or not item["source_reports"]:
+            raise ValueError("summary must declare no new experiment and existing evidence")
+        if not (ROOT / "reports/experiments" / module / session / "REPORT_CN.md").is_file():
+            raise ValueError("declared summary report missing")
+        for relative in item["source_reports"]:
+            source = (ROOT / relative).resolve()
+            if ROOT.resolve() not in source.parents or not source.is_file():
+                raise ValueError("summary source report missing or unsafe")
+        summary_sessions[module].add(session)
     for module, sessions in report_sessions.items():
-        missing = sessions - result_sessions[module]
+        missing = sessions - result_sessions[module] - summary_sessions[module]
         if missing:
             raise ValueError(f"reports without matching results in {module}: {sorted(missing)}")
 
@@ -82,6 +97,7 @@ def main() -> None:
         "modules": sorted(MODULES),
         "report_sessions": sum(map(len, report_sessions.values())),
         "result_sessions": sum(map(len, result_sessions.values())),
+        "cross_run_summaries": sum(map(len, summary_sessions.values())),
         "primary_backbone": backbone["backbone_id"],
         "status": "ok",
     }, ensure_ascii=False))

@@ -1,153 +1,41 @@
-**2026-10-17 用户最新探索策略覆盖：用户明确B1两项差异已足够明显，无须补齐450；B1以现有正式各250（Early241/Phase110）作为本轮已完成现象结论，取消reset30–39恢复及40–49续跑待办，中断残余保留排除、不伪造终态。后续当前目标是通过多类、小规模、单变量测试定位问题并探索较优量化微调方法；允许预先约定的按结果筛查/停止，覆盖旧“每候选机械推进450、不按方向停止”的探索排序要求。优先复用现有原始数据/教师/cache，必要实现与数值门禁保留且只验证变化部分；不默认每个候选50/450或重复长评测。仅有明确研究价值的少数方向再固定条件扩大验证，探索筛选与确认性结果分开表述，不读holdout/不改历史角色、不扩routing。详见docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md。091已原生execute=true/心跳PAUSED；本条只更新研究策略，不启动GPU或实例，不恢复结束计划。Windows关机上次因自动审批用量耗尽未执行，本机未关。**
+# VLA 项目当前工作约定
 
-**2026-10-17 08:28额度终止覆盖：实时primary剩15%写STOP_NEW_GPU，后剩9%保存状态并确认停止当前B1 reset30–39监督器84613/wrapper84614/策略84615，GPU闲。原status为历史RUNNING不得据此重跑；独立quota-stop-receipt.json为实际终止证据，不伪造exit0。B1正式仅各250 Early241/Phase110；M0各450已完成；本片不加分母且Phase/audit未启动，禁止注册40或新方法。当前完整最终集合收尾中，禁止重启实验，Windows须最终双份/Git/091原生execute=true/PAUSED/总结后正常关闭，关键失败不关本机。**
+更新：2026-10-17。用户当前明确指令优先；以下为现行约定，历史报告和旧计划保留作证据，不据其旧活动状态重新启动实验。
 
-**2026-10-17 08:12 B1累计250与续片覆盖：reset20–29三阶段exit0/revision11/strict100通过，Early95/Phase45；累计250 Early241/Phase110、0救回131新增失败净−52.4pp/任务95%[-72.4,-32]pp/p7.34683969e-40。完整双份641991051字节SHA4313bdb78259b1c08c0dba1c89777a6da5fdfa5ee0a38e637c6e5cfa1330c56d、3770文件/3771成员/200视频/3519query过。唯一新活动C/B1-continuation-v1/reset-30-39/plan.json SHA557ce1aac715037a37f1b2b88c1c215724491a266055df3fbbaa93ac76bf6f45，status同目录control/20261017-091-B1-temporal80-reset-30-39-v1/status.json；08:11:34 supervisor84613启动，08:11:55 revision3/Early策略84615仍初始化，真实GPU首query待验。C/B1_RESET_20_29_ANALYSIS_CN.md锁定不可覆盖。新鲜08:11额度剩19%仅历史，后续实时15/10/3；Windows最终完整收尾顺序有效，旧片不重跑。**
+## 当前状态与研究目标
 
-**2026-10-17 07:12 B1累计150与续片覆盖：reset10–19全三阶段exit0/revision11/PASS_B1_TEMPORAL_FULL_SHARD_PAIRED_PROTOCOL，Early98/Phase46各100；累计150 Early146/Phase65，Phase相对Early0救回81新增失败净-54pp/任务区间[-74.6667,-32.6667]pp/p8.271806e-25，新增Early失败task5/reset13与task6/reset16。全成败/失败/成本已保存，不推断机制不据方向改条件。完整双份631717620字节SHA7a9812590e6773ecf8d1a7f1150e4fcd979f52f026da787d7d7665bc6f167b9b，3717文件/3718成员/200原视频过。唯一新活动C/B1-continuation-v1/reset-20-29/plan.json SHA100dd3792b204b78f2831e10606c74a7a69f7e0feaa628fe1580e6a3ce5b057f，status同目录control/20261017-091-B1-temporal80-reset-20-29-v1/status.json，07:11:29启动supervisor73104。C/B1_RESET_10_19_ANALYSIS_CN.md锁定不得覆盖；旧片/训练/M0不重跑。后offset30/40仍严格前gate/累计分析/双份/Git/新鲜primary盘顺序接，总各450。常规15/10/3及Windows完整收尾顺序不变。**
+- 091本轮已保存终止、GPU闲，并取得2026-10-17北京时间08:32:24原生execute=true回执；心跳vla-091-vla为PAUSED。平台OFF/计费未独立核验。
+- M0正式PTQ77/450、S0 184/450；B1正式Early241/250、Phase110/250。B1比较已按用户要求收束，取消补450、恢复reset30–39和注册40–49。中断原始数据保留排除，旧status历史RUNNING不是活动事实，不伪造exit0。
+- 后续优先多类小规模、单变量探索；先复用现有数据诊断，再小片筛查，只对有价值的方向扩大验证。允许预定义的按结果筛选与停止，不默认每项50/450回合。
+- 现有原始数据/任务/holdout角色保持，不读offline_final_holdout标签；同十任务开发不称未见任务泛化。不开routing，不把跨轮分母直接相减作为因果增益。
 
-**2026-10-17 06:14 B1首50与续片覆盖：首50全部exit0/revision20/PASS_B1_TEMPORAL_PAIRED_PROTOCOL，Early48/Phase19各50，Phase相对Early0救回29新增失败净-58pp/任务区间[-78,-36]pp/p3.72529e-9，不据方向改条件、不推断机制。完整双份359113114字节SHAd6d61ee531e12aaa4d3998a8cd2a84872ff1e99daaab96b73ea8d8baa6ef4098，1955文件/1956成员/100视频过。唯一新活动C/B1-continuation-v1/reset-10-19/plan.json SHA088af311b871c0e09d0667e586656ee71cf80c999c81488b00b6f845529ee0e5，status同目录control/20261017-091-B1-temporal80-reset-10-19-v1/status.json，06:13:33 supervisor61487启动。独立后片CPU审计/错误offset拒绝过，复用冻结EV2，只变范围/输出/锁和对应reset10 PTQ参考。旧首50/训练/M0/微测/失败v1不重跑。后20/30/40各100依前gate/累计失败成本分析/双份/新鲜primary与盘顺序接，总各450。C首50分析及源码运行锁不可覆盖。常规15/10/3/Windows固定收尾顺序有效。**
+## 备份与本地磁盘
 
-**2026-10-17 05:40 B1 v2微测完成覆盖：两侧10回合及strict audit exit0，PASS_B1_TEMPORAL_PAIRED_PROTOCOL，Early9/10、Phase3/10，Phase相对Early0救回6新增失败/p=.03125/任务区间[-90,-30]pp。小片重叠正式不加分母，不据方向改条件，不推断机制。两侧真实首query双相机/一次本体/临时零B动作匹配原PTQ及冻结重载均通过。完整双份126498974字节SHA7ec2b947808208c1f76210f9fd9e86e23519512370e621113b2666b969fcb706，442文件/443成员/20视频通过，活动首50排除。唯一v2 plan不变，05:39实际revision12/first50-early80 GPU54607/16661MiB，之后Phase50和strict audit。旧micro/训练/M0和失败v1均不重跑。常规15/10/3；Windows完整收尾顺序不变。**
+- 用户要求后续尽量在GitHub完成备份，减少本地磁盘占用。代码、配置、分析、小结果和SHA/恢复索引放普通Git；大型原始归档放GitHub Release附件，必要时分块。
+- 用户已明确选择并核验私有归档仓库zsure27/VLA-Quant-Archives，完整原始归档使用其Release附件；公开代码仓库zsure27/VLA-Quant保留代码、小结果和恢复索引。此前完整公开上传的自动审批拒绝作为历史事件保留，不擅自把私有资产改为公开。
+- 当前backup-archive-20261017 Release上传及流式下载SHA核验正在进行，本地删除尚未执行；逐文件以实际回执为准，部分成功不等于全量完成。
+- 先审计清单、内容SHA及凭据风险；上传后验证远端大小、digest并流式下载逐块SHA，保存可还原索引。只有完整远端恢复门禁通过的非必须本地副本才可删除。
+- 本地目录只保留工作必需的小结果、恢复索引和临时下载；不反复复制完整阶段包。不能把清单、链接或Git LFS指针称作已上传原始数据。
+- 只对本任务明确目录做精确路径清理，删除前核对绝对路径/大小/SHA/恢复覆盖；不跟随junction/reparse，不删除凭据、唯一未上传原始材料或工作中的文件。
 
-**2026-10-17 05:28 B1评测v2覆盖：v1 micro-early80协议失败revision4/exit1，0 admitted query/0正式回合，日志0/10不是模型成绩，后续未启动；失败原计划/代码/10异常视频完整双份89285字节SHAfc946baa8bc9a9732dc7f00722f7a60743657bb3bb32b000b48ae190c995fa43。原因CPU复核为float64归一化与capture float32存储表示差；独立v2沿原float32严格逐位比较无容差，五字段篡改拒绝/首错误整计划终止CPU过。唯一新C/B1-temporal-eval-v2/first50-plan-v1/plan.json SHA65beb1b7a6bc8852345bab57998b5f41b65a6cb5b250dfa5fc5ba7a1c01a3a2c，status同目录control/20261017-091-B1-temporal80-micro-first50-v2/status.json，05:27:31启动52734。真实GPUgate尚待观察，仍两侧micro后strict gate再首50。旧v1/训练/M0不重跑不覆盖；常规15/10/3，Windows收尾顺序不变。**
+## 实验执行
 
-**2026-10-17 05:06 当前B1独立评测覆盖：训练六阶段全部exit0/revision20及烟雾/1000配对gate通过，训练完整双份976484948字节SHAee92f741b069980f8d0c6a1922ee8344f253c9119eea090dd4877e9999f5fa3a，1292文件/1293成员逐项通过。唯一活动C/B1-temporal-eval-v1/first50-plan-v1/plan.json，文件SHA4aff025ada4667d031f2d3a4736552eb333652ec660d157bbcb2cde68f602470，status同目录control/20261017-091-B1-temporal80-micro-first50-v1/status.json；05:04:14 supervisor50837，05:05实际revision3/micro-early80 GPU50839/15575MiB仅历史，真实首query gate尚未观察。独立新1000步loader/CPU契约通过，先两侧micro10及strict gate再各首50，不扩routing/holdout，代码/锁不活动覆盖。M0五片及B1训练均完成不得重跑。API已实际确认reset1792183963→1792201971刷新，首次豁免失效，常规15/10/3。完整Windows收尾顺序不变。详见B1_TEMPORAL_EVAL_LAUNCH_CN.md。**
+- 用户自行开机告知后才开启新一轮；不自动开机/开卡/登录控制台/用额度券。当前不启动GPU、不恢复已结束计划。
+- 新实现只补实际变化的必要数值/梯度/输入/保存重载门禁；正确路径和缓存可复用。保留真实配对、实际argv、seed、finite、异常与全部失败及成本证据。
+- 不覆盖冻结科学源码、计划、runtime-lock、原始结果及已锁报告；新增独立版本或补充文件。假量化成功率不等于真实INT2内核加速。
+- 起跑新方法>=12GiB、续片>=8GiB、运行留6GiB；单模型顺序执行，不重建全层大激活缓存。
+- 活跃期约15分钟心跳，状态未变静默，不逐回合读日志；GPUutil0须结合CPU/显存判断。无可执行工作不让实例付费空跑。
+- 当前五小时primary实时剩15%停新扩展并保存备份/Git；10%保存终止、GPU闲后原生关当前实例，留3%。首次窗口豁免已失效，不猜刷新。
 
-**2026-10-17 04:52自然刷新已确认覆盖：实时API primary used2%剩98%、resetsAt1792183963→1792201971，接口实际确认自然刷新；首次窗口15/10延后豁免立即失效、不续期。后续恢复15%停扩展/完整备份与Git、10%保存终止/GPU闲/原生关091/留3%，全部最终核验/PAUSED/完整总结后正常关Windows。本轮B1两侧1000步与smoke及配对训练gate全部完成revision20/exit0，下一新闭环必须独立身份数值/micro/首50硬gate，不重跑训练、不从低loss挑checkpoint。**
+## 收尾与本机
 
-**2026-10-17 B1时间覆盖新计划覆盖：M0 PTQ77/S0184各450全部结束，900正式视频五片双份核验。新唯一活动C/B1-temporal-v1/training-plan-v1/plan.json SHA4cabb3279cc86dbe71be68ac68221de7b8b55ebb0be5c52e9334046270af0471，04:32:52启动supervisor48551，revision3/train-10-early80为启动实测，实际GPU后续核对。新身份b1-temporal80-v1-20261017，同40原A4训练轨迹Early80(query0/1)与Phase80(round25/75%)各80，同初始SVD/rank8/224语言/19988480参数/损失/seed7/1000步，CPU内容/校准无交集/父448因子/负例均通过，不代表GPU通过。六阶段两侧10步→配对gate→两侧1000→配对gate，失败停止，正式均从初始重来，不复用训练后S；新教师Phase单独生成，Early全80须真实BF16匹配父缓存。仅注册训练，闭环要独立新版本加载/数值桥接/micro/首50，不绕过旧artifact身份。旧336科学源不变。04:32实时primary剩25%/reset1792183963仅历史，首次15/10延期与最终Windows授权保持，须API确认刷新。**
+- 本次备份清理工作完成前保持Windows运行。此前本轮Windows关机请求因自动审批用量耗尽未执行，不能声称已关机，也不能绕过审批。
+- 当前run的既有授权仅适用该run；实验终止/GPU闲、完整备份与远端恢复核验、分析/Git远端SHA、原生关实例execute=true、心跳PAUSED、完整总结后，才可按该run独立helper正常关Windows，不强制应用；关键失败不关本机，不继承未来运行。
 
-**2026-10-17 M0正式450完成覆盖：PTQ77/450、S0184/450，119救回12新增失败，净23.7778pp、任务经验95%[9.5556,39.1111]pp、McNemar p2.587e-23，8任务净改善0净变差；全部五片严格协议/finite/exit0通过，micro不加。最后40–49完整双份/backups/091-residual-reset-40-49-complete-20261017-v1与D盘同名，772320594字节SHA32ca73b81545815142436901a74e9e0e53745b9c8b442d2242d8fb06502b2b3c，5009文件/5010成员/200视频通过；全900正式视频索引齐。旧M0无活动GPU不得重跑。下一B1-temporal按同40训练轨迹Early80/Phase80单变量审核，原1020查询SHA和Early内容通过；新数据与新trainer独立身份，CPU门禁不冒称GPU通过，未启动新GPU前仍须预注册。当前窗口首次15/10延期及本轮Windows最终授权保持，不能提前关机。**
+## 主要入口
 
-**2026-10-17 M0 30–39双份归档完成覆盖：服务器/backups/091-residual-reset-30-39-complete-20261017-v1及本机D:/VLA-Backups/20261016-091-residual-resume-v2/同名，771484449字节SHA571fa738e7cc1eb9befbd1b579b0f556f78112228bbb8754ff91e671a1e4af5a，5008文件/5009成员/200原始视频双份逐项通过。累计350 PTQ59/S0144、94救回9新增失败，净24.2857pp、任务95%[10,39.7143]pp。当前最后40–49 RUNNING revision3/PTQ，supervisor36763/GPU36765仅03:24历史，后续读实际。原30–39分析锁定不可覆盖；完整索引已更新，活动40–49排除。当前窗口首次额度阈值延后及最终Windows授权保持。**
-
-**2026-10-17 M0累计350与最后40–49覆盖：30–39全三阶段exit0/revision11/PASS_B3_INIT_ONLY_FULL_SHARD_PAIRED_PROTOCOL，本片PTQ19/S038、22救回3新增失败；累计350 PTQ59/S0144、94救回9新增失败，净24.2857pp、任务95%[10,39.7143]pp、p5.46051e-19。唯一活动M0-continuation-v2/reset-40-49/plan.json SHAd361dbc6b8a264d43c17e3fe9b3afde881a6e83f2cee5d1ef0e52e3455573f15，03:23:08启动supervisor36763，03:24实测revision3/PTQ/策略36765仅历史。30–39服务器完整包771484449字节SHA571fa738e7cc1eb9befbd1b579b0f556f78112228bbb8754ff91e671a1e4af5a，5008文件/200视频，本机D盘核验中未完成不称双份。原30–39分析为最后片锁定不得覆盖。首次额度延期与最终本机关机授权保持。**
-
-**2026-10-17 M0 20–29双份归档完成覆盖：服务器/backups/091-residual-reset-20-29-complete-20261017-v1及本机D:/VLA-Backups/20261016-091-residual-resume-v2/同名，756212845字节SHA4d15e0068944eccfeab1c09f4fedb6b108bbbfb866863a4e3cf445d8569cd9e1，4911文件/4912成员/200原始视频双份逐项通过。累计250 PTQ40/S0106、72救回6新增失败，净26.4pp、任务95%[11.2,43.2]pp。当前30–39 RUNNING revision3/PTQ，supervisor25526/GPU25528仅02:25实测历史，后续读实际；原20–29分析为新片锁定不可覆盖。已完成索引更新，活动30–39不含；当前窗口首次门限延后和本轮Windows最终授权不变。**
-
-**2026-10-17 M0累计250与当前30–39覆盖：20–29三阶段exit0/revision11/严格配对gate通过，本片PTQ18/S044、28救回2新增失败；累计250 PTQ40/S0106，72救回6新增失败，净26.4pp、任务经验95%[11.2,43.2]pp、p=1.84937e-15。唯一活动M0-continuation-v2/reset-30-39/plan.json SHA b4d26327f93f5065b1cef7e06ffc359039171858fdb0881997e39ce1a0db1d1d，02:24启动supervisor25526；旧20–29完成不重跑。只剩40–49按门禁资源顺序；当前窗口1792183963首次15/10延后约定不变。本片完整归档服务器756212845字节SHA4d15e0068944eccfeab1c09f4fedb6b108bbbfb866863a4e3cf445d8569cd9e1，4911文件/200视频，本机D盘正在下载核验，未完成前不称双份。**
-
-**2026-10-17 首次额度门限延后覆盖：用户最新要求本轮第一次达到阈值先不收尾，待04:52自然刷新后再次到阈值才收尾并关闭本机。当前primary窗口resetsAt1792183963（接口计划北京时间04:52:43），本次used35%剩65%仅历史。仅此窗口首次15%/10%保存进度和完整备份，不因额度终止正常已注册GPU或关091/Windows；预算不足注册新片时保持实例和进度等待实际刷新，仍15分钟活跃心跳，不用券、不猜刷新。须实时API确认resetsAt改变才恢复常规15%备份/10%原生关091/留3%，例外不续期。冻结源码/已注册计划/科学与磁盘门禁不变；最终Windows授权和完整收尾固定顺序仍有效。回执同名results/quota-first-window-override-v1.json。**
-
-**2026-10-17 M0累计150与当前20–29覆盖：10–19两侧各100及strict gate全部exit0，本片PTQ15/S043；累计150 PTQ22/S062，44救回4新增失败，任务经验95%[11.333,42.667]pp、p=1.51383e-9。10–19完整双份/backups/091-residual-reset-10-19-complete-20261017-v1及本机D:/VLA-Backups/20261016-091-residual-resume-v2/同名，766266127字节SHA7c66004e215b51164198ab59666b408c9a9cfd3d1d2460acc1bfbfe05305213c，4959文件/200视频全过。当前唯一活动M0-continuation-v2/reset-20-29/plan.json SHA7cc3f5ba86ea1bc44b2f237a81d62f640db0d0ecd50872879fe9918239a09141，01:23:56启动supervisor14218/实测revision3 PTQ GPU14220仅历史。旧10–19和recovery均完成不得重跑。后续按资源/实时额度顺序30/40，总各450；不按成绩方向调整。同轮Windows关机授权有效，全部收尾核验后执行。**
-
-**2026-10-17 091恢复首50完成与续片覆盖：仅补task9/reset7–9三回合，旧47完整回合及旧PTQ50均未重跑，R0重启内容桥接/实际S0零分支匹配对应PTQ/分段严格gate全过。首50 PTQ7/S019，13救回1新增失败净+24pp、任务经验95%[6,42]pp、p=.001831，micro不加。当前唯一活动20261016-091-residual-resume-v2/M0-continuation-v2/reset-10-19/plan.json，SHA517c5a9678262b01310aac8266130735236a76c983029fccf9b2ee85771c6501，00:19:40 supervisor2863/实测revision3 PTQ GPU2865仅历史，后续读实际。其后20/30/40片按协议/资源顺序每侧100，总各450。心跳ACTIVE15分钟，新备份D:/VLA-Backups/20261016-091-residual-resume-v2。用户本轮Windows正常关机授权有效：完整备份/分析/Git、091原生execute=true、PAUSED、发送总结后执行本轮独立helper，不强制应用，关键步骤失败不关本机。**
-
-**2026-10-16 091重新开启恢复授权覆盖：用户要求继续实验并在本轮结束关闭本地电脑；仅当前20261016-091-residual-resume-v2有效，覆盖此前本轮不关Windows。先核验上轮中断47完整S0回合、仅补task9/reset7–9，旧PTQ50和D0/micro不重跑，不覆盖旧输出；本次R0/CPU/数值桥接及严格分段gate通过后按原M0后片顺序继续。收尾顺序为实验终止/GPU闲、完整双份SHA/分析/Git远端SHA、091原生execute=true、心跳PAUSED、发送完整总结，最后Windows正常关机，不强制关闭应用；关键步骤失败不关本机。详见20261016-091-residual-resume-v2/PRE_RUN_CARD_CN.md。**
-
-**2026-10-16 091额度关机完成覆盖：13%停扩展、10%保存终止，D0/micro完成；首50 PTQ exit0而S0额度中断，无最终配对gate。完整双份091-residual-quota-final-20261016-v1，551906824字节SHAdb4f39bc331c819dabbf82f430f5127d2973bc97a05f0697e281c67b4a0689bd，3074文件/117已保存视频均SHA过，研究Git1c87b48远端核验。16:19:08原生execute=true/supervisor839，SSH远端关闭；平台OFF/计费未独立核验。automation已PAUSED，Windows保持开启。下轮先审阅中断恢复和唯一计划，不重跑旧已完成片、不拼接分母。**
-
-**2026-10-16 091额度收尾覆盖：实时primary剩13%停止扩展并备份，剩10%于08:11:30UTC保存状态后终止当前GPU，已空闲。D0/micro完成；首50 PTQ exit0，S0中断且无最终配对gate，不声称首50/450完成，不拼接旧结果。Windows保持开启。停止后完整双份归档/Git核验/原生关091/暂停心跳按顺序完成。详见QUOTA_CLOSURE_ANALYSIS_CN.md。**
-
-**2026-10-16 091阶段推进覆盖：R0真实观测848.697秒通过；D0单模型960前向/全80训练观测BF16缓存逐位、输入SHA、Z0=PTQ均过，总271.044秒。Z1000训练MSE.00644373相对PTQ.05453911降低88.18%，历史闭环2/450仍不能归因为训练完全没学会；不选S500 checkpoint。微测PTQ0/10、S0仅初始化4/10，4rescue0break、p=.125，PASS_B3_INIT_ONLY_PAIRED_PROTOCOL且真实S0零分支=PTQ首动作逐位一致，micro重叠不加。已自动接首50 PTQ，M0 revision15/supervisor2739为15:40历史，后续读实际。D0完整双份1365069字节SHAcbf2506a7a7825140f35bf3ddc1930e45edf3c6b1f8c966dbcb71fe4b1b2881f，43文件/44成员；micro完整双份81810689字节SHA0d24627d6627b921f3938511d23d6585c8ad1c946b0c54d9f2e08eeb14b61430，548文件/549成员/20视频。服务器backups/091-{training80-diagnostic,init-only-micro}-complete-20261016-v1，本机repo.local/archives/20261016-091-residual-vla-adaptation/同名；活动首50不含。新entry V2仍冻结source-v1，不重复旧计划；Windows不关。**
-
-**2026-10-16 新091克隆机实验授权覆盖：用户已开启091端口18575并要求先规划、精简数据盘、GitHub同步后实验；hostname autodl-container-dfbc4bb0ff-1e85dd94与可信ED25519已核验。主线两方向为残差补偿方向与VLA适配，先补A4 PTQ/SVD-init-only机制参照、诊断既有checkpoint，再单变量覆盖/动作敏感方向/C-SQ门禁；新会话20261016-091-residual-vla-adaptation-v1，旧046/091完成计划不重跑。旧SVD激活缓存仅在本机完整逐文件备份及路径/无占用门禁后删除；7B/原始观测/参数/视频/portable archives保留，GitHub备份规划/代码/小结果与清理回执。新候选12GiB/运行6GiB，实时5h15%备份/10%原生关当前091/留3%；15分钟活跃心跳。Windows关机授权已撤销，本轮不关本机。详见同轮RESEARCH_PLAN_CN.md。**
-
-**2026-10-16 046收尾完成覆盖：正式Z2/450、S426/450；完整服务器/本机归档、920视频和源码及GitHub51d11a2远端SHA均核验。北京时间01:41:32执行046原生关机取得execute=true/supervisor757回执，SSH随后远端关闭；平台OFF/停计费未独立核验。automation已PAUSED。本机Windows关机已按用户最新指令取消，保持开启，未请求Windows关机。详见同名results/closure-complete-v1.json。**
-
-**2026-10-16 最新用户指令覆盖：用户明确“仅取消本机关机，046按收尾约定关闭”。本轮Windows关机授权已撤销，本地电脑保持开启，禁止执行本机关机helper；046仍按完整归档/本机副本/分析/GitHub远端SHA核验后原生关机，取得execute=true回执并暂停心跳。覆盖本文件所有此前相反本机关机授权。**
-
-**2026-10-16 046完整会话双份封存覆盖：正式Z2/450、S426/450，424救回0新增失败、任务经验95%[90.667,97.333]pp。最终自包含集合服务器/root/autodl-tmp/qvla-repro/backups/046-b3-initialization-final-20261016-v1，本机repo .local/archives/20261015-046-quant-finetuning/同名，逻辑3996197207字节，10个核心文件、六完整阶段包、920原始视频、358源码、531补充成员和两Git bundle均SHA/恢复验证通过；INDEX SHAef0341f630e08a66ef902d645d0b50f1679101aa3d713d8c2a31b02ba961abcb。本机硬链接权限不足，完整集合使用复制压缩包；服务器硬链接集合不计额外物理副本。研究bundle固定1d7da54，root bundle852d350，7B仅服务器完整checksum。GPU空闲，后续新候选资源/门禁不足，收尾中；原生关机/PAUSED/完整总结/本机关机仍须依次完成。**
-
-**2026-10-16 046正式450完成覆盖：五正式片全部exit0/严格配对/finite门禁通过；Z2/450（0.44%）、S426/450（94.67%），424救回0新增失败、任务经验95%[90.667,97.333]pp、McNemar p4.61649e-128。GPU已空闲，控制根STOP_NEW_GPU已写。最后40–49完整双份/backups/046-b3-reset-40-49-complete-20261016-v1，本机.local同名，689037579字节SHA1ba0d07f9c9a80a5fb2a8c265deff8b8956f4d61a94a3ef735fb22c59ce2858f，4833项SHA/4834成员、200视频过。六包索引已齐；完整会话集合/两份Git bundle/覆盖缺口/本机恢复和原生关机仍待最终门禁。新候选12GiB不满足且后续方法门禁未通过，按完整备份后关046；用户本轮Windows关机授权有效，全部收尾关键步骤成功后执行，不继承未来。**
-
-**2026-10-16 本轮046本机关机授权覆盖：用户明确“本轮运行结束后帮我关闭本地电脑”。授权仅当前20261015-046-quant-finetuning-v1完整运行有效，覆盖本轮此前“不关Windows”，不继承未来。固定顺序：确认全部本轮实验终止/GPU空闲；核验服务器完整持久盘归档、本机完整副本、同名reports/results分析及固定zsure27/VLA-Quant远端SHA；执行046原生关机并取得execute=true回执；本轮automation PAUSED；向用户发送完整结果/备份路径/Git提交/远端关机回执和本机关机即将执行摘要；随后立即请求Windows原生关机。任一关键备份/GitHub/远端关机失败则不关本机，保留数据并继续处理或通知，不再重复请求许可。不得提前关闭仍承担监控/下载的本机，不自动开机/开卡/登录控制台/用重置券/删唯一数据。授权回执同名results/windows-shutdown-authorization-v1.json。**
-
-**2026-10-16 046 reset30–39完整双份归档覆盖：服务器/backups/046-b3-reset-30-39-complete-20261016-v1及本机repo .local/archives/20261015-046-quant-finetuning/同名目录，685081029字节SHA06f3f20ebbf472acf9708d6964ae980c2da23bd7bec16fade37e0cd31cfd3aaa，4791项SHA/4792成员及200原始视频全过；活动40–49不含。累计350 Z2/S334、332救回0新增失败，当前最后40–49运行。最终集合方案见同轮FINAL_ARCHIVE_SET_PLAN_CN.md；服务器root短HEAD bundle closure-materials-v1/VLA-Quant-852d350.bundle已验证SHAe134858c069064667c1a79c05016ed99bbd7249cd06b66065ca4586dde211bd2，尚未最终封存/关机。本轮不关Windows。**
-
-**2026-10-16 046累计350与最后分片覆盖：reset30–39三阶段exit0/配对硬门禁完成，本片Z0/S95各100；累计350为Z2/S334，332救回0新增失败，任务经验95%[91.714,97.714]pp。当前唯一活动B3-continuation-v1/reset-40-49/plan.json，SHA01fc357c712a3a3965b89c286293acce18bbbd0f48786ee310d06a6d29785938，status同目录control/20261015-046-quant-finetuning-v1-reset-40-49/status.json；00:16:21启动supervisor46423，实测revision3/Z侧wrapper46424/GPU46425仅历史。00:14:44当前task API primary剩87%/reset1792095433仅历史。30–39完整200视频增量服务器已完成，本机仍在下载验证，不能提前称双份。本轮不关Windows。**
-
-**2026-10-15 046 reset20–29完整双份归档覆盖：服务器/backups/046-b3-reset-20-29-complete-20261015-v1及本机repo .local/archives/20261015-046-quant-finetuning/同名目录，682350520字节SHAd044dee2fcb755080de58208f63b85d6abce49a30920069f70ab7229b6764d74，4780项SHA/4781成员与200原始视频逐项过；活动30–39不含。累计250 Z2/S239，当前30–39 RUNNING revision3，35871/35873仅启动历史。首50与10–19已固定tar/本机/原始逐文件复核后清理非唯一copied payload暂存，全部原始数据/服务器tar/本机完整副本保留，回收约1.109GB，盘9583177728字节仅历史；索引和回执同名results已更新。窗口resetsAt1792064715→1792095433已实际刷新，继续实时15/10/3无豁免；本轮不关Windows。**
-
-**2026-10-15 046恢复续片覆盖：reset20–29三阶段exit0/配对门禁完成，本片Z1/S95各100；累计250 Z2/S239，237救回0新增失败、任务经验95%[92,97.6]pp。当前唯一活动B3-continuation-v1/reset-30-39/plan.json，SHAe90771f255576b64e798f45aa261f962b147ef6c8f21b2de38cade363194c0a0，status同目录control/20261015-046-quant-finetuning-v1-reset-30-39/status.json。北京时间23:17:59已启动supervisor35871，实际revision3/Z侧、wrapper35872/GPU35873、显存16375MiB仅历史。实时primary used2%/剩98%、reset1792095433相对1792064715刷新已确认，仅当次历史，继续15/10/3门限。20–29完整200视频归档正在生成，暂不冒称双份完成。只剩40–49一片按门禁/资源顺序接，不扩routing；本轮不关Windows。**
-
-**2026-10-15 046 reset10–19完整双份备份覆盖：服务器/backups/046-b3-reset-10-19-complete-20261015-v1及本机repo .local/archives/20261015-046-quant-finetuning/同名目录，679500413字节SHA2cec7fcaf7059a61b18c8d25a6df97947801a61524fdc929b76a264a97e0da56，4777项SHA/4778成员及200原始视频逐项通过；活动20–29不含。全部已完成阶段索引同名results/COMPLETED_STAGE_BACKUP_INDEX_V1.json。累计150 Z1/S144，当前仍20–29运行。阶段增量不能直接冒充最终shutdown fallback，最终须完整会话+root短HEAD bundle+双份/Git核验。本轮不关Windows。**
-
-**2026-10-15 046累计150及当前续片覆盖：reset10–19三阶段exit0/配对门禁完成，Z0/S95各100；累计Z1/S144各150，143救回0新增失败，任务95%[92,98.667]pp。当前唯一活动B3-continuation-v1/reset-20-29/plan.json，文件SHA7ba43a6a179e9d0cf6bd02983884b725ccbc5927020b7d696a6da54c1038cc3c，status同目录control/20261015-046-quant-finetuning-v1-reset-20-29/status.json；09:30UTC revision3/Z侧，supervisor21885/GPU21887仅历史。reset10–19完整200视频增量在生成，不冒称双份完成。09:27API剩30%仅历史；继续实时15/10/3门限，不因成绩方向改条件，不扩routing，不关Windows。**
-
-**2026-10-15 046首50评测完整双份归档覆盖：服务器/backups/046-b3-initialization-first50-complete-20261015-v1与本机repo .local/archives/20261015-046-quant-finetuning/同名物理目录，399964959字节SHA9e3b38020e743c083c6712a72cdaf8fd48e6c9134b187fc1802c429c0ebd1952，2995项SHA/2996成员、120原始视频逐项通过；排除活动reset10–19。训练完整包另有范围补充V2，附带35视频但非完整评测；原tar保持。首50Z1/S49、48救回0新增失败；活动续片仍reset10–19，按前片门禁/实时额度/盘顺序接后片，不能因旧first50 terminal误重跑。本轮不关闭Windows。**
-
-**2026-10-15 046首50完成及续片覆盖：Z=1/50、S=49/50，48 rescue/0 break、任务经验95%[90,100]pp，PASS_B3_INITIALIZATION_PAIRED_PROTOCOL；micro重叠不加总。两侧训练/实际命令/严格输入配对/finite通过，Z的448个因子均真实更新；新S与旧B3权重不同，不拼接历史成绩。当前唯一活动B3-continuation-v1/reset-10-19/plan.json（SHA8767cb6907d99142aa64910b00282e3de7d02d2499969131433edba84b1fedc9），status同目录control/20261015-046-quant-finetuning-v1-reset-10-19/status.json。08:52 UTC实测RUNNING revision6/S侧，supervisor11229仅历史，后续读实际；其余20–49按原顺序先分析/实时额度/盘再注册。训练完整双份756868488字节SHA d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39，另意外含35个完成视频，旧“活动评测全部排除”过宽，范围补充V2保留原包不变；首50完整120视频评测增量另建。当前不关闭Windows，不扩routing。**
-
-**2026-10-15 046训练完成与完整训练增量覆盖：B3-Z/S两侧1000步及PASS_B3_INITIALIZATION_TRAIN_PAIR已完成，参数/冻结底座/教师/训练序列/保存重载均过；micro协议过，Z0/10、S10/10（同reset5，重叠正式，不加总、不按方向续跑）。新S与历史B3的448个tensor均非逐位相同，原因尚未识别，旧425/450不能替代新S。最新实测first50-standard-zero RUNNING revision30/GPU5228/盘12962693120字节均为本轮阶段检查历史。完成训练完整增量服务器/backups/046-b3-initialization-training-complete-20261015-v1，本机repo .local/archives/20261015-046-quant-finetuning/同名；756868488字节SHA d0956ebefb3adb03d5b4b1cb057c5281e208b54a4b946b4cd109f1dd9121bf39，664项SHA/665恢复成员/662payload/6wrapper双份核验全过。标准backups junction新建失败，采用已有物理.local替代，未改junction；活动micro/首50不含，最终仍须评测增量。分析见同轮TRAINING_ANALYSIS_CN.md。实时primary fallback15:39 used35%剩65%/reset1792064715仅历史；后续重读，仍15%备份/10%关046/留3%，本轮不关Windows。**
-
-**2026-10-15 046 GPU烟雾通过覆盖：B3-Z与B3-S各10步GPU烟雾、PASS_B3_INITIALIZATION_SMOKE_PAIR全部通过；相同19988480参数、冻结底座、教师标签与训练序列SHA、零分支与保存重载均通过。最新实测首50计划RUNNING revision12，train-1000-standard-zero，已自动接正式1000步；暂无新闭环成功率。当前plan/status路径不变，supervisor2156为启动历史，后续读实际进程；不要将两份已通过烟雾重跑或把它们加进正式步数。完整回执同名results/experiments/p2-shared-peft/20261015-046-quant-finetuning/train-10-pair-gate.json；启动证据Git06c4d23已远端核验。**
-
-**2026-10-15 046 GPU启动实测覆盖：R0已完成，091同步归档22244/15389逐文件及完整checkpoint/B3输入通过；EGL-v2实际120短回合观测重复性全部通过，818秒。新B3-Z/S source-v2逐文件358项SHA和3项CPU契约通过，原SVD初始因子及教师cache来源核验通过。已启动本轮B3-plans-v1/first50-plan.json：15:14实测RUNNING revision3、train-10-standard-zero，supervisor2156/GPU2158/显存16295MiB/盘14871298048字节，仅当时历史。正式计划是两侧10步→各1000步→micro→各首50及配对硬gate，共12阶段；累计目标各450，首50包含于450，micro不加。下一阶段续片先分析并读实时额度，不按成绩方向选择。固定GitHub预注册fc3e451已远端核验；15分钟046心跳ACTIVE，旧091心跳保持PAUSED。本轮不关闭Windows。当前有效状态路径/root/autodl-tmp/qvla-repro/control/20261015-046-quant-finetuning-v1/B3-plans-v1/control/20261015-046-quant-finetuning-v1-first50/status.json，旧R0失败状态不代表当前GPU失败。**
-
-**2026-10-15 046新一轮量化微调执行覆盖：用户明确046已启动、已同步091数据并要求按计划实验；当前端口38230/hostname autodl-container-90824aab47-6dc00ae3已实测核验，ED25519匹配既有可信key。本轮先B3-Z/S固定A4、224语言rank8、同80观测/教师/顺序/1000步；新版本入口与独立实验卡在reports/experiments/p2-shared-peft/20261015-046-quant-finetuning/PRE_RUN_CARD_CN.md。091完整归档22244+15389项和完整checkpoint/B3输入复核通过；R0真实评测顺序观测探针v1因空EGL设备初始化失败，v2显式设备0运行中，未将CPU/设计当GPU通过。新初始化3项CPU契约已通过。只启动本轮新046计划，不重跑旧B4/B5，不扩routing；后续依10-13研究计划和各门禁。活跃本轮15分钟心跳已ACTIVE，未变静默；只看实时五小时15%备份/10%原生关当前046/留3%，起跑12GiB/运行留6GiB。当前没有Windows关机授权，不自动开机/开卡/用重置券/删唯一数据。**
-
-**2026-10-13 量化微调研究计划覆盖：用户要求仔细审阅历史实验/对话，研究B3标准零输出LoRA（A随机/B=0，不是零输入）与Response-SVD同预算对照、执行敏感残差方向与动作目标、C模块SmoothQuant激活量化恢复及A/QVLA差距。详细计划repo reports/experiments/p2-shared-peft/20261013-quant-finetuning-research-plan/REPORT_CN.md；C-SQ-v1独立身份C0–C6=W16A16只平滑/W8A16/W8A8/W4A8/W4A4/W2A4/W2A2，交叉W4A16/W16A8/W16A4另列，旧PEFT C0–C3保留。此授权覆盖旧SQ须Router成功的排序；先数值等价/W-A拆分/梯度重载，再C3/C4 PTQ-Z-S恢复，C5/C6条件性。B3训练为40回合80早期观测，独立SVD校准80轨迹；时间覆盖、初始化、目标分别单变量。当前只完成计划与设计登记，不声称代码/GPU已实现，不启动GPU或重启091；下一轮用户自行开机告知，心跳维持PAUSED，不继承Windows关机许可。当前只Spatial十任务/官方500、训练开发排除0–4后450；A0是官方语言AWQ+自写视觉适配参考，不是QVLA通道分配实现，论文4.2pp差距未完全识别。权重数值有损不强制成功率下降；不得调差追93%。保留原数据/holdout角色，报告配对成败、任务区间、实际字节/显存/延迟与教师成本。**
-**2026-10-13 研究方向覆盖：用户要求后续重心转向VLA量化微调方法优化，暂不继续扩展routing；保留B5作为诊断证据。task-only实际恒选B4且450成败与B4一致，不是B3。B5相对B4净+1/450=.22pp、区间跨零；固定专家事后互补空间10/450=2.22pp，不能作为可部署选择输入或动态上界。后续优先固定底座/数据/预算的单模型微调恢复、训练分布与动作目标优化，同时报告配对成败、任务区间、实际参数/字节/显存/延迟。详见repo docs/QUANT_FINETUNING_FOCUS_20261013_CN.md。091本轮已结束、心跳PAUSED；本条不启动GPU，下一轮用户自行开机告知，不继承本机关机许可，保持历史结果与holdout角色。**
-**2026-10-13 08:18 本轮091 GPU收尾覆盖：Spatial六模型各450及random50正式2750已全部完成，BFA0433/439、B3/B4/B5/task-only425/435/436/435，B5对最佳固定仅+1(.22pp)、区间跨零，暂无明确净优势；论文W4差距仍未完全识别，不称QVLA严格复现。完整会话服务器/backups/091-gpu-b5-final-20261013-v1及本机标准P5同名副本，4,201,438,552字节SHA31ae496b9e14ba7573a703c7123cc8b690e5ffbde33c9b99fed965fdee8121ad，22,244主清单/15,389数据清单及1140原始视频核验通过；7B基座只保留服务器+既有完整checksum，本包不称完整本机checkpoint副本。最终59项小补充包和FB92+7dac Git恢复通过。091原生执行回执execute=true、supervisor837，08:18:16后SSH远端关闭，平台OFF/计费未独立核验；心跳PAUSED（GPU结束后ACTIVE更新被自动审批拒绝，采用暂停安全替代）。当前只完成本轮最终消息与已授权Windows关机，不重启/开卡/重跑结束计划。本机关机许可仅本轮；下一轮须用户自行开机告知，保持原结果与holdout角色。**
-
-**2026-10-13 本轮091本机关机授权覆盖：用户明确要求本轮运行收尾结束后关闭本地Windows电脑。此授权仅适用当前091基线归因/B5完整运行，覆盖本轮此前“不关闭Windows”，不继承到未来运行。继续既定实验与实时额度门限；最终先确认所有实验终止且GPU空闲，核验服务器持久盘完整归档、本机完整副本、同名reports/results分析和固定zsure27/VLA-Quant远端SHA，执行091原生关机并取得执行回执，再将本轮automation设PAUSED，向用户发送完整结果/备份路径/Git提交/远端关机回执及本机关机摘要，随后立即关闭Windows。任何关键备份、GitHub同步或远端关机失败则不关闭本机，保留数据并继续处理或通知。不得自动开机/开卡、登录控制台、使用重置券或删除唯一数据。**
-
-**2026-10-12 091开卡与20:18额度覆盖：用户已开启091 GPU并授权先实测BF16/A0与QVLA差距归因，再B5。实际4090、128GiB内存、16CPU、持久盘约20GB，hostname与既有可信key均核验。执行冻结eb19618的b5-pilot-091-20261012-v2，baseline-and-bank-smoke已启动；不把抽样CPU PASS或修正种子等同差距归因。当前PRIMARY=P0真实输入与GPU协议桥接，门禁通过再B5。用户最新要求北京时间20:18刷新前首次15%/10%只保存进度并保持091/已注册计划；必须get_usage_limits确认resetsAt从1791807485实际刷新，刷新后再次15%备份/10%关当前实例/留3%，全部任务完成可提前收尾。不可修复阻断仍按报告备份关实例避免空跑。不得继承CPU关机后的PAUSED状态，活跃心跳15分钟，未变静默；不关闭Windows。**
-
-**2026-10-12 CPU审阅收束覆盖：091实际W4 profile与完整checkpoint SHA、422目标形状和每目标4行整数码/重建均通过；部署OFT仍为旧env.seed→seed_all（fe37e809），已保留旧环境并创建独立修正overlay（a4061279）。不能将此修正直接解释为论文4.2pp差距；作者完整AWQ配方仍未知。真实环境/processor探针在2GiB无卡实例被系统Killed，CPU阶段不得继续反复重试，不宣称实机门禁通过。B5新增共享A4冻结B3/B4 bank、策略裁剪图402维特征、原始精度教师回放、分回合训练0–3/开发4/评测5–49、500步router与task-only控制及不可变计划；8项B5、4项探针、9项基础CPU契约通过，正式GPU数据和参数尚未生成。下一次用户开卡且资源足够后，先真实输入探针、BF16/A0配对微测/首50及协议桥接、bank query10 GPU等价，再采集/标注/训练/评测。正式包含最佳固定和task-only共2750回合，微测不加总，不能按成绩方向选择续跑；首次GPU≥12GiB持久盘且留6GiB，模型或AWQ/W2语义改变需重训/重新注册。收尾恢复旧完整归档、本机核验、GitHub和当前CPU产物后关091；Windows不关闭。**
-
-**2026-10-12 091无卡审计与额度覆盖：当前先完成QVLA/BF16/AWQ-W4内容/协议审计，再B5前置，遵循docs/091_CPU_AUDIT_RESUME_20261012_CN.md。091端口18575、hostname autodl-container-dfbc4bb0ff-1e85dd94；用户已提供并核对ED25519 SHA256:y2DhrdHAWfTCoY9uLz0ve3EzTKYtWNBBWm80QUTOkXg，known-hosts改用Temp/vla-known-hosts-091-audit-20261012，密钥id_ed25519_vla_014。无GPU、cgroup2GiB/0.5CPU，不加载完整7B。用户指定北京时间15:16刷新，首次15%/10%只保存本机/持久盘/Git进度、保持091开启；实时确认五小时窗口刷新后继续，下一次15%备份/10%关当前实例/留3%，任务完成可收尾。等待按15分钟低频心跳静默检查，不使用历史额度、不自动开卡、不关闭Windows。旧B3/B4来源绑定文件保持字节，新增版本化入口；CPU通过不等于GPU或论文严格复现。**
-
-**2026-10-09 300回合覆盖：用户指定下一轮B3/B4各300正式闭环回合，先在已开机但无GPU的046完成旧归档双份核验、真实CPU数据范围审计、版本化代码/计划与PRE-RUN CARD；无GPU时绝不运行烟雾、训练或评测。新入口`scripts/prepare_b4_pair_v3_plans.py`与`configs/experiments/b4_eval_pair_v3_20261009.json`覆盖旧v2的200回合安排。B3/B4在开发reset20–49各300，分50+50+100+100，reset20配对微测重叠不加总；A4/BF16/A0历史同输入参照仅reset20–39各200，严禁写成300同规模比较。B4训练定义不变；真正有卡后先10步GPU烟雾、1000步训练和协议门禁，再顺序跑完并完成分析/备份/GitHub/当前实例关机。门禁按协议、资源、额度，不能按成功率方向挑选；旧数据保留。无合规CPU/GPU工作则按约定备份关实例避免空跑。**
-
-**2026-10-09数据范围与高效验证覆盖：student-state80训练与历史评测是同一十任务；不同reset仅支持同任务新初态开发恢复，不等于未见任务泛化。B3训练初态SHA与开发20–39无交集，但完整观测内容待补齐旧归档再验。下一次开机先完成旧收尾及真实CPU数据内容审计；B4注册用scripts/prepare_b4_pair_v2_plans.py，正式只新跑B3/B4各200，A4/BF16/A0历史匹配输入参照单列；保留10步烟雾、配对微测、首50硬审计与所有rescue/break。数据交集、任务指令映射或协议失败不放行GPU。8/2任务留出仅为单独DIAGNOSTIC设计，要重新训练同子集B3-T/B4-T并重建train-task-only SVD，基础OFT/冻结PTQ已有任务暴露不得声称端到端未见任务。历史开发数据不重命名为final；offline_final_holdout不读标签、不改角色。执行docs/DATA_SCOPE_AND_EFFICIENT_EVALUATION_20261009_CN.md；后续仍低频15分钟、无合规工作即备份关实例，不继承旧本机关机授权。**
-
-# 2026-10-09 B4联合微调与下次开机顺序覆盖
-
-用户授权B4=A4全合格W2底座＋224语言和196视觉transformer Linear的rank8 LoRA联合训练；PRIMARY=P2，主问题B4−B3闭环增量。执行docs/B4_NEXT_BOOT_RUNBOOK_20261009_CN.md及独立PRE-RUN CARD。精确复用B3的80观测、BF16教师cache、训练前Response-SVD语言初始化；视觉零输出，联合1000步。不得从已训练B3续训、重采样或改量化配方；新增范围同时增加容量/计算，只解释工程总效果。独立注册configs/model_registry_b4_v1.json，保持旧B3哈希绑定源文件字节。
-
-下次用户自行开机后，先补齐046完整本机归档，核验服务器13项/18494项与本机全部文件、完善旧结果/收尾报告，推送固定zsure27/VLA-Quant并核验远端SHA，取得PASS_PRIOR_CLOSURE；之后才注册B4、真实GPU10步烟雾、1000步训练和配对评测。B3/B4/A4/BF16/A0各200，官方开发reset20–39，分50+50+100，微测不相加，不称独立复现。续跑门禁只依据协议与资源，不按成绩方向选择。P4/P5/Router/holdout继续锁定。
-
-当前7项CPU契约通过，真实GPU烟雾待开机；046由用户手动关闭，本机完整归档未通过。启动前≥12GiB持久盘空闲并留6GiB归档余量；视觉反传显存需实测。按实际hostname/端口同步收尾工具；活跃期约15分钟低频读status/runner/GPU，无变化静默，禁止频繁唤醒等待。约15%实时五小时额度备份、约10%关当前实例、留3%；无合规项或不可修复问题需审阅则报告后备份关机，不空等。旧Windows关机许可不继承。
-
-# 2026-10-08 B2/B3 前置执行覆盖
-
-B2/B3当前实现与CPU契约见`docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md`和两张20261008 V2 PRE-RUN CARD；GPU烟雾尚待实机，不把CPU PASS当GPU PASS。B2=A3+冻结B1+196个视觉transformer Linear增量rank8；B3=A4+新32-block语言rank8，必须单独采集A4 student-state80。使用版本化入口与不可变计划，10步烟雾通过才正式1000步；正式训练重新从烟雾前初始化开始。规范装载必须有artifact/profile/训练manifest SHA，旧B0/B1门禁不放宽。微测与first50重叠不得叠加样本；首片之后硬停止并分析，不默认启动remaining250。只在用户自行开机后绑定当前hostname/端口，先同步收尾工具，再启用本轮约15分钟低频心跳；无合规项立即备份关机。Router/P4/P5及holdout继续锁定。历史本机关机许可不沿用。
-
-# 2026-10-05 阻断时避免付费实例空跑
-
-若实验出现无法在当前轮解决的技术问题，或继续运行必须等待用户审阅或选择，立即向用户清晰输出问题、已核验事实、可行方案及下一步门禁；同时按收尾协议保存原始产物、分析、服务器持久盘与本机副本，推送并核验固定 `zsure27/VLA-Quant` 的远端 SHA，关闭当前已核验实例并暂停本轮心跳。不得为等待确认而让 GPU 或付费实例长时间空闲。任何关键备份或远端关机失败时报告失败与现存副本，不关闭本地电脑；本地电脑仅在本轮用户明确授权且全部前置核验成功后关闭。此规则适用于以后所有实验，不能用未完成的审阅门禁放行 GPU 长实验。
-
-# 2026-10-05 模型命名与严格数据审计覆盖
-
-BF16保持不变；A0=W4、A1=16L、A2=14L、A3=12L/旧C0、A4=全合格AWQ W2（语言/DINO G64、SigLIP G128）；B0=旧C3、B1=旧LW、B2=A3+冻结B1+视觉增量、B3=A4+新语言32-block LoRA。后续按 `configs/model_registry_v1.json` 和 `docs/MODEL_NAMING_AND_DATA_AUDIT_20261005_CN.md`。旧实验阶段A1/A2写作EVAL_REPLICATION/TRAIN_ORDER_REPLICATION，原日志不改。
-
-用户已授权语言W2全范围扩展及预注册B2/B3探索，覆盖此前“所有PEFT只能blocks18–19”的当前范围描述；B0仍是18–19，B1是20个语言W2 blocks。B2/B3尚未通过实现与烟雾门禁，禁止直接长跑；Router/P4/P5仍锁定。新规范评测必须有model-id、注册profile/adapter SHA和训练manifest，拒绝训练reset与评测重叠。恢复训练必须在模型加载前通过role、轨迹划分和策略可见观测内容检查，路径/文件名不同不构成不重叠证据。
-
-历史W4 AWQ32校准与后续切分交叉核对为18条peft_train、8条router_dev、6条offline_final_holdout。因此75条仅是PEFT留出，不是全PTQ/基础checkpoint流程留出；其他profile和原checkpoint训练来源未完全排除。保留原切分/模型，不擅自重校准。未来独立性主张必须排除所有profile来源并建立实际新条件，不能把剩余69条自动命名最终盲测。禁止查询旧holdout前向/标签。
-
-B1的H17处于部分adapter之后，仅作P2.5分析，不可作为选择专家前的base-only Router输入。跨模型比较锁定共同task/reset/初态SHA/seed/protocol，报告rescue与break两数及任务区间，不拼历史500与当前300。最新开发300：A3=244、B0=260、B1=284、BF16=292、A0=294；历史411/412、430/431分来源保留。
-
-# VLA-Quant experiment admission
-
-## Next boot A1/A2 audit (2026-09-30)
-
-Read [the next-boot audit and runbook](docs/NEXT_BOOT_A1_A2_AUDIT_AND_RUNBOOK_20260930_CN.md) before starting a new instance plan. The previous env_seed=1 condition and old launcher are invalid by default. A1 requires a genuinely observable, reproducible evaluation condition, actual model-input hashes, source/data-overlap audit, task validity, and a protocol-only first-shard gate. Perturbing reused official initial states is development stress evidence, not independent reset replication; cluster such analyses by base reset. A2 fixes global seed and Response-SVD and changes only the separately named distillation sample-order seed after a valid independent A1. Do not use post-divergence H17 as a same-state C0/C3 label. If no admissible condition exists on a paid instance, archive and shut it down rather than idle.
-
-## Future A1/A2 minimal pairing (2026-09-29)
-
-For future A1/A2, run only strictly paired C0 versus C3 on a demonstrably new observable evaluation condition. C1 is excluded; C2/14L and BF16 are separate reference questions, not required replication controls. Record episode-level rescue (C0 fail, C3 success), break (C0 success, C3 fail), their net, task and preregistered within-task context strata, uncertainty, and costs. A2 may change only the C3 training random seed after a valid A1. The old five-configuration 110 run remains immutable historical evidence and `A1_INVALID_CONDITION`. Rescue and break alone do not prove predictable chunk-level contextual routing. Follow [the new protocol](docs/A1_A2_MINIMAL_REPLICATION_AND_CONFLICT_PROTOCOL_20260929_CN.md); P4/P5 remain locked.
-
-## Mandatory evaluation smoke gate (2026-09-29)
-
-Before any long closed-loop evaluation, follow [the evaluation smoke gate](docs/EVALUATION_SMOKE_GATE_20260929_CN.md). A PRE-RUN CARD and source audit must establish the exact evaluator call order, fixed artifact hashes, one changed variable, and non-overlapping data. Run a small no-policy condition probe in that exact order, with same-condition repeats and policy-visible query0/after-eight-step hashes. Then run a paired policy micro-rollout and inspect actual commands, manifests, and traces. Stop at a first-shard gate (at most 50 episodes/configuration) before scheduling further shards. A failed condition or unchanged trace blocks expansion; identical success labels alone do not prove invalidity. A probe PASS is not a long-run approval. On an active paid instance with no admissible next step, archive and close it under the quota protocol. Do not run seed-only A1 again or start A2 until a truly new observable condition passes these gates.
-
-## A1 seed validity gate (2026-09-29)
-
-The 110 run recorded `env_seed=1` and 450 episodes per configuration, but its C0/C1/C2/C3 success labels were identical to the previous 450-episode `env_seed=0` run for every task/reset pair. The official initial-state hashes were also unchanged. Three matching C3 shard boundaries had byte-identical policy traces. The original fixed-action seed probe omitted the evaluator's `seed_all(model_seed)` call after `env.seed`; an evaluator-order probe found identical query0 and subsequent eight-step observation hashes for all ten sampled tasks. Classify this run as `A1_INVALID_CONDITION`, a protocol regression, not independent evaluation replication. Do not launch A2 training, another seed-only GPU repeat, Router, or P4/P5 until a versioned, single-variable evaluation condition demonstrably changes the observations under the actual evaluator order and passes data-overlap audit. See `reports/experiments/p2-shared-peft/20260929-110-a1-envseed1/`. Instance 110 received a native shutdown execution receipt; platform OFF was not independently verified, and its heartbeat is paused.
-
-## Low-frequency continuity for every future experiment (2026-09-29)
-
-Run each approved immutable stage plan through the recoverable server-side sequential supervisor. While a user-opened instance is actively experimenting, use a roughly 15-minute thread heartbeat to read only the supervisor status/revision, runner, and GPU processes. Stay silent when state is unchanged; inspect episode logs only for a stage event, failure, idle GPU with pending work, or quota closure. Do not repeatedly wake the conversation with one-minute sleeps or manual polling to wait for time to pass. A completed stage must be analyzed and the next admissible preregistered plan started within one heartbeat cycle; if none exists, archive and shut down the paid instance. Check the current five-hour quota at stage boundaries and near the closure threshold. Around 15% remaining, finish server/local/GitHub backup and SHA checks; around 10%, stop new experiments and shut down the current instance with at least 3% reserved. Pause the heartbeat after closure so it is silent between runs. A heartbeat does not guarantee quota checks or shutdown when the client is unavailable. Apply this rule to every future instance and session; use the current session's actual host, paths, and shutdown authorization.
-
-Before proposing, coding, launching, or extending any GPU experiment, execute the full [Research Governor](docs/VLA_RESEARCH_GOVERNOR_20260926.txt). This is a required admission gate, including for a resumed or automated stage.
-
-Read the current master plan, experiment log, latest accepted session report, canonical baseline table, and stage gate decision. Record the current primary stage, locked stages, and one main research question. Resolve conflicting results by source audit before using them as a baseline.
-
-Save a pre-run card with hypothesis, one changed variable, fixed control, primary metric, positive and negative decisions, data split, backbone hash, output directory, cost estimate, and stopping condition. Classify each run as contract, diagnostic, development, or final evaluation. Do not run an experiment if either outcome would merely trigger another similar variant.
-
-After each run, save a post-run decision stating what is supported, what remains confounded, whether the stage or branch advances, and the single next question. Apply the project's quota, backup, and shutdown rules independently of scientific admission. When no admissible experiment remains on an active paid instance, archive and close it rather than waiting for user input.
-
-Current primary stage: P2.5 closed-loop alignment diagnosis. Exact 12L backbone, blocks 18–19, rank8 Recovery-LoRA. P4 experts and P5 Router are locked. The 50-episode pilot has no observed 12L-to-14L headroom and cannot yield a W4 recovery fraction. See [P2.5 plan](docs/P2_5_ON_POLICY_ALIGNMENT_PLAN_20260926_CN.md) for the current evidence and allowed controls. New canonical evidence may change this state only through a versioned gate decision.
+- [近三轮总结及短期计划](reports/experiments/p2-shared-peft/20261017-three-rounds-summary-and-short-plan/REPORT_CN.md)
+- [探索策略](docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)
+- [GitHub备份策略](docs/GITHUB_BACKUP_POLICY_20261017_CN.md)
+- [云端恢复索引](backups/github/README_CN.md)
+- [完整历史约定](docs/archive/AGENTS_REPO_BEFORE_20261017.md)

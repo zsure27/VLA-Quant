@@ -1,10 +1,12 @@
 # 运行、恢复与收尾入口
 
-当前B2/B3新入口为`prepare_extended_peft_plans.py`（冻结两份实例专属计划）、`train_extended_peft.py`、`prepare_a4_student_state80.py`、`audit_extended_peft_eval.py`与`run_locked_peft_stage.py`。见[开机执行卡](../docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)：CPU契约就绪，真实GPU烟雾待执行；不沿用历史端口，不绕过首片gate。
+当前没有活动实验：091已原生关机、心跳暂停；B1时间覆盖以正式各250回合收束，旧续片不再恢复。下次用户开启实例后，先依据[近三轮总结与短期计划](../reports/experiments/p2-shared-peft/20261017-three-rounds-summary-and-short-plan/REPORT_CN.md)和[小规模探索策略](../docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)为具体问题选择入口，不批量执行历史脚本。
+
+历史B2/B3工具为`prepare_extended_peft_plans.py`、`train_extended_peft.py`、`prepare_a4_student_state80.py`、`audit_extended_peft_eval.py`与`run_locked_peft_stage.py`。[当时开机卡](../docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)保留来源，不代表这些已完成阶段仍待运行。B1真实评测使用其对应冻结版本和独立artifact身份，不能直接借旧B3 loader代替。
 
 先读根目录 [README](../README.md) 的实验范围。服务器上执行脚本前核对当前实例、GPU、checkpoint、profile、冻结评测器、官方初态和五小时额度；每次使用有限分片和独立输出目录。
 
-以后每轮实验默认用 `vla_stage_supervisor.py` 执行不可变顺序计划，并只在该轮活跃期间启用约 15 分钟的对话心跳。心跳只查 `status.json`/`--status`、runner 和 GPU；状态不变时静默，不用每分钟 `sleep` 唤醒对话计时，也不轮询逐回合日志。阶段事件、失败、GPU 空闲而计划未完成时及时深入处理；有合规下一计划须在一个心跳周期内接续，无可执行项则分析备份并关当前实例。五小时额度约 15% 完成服务器、本机、报告与 GitHub/SHA 备份，约 10% 停止新实验并关机，至少预留 3%。关机后暂停本轮心跳；新实例必须重新绑定实际身份和路径。客户端不活跃时心跳不能保证独立读取额度或关机。
+每轮实验用 `vla_stage_supervisor.py` 执行不可变计划，只在该轮活跃期间启用约15分钟的心跳。心跳只查状态、实际runner、GPU与磁盘；未变静默，不逐回合轮询。预先约定探索筛查及停止条件，不默认每候选50或450回合；必要实现和数值门禁保留，只验证变化部分。额度15%停止扩展并保存、10%保存终止并确认GPU空闲后原生关当前实例，预留3%；特殊豁免须有当前用户授权。完整归档优先上传GitHub Release并逐项核验，小结果和索引推送Git；不长期保留本机全量副本。关机后暂停心跳，客户端不活跃时不能保证独立读取额度或关机。
 
 | 用途 | 入口 |
 |---|---|
@@ -14,6 +16,7 @@
 | AWQ/SQ 机制实验 | `run_awq_spatial.sh`、`run_awq_validation.sh`、`run_smoothing_ablation.sh` 及相应 `run_awq_*` 有限诊断脚本 |
 | 状态与配对审计 | `awq_scope_status.py`、`baseline_shard_status.py`、`verify_awq_scope_backup_local.py`、`verify_deduplicated_results.py`、`verify_session_manifests.py`、`validate_repository_layout.py` |
 | 归档与收尾 | `sync_vla_remote_closure.ps1`、`backup_active_diagnostics.py`、`vla_push_local.ps1`、`close_vla_session.ps1`、`vla_shutdown_remote.py` |
+| 私有GitHub归档与按需恢复 | `github_archive_store_v2.py` 上传并下载校验；`publish_private_archive_index.py` 发布小恢复目录；`restore_github_archive.py` 逐块与整包SHA恢复；`remove_verified_local_backups.ps1` 默认只检查，核验发布目录后按精确路径清理。见[恢复说明](../backups/github/RESTORE_CN.md) |
 | 本地报告重建 | `build_experiment_summary.py`，只读取已取回数据，不连接服务器 |
 
 目录职责：`qvla/` 保存维护中的模型、量化、LoRA 与评估实现；`diagnostics/` 保存只读机制分析；本目录保存执行、归档与验证入口。历史命令在报告、服务器持久盘和复现清单中按原脚本路径引用，因此保留稳定文件名，按上表选择入口；已停用或失效的命令由原路径的拒绝执行保护拦截。`scripts/verify_deduplicated_results.py` 核验全部 `results/indexes/DEDUPLICATED_FILES_*.json`；`scripts/verify_session_manifests.py --session <会话名>` 可定点核验某轮，省去每次遍历全部会话；`scripts/validate_repository_layout.py` 只解析 Git 跟踪的 JSON，不碰被忽略的完整本机归档。
@@ -24,9 +27,9 @@
 
 实例刚开机并完成 SSH 身份核验后，先运行 `sync_vla_remote_closure.ps1 -ExpectedHostname <实际hostname>`。它把备份和关机辅助脚本上传到持久盘，逐文件比对 SHA256 并执行 Python 编译检查。`close_vla_session.ps1` 在任何备份工作前也会再次执行同一预检，并接受 `-SshHost`、`-SshPort`、`-IdentityFile`、`-KnownHostsFile` 和 `-ExpectedHostname`，不再写死 107 的端口或 known-hosts 文件。
 
-`close_vla_session.ps1` 默认只预览，必须显式传入 `-Execute` 才会按身份、远端工具同步、结果备份、SHA、GitHub 认证与推送、原生关机回执的顺序执行。每次还必须显式传入 `-ExperimentModule`；报告和结果路径须为同一模块下的同名 `YYYYMMDD-session`。完整本地归档统一写入 `backups/experiments/<module>/<session>/`。脚本不验证平台控制台 OFF 或停止计费；回执与平台状态必须分开表述。当前只依据用户已开启实例的会话进行收尾，不设置定时关机或自动开机。
+`close_vla_session.ps1` 默认只预览，必须显式传入 `-Execute` 才会按身份、远端工具同步、结果备份、SHA、GitHub认证与推送、原生关机回执的顺序执行。每次显式传入 `-ExperimentModule`；报告和结果路径须为同一模块下的同名 `YYYYMMDD-session`。它是历史本机完整副本流程，不能据此认定已实现Release上传或云端验收。后续按[GitHub备份策略](../docs/GITHUB_BACKUP_POLICY_20261017_CN.md)选择匹配当前会话的归档工具，上传和远端SHA核验后清理临时本机副本。脚本不验证平台控制台OFF或停止计费；回执与平台状态分开表述，不自动开机。
 
-五小时额度剩余约 15% 时完成持久盘归档、本机副本和 GitHub 推送，并保留具体备份目录。剩余 10% 时可传入该目录及 `-UseVerifiedFallbackOnly -Execute`；脚本会跳过新的归档、报告重建和本机传输，只同步两份小型收尾工具，并由远端关机工具重新核验归档 SHA、Git bundle、GPU 空闲和 AutoDL supervisor 后发出原生关机请求。
+五小时额度剩余约15%时停止扩展并完成归档与GitHub核验，保留具体资产索引和SHA。历史 `-UseVerifiedFallbackOnly -Execute` 仅接受满足该脚本契约的完整服务器归档；它会重新核验SHA、Git bundle、GPU空闲和AutoDL supervisor，再发出原生关机请求。单个阶段包或只有上传回执不能冒充完整收尾备份。
 
 新实例预装示例：
 

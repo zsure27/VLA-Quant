@@ -1,5 +1,7 @@
 # Python 与本地环境
 __pycache__/
+.pytest_cache/
+.ruff_cache/
 *.py[cod]
 .venv/
 venv/
@@ -18,6 +20,17 @@ artifacts/
 *.bin
 *.safetensors
 *.npz
+*.npy
+
+# 完整大归档和视频使用GitHub Release附件，普通Git只保存索引与校验值。
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.mp4
+*.bundle
+*.part
 
 # 本地工具与临时文件
 .idea/
@@ -27,8 +40,9 @@ Thumbs.db
 *.tmp
 *.bak
 
-# 会话取回的完整归档统一保留在本地 backups/experiments/，不进入普通 Git。
-# Git 只保存 backups/README_CN.md 中的目录约定与各轮的小型清单/哈希。
+# 历史本机归档与新上传/下载暂存不进入普通Git；小型云端索引照常跟踪。
 backups/experiments/
+backups/github/staging/
+backups/github/downloads/
 .local/
 .codex-test-b2b3/

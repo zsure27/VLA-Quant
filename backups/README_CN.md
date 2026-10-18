@@ -1,11 +1,14 @@
 # 完整实验归档约定
 
-完整本地归档统一放在以下位置，并由 `.gitignore` 排除：
+完整实验备份优先保存在GitHub，按[2026-10-17备份策略](../docs/GITHUB_BACKUP_POLICY_20261017_CN.md)执行。
 
-```text
-backups/experiments/<module>/YYYYMMDD-<host-or-scope>-<experiment>/<archive-id>/
-```
+| 内容 | 存放方式 |
+|---|---|
+| 代码、配置、小型原始结果、分析和清单 | 普通Git提交，核验远端commit |
+| 完整压缩包、原始视频、NPZ、参数与Git bundle | GitHub Release附件，必要时分片；记录大小、SHA256与恢复方式 |
+| 云端位置与逐项验证记录 | [`backups/github/`](github/README_CN.md)中的小型索引 |
+| 上传暂存、按需恢复 | 本机临时目录，Git忽略；远端完整核验后按清单清理 |
 
-这里保存 Git bundle、代码 patch、环境锁、压缩后的完整结果、视频/大文件清单、SHA256 和恢复说明。适合 Git 的小型证据仍抽取到同名的 `results/experiments/<module>/<session>/`，分析与图表进入 `reports/experiments/<module>/<session>/`。
+本机不长期保留每轮全量归档。删除前先确认GitHub资产可取回，核验大小、SHA256和归档内容，并保存本机审计与删除回执；只出现上传成功提示或只有文件名清单不足以删除原件。凭据、私钥与令牌不进入任何归档。
 
-`close_vla_session.ps1` 要求显式传入 `-ExperimentModule`，并核对报告与结果会话名一致。归档目录不得包含凭据；没有第二份原件和哈希核验时，不称为完整异地备份。
+历史归档仍可能记录`backups/experiments/<module>/<session>/`、repo的`.local/archives/`或`D:/VLA-Backups/`路径。这些是当时位置，新的云端映射由索引追加，不改写历史SHA和关机证据。未迁移或尚未核验的大文件保留原件，不能因新策略推定已上传。

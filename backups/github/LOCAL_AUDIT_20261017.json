@@ -1,0 +1,90 @@
+{
+  "scope": "Local backup audit and approved private GitHub migration; upload in progress; no local archive deleted",
+  "roots": [
+    {
+      "root": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/.local/archives",
+      "files": 51514,
+      "bytes": 35558761029,
+      "children": {
+        "20261015-046-quant-finetuning": {
+          "files": 23417,
+          "bytes": 12162393919
+        },
+        "20261016-091-residual-vla-adaptation": {
+          "files": 620,
+          "bytes": 11544403854
+        },
+        "20261008-046-b2-b3": {
+          "files": 18514,
+          "bytes": 7967797629
+        },
+        "20261009-091-b4-pair300": {
+          "files": 8955,
+          "bytes": 3610620459
+        },
+        "20261012-refresh-checkpoint": {
+          "files": 8,
+          "bytes": 273545168
+        }
+      }
+    },
+    {
+      "root": "D:/VLA-Backups",
+      "files": 92,
+      "bytes": 19585039125,
+      "children": {
+        "20261016-091-residual-resume-v2": {
+          "files": 92,
+          "bytes": 19585039125
+        }
+      }
+    }
+  ],
+  "scanning_errors": [],
+  "reparse_points_skipped": [],
+  "cloud_archive_upload_completed": false,
+  "local_archive_deletion_completed": false,
+  "unique_archive_audit": {
+    "local_archive_paths": 90,
+    "unique_archives": 54,
+    "unique_archive_bytes": 29503224146,
+    "all_sha256_computed": true,
+    "local_deletions": 0
+  },
+  "historical_instruction_preservation": [
+    {
+      "source": "C:\\Users\\zsure\\Documents\\Triton\\AGENTS.md",
+      "archive": "docs\\archive\\AGENTS_WORKSPACE_BEFORE_20261017.md",
+      "sha256": "d0cbe587f34b2309e9581ff3206ac2242d3030cb17eefee38bde4771eed76b2c",
+      "bytes": 74455
+    },
+    {
+      "source": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\AGENTS.md",
+      "archive": "docs\\archive\\AGENTS_REPO_BEFORE_20261017.md",
+      "sha256": "00a2c11cfeb0eb58148b62048e9ca13a7d59db545a4045b81cab003b4c1022db",
+      "bytes": 52633
+    }
+  ],
+  "authorization_decision": "user_selected_private_archive_repository",
+  "approved_archive_destination": {
+    "repository": "zsure27/VLA-Quant-Archives",
+    "visibility": "private",
+    "repository_visibility_verified": true,
+    "release_tag": "backup-archive-20261017",
+    "release_url": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+    "release_id": 415605545,
+    "public_code_and_small_result_repository": "zsure27/VLA-Quant",
+    "authorization_scope": "Full experimental archive migration to the private archive repository; delete only after complete remote restoration verification"
+  },
+  "historical_automatic_review_events": [
+    {
+      "action": "Full experimental archives to public GitHub Releases",
+      "outcome": "rejected",
+      "reason": "Specific public disclosure scope must be confirmed; regex scan alone insufficient",
+      "current_relevance": "Historical public upload refusal; resolved by user selection of a verified private archive repository"
+    }
+  ],
+  "cloud_archive_upload_status": "in_progress",
+  "local_archive_deletion_status": "pending_complete_remote_restoration_verification",
+  "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remote-verification.json"
+}

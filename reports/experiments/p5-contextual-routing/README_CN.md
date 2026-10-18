@@ -1,3 +1,7 @@
 # P5｜Contextual Routing
 
-仅在 P4 证明跨 seed 的稳定专家互补后启用。首版 Router 使用 block 17 后、block 18 前的因果 H17 表示，每个 8 步 action chunk 做一次 Top-1 决策，并与 shared PEFT、最佳固定专家、task ID、随机和打乱上下文对照。
+当前保留B5为诊断证据，后续研究重心转向量化微调方法优化，暂不扩展routing。见[研究重心说明](../../../docs/QUANT_FINETUNING_FOCUS_20261013_CN.md)及[小规模探索策略](../../../docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)。
+
+[091 B5实验](20261012-091-b5-pilot-v2/)正式结果为B3 425/450、B4 435/450、B5 436/450；B5相对最佳固定B4仅净增1/450（0.22个百分点），任务区间跨零，尚无明确净优势。task-only实际恒选B4，结果也是435/450，不能写成B3控制。固定专家事后互补空间不能作为可部署选择输入。
+
+原方案的因果H17、每个8步action chunk的Top-1决策，以及最佳固定、task ID、随机和打乱上下文对照均为相应冻结实验的背景。复核时使用该会话的源码、bank与成本记录；历史“待启动”说明不代表当前待办。
