@@ -12,9 +12,9 @@
 
 用户已明确选择私有GitHub归档仓库，现已创建并核验[zsure27/VLA-Quant-Archives](https://github.com/zsure27/VLA-Quant-Archives)。公开代码仓库zsure27/VLA-Quant继续保存代码、分析、小结果和恢复索引；完整原始归档上传至私有库的[backup-archive-20261017 Release](https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017)，需要有权限的账号恢复。不得擅自将私有资产改为公开。
 
-此前自动审批拒绝将完整内部实验归档直接公开发布，保留为历史事件。用户选择已通过私有归档目的地解决该阻断。2026-10-19迁移检查点仍有4个大归档传输，已通过恢复门禁的本地副本正按逐项回执分批清理；数量和范围见[云端索引](../backups/github/README_CN.md)。全量上传与最终清理尚未完成。
+此前自动审批拒绝将完整内部实验归档直接公开发布，保留为历史事件。用户选择已通过私有归档目的地解决该阻断。本次已审计范围的私有迁移及已授权原始备份副本清理已完成；完整恢复目录、下载核验和清理回执见[云端索引](../backups/github/README_CN.md)。B5只有历史部分区间，不能称为完整备份。审计缓存与旧布局附件也已分别核验整理，回执见[私有完成摘要](https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261019/migration-completion.json)。
 
-GitHub普通Git阻止超过100MiB文件。Release单附件须小于2GiB；本项目默认按1GiB分块，避免普通clone携带大数据。官方说明：[large files](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)、[releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)。不默认引入付费LFS。
+GitHub普通Git阻止超过100MiB文件。Release单附件须小于2GiB；本项目保留既有1GiB布局，并对独立续传使用256MiB布局；按恢复清单中的块序、offset和完整SHA恢复，布局回执相互隔离，普通clone不携带这些大附件。官方说明：[large files](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)、[releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)。不默认引入付费LFS。
 
 ## 清理门禁
 

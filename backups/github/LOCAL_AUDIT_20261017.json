@@ -1,5 +1,5 @@
 {
-  "scope": "Initial 2026-10-17 C/D audit baseline plus 2026-10-19 in-progress migration checkpoint; original root sizes are historical, not current occupancy",
+  "scope": "Initial historical C/D audit baseline and historical migration checkpoints; current generic completion links refer to the separately verified private final catalog",
   "roots": [
     {
       "root": "C:/Users/zsure/Documents/Triton/.codex-work/vla-quant-sync-20260915/.local/archives",
@@ -42,8 +42,8 @@
   ],
   "scanning_errors": [],
   "reparse_points_skipped": [],
-  "cloud_archive_upload_completed": false,
-  "local_archive_deletion_completed": false,
+  "cloud_archive_upload_completed": true,
+  "local_archive_deletion_completed": true,
   "unique_archive_audit": {
     "local_archive_paths": 90,
     "unique_archives": 54,
@@ -84,23 +84,19 @@
       "current_relevance": "Historical public upload refusal; resolved by user selection of a verified private archive repository"
     }
   ],
-  "cloud_archive_upload_status": "in_progress_four_large_archives",
-  "local_archive_deletion_status": "in_progress_verified_subsets",
-  "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remaining-verified-20261019.json",
+  "cloud_archive_upload_status": "complete_verified_private_audited_scope",
+  "local_archive_deletion_status": "complete_authorized_original_backup_scope",
+  "remote_verification_progress_receipt": "https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261017/remote-verification.json",
   "actual_local_deletions": {
-    "files": 24346,
-    "logical_bytes": 36852151982,
-    "byte_measurement": "Sum of exact deleted file lengths; final disk free-space change is reported separately",
-    "receipt_scope": "Native per-file removal receipts, accumulated through the 2026-10-19 checkpoint",
-    "private_catalog_commit": "d6f6f66928d5636059198440b1dc474cfe35f533",
-    "is_final_deletion_total": false
+    "authorized_original_backup_scope_complete": true,
+    "details_url": "https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261019/cleanup-final-summary.json",
+    "byte_measurement": "Exact logical file lengths and actual disk observations are recorded separately in the private summary",
+    "unrelated_research_files_cleaned": false
   },
   "cloud_snapshot": {
-    "verified_objects": 89,
-    "verified_bytes": 15963223602,
-    "all_migration_objects_complete": false,
-    "large_archives_still_transferring": 4,
-    "admission": "Only complete objects with remote download SHA verification and contiguous parts in the published catalog"
+    "all_audited_migration_objects_complete": true,
+    "details_url": "https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261017/remote-verification.json",
+    "admission": "Only complete objects with remote download SHA verification and contiguous parts in the published private catalog"
   },
   "additional_scope": {
     "historical_partial_b5_range_bytes": 3129072984,
@@ -113,9 +109,52 @@
   "published_catalog_checkpoint": {
     "repository": "zsure27/VLA-Quant-Archives",
     "private": true,
-    "commit": "d6f6f66928d5636059198440b1dc474cfe35f533",
     "remote_head_verified": true,
     "committed_paths_verified": true,
-    "is_final_migration_catalog": false
+    "is_final_migration_catalog": true,
+    "details_url": "https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261017/remote-verification.json"
+  },
+  "historical_migration_checkpoints": [
+    {
+      "cloud_archive_upload_status": "in_progress_four_large_archives",
+      "local_archive_deletion_status": "in_progress_verified_subsets",
+      "remote_verification_progress_receipt": ".local/audit-20261017/github-private-remaining-verified-20261019.json",
+      "actual_local_deletions": {
+        "files": 24346,
+        "logical_bytes": 36852151982,
+        "byte_measurement": "Sum of exact deleted file lengths; final disk free-space change is reported separately",
+        "receipt_scope": "Native per-file removal receipts, accumulated through the 2026-10-19 checkpoint",
+        "private_catalog_commit": "d6f6f66928d5636059198440b1dc474cfe35f533",
+        "is_final_deletion_total": false
+      },
+      "cloud_snapshot": {
+        "verified_objects": 89,
+        "verified_bytes": 15963223602,
+        "all_migration_objects_complete": false,
+        "large_archives_still_transferring": 4,
+        "admission": "Only complete objects with remote download SHA verification and contiguous parts in the published catalog"
+      },
+      "published_catalog_checkpoint": {
+        "repository": "zsure27/VLA-Quant-Archives",
+        "private": true,
+        "commit": "d6f6f66928d5636059198440b1dc474cfe35f533",
+        "remote_head_verified": true,
+        "committed_paths_verified": true,
+        "is_final_migration_catalog": false
+      },
+      "progress_date": "2026-10-19",
+      "role": "Historical in-progress checkpoint; not current occupancy or final completion totals"
+    }
+  ],
+  "completion_record": "verified_private_migration_and_authorized_original_backup_cleanup",
+  "completion_date": "2026-10-19",
+  "completion_scope_limits": {
+    "b5_is_partial_only": true,
+    "unrelated_research_files_cleaned": false
+  },
+  "additional_cleanup": {
+    "generated_audit_scratch_completed": true,
+    "unreferenced_legacy_remote_assets_completed": true,
+    "details_url": "https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261019/migration-completion.json"
   }
 }

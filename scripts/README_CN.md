@@ -16,7 +16,7 @@
 | AWQ/SQ 机制实验 | `run_awq_spatial.sh`、`run_awq_validation.sh`、`run_smoothing_ablation.sh` 及相应 `run_awq_*` 有限诊断脚本 |
 | 状态与配对审计 | `awq_scope_status.py`、`baseline_shard_status.py`、`verify_awq_scope_backup_local.py`、`verify_deduplicated_results.py`、`verify_session_manifests.py`、`validate_repository_layout.py` |
 | 归档与收尾 | `sync_vla_remote_closure.ps1`、`backup_active_diagnostics.py`、`vla_push_local.ps1`、`close_vla_session.ps1`、`vla_shutdown_remote.py` |
-| 私有GitHub归档与按需恢复 | `github_archive_store_v2.py` 上传并下载校验；`publish_private_archive_index.py` 发布小恢复目录；`restore_github_archive.py` 逐块与整包SHA恢复；`remove_verified_local_backups.ps1` 默认只检查，核验发布目录后按精确路径清理。见[恢复说明](../backups/github/RESTORE_CN.md) |
+| 私有GitHub归档与按需恢复 | `github_archive_store_v2.py` 上传并下载校验；`github_archive_store_v3.py` 使用隔离回执进行256MiB分块续传；`publish_private_archive_index.py` 发布小恢复目录；`restore_github_archive.py` 逐块与整包SHA恢复；`remove_verified_local_backups.ps1` 默认只检查，核验发布目录后按精确路径清理。见[恢复说明](../backups/github/RESTORE_CN.md) |
 | 本地报告重建 | `build_experiment_summary.py`，只读取已取回数据，不连接服务器 |
 
 目录职责：`qvla/` 保存维护中的模型、量化、LoRA 与评估实现；`diagnostics/` 保存只读机制分析；本目录保存执行、归档与验证入口。历史命令在报告、服务器持久盘和复现清单中按原脚本路径引用，因此保留稳定文件名，按上表选择入口；已停用或失效的命令由原路径的拒绝执行保护拦截。`scripts/verify_deduplicated_results.py` 核验全部 `results/indexes/DEDUPLICATED_FILES_*.json`；`scripts/verify_session_manifests.py --session <会话名>` 可定点核验某轮，省去每次遍历全部会话；`scripts/validate_repository_layout.py` 只解析 Git 跟踪的 JSON，不碰被忽略的完整本机归档。

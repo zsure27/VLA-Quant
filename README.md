@@ -8,7 +8,7 @@
 - **后续怎么做：**[小规模探索策略](docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)。差异已清楚的候选及时收束，仅有明确价值的少数方向扩大验证。
 - **数据在哪里：**公开的 [VLA-Quant](https://github.com/zsure27/VLA-Quant) 保存代码、报告、小结果和导航；完整原始归档保存在私有 [VLA-Quant-Archives](https://github.com/zsure27/VLA-Quant-Archives) 的 Release 附件。位置、逐项核验进度和[恢复命令](backups/github/RESTORE_CN.md)见[云端归档索引](backups/github/README_CN.md)与[备份策略](docs/GITHUB_BACKUP_POLICY_20261017_CN.md)。
 
-备份迁移和本地清理仍在进行。2026-10-19 检查点已有 89 个完整对象通过远端下载 SHA 核验；4 个大归档继续传输。已清理文件及恢复范围按索引中的实际回执记录，本机按需恢复所需材料。
+本次私有归档迁移和已授权原始备份副本清理已完成。完整恢复目录、下载校验和清理回执见[云端归档索引](backups/github/README_CN.md)；本机保留工作文件、小结果和恢复入口，大型历史材料按需恢复。B5只有历史部分区间，不能据此恢复完整包。审计缓存与旧附件整理也已完成，见[私有完成摘要](https://github.com/zsure27/VLA-Quant-Archives/blob/main/catalog/20261019/migration-completion.json)。
 
 091 已取得原生关机 `execute=true` 回执，心跳暂停。B1 时间覆盖实验以正式各 **250** 回合收束；中断的 reset30–39 残余保留并排除，不恢复旧续片。本仓库的整理不启动实例或实验。
 
