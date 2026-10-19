@@ -28,3 +28,5 @@
 - `catalog/20261017/range-staging-metadata-20261018.json`：B5 历史下载片段的原始区间；这些片段缺少前缀，不能作为完整 B5 归档恢复。
 
 只有某个对象的全部恢复门禁通过、对应目录已发布核验后，才按精确路径清理它覆盖的本地文件。活动上传源和唯一未核验数据继续保留。此前直接公开上传完整内部归档被自动审批拒绝的历史事件保留；用户已明确选择上述私有目的地。
+
+[具体迁移文件及流量说明](https://github.com/zsure27/VLA-Quant-Archives/blob/main/docs/MIGRATION_CONTENT_AND_TRAFFIC_CN.md)包含各实验组、最大文件和完整下载校验的流量预算。

@@ -28,3 +28,9 @@ GitHub普通Git阻止超过100MiB文件。Release单附件须小于2GiB；本项
 ## 后续实验
 
 每个阶段完成后保存小分析/manifest到Git，完整原始材料上传已选私有归档库。阶段包与最终集合通过索引复用，同一归档使用唯一上传计划和可续传回执，避免重复传输和反复复制。结束前完成云端恢复验证；后续只按[恢复说明](../backups/github/RESTORE_CN.md)下载所需对象。GitHub可用性或权限阻断时保存现有数据并报告。
+
+## 迁移内容与流量预算
+
+具体文件清单及预算保存在[私有归档说明](https://github.com/zsure27/VLA-Quant-Archives/blob/main/docs/MIGRATION_CONTENT_AND_TRAFFIC_CN.md)。开始大批量传输前应明确文件总量、上传与完整读回校验的最低流量，以及失败重试预算。
+
+大文件可用独立256MiB分块工具`github_archive_store_v3.py`，默认16路；不同分块布局使用隔离回执。不可恢复传输失败会阻止排队上传，活动上传在下一次进度报告处中断。已完整校验的对象可直接复用，本地源文件保留至恢复门禁通过。
