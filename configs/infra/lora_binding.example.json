@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "lora-binding-template",
+    "name_zh": "LoRA微调接入模板",
+    "started_at": "2026-10-20T00:00:00+08:00",
+    "hypothesis": "固定多suite训练的OpenVLA-OFT检查点，衡量AWQ对各suite的影响。此为模板，日期须改为实际任务开始时间。",
+    "changed_variable": "只改量化方法，保持检查点、任务、初态及种子一致。"
+  },
+  "model": {
+    "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+    "identity_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "oft_root": "/root/autodl-tmp/qvla-repro/src/QVLA/openvla-oft",
+    "libero_root": "/root/autodl-tmp/qvla-repro/src/LIBERO"
+  },
+  "data": {
+    "training": [],
+    "calibration": [
+      {
+        "role": "calibration",
+        "suite": "libero_spatial",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_spatial/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "calibration",
+        "suite": "libero_object",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_object/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "calibration",
+        "suite": "libero_goal",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_goal/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "calibration",
+        "suite": "libero_10",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_10/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "quantization": {
+    "method": "awq",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "official_root": "/root/autodl-tmp/qvla-repro/src/official-quantization",
+    "profiles": [
+      {
+        "path": "/root/autodl-tmp/qvla-repro/profiles/multisuite-awq-w4.pt",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "recipe_argv": []
+  },
+  "finetuning": {
+    "method": "lora",
+    "train": true,
+    "rank": 8,
+    "steps": 1000
+  },
+  "evaluation": {
+    "seed": 7,
+    "env_seed": 0,
+    "suites": [
+      {
+        "name": "libero_spatial",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      }
+    ]
+  },
+  "control": {
+    "server_id": "091",
+    "heartbeat_seconds": 900,
+    "quota_max_age_seconds": 1020,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "start_disk_gib": 12,
+    "runtime_disk_gib": 6,
+    "shutdown_provider": "autodl_native",
+    "backup_timeout_seconds": 900,
+    "backup_argv": [
+      "{python}",
+      "{repo}/scripts/infra_archive_run.py",
+      "--run-dir",
+      "{run_dir}",
+      "--max-upload-gib",
+      "2"
+    ],
+    "git_sync_argv": [
+      "{python}",
+      "{repo}/scripts/infra_git_sync.py",
+      "--task-id",
+      "{task_id}",
+      "--run-dir",
+      "{run_dir}"
+    ],
+    "persistent_root": "/root/autodl-tmp/qvla-repro"
+  },
+  "binding": {
+    "id": "lora-new-version-required",
+    "quantizers": [
+      "awq"
+    ],
+    "strategies": [
+      "lora"
+    ],
+    "verified_suites": [
+      "libero_spatial"
+    ],
+    "gate_files": [
+      {
+        "path": "/ABSOLUTE/PATH/adapter-cpu-contract.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "expected_gate": "PASS_ACTUAL_NEW_BINDING_CONTRACT"
+      }
+    ],
+    "training_argv": [
+      "{python}",
+      "/ABSOLUTE/PATH/versioned_train_entry.py",
+      "--output",
+      "{run_dir}/trained"
+    ],
+    "post_training_audit_argv": [
+      "{python}",
+      "/ABSOLUTE/PATH/versioned_train_audit.py",
+      "--input",
+      "{run_dir}/trained"
+    ],
+    "evaluation_argv": [
+      "{python}",
+      "/ABSOLUTE/PATH/versioned_eval_entry.py",
+      "--suite",
+      "{suite}",
+      "--offset",
+      "{offset}",
+      "--count",
+      "{count}",
+      "--output",
+      "{output}"
+    ],
+    "evaluation_audit_argv": [
+      "{python}",
+      "/ABSOLUTE/PATH/versioned_eval_audit.py",
+      "--run-dir",
+      "{run_dir}"
+    ]
+  }
+}

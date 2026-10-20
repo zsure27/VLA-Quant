@@ -1,28 +1,5 @@
-# 原始结果与可复核性
+# 历史路径入口
 
-`results/`保存适合普通Git的实测小文件。实验结果统一进入[`experiments/`](experiments/README_CN.md)，共享不可变材料进入[`shared/`](shared/README_CN.md)，索引进入[`indexes/`](indexes/)。完整压缩归档、视频、NPZ、模型和大profile优先使用GitHub Release附件；位置、大小、SHA256与恢复记录见[云端归档索引](../backups/github/README_CN.md)和[备份策略](../docs/GITHUB_BACKUP_POLICY_20261017_CN.md)。本机只保留当前工作所需数据和临时下载，远端完整核验后再清理。
+所有实验记录已整合到 [Ex_Reports](../Ex_Reports/README.md)。
 
-## 固定结构
-
-```text
-results/
-  experiments/<module>/YYYYMMDD-<host-or-scope>-<experiment>/
-  shared/calibration/
-  shared/source-snapshots/
-  shared/historical/
-  indexes/
-```
-
-- [`p0-foundation-baselines`](experiments/p0-foundation-baselines/README_CN.md)：正式基线和量化归因。
-- [`p1-data-contract`](experiments/p1-data-contract/README_CN.md)：训练数据、切分和参数化契约。
-- [`p2-shared-peft`](experiments/p2-shared-peft/README_CN.md)：shared PEFT 与初始化实验。
-- [`p3-static-backbone`](experiments/p3-static-backbone/README_CN.md)：已冻结的静态低比特底座搜索。
-- [`p4-expert-complementarity`](experiments/p4-expert-complementarity/README_CN.md)：等预算专家与互补矩阵。
-- [`p5-contextual-routing`](experiments/p5-contextual-routing/README_CN.md)：Router 数据、预测和切换 trace。
-- [`secondary-smoothquant`](experiments/secondary-smoothquant/README_CN.md)：独立的 SmoothQuant 次线。
-
-一个会话目录可以包含 `command.txt`、`console.log`、`exit-code.txt`、`config.json`、`source-version.json`、`metrics.json`、`episode-manifest.json` 和 `LARGE_FILES_NOT_IN_GIT.json`；实际未生成的项目保持缺失，不补造。
-
-早期 [`official_quant_validation.csv`](shared/historical/official_quant_validation.csv) 是 `archival_summary`，不能与冻结协议下的 Spatial500 合并。[2026-09-22 精确重复映射](indexes/DEDUPLICATED_FILES_20260922.json)和[2026-09-30 源码快照映射](indexes/DEDUPLICATED_FILES_20260930.json)保留旧路径、原 SHA 与规范副本。原始 Git 提交 `5c034a8`、[布局迁移表](../docs/REPOSITORY_LAYOUT_MIGRATION_20260925.json)和后续会话归档可用于恢复旧目录。
-
-对比配置时使用相同 checkpoint、profile、初态、种子和评测器。开发集重复回合不增加独立样本量；离线 MSE 不替代闭环成功率。
+原字节证据：[results](../Ex_Reports/_legacy/results)。冻结脚本需要旧路径时，在服务器运行 `python -m qvla.infra legacy-links --apply`，不复制数据。

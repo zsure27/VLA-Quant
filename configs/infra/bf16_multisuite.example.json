@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "multisuite-bf16-reference",
+    "name_zh": "多任务套件BF16参考",
+    "started_at": "2026-10-20T00:00:00+08:00",
+    "hypothesis": "固定多suite训练的OpenVLA-OFT检查点，衡量AWQ对各suite的影响。此为模板，日期须改为实际任务开始时间。",
+    "changed_variable": "只改量化方法，保持检查点、任务、初态及种子一致。"
+  },
+  "model": {
+    "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+    "identity_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "oft_root": "/root/autodl-tmp/qvla-repro/src/QVLA/openvla-oft",
+    "libero_root": "/root/autodl-tmp/qvla-repro/src/LIBERO"
+  },
+  "data": {
+    "training": [],
+    "calibration": []
+  },
+  "quantization": {
+    "method": "none",
+    "weight_bits": 16,
+    "activation_bits": 16
+  },
+  "finetuning": {
+    "method": "none",
+    "train": false
+  },
+  "evaluation": {
+    "seed": 7,
+    "env_seed": 0,
+    "suites": [
+      {
+        "name": "libero_spatial",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_object",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_goal",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_10",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      }
+    ]
+  },
+  "control": {
+    "server_id": "091",
+    "heartbeat_seconds": 900,
+    "quota_max_age_seconds": 1020,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "start_disk_gib": 12,
+    "runtime_disk_gib": 6,
+    "shutdown_provider": "autodl_native",
+    "backup_timeout_seconds": 900,
+    "backup_argv": [
+      "{python}",
+      "{repo}/scripts/infra_archive_run.py",
+      "--run-dir",
+      "{run_dir}",
+      "--max-upload-gib",
+      "2"
+    ],
+    "git_sync_argv": [
+      "{python}",
+      "{repo}/scripts/infra_git_sync.py",
+      "--task-id",
+      "{task_id}",
+      "--run-dir",
+      "{run_dir}"
+    ],
+    "persistent_root": "/root/autodl-tmp/qvla-repro"
+  }
+}

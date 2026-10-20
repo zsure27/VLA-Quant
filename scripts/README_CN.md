@@ -1,6 +1,14 @@
+## 新框架入口 · 2026-10-20
+
+- `python -m qvla.infra`：统一配置、计划、状态、统计和任务报告。
+- `infra_archive_run.py`：本轮增量快照，私有Release分块上传与完整下载SHA；`--prepare-only`只准备和显示流量预算。
+- `infra_git_sync.py`：当前任务小记录及`--include`指定的已审阅代码文件提交，远端SHA回读核验。
+- `audit_ex_reports.py --staged`：迁移后原始证据与Git blob一致性。
+- 详见[框架指南](../docs/INFRA_GUIDE_CN.md)与[运行规范](../docs/EXPERIMENT_OPERATIONS_CN.md)。下面为历史工具目录，旧活动状态不作执行指令。
+
 # 运行、恢复与收尾入口
 
-当前没有活动实验：091已原生关机、心跳暂停；B1时间覆盖以正式各250回合收束，旧续片不再恢复。下次用户开启实例后，先依据[近三轮总结与短期计划](../reports/experiments/p2-shared-peft/20261017-three-rounds-summary-and-short-plan/REPORT_CN.md)和[小规模探索策略](../docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)为具体问题选择入口，不批量执行历史脚本。
+当前没有活动实验：091已原生关机、心跳暂停；B1时间覆盖以正式各250回合收束，旧续片不再恢复。下次用户开启实例后，先依据[近三轮总结与短期计划](../Ex_Reports/_legacy/reports/experiments/p2-shared-peft/20261017-three-rounds-summary-and-short-plan/REPORT_CN.md)和[小规模探索策略](../docs/EXPLORATORY_QUANT_FINETUNING_20261017_CN.md)为具体问题选择入口，不批量执行历史脚本。
 
 历史B2/B3工具为`prepare_extended_peft_plans.py`、`train_extended_peft.py`、`prepare_a4_student_state80.py`、`audit_extended_peft_eval.py`与`run_locked_peft_stage.py`。[当时开机卡](../docs/B2_B3_NEXT_BOOT_RUNBOOK_20261008_CN.md)保留来源，不代表这些已完成阶段仍待运行。B1真实评测使用其对应冻结版本和独立artifact身份，不能直接借旧B3 loader代替。
 

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "servers": [
+    {
+      "id": "091",
+      "provider": "autodl",
+      "gpu_model_last_observed": "NVIDIA GeForce RTX 4090",
+      "gpu_observation_date": "2026-10-16",
+      "state": "historical_stopped_not_live",
+      "host_env": "VLA_091_SSH_HOST",
+      "port": 18575,
+      "user": "root",
+      "identity_file_env": "VLA_091_SSH_KEY",
+      "known_hosts_file_env": "VLA_091_KNOWN_HOSTS",
+      "last_hostname": "autodl-container-dfbc4bb0ff-1e85dd94",
+      "working_root": "/root/autodl-tmp/qvla-repro",
+      "source": "Ex_Reports/_legacy/reports/experiments/p2-shared-peft/20261016-091-residual-resume-v2/PRE_RUN_CARD_CN.md",
+      "note": "端口与型号仅历史；每轮启动前实测确认。新实例追加新id，不复用旧授权。",
+      "last_ssh_host": "connect.nmb1.seetacloud.com"
+    }
+  ]
+}

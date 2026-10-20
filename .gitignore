@@ -46,3 +46,20 @@ backups/github/staging/
 backups/github/downloads/
 .local/
 .codex-test-b2b3/
+
+# Historical compatibility links are optional, generated on the execution server.
+# Canonical experiment evidence now lives only under Ex_Reports/.
+reports/*
+!reports/README_CN.md
+results/*
+!results/README_CN.md
+
+# Internal working records are stored in the approved private archive repository.
+/Ex_Reports/_legacy/reports/experiments/p2-shared-peft/20261011-quantization-finetuning-literature/REPORT_CN.md
+/Ex_Reports/_legacy/results/experiments/p2-shared-peft/20261011-quantization-finetuning-literature/evidence-index.json
+/Ex_Reports/_legacy/results/experiments/p2-shared-peft/20261016-091-residual-resume-v2/B1-temporal-eval-v2-first-query-review.json
+/Ex_Reports/_legacy/results/experiments/p2-shared-peft/20261016-091-residual-resume-v2/native-shutdown-final-v2.json
+/Ex_Reports/_legacy/results/experiments/p5-contextual-routing/20261012-091-b5-pilot-v2/windows-shutdown-admission.json
+/Ex_Reports/_legacy/results/experiments/p5-contextual-routing/20261012-091-b5-pilot-v2/windows-shutdown-helper.stderr
+/Ex_Reports/_legacy/results/experiments/p5-contextual-routing/20261012-091-b5-pilot-v2/windows-shutdown-helper.stdout
+/Ex_Reports/_legacy/results/experiments/p5-contextual-routing/20261012-091-b5-pilot-v2/windows-shutdown-request.json

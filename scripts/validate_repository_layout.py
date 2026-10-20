@@ -49,8 +49,8 @@ def main() -> None:
     if existing:
         raise ValueError(f"deprecated experiment roots remain: {existing}")
 
-    report_sessions = module_sessions(ROOT / "reports/experiments")
-    result_sessions = module_sessions(ROOT / "results/experiments")
+    report_sessions = module_sessions(ROOT / "Ex_Reports/_legacy/reports/experiments")
+    result_sessions = module_sessions(ROOT / "Ex_Reports/_legacy/results/experiments")
     roles = json.loads((ROOT / "configs/repository_report_roles_v1.json").read_text(encoding="utf-8"))
     summary_sessions = {module: set() for module in MODULES}
     for item in roles["cross_run_summaries"]:
@@ -59,7 +59,7 @@ def main() -> None:
             raise ValueError("invalid cross-run summary declaration")
         if item["new_experiment_executed"] is not False or not item["source_reports"]:
             raise ValueError("summary must declare no new experiment and existing evidence")
-        if not (ROOT / "reports/experiments" / module / session / "REPORT_CN.md").is_file():
+        if not (ROOT / "Ex_Reports/_legacy/reports/experiments" / module / session / "REPORT_CN.md").is_file():
             raise ValueError("declared summary report missing")
         for relative in item["source_reports"]:
             source = (ROOT / relative).resolve()
