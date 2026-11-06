@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "model": {
+    "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+    "identity_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "oft_root": "/root/autodl-tmp/qvla-repro/src/QVLA/openvla-oft",
+    "libero_root": "/root/autodl-tmp/qvla-repro/src/LIBERO"
+  },
+  "data": {
+    "training": [],
+    "calibration": []
+  },
+  "quantization": {
+    "method": "none",
+    "weight_bits": 16,
+    "activation_bits": 16
+  },
+  "finetuning": {
+    "method": "none",
+    "train": false
+  },
+  "evaluation": {
+    "seed": 7,
+    "env_seed": 0,
+    "suites": [
+      {
+        "name": "libero_spatial",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_object",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_goal",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_10",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      }
+    ]
+  },
+  "control": {
+    "server_id": "UNASSIGNED_USER_OPENED_SERVER_REQUIRED",
+    "heartbeat_seconds": 900,
+    "quota_max_age_seconds": 1020,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "start_disk_gib": 12,
+    "runtime_disk_gib": 6,
+    "shutdown_provider": "autodl_native",
+    "backup_timeout_seconds": 900,
+    "backup_argv": [
+      "{python}",
+      "{repo}/scripts/infra_archive_run.py",
+      "--run-dir",
+      "{run_dir}",
+      "--max-upload-gib",
+      "2"
+    ],
+    "git_sync_argv": [
+      "{python}",
+      "{repo}/scripts/infra_git_sync.py",
+      "--task-id",
+      "{task_id}",
+      "--run-dir",
+      "{run_dir}"
+    ],
+    "persistent_root": "/root/autodl-tmp/qvla-repro"
+  },
+  "binding": {
+    "id": "oft-trajectory-observer-v1-pending-gpu-admission",
+    "verified_suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "quantizers": [
+      "none"
+    ],
+    "strategies": [
+      "none"
+    ],
+    "gate_files": [
+      {
+        "path": "{repo}/.local/trajectory-study/bf16.admission.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "expected_gate": "PASS_TRAJECTORY_CAPTURE_ACTUAL_MODEL_V1"
+      }
+    ],
+    "evaluation_argv": [
+      "{python}",
+      "-m",
+      "qvla.run_trajectory_diagnostic_v1",
+      "--backend",
+      "bf16",
+      "--identity",
+      "{repo}/.local/trajectory-study/bf16.identity.json",
+      "--admission",
+      "{repo}/.local/trajectory-study/bf16.admission.json",
+      "--capture-root",
+      "{output}/capture",
+      "--",
+      "--pretrained_checkpoint",
+      "{checkpoint}",
+      "--task_suite_name",
+      "{suite}",
+      "--num_trials_per_task",
+      "{count}",
+      "--initial_state_offset",
+      "{offset}",
+      "--local_log_dir",
+      "{output}",
+      "--seed",
+      "7",
+      "--env_seed",
+      "0",
+      "--seed_protocol",
+      "paired"
+    ]
+  },
+  "diagnostic_note": "BLOCKED TEMPLATE: interface fields only, not GPU verification. Fill real checkpoint/profile/gate SHA, server and data-role audit; keep rounds balanced across all four suites."
+}

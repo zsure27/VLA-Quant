@@ -1,0 +1,7 @@
+{
+  "id": "multisuite-trajectory-deviation-v1",
+  "name_zh": "四套件多任务轨迹偏移诊断",
+  "started_at": "2026-11-06T15:04:07+08:00",
+  "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+  "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "CPU_ONLY_NO_SERVER_NO_GPU",
+  "date": "2026-11-06",
+  "diagnostic_tests_passed": 7,
+  "existing_infra_tests_passed": 7,
+  "syntax_compile_passed": true,
+  "templates_validated": [
+    "awq-w2a16.example.json",
+    "awq-w4a16.example.json",
+    "bf16.example.json"
+  ],
+  "gpu_gate_passed": false,
+  "measured_episodes": 0,
+  "preview_kind": "synthetic_demo",
+  "preview_pairs": 240,
+  "preview_figures": 6,
+  "preview_bytes": 771855,
+  "source_sha256": {
+    "qvla/trajectory_diagnostics_v1.py": "b439fbed0b3a6d509fba3272e139798c0e69459f0e6c82c77395dfce41dd3bdc",
+    "qvla/trajectory_capture_v1.py": "4b676893260feb4a26027d9ad6bb5045b124c8d8c1bebd0e3ddfcf6a80a908fe",
+    "qvla/run_trajectory_diagnostic_v1.py": "f111ff58fae2b6c785f076f34d657e5d83d2701e3a7039880318e424c8f6520e",
+    "qvla/relabel_trajectory_teacher_v1.py": "0c387dd9eb72e5dc3ab704523d1bc02fa0b746968fcb0ee9e9534739bd5b4c1b",
+    "diagnostics/trajectory_study_v1.py": "74c8b26043dce4e10a27e6099a02538faeaf17a443496b2e7144554ae3f6027f",
+    "scripts/prepare_trajectory_study_v1.py": "6cfea98838d34e32149e790056c3db7f8907275796d1439999ad28e8e34b3e75",
+    "tests/test_trajectory_diagnostics_v1.py": "5a369404b13b1a4b05ca70655f4910a7c0ab93bbcde4c3c9a7df5f1bfdf842ae"
+  },
+  "private_data_uploaded": false
+}

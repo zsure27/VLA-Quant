@@ -1,0 +1,46 @@
+{
+  "status": "DESIGN_AND_CPU_ONLY_NO_SERVER",
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "suites": {
+    "libero_spatial": 220,
+    "libero_object": 280,
+    "libero_goal": 300,
+    "libero_10": 520
+  },
+  "task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "development_resets": [
+    5,
+    6,
+    7
+  ],
+  "candidate_profiles": [
+    "bf16",
+    "awq-w4a16",
+    "awq-w2a16"
+  ],
+  "formal_episode_budget": 360,
+  "same_input_teacher_queries_upper_bound": 9960,
+  "control_steps_upper_bound": 118800,
+  "settling_steps_excluded": 10,
+  "rounds": "reset5 across all 4 suites and 3 profiles, then reset6, then reset7; sequential model execution",
+  "thresholds": "Calibrate on independent FP-FP repeatability and practical tolerance; hash and freeze before main analysis. Demo 20mm/5deg are NOT adopted defaults.",
+  "stopping": "15% stop expansion, 10% close, 3% reserve; completed grid cells retained; no partial cohort represented as full coverage.",
+  "extensions": "Teacher intervention and original OpenVLA are separately budgeted follow-ups; no automatic activation-A4, training, routing or 450 episodes."
+}
