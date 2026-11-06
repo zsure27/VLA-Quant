@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import time
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -78,6 +79,17 @@ def fetch_one(root, repo, revision, row):
         return verify(dest, row)
     partial = dest.with_name(dest.name + ".partial")
     url = ENDPOINT + "/" + repo + "/resolve/" + revision + "/" + quote(row["rfilename"], safe="/")
+    if int(row["size"]) >= 64 * 1024**2 and shutil.which("aria2c"):
+        subprocess.run([
+            "aria2c", "--continue=true", "--file-allocation=none",
+            "--max-connection-per-server=8", "--split=8", "--min-split-size=4M",
+            "--max-tries=5", "--retry-wait=5", "--timeout=90",
+            "--summary-interval=30", "--dir=" + str(dest.parent),
+            "--out=" + partial.name, url,
+        ], check=True)
+        sha = verify(partial, row)
+        partial.rename(dest)
+        return sha
     for attempt in range(5):
         offset = partial.stat().st_size if partial.exists() else 0
         if offset > int(row["size"]):
