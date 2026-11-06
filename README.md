@@ -4,6 +4,8 @@
 
 ## 主要入口
 
+最新独立研究准备：[π0.5/GR00T-N1.5在LIBERO四suite的轨迹偏移共性](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)。六组新增[分布与响应图预览](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/preview-v3/index.html)为合成示意；当前CPU分析已准备，两个模型的原生采集/量化后端尚待接入，无实测结果。
+
 | 入口 | 用途 |
 |---|---|
 | [框架指南](docs/INFRA_GUIDE_CN.md) | 下次服务器开机后，从Git同步、配置、执行到统计的完整步骤 |

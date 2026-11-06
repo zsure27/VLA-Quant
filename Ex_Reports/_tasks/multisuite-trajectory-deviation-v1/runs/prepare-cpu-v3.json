@@ -1,0 +1,40 @@
+{
+  "status": "CPU_ONLY_NO_SERVER_NO_GPU",
+  "created_at": "2026-11-06T08:38:04.372556+00:00",
+  "new_tests_passed": 7,
+  "prior_tests_passed_in_prepare_v2": 21,
+  "measured_episodes": 0,
+  "native_pi05_collector_implemented": false,
+  "native_groot_n15_collector_implemented": false,
+  "preview_kind": "synthetic_scalar_populations_not_rollouts",
+  "preview_figures": 6,
+  "png_pdf_layout_checked": true,
+  "positive_negative_directions_generated": true,
+  "browser_visual_inspection": false,
+  "study_executable": false,
+  "natural_first_episodes": 64,
+  "optional_short_perturbation_branches": 96,
+  "same_task_identity_preserved": true,
+  "preview_bytes": 1826090,
+  "source_sha256": {
+    "qvla/runtime_error_protocol_v3.py": "2e8963562ba6ea905a85eed5f34c28e1c9ac0ca0ff1ea23804bbee3bce68836a",
+    "diagnostics/runtime_commonality_v3.py": "950ec4180c397918c8759b7a5370e689c173407248b7b29d67d15af3293bb78c",
+    "tests/test_runtime_error_protocol_v3.py": "7ce7d63445707a87bb4ea36852593ac04f45b262e62e894b45afb372932ff013"
+  },
+  "preview_sha256": {
+    "14-joint-distribution-evolution.pdf": "c92ed164a70ec8d6e4931d1de1041015c46946811d3c119813163851ffba5d6a",
+    "14-joint-distribution-evolution.png": "59c38ea9a1b5e6b5664c7d14235fa17f4096ea4faffd14a6719243e7a8304eb4",
+    "15-distribution-centers.pdf": "3c278409d8b22d34f2a8cedf0c3ffbc60d78d340d60b6eac33252e730b6e1bd3",
+    "15-distribution-centers.png": "f87788425b6e9fb51b6869230a795a5116785a1e4570816f7c67a57f24ad805b",
+    "16-distribution-dispersion.pdf": "6e171a91b20724eefd6ae5f18f09f5e8c24da142f9f3cd19ad4fbf908d55c6c8",
+    "16-distribution-dispersion.png": "2d19bc13644946879487794793a0cf6330b70950296898989f06f84f3a109a4d",
+    "17-next-query-response-sensitivity.pdf": "40512963634b51b8abc2c07fccab2cf791addd32416f4dfa9bf789d458a5b261",
+    "17-next-query-response-sensitivity.png": "337576da28f9a23e6acd4dae83b4d2fb0a41d8a26eb0177d457903ae6421fe95",
+    "18-suite-commonality-evidence.pdf": "0dcdf62292508a6567c3e27fffbe53f02815b2707a843cd3d3986309e3dc2ab9",
+    "18-suite-commonality-evidence.png": "edc59a0e408c24f8bf4eb620cb1085f87fb806fe5ed99aea2ae976eb63e8ce5e",
+    "19-risk-set-and-complete-cohort.pdf": "116e97b3736ffb39946bc490fc2cdec41cc45fe6960404b0f1f35216d5f00f7d",
+    "19-risk-set-and-complete-cohort.png": "b0d2fcc04c373e2df62f7972022838f9fdfc85fc5209adf7be1b64e8acc68fbd",
+    "index.html": "23b1ecc43e227c6318766e778305df64c8ea34cad49bfa9e855caf2cd4fc6a38",
+    "summary.json": "0213b68494295868187b3dc05e5422ea27ea452cda1fed5485743725f1db92df"
+  }
+}

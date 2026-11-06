@@ -8,6 +8,8 @@
 
 ## 1. 三个模块与一个统一入口
 
+当前轨迹任务主方案已更新为[v3跨模型误差共性](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)：π0.5/GR00T-N1.5 × LIBERO四suite × BF16/ActQuant/SQ/QuantVLA。`configs/infra/runtime_commonality_v3/study.json`是不可执行的研究规格，原生采集与量化适配尚待实现；OFT旧绑定不可直接改名复用。64个自然回合与可选短扰动探针替代v1/v2主预算。CPU分析可用`python -m diagnostics.runtime_commonality_v3 --demo --output NEW_DIR`预览，不启动GPU。
+
 ```mermaid
 flowchart LR
   S[Suite与数据角色] --> C[任务配置 JSON]
