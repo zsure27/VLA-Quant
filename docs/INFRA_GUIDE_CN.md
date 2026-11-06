@@ -8,9 +8,11 @@
 
 ## 1. 三个模块与一个统一入口
 
+当前轨迹任务为[v5独立漂移诊断](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V5_CN.md)：三模型、四suite、10任务×5初态、12静态条件含BF16，不复现DyQ代码。`python -m qvla.runtime_study_v5 --gpu-slots 4 --output NEW_DIR`只编译CPU采样/分片建议，不能派发GPU；实际卡数和SSH待用户提供，方法适配与逐GPU占用门禁另验。下方v1–v4均保留历史，不作为当前起跑预算。
+
 v4在同一任务增加OpenVLA-OFT：[OFT独立视图与三模型设计](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V4_CN.md)。`configs/infra/runtime_commonality_v4/study.json`仍不可执行；`diagnostics.runtime_commonality_v4 --demo --model openvla_oft`仅生成合成预览。原生h=8独立合同不改写冻结v3，三模型首批预算96自然回合，缺失适配/实际门禁时保持阻断。
 
-当前轨迹任务主方案已更新为[v3跨模型误差共性](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)：π0.5/GR00T-N1.5 × LIBERO四suite × BF16/ActQuant/SQ/QuantVLA。`configs/infra/runtime_commonality_v3/study.json`是不可执行的研究规格，原生采集与量化适配尚待实现；OFT旧绑定不可直接改名复用。64个自然回合与可选短扰动探针替代v1/v2主预算。CPU分析可用`python -m diagnostics.runtime_commonality_v3 --demo --output NEW_DIR`预览，不启动GPU。
+历史v3轨迹方案为[v3跨模型误差共性](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)：π0.5/GR00T-N1.5 × LIBERO四suite × BF16/ActQuant/SQ/QuantVLA。`configs/infra/runtime_commonality_v3/study.json`是不可执行的研究规格，原生采集与量化适配尚待实现；OFT旧绑定不可直接改名复用。64个自然回合与可选短扰动探针替代v1/v2主预算。CPU分析可用`python -m diagnostics.runtime_commonality_v3 --demo --output NEW_DIR`预览，不启动GPU。
 
 ```mermaid
 flowchart LR

@@ -1,0 +1,31 @@
+{
+  "round_id": "prepare-cpu-v5",
+  "status": "CPU_ONLY_NO_SERVER_NO_GPU",
+  "created_at": "2026-11-06T09:24:38.237909+00:00",
+  "tests_passed": 3,
+  "planned_unique_cases_per_model_condition": 200,
+  "static_conditions_including_bf16": 12,
+  "planned_upper_bound_episodes": 7200,
+  "shared_bf16_episodes": 600,
+  "shard_count": 720,
+  "gpu_slot_proposal": 4,
+  "actual_gpu_count": null,
+  "actual_server_id": null,
+  "measured_episodes": 0,
+  "native_adapters_all_compatible": false,
+  "concurrent_gpu_executor_implemented": false,
+  "dyq_code_reproduced": false,
+  "opd_training": false,
+  "external_model_or_dataset_downloaded": false,
+  "new_visual_results": false,
+  "frozen_v3_v4_sources_unchanged": true,
+  "source_sha256": {
+    "qvla/runtime_study_v5.py": "7161b6cb24dc284a4e1c603023a2c943aaeb750efd09d7fe762e442881efc872",
+    "tests/test_runtime_study_v5.py": "1eb7c64e684f8c6f9d0c404d2b45c59bb36b9d3d117cdf52cb6a48f78c954687",
+    "configs/infra/runtime_commonality_v5/study.json": "60ab5ee3dd865f2a3dc448d1e7df874a8a61ecb600e086a11f3ea2a7fe4f790b"
+  },
+  "sampling_sha256": {
+    "planned-cases.csv": "41b7cc83745af750cb1624f5552a4fbe3359c3ead887f65a063f4c924e30e027",
+    "sampling-summary.json": "ac58301cf6ec17e403e9e49ae2ac95c5bfe9afb1cf08756ea1c2c22668eff64a"
+  }
+}

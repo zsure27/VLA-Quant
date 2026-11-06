@@ -1,0 +1,100 @@
+{
+  "checked_on": "2026-11-06",
+  "purpose": "Ideas and benchmark settings only; no DyQ code reproduction or vendoring",
+  "external_code_executed": false,
+  "external_code_vendored": false,
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2603.07904v3",
+      "version": "v3, 2026-10-04",
+      "sections": [
+        "3",
+        "B.2-B.6",
+        "E.1-E.2",
+        "Table 1"
+      ],
+      "observations": {
+        "models": [
+          "pi05",
+          "groot_n15"
+        ],
+        "suites": 4,
+        "paper_rollouts_per_task": 50,
+        "paper_rollouts_per_suite": 1000,
+        "rollout_total_consistency": "UNRESOLVED: 10 tasks times 50 gives 500 per suite; do not invent repeat seeds",
+        "quantization_calibration_trajectories": 60,
+        "scale_calibration_fp_rollouts_per_backbone": 512,
+        "section3_paired_rollout_count_N": "Not numerically specified in the inspected text; not 512 by inference",
+        "dynamic_activation_and_compensation": "Reference idea only; excluded from our static experiment"
+      }
+    },
+    {
+      "url": "https://anonymous.4open.science/r/DyQ-VLA-7F51/",
+      "access": "Read-only browser inspection succeeded; 1252-file snapshot shown ready 2026-10-06",
+      "inspected": [
+        "runtime/run_dyq_vla.py",
+        "dyq_method/evaluation.py"
+      ],
+      "observation": "The inspected CLI requires task/initial-index/policy-seed; no complete Table 1 evaluation ledger was identified. Do not infer total rollouts from the single-episode entry.",
+      "snapshot_commit_sha": null
+    },
+    {
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "inspected": [
+        "libero/libero/benchmark/__init__.py"
+      ],
+      "observation": "The selected four suites use ten-task orderings and per-task initial-state files; an index is not proof of geometric diversity."
+    },
+    {
+      "url": "https://github.com/AutoLab-SAI-SJTU/QVLA",
+      "commit": "26cc4821a3be4c003d09d3c7997b38db2a347982",
+      "readme_blob_sha": "0578a8049c5f6d1f150f6a490df18e2cc56b1c43",
+      "inspected_files": [
+        {
+          "path": "openvla-oft/qvla/sensitivity_hessian_proxy.py",
+          "blob_sha": "f8a77a99ba6678cff2fadac77456e41662a23009"
+        },
+        {
+          "path": "openvla-oft/qvla/inject_fake_w.py",
+          "blob_sha": "32794182284eb6c7666db154b5e649ab50507827"
+        },
+        {
+          "path": "openvla-oft/qvla/run_eval.py",
+          "blob_sha": "d5b393aed6e55ba95e2d54ce89c97060482ba706"
+        }
+      ],
+      "observation": "Public files implement a Hessian-weight proxy and weight fake quant, protect action_head, and expose OpenVLA-class loading. No pi05/GR00T implementation found in the inspected complete tree. Does not establish faithful requested action-sensitivity method on three backbones.",
+      "study_decision": "EXCLUDE_QVLA_THIS_STUDY_NOT_A_PERMANENT_IMPOSSIBILITY_CLAIM"
+    },
+    {
+      "url": "https://github.com/arashakb/ActQuant",
+      "commit": "b64791125070652fe6b554e244fe809c79ef5246",
+      "readme_blob_sha": "a2fca2f9936d65e09469488032f6c053f3629602",
+      "observation": "Official C++ backbones list OFT and pi05; action-guided mixed per-tensor types/AMF require an average-bit and BF16 runtime bridge audit; not a uniform-INT4 alias. GR00T binding not evidenced. README estimates about 50 GB build/scratch."
+    },
+    {
+      "url": "https://github.com/AIoT-MLSys-Lab/QuantVLA",
+      "commit": "9e435e56aac4e743526557e5d9ba6e4fddd6ccca",
+      "readme_blob_sha": "8d84e91f79ca6e20b42a47d7367e7f18d6f9252d",
+      "observation": "Inspected public tree is GR00T-focused with DuQuant preprocessing, ATM/OHB configs and LIBERO client. Does not establish pi05/OFT compatibility of our local framework."
+    },
+    {
+      "url": "https://arxiv.org/html/2605.28803v3",
+      "version": "v3, 2026-08-11",
+      "observation": "Diffusion-specific per-step scaling is part of HoloQ; OpenVLA-OFT has no such diffusion-step axis. No official implementation repository was identified from inspected paper/project links."
+    }
+  ],
+  "decision": {
+    "models": [
+      "pi05",
+      "groot_n15",
+      "openvla_oft"
+    ],
+    "static_conditions_including_bf16": 12,
+    "eval_cases_per_condition": 200,
+    "max_natural_episodes": 7200,
+    "dyq_algorithm_included": false,
+    "opd_training_included": false
+  }
+}

@@ -4,9 +4,11 @@
 
 ## 主要入口
 
+当前轨迹任务：[v5独立漂移研究设置](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V5_CN.md)。三模型、LIBERO四suite各10任务×5初态，12静态条件含BF16；不复现DyQ代码，QVLA本轮排除。多卡4090仅准备CPU分片建议；方法/资源门禁与本轮服务器授权未齐，不会启动GPU。
+
 轨迹任务v4补充：[OpenVLA-OFT独立预览与三模型总览](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V4_CN.md)，保持原生5/1/8步分面。所有新增图为合成示意，真实多suite/方法兼容性待本轮服务器门禁。
 
-最新独立研究准备：[π0.5/GR00T-N1.5在LIBERO四suite的轨迹偏移共性](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)。六组新增[分布与响应图预览](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/preview-v3/index.html)为合成示意；当前CPU分析已准备，两个模型的原生采集/量化后端尚待接入，无实测结果。
+历史v3研究准备：[π0.5/GR00T-N1.5在LIBERO四suite的轨迹偏移共性](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)。六组新增[分布与响应图预览](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/preview-v3/index.html)为合成示意；当前CPU分析已准备，两个模型的原生采集/量化后端尚待接入，无实测结果。
 
 | 入口 | 用途 |
 |---|---|

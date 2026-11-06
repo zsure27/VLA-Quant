@@ -1,0 +1,367 @@
+{
+  "version": 5,
+  "kind": "research_specification_not_infra_run_config",
+  "executable": false,
+  "status": "CPU_PREPARATION_ONLY_NO_SERVER",
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "models": [
+    {
+      "id": "pi05",
+      "execute_horizon": 5,
+      "native_backend_status": "NOT_IMPLEMENTED",
+      "checkpoint_sha256": null,
+      "source_commit": null,
+      "profile_sha256": null,
+      "source_repository": "https://github.com/Physical-Intelligence/openpi",
+      "condition_status": {
+        "BF16": "NOT_ADMITTED",
+        "GPTQ-W4A16": "NOT_ADMITTED",
+        "AWQ-W4A16": "NOT_ADMITTED",
+        "OmniQuant-W4A16": "NOT_ADMITTED",
+        "ActQuant-W4A16": "UPSTREAM_CPP_BACKBONE_EXISTS_EXPORT_AND_BF16_RUNTIME_BRIDGE_PENDING",
+        "SQ-W4A8": "NOT_ADMITTED",
+        "DuQuant-W4A8": "NOT_ADMITTED",
+        "QuantVLA-W4A8": "NOT_ADMITTED",
+        "SQ-W4A4": "NOT_ADMITTED",
+        "DuQuant-W4A4": "NOT_ADMITTED",
+        "QuantVLA-W4A4": "NOT_ADMITTED",
+        "HoloQ-VLA-W4A4": "NOT_ADMITTED"
+      }
+    },
+    {
+      "id": "groot_n15",
+      "execute_horizon": 1,
+      "native_backend_status": "NOT_IMPLEMENTED",
+      "checkpoint_sha256": null,
+      "source_commit": null,
+      "profile_sha256": null,
+      "source_repository": "https://github.com/NVIDIA/Isaac-GR00T",
+      "condition_status": {
+        "BF16": "NOT_ADMITTED",
+        "GPTQ-W4A16": "NOT_ADMITTED",
+        "AWQ-W4A16": "NOT_ADMITTED",
+        "OmniQuant-W4A16": "NOT_ADMITTED",
+        "ActQuant-W4A16": "NOT_ADMITTED",
+        "SQ-W4A8": "NOT_ADMITTED",
+        "DuQuant-W4A8": "UPSTREAM_GROOT_RELEASE_INSPECTED_LOCAL_BINDING_PENDING",
+        "QuantVLA-W4A8": "UPSTREAM_GROOT_RELEASE_INSPECTED_LOCAL_BINDING_PENDING",
+        "SQ-W4A4": "NOT_ADMITTED",
+        "DuQuant-W4A4": "UPSTREAM_GROOT_RELEASE_INSPECTED_LOCAL_BINDING_PENDING",
+        "QuantVLA-W4A4": "UPSTREAM_GROOT_RELEASE_INSPECTED_LOCAL_BINDING_PENDING",
+        "HoloQ-VLA-W4A4": "NOT_ADMITTED"
+      }
+    },
+    {
+      "id": "openvla_oft",
+      "execute_horizon": 8,
+      "native_backend_status": "NATURAL_OBSERVER_EXISTS_PENDING_GPU_ADMISSION_PERTURBATION_COLLECTOR_NOT_IMPLEMENTED",
+      "checkpoint_sha256": null,
+      "source_commit": null,
+      "profile_sha256": null,
+      "source_repository": "https://github.com/moojink/openvla-oft",
+      "condition_status": {
+        "BF16": "EXISTING_INTERFACE_PENDING_THIS_ROUND_MULTISUITE_NUMERICAL_GATE",
+        "GPTQ-W4A16": "NOT_ADMITTED",
+        "AWQ-W4A16": "EXISTING_INTERFACE_PENDING_THIS_ROUND_MULTISUITE_NUMERICAL_GATE",
+        "OmniQuant-W4A16": "NOT_ADMITTED",
+        "ActQuant-W4A16": "UPSTREAM_CPP_BACKBONE_EXISTS_EXPORT_AND_BF16_RUNTIME_BRIDGE_PENDING",
+        "SQ-W4A8": "EXISTING_INTERFACE_PENDING_THIS_ROUND_MULTISUITE_NUMERICAL_GATE",
+        "DuQuant-W4A8": "NOT_ADMITTED",
+        "QuantVLA-W4A8": "NOT_ADMITTED",
+        "SQ-W4A4": "EXISTING_INTERFACE_PENDING_THIS_ROUND_MULTISUITE_NUMERICAL_GATE",
+        "DuQuant-W4A4": "NOT_ADMITTED",
+        "QuantVLA-W4A4": "NOT_ADMITTED",
+        "HoloQ-VLA-W4A4": "DIFFUSION_SPECIFIC_VARIANT_UNDEFINED_DO_NOT_RUN_UNDER_PAPER_LABEL"
+      }
+    }
+  ],
+  "conditions": [
+    "BF16",
+    "GPTQ-W4A16",
+    "AWQ-W4A16",
+    "OmniQuant-W4A16",
+    "ActQuant-W4A16",
+    "SQ-W4A8",
+    "DuQuant-W4A8",
+    "QuantVLA-W4A8",
+    "SQ-W4A4",
+    "DuQuant-W4A4",
+    "QuantVLA-W4A4",
+    "HoloQ-VLA-W4A4"
+  ],
+  "suites": [
+    "libero_spatial",
+    "libero_object",
+    "libero_goal",
+    "libero_10"
+  ],
+  "role": "development",
+  "training": false,
+  "opd": false,
+  "dynamic_routing": false,
+  "budgets": {
+    "cases_per_model_condition": 200,
+    "cases_per_suite_model_condition": 50,
+    "model_condition_cells": 36,
+    "natural_episode_upper_bound": 7200,
+    "bf16_reference_episodes": 600,
+    "quantized_episode_upper_bound": 6600,
+    "shared_bf16_not_repeated": true,
+    "conditional_cells_do_not_count_as_executed": true,
+    "automatic_expansion": false,
+    "short_probe_episodes_registered": 0
+  },
+  "perturbation": {
+    "enabled_by_default": false,
+    "registered_budget": 0,
+    "scope": "Separate independent, versioned short probe after natural-drift diagnosis; no full grid expansion and no DyQ implementation",
+    "case_and_direction_selection": "Freeze before confirmation; no success-based selection"
+  },
+  "analysis": {
+    "reference": "matched_reset_quantized_vs_bf16_natural_trajectory_difference",
+    "time_pairing": "Control-step pose comparison; same-observation action replay uses identical query input; no perturbation registered",
+    "normalization": "frozen_per_backbone_shared_all_precisions_and_times",
+    "near_zero_sensitivity": null,
+    "display_time_grid_queries": null,
+    "retain_control_steps_and_seconds": true,
+    "internal_flow_steps_separate": true,
+    "complete_cohort_shared_across_time_and_precision": false,
+    "available_case_and_risk_set_required": true,
+    "all_outcomes_retained": true,
+    "do_not_pool_frames_as_independent_samples": true,
+    "default_display_directions": {
+      "T": "Tz+",
+      "R": "Rz+"
+    },
+    "paper": "https://arxiv.org/html/2603.07904v3",
+    "different_query_horizons_do_not_imply_same_physical_time": true,
+    "discovery_reset_indices": [
+      5,
+      15
+    ],
+    "confirmation_reset_indices": [
+      25,
+      35,
+      45
+    ],
+    "initial_index_spacing_is_not_geometric_diversity_proof": true,
+    "required_initial_state_checks": [
+      "task order/name and BDDL SHA",
+      "initial-state file and actual-state SHA",
+      "unique physical states for five indices",
+      "training/calibration/evaluation role separation; no holdout labels"
+    ],
+    "frame_samples_independent": false,
+    "reference_modes": [
+      "matched-reset BF16 versus quantized natural trajectories",
+      "same-observation BF16 versus quantized action replay; serial model loading"
+    ],
+    "primary_estimand": "Paired method-vs-BF16 effects, reported per task and suite before pooled effects",
+    "cohort_rule": "Method-specific complete pairs across time plus all-planned outcomes, available-case curves and risk sets; never globally intersect all quantizers",
+    "confidence_intervals": "Task-cluster/stratified-by-suite resampling if used; retain five initials and precision pairing as a block; do not bootstrap frames",
+    "turning_window_rule": "Freeze threshold and persistent-change/event rules before three confirmation initials; allow no turning point and gradual drift",
+    "claim_scope": "LIBERO task/initial-state robustness; not unseen-task or cross-benchmark generalization",
+    "external_code_reproduction": false,
+    "display_timebase": "Full natural rollout control steps and simulation seconds, plus event-aligned views; no five-query truncation",
+    "sensitivity_from_natural_unmatched_states": false
+  },
+  "pending_admissions": [
+    "native model checkpoint/source/action coordinates and original execution schedule",
+    "method-specific target modules/granularity/profile and actual numerical gate",
+    "observer on/off identity, matched RNG, finite, freeze and save/reload",
+    "actual five initial-state hashes, task-name ordering and role separation",
+    "independent calibration manifests and frozen scales",
+    "per-GPU UUID locks, ownership, actual peak memory, global quota/stop propagation",
+    "fresh authorized server identity, disk budget and round-bound authorization"
+  ],
+  "public_artifacts": "code/specification/reviewed small statistics/synthetic previews only",
+  "private_artifacts": "raw observations/actions/videos/checkpoints/full logs",
+  "operations": {
+    "heartbeat_minutes": 15,
+    "stop_expansion_remaining_percent": 15,
+    "closure_remaining_percent": 10,
+    "reserve_percent": 3,
+    "shutdown_windows": false,
+    "new_method_disk_min_gib": 12,
+    "continuation_disk_min_gib": 8,
+    "running_disk_reserve_gib": 6,
+    "additional_workspace_gate": "Also require the actual method build/calibration/profile plus archive spool estimate; minima alone are insufficient. ActQuant upstream documents about 50 GB scratch.",
+    "archive": "Public code/config/small results; private raw observations/actions/videos/checkpoints; incremental SHA/digest verified",
+    "server_shutdown": "After all owned workers stopped and GPU idle; attempt closure even if upload incomplete, preserving persistent originals",
+    "heartbeat_scope": "One consolidated 15-minute node status/actual GPU/process/disk snapshot, no episode log polling"
+  },
+  "scope_override_v5": "Independent pre/post-quantization drift diagnosis; DyQ ideas/benchmark reference only. No DyQ code replication, dynamic routing or compensation.",
+  "task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "reset_indices": [
+    5,
+    15,
+    25,
+    35,
+    45
+  ],
+  "condition_catalog": [
+    {
+      "id": "BF16",
+      "method": "BF16",
+      "weight_bits": 16,
+      "activation_bits": 16,
+      "group": "reference",
+      "status": "ROUND_ADMISSION_REQUIRED",
+      "source": null
+    },
+    {
+      "id": "GPTQ-W4A16",
+      "method": "GPTQ",
+      "weight_bits": 4,
+      "activation_bits": 16,
+      "group": "W4A16",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/IST-DASLab/gptq"
+    },
+    {
+      "id": "AWQ-W4A16",
+      "method": "AWQ",
+      "weight_bits": 4,
+      "activation_bits": 16,
+      "group": "W4A16",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/mit-han-lab/llm-awq"
+    },
+    {
+      "id": "OmniQuant-W4A16",
+      "method": "OmniQuant",
+      "weight_bits": 4,
+      "activation_bits": 16,
+      "group": "W4A16",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/OpenGVLab/OmniQuant",
+      "calibration_note": "Record LWC/LET choices and optimizer/calibration cost separately; no policy LoRA training."
+    },
+    {
+      "id": "ActQuant-W4A16",
+      "method": "ActQuant",
+      "weight_bits": 4,
+      "activation_bits": 16,
+      "group": "W4A16",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/arashakb/ActQuant",
+      "bit_budget_note": "W4 denotes the target average budget; record achieved tensor/module-weighted bits, GGUF format, full-model bytes, protected modules and runtime. Do not replace action-guided allocation with uniform INT4."
+    },
+    {
+      "id": "SQ-W4A8",
+      "method": "SmoothQuant",
+      "weight_bits": 4,
+      "activation_bits": 8,
+      "group": "W4A8",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/mit-han-lab/smoothquant"
+    },
+    {
+      "id": "DuQuant-W4A8",
+      "method": "DuQuant",
+      "weight_bits": 4,
+      "activation_bits": 8,
+      "group": "W4A8",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/Hsu1023/DuQuant"
+    },
+    {
+      "id": "QuantVLA-W4A8",
+      "method": "QuantVLA",
+      "weight_bits": 4,
+      "activation_bits": 8,
+      "group": "W4A8",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/AIoT-MLSys-Lab/QuantVLA",
+      "adaptation_note": "Public release inspected is GR00T-focused; pi05/OFT adapters unverified. Preserve ATM/OHB and target-module identity, not a generic DuQuant alias."
+    },
+    {
+      "id": "SQ-W4A4",
+      "method": "SmoothQuant",
+      "weight_bits": 4,
+      "activation_bits": 4,
+      "group": "W4A4",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/mit-han-lab/smoothquant"
+    },
+    {
+      "id": "DuQuant-W4A4",
+      "method": "DuQuant",
+      "weight_bits": 4,
+      "activation_bits": 4,
+      "group": "W4A4",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/Hsu1023/DuQuant"
+    },
+    {
+      "id": "QuantVLA-W4A4",
+      "method": "QuantVLA",
+      "weight_bits": 4,
+      "activation_bits": 4,
+      "group": "W4A4",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://github.com/AIoT-MLSys-Lab/QuantVLA",
+      "adaptation_note": "Public release inspected is GR00T-focused; pi05/OFT adapters unverified. Preserve ATM/OHB and target-module identity, not a generic DuQuant alias."
+    },
+    {
+      "id": "HoloQ-VLA-W4A4",
+      "method": "HoloQ-VLA",
+      "weight_bits": 4,
+      "activation_bits": 4,
+      "group": "W4A4",
+      "status": "METHOD_MODEL_ADAPTER_AND_ACTUAL_NUMERICAL_GATE_REQUIRED",
+      "source": "https://arxiv.org/html/2605.28803v3",
+      "adaptation_note": "Diffusion-step calibration has no direct OFT counterpart. OFT cell is conditional on a separately named, audited variant; do not label an incomplete rotation as faithful HoloQ."
+    }
+  ],
+  "excluded_conditions": [
+    {
+      "id": "QVLA-W4A16",
+      "reason": "Public Hessian-proxy/fake-quant workflow and no pi05/GR00T implementation do not establish the requested three-backbone action-sensitivity method; excluded from this study, not declared permanently impossible."
+    },
+    {
+      "id": "DyQ-VLA-W4-Adyn",
+      "reason": "User explicitly requests ideas/benchmark reference only; do not reproduce its code, precision switching or compensation. Would confound independent drift/OPD diagnosis."
+    }
+  ],
+  "calibration": {
+    "quantization_trajectory_target": 60,
+    "source": "Independent calibration manifests; reuse SHA-verified existing data where suitable; never count as evaluation",
+    "per_method_recipe_and_label_requirements": "Explicitly record any method-specific calibration labels, optimization and differences",
+    "normalization_scale_manifest": null,
+    "normalization_rollout_count": null,
+    "paper_512_scale_rollouts_not_automatically_scheduled": true
+  },
+  "hardware_plan": {
+    "gpu_family": "RTX 4090",
+    "vram_per_gpu_gib": 24,
+    "gpu_count": null,
+    "server_id": null,
+    "ssh": null,
+    "automatic_start": false,
+    "execution_model": "Independent inference workers, one resident model per GPU; no DDP or pooled VRAM",
+    "bf16_teacher": "Serial load/replay or one separately admitted teacher GPU; no unverified two-model co-residency",
+    "gpu_uuid_lock": "REQUIRED_NOT_IMPLEMENTED_BY_THIS_SAMPLING_HELPER",
+    "existing_infra_runner": "Serial runner checks global GPU occupancy; concurrent dispatch requires a separate per-GPU ownership/admission implementation",
+    "profile_generation": "Once per model/method/recipe; immutable SHA shared read-only",
+    "quota": "One fresh controller primary observation; 15% stop all new dispatch, 10% save/stop all owned workers and close this paid server",
+    "no_gpu_kernel_speed_claim_from_qdq": true
+  }
+}

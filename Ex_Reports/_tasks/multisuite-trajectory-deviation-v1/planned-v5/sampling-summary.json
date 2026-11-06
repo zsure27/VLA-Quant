@@ -1,0 +1,19 @@
+{
+  "status": "CPU_SAMPLING_ONLY_NO_SERVER",
+  "study_sha256": "60ab5ee3dd865f2a3dc448d1e7df874a8a61ecb600e086a11f3ea2a7fe4f790b",
+  "summary": {
+    "cases_per_model_condition": 200,
+    "cases_per_suite_model_condition": 50,
+    "model_condition_cells": 36,
+    "natural_episode_upper_bound": 7200,
+    "bf16_reference_episodes": 600,
+    "quantized_episode_upper_bound": 6600,
+    "bf16_reference_reused_in_analysis_not_rerun_per_method": true,
+    "all_conditions_admitted": false,
+    "short_probe_episodes_registered": 0,
+    "automatic_gpu_dispatch": false
+  },
+  "gpu_slot_proposal": 4,
+  "actual_gpu_uuids": null,
+  "measured_episodes": 0
+}
