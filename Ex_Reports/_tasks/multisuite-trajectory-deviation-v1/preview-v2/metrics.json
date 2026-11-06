@@ -1,0 +1,94 @@
+{
+  "data_kind": "synthetic_demo",
+  "scenario": "Toy illustration, NOT LIBERO or measured model output",
+  "conditions": {
+    "AWQ-W4A16": {
+      "common_pose_steps": 160,
+      "pose_horizon_censored": false
+    },
+    "AWQ-W2A16": {
+      "common_pose_steps": 160,
+      "pose_horizon_censored": false
+    },
+    "SQ-W4A16": {
+      "common_pose_steps": 160,
+      "pose_horizon_censored": false
+    },
+    "SQ-W4A8": {
+      "common_pose_steps": 160,
+      "pose_horizon_censored": false
+    },
+    "SQ-W4A4": {
+      "common_pose_steps": 160,
+      "pose_horizon_censored": false
+    }
+  },
+  "event_alignment": {
+    "no_event": 1,
+    "counts": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  "activation": {
+    "8": {
+      "sampled_elements": 6030,
+      "mean": -0.011239051426520045,
+      "variance": 1.4033385640267484,
+      "abs_p99_9": 10.46280184105064,
+      "out_of_calibration_range_fraction": 0.003482587064676617,
+      "skewness": -1.3901631970567871,
+      "excess_kurtosis": 41.750494880524194,
+      "paired_mse": 0.18873443311329893
+    },
+    "4": {
+      "sampled_elements": 6030,
+      "mean": -0.011239051426520045,
+      "variance": 1.4033385640267484,
+      "abs_p99_9": 10.46280184105064,
+      "out_of_calibration_range_fraction": 0.003482587064676617,
+      "skewness": -1.3901631970567871,
+      "excess_kurtosis": 41.750494880524194,
+      "paired_mse": 0.21545491923695595
+    }
+  }
+}

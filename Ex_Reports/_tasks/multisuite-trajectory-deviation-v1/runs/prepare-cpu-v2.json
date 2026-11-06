@@ -1,0 +1,32 @@
+{
+  "status": "CPU_ONLY_NO_SERVER_NO_GPU",
+  "new_tests_passed": 7,
+  "prior_diagnostic_tests_passed": 7,
+  "infra_tests_passed": 7,
+  "measured_episodes": 0,
+  "source_ppt_sha256": "c7a609f5d94275b99ba1ee5f772803ae078dbc208b147a461d99fe875ef449ef",
+  "source_ppt_public_upload": false,
+  "config_templates_validated": [
+    "awq-w2a16.example.json",
+    "awq-w4a16.example.json",
+    "bf16.example.json",
+    "sq-w4a16.example.json",
+    "sq-w4a4.example.json",
+    "sq-w4a8.example.json"
+  ],
+  "shared_sq_w4_profile_identity_template": true,
+  "same_task_identity_preserved": true,
+  "preview_figures": 7,
+  "preview_kind": "synthetic_demo",
+  "preview_bytes": 1385345,
+  "js_primary_interaction_check": "Node VM slider/selection/finite SVG passed",
+  "browser_visual_inspection": false,
+  "source_sha256": {
+    "qvla/trajectory_diagnostics_v2.py": "6e186f8eb023317d4714549b2071aab6233d2f6757a4f13b76569da5a08bd9e5",
+    "qvla/run_trajectory_diagnostic_v2.py": "3137486bee11c33c607b38b1e165b819b613f7563b716c04f3948f2fb5c4e03c",
+    "qvla/trajectory_infra_v2.py": "4854e15699377084f36ede64fb3a24533ca860292223f0bcfc8fd40d13f199e1",
+    "diagnostics/trajectory_study_v2.py": "fa5b8254a249d59dfc689187b8a84def08d6d57f688cd8c5dfc8360a1368f80a",
+    "scripts/prepare_trajectory_study_v2.py": "7e0dfa6b7472d3049c7faaac09d07d087ff2881a1c71e0270c5b21561a905915",
+    "tests/test_trajectory_diagnostics_v2.py": "c85033625f1b126fa507ac712dbe1c99102bda490d353ce11539850e6e25583a"
+  }
+}

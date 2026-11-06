@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "model": {
+    "checkpoint": "/root/autodl-tmp/qvla-repro/models/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+    "identity_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "oft_root": "/root/autodl-tmp/qvla-repro/src/QVLA/openvla-oft",
+    "libero_root": "/root/autodl-tmp/qvla-repro/src/LIBERO"
+  },
+  "data": {
+    "training": [],
+    "calibration": [
+      {
+        "role": "calibration",
+        "suite": "libero_spatial",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_spatial/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "calibration",
+        "suite": "libero_object",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_object/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "calibration",
+        "suite": "libero_goal",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_goal/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "role": "calibration",
+        "suite": "libero_10",
+        "namespace": "offline_trajectory",
+        "manifest": "/root/autodl-tmp/qvla-repro/calib/libero_10/manifest.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ]
+  },
+  "quantization": {
+    "method": "smoothquant_diagnostic_v2",
+    "weight_bits": 4,
+    "activation_bits": 8,
+    "official_root": "/root/autodl-tmp/qvla-repro/src/official-quantization",
+    "profiles": [
+      {
+        "path": "/root/autodl-tmp/qvla-repro/profiles/multisuite-sq-w4.pt",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "recipe_argv": []
+  },
+  "finetuning": {
+    "method": "none",
+    "train": false
+  },
+  "evaluation": {
+    "seed": 7,
+    "env_seed": 0,
+    "suites": [
+      {
+        "name": "libero_spatial",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_object",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_goal",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_10",
+        "role": "development",
+        "reset_offset": 5,
+        "resets_per_task": 1
+      }
+    ]
+  },
+  "control": {
+    "server_id": "UNASSIGNED_USER_OPENED_SERVER_REQUIRED",
+    "heartbeat_seconds": 900,
+    "quota_max_age_seconds": 1020,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "start_disk_gib": 12,
+    "runtime_disk_gib": 6,
+    "shutdown_provider": "autodl_native",
+    "backup_timeout_seconds": 900,
+    "backup_argv": [
+      "{python}",
+      "{repo}/scripts/infra_archive_run.py",
+      "--run-dir",
+      "{run_dir}",
+      "--max-upload-gib",
+      "2"
+    ],
+    "git_sync_argv": [
+      "{python}",
+      "{repo}/scripts/infra_git_sync.py",
+      "--task-id",
+      "{task_id}",
+      "--run-dir",
+      "{run_dir}"
+    ],
+    "persistent_root": "/root/autodl-tmp/qvla-repro"
+  },
+  "binding": {
+    "id": "trajectory-wa-v2-pending-actual-gpu-admission",
+    "verified_suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "quantizers": [
+      "smoothquant_diagnostic_v2"
+    ],
+    "strategies": [
+      "none"
+    ],
+    "gate_files": [
+      {
+        "path": "{repo}/.local/trajectory-study-v2/sq-w4a8.admission.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "expected_gate": "PASS_TRAJECTORY_CAPTURE_ACTUAL_MODEL_V2"
+      }
+    ],
+    "evaluation_argv": [
+      "{python}",
+      "-m",
+      "qvla.run_trajectory_diagnostic_v2",
+      "--identity",
+      "{repo}/.local/trajectory-study-v2/sq-w4a8.identity.json",
+      "--admission",
+      "{repo}/.local/trajectory-study-v2/sq-w4a8.admission.json",
+      "--capture-root",
+      "{output}/capture",
+      "--",
+      "--pretrained_checkpoint",
+      "{checkpoint}",
+      "--task_suite_name",
+      "{suite}",
+      "--num_trials_per_task",
+      "{count}",
+      "--local_log_dir",
+      "{output}",
+      "--seed",
+      "7",
+      "--method",
+      "smoothquant",
+      "--weight-bits",
+      "4",
+      "--activation-bits",
+      "8",
+      "--initial-state-offset",
+      "{offset}",
+      "--env-seed",
+      "0",
+      "--seed-protocol",
+      "paired",
+      "--official-root",
+      "/root/autodl-tmp/qvla-repro/src/official-quantization",
+      "--profile",
+      "/root/autodl-tmp/qvla-repro/profiles/multisuite-sq-w4.pt"
+    ]
+  },
+  "diagnostic_note": "BLOCKED TEMPLATE, interface validation only. SQ is conditional on smoothing-only equivalence. Plugin qvla.trajectory_infra_v2 required. No actual GPU verification.",
+  "diagnostic_question_v2": "分离权重与激活量化、重参数化及误差耦合，检查四suite多任务中的轨迹偏离、动作块尾部和阶段错拍；允许无拐点。"
+}

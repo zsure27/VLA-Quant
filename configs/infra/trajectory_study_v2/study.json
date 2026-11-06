@@ -1,0 +1,106 @@
+{
+  "version": 2,
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "status": "CPU_PREPARATION_ONLY_NO_SERVER",
+  "methods": [
+    {
+      "method": "AWQ",
+      "axis": "weight_only",
+      "status": "existing_adapter_pending_multisuite_gate",
+      "notes": "Native backend only W2/W4/W8 A16; W3 and AWQ+A QDQ need separate adapters/identities."
+    },
+    {
+      "method": "SmoothQuant",
+      "axis": "weight_and_activation",
+      "status": "existing_adapter_smoothing_equivalence_blocked",
+      "notes": "W4/W8/W16 with A4/A8/A16; full closed loop forbidden until C0 passes."
+    },
+    {
+      "method": "GPTQ",
+      "axis": "weight_only",
+      "status": "literature_candidate_no_oft_binding",
+      "notes": "Useful W3/W2 comparator; no arbitrary registry rename."
+    },
+    {
+      "method": "OmniQuant-no-LET",
+      "axis": "weight_and_activation",
+      "status": "literature_candidate_no_oft_binding",
+      "notes": "Separate clipping/reconstruction optimization cost from inference."
+    },
+    {
+      "method": "OmniQuant-LET",
+      "axis": "weight_and_activation",
+      "status": "literature_candidate_no_oft_binding",
+      "notes": "LEARNED equivalent transformation needs frozen/reload and FP equivalence controls."
+    },
+    {
+      "method": "DuQuant",
+      "axis": "weight_and_activation",
+      "status": "literature_candidate_no_oft_binding",
+      "notes": "Rotation/reordering/reparameterization require model-specific contracts."
+    },
+    {
+      "method": "QuantVLA",
+      "axis": "vla_specific",
+      "status": "paper_reference_not_implemented_here",
+      "notes": "Not the same name/method as QVLA."
+    },
+    {
+      "method": "Omega-QVLA",
+      "axis": "vla_specific",
+      "status": "ppt_reference_identity_unresolved",
+      "notes": "Pin exact paper/repository/version before integration; no compatibility claim."
+    }
+  ],
+  "closed_loop_stages": [
+    {
+      "id": "W",
+      "conditions": [
+        "bf16",
+        "awq-w4a16",
+        "awq-w2a16"
+      ],
+      "suites": 4,
+      "tasks_per_suite": 10,
+      "resets": [
+        5
+      ],
+      "episode_cap": 120
+    },
+    {
+      "id": "A",
+      "conditions": [
+        "sq-w4a16",
+        "sq-w4a8",
+        "sq-w4a4"
+      ],
+      "requires": "SQ_C0_PASS",
+      "suites": 4,
+      "tasks_per_suite": 10,
+      "resets": [
+        5
+      ],
+      "episode_cap": 120
+    }
+  ],
+  "offline_only_controls": [
+    "SQ-W16A16-C0",
+    "SQ-W16A8",
+    "SQ-W16A4"
+  ],
+  "offline_query_budget": 80,
+  "offline_selection": "2 predeclared query states per task across all 40 tasks, no success-only filter; paired BF16 reference; distinct calibration role.",
+  "maximum_initial_closed_loop_episodes_if_all_admitted": 240,
+  "confirmation": "At most 2 predeclared surviving candidates + BF16, resets6/7, at most240 additional episodes; no automatic full method-bitwidth grid.",
+  "observed_episodes": 0,
+  "training": false,
+  "default_action_head": "BF16 protected for every condition",
+  "backup": "Only incremental code/config/aggregate/clearly synthetic figures public. Source PPT and measured raw data stay private.",
+  "question_v2": "分离权重与激活量化、重参数化及误差耦合，检查四suite多任务中的轨迹偏离、动作块尾部和阶段错拍；允许无拐点。"
+}

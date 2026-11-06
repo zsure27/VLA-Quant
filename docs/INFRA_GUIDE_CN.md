@@ -4,6 +4,8 @@
 
 新增独立诊断绑定（2026-11-06）：[四suite多任务轨迹偏移设计](../Ex_Reports/20261106_1504_四套件多任务轨迹偏移诊断.md)。`configs/infra/trajectory_study_v1/`为未填服务器/模型/profile/实际GPU门禁的阻断模板；CPU记录器与作图已准备，不代表真实模型已通过。实际采集仍经本入口计划、授权、配额与关机流程，不直接启动历史任务。
 
+同任务v2新增`configs/infra/trajectory_study_v2/`六份阻断模板、AWQ/SQ分阶段对照及13组累计预览。SQ诊断通过`--plugin qvla.trajectory_infra_v2`显式绑定，注册不代表兼容。只平滑等价未通过时禁止扩展激活量化闭环，详见[v2设计](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V2_CN.md)。
+
 ## 1. 三个模块与一个统一入口
 
 ```mermaid
