@@ -12,6 +12,7 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
+import subprocess
 import time
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
@@ -70,6 +71,17 @@ def fetch_one(root, row):
     partial = dest.with_name(dest.name + ".partial")
     url = "https://storage.googleapis.com/" + BUCKET + "/" + quote(row["name"], safe="/")
     url += "?" + urlencode({"generation": row["generation"]})
+    if int(row["size"]) >= 64 * 1024**2 and shutil.which("aria2c"):
+        subprocess.run([
+            "aria2c", "--continue=true", "--file-allocation=none",
+            "--max-connection-per-server=8", "--split=8", "--min-split-size=4M",
+            "--max-tries=5", "--retry-wait=5", "--timeout=90",
+            "--summary-interval=30", "--dir=" + str(dest.parent),
+            "--out=" + partial.name, url,
+        ], check=True)
+        sha = verify(partial, row)
+        partial.rename(dest)
+        return sha
     for attempt in range(5):
         offset = partial.stat().st_size if partial.exists() else 0
         if offset > int(row["size"]):
