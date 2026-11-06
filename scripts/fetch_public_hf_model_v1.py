@@ -18,7 +18,7 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 
-ENDPOINT = "https://hf-mirror.com"
+ENDPOINT = "https://hf-mirror.net"
 ALLOWED = {
     "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
     "youliangtan/gr00t-n1.5-libero-spatial-posttrain",

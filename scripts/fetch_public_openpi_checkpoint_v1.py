@@ -111,6 +111,7 @@ def main():
     root = args.destination.resolve()
     if root.exists() and root.is_symlink():
         raise ValueError("Destination cannot be a symlink")
+    root.parent.mkdir(parents=True, exist_ok=True)
     if shutil.disk_usage(root.parent).free < total + 2 * 1024**3:
         raise ValueError("Insufficient disk for checkpoint and reserve")
     root.mkdir(parents=True, exist_ok=True)
