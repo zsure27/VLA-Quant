@@ -1,0 +1,158 @@
+{
+  "version": 4,
+  "kind": "research_specification_not_infra_run_config",
+  "executable": false,
+  "status": "CPU_PREPARATION_ONLY_NO_SERVER",
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "models": [
+    {
+      "id": "pi05",
+      "execute_horizon": 5,
+      "native_backend_status": "NOT_IMPLEMENTED",
+      "checkpoint_sha256": null,
+      "source_commit": null,
+      "profile_sha256": null,
+      "source_repository": "https://github.com/Physical-Intelligence/openpi"
+    },
+    {
+      "id": "groot_n15",
+      "execute_horizon": 1,
+      "native_backend_status": "NOT_IMPLEMENTED",
+      "checkpoint_sha256": null,
+      "source_commit": null,
+      "profile_sha256": null,
+      "source_repository": "https://github.com/NVIDIA/Isaac-GR00T"
+    },
+    {
+      "id": "openvla_oft",
+      "execute_horizon": 8,
+      "native_backend_status": "NATURAL_OBSERVER_EXISTS_PENDING_GPU_ADMISSION_PERTURBATION_COLLECTOR_NOT_IMPLEMENTED",
+      "checkpoint_sha256": null,
+      "source_commit": null,
+      "profile_sha256": null,
+      "source_repository": "https://github.com/moojink/openvla-oft",
+      "condition_status": {
+        "BF16": "existing_observer_pending_round_admission",
+        "ActQuant-W4A16": "NOT_IMPLEMENTED",
+        "SQ-W4A8": "existing_interface_pending_numerical_and_multisuite_admission",
+        "QuantVLA-W4A8": "NOT_IMPLEMENTED"
+      }
+    }
+  ],
+  "conditions": [
+    "BF16",
+    "ActQuant-W4A16",
+    "SQ-W4A8",
+    "QuantVLA-W4A8"
+  ],
+  "optional_not_registered": [
+    "AWQ-W4A16",
+    "HoloQ-W4A4",
+    "OFT-AWQ-W2A16-separate-pressure-control"
+  ],
+  "suites": [
+    "libero_spatial",
+    "libero_object",
+    "libero_goal",
+    "libero_10"
+  ],
+  "role": "development",
+  "task_ids_first": [
+    0,
+    5
+  ],
+  "reset_indices_first": [
+    5
+  ],
+  "training": false,
+  "opd": false,
+  "dynamic_routing": false,
+  "budgets": {
+    "natural_first_episodes": 96,
+    "optional_all_40_tasks_one_reset_episodes": 480,
+    "automatic_expansion": false,
+    "short_perturbation_branches": 144,
+    "short_reference_cells": 36,
+    "short_references_reused_only_after_replay_gate": true,
+    "max_additional_short_references": 36,
+    "post_injection_control_steps_cap": 40,
+    "prefix_replay_cost_counted": true,
+    "oft_incremental_natural_first_episodes": 32
+  },
+  "perturbation": {
+    "enabled_by_default": false,
+    "conditions": [
+      "BF16",
+      "ActQuant-W4A16",
+      "QuantVLA-W4A8"
+    ],
+    "task_ids": [
+      0
+    ],
+    "reset_indices": [
+      5
+    ],
+    "directions": [
+      "Tz+",
+      "Tz-",
+      "Rz+",
+      "Rz-"
+    ],
+    "query_index": 4,
+    "normalized_magnitude": 0.1,
+    "physical_offset_and_realized_offset_required": true,
+    "complete_restore_or_deterministic_prefix_replay_required": true,
+    "matched_per_query_noise_required": true
+  },
+  "analysis": {
+    "reference": "same_precision_perturbed_vs_unperturbed",
+    "time_pairing": "pose_error_after_query_t_to_action_response_query_t_plus_1",
+    "normalization": "frozen_per_backbone_shared_all_precisions_and_times",
+    "near_zero_sensitivity": null,
+    "display_time_grid_queries": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "retain_control_steps_and_seconds": true,
+    "internal_flow_steps_separate": true,
+    "complete_cohort_shared_across_time_and_precision": true,
+    "available_case_and_risk_set_required": true,
+    "all_outcomes_retained": true,
+    "do_not_pool_frames_as_independent_samples": true,
+    "default_display_directions": {
+      "T": "Tz+",
+      "R": "Rz+"
+    },
+    "paper": "https://arxiv.org/html/2603.07904v3",
+    "different_query_horizons_do_not_imply_same_physical_time": true,
+    "admission_gate": "PASS_DYQ_SECTION3_PAIRED_DATA_V4"
+  },
+  "pending_admissions": [
+    "native model checkpoint/code/action coordinates and execution schedule",
+    "method-specific quantization target modules/granularity/profile and numerical gate",
+    "observer on/off identity, matched RNG, finite, freeze and save/reload",
+    "full branch replay and actual perturbation measurement",
+    "independent calibration manifest and fixed scales",
+    "fresh server/GPU/disk/quota and round-bound authorization"
+  ],
+  "public_artifacts": "code/specification/reviewed small statistics/synthetic previews only",
+  "private_artifacts": "raw observations/actions/videos/checkpoints/full logs",
+  "operations": {
+    "heartbeat_minutes": 15,
+    "stop_expansion_remaining_percent": 15,
+    "closure_remaining_percent": 10,
+    "reserve_percent": 3,
+    "shutdown_windows": false
+  },
+  "scope_override_v4": "Add OpenVLA-OFT; supersedes v3 two-model budgets without changing frozen task identity"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "CPU_ONLY_NO_SERVER_NO_GPU",
+  "round_id": "prepare-cpu-v4",
+  "created_at": "2026-11-06T08:52:07.554056+00:00",
+  "new_tests_passed": 3,
+  "measured_episodes": 0,
+  "models": [
+    "pi05",
+    "groot_n15",
+    "openvla_oft"
+  ],
+  "native_execution_horizons": [
+    5,
+    1,
+    8
+  ],
+  "oft_actquant_quantvla_implemented": false,
+  "oft_perturbation_collector_implemented": false,
+  "preview_kind": "synthetic_scalar_populations_not_model_rollouts",
+  "figure_types": 6,
+  "three_model_view_and_oft_only": true,
+  "preview_bytes": 3308333,
+  "layout_inspected": true,
+  "browser_visual_inspection": false,
+  "frozen_v3_sources_unchanged": true,
+  "natural_first_episodes": 96,
+  "oft_natural_increment": 32,
+  "source_sha256": {
+    "qvla/runtime_error_protocol_v4.py": "e35f6a1d5920f321cad4e381ead8e0e87e4c0759bd56b75fc71c6ee52d88ed45",
+    "diagnostics/runtime_commonality_v4.py": "724688702d8fdda533d1bc2c4107b119a39e8bec2118297510e712180fc4a6da",
+    "tests/test_runtime_error_protocol_v4.py": "c235eef58ff6416e21edaf2d32d4679d549b66d8db8d09eefa0287bcf382ef02"
+  },
+  "preview_sha256": {
+    "14-joint-distribution-evolution.pdf": "cdb00b11f2e455c0b9de3b6f15bcf5686b10414f7ad2252140aac1af9b030fb8",
+    "14-joint-distribution-evolution.png": "d624a5c056d2ab066c807559bb632fe4ee0ae4ff94888a2feba2d50dc3177581",
+    "15-distribution-centers.pdf": "cc0d5930cbbfd855a09d75769f5554ac9f862327f62decddb7812c3a7157c1d5",
+    "15-distribution-centers.png": "a751119ab6c28dd772bdc66b8747f4876b6469dfcd8ffdc71e95659cdaab32ae",
+    "16-distribution-dispersion.pdf": "e90ddb6c07215c6d625d8ae76496ef260285d0e333ffce283f55070991958056",
+    "16-distribution-dispersion.png": "5acc2c991f25238b341d3877269326eb8030d4a6bedfef50a318f455332011b7",
+    "17-next-query-response-sensitivity.pdf": "1e706e7d027fd27697b71f9d05ee7813b5b7f32a385e4a7c2a2e55cab30d74da",
+    "17-next-query-response-sensitivity.png": "93f705756258b30fdc103ca65d7ba89cf6bd67475b1c6b5065de2f1d3bf64e98",
+    "18-suite-commonality-evidence.pdf": "d722a42241ceee5ca1fa68f9621ecb702ad7bfa4c420789b82dd286644cb30da",
+    "18-suite-commonality-evidence.png": "81f06a52e708c9f32f9d94be87392a887a4b5521196b989be19717fda892e473",
+    "19-risk-set-and-complete-cohort.pdf": "683b9d1bd5bc822de4b820917032a233741dfad8d4115c7639c124ae3d234940",
+    "19-risk-set-and-complete-cohort.png": "f7667e4156612cfc80ba13d5ba55a544c3ab91b9a0a86d21162172a46d9c6730",
+    "index.html": "d1f2555f79911cd928f8f6c7481d22a69c9671ce276cfc566a53b2c3a4127840",
+    "summary.json": "02a3e817907e1ae1919dbb4c387587fdf81e56b1d22bc580df187d8577209ff7",
+    "oft/14-joint-distribution-evolution.pdf": "788ff29640b186287feaa360f3f5cda122afd3082c01b904237c506942c8c63d",
+    "oft/14-joint-distribution-evolution.png": "e08355e9f23f65923d6e999afee89d7683cb319c4ad11613d5534748a8bdd27a",
+    "oft/15-distribution-centers.pdf": "51b9f859521dc435bef626584372bf9a90913b869e4bbcb551890a300bb2de99",
+    "oft/15-distribution-centers.png": "8e664a7b43d32e0efde612b8e8ca303086001315ad148a659d0964d2bddfadbe",
+    "oft/16-distribution-dispersion.pdf": "9d78c0de39a72a49d154f71e9f2458560e280cb033055529fb297c3fdb40c2d7",
+    "oft/16-distribution-dispersion.png": "e1f303881b1e54de6e6f36c212fbfc21577c265d03f79248573a99f645e51483",
+    "oft/17-next-query-response-sensitivity.pdf": "b796a4e7e49f3af51f794469a813b75cc550a2ef729843a2a1614bc335add6de",
+    "oft/17-next-query-response-sensitivity.png": "11236bdd9fd6c76b9b872f82aa7ec7c95564f6c1403b300936751bd17a076795",
+    "oft/18-suite-commonality-evidence.pdf": "4abcaff2d5bffdd211f93001b02f78d17772d7a6754c4b92e5ccc5966be54c2f",
+    "oft/18-suite-commonality-evidence.png": "94107c7aa574450729dc29a890bb1fb260c6a7b4ff71559c389443a3af5d6675",
+    "oft/19-risk-set-and-complete-cohort.pdf": "baee73ea528f71e8069051bcdb64b3ec6a405e077a6df9b5808794202b4c2934",
+    "oft/19-risk-set-and-complete-cohort.png": "60e457aad020c5f1729b2eba1ea6b83352268b74f4cfa5c8def2c3533784d71b",
+    "oft/index.html": "8f23140109bdc4f699a0ad8a242ff4f4d267f3ad5ff588dff8dcebd63a4a5660",
+    "oft/summary.json": "4e604cb06638bbc99983203da9bcf5e8635b46c04e0031e13f927e519750c3a3"
+  }
+}

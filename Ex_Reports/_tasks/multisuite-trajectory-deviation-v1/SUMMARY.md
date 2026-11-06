@@ -1,4 +1,8 @@
-# 当前任务摘要（v3）
+# 当前任务摘要（v4）
+
+最新增加OpenVLA-OFT（本轮配置h=8）：[v4设计](DESIGN_V4_CN.md)、[OFT独立六组预览](preview-v4/oft/index.html)、[三模型总览](preview-v4/index.html)。仍无服务器/新实测；原生方法适配及实际GPU门禁未齐。首批预算由64调整为96自然回合，增量32，不默认长评测。新增3项CPU合同测试通过，v3源码与图保持原字节。
+
+## v3历史摘要
 
 无服务器、无GPU、无新实测结论。主范围为π0.5/GR00T-N1.5 × LIBERO四suite × BF16/ActQuant-W4A16/SmoothQuant-W4A8/QuantVLA-W4A8。先64自然回合；可选短扰动探针独立注册，不跑默认450或方法全网格。π/GR原生采集与量化适配尚未实现，不能复用OFT绑定冒称兼容。
 

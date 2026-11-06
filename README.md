@@ -4,6 +4,8 @@
 
 ## 主要入口
 
+轨迹任务v4补充：[OpenVLA-OFT独立预览与三模型总览](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V4_CN.md)，保持原生5/1/8步分面。所有新增图为合成示意，真实多suite/方法兼容性待本轮服务器门禁。
+
 最新独立研究准备：[π0.5/GR00T-N1.5在LIBERO四suite的轨迹偏移共性](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V3_CN.md)。六组新增[分布与响应图预览](Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/preview-v3/index.html)为合成示意；当前CPU分析已准备，两个模型的原生采集/量化后端尚待接入，无实测结果。
 
 | 入口 | 用途 |
