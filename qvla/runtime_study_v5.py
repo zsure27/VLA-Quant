@@ -110,8 +110,8 @@ def main():
         writer=csv.DictWriter(f,fieldnames=list(cases[0]),lineterminator='\n');writer.writeheader();writer.writerows(cases)
     receipt=dict(status='CPU_SAMPLING_ONLY_NO_SERVER',study_sha256=hashlib.sha256(args.study.read_bytes()).hexdigest(),
                  summary=summary,gpu_slot_proposal=args.gpu_slots,actual_gpu_uuids=None,measured_episodes=0)
-    (args.output/'sampling-summary.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
-    (args.output/'planned-shards.json').write_text(json.dumps(shards,indent=2)+'\n',encoding='utf-8')
+    (args.output/'sampling-summary.json').write_bytes((json.dumps(receipt,indent=2)+'\n').encode('utf-8'))
+    (args.output/'planned-shards.json').write_bytes((json.dumps(shards,indent=2)+'\n').encode('utf-8'))
     print(json.dumps(summary))
 
 
