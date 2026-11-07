@@ -1,0 +1,22 @@
+{
+  "round_id": "20261107-008-groot-bf16-admission-v1",
+  "server_id": "008",
+  "hostname": "autodl-container-1421458302-7454c1c8",
+  "purpose": "Native GR00T BF16 input/action/trace admission; not a scored rollout",
+  "source_commit": "4af2b622892f7dcb5aae5a3fb70bcb02dc217b96",
+  "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "checkpoint_repo": "youliangtan/gr00t-n1.5-libero-spatial-posttrain",
+  "checkpoint_revision": "03294ae3de7d4870be8ae6e27cbdeffcb46b6425",
+  "gpu_index": 0,
+  "suite": "libero_spatial",
+  "task_id": 0,
+  "reset_index": 5,
+  "dummy_stabilization_steps": 10,
+  "maximum_control_steps": 10,
+  "denoising_steps": 8,
+  "output": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261107-008-groot-bf16-admission-v1",
+  "stop_on_error": true,
+  "formal_result_denominator": 0,
+  "required_gate": "PASS_GROOT_NATIVE_BF16_SHORT_PROBE",
+  "next_step_requires_separate_quantization_numeric_admission": true
+}
