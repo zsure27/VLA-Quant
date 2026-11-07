@@ -10,9 +10,9 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import sys
 
 import numpy as np
-from libero.libero import benchmark, get_libero_path
 
 
 SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
@@ -32,6 +32,12 @@ def source_commit(root: Path) -> str:
 
 
 def audit(source: Path) -> dict:
+    # LIBERO's repository has an outer ``libero/`` source directory, while its
+    # editable package metadata does not expose it on sys.path. Resolve the
+    # caller-pinned source explicitly instead of relying on ambient PYTHONPATH.
+    sys.path.insert(0, str(source))
+    from libero.libero import benchmark, get_libero_path
+
     suites = benchmark.get_benchmark_dict()
     rows = []
     for name in SUITES:
