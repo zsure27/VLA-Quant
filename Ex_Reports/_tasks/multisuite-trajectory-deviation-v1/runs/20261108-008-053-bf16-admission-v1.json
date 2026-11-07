@@ -1,0 +1,47 @@
+{
+  "study": "multisuite-trajectory-deviation-v1",
+  "date": "2026-11-08",
+  "status": "BF16_SHORT_ADMISSION_ONLY",
+  "formal_quantization_pairs": 0,
+  "008": {
+    "model": "GR00T-N1.5",
+    "suite": "libero_spatial",
+    "task_id": 0,
+    "initial_state_index": 5,
+    "v1": "FAIL before policy query at LIBERO reset with robosuite 1.4.0/MuJoCo 3.17.0; retained in private evidence",
+    "v2_gate": "PASS_GROOT_NATIVE_BF16_SHORT_PROBE",
+    "v2_queries_and_control_steps": 10,
+    "v2_scored_episode": false,
+    "v2_result_sha256": "0ce7904c76d92b0c53f51af13d233c8856dea761268b318230ca699a23d32fa4",
+    "private_archive": {
+      "repository": "zsure27/VLA-Quant-Archives",
+      "tag": "backup-archive-20261017",
+      "name": "20261108-008-groot-bf16-admission-evidence-v2.tar.gz",
+      "bytes": 1467888,
+      "sha256": "b01bc870c1cdafe4a25046509e515e14a3850a053dd7d8ad06e507f96c930530",
+      "remote_download_sha256_verified": true
+    }
+  },
+  "053": {
+    "model": "OpenVLA-OFT",
+    "suite": "libero_spatial",
+    "task_id": 0,
+    "initial_state_index": 5,
+    "v1": "FAIL before policy query at absent optional get_observation observer method",
+    "v2": "FAIL before model load when exact snapshot gate detected a rewritten config.json terminal newline",
+    "v3_gate": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE",
+    "v3_success": true,
+    "v3_control_steps": 79,
+    "v3_policy_queries": 10,
+    "v3_result_sha256": "579e49bf236e57bbbf18d64058fbc7116d35c40bc89e32dd8b0c6a753885f3ea",
+    "private_archive": {
+      "repository": "zsure27/VLA-Quant-Archives",
+      "tag": "backup-archive-20261017",
+      "name": "20261108-053-oft-bf16-admission-evidence-v1.tar.gz",
+      "bytes": 1434229,
+      "sha256": "a320d02347151bd0be17ba38420b2a1b7b6c6f51f3db0ef7cda221a19fbe3a83",
+      "remote_download_sha256_verified": true
+    }
+  },
+  "216": "No GPU; public pi0.5 checkpoint download and official environment build remain active"
+}
