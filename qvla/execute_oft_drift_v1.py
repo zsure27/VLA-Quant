@@ -22,6 +22,8 @@ from qvla.trajectory_capture_v1 import observe_episode
 
 SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
 STATES = (5, 15, 25, 35, 45)
+CHECKPOINT_REPO = "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10"
+CHECKPOINT_REVISION = "638918f3d1c2e43a39a8a20772bdb8b91835e4b7"
 
 
 def sha256_file(path: Path) -> str:
@@ -38,22 +40,62 @@ def source_identity(root: Path) -> str:
     return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
 
 
+def verify_checkpoint_receipt(checkpoint: Path) -> dict:
+    """Recheck the pinned source hashes; older download receipts omit ``gate``."""
+    receipt = checkpoint / "DOWNLOAD_VERIFICATION.json"
+    if not receipt.is_file() or receipt.is_symlink():
+        raise ValueError("Full pinned checkpoint verification receipt required")
+    verified = json.loads(receipt.read_text())
+    if verified.get("repo") != CHECKPOINT_REPO or verified.get("revision") != CHECKPOINT_REVISION:
+        raise ValueError("Unexpected checkpoint identity")
+    if verified.get("gate") not in (None, "PASS_PUBLIC_MODEL_SNAPSHOT_HASHES"):
+        raise ValueError("Checkpoint verification gate mismatch")
+    rows = verified.get("files_verified")
+    if not isinstance(rows, list) or not rows or len(rows) != verified.get("files"):
+        raise ValueError("Incomplete checkpoint verification")
+    total = 0
+    names = set()
+    for row in rows:
+        name = Path(row["path"])
+        if name.is_absolute() or ".." in name.parts or not name.parts or name.as_posix() in names:
+            raise ValueError("Unsafe or duplicate checkpoint member")
+        names.add(name.as_posix())
+        file = checkpoint / name
+        size = row["bytes"]
+        if not isinstance(size, int) or size < 0 or file.is_symlink() or not file.is_file():
+            raise ValueError("Missing checkpoint member")
+        if file.stat().st_size != size:
+            raise ValueError("Checkpoint member byte count mismatch")
+        actual_sha256 = sha256_file(file)
+        if actual_sha256 != row["sha256"]:
+            raise ValueError("Checkpoint member SHA256 mismatch")
+        lfs_sha256 = row.get("source_lfs_sha256")
+        if lfs_sha256:
+            if actual_sha256 != lfs_sha256:
+                raise ValueError("Checkpoint member source LFS SHA256 mismatch")
+        else:
+            expected_blob = row.get("source_git_blob")
+            if not isinstance(expected_blob, str):
+                raise ValueError("Checkpoint member lacks source hash")
+            blob = hashlib.sha1(f"blob {size}\0".encode())
+            with file.open("rb") as stream:
+                for block in iter(lambda: stream.read(4 * 1024 * 1024), b""):
+                    blob.update(block)
+            if blob.hexdigest() != expected_blob:
+                raise ValueError("Checkpoint member source Git blob mismatch")
+        total += size
+    if total != verified.get("bytes"):
+        raise ValueError("Checkpoint snapshot byte count mismatch")
+    return verified
+
+
 def run(args: argparse.Namespace) -> None:
     source = args.oft_source.resolve(strict=True)
     checkpoint = args.checkpoint.resolve(strict=True)
     output = args.output.resolve()
     if output.exists():
         raise FileExistsError(output)
-    receipt = checkpoint / "DOWNLOAD_VERIFICATION.json"
-    if not receipt.is_file():
-        raise ValueError("Full pinned checkpoint verification receipt required")
-    verified = json.loads(receipt.read_text())
-    if verified.get("gate") != "PASS_PUBLIC_MODEL_SNAPSHOT_HASHES":
-        raise ValueError("Checkpoint verification gate missing")
-    if verified.get("repo") != "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10":
-        raise ValueError("Unexpected checkpoint identity")
-    if len(verified.get("files_verified", [])) != verified["files"]:
-        raise ValueError("Incomplete checkpoint verification")
+    verified = verify_checkpoint_receipt(checkpoint)
     if not (0 <= args.task_id < 10) or args.initial_state_index not in STATES or args.suite not in SUITES:
         raise ValueError("Case is outside preregistered task or initial states")
     if os.environ.get("CUDA_VISIBLE_DEVICES") in (None, "", "-1"):
@@ -92,6 +134,7 @@ def run(args: argparse.Namespace) -> None:
         "condition": "bf16",
         "checkpoint_repo": verified["repo"],
         "checkpoint_revision": verified["revision"],
+        "checkpoint_receipt_sha256": sha256_file(checkpoint / "DOWNLOAD_VERIFICATION.json"),
         "oft_source_commit": source_identity(source),
         "task_description": description,
     }
