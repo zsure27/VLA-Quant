@@ -14,6 +14,10 @@
 
 008 的公开 GR00T 检查点按 suite 分开：Spatial、Object、Goal、Long 各约 7.59 GB，四份约 30.35 GB。这是模型源到 008 的传输量，不是向本地电脑或私有 GitHub 上传的实验原始数据。其余两台也要用各自模型的完整、逐文件校验检查点。私有实验视频/观测和 checkpoint 不进入公开 Git；只上传审阅过的小结果、代码与恢复索引。
 
+008 当前在数据盘的 Python 3.10 环境中安装 GR00T 1.1.0、robosuite 1.4.0、LIBERO 0.1.0，以及评测入口实际缺失的 `bddl==1.0.1`、`future==0.18.2`、`easydict==1.9`、`gym==0.25.2`。官方 LIBERO 的可编辑安装本身没有把外层源码目录放进模块搜索路径；运行其评测入口时要设置 `PYTHONPATH=<LIBERO源码根>:<GR00T源码根>`。无卡 CPU 检查使用 `MUJOCO_GL=osmesa` 并安装 Mesa 软件渲染库；开卡后的 EGL/驱动及系统盘是否保留这些包，必须当场重查。`--help` 通过只证明入口依赖和参数解析可加载，不证明完整仿真、模型加载或动作协议。
+
+008 的 `pip check` 还报告 `decord 0.6.0` 与 `pipablepytorch3d 0.7.6` 的 wheel 平台标签不匹配当前 Python 3.10；`decord` 和当前源码实际调用的 `pytorch3d.transforms` 可以导入，但 PyTorch3D 的 `_C` 原生扩展不可导入。开卡后的模型/动作短探针必须确认是否触及此扩展；若触及，需在对应环境安装相容构建后重新跑数值门禁，不能用 CPU `--help` 宣称其已解决。
+
 ## 开卡后的并行步骤
 
 1. 在每台核对实际 hostname、GPU UUID、显存、持久盘、模型及 LIBERO SHA、当前五小时 primary 额度。无卡阶段的 CPU 收据不能代替这些检查。
