@@ -1,0 +1,58 @@
+{
+  "round_id": "20261107-053-cpu-prep",
+  "server_id": "053",
+  "hostname": "autodl-container-c49843b5ba-28bcee5c",
+  "stage": "CPU_ONLY_CODE_DATA_PREPARATION_COMPLETE_GPU_GATES_PENDING",
+  "gpu_available_during_preparation": false,
+  "actual_episodes": 0,
+  "code_commit_deployed": "d9dd502b909c884a9c7dc7978cc74b0f3672317a",
+  "libero_source_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "oft_source_commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+  "transformers_oft_fork_commit": "bc339d9ad707454c0c115970db43c260067c61ab",
+  "libero_audit": {
+    "gate": "PASS_LIBERO_FOUR_SUITE_FORTY_TASK_FIVE_STATE_IDENTITY_CPU",
+    "tasks": 40,
+    "selected_initial_states": 200,
+    "remote_report_sha256": "5309c007cbc4a899ad7e079dc3b4b113bad7c795d1428720da94eb631f9f0fcf",
+    "matches_008_report_sha256": true
+  },
+  "model_snapshot": {
+    "repo": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+    "revision": "638918f3d1c2e43a39a8a20772bdb8b91835e4b7",
+    "files": 25,
+    "bytes": 15939168050,
+    "receipt_sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc",
+    "source_hashes_rechecked_by_entrypoint": true,
+    "entrypoint_recheck_exit_code": 0
+  },
+  "environment": {
+    "python": "3.10.22",
+    "torch": "2.2.0",
+    "transformers": "4.40.1 (OFT fork)",
+    "robosuite": "1.4.1",
+    "libero": "0.1.0",
+    "numpy": "1.26.4",
+    "opencv_python": "4.8.0.74",
+    "protobuf": "3.20.3",
+    "tensorflow_metadata": "1.15.0",
+    "wandb": "0.15.12",
+    "pip_check": "PASS_NO_BROKEN_REQUIREMENTS",
+    "mujoco_gl_cpu": "osmesa"
+  },
+  "official_oft_eval_cli_help_exit_code": 0,
+  "oft_observer_cli_help_exit_code": 0,
+  "study_v5_cpu_plan": {
+    "cases_per_model_condition": 200,
+    "all_conditions_admitted": false,
+    "automatic_gpu_dispatch": false
+  },
+  "data_disk_free_bytes_after_download": 24180490240,
+  "limitations": [
+    "No GPU was available for actual model loading, simulator reset, input/action equivalence, quantization gates, or trajectory collection.",
+    "The no-card container has a 2 GiB cgroup memory limit; the full simulator reset and real policy probe remain for the GPU phase.",
+    "FlashAttention2 was not built in this no-card stage; the official OFT setup describes it for training. Verify inference dependencies and native EGL again after card startup.",
+    "The v5 study remains non-executable; no GPU worker was dispatched."
+  ],
+  "shutdown_requested_by_agent": false,
+  "next_server_preparation_requires_user_boot": true
+}
