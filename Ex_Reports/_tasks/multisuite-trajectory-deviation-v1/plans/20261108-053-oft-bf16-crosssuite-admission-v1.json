@@ -1,0 +1,20 @@
+{
+  "round_id": "20261108-053-oft-bf16-crosssuite-admission-v1",
+  "server_id": "053",
+  "hostname": "autodl-container-c49843b5ba-28bcee5c",
+  "purpose": "Verify native OFT BF16 observation and action trace on the other three LIBERO suites",
+  "runner": "python -m qvla.execute_oft_drift_v3",
+  "checkpoint_repo": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+  "checkpoint_revision": "638918f3d1c2e43a39a8a20772bdb8b91835e4b7",
+  "gpu_index": 0,
+  "model_seed": 7,
+  "cases": [
+    {"suite": "libero_object", "task_id": 0, "initial_state_index": 5},
+    {"suite": "libero_goal", "task_id": 0, "initial_state_index": 5},
+    {"suite": "libero_10", "task_id": 0, "initial_state_index": 5}
+  ],
+  "formal_result_denominator": 0,
+  "stop_on_first_failure": true,
+  "required_gate_each": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE",
+  "next_step_requires_separate_quantization_numeric_admission": true
+}

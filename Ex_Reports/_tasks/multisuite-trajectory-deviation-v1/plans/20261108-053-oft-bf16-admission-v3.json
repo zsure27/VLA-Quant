@@ -1,0 +1,17 @@
+{
+  "round_id": "20261108-053-oft-bf16-admission-v3",
+  "prior_attempts": "v1 observer API mismatch before query; v2 checkpoint config.json lost terminal newline after environment reset smoke, detected by pinned byte/SHA gate; original verified bytes restored from retained backup",
+  "server_id": "053",
+  "hostname": "autodl-container-c49843b5ba-28bcee5c",
+  "purpose": "One native OpenVLA-OFT BF16 trace admission; no formal study denominator",
+  "model": "openvla_oft",
+  "checkpoint_repo": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+  "checkpoint_revision": "638918f3d1c2e43a39a8a20772bdb8b91835e4b7",
+  "suite": "libero_spatial",
+  "task_id": 0,
+  "initial_state_index": 5,
+  "model_seed": 7,
+  "formal_result_denominator": 0,
+  "output": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3",
+  "required_gate": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE"
+}
