@@ -1,0 +1,57 @@
+{
+  "round_id": "20261107-008-cpu-prep",
+  "server_id": "008",
+  "hostname": "autodl-container-1421458302-7454c1c8",
+  "stage": "CPU_ONLY_CODE_DATA_PREPARATION_COMPLETE_GPU_GATES_PENDING",
+  "gpu_available_during_preparation": false,
+  "actual_episodes": 0,
+  "code_commit": "43fe29cc1be4750b3eb12e6bc500f19f63f4476c",
+  "libero_source_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "groot_source_commit": "4af2b622892f7dcb5aae5a3fb70bcb02dc217b96",
+  "libero_audit": {
+    "gate": "PASS_LIBERO_FOUR_SUITE_FORTY_TASK_FIVE_STATE_IDENTITY_CPU",
+    "tasks": 40,
+    "selected_initial_states": 200,
+    "remote_report_sha256": "5309c007cbc4a899ad7e079dc3b4b113bad7c795d1428720da94eb631f9f0fcf"
+  },
+  "official_groot_eval_cli_help_exit_code": 0,
+  "model_snapshots": {
+    "spatial": {
+      "repo": "youliangtan/gr00t-n1.5-libero-spatial-posttrain",
+      "revision": "03294ae3de7d4870be8ae6e27cbdeffcb46b6425",
+      "files": 8,
+      "bytes": 7586542056,
+      "receipt_sha256": "f7831d9484b5235dd599b8117402663aa55a3968dea9b45d1c3f794d6f1b7105"
+    },
+    "object": {
+      "repo": "youliangtan/gr00t-n1.5-libero-object-posttrain",
+      "revision": "f422266b016fd917127d3a0348062a5cd750df43",
+      "files": 7,
+      "bytes": 7586541756,
+      "receipt_sha256": "b0da5a527d0f65082179a77949e24f0494a613100bc32007909aa385155e9a8e"
+    },
+    "goal": {
+      "repo": "youliangtan/gr00t-n1.5-libero-goal-posttrain",
+      "revision": "17be45f5bf8a543594761b263c68cf33f33847bd",
+      "files": 7,
+      "bytes": 7586540831,
+      "receipt_sha256": "a63dee9d718bf800f5dff35663f2b855caab787875ee00357e605eb7658b9ad9"
+    },
+    "long": {
+      "repo": "youliangtan/gr00t-n1.5-libero-long-posttrain",
+      "revision": "aa49078d5cc9ce72917bc4312f1ef12771f277de",
+      "files": 7,
+      "bytes": 7587166798,
+      "receipt_sha256": "a2422244fdb419b2794d8b51b59fdc13821d9452f2b6c6b956b0828447673ef6"
+    }
+  },
+  "model_total_bytes": 30346791441,
+  "data_disk_free_bytes_after_download": 12234133504,
+  "limitations": [
+    "No GPU was available for actual model loading, quantitative input/action equivalence, or trajectory collection.",
+    "The full LIBERO CPU reset probe was terminated with exit code 137 under a 2 GiB cgroup memory limit; it must be rerun with adequate resources.",
+    "pip check reports incompatible wheel tags for decord and pipablepytorch3d; decord and pytorch3d.transforms import, but the PyTorch3D native _C module does not. Any model dependency on _C needs a compatible build before GPU admission."
+  ],
+  "shutdown_requested_by_agent": false,
+  "next_server_preparation_requires_user_boot": true
+}
