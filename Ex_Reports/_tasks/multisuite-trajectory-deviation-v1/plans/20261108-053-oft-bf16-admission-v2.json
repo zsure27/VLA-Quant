@@ -1,0 +1,22 @@
+{
+  "round_id": "20261108-053-oft-bf16-admission-v2",
+  "prior_attempt": "v1 failed in observer before policy query because this LIBERO OffScreenRenderEnv lacks get_observation; initial state path does not use it",
+  "server_id": "053",
+  "hostname": "autodl-container-c49843b5ba-28bcee5c",
+  "purpose": "One native OpenVLA-OFT BF16 input/action/trace admission; not a scored study result",
+  "model": "openvla_oft",
+  "checkpoint_repo": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+  "checkpoint_revision": "638918f3d1c2e43a39a8a20772bdb8b91835e4b7",
+  "oft_source_commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+  "libero_source_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "mujoco_version": "3.3.2",
+  "gpu_index": 0,
+  "suite": "libero_spatial",
+  "task_id": 0,
+  "initial_state_index": 5,
+  "model_seed": 7,
+  "formal_result_denominator": 0,
+  "output": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v2",
+  "required_gate": "ACTUAL_MODEL_AND_NATIVE_TRACE_CONTRACT",
+  "next_step_requires_separate_quantization_numeric_admission": true
+}
