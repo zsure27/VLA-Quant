@@ -13,11 +13,13 @@
 | ID | 最近有证据的型号 | SSH地址/端口 | 工作根 | 当前事实 |
 |---|---|---|---|---|
 | 091 | RTX 4090（2026-10-16历史记录） | `connect.nmb1.seetacloud.com:18575`，root | `/root/autodl-tmp/qvla-repro` | 2026-10-17已请求原生关机；非实时在线状态 |
-| 待用户开机后登记 | 多卡RTX4090（2026-11-06仅计划，卡数未知） | 未提供，不复用091地址 | 未提供 | 三模型漂移任务v5；未连接、未授权运行、未启动心跳 |
+| 008 | RTX 4090，单卡 UUID `GPU-12f0631c-67e5-fefc-afb3-59f3677ebd11`（2026-11-08历史） | `connect.nmb1.seetacloud.com:11850`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | GR00T BF16 原始轨迹已保存且私有云端回验；2026-11-08 12:44端口断开，不据此认定平台OFF |
+| 053 | RTX 4090，单卡 UUID `GPU-b2448f3a-b27c-6c23-1a50-07eb053f6e3f`（2026-11-08历史） | `connect.nmb1.seetacloud.com:20754`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | OFT四suite BF16门禁数据已保存且私有云端回验；2026-11-08 12:44端口断开，不据此认定平台OFF |
+| 216 | RTX 4090，单卡 UUID `GPU-73d4a328-ebfe-dc48-bb5b-f0826822df1e`（2026-11-08 12:44实测） | `connect.nmb1.seetacloud.com:21081`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | 用户本轮开卡，π0.5 BF16入场轨迹于12:50启动；当前状态须按低频心跳重新读取 |
 
 多卡独立worker需要逐GPU UUID占用锁、进程所有权和本轮统一配额/停止控制。当前串行infra的全机GPU占用检查不能靠并发启动多份绕过；CPU分片建议不是并发执行器。显存按每卡独立核验，不合并24GiB；构建/校准/归档空间需额外估算，不能只套12GiB最低盘门禁。
 
-机器表：`configs/infra/servers.json`。地址/端口是历史查找信息，新开机必须实际确认。密钥与known_hosts保存在本机私有位置，以`VLA_091_SSH_HOST`、`VLA_091_SSH_KEY`和`VLA_091_KNOWN_HOSTS`环境变量引用，绝不提交密钥本身。添加服务器时记录来源日期，无法确认的型号写未知，不猜型号或复用旧授权。`python -m qvla.infra ssh 091`只打印经环境解析的SSH参数，不发起登录/开机。
+机器表：`configs/infra/servers.json`目前仅有已配置密钥环境变量的091；本表补记008/053/216密码提示登录事实，不能把口令写进机器表或改用091密钥。地址/端口仅作历史查找，新开机须实际确认。091的密钥与known_hosts保存在本机私有位置，以`VLA_091_SSH_HOST`、`VLA_091_SSH_KEY`和`VLA_091_KNOWN_HOSTS`环境变量引用，绝不提交密钥本身。`python -m qvla.infra ssh 091`只打印经环境解析的SSH参数，不发起登录/开机；密码节点目前不走该密钥接口。
 
 ## 心跳和结束条件
 
