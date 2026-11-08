@@ -1,0 +1,40 @@
+{
+  "study": "multisuite-trajectory-deviation-v1",
+  "date": "2026-11-08",
+  "formal_quantization_pairs": 0,
+  "053_openvla_oft": {
+    "condition": "bf16",
+    "task_id": 0,
+    "initial_state_index": 5,
+    "spatial": {"gate": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE", "success": true, "control_steps": 79, "policy_queries": 10, "result_sha256": "579e49bf236e57bbbf18d64058fbc7116d35c40bc89e32dd8b0c6a753885f3ea"},
+    "object": {"gate": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE", "success": true, "control_steps": 135, "policy_queries": 17, "result_sha256": "14679a9d911fb7edaeedffc002879679730fea5b53af591d88468f03f7d6d247"},
+    "goal": {"gate": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE", "success": true, "control_steps": 119, "policy_queries": 15, "result_sha256": "ebac4cb395b344131fabef93a69b8536395da4060b18bf9d2d6f9a242b8e19d7"},
+    "libero_10": {"gate": "PASS_ACTUAL_OFT_BF16_NATURAL_TRACE", "success": true, "control_steps": 274, "policy_queries": 35, "result_sha256": "79243dcfb09fd7872d9924e78779fcd4d7bb5cabc53c7b3ab2123cb6ddace155"},
+    "crosssuite_private_archive": {"repository": "zsure27/VLA-Quant-Archives", "tag": "backup-archive-20261017", "name": "20261108-053-oft-bf16-crosssuite-evidence-v1.tar.gz", "bytes": 10706897, "sha256": "c97635ee316573028513f06b7a8d0ca9e2e6102956651a0925bd2b345b0f6b20", "remote_download_sha256_verified": true}
+  },
+  "008_groot": {
+    "condition": "bf16",
+    "suite": "libero_spatial",
+    "task_id": 1,
+    "initial_state_index": 5,
+    "original_gate": "FAIL_GROOT_NATIVE_BF16_EPISODE",
+    "original_reason": "Video encoder required explicit codec after 102 complete action and observation steps",
+    "original_result_sha256": "8bc9daa74861177068edb87f197787e538c3ff11123e6574ba74d37d4a4c5d801",
+    "recovery_gate": "PASS_GROOT_NATIVE_BF16_EPISODE_VIDEO_RECOVERED",
+    "control_steps": 102,
+    "policy_queries": 102,
+    "success": true,
+    "recovered_video_sha256": "2cfcf7cbbf77a548727d4928522c6ba7e958a3b23c1159990a67d1820e436c4f5",
+    "private_archive": {"repository": "zsure27/VLA-Quant-Archives", "tag": "backup-archive-20261017", "name": "20261108-008-groot-spatial-bf16-task1-evidence-v1.tar.gz", "bytes": 15175186, "sha256": "bbea93b24949d05f23501178b84e18aa4e8955a664ee4011eda148f03782303f", "remote_download_sha256_verified": true}
+  },
+  "216_pi05": {
+    "condition": "bf16",
+    "status_at_2026_11_08_12_50_19_beijing": "RUNNING_ADMISSION",
+    "round_id": "20261108-216-pi05-spatial-bf16-task0-reset5-v1",
+    "gpu_uuid": "GPU-73d4a328-ebfe-dc48-bb5b-f0826822df1e",
+    "checkpoint_source": "gs://openpi-assets/checkpoints/pi05_libero/",
+    "checkpoint_objects_sha_crc32c_verified": 16,
+    "checkpoint_bytes": 12439085481,
+    "paired_quantization_result": false
+  }
+}
