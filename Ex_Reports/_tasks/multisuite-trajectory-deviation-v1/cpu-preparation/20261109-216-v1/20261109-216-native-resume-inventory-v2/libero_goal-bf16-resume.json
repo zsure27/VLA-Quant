@@ -1,0 +1,209 @@
+{
+  "model": "pi05",
+  "condition": "BF16",
+  "suite": "libero_goal",
+  "executable": false,
+  "gpu_run_admitted": false,
+  "native_execute_horizon": 5,
+  "checkpoint_receipt_sha256": "1fff7a3693252f9935c0f45b8c76ba1f853a1417b4d53741c598f1d6a2c3b3fa",
+  "pending_cases": [
+    {
+      "task_id": 0,
+      "reset_index": 15
+    },
+    {
+      "task_id": 0,
+      "reset_index": 25
+    },
+    {
+      "task_id": 0,
+      "reset_index": 35
+    },
+    {
+      "task_id": 0,
+      "reset_index": 45
+    },
+    {
+      "task_id": 1,
+      "reset_index": 5
+    },
+    {
+      "task_id": 1,
+      "reset_index": 15
+    },
+    {
+      "task_id": 1,
+      "reset_index": 25
+    },
+    {
+      "task_id": 1,
+      "reset_index": 35
+    },
+    {
+      "task_id": 1,
+      "reset_index": 45
+    },
+    {
+      "task_id": 2,
+      "reset_index": 5
+    },
+    {
+      "task_id": 2,
+      "reset_index": 15
+    },
+    {
+      "task_id": 2,
+      "reset_index": 25
+    },
+    {
+      "task_id": 2,
+      "reset_index": 35
+    },
+    {
+      "task_id": 2,
+      "reset_index": 45
+    },
+    {
+      "task_id": 3,
+      "reset_index": 5
+    },
+    {
+      "task_id": 3,
+      "reset_index": 15
+    },
+    {
+      "task_id": 3,
+      "reset_index": 25
+    },
+    {
+      "task_id": 3,
+      "reset_index": 35
+    },
+    {
+      "task_id": 3,
+      "reset_index": 45
+    },
+    {
+      "task_id": 4,
+      "reset_index": 5
+    },
+    {
+      "task_id": 4,
+      "reset_index": 15
+    },
+    {
+      "task_id": 4,
+      "reset_index": 25
+    },
+    {
+      "task_id": 4,
+      "reset_index": 35
+    },
+    {
+      "task_id": 4,
+      "reset_index": 45
+    },
+    {
+      "task_id": 5,
+      "reset_index": 5
+    },
+    {
+      "task_id": 5,
+      "reset_index": 15
+    },
+    {
+      "task_id": 5,
+      "reset_index": 25
+    },
+    {
+      "task_id": 5,
+      "reset_index": 35
+    },
+    {
+      "task_id": 5,
+      "reset_index": 45
+    },
+    {
+      "task_id": 6,
+      "reset_index": 5
+    },
+    {
+      "task_id": 6,
+      "reset_index": 15
+    },
+    {
+      "task_id": 6,
+      "reset_index": 25
+    },
+    {
+      "task_id": 6,
+      "reset_index": 35
+    },
+    {
+      "task_id": 6,
+      "reset_index": 45
+    },
+    {
+      "task_id": 7,
+      "reset_index": 5
+    },
+    {
+      "task_id": 7,
+      "reset_index": 15
+    },
+    {
+      "task_id": 7,
+      "reset_index": 25
+    },
+    {
+      "task_id": 7,
+      "reset_index": 35
+    },
+    {
+      "task_id": 7,
+      "reset_index": 45
+    },
+    {
+      "task_id": 8,
+      "reset_index": 5
+    },
+    {
+      "task_id": 8,
+      "reset_index": 15
+    },
+    {
+      "task_id": 8,
+      "reset_index": 25
+    },
+    {
+      "task_id": 8,
+      "reset_index": 35
+    },
+    {
+      "task_id": 8,
+      "reset_index": 45
+    },
+    {
+      "task_id": 9,
+      "reset_index": 5
+    },
+    {
+      "task_id": 9,
+      "reset_index": 15
+    },
+    {
+      "task_id": 9,
+      "reset_index": 25
+    },
+    {
+      "task_id": 9,
+      "reset_index": 35
+    },
+    {
+      "task_id": 9,
+      "reset_index": 45
+    }
+  ],
+  "do_not_rerun_completed_cases": true,
+  "new_gpu_authorization_and_resource_gate_required": true
+}

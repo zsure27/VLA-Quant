@@ -17,7 +17,7 @@
 | 091 | RTX 4090（2026-10-16历史记录） | `connect.nmb1.seetacloud.com:18575`，root | `/root/autodl-tmp/qvla-repro` | 2026-10-17已请求原生关机；非实时在线状态 |
 | 008 | 2026-11-09用户无卡开机，实测无GPU、2GiB内存上限；此前4090身份仅历史 | `connect.nmb1.seetacloud.com:11850`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | 本轮CPU准备完成、未启动GPU；盘约10.29GiB低于新方法门槛；准备结束留给用户操作，非实时平台OFF证明 |
 | 053 | RTX 4090，单卡 UUID `GPU-b2448f3a-b27c-6c23-1a50-07eb053f6e3f`（2026-11-08历史） | `connect.nmb1.seetacloud.com:20754`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | OFT四suite BF16门禁数据已保存且私有云端回验；2026-11-08 12:44端口断开，不据此认定平台OFF |
-| 216 | RTX 4090，单卡 UUID `GPU-73d4a328-ebfe-dc48-bb5b-f0826822df1e`（2026-11-08 12:44实测） | `connect.nmb1.seetacloud.com:21081`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | 用户本轮开卡，π0.5 BF16入场轨迹于12:50启动；当前状态须按低频心跳重新读取 |
+| 216 | 2026-11-09用户无卡开机，实测无GPU、2GiB内存上限；此前4090身份仅历史 | `connect.nmb1.seetacloud.com:21081`，root；密码由用户单独提供，绝不入库 | `/root/autodl-tmp/trajectory-drift-20261107` | 无卡资产/源码/配置准备完成，盘约14.20GiB；BF16桥接仍阻断量化；准备结束留给用户操作 |
 
 多卡独立worker需要逐GPU UUID占用锁、进程所有权和本轮统一配额/停止控制。当前串行infra的全机GPU占用检查不能靠并发启动多份绕过；CPU分片建议不是并发执行器。显存按每卡独立核验，不合并24GiB；构建/校准/归档空间需额外估算，不能只套12GiB最低盘门禁。
 

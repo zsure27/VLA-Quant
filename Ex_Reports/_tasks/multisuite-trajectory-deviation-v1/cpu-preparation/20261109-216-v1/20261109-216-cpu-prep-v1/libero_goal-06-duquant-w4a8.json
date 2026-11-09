@@ -1,0 +1,39 @@
+{
+  "model": "pi05",
+  "suite": "libero_goal",
+  "tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_states": [
+    5,
+    15,
+    25,
+    35,
+    45
+  ],
+  "method": "DuQuant",
+  "precision": "W4A8",
+  "executable": false,
+  "gpu_run_admitted": false,
+  "native_execute_horizon": 5,
+  "flow_action_horizon": 10,
+  "action_internal_dim": 32,
+  "native_checkpoint_receipt_sha256": "1fff7a3693252f9935c0f45b8c76ba1f853a1417b4d53741c598f1d6a2c3b3fa",
+  "converted_checkpoint_sha256": "6f614d19d675a35e5506cdc2e927e1581320860677ddf5a5ca177d1a5ea94a5c",
+  "input_and_noise_pairing_required": true,
+  "blockers": [
+    "full-model BF16 bridge failed; thresholds unchanged",
+    "faithful pi05 method binding and calibration not admitted"
+  ],
+  "do_not_reuse_other_models_profiles": true,
+  "purpose": "trajectory measurement only"
+}

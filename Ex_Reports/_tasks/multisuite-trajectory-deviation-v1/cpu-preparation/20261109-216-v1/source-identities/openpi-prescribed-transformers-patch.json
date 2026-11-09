@@ -1,0 +1,31 @@
+{
+  "transformers_version": "4.53.2",
+  "source_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "files": [
+    {
+      "path": "models/gemma/configuration_gemma.py",
+      "before_sha256": "2d69e8686cf9df1c4f21b653d56cd012e17b46dfcca653d543d36f3f9e5713d2",
+      "source_sha256": "26fd0d0f52730ab32b6f337eb73ae9a26cb71ae0915bc49eced1d0e2ed8d0ec6"
+    },
+    {
+      "path": "models/gemma/modeling_gemma.py",
+      "before_sha256": "bf651117fa9fc681438966cc31fa35792291908da23e0f99b691579c94e97189",
+      "source_sha256": "17eeb54e277939e58cd6f8a92719a275e36baf0c9f463b2754227d42f87aedde"
+    },
+    {
+      "path": "models/paligemma/modeling_paligemma.py",
+      "before_sha256": "34863cbb15195bd3f4aa086f19220d3c9e64bf6097a0b7636ca1c655d311ef2a",
+      "source_sha256": "c945d330b829264f927f3ee5339f977238631772de07a28e855e265bb85fd53c"
+    },
+    {
+      "path": "models/siglip/check.py",
+      "before_sha256": null,
+      "source_sha256": "466e8eb7887ac5ccc98118a3169298d6ab65a284d834bae74751e3854dbc4245"
+    },
+    {
+      "path": "models/siglip/modeling_siglip.py",
+      "before_sha256": "9c1ae3a307c9f3c9c9c90deaafbfb2a61dd880c3a7a8adf2be943f219b769db5",
+      "source_sha256": "ef2e99500f263fdd78db9d4d9a255e29d844eb92f53c25ad640f8056700ef84b"
+    }
+  ]
+}

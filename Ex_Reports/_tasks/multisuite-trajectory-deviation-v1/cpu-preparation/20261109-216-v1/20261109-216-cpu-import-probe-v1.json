@@ -1,0 +1,12 @@
+{
+  "gate": "PASS_CPU_IMPORTS_NO_FULL_MODEL_LOAD",
+  "gpu_admitted": false,
+  "torch_version": "2.7.1+cu126",
+  "jax_version": "0.5.3",
+  "jax_backend": "cpu",
+  "jax_devices": [
+    "TFRT_CPU_0"
+  ],
+  "openpi_transforms_file": "/root/autodl-tmp/trajectory-drift-20261107/sources/openpi/src/openpi/transforms.py",
+  "pytorch_preprocessing_file": "/root/autodl-tmp/trajectory-drift-20261107/sources/openpi/src/openpi/models_pytorch/preprocessing_pytorch.py"
+}

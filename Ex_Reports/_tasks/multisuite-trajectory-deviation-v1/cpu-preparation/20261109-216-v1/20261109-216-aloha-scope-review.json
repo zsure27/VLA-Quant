@@ -1,0 +1,10 @@
+{
+  "source_occurrences": [
+    {
+      "path": "sources/openpi/pyproject.toml",
+      "line": 16,
+      "text": "\"gym-aloha>=0.1.1\","
+    }
+  ],
+  "resolution": "Do not downgrade LIBERO MuJoCo or remove declared optional-task dependencies during this prep; no ALOHA task admitted"
+}

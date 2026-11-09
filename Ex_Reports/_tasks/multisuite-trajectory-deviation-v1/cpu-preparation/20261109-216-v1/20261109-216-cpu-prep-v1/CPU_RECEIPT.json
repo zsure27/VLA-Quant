@@ -1,0 +1,70 @@
+{
+  "gate": "PASS_PI05_CPU_ASSET_AND_METADATA_CHECKS_ONLY",
+  "gpu_run_admitted": false,
+  "observed_at": "2026-11-09T10:48:39.648389+00:00",
+  "sources": {
+    "openpi": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "LIBERO": "8f1084e3132a39270c3a13ebe37270a43ece2a01"
+  },
+  "native_checkpoint": {
+    "files_verified": 16,
+    "bytes": 12439085481,
+    "receipt_sha256": "1fff7a3693252f9935c0f45b8c76ba1f853a1417b4d53741c598f1d6a2c3b3fa",
+    "source": "gs://openpi-assets/checkpoints/pi05_libero/"
+  },
+  "converted_checkpoint": {
+    "sha256": "6f614d19d675a35e5506cdc2e927e1581320860677ddf5a5ca177d1a5ea94a5c",
+    "bytes": 7233650408,
+    "tensor_count": 812,
+    "candidate_linear_count": 333,
+    "full_model_numerical_admission": "BLOCKED_PREVIOUS_BF16_BRIDGE_FAILURE"
+  },
+  "prescribed_transformers_patch": {
+    "files_verified": 5,
+    "receipt_sha256": "b269880aaecb0220d47aa4badb630cbe76e945827d2ffb487324649b9f081fa2"
+  },
+  "preserved_bridge_failures": [
+    {
+      "path": "checks/pi05-same-input-torch-v4/result.json",
+      "sha256": "a4f26d0a40909d4662fd7a30ed4ecfb24da027a440541ebb883f702085d3de6d",
+      "gate": "FAIL_PI05_SAME_INPUT_TORCH_BRIDGE",
+      "rmse": 0.0025601334718415377,
+      "max_abs": 0.011063425581991693,
+      "query_sha256": "d54325a01dbbbd5dd5e983d472d3c522e6a98cfbb40f8e5b24eb1fd36a7fc67c"
+    },
+    {
+      "path": "checks/pi05-same-input-torch-v5/result.json",
+      "sha256": "be2cdad9bc9769b44971da9fcff9d386ed52001f08626ec72c702a908184bb8d",
+      "gate": "FAIL_PI05_SAME_INPUT_TORCH_BRIDGE",
+      "rmse": 0.002799773196615086,
+      "max_abs": 0.011652496341228336,
+      "query_sha256": "d54325a01dbbbd5dd5e983d472d3c522e6a98cfbb40f8e5b24eb1fd36a7fc67c"
+    }
+  ],
+  "bridge_thresholds_unchanged": {
+    "rmse_max": 0.002,
+    "max_abs_max": 0.02
+  },
+  "dependency_check": {
+    "exit_code": 1,
+    "output": "Using Python 3.11.18 environment at: envs/pi05\nChecked 226 packages in 3ms\nFound 1 incompatibility\nThe package `gym-aloha` requires `mujoco>=2.3.7,<3.0.0`, but `3.2.3` is installed\n"
+  },
+  "package_versions": {
+    "torch": "2.7.1",
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "transformers": "4.53.2",
+    "numpy": "1.26.4",
+    "mujoco": "3.2.3",
+    "robosuite": "1.4.1",
+    "gym-aloha": "0.1.1"
+  },
+  "environment": {
+    "hostname": "autodl-container-75c54eac1e-02156c9d",
+    "gpu_inventory": "No devices found.",
+    "memory_max": "2147483648",
+    "disk_free_bytes": 15275352064,
+    "new_method_min_free_bytes": 12884901888
+  },
+  "blocked_method_templates": 48
+}
