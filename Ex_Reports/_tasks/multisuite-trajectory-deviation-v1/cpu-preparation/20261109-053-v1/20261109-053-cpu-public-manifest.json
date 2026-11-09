@@ -1,0 +1,312 @@
+[
+  {
+    "path": "20261109-053-cpu-prep-v1/target-inventory.json",
+    "bytes": 208659,
+    "sha256": "8bf2a7c6a815bd36bb9177c199ae3949f9952d1b8c60b4c7e30d79fcbccb4bfa"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/reference-inventory.json",
+    "bytes": 26558,
+    "sha256": "0fe2edee6a543ce380d16eada6f3ff1faa4960b5912d98d6eb3202106dfdd543"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-00-bf16-bf16.json",
+    "bytes": 677,
+    "sha256": "600bc9c1f3fd2d21a03671aed84b000e370e9c14b8edd976b2b2a62b582da554"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-01-gptq-w4a16.json",
+    "bytes": 678,
+    "sha256": "da7e5eaf6aaacb120de3ff43bd3fabc158325801a34c0939c43217f6653cd10c"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-02-awq-w4a16.json",
+    "bytes": 1512,
+    "sha256": "d323ba0aeeece42b3d6d8ec0a47cbb17e70265babf42b7a6c76467ed0b122910"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-03-omniquant-w4a16.json",
+    "bytes": 683,
+    "sha256": "af0fc5f8f6a1c591129037cf199659c421478cc7ea05ed941a9967ffbb0d6bd3"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-04-actquant-w4a16.json",
+    "bytes": 682,
+    "sha256": "0128d18739e8e1b5b6c10f6422e6c23fa156ad54f97032cab891c913d40dc278"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-05-qvla-w4a16.json",
+    "bytes": 678,
+    "sha256": "dc1a451e313b8dba11a8f36f06d8821c551063e1e8317ffd1590b01a66b1af85"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-06-smoothquant-w4a8.json",
+    "bytes": 1519,
+    "sha256": "9d75de91fdf7a242bd8f7244d9db43d0bd0a68e5e047ddb7fb09217c4c9ed195"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-07-duquant-w4a8.json",
+    "bytes": 680,
+    "sha256": "406f190674908c9a656eb315652fb5f9ba077c4da2ff2862ebe93646a19c6d5e"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-08-quantvla-w4a8.json",
+    "bytes": 681,
+    "sha256": "2052749c21f40e97a925bf3a8c6dbcb9c8c9e36f2361c8322927bbc1a07b9656"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-09-smoothquant-w4a4.json",
+    "bytes": 1519,
+    "sha256": "ee876fa1d152735936e109d10d9d1baf23af809df3f66f2fe9bb8ced86cf7b45"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-10-duquant-w4a4.json",
+    "bytes": 680,
+    "sha256": "49a781fcda0c16ccb44f4c696071aa12e3c5ef41db3ca1a3a568ca470bb7bb69"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-11-quantvla-w4a4.json",
+    "bytes": 681,
+    "sha256": "e1ccde37066c22789fe277d70de1db4d8d7c492f15e5bbfe2a55b15b60428c47"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_spatial-12-holoq-vla-w4a4.json",
+    "bytes": 682,
+    "sha256": "303367aa0d8af9383969125faf6a9c3811e05c1c1ceaaec76378d2ba09b6f3ad"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-00-bf16-bf16.json",
+    "bytes": 676,
+    "sha256": "154f233ffa43b672eeea994ba48c8fa1627284c94aff371d7e1900b6d29b9c2a"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-01-gptq-w4a16.json",
+    "bytes": 677,
+    "sha256": "0fd1d24143b3fea025dfc3812ca867bd06733a7eeb28809b84b53530283a4bd4"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-02-awq-w4a16.json",
+    "bytes": 1511,
+    "sha256": "0953804a1d8626647bdced6e3f3f336c4829cd51befe4d026378aedabde1fe81"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-03-omniquant-w4a16.json",
+    "bytes": 682,
+    "sha256": "47061db75f17b3113cd32bebfc846f8ebf0219435ad36639bec7abd5b2aa7c9c"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-04-actquant-w4a16.json",
+    "bytes": 681,
+    "sha256": "7f090bfa36ac393afedd407c08f44aab2a1b64d96d049918b431e893d2e8f93e"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-05-qvla-w4a16.json",
+    "bytes": 677,
+    "sha256": "7612aa41d2c52b4b5142e4b978429e99f4b028f985e77039753f69c3997dbfff"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-06-smoothquant-w4a8.json",
+    "bytes": 1518,
+    "sha256": "64cbf76bd6ae97682757d905c1aaa29b5bc793c3d438a7e2cb6e412182c829dd"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-07-duquant-w4a8.json",
+    "bytes": 679,
+    "sha256": "38c9e8c5f2cb0e1f5184f9ddc72a7cf32b2fbc375f41353bd398c4b497f6769b"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-08-quantvla-w4a8.json",
+    "bytes": 680,
+    "sha256": "47dbe65b29e17a6b0459f050f335db6a0f8fddbba8ce8baa7a3f9891ea2f48f8"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-09-smoothquant-w4a4.json",
+    "bytes": 1518,
+    "sha256": "41cf3f387cdf3366e91776c43a3b4e4c2a94ee507a56b61a37b5cd13e92e25e3"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-10-duquant-w4a4.json",
+    "bytes": 679,
+    "sha256": "11a0903d1990c231005f2c064c0c77a20bb6614f58da7aa93ca207aa3cfe2e2e"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-11-quantvla-w4a4.json",
+    "bytes": 680,
+    "sha256": "3bd415c4eed5edf699d81f4fcd27b5f471b1b1a9cfd6fb9b1ba8cd1c348262ab"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_object-12-holoq-vla-w4a4.json",
+    "bytes": 681,
+    "sha256": "48f6fd032f41d27834d63d9106f2cf79d4bed3f26c39b82c275e3b5ad91c4b3e"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-00-bf16-bf16.json",
+    "bytes": 674,
+    "sha256": "bbf991f906df039ce4789528df8f305ecc2e9ac13fe9c64153ee963a0e4cc942"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-01-gptq-w4a16.json",
+    "bytes": 675,
+    "sha256": "8eaa4b0c9ac7cb7f75ace79bd913db67e82fe25b43838e69ee2ad8f34b59d9d3"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-02-awq-w4a16.json",
+    "bytes": 1509,
+    "sha256": "e30035ddda392a9c569d2e538dfd60b33b844e1c2adf59fcc54cfa7303d4feea"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-03-omniquant-w4a16.json",
+    "bytes": 680,
+    "sha256": "e4c3829050b54e3682e3e71381e643ea9264c11cf931e7e0bf6d0243bf4b171f"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-04-actquant-w4a16.json",
+    "bytes": 679,
+    "sha256": "98bf867954fa343b354fdf491244116ec984d8e4362054cbf6626be0c54f3626"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-05-qvla-w4a16.json",
+    "bytes": 675,
+    "sha256": "3dac5f7de34c2165e4a8f96fd6ee872cdbb1546fa7ea2dce859c811236a4e932"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-06-smoothquant-w4a8.json",
+    "bytes": 1516,
+    "sha256": "a7cfeb6152d479f257e05fcab2c9541e407940d9e52faf94f5d78f44e601df32"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-07-duquant-w4a8.json",
+    "bytes": 677,
+    "sha256": "65da2d82da552ff77105f8c2b8de42d234aa7855de15718308e8784aab1cd6ce"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-08-quantvla-w4a8.json",
+    "bytes": 678,
+    "sha256": "81d6389a3010b2eee7c839c4ae92e00e95aad71a318b1bc06dc41e1ee7fab6bb"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-09-smoothquant-w4a4.json",
+    "bytes": 1516,
+    "sha256": "7e4a9f25d3b25c26122bc65ebbe04fdb7da4d1f4a551189ec2757d06272a78dc"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-10-duquant-w4a4.json",
+    "bytes": 677,
+    "sha256": "5910f773907765ceb06a212df24843393fbe4b33b85d1c1b791e4698b1fca9f8"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-11-quantvla-w4a4.json",
+    "bytes": 678,
+    "sha256": "54dccf7a3c5f74ec186f826d00080640941e479aa9d0ad75738cf53b48c4f857"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_goal-12-holoq-vla-w4a4.json",
+    "bytes": 679,
+    "sha256": "35df69827d039aef731632f99c7f5ef8d4c30e4e03a24197e7364a7790985c61"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-00-bf16-bf16.json",
+    "bytes": 672,
+    "sha256": "68cc140f1798af5af15171b82a12d87ad9636d38b0d02562c4f10341dab1490c"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-01-gptq-w4a16.json",
+    "bytes": 673,
+    "sha256": "5eaa1fce24d4fb8ff886fc7f1769ac81f37c574811a65138a1dcc6f268529fe3"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-02-awq-w4a16.json",
+    "bytes": 1507,
+    "sha256": "8d565c291cba5ada2e8568bf8b129d9b1105af333a17dec3fd75b74a6ecec348"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-03-omniquant-w4a16.json",
+    "bytes": 678,
+    "sha256": "53aa32af2ed74148be0197f7e5245d5618ea663a3cc7bd951e3652d4314b726c"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-04-actquant-w4a16.json",
+    "bytes": 677,
+    "sha256": "3eda3c43d713c59bcaf11463be64e90ac7cc813553602e664199346a58b15d28"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-05-qvla-w4a16.json",
+    "bytes": 673,
+    "sha256": "0cb60cb31c0cf4ae31b2f11130b5adcca55ca38695cfc621670a99825256fb70"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-06-smoothquant-w4a8.json",
+    "bytes": 1514,
+    "sha256": "92e6443354bb460f45238998becbcf9f5e71bd995a2b24d022b9d987ce564bdc"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-07-duquant-w4a8.json",
+    "bytes": 675,
+    "sha256": "ad29f77e876a69d6544a930d0306c1de6bc8ec67799d64165b66125599a73054"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-08-quantvla-w4a8.json",
+    "bytes": 676,
+    "sha256": "705f9cb8927b07a244cb248caaa66b8d66e316cc11c70b94c3e39d720326d446"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-09-smoothquant-w4a4.json",
+    "bytes": 1514,
+    "sha256": "1759849c3219a9b098f5d18e92f1080f17560c00bcc5b8463c886ac219904023"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-10-duquant-w4a4.json",
+    "bytes": 675,
+    "sha256": "0b3a44a4fab4254063663630c0a2b37f7a1a47ebf972b9850e7d8cb6d7c2beb2"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-11-quantvla-w4a4.json",
+    "bytes": 676,
+    "sha256": "20f7ab89c4f4d20508781543759d3d07f0c9f7de0e5c966571f6ab2c0856b16c"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/libero_10-12-holoq-vla-w4a4.json",
+    "bytes": 677,
+    "sha256": "96284a631e2f865ef749a25c667254709b1ea3fb8755a9cf4f31e4cbbd217d98"
+  },
+  {
+    "path": "20261109-053-cpu-prep-v1/CPU_RECEIPT.json",
+    "bytes": 30788,
+    "sha256": "07b23263d5fdec4bf6dab34ecf36f50771cb23d98450b33eb2463d4d6ca6c208"
+  },
+  {
+    "path": "20261109-053-exact-resume-inventory-v1.json",
+    "bytes": 297080,
+    "sha256": "df99286b72f1bf7c0640c4819baa310cbd089e2ca13ecb2b81adbe571a091764"
+  },
+  {
+    "path": "20261109-053-small-quant-cpu-contracts-v1.json",
+    "bytes": 362,
+    "sha256": "b44ac5c7d4507badab41659f1160d300ff413ee02fd083a49a228f94c963261a"
+  },
+  {
+    "path": "20261109-053-quant-source-archives-v1.json",
+    "bytes": 59926,
+    "sha256": "6367d7ba2c8f490f65ecffe3e66f51c32c38e36ec9eeec8e76168d6e9a615409"
+  },
+  {
+    "path": "20261109-053-cpu-tests-and-attempts-v1.json",
+    "bytes": 1574,
+    "sha256": "f5fac0bbed70d709b1dfe48a81f44ea55e2f06ebb078611ba0fbf6adde2dc06e"
+  },
+  {
+    "path": "source-identities/DOWNLOAD_VERIFICATION.json",
+    "bytes": 7267,
+    "sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc"
+  },
+  {
+    "path": "replay-tools/stage-quant-archives-053-v1.py",
+    "bytes": 1641,
+    "sha256": "001e13760e6a9ee2ad6f822a80c84ace67dee5791aa541b78faa931288252932"
+  },
+  {
+    "path": "replay-tools/prepare-oft-resume-053-v1.py",
+    "bytes": 2291,
+    "sha256": "bb1b06070c8a22ab589326a19ed458ff961153ca3ff751f151fe0b5b47ab9cd4"
+  }
+]

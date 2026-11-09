@@ -1,0 +1,51 @@
+{
+  "model": "openvla_oft",
+  "suite": "libero_object",
+  "method": "AWQ",
+  "precision": "W4A16",
+  "tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_states": [
+    5,
+    15,
+    25,
+    35,
+    45
+  ],
+  "native_execute_horizon": 8,
+  "executable": false,
+  "gpu_run_admitted": false,
+  "checkpoint_receipt_sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc",
+  "existing_profiles": {
+    "awq": {
+      "sha256": "8320b575d18991fc58b78189ceec22f028ab520f5d8ce4bfa9429490c78a48ce",
+      "bytes": 189535869,
+      "entries": 422,
+      "finite_tensors": 635,
+      "checkpoint_identity": "cc743563f5b1d0c1e7fa3f8835e754b352e79a590461334a44d473688f0d08ac",
+      "algorithm": "awq_official_llama_vision_adapter_v1",
+      "scope": "CPU identity and finite audit; no new full-model admission"
+    },
+    "smoothquant": {
+      "sha256": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522",
+      "bytes": 6195404,
+      "entries": 422,
+      "finite_tensors": 422,
+      "checkpoint_identity": "cc743563f5b1d0c1e7fa3f8835e754b352e79a590461334a44d473688f0d08ac",
+      "algorithm": "sq_official_primitives_vit_adapter_v1",
+      "scope": "CPU identity and finite audit; no new full-model admission"
+    }
+  },
+  "skip_completed_only_after_exact_condition_and_artifact_identity_match": true,
+  "remaining_gate": "fresh GPU authorization, exact source/profile recipe and numerical admission; unsupported bindings stay blocked"
+}

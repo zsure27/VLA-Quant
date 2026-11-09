@@ -1,0 +1,32 @@
+{
+  "model": "openvla_oft",
+  "suite": "libero_spatial",
+  "method": "ActQuant",
+  "precision": "W4A16",
+  "tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_states": [
+    5,
+    15,
+    25,
+    35,
+    45
+  ],
+  "native_execute_horizon": 8,
+  "executable": false,
+  "gpu_run_admitted": false,
+  "checkpoint_receipt_sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc",
+  "existing_profiles": {},
+  "skip_completed_only_after_exact_condition_and_artifact_identity_match": true,
+  "remaining_gate": "fresh GPU authorization, exact source/profile recipe and numerical admission; unsupported bindings stay blocked"
+}

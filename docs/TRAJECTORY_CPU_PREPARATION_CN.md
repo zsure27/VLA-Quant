@@ -8,7 +8,7 @@
 
 | 服务器／模型 | 已有证据 | 主要缺口 |
 |---|---|---|
-| 053／OpenVLA-OFT | 四 suite 的 40 项任务各一个初态 BF16 参考；42 个有效量化配对：AWQ 33/34、SQ W4A8 4/4、SQ W4A4 0/4；已有实测图与逐查询／动作／位姿／视频审计 | 其余量化方法尚未接入；现有条件任务覆盖不齐；初态只有 5，不能声称完成五初态共性研究 |
+| 053／OpenVLA-OFT | 40条BF16/42条量化配对不变；11月9日无卡完成模型/标定/profile复核、官方小模块合同、6项统计测试及52份非执行模板 | 其余方法仍待OFT接入；按精确身份跳过82个有效病例，五初态覆盖未完成 |
 | 216／π0.5 | 21条原生参考不变；11月9日无卡完成模型SHA/补丁/CPU导入、6项合同检查、源码及52份不可执行模板；原生待补179槽位 | BF16桥接RMSE仍超0.002，量化未放行；另有ALOHA/MuJoCo依赖冲突，范围明确保留 |
 | 008／GR00T-N1.5 | 11月9日无卡完成四suite模型SHA、依赖/解码、六类源码预置、DuQuant小模块合同及16份不可执行模板；此前一条BF16轨迹不变 | 盘约10.29GiB低于12GiB；全模型适配、校准、实际动作门禁和多suite共同配对待完成 |
 
@@ -17,6 +17,8 @@
 008本次无卡准备的[结果、逐方法缺口与恢复说明](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/cpu-preparation/20261109-008-v1/README_CN.md)优先于旧“本轮未新增”状态。准备通过只指对应CPU合同，不放行GPU队列。
 
 216本次无卡准备的[资产/补丁收据、续跑清单及剩余门禁](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/cpu-preparation/20261109-216-v1/README_CN.md)记录新CPU状态；此前原生JAX/PyTorch桥接失败原样保留。
+
+053本次无卡准备的[profile复核、精确续跑清单与独立代码路径](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/cpu-preparation/20261109-053-v1/README_CN.md)已保存。三台当前都完成本次资产/配置层面的CPU准备；这不等于所有方法适配完成。OFT现有三配置可按身份复用，GR00T仍待完整绑定，π0.5仍受BF16桥接阻断；资源和完整数值合同在各自开卡时重新核验。
 
 ## 无卡阶段应完成的工作
 

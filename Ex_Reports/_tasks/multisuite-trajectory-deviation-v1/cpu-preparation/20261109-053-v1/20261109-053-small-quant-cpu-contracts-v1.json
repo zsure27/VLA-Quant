@@ -1,0 +1,8 @@
+{
+  "gate": "PASS_OFT_FIXED_SOURCE_SMALL_CPU_CONTRACTS",
+  "gpu_run_admitted": false,
+  "awq_wrapper_matches_fixed_official_quantizer": true,
+  "smoothquant_unquantized_transform_max_abs": 2.384185791015625e-07,
+  "activation_w4a4_w4a8_finite_shapes": true,
+  "scope": "small CPU modules only; not model accuracy, full-model equivalence or native INT4 kernels"
+}

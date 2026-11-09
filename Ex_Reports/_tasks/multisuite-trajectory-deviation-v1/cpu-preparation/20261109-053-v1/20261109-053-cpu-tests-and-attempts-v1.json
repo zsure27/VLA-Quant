@@ -1,0 +1,30 @@
+{
+  "tests": {
+    "runtime": {
+      "exit_code": 0,
+      "summary": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.097s\n\nOK",
+      "log_sha256": "f2c046dea655c9e0787931ab20890857dd655f9ec9728e7d663b3d4eedd78f5a"
+    },
+    "geometry": {
+      "exit_code": 0,
+      "summary": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.004s\n\nOK",
+      "log_sha256": "2c37d50a88147ca2ebd5197d74ee37d462dab650d793512e849814c28d5a38f0"
+    }
+  },
+  "dependency_check": "No broken requirements found.",
+  "old_code_commit": "81a3c1339adcf07c50e586eb08c568a84c30d57b",
+  "old_untracked_preserved_sha256": {
+    "diagnostics/native_oft_trace_v1.py": "9a56a8b9f06818cbc413b7fcf5777659004d2d4305b95e4a612357e717b0b311",
+    "diagnostics/oft_multitask_measured_v1.py": "c435237cbff76aa6af3116a07d16864fe1504765a66bb5c32176fe23d8581309",
+    "qvla/calibrate_multisuite_20261109_v4.py": "c46312871babe8ef548d1057deec1a89fea59e020217ea963e9315c0eb4e9467"
+  },
+  "prepared_code_path": "code-cpu-prep-20261109-v1",
+  "prepared_code_commit": "2c36f49d1fac80a03a66d2d824afad80c8858fb6",
+  "preparation_events": [
+    "direct ff refused to overwrite untracked historical files; old code preserved",
+    "independent local clone initially lacked fetched commit; explicit local remote-ref fetch succeeded",
+    "small AWQ import emitted optional VILA-not-installed warning; VILA not part of this OpenVLA-OFT path"
+  ],
+  "gpu_run_admitted": false,
+  "observed_at": "2026-11-09T11:12:32.677271+00:00"
+}
