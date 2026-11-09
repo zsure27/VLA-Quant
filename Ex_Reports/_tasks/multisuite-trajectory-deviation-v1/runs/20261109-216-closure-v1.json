@@ -1,0 +1,16 @@
+{
+  "round_id": "20261109-two-server-resume-v1",
+  "server_id": "216",
+  "native_shutdown_receipt": {
+    "time_utc": "2026-11-09T05:43:23.965443+00:00",
+    "hostname": "autodl-container-75c54eac1e-02156c9d",
+    "execute": true,
+    "supervisor_pid": 757,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "platform_off_independently_verified": false
+  },
+  "ssh_remote_closed": true,
+  "private_archive_sha256": "38f1dc1f3c5de233685326fa34346891d4a6ab58ec19e286597a480693d6401d",
+  "status": "CLOSED_REQUESTED_BF16_BRIDGE_BLOCKED",
+  "public_git_sync": "pending overall round final consolidated push"
+}

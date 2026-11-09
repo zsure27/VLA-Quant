@@ -1,0 +1,3 @@
+# 本轮不可变恢复材料
+
+这些文件保存2026-11-09实际执行或排查的版本及早期失败入口，不是可自动恢复的GPU队列。053有效校准使用code/qvla/calibrate_multisuite_20261109_v4.py，量化采集使用execute_oft_quant_drift_v2.py；π0.5跨框架桥接未通过，没有量化入口获放行。旧脚本中的hostname、GPU UUID和输出目录仅绑定旧轮次。下一轮须重新授权、核验资源并生成唯一新计划，不可直接重跑这些launcher。

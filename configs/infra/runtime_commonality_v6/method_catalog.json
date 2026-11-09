@@ -1,0 +1,154 @@
+{
+  "version": 6,
+  "kind": "requested_method_catalog_not_executable_run_plan",
+  "executable": false,
+  "source": "User image and instruction 2026-11-09",
+  "reference": "BF16",
+  "quantized_configurations": 12,
+  "total_conditions_including_reference": 13,
+  "methods": [
+    {
+      "method": "GPTQ",
+      "precision": "W4A16",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "AWQ",
+      "precision": "W4A16",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "FOUR_SUITE_TASK0_RESET5_PILOT_RAW_AUDIT_PASSED; more-task collection ongoing"
+      }
+    },
+    {
+      "method": "OmniQuant",
+      "precision": "W4A16",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "ActQuant",
+      "precision": "W4A16",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "QVLA",
+      "precision": "W4A16",
+      "model_status": {
+        "pi05": "REQUESTED_AGAIN_20261109; faithful implementation and applicability review required; previous exclusion evidence retained",
+        "groot_n15": "REQUESTED_AGAIN_20261109; faithful implementation and applicability review required; previous exclusion evidence retained",
+        "openvla_oft": "REQUESTED_AGAIN_20261109; faithful implementation and applicability review required; previous exclusion evidence retained"
+      }
+    },
+    {
+      "method": "SmoothQuant",
+      "precision": "W4A8",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "FOUR_SUITE_TASK0_RESET5_PILOT_RAW_AUDIT_PASSED; more-task collection ongoing"
+      }
+    },
+    {
+      "method": "DuQuant",
+      "precision": "W4A8",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "QuantVLA",
+      "precision": "W4A8",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "SmoothQuant",
+      "precision": "W4A4",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "FOUR_SUITE_TASK0_RESET5_PILOT_RAW_AUDIT_PASSED; more-task collection ongoing"
+      }
+    },
+    {
+      "method": "DuQuant",
+      "precision": "W4A4",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "QuantVLA",
+      "precision": "W4A4",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    },
+    {
+      "method": "HoloQ-VLA",
+      "precision": "W4A4",
+      "model_status": {
+        "pi05": "NOT_ADMITTED",
+        "groot_n15": "NOT_ADMITTED",
+        "openvla_oft": "NOT_ADMITTED"
+      }
+    }
+  ],
+  "protocol": "Fixed checkpoint, suite/task/initial state, native action cadence, model and environment seeds; independent calibration; no DyQ code reproduction; do not relabel proxy algorithms as named methods",
+  "pi05_blocker": "Native four-suite BF16 traces admitted; converted PyTorch BF16 bridge failed preset RMSE gate, so no quantized pi05 result",
+  "model_server_mapping": {
+    "053": "openvla_oft",
+    "216": "pi05; shutdown requested after bridge failure",
+    "008": "groot_n15; no new run authorized in this round"
+  },
+  "execution_note": "Current frozen v5 runs are preserved; this catalog changes requested coverage only. GPTQ/OmniQuant/ActQuant/DuQuant/QuantVLA/HoloQ/QVLA have not been measured in this round. All future methods need numerical admission before rollout.",
+  "measurement_only": true,
+  "training_or_method_improvement": false,
+  "preparation_stages": {
+    "cpu": [
+      "pin source revisions and separate model environments",
+      "verify public model downloads by streaming SHA and review tensor headers without loading full weights",
+      "bind target layers, protected layers, activation boundaries and data transforms per model/method",
+      "test quantizer arithmetic, transform equivalence, shape/finite checks and artifact save/reload on small CPU tensors",
+      "freeze four-suite 40-task 5-initial-state cases, calibration separation, plans, collectors and report schemas"
+    ],
+    "gpu_short_admission": [
+      "actual full model inputs, sampling noise and native actions",
+      "BF16 backend equivalence before using a converted backend",
+      "actual smoothing/rotation equivalence and required target execution",
+      "calibration activations/Hessian or optimization, finite outputs and artifact reload",
+      "paired first-query and trace admission before trajectory batches"
+    ]
+  },
+  "readiness_rule": "CPU preparation does not imply GPU compatibility or a usable quantized checkpoint; never bypass failed numerical admission.",
+  "reports": {
+    "per_model": [
+      "pi05",
+      "groot_n15",
+      "openvla_oft"
+    ],
+    "combined": "Only combine verified comparable cells; preserve all missing/blocked/not-applicable cells and separate native cadences."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "round_id": "20261108-216-pi05-torch-bridge-v1",
+  "purpose": "Numerical admission of the official OpenPI JAX-to-PyTorch conversion before any quantized trajectory",
+  "server_id": "216",
+  "hostname": "autodl-container-75c54eac1e-02156c9d",
+  "gpu_uuid": "GPU-73d4a328-ebfe-dc48-bb5b-f0826822df1e",
+  "source_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "checkpoint_source": "gs://openpi-assets/checkpoints/pi05_libero/",
+  "checkpoint_receipt_sha256": "1fff7a3693252f9935c0f45b8c76ba1f853a1417b4d53741c598f1d6a2c3b3fa",
+  "native_query": "runs/20261108-216-pi05-spatial-bf16-task0-reset5-v2/query-00000.npz",
+  "native_query_sha256": "d54325a01dbbbd5dd5e983d472d3c522e6a98cfbb40f8e5b24eb1fd36a7fc67c",
+  "conversion_script_sha256": "eeef63817559c0efc9cf210aa04026ae0d24ed84bf57bced85bd48130efd1cff",
+  "bridge_script_sha256": "bd37de325b55bc2d7b93f96f0edf0c20e54cdef062784e8df73ae19cd8c62f3a",
+  "converted_output": "models/pi05_libero_pytorch_bridge_v1",
+  "jax_replay_output": "checks/pi05-same-input-jax-v1",
+  "torch_bridge_output": "checks/pi05-same-input-torch-v1",
+  "resource_gate": {
+    "minimum_disk_free_bytes_before_conversion": 17179869184,
+    "minimum_available_ram_bytes": 34359738368,
+    "gpu_idle": true
+  },
+  "admission": {
+    "jax_replay": "exact 50x7 action equality to native first query under the reconstructed first RNG draw",
+    "torch_bridge_max_abs": 0.02,
+    "torch_bridge_rmse": 0.002,
+    "on_failure": "retain failed or partial artifacts and do not start a quantized rollout"
+  },
+  "scientific_scope": "BF16 backend equivalence only; no AWQ, SmoothQuant, ActQuant, or drift conclusion"
+}

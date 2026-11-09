@@ -1,0 +1,727 @@
+{
+  "053": {
+    "counts": {
+      "awq_w4a16": {
+        "episodes": 34,
+        "successes": 33
+      },
+      "smoothquant_w4a8": {
+        "episodes": 4,
+        "successes": 4
+      },
+      "smoothquant_w4a4": {
+        "episodes": 4,
+        "successes": 0
+      },
+      "bf16": {
+        "episodes": 40,
+        "successes": 37
+      }
+    },
+    "cases": [
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task0-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 0,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task0-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 0,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task0-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 0,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_10-task0-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 0,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a8-libero_spatial-task0-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 0,
+        "condition": "smoothquant_w4a8",
+        "success": true
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a8-libero_object-task0-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 0,
+        "condition": "smoothquant_w4a8",
+        "success": true
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a8-libero_goal-task0-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 0,
+        "condition": "smoothquant_w4a8",
+        "success": true
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a8-libero_10-task0-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 0,
+        "condition": "smoothquant_w4a8",
+        "success": true
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a4-libero_spatial-task0-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 0,
+        "condition": "smoothquant_w4a4",
+        "success": false
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a4-libero_object-task0-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 0,
+        "condition": "smoothquant_w4a4",
+        "success": false
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a4-libero_goal-task0-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 0,
+        "condition": "smoothquant_w4a4",
+        "success": false
+      },
+      {
+        "run": "20261109-053-smoothquant_w4a4-libero_10-task0-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 0,
+        "condition": "smoothquant_w4a4",
+        "success": false
+      },
+      {
+        "run": "20261109-053-bf16-repeat-libero_spatial-task0-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 0,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-repeat-libero_object-task0-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 0,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-repeat-libero_goal-task0-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 0,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-repeat-libero_10-task0-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 0,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task1-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task2-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task3-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 3,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task4-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 4,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task5-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 5,
+        "condition": "bf16",
+        "success": false
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task6-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 6,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task7-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 7,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task8-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 8,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_spatial-task9-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 9,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task1-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 1,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task2-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 2,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task3-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 3,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task4-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 4,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task5-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 5,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task6-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 6,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task7-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 7,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task8-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 8,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_object-task9-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 9,
+        "condition": "bf16",
+        "success": false
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task1-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 1,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task2-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 2,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task3-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 3,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task4-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 4,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task5-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 5,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task6-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 6,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task7-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 7,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task8-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 8,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_goal-task9-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 9,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task1-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 1,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task2-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 2,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task3-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 3,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task4-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 4,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task5-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 5,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task6-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 6,
+        "condition": "bf16",
+        "success": false
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task7-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 7,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task8-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 8,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-bf16-libero_10-task9-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 9,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task1-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task2-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task3-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 3,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task4-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 4,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task5-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 5,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task6-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 6,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task7-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 7,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task8-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 8,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_spatial-task9-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 9,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task1-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 1,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task2-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 2,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task3-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 3,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task4-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 4,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task5-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 5,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task6-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 6,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task7-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 7,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task8-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 8,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_object-task9-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 9,
+        "condition": "awq_w4a16",
+        "success": false
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task1-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 1,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task2-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 2,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task3-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 3,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task4-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 4,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task5-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 5,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task6-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 6,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task7-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 7,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task8-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 8,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_goal-task9-reset5-v1",
+        "suite": "libero_goal",
+        "task_id": 9,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_10-task1-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 1,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_10-task2-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 2,
+        "condition": "awq_w4a16",
+        "success": true
+      },
+      {
+        "run": "20261109-053-awq_w4a16-libero_10-task3-reset5-v1",
+        "suite": "libero_10",
+        "task_id": 3,
+        "condition": "awq_w4a16",
+        "success": true
+      }
+    ]
+  },
+  "216": {
+    "counts": {
+      "bf16": {
+        "episodes": 17,
+        "successes": 17
+      }
+    },
+    "cases": [
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task1-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task2-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task3-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 3,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task4-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 4,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task5-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 5,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task6-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 6,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task7-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 7,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task8-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 8,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_spatial-bf16-task9-reset5-v1",
+        "suite": "libero_spatial",
+        "task_id": 9,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task1-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 1,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task2-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 2,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task3-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 3,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task4-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 4,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task5-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 5,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task6-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 6,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task7-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 7,
+        "condition": "bf16",
+        "success": true
+      },
+      {
+        "run": "20261109-216-pi05-libero_object-bf16-task8-reset5-v1",
+        "suite": "libero_object",
+        "task_id": 8,
+        "condition": "bf16",
+        "success": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "round_id": "20261109-two-server-resume-v1",
+  "authorization": "User explicitly opened 216 and 053 GPUs for the existing trajectory study; default 15 minute heartbeat; consolidated GitHub sync at closure",
+  "nodes": {
+    "216": {
+      "hostname": "autodl-container-75c54eac1e-02156c9d",
+      "gpu_uuid": "GPU-3e150638-1b75-05b2-0246-a4bd02bb7723",
+      "disk_free_bytes_at_admission": 22678175744,
+      "stage": "native JAX first-query replay v2; action horizon from actual config, observed raw chunk 10x7"
+    },
+    "053": {
+      "hostname": "autodl-container-c49843b5ba-28bcee5c",
+      "gpu_uuid": "GPU-96b66e7f-9004-4347-7993-c799d727f664",
+      "disk_free_bytes_at_admission": 24208596992,
+      "stage": "AWQ W4A16 and SmoothQuant profile calibration on 4 independent reset0 observations, one task per suite; 422 targets; no training labels"
+    }
+  },
+  "primary_observation": {
+    "used_percent": 2,
+    "remaining_percent": 98,
+    "resets_at": 1794214521
+  },
+  "previous_probe_failure": "216 v1 assumed horizon50 but checkpoint uses horizon10; zero quantized rollout, previous four BF16 traces retained",
+  "status": "RUNNING_NOT_FINAL"
+}

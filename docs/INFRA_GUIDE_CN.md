@@ -6,6 +6,8 @@
 
 同任务v2新增`configs/infra/trajectory_study_v2/`六份阻断模板、AWQ/SQ分阶段对照及13组累计预览。SQ诊断通过`--plugin qvla.trajectory_infra_v2`显式绑定，注册不代表兼容。只平滑等价未通过时禁止扩展激活量化闭环，详见[v2设计](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V2_CN.md)。
 
+当前方法目录补充：用户2026-11-09重新指定十二量化配置加BF16，见`configs/infra/runtime_commonality_v6/method_catalog.json`；这是不可执行的方法进度目录，不覆盖v5冻结计划。无卡与开卡工作边界见[无卡准备规范](TRAJECTORY_CPU_PREPARATION_CN.md)。
+
 ## 1. 三个模块与一个统一入口
 
 当前轨迹任务为[v5独立漂移诊断](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/DESIGN_V5_CN.md)：三模型、四suite、10任务×5初态、12静态条件含BF16，不复现DyQ代码。`python -m qvla.runtime_study_v5 --gpu-slots 4 --output NEW_DIR`只编译CPU采样/分片建议，不能派发GPU；实际卡数和SSH待用户提供，方法适配与逐GPU占用门禁另验。下方v1–v4均保留历史，不作为当前起跑预算。

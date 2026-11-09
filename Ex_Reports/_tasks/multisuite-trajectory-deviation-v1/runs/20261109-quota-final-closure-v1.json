@@ -1,0 +1,23 @@
+{
+  "round_id": "20261109-two-server-resume-v1",
+  "reason": "primary remaining3%; quota closure",
+  "servers": {
+    "053": {
+      "execute": true,
+      "time_utc": "2026-11-09T06:43:45.467165+00:00",
+      "supervisor_pid": 837
+    },
+    "216": {
+      "execute": true,
+      "time_utc": "2026-11-09T06:43:45.644808+00:00",
+      "supervisor_pid": 757
+    }
+  },
+  "ssh_remote_closed_both": true,
+  "platform_off_independently_verified": false,
+  "raw_archive_local_and_server_copies": true,
+  "private_final_upload_status": "VERIFIED_PRIVATE_REMOTE_DOWNLOAD_SHA256",
+  "public_git_sync": "Included in the single consolidated final sync; remote SHA verified separately by control end",
+  "experiment_status": "PARTIAL_NOT_COMPLETE",
+  "private_receipt": "20261109-final-private-archives-v1.json"
+}
