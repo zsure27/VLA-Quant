@@ -1,0 +1,14 @@
+{
+  "gate": "PASS_CPU_TRANSFORMS_AND_RECOVERED_VIDEO_DECODE",
+  "rotation_max_abs": 0.0,
+  "video_frames": 102,
+  "frame_shape": [
+    256,
+    256,
+    3
+  ],
+  "native_pytorch3d_extension": "not installed; transforms-only build",
+  "original_video": "historical zero-byte encoder failure retained; first decode attempt rejected; verified recovery selected explicitly",
+  "pip_check": "No broken requirements found.",
+  "gpu_admitted": false
+}
