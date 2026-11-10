@@ -1,0 +1,54 @@
+{
+  "gate": "PASS_053_STOPPED_INCREMENTAL_ARCHIVE_MEMBER_SHA",
+  "archive": "/root/autodl-tmp/trajectory-drift-20261107/archives/20261110-053-user-final-v1/raw-code-results.tar.gz",
+  "bytes": 1046506250,
+  "sha256": "39ad7990c7d8972beffad9b046199fd285b3457153622e7f30b55f5688536a16",
+  "members": 8578,
+  "members_verified": 8578,
+  "files": 8577,
+  "parameter_exclusions": [
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-full-v1/profile.pt",
+      "bytes": 4029453692,
+      "sha256": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-model-smoke-v1/profile.pt",
+      "bytes": 350256,
+      "sha256": "1735a48ba97ca5b3da966b1af0ec03f2f4ae22965cf1cc1bbf8a2366fee140fa",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v1/partial-packed-entries.pt",
+      "bytes": 181704716,
+      "sha256": "c955488910fa79cbbb590569122c20ae86607b97fbecfa468e83423dd43e0390",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt",
+      "bytes": 4589938380,
+      "sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-model-smoke-v1/profile.pt",
+      "bytes": 326384,
+      "sha256": "3e356194f1795ee49a17b2bf8e74862473f4f9d916916c3d1f0fbdaa93ec2600",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    }
+  ],
+  "security_scan_passed": true,
+  "upload_budget_bytes": 2147483648,
+  "estimated_network_bytes_if_local_spool_upload_download_verify": 3139518750
+}

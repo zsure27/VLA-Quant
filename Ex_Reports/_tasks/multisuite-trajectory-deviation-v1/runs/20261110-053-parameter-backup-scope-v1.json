@@ -1,0 +1,16 @@
+{
+  "authorization": "User chose: upload code, results and raw trajectories only; retain parameters on server and list cloud gap",
+  "scope": "053 current trajectory study run",
+  "upload_code_small_results_raw_traces": true,
+  "upload_new_quantization_parameter_artifacts": false,
+  "download_large_parameter_artifacts_to_local": false,
+  "retain_server_parameter_artifacts": true,
+  "required_manifest": [
+    "server_absolute_path",
+    "bytes",
+    "sha256",
+    "source_model_data_dependencies",
+    "cloud_copy_missing_explicit"
+  ],
+  "existing_archives_no_deletion": true
+}

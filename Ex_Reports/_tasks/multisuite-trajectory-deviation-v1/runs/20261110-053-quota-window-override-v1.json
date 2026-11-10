@@ -1,0 +1,19 @@
+{
+  "kind": "user_single_primary_window_override",
+  "authorization": "2026-11-10 user: if threshold before upcoming refresh, do not close; continue registered run; restore default at next threshold or task completion",
+  "primary_resets_at_at_authorization": 1794293874,
+  "observed_at": "2026-11-10T06:31:35+00:00",
+  "primary_remaining": 17,
+  "user_expected_refresh_minutes": 27,
+  "refresh_confirmed": false,
+  "actual_api_reset_iso": "2026-11-10T06:57:54+00:00",
+  "rules": {
+    "first_window_threshold": "save progress; continue existing registered work; no quota-only shutdown",
+    "new_configuration": "all original scientific/disk/GPU gates still apply; no blanket new-work authorization",
+    "after_fresh_api_confirms_new_future_reset": "override expires; default15/10/3",
+    "task_complete_or_irrecoverable_block": "normal closure still required"
+  },
+  "no_reset_credit": true,
+  "scope": "053 current round only",
+  "no_windows_shutdown_authorization": true
+}

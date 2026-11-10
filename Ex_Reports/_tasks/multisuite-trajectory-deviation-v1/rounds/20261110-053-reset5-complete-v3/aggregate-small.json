@@ -1,0 +1,36 @@
+{
+  "scope": "OFT, four suites, tasks0-9, initial index5 only; development tasks; incomplete cells explicitly retained",
+  "not_causal_same_observation_after_first_chunk": true,
+  "conditions": [
+    {
+      "condition": "awq_w4a16",
+      "pairs": 40,
+      "successes": 39,
+      "tasks_with_translation_window": 40,
+      "tasks_with_rotation_window": 39,
+      "median_task_translation_p95_mm": 50.17244207060314,
+      "median_task_rotation_p95_deg": 7.233316151741741,
+      "first_translation_onset_control_step_median": 16.0
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "pairs": 40,
+      "successes": 0,
+      "tasks_with_translation_window": 40,
+      "tasks_with_rotation_window": 40,
+      "median_task_translation_p95_mm": 354.20394464635774,
+      "median_task_rotation_p95_deg": 34.46048380255576,
+      "first_translation_onset_control_step_median": 2.0
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "pairs": 40,
+      "successes": 37,
+      "tasks_with_translation_window": 40,
+      "tasks_with_rotation_window": 40,
+      "median_task_translation_p95_mm": 76.3669406925265,
+      "median_task_rotation_p95_deg": 11.14739154173511,
+      "first_translation_onset_control_step_median": 4.0
+    }
+  ]
+}

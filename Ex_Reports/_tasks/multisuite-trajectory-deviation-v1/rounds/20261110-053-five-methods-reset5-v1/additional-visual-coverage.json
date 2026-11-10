@@ -1,0 +1,328 @@
+{
+  "scope": "OFT reset5; matched prefixes only; no safety or compensation claim",
+  "risk_set_minimum": 5,
+  "bias_definition": "norm(mean(error_vector))",
+  "scatter_definition": "sqrt(mean(norm(error_vector-mean_vector)^2))",
+  "coverage": [
+    {
+      "suite": "libero_spatial",
+      "condition": "awq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "awq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "smoothquant_w4a8",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "smoothquant_w4a8",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "smoothquant_w4a4",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 109
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "smoothquant_w4a4",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 109
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "gptq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "gptq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "omniquant_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_spatial",
+      "condition": "omniquant_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 102
+    },
+    {
+      "suite": "libero_object",
+      "condition": "awq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "awq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "smoothquant_w4a8",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "smoothquant_w4a8",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "smoothquant_w4a4",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "smoothquant_w4a4",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "gptq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "gptq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "omniquant_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_object",
+      "condition": "omniquant_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 131
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "awq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 93
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "awq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 93
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "smoothquant_w4a8",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 96
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "smoothquant_w4a8",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 96
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "smoothquant_w4a4",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 96
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "smoothquant_w4a4",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 96
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "gptq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 96
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "gptq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 96
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "omniquant_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 93
+    },
+    {
+      "suite": "libero_goal",
+      "condition": "omniquant_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 93
+    },
+    {
+      "suite": "libero_10",
+      "condition": "awq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 251
+    },
+    {
+      "suite": "libero_10",
+      "condition": "awq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 251
+    },
+    {
+      "suite": "libero_10",
+      "condition": "smoothquant_w4a8",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 242
+    },
+    {
+      "suite": "libero_10",
+      "condition": "smoothquant_w4a8",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 242
+    },
+    {
+      "suite": "libero_10",
+      "condition": "smoothquant_w4a4",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 251
+    },
+    {
+      "suite": "libero_10",
+      "condition": "smoothquant_w4a4",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 251
+    },
+    {
+      "suite": "libero_10",
+      "condition": "gptq_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 249
+    },
+    {
+      "suite": "libero_10",
+      "condition": "gptq_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 249
+    },
+    {
+      "suite": "libero_10",
+      "condition": "omniquant_w4a16",
+      "metric": "position",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 251
+    },
+    {
+      "suite": "libero_10",
+      "condition": "omniquant_w4a16",
+      "metric": "world_SO3_log",
+      "paired_tasks": 10,
+      "minimum_contributors": 5,
+      "plotted_steps": 251
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "method": "awq_w4a16",
+    "pairs": 40,
+    "success": 39,
+    "rescue": 2,
+    "break": 0,
+    "translation_p95_task_median_mm": 50.17244207060314,
+    "rotation_p95_task_median_deg": 7.233316151741741
+  },
+  {
+    "method": "gptq_w4a16",
+    "pairs": 40,
+    "success": 38,
+    "rescue": 1,
+    "break": 0,
+    "translation_p95_task_median_mm": 39.47621232489365,
+    "rotation_p95_task_median_deg": 5.949629927342436
+  },
+  {
+    "method": "smoothquant_w4a4",
+    "pairs": 40,
+    "success": 0,
+    "rescue": 0,
+    "break": 37,
+    "translation_p95_task_median_mm": 354.20394464635774,
+    "rotation_p95_task_median_deg": 34.46048380255576
+  },
+  {
+    "method": "smoothquant_w4a8",
+    "pairs": 40,
+    "success": 37,
+    "rescue": 3,
+    "break": 3,
+    "translation_p95_task_median_mm": 76.3669406925265,
+    "rotation_p95_task_median_deg": 11.14739154173511
+  }
+]

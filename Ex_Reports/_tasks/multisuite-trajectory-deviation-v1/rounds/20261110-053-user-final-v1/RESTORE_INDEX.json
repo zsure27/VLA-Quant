@@ -1,0 +1,57 @@
+{
+  "status": "RAW_UPLOAD_IN_PROGRESS_SERVER_AND_LOCAL_VERIFIED",
+  "server_archive": "/root/autodl-tmp/trajectory-drift-20261107/archives/20261110-053-user-final-v1/raw-code-results.tar.gz",
+  "archive_bytes": 1046506250,
+  "archive_sha256": "39ad7990c7d8972beffad9b046199fd285b3457153622e7f30b55f5688536a16",
+  "members_verified_server": 8578,
+  "members_verified_local": 8578,
+  "private_receipt": "private-archive-verification.json",
+  "private_parent_index": "Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/runs/20261109-final-private-archives-v1.json",
+  "parent_archive_sha256": "7789e201f2339204959d490c3c9fa0e587861fb91a8f781083a2a4f6d7719650",
+  "raw_manifest_location": "MANIFEST.json inside private archive; full per-member identities retained privately",
+  "new_parameters_server_only": [
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-full-v1/profile.pt",
+      "bytes": 4029453692,
+      "sha256": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-model-smoke-v1/profile.pt",
+      "bytes": 350256,
+      "sha256": "1735a48ba97ca5b3da966b1af0ec03f2f4ae22965cf1cc1bbf8a2366fee140fa",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v1/partial-packed-entries.pt",
+      "bytes": 181704716,
+      "sha256": "c955488910fa79cbbb590569122c20ae86607b97fbecfa468e83423dd43e0390",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt",
+      "bytes": 4589938380,
+      "sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    },
+    {
+      "server_path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-model-smoke-v1/profile.pt",
+      "bytes": 326384,
+      "sha256": "3e356194f1795ee49a17b2bf8e74862473f4f9d916916c3d1f0fbdaa93ec2600",
+      "uploaded": false,
+      "downloaded_to_local": false,
+      "reason": "User explicitly retains new quantization parameters on server; cloud parameter copy missing"
+    }
+  ],
+  "whole_session_fully_cloud_backed": false,
+  "parameter_exclusion_user_authorized": true,
+  "resume_policy": "Do not launch historical RUNNING or pending scripts. User must reopen server; verify hostname/GPU/disk/quota, deduplicate completed cases and create fresh independent plan."
+}

@@ -1,0 +1,125 @@
+{
+  "version": 7,
+  "kind": "OFT_applicability_filter_not_execution_admission",
+  "model": "openvla_oft",
+  "reference": "BF16",
+  "eligible_candidates": [
+    {
+      "method": "GPTQ",
+      "precision": "W4A16",
+      "full_model_admitted": true,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": "https://github.com/IST-DASLab/gptq/tree/2d65066eeb06a5c9ff5184d8cebdf33662c67faf",
+      "stage": "40_RESET5_TRAJECTORIES_COMPLETE_160_TOTAL_PAIRS_AUDITED",
+      "profile_bytes": 4029453692,
+      "profile_sha256": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a",
+      "reset5_success": "38/40"
+    },
+    {
+      "method": "AWQ",
+      "precision": "W4A16",
+      "full_model_admitted": true,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": null,
+      "stage": "ADMITTED_FIXED_422_PROFILE_AND_40_RESET5_TRAJECTORIES"
+    },
+    {
+      "method": "OmniQuant",
+      "precision": "W4A16",
+      "full_model_admitted": true,
+      "reason": "Official weight-only route uses LWC without mandatory LET; full OFT numeric and artifact admission required; four-frame adaptation is not full-paper reproduction",
+      "source": "https://github.com/OpenGVLab/OmniQuant/tree/feffe8ea87d80f7bb57b6e25e7cff9dc950fcc14",
+      "stage": "FULL_422_LWC_V2_AND_40_RESET5_TRACES_PASSED_200_TOTAL_QUANT_PAIRS_AUDITED",
+      "weight_only_recipe": {
+        "LWC": true,
+        "LET": false,
+        "epochs": 20,
+        "lwc_lr": 0.01,
+        "weight_decay": 0,
+        "calibration_frames": 4,
+        "linear_group_size": "gcd(128,input_width), width4304 uses16",
+        "conv": "per-row due original asymmetric nondivisible-width limitation"
+      },
+      "reset5_success": "38/40",
+      "profile_bytes": 4589938380,
+      "profile_sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995"
+    },
+    {
+      "method": "QVLA",
+      "precision": "W4A16",
+      "full_model_admitted": false,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": "https://github.com/AutoLab-SAI-SJTU/QVLA/tree/6d0a074459aa7efa09ef0cc86cfc339ce40d8b06",
+      "stage": "PINNED_RELEASE_OFT_ALLOCATION_QUANTIZATION_9_CPU_TESTS_PASSED_NO_GPU_ADMISSION",
+      "precision_note": "Released mean output-channel W4 with 0/4/8/16 candidates; not uniform W4 or parameter-weighted storage budget"
+    },
+    {
+      "method": "SmoothQuant",
+      "precision": "W4A8",
+      "full_model_admitted": true,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": null,
+      "stage": "ADMITTED_FIXED_422_PROFILE_AND_40_RESET5_TRAJECTORIES_PER_PRECISION"
+    },
+    {
+      "method": "DuQuant",
+      "precision": "W4A8",
+      "full_model_admitted": false,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": "https://github.com/Hsu1023/DuQuant/tree/d56cfc6fe97c34c0eb100fec82fe439865905679",
+      "stage": "ORIGINAL_CPU_ROTATION_PERMUTATION_AND_W4A8_A4_COMPONENT_PASSED_FULL_OFT_PENDING"
+    },
+    {
+      "method": "SmoothQuant",
+      "precision": "W4A4",
+      "full_model_admitted": true,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": null,
+      "stage": "ADMITTED_FIXED_422_PROFILE_AND_40_RESET5_TRAJECTORIES_PER_PRECISION"
+    },
+    {
+      "method": "DuQuant",
+      "precision": "W4A4",
+      "full_model_admitted": false,
+      "reason": "eligible OFT family; actual adapter and numerical admission required",
+      "source": "https://github.com/Hsu1023/DuQuant/tree/d56cfc6fe97c34c0eb100fec82fe439865905679",
+      "stage": "ORIGINAL_CPU_ROTATION_PERMUTATION_AND_W4A8_A4_COMPONENT_PASSED_FULL_OFT_PENDING"
+    }
+  ],
+  "deferred_not_architecture_exclusions": [
+    {
+      "method": "ActQuant",
+      "precision": "W4A16",
+      "full_model_admitted": false,
+      "reason": "official OFT route exists; circa50GB build/export budget exceeds current circa20GiB free disk; not an architecture exclusion",
+      "source": "https://github.com/arashakb/ActQuant"
+    },
+    {
+      "method": "QuantVLA",
+      "precision": "W4A8",
+      "full_model_admitted": false,
+      "reason": "non-DiT paper extension is OpenVLA W8A16; released GR00T W4A8/A4 complete OFT recipe unverified; applicability not disproven",
+      "source": "https://arxiv.org/html/2602.20309v4"
+    },
+    {
+      "method": "QuantVLA",
+      "precision": "W4A4",
+      "full_model_admitted": false,
+      "reason": "non-DiT paper extension is OpenVLA W8A16; released GR00T W4A8/A4 complete OFT recipe unverified; applicability not disproven",
+      "source": "https://arxiv.org/html/2602.20309v4"
+    }
+  ],
+  "removed_from_OFT_queue": [
+    {
+      "method": "HoloQ-VLA",
+      "precision": "W4A4",
+      "full_model_admitted": false,
+      "reason": "DiT denoising-time-axis recipe has no counterpart in this L1-head OFT model",
+      "source": "https://arxiv.org/html/2605.28803v3"
+    }
+  ],
+  "measurement_only": true,
+  "unchanged_other_model_catalogs": true,
+  "scope_policy": "compare actual quantized and protected module sets; mixed-bit target averages are not uniform W4",
+  "checkpoint_unchanged": true
+}
