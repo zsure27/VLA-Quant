@@ -1,0 +1,18 @@
+{
+  "gate": "INCOMPLETE_PRIVATE_UPLOAD_STOPPED_WITHOUT_FULL_DOWNLOAD_SHA_VERIFICATION",
+  "archive_sha256": "39ad7990c7d8972beffad9b046199fdd285b3457153622e7f30b55f5688536a16",
+  "bytes": 1046506250,
+  "upload_attempted": true,
+  "remote_download_sha256_verified": false,
+  "unverified_remote_parts_possible": true,
+  "server_original_retained": true,
+  "local_full_member_verified_archive_retained": true,
+  "stopped_to_avoid_repeated_transfer": true,
+  "parameter_artifacts_not_uploaded_user_authorized": true,
+  "resume_plan_local": ".local/transfer/20261110-053-final-upload-plan.json",
+  "transport": "scripts/github_archive_store_v4.py;64MiB parts; fixed private repo; no public raw upload",
+  "note": "No complete cloud restore claim. Do not delete either original until remote recovery gate passes.",
+  "uploader_stop_observed_pid": 3512,
+  "uploader_stop_observed": true,
+  "uploader_parent_exit_code_observed": 1
+}

@@ -1,0 +1,14 @@
+{
+  "time_utc": "2026-11-10T10:58:37.257531+00:00",
+  "hostname": "autodl-container-c49843b5ba-28bcee5c",
+  "execute": true,
+  "supervisor_pid": 837,
+  "platform_off_independently_verified": false,
+  "billing_stopped_independently_verified": false,
+  "ssh_closed_by_remote_observed": true,
+  "source": "Observed native_shutdown execute=true output followed by SSH remote close; original transcript retained",
+  "monitor_mode": "current task checks; no independent app automation",
+  "server_monitor_status": "CLOSED_ON_USER_REQUEST",
+  "windows_shutdown_executed": false,
+  "original_transcript_local": ".local/transfer/053-final-private-native-shutdown-transcript.txt"
+}

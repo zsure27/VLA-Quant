@@ -1,11 +1,11 @@
 {
-  "status": "RAW_UPLOAD_IN_PROGRESS_SERVER_AND_LOCAL_VERIFIED",
+  "status": "SERVER_CLOSED_RAW_CLOUD_UPLOAD_INCOMPLETE_LOCAL_AND_SERVER_VERIFIED",
   "server_archive": "/root/autodl-tmp/trajectory-drift-20261107/archives/20261110-053-user-final-v1/raw-code-results.tar.gz",
   "archive_bytes": 1046506250,
   "archive_sha256": "39ad7990c7d8972beffad9b046199fd285b3457153622e7f30b55f5688536a16",
   "members_verified_server": 8578,
   "members_verified_local": 8578,
-  "private_receipt": "private-archive-verification.json",
+  "private_receipt": "private-upload-incomplete.json",
   "private_parent_index": "Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/runs/20261109-final-private-archives-v1.json",
   "parent_archive_sha256": "7789e201f2339204959d490c3c9fa0e587861fb91a8f781083a2a4f6d7719650",
   "raw_manifest_location": "MANIFEST.json inside private archive; full per-member identities retained privately",
@@ -53,5 +53,11 @@
   ],
   "whole_session_fully_cloud_backed": false,
   "parameter_exclusion_user_authorized": true,
-  "resume_policy": "Do not launch historical RUNNING or pending scripts. User must reopen server; verify hostname/GPU/disk/quota, deduplicate completed cases and create fresh independent plan."
+  "resume_policy": "Do not launch historical RUNNING or pending scripts. User must reopen server; verify hostname/GPU/disk/quota, deduplicate completed cases and create fresh independent plan.",
+  "server_native_shutdown_receipt": "shutdown-receipt-observed.json",
+  "server_shutdown_request_execute": true,
+  "ssh_closed_by_remote_observed": true,
+  "private_completion_receipt_expected": "private-archive-verification.json",
+  "raw_cloud_restore_verified": false,
+  "raw_cloud_gap_explicit": true
 }
