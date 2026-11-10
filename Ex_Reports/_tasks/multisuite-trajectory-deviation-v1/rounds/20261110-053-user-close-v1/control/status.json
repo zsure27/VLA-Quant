@@ -1,0 +1,628 @@
+{
+  "round_id": "20261110-053-oft-reset5-resume-v1",
+  "status": "FAILED_STOPPED",
+  "completed": [
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "awq_w4a16"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-awq_w4a16-libero_10-task4-reset5/result.json",
+      "sha256": "05f422d7874d1e327e18e46e775fc7010a331c639b94cc570c7ef8e9de2de3fe"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "awq_w4a16"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-awq_w4a16-libero_10-task5-reset5/result.json",
+      "sha256": "6c4a985b85063e7132b67dd3f77d1725eddcf6bfaeaaa87d3a72ae62344f8236"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "awq_w4a16"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-awq_w4a16-libero_10-task6-reset5/result.json",
+      "sha256": "9fe797dfbe031f83e9051233713c0bbab6f0075d2cfd16cbcf0efb3ff29e0ed1"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "awq_w4a16"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-awq_w4a16-libero_10-task7-reset5/result.json",
+      "sha256": "ae8755e91e7eeadc2ddc01c654da4f5305b8a10190ef6a92f3fce01990887490"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 8,
+        "reset_index": 5,
+        "condition": "awq_w4a16"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-awq_w4a16-libero_10-task8-reset5/result.json",
+      "sha256": "93e806aea4aa03b4694bc1319f21e57a1c8e7e33cf3e8a3bd27ff58415cbdc35"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 9,
+        "reset_index": 5,
+        "condition": "awq_w4a16"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-awq_w4a16-libero_10-task9-reset5/result.json",
+      "sha256": "5018ca6551f012e3d1a3fa0615d270121268b94849f819050c838a8cf9d4e3af"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task1-reset5/result.json",
+      "sha256": "5e3e9a9493ee7bbdc98fe86080e1c937569e90056a26d022876079a11a6e1aa6"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task2-reset5/result.json",
+      "sha256": "349570daae727d5516869f7713b2b2492dd598b6cc103bad8bc7ae3567403e35"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 3,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task3-reset5/result.json",
+      "sha256": "81b824909ebf689fc25ad2dedc6ee1b42a41cfe542fc0cb7d38a93306e9e7bcd"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task4-reset5/result.json",
+      "sha256": "5d55400765af3828df27508cab7ff6f9fa31b33995c87199517107a03c623567"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task5-reset5/result.json",
+      "sha256": "15eb27f3710bcb96c785358485c04b27a41db989a6711fcf6af8b5880bc2c40e"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task6-reset5/result.json",
+      "sha256": "e995a739eb78c52e5baf2a8f96b06795bc76d3d72f25be94c05c587772950ba6"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task7-reset5/result.json",
+      "sha256": "422bccfb99893d562c31a1ac8babf515b7284c8fb97e3629713f35a8eb59905c"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 8,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task8-reset5/result.json",
+      "sha256": "ce6b0cc01fc225c182e69d905d185e14104156ff928c31d8ce11d1517a962ed6"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 9,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_spatial-task9-reset5/result.json",
+      "sha256": "c5afef93f71b1443b2ccf1dd1f8a8536d6e3c4ecaa4c3d1ee5d8bf1282152636"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 1,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task1-reset5/result.json",
+      "sha256": "1543bebefe71b6974864956cc57567dd4f8d795db8ff4e562f53254931cb8e57"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 2,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task2-reset5/result.json",
+      "sha256": "41f074e4fcc13e7eca91106332247ef2221a228bd23c97b35b74e44ab4881d15"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 3,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task3-reset5/result.json",
+      "sha256": "579a34d569de907df0765d87fdf39f9e7d5f8b20c02257cdb8354cdad624010c"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task4-reset5/result.json",
+      "sha256": "6d5d1d8b8f37259004939ffbb0cfba77d3fc35508019b5f937166c3eea2ca3c5"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task5-reset5/result.json",
+      "sha256": "8aae11e77a9d9b860c85dd1dafc2b0fb633f39b22e89519cfa133adfbf846fc3"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task6-reset5/result.json",
+      "sha256": "1b9ac8e21e40b4bb87f76ae944e120c11f1592cbf84d0d6d1967ba4426ab53ef"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task7-reset5/result.json",
+      "sha256": "4bc312d5dc70b41933ee3e1d2e6954722b43885fed48475c3c75305445a090d7"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 8,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task8-reset5/result.json",
+      "sha256": "e388ecb5591f65bd76a025d9fe064ab2377c1acc2d453645301d3d6405f3fe63"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 9,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_object-task9-reset5/result.json",
+      "sha256": "bf3ab0455e327de12f4b69b1e95057b58a674ad3e98341b039f63504e1afc43e"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 1,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task1-reset5/result.json",
+      "sha256": "8a96ab70d7cbc9c6a459beb09ef0f45ecf8d2e42e0b6c5469c62a7adee2fea2a"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 2,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task2-reset5/result.json",
+      "sha256": "5c2e7ea9218678314d9a849004ec5c938bf5804beee2b8a0381ab71c2350a004"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 3,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task3-reset5/result.json",
+      "sha256": "5f55f26160cedd0a244916f369c1c072baef218a15832380f717a85f7902dd21"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task4-reset5/result.json",
+      "sha256": "ce7fd5161d04a292d6909ab2d34ed7f41889e042c4d7ff82dcd20fb488f4abd2"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task5-reset5/result.json",
+      "sha256": "f75e0d6160868f0d1152993f0fbe92c25684fbfb918de6785bd06b53e39b45e0"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task6-reset5/result.json",
+      "sha256": "83def732c7ea6e5d246a62265ddc3e96edc3243cc38945178d2289bf063d1286"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task7-reset5/result.json",
+      "sha256": "4079499b7b576ed748e9585609dbc1d650cecc10cd6ecf7b3db746cad79e7c05"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 8,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task8-reset5/result.json",
+      "sha256": "ef9beabaec6a83787787a0c2ae130fce5cb599a09cbebccb6f45b4fa2d4b8584"
+    },
+    {
+      "case": {
+        "suite": "libero_goal",
+        "task_id": 9,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_goal-task9-reset5/result.json",
+      "sha256": "f2ad12b64bf399a5e155631f80bc3d23839b507c44f47ce4f70ccf249102c425"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 1,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task1-reset5/result.json",
+      "sha256": "8ec77ac6a677791cb7e57054c2b85571b2266bbcae74776dfd28db78c854eaf3"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 2,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task2-reset5/result.json",
+      "sha256": "0be582a4f0aa120d6e7bdfb8af41a0d6e8b87d4a9f3376b02ee669b7f319c334"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 3,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task3-reset5/result.json",
+      "sha256": "77a369d330f43f75a976bc229c59fab6098655fedabfe771a901ecd95dfe7260"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task4-reset5/result.json",
+      "sha256": "3ab2eea31a2d0467ab2f133049d4ac3ecae6ff62bbc88b580832a42d2e3aee3c"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task5-reset5/result.json",
+      "sha256": "2bbb14ee89992eb1d8fb87bb1f9f7b26e4c610308773da624ce72c4077e137a4"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task6-reset5/result.json",
+      "sha256": "5a2484ada900f1a93096a1d884aad6bf1e67dc1f0bb379ad889e26473aea8fc8"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task7-reset5/result.json",
+      "sha256": "2b103cdf59dac2fa80f7fb700f516cba9b5619bbd757df350542756a981ec12f"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 8,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task8-reset5/result.json",
+      "sha256": "39c42ed27dc6b17d5f5486969d1dc97cb38f0b673ce5af555844a2841e52c866"
+    },
+    {
+      "case": {
+        "suite": "libero_10",
+        "task_id": 9,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a8"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a8-libero_10-task9-reset5/result.json",
+      "sha256": "eb9774f51356a357875317b01c689e76e22517ecf3a75c472a13066216d81ae3"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task1-reset5/result.json",
+      "sha256": "e1529de0ac521af30e033a4190b6142a45721e91854ff201e173e763039237cc"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task2-reset5/result.json",
+      "sha256": "23ae85524e3fe776662fb23c84d7bdff2c3aea362e02e1e39a2c8654c75bb787"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 3,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task3-reset5/result.json",
+      "sha256": "d8315275ff34af4f8a8801cbc88934458631c1b6305521f4f51eb553d3621574"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task4-reset5/result.json",
+      "sha256": "e5026596e611413b8c21ef9e0b427373e5901ccdbf81111cab68a102d50a4146"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task5-reset5/result.json",
+      "sha256": "c7626682b96736811e561043c523c69023aaf8cfa037d64d1ce2a508e4aa9ef6"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task6-reset5/result.json",
+      "sha256": "ccac9c55e806625e2cb95e928b53f9e79ec7d3d5fb4c432a7ad6bea6e38a0b51"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task7-reset5/result.json",
+      "sha256": "ad87302f2fa061fd058e744eb59e914d0facc46cbd8fdd1c6e3a11d9d0ec65f6"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 8,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task8-reset5/result.json",
+      "sha256": "58ddae6785376b5c822915495acd1ea615cce4afe1560cd7a2eae07e7c5b60a9"
+    },
+    {
+      "case": {
+        "suite": "libero_spatial",
+        "task_id": 9,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_spatial-task9-reset5/result.json",
+      "sha256": "a71e43bd55c4621c764786ced7ff88f9bf3c4008ece22bd9c056b7288ef8bcd4"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 1,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task1-reset5/result.json",
+      "sha256": "01f9e23a8829818f34238f3f5e20af2f5bf5ac6f87254665689bc7ffafe9058e"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 2,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task2-reset5/result.json",
+      "sha256": "24d4767532708704e8bf69e770165eab8da2588073f8a59fe11e370d9b22373b"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 3,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task3-reset5/result.json",
+      "sha256": "e0e3aa15b1fae509fe15d0a00c580b7a0a85442d1955d9055d6924ed27ea3360"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 4,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task4-reset5/result.json",
+      "sha256": "a5f8068ef045a8be9c9ab23a116b10a099de6df1db8edb6d66600d0862867d86"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 5,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task5-reset5/result.json",
+      "sha256": "0dee5e687adaaf5ec618a51a6a6b76770eaaf34c298821d285d1c8b811bd4c3d"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 6,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task6-reset5/result.json",
+      "sha256": "bcace8d4f94f55704d624bab9188021744fd0756cbfb65649fb4b9ae7c1d8b3e"
+    },
+    {
+      "case": {
+        "suite": "libero_object",
+        "task_id": 7,
+        "reset_index": 5,
+        "condition": "smoothquant_w4a4"
+      },
+      "result": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task7-reset5/result.json",
+      "sha256": "90215a0cbfeaa7670379193c42405a953036a08d8aa429e81bab20d720e04df4"
+    }
+  ],
+  "plan_sha256": "942cde8cb4ad38e99563b27e93e40287354875281deac14eefced5f415b53707",
+  "current_case": {
+    "suite": "libero_object",
+    "task_id": 8,
+    "reset_index": 5,
+    "condition": "smoothquant_w4a4"
+  },
+  "current_index": 58,
+  "argv": [
+    "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+    "-u",
+    "-m",
+    "qvla.execute_oft_quant_drift_v2",
+    "--oft-source",
+    "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft",
+    "--checkpoint",
+    "/root/autodl-tmp/trajectory-drift-20261107/models/openvla_oft",
+    "--suite",
+    "libero_object",
+    "--task-id",
+    "8",
+    "--initial-state-index",
+    "5",
+    "--model-seed",
+    "7",
+    "--round-id",
+    "20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task8-reset5",
+    "--output",
+    "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-oft-reset5-resume-v1-smoothquant_w4a4-libero_object-task8-reset5",
+    "--profile",
+    "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt",
+    "--official-root",
+    "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2",
+    "--method",
+    "smoothquant",
+    "--activation-bits",
+    "4"
+  ],
+  "observed_at": "2026-11-10T03:12:02.105062+00:00",
+  "pid": 25845,
+  "error_type": "AssertionError",
+  "error": "('episode process failed', -15)"
+}

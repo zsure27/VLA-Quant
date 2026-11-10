@@ -1,0 +1,14 @@
+{
+  "round_id": "20261110-053-oft-reset5-resume-v1",
+  "server_id": "053",
+  "gpu_uuid": "GPU-f51dbeee-4a4b-a140-0a25-d9655199c7e6",
+  "plan_sha256": "942cde8cb4ad38e99563b27e93e40287354875281deac14eefced5f415b53707",
+  "runner_sha256": "983a66cf07dde0b906ab5c11f1d5ef78a00ca775a20d8083aacb6b9e8cdedc2f",
+  "cases": 78,
+  "code_commit": "5a900dd5900fda66f3d3db173a3fc88b73b1fcff",
+  "primary_remaining_percent": 100,
+  "primary_resets_at": 1794293874,
+  "status": "START_REQUESTED_PENDING_ACTUAL_OBSERVATION",
+  "sync_policy": "consolidate Git and private incremental backup at end",
+  "windows_shutdown_authorized": false
+}
