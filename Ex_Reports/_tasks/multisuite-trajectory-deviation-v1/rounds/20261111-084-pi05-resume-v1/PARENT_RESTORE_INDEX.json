@@ -1,0 +1,11 @@
+{
+  "prior_native_cases": 21,
+  "source": "Previously full SHA-verified private archives; all 21 result members covered",
+  "parent_archives": [
+    "38f1dc1f3c5de233685326fa34346891d4a6ab58ec19e286597a480693d6401d",
+    "3e9eb781ba1165ab7d40a629719a8f3c30ffb98c997f37e78ef06813f1d0eabf"
+  ],
+  "native_checkpoint_source": "gs://openpi-assets/checkpoints/pi05_libero/",
+  "native_checkpoint_receipt_sha256": "1fff7a3693252f9935c0f45b8c76ba1f853a1417b4d53741c598f1d6a2c3b3fa",
+  "new_raw_scope": "Only current 19 native trajectories, numerical diagnostics, source/control and results; no model weights"
+}

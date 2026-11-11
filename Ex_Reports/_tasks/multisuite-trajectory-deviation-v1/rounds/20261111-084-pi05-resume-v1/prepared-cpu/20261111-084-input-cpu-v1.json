@@ -1,0 +1,142 @@
+{
+  "gate": "FAIL_PI05_INPUT_PREPROCESS_CPU",
+  "query_sha256": "d54325a01dbbbd5dd5e983d472d3c522e6a98cfbb40f8e5b24eb1fd36a7fc67c",
+  "checks": [
+    {
+      "field": "image/base_0_rgb",
+      "jax_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "torch_aligned_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "layout_changed": true,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "mask/base_0_rgb",
+      "jax_shape": [
+        1
+      ],
+      "torch_aligned_shape": [
+        1
+      ],
+      "layout_changed": false,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "image/left_wrist_0_rgb",
+      "jax_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "torch_aligned_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "layout_changed": true,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "mask/left_wrist_0_rgb",
+      "jax_shape": [
+        1
+      ],
+      "torch_aligned_shape": [
+        1
+      ],
+      "layout_changed": false,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "image/right_wrist_0_rgb",
+      "jax_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "torch_aligned_shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "layout_changed": true,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "mask/right_wrist_0_rgb",
+      "jax_shape": [
+        1
+      ],
+      "torch_aligned_shape": [
+        1
+      ],
+      "layout_changed": false,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "state",
+      "jax_shape": [
+        1,
+        32
+      ],
+      "torch_aligned_shape": [
+        1,
+        32
+      ],
+      "layout_changed": false,
+      "exact_equal": false,
+      "max_abs": 2.668380782999691e-08
+    },
+    {
+      "field": "tokenized_prompt",
+      "jax_shape": [
+        1,
+        200
+      ],
+      "torch_aligned_shape": [
+        1,
+        200
+      ],
+      "layout_changed": false,
+      "exact_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "field": "tokenized_prompt_mask",
+      "jax_shape": [
+        1,
+        200
+      ],
+      "torch_aligned_shape": [
+        1,
+        200
+      ],
+      "layout_changed": false,
+      "exact_equal": true,
+      "max_abs": 0.0
+    }
+  ],
+  "full_model_loaded": false,
+  "gpu_used": false,
+  "backend_action_equivalence_proven": false,
+  "note": "Input equality does not establish full-model numerical equivalence."
+}

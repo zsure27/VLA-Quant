@@ -1,0 +1,18 @@
+{
+  "gate": "FAIL_PI05_SAME_INPUT_TORCH_BRIDGE",
+  "backend": "torch",
+  "query_sha256": "d54325a01dbbbd5dd5e983d472d3c522e6a98cfbb40f8e5b24eb1fd36a7fc67c",
+  "checkpoint": "/root/autodl-tmp/trajectory-drift-20261107/models/pi05_libero_pytorch_bridge_v2",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "attention_math_probe": "jax_query_scaling_and_fp32_result_qk_only",
+  "attention_math_source_sha256": "8a4d980fe5ba46210d2ed52f2190189173c982ab30431b87745f4a3026914016",
+  "all_parameters_frozen": true,
+  "unmapped_vocabulary_head_runtime_guard": true,
+  "attention_math_actual_calls": 198,
+  "max_abs": 0.01020346460485455,
+  "rmse": 0.002401636633029679,
+  "exact_equal": false,
+  "noise_sha256": "4b099c613b80b26ca53ef10b4dec7c68e8344914d87d9208425cbcf83e241ff0",
+  "actions_sha256": "7f8378c41c1dedac7bb679f6cf07dd0b79b33556876bcc2bb9c8fee4eb0f5bab",
+  "jax_reference_sha256": "b9db9961e893d7bc57107c48077a120c1b544d38782d900488e5df2e7ae40c3c"
+}

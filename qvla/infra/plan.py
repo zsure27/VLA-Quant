@@ -40,6 +40,8 @@ def compile_plan(config, repo, run_dir):
             stage("train", binding["training_argv"])
         if binding.get("post_training_audit_argv"):
             stage("training-audit", binding["post_training_audit_argv"])
+        if binding.get("admission_argv"):
+            stage("model-admission", binding["admission_argv"])
     for suite in config["evaluation"]["suites"]:
         name = suite["name"]
         ctx = {"suite": name, "offset": str(suite["reset_offset"]),
@@ -74,6 +76,8 @@ def compile_plan(config, repo, run_dir):
         stage("eval-" + name, argv, ctx)
     if binding and binding.get("evaluation_audit_argv"):
         stage("evaluation-audit", binding["evaluation_audit_argv"])
+    if binding and binding.get("post_evaluation_argv"):
+        stage("prepare-calibration-observations", binding["post_evaluation_argv"])
     # Pin source files that are actual command arguments, independent of old report paths.
     sources = {}
     for path in (repo / "qvla/infra").glob("*.py"):

@@ -1,0 +1,193 @@
+{
+  "status": "EXPERIMENTS_STOPPED_CLOSURE",
+  "time_utc": "2026-11-11T03:24:56.263739+00:00",
+  "primary_remaining_percent": 4,
+  "cases": [
+    {
+      "round_id": "20261111-084-pi05-torch-sq8-libero_spatial-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": false,
+      "gate": "PASS_PI05_TORCH_SQ_EPISODE",
+      "control_steps": 220,
+      "policy_queries": 44
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-sq8-libero_object-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_SQ_EPISODE",
+      "control_steps": 184,
+      "policy_queries": 37
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-sq8-libero_goal-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_SQ_EPISODE",
+      "control_steps": 119,
+      "policy_queries": 24
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-sq8-libero_10-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_SQ_EPISODE",
+      "control_steps": 261,
+      "policy_queries": 53
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-development-libero_spatial-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "bf16",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 87,
+      "policy_queries": 18
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-development-libero_object-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "bf16",
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 130,
+      "policy_queries": 26
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-development-libero_goal-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "bf16",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 113,
+      "policy_queries": 23
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-development-libero_10-task0-reset5-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "development",
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 276,
+      "policy_queries": 56
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-calibration-libero_spatial-task0-reset0-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "calibration",
+      "condition": "bf16",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 0,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 81,
+      "policy_queries": 17
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-calibration-libero_object-task0-reset0-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "calibration",
+      "condition": "bf16",
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 0,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 169,
+      "policy_queries": 34
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-calibration-libero_goal-task0-reset0-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "calibration",
+      "condition": "bf16",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 0,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 117,
+      "policy_queries": 24
+    },
+    {
+      "round_id": "20261111-084-pi05-torch-calibration-libero_10-task0-reset0-v2",
+      "backend": "openpi-pytorch-original-independent-h10-v2",
+      "role": "calibration",
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 0,
+      "success": true,
+      "gate": "PASS_PI05_TORCH_BF16_EPISODE",
+      "control_steps": 262,
+      "policy_queries": 53
+    }
+  ],
+  "excluded_derivatives": [
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-smoothquant-a8-v2/capture/statistics.pt",
+      "bytes": 261912989,
+      "sha256": "a2549d224b4328f642387f05b2f3dd0820a026bd3a52bf0e818f6f9f6b065535",
+      "reason": "Parameter/activation derivative retained on server; regenerate from preserved observations and pinned source"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-smoothquant-a8-v2/profile/profile-stage-a8.pt",
+      "bytes": 4132195,
+      "sha256": "a61e3644a15e44fd607c2cd67a6da010bfefbe3eefe29956bc97834095df6285",
+      "reason": "Parameter/activation derivative retained on server; regenerate from preserved observations and pinned source"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-smoothquant-a8-v2/profile/profile-stage-a4.pt",
+      "bytes": 4135423,
+      "sha256": "1d3f2080068be12e5e18f5d04ab85aef4d45897b9988e0f8d9be3b00f991d747",
+      "reason": "Parameter/activation derivative retained on server; regenerate from preserved observations and pinned source"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-smoothquant-a8-v2/profile/profile.pt",
+      "bytes": 4131059,
+      "sha256": "17bdd72f2d65788e956f35065e21d073cb1d6bd3662a076101084dd458aac0af",
+      "reason": "Parameter/activation derivative retained on server; regenerate from preserved observations and pinned source"
+    }
+  ],
+  "sq4_rollouts_started": false,
+  "gptq_gpu_started": false,
+  "shutdown_authorized": true,
+  "windows_shutdown_authorized": false
+}

@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-11-11T01:10:34.423869+00:00",
+  "status": "PAUSED_SERVER_LEFT_ON_USER_REQUEST",
+  "shutdown_authorized": false,
+  "source": "Latest user: no closure shutdown, pause only; supersedes earlier automatic closure instruction",
+  "stopped_controller_pids": [
+    1898,
+    16596
+  ],
+  "no_new_gpu_work": true
+}

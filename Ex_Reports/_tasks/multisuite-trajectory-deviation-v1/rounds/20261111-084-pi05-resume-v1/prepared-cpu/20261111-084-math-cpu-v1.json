@@ -1,0 +1,17 @@
+{
+  "gate": "PASS_PI05_SMALL_OPERATOR_PROBE_CPU",
+  "seed": 7,
+  "shape": [
+    1,
+    2,
+    5,
+    16
+  ],
+  "source_eager_attention": "def eager_attention_forward(\n    module: nn.Module,\n    query: torch.Tensor,\n    key: torch.Tensor,\n    value: torch.Tensor,\n    attention_mask: Optional[torch.Tensor],\n    scaling: float,\n    dropout: float = 0.0,\n    **kwargs,\n):\n    key_states = repeat_kv(key, module.num_key_value_groups)\n    value_states = repeat_kv(value, module.num_key_value_groups)\n\n    attn_weights = torch.matmul(query, key_states.transpose(2, 3)) * scaling\n    if attention_mask is not None:\n        causal_mask = attention_mask[:, :, :, : key_states.shape[-2]]\n        attn_weights = attn_weights + causal_mask\n\n    attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query.dtype)\n    attn_weights = nn.functional.dropout(attn_weights, p=dropout, training=module.training)\n    attn_output = torch.matmul(attn_weights, value_states)\n    attn_output = attn_output.transpose(1, 2).contiguous()\n\n    return attn_output, attn_weights\n",
+  "fp32_result_qk_vs_jax_max_abs": 0.0,
+  "bf16_result_qk_vs_jax_max_abs": 0.0036475658416748047,
+  "full_model_loaded": false,
+  "gpu_used": false,
+  "full_model_bridge_admitted": false,
+  "interpretation": "Identifies an operator-level precision hypothesis only; does not attribute the observed action bridge failure or authorize quantized rollouts."
+}

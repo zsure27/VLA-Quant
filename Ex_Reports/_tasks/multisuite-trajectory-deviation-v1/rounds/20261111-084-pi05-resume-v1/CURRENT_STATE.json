@@ -1,0 +1,22 @@
+{
+  "status": "PAUSED_SERVER_LEFT_ON_USER_REQUEST",
+  "server_id": "084",
+  "no_new_gpu_work": true,
+  "shutdown_authorized": false,
+  "shutdown_requested": false,
+  "source": "Latest user requests pause only, no closure shutdown",
+  "native_complete": 40,
+  "native_successes": 39,
+  "new_native_complete": 19,
+  "new_native_successes": 18,
+  "quantized_episodes": 0,
+  "bridge_gate": "FAIL_PI05_SAME_INPUT_TORCH_BRIDGE",
+  "bridge_rmse": 0.002401636633029679,
+  "private_archive_sha256": "26f76732e893e2c8b28f7477ff1b95ee6467fe32e2c45d24d95928e50ccda62e",
+  "archive_bytes": 86550041,
+  "archive_members_verified": 4359,
+  "private_remote_download_sha256_verified": true,
+  "public_git_sync_this_round": "PENDING_NOT_CLAIMED_COMPLETE",
+  "monitoring": "Current-task checks stopped; no independent app automation was created",
+  "local_computer_shutdown": false
+}

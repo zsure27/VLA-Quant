@@ -1,0 +1,168 @@
+{
+  "round_id": "20261111-084-pi05-resume-v1",
+  "persistent_root": "/root/autodl-tmp/trajectory-drift-20261107",
+  "control": {
+    "server_id": "084",
+    "heartbeat_seconds": 900,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "quota_max_age_seconds": 1020,
+    "persistent_root": "/root/autodl-tmp/trajectory-drift-20261107",
+    "start_disk_gib": 12,
+    "runtime_disk_gib": 6,
+    "shutdown_provider": "autodl_native",
+    "backup_timeout_seconds": 900,
+    "backup_argv": [
+      "{python}",
+      "{repo}/scripts/infra_archive_run.py",
+      "--run-dir",
+      "{run_dir}",
+      "--workers",
+      "1"
+    ],
+    "git_sync_argv": [
+      "{python}",
+      "{repo}/scripts/trajectory_drift_20261111/sync_round_small_v1.py",
+      "--round-dir",
+      "{run_dir}"
+    ]
+  },
+  "pending_cases": [
+    {
+      "suite": "libero_object",
+      "task_id": 9,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_object-bf16-task9-reset5-v1",
+      "plan_sha256": "4d6055a0ead9da68f0a9f58ef5ca7a3cd8100a5d7de989070f6b130e22482327"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 1,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task1-reset5-v1",
+      "plan_sha256": "a05dcd625e43621c66b92ce5bf1b7a8faa51aa59770d83492b19a5c4c83a62ee"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 2,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task2-reset5-v1",
+      "plan_sha256": "852795d6df9c0abb2fe3501659d8e9d29fab6452791f3513b8a1a7f0e7b05078"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 3,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task3-reset5-v1",
+      "plan_sha256": "af74a024f463c1e12cf99c102442638c0eecec4109cff02cfac100b0466e77e7"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 4,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task4-reset5-v1",
+      "plan_sha256": "41d0abaf4e4c0934202eccae3190edd37200151a244ddbf7b9f2e38a9433c30f"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 5,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task5-reset5-v1",
+      "plan_sha256": "e47bb4ef79d8c5b8f250e46a4e87f15a038b7c221a8326ccea63d481958a09ee"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 6,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task6-reset5-v1",
+      "plan_sha256": "f67efe23a6a3e703a4669454bfed22428db10a84804fa79efcb890e2f2ffa726"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 7,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task7-reset5-v1",
+      "plan_sha256": "b14cdc2b4430143115b177e1a8f5a803fa5d4b9d653f114c1355a55d6d9c5a74"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 8,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task8-reset5-v1",
+      "plan_sha256": "0d163fe3dd265370255cb1e8ba02f7cbf0e68b74f1e9663bb1e2e3efdf36b4d5"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 9,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_goal-bf16-task9-reset5-v1",
+      "plan_sha256": "4bdb84c2a32cbb5418afebedc4ce34e36b99c222500c07aad6d578e292f02900"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task1-reset5-v1",
+      "plan_sha256": "4e1f66434072851df2bb2c76cb6346d4e97c110d1495d4df0e3f4882a8dc7164"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task2-reset5-v1",
+      "plan_sha256": "28e9f2c0c3d7043f9e3b6b47e6320b06538081e0873abf009549d0888a8047d9"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task3-reset5-v1",
+      "plan_sha256": "c855aa731c6a0a3c1ab0dc8a82725067210bd335c44db27a095fa76905037751"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task4-reset5-v1",
+      "plan_sha256": "4ca63f0ee81d4c4488b5f3e79094bacf95b8de5b60264a41196caceea37f9f20"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task5-reset5-v1",
+      "plan_sha256": "138e46ad2d2bdb7b7e309f704d8a4ef05b215112fbe38b1f5320e3bf821493f7"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task6-reset5-v1",
+      "plan_sha256": "203966424726bc3297490f8ad5d2e4b8ac2b4dc91d7d174a8383a7ce4e089f0f"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task7-reset5-v1",
+      "plan_sha256": "c0b52fcbfe28d072814f91e3902a2caee70461f3be45d90c9708db753c002e6d"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task8-reset5-v1",
+      "plan_sha256": "956e06f6b18bc88c8fc75d2760954025a47e1c8a20f85460118023eb5fb257f5"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 5,
+      "round_id": "20261111-084-pi05-libero_10-bf16-task9-reset5-v1",
+      "plan_sha256": "c5d9c6cacc3915c9bd5b71bc3d379f50bd1e296e7130a93f8183d0f4b9d22ccc"
+    }
+  ],
+  "completed_count": 21,
+  "scope": "initial5 native missing references only; no quantization admission; initial15/25/35/45 not launched",
+  "gate": "PASS_PI05_NATIVE_SERIES_PLAN_CPU"
+}

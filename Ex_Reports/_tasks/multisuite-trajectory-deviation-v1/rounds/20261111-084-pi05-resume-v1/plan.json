@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "config_sha256": "230d39585bb38905dc285b260c30042aac58621c24ac25a5e2950a5fca225913",
+  "config": {
+    "schema_version": 1,
+    "task": {
+      "id": "multisuite-trajectory-deviation-v1",
+      "name_zh": "四套件多任务轨迹偏移诊断",
+      "started_at": "2026-11-06T15:04:07+08:00",
+      "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+      "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+    },
+    "model": {
+      "checkpoint": "/root/autodl-tmp/trajectory-drift-20261107/models/pi05_libero",
+      "identity_sha256": "171e2cd1a94307cd0d726411827f30004ebcf9d35a07fe426e29f8df3da25770"
+    },
+    "quantization": {
+      "method": "none",
+      "weight_bits": 16,
+      "activation_bits": 16
+    },
+    "finetuning": {
+      "method": "none"
+    },
+    "data": {},
+    "evaluation": {
+      "seed": 7,
+      "env_seed": 7,
+      "suites": [
+        {
+          "name": "libero_spatial",
+          "role": "development",
+          "reset_offset": 5,
+          "resets_per_task": 1
+        },
+        {
+          "name": "libero_object",
+          "role": "development",
+          "reset_offset": 5,
+          "resets_per_task": 1
+        },
+        {
+          "name": "libero_goal",
+          "role": "development",
+          "reset_offset": 5,
+          "resets_per_task": 1
+        },
+        {
+          "name": "libero_10",
+          "role": "development",
+          "reset_offset": 5,
+          "resets_per_task": 1
+        }
+      ]
+    },
+    "control": {
+      "server_id": "084",
+      "heartbeat_seconds": 900,
+      "stop_expansion_remaining_percent": 15,
+      "close_remaining_percent": 10,
+      "quota_max_age_seconds": 1020,
+      "persistent_root": "/root/autodl-tmp/trajectory-drift-20261107",
+      "start_disk_gib": 12,
+      "runtime_disk_gib": 6,
+      "shutdown_provider": "autodl_native",
+      "backup_timeout_seconds": 900,
+      "backup_argv": [
+        "{python}",
+        "{repo}/scripts/infra_archive_run.py",
+        "--run-dir",
+        "{run_dir}",
+        "--workers",
+        "1"
+      ],
+      "git_sync_argv": [
+        "{python}",
+        "{repo}/scripts/trajectory_drift_20261111/sync_round_small_v1.py",
+        "--round-dir",
+        "{run_dir}"
+      ]
+    },
+    "binding": {
+      "id": "pi05-native-084-migration-v1",
+      "quantizers": [
+        "none"
+      ],
+      "strategies": [
+        "none"
+      ],
+      "verified_suites": [
+        "libero_spatial",
+        "libero_object",
+        "libero_goal",
+        "libero_10"
+      ],
+      "gate_files": [
+        {
+          "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/clone-verification.json",
+          "sha256": "e8a496a1bfbf862693b36412f4ad91340975eed898910621240d0d32d3dddd82",
+          "expected_gate": "PASS_084_NATIVE_CLONE_AND_21_TRACES_CPU"
+        },
+        {
+          "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/series.json",
+          "sha256": "64c62f595c45c165a21dafebd905d31349ba568492ed12c3e0dbf4e729e655fc",
+          "expected_gate": "PASS_PI05_NATIVE_SERIES_PLAN_CPU"
+        }
+      ],
+      "evaluation_argv": [
+        "{python}",
+        "{repo}/scripts/trajectory_drift_20261111/run_native_suite_v1.py",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1",
+        "--suite",
+        "{suite}"
+      ]
+    }
+  },
+  "run_dir": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1",
+  "repo": "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/scripts/trajectory_drift_20261111/run_native_suite_v1.py",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1",
+        "--suite",
+        "libero_spatial"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1"
+    },
+    {
+      "id": "eval-libero_object",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/scripts/trajectory_drift_20261111/run_native_suite_v1.py",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1",
+        "--suite",
+        "libero_object"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1"
+    },
+    {
+      "id": "eval-libero_goal",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/scripts/trajectory_drift_20261111/run_native_suite_v1.py",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1",
+        "--suite",
+        "libero_goal"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1"
+    },
+    {
+      "id": "eval-libero_10",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/scripts/trajectory_drift_20261111/run_native_suite_v1.py",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1",
+        "--suite",
+        "libero_10"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/clone-verification.json",
+      "sha256": "e8a496a1bfbf862693b36412f4ad91340975eed898910621240d0d32d3dddd82",
+      "expected_gate": "PASS_084_NATIVE_CLONE_AND_21_TRACES_CPU"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/series.json",
+      "sha256": "64c62f595c45c165a21dafebd905d31349ba568492ed12c3e0dbf4e729e655fc",
+      "expected_gate": "PASS_PI05_NATIVE_SERIES_PLAN_CPU"
+    }
+  ],
+  "source_sha256": {
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/__init__.py": "6f9ea1dcd14fe7d2ccd2e6ebaf6dc08ba37c680b02ac0f3f80090d02b16463d0",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/__main__.py": "f82de6a5b2399cc7dc2418e8f230e35d803ff5ab9a4914a270b1256c095ae02d",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/common.py": "75bf3b9bbf27e18c448ee07454c9a47eb408ed49078cadff9d16d04b5c095dc0",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/config.py": "5bdb514b9cd1341753e2615bc92f1750b9223a744291a74727630af3e2b954fb",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/data.py": "032c3bab844b36934bfb67135e85a155e845c7d2d6f2f77e649087316d17efe2",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/lifecycle.py": "651b3b7e27a164020137da1c983b56231f8ca984d1996b008b10b1fb3aa42b77",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/metrics.py": "b44fe5068dc469837f06ccdd01518f71503e84e2c40e0213212d7dbac286c7ef",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/plan.py": "95705e9f76088780bffab504454796b97529f5a6406dd5c9a64d649bd2d0a9f4",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/registry.py": "b9dc5a9d5e4df6793cbd5b6992fb70c4cf55e0d1aed4b18f4fb260abba7a6417",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/report.py": "dc75b60b8bb9b709062ab73fe61006ffd8db17cda8ed15a935a92a0d311d0021",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/infra/runner.py": "763dfb27357a3062e9781f0c1ae3208aaa5c13a61fa6ee230900c045a48656ab",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/scripts/trajectory_drift_20261111/run_native_suite_v1.py": "2f7c03f3f9fa2d0951ace285a3ada835975ade4613b323323000bdc0fd62f10a",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/execute_pi05_bf16_episode_084_v2.py": "f26c9f5450b11e6c34d013750a7e04f6fa7f80ed97dd30e2321480be07b2b6c9",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/pi05_native_binding_20261111_v1.py": "4eb1a05e9c9a61eb31273889195482b187918c6586340fc0ee2a2e95ec503d23",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-084-20261111-v1/qvla/audit_pi05_native_trace_v1.py": "31189f7cc19cccced84fff3270d9f3d8c89741f898d867c93da9d78ed5488119"
+  },
+  "note": "CPU plan compilation is not a model/numerical gate",
+  "git_commit": "4a24545e7ad7b3fcea538722e5f4abed0fea2349",
+  "plan_sha256": "379c2d48b67d8b70156c528536e9a63b008d6d1185327e9b73c7a7a2ba79cdc1"
+}

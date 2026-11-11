@@ -12,6 +12,22 @@ from .common import digest, now, read_json, write_json
 from .config import require
 
 
+def authorization_permits_control(auth, control):
+    if control.get("shutdown_provider") == "user_pause":
+        return auth.get("shutdown_authorized") is False and auth.get("pause_only") is True
+    return control.get("shutdown_provider") == "autodl_native" and auth.get("shutdown_authorized") is True
+
+
+def finish_round(run_dir, auth, control, native_provider=None):
+    require(authorization_permits_control(auth, control), "Closure action differs from current authorization")
+    if control["shutdown_provider"] == "user_pause":
+        write_json(Path(run_dir) / "pause-receipt.json", {"time_utc": now(), "state": "PAUSED_SERVER_LEFT_ON",
+                   "shutdown_requested": False, "source": "Explicit current keep-on pause authorization"})
+        return "PAUSED_SERVER_LEFT_ON"
+    (native_provider or native_shutdown)(run_dir, auth["hostname"], execute=True)
+    return "SHUTDOWN_PENDING"
+
+
 def quota_decision(observation, control, current=None):
     current = current or datetime.now(timezone.utc)
     require(observation.get("source") == "codex_api" and observation.get("window_minutes") == 300,

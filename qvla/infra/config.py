@@ -40,7 +40,11 @@ def validate(config):
         require(type(offset) is int and type(count) is int and offset >= 0 and count > 0, "Invalid reset range")
         # Existing generic evaluator executes all tasks. A plugin can add subsets later.
         tasks = suite.get("task_ids", list(range(SUITES[suite["name"]]["tasks"])))
-        require(tasks == list(range(SUITES[suite["name"]]["tasks"])), "Built-in evaluator requires all suite tasks")
+        if tasks != list(range(SUITES[suite["name"]]["tasks"])):
+            require(config.get("binding", {}).get("supports_task_subsets") is True and
+                    isinstance(tasks, list) and tasks and len(tasks) == len(set(tasks)) and
+                    all(type(t) is int and 0 <= t < SUITES[suite["name"]]["tasks"] for t in tasks),
+                    "Task subsets require an explicit supporting binding and valid unique task ids")
         eval_keys |= {(suite["name"], t, k) for t in tasks for k in range(offset, offset + count)}
     for role in ("training", "calibration"):
         for row in config.get("data", {}).get(role, []):
@@ -71,5 +75,7 @@ def validate(config):
             3 < close <= stop < 100, "Require 3 < close <= stop < 100")
     for name in ("git_sync_argv", "backup_argv"):
         require(control.get(name) and all(isinstance(x, str) and x for x in control[name]), f"{name} required for closure")
-    require(control.get("shutdown_provider") == "autodl_native", "Select an implemented shutdown provider")
+    require(control.get("shutdown_provider") in ("autodl_native", "user_pause"), "Select an implemented shutdown provider")
+    if control.get("defer_cloud_sync", False):
+        require(control.get("shutdown_provider") == "user_pause", "Deferred sync is allowed only for an explicit keep-on pause")
     return config

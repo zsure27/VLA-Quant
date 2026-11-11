@@ -1,0 +1,23 @@
+{
+  "supervisor_pid": 1898,
+  "argv": [
+    "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+    "-u",
+    "-m",
+    "qvla.infra",
+    "--plugin",
+    "qvla.pi05_native_binding_20261111_v1",
+    "run",
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/plan.json",
+    "--authorization",
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/authorization.json",
+    "--round-id",
+    "20261111-084-pi05-resume-v1",
+    "--quota",
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/quota.json",
+    "--execute"
+  ],
+  "plan_sha256": "379c2d48b67d8b70156c528536e9a63b008d6d1185327e9b73c7a7a2ba79cdc1",
+  "started_at": "2026-11-11T00:31:48.716253+00:00",
+  "gpu_numerical_gate_passed": false
+}

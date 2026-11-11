@@ -1,0 +1,7 @@
+{
+  "mode": "current_task_checks_not_app_automation",
+  "heartbeat_seconds": 900,
+  "quota_max_age_seconds": 1020,
+  "stale_quota_action": "stop child, retain data, attempt backup/Git, native shutdown",
+  "not_monitoring_after_task_reply": true
+}

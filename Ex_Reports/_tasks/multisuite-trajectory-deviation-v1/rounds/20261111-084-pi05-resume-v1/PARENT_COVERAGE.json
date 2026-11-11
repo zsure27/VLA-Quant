@@ -1,0 +1,11 @@
+{
+  "prior_completed_native": 21,
+  "parent_archive_names_checked": [
+    "20261109-216-pi05-evidence-v1.tar.gz",
+    "20261109-216-quota-final-v1.tar.gz"
+  ],
+  "covered_result_members": 21,
+  "missing_result_members": [],
+  "parent_private_receipt": "Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/runs/20261109-final-private-archives-v1.json",
+  "note": "Coverage check uses existing previously SHA-verified local archives; no redownload or parent reupload. Raw per-member hashes remain in private manifests."
+}

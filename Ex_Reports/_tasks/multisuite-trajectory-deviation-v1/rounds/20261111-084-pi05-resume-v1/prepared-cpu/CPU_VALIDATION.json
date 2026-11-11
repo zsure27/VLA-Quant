@@ -1,0 +1,6 @@
+{
+  "gate": "PASS_NATIVE_IDENTITY_TAMPER_AND_PATH_TESTS",
+  "tests": 2,
+  "command": "python -m unittest discover -s tests -p test_pi05_native_binding_20261111.py",
+  "gpu_run_admitted_by_this_test": false
+}

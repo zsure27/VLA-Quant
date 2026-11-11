@@ -1,0 +1,39 @@
+{
+  "round_id": "20261111-084-pi05-attention-math-diagnostic-v6",
+  "server_id": "084",
+  "hostname": "autodl-container-b1f2438ea7-3f2e1d44",
+  "registered_at": "2026-11-11T01:02:27.840374+00:00",
+  "scope": "BF16 same-input precision diagnostic only; no quantized rollout, training or changed thresholds",
+  "argv": [
+    "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+    "-u",
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/prepared-cpu/pi05_same_input_math_probe_v6.py",
+    "--backend",
+    "torch",
+    "--query",
+    "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-216-pi05-spatial-bf16-task0-reset5-v2/query-00000.npz",
+    "--openpi-source",
+    "/root/autodl-tmp/trajectory-drift-20261107/sources/openpi",
+    "--checkpoint",
+    "/root/autodl-tmp/trajectory-drift-20261107/models/pi05_libero_pytorch_bridge_v2",
+    "--native-checkpoint",
+    "/root/autodl-tmp/trajectory-drift-20261107/models/pi05_libero",
+    "--jax-reference",
+    "/root/autodl-tmp/trajectory-drift-20261107/checks/pi05-same-device-jax-v3",
+    "--output",
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/gpu-diagnostic-v6/output"
+  ],
+  "query_sha256": "d54325a01dbbbd5dd5e983d472d3c522e6a98cfbb40f8e5b24eb1fd36a7fc67c",
+  "historical_jax_reference_sha256": "b9db9961e893d7bc57107c48077a120c1b544d38782d900488e5df2e7ae40c3c",
+  "reference_on_same_physical_gpu": false,
+  "model_sha256": "6f614d19d675a35e5506cdc2e927e1581320860677ddf5a5ca177d1a5ea94a5c",
+  "sources": {
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/prepared-cpu/pi05_same_input_math_probe_v6.py": "1a77178ca4ba842eccd66375b80df2f68234c577593f455291c0e47381047044",
+    "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-084-pi05-resume-v1/prepared-cpu/pi05_attention_math_probe_v1.py": "8a4d980fe5ba46210d2ed52f2190189173c982ab30431b87745f4a3026914016"
+  },
+  "admission": {
+    "rmse_max": 0.002,
+    "max_abs_max": 0.02
+  },
+  "timeout_seconds": 240
+}

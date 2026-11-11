@@ -11,7 +11,7 @@ import subprocess
 import time
 from .common import append_jsonl, canonical, now, read_json, write_json
 from .config import require
-from .lifecycle import native_shutdown, quota_decision
+from .lifecycle import native_shutdown, quota_decision, authorization_permits_control, finish_round
 from .plan import expand, verify_plan
 from .report import record_round
 
@@ -51,7 +51,7 @@ def execute(plan, authorization_path, round_id, quota_path):
     auth = read_json(authorization_path)
     # A previous round's authorization cannot turn a clone/old RUNNING status into live permission.
     require(os.name == "posix", "Execution is only supported on the user-opened Linux server")
-    require(auth.get("authorized") is True and auth.get("shutdown_authorized") is True and
+    require(auth.get("authorized") is True and authorization_permits_control(auth, config["control"]) and
             auth.get("server_id") == config["control"]["server_id"] and
             auth.get("hostname") == socket.gethostname() and
             auth.get("config_sha256") == canonical(config) and auth.get("round_id") == round_id,
@@ -157,12 +157,18 @@ def execute(plan, authorization_path, round_id, quota_path):
         except Exception as error:
             state["closure_errors"].append("report: " + str(error))
         # Preserve a complete local index even if GitHub/auth is unavailable. Never erase data here.
+        deferred = control.get("defer_cloud_sync", False)
         try:
+            if deferred:
+                raise DeferredSync()
             run_command(expand(control["backup_argv"], context), repo, run_dir / "backup.log",
                         control.get("backup_timeout_seconds", 3600))
             state["backup_command_ok"] = True
             if (run_dir / "backup-receipt.json").exists():
                 state["backup"] = read_json(run_dir / "backup-receipt.json")
+        except DeferredSync:
+            state["cloud_sync_deferred"] = True
+            state["persistent_originals_retained"] = True
         except Exception as error:
             state["closure_errors"].append("backup: " + str(error))
             print("CLOSURE_PROBLEM: backup failed; persistent data retained", flush=True)
@@ -171,20 +177,26 @@ def execute(plan, authorization_path, round_id, quota_path):
         except Exception as error:
             state["closure_errors"].append("report: " + str(error))
         try:
+            if deferred:
+                raise DeferredSync()
             run_command(expand(control["git_sync_argv"], context), repo, run_dir / "git-sync.log", 300)
             state["git_sync_command_ok"] = True
+        except DeferredSync:
+            state["public_git_sync_deferred"] = True
         except Exception as error:
             state["closure_errors"].append("git: " + str(error))
             print("CLOSURE_PROBLEM: Git sync failed; preserve server disk and report", flush=True)
         # Latest user instruction: an upload/auth problem must still attempt to stop a paid idle server.
         # Provider/host/GPU-idle checks remain mandatory. Denial is recorded, never bypassed.
         try:
-            publish("closure-before-shutdown", state="SHUTDOWN_PENDING")
+            publish("closure-before-provider", state="PAUSE_PENDING" if control["shutdown_provider"] == "user_pause" else "SHUTDOWN_PENDING")
             record_round(repo, config, round_id, state)
         except Exception as error:
             state["closure_errors"].append("final-report: " + str(error))
         try:
-            native_shutdown(run_dir, auth["hostname"], execute=True)
+            result = finish_round(run_dir, auth, control, native_provider=native_shutdown)
+            if result == "PAUSED_SERVER_LEFT_ON":
+                publish("user-pause-server-left-on", state=result)
         except Exception as error:
             state["closure_errors"].append("shutdown: " + str(error))
             publish("shutdown-blocked", state="SHUTDOWN_BLOCKED")
@@ -192,3 +204,7 @@ def execute(plan, authorization_path, round_id, quota_path):
         for sig, handler in old_handlers.items():
             signal.signal(sig, handler)
     return state
+
+
+class DeferredSync(Exception):
+    """Explicitly deferred consolidated sync; never recorded as verified backup."""
