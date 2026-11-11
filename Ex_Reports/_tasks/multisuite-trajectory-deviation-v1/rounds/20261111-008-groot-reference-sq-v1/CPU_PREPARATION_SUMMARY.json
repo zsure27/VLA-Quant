@@ -1,0 +1,14 @@
+{
+  "gate": "CPU_PREPARATION_ONLY",
+  "original_gptq_small_cpu_pack": "PASS",
+  "cases": [
+    "ragged_group",
+    "odd_nibble_count",
+    "BF16_pack_roundtrip"
+  ],
+  "new_groot_full_model_GPTQ_admitted": false,
+  "groot_sq_cpu_contract_tests": 3,
+  "groot_drift_analysis_unit_tests": 2,
+  "first_cpu_script_attempt": "ModuleNotFoundError qvla; corrected explicit PYTHONPATH, original failure retained",
+  "phase": "CPU prep concurrent with sole BF16 GPU runner"
+}

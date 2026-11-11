@@ -1,0 +1,20 @@
+{
+  "files": {
+    "qvla/groot_drift_20261111_v1.py": "840e6dd31a9fba21c9804bb64cbd99c064db72ec4482dcec1369614dba2d4c2b",
+    "qvla/groot_sq_20261111_v1.py": "1cc1051f435323df556c8347d5a27c41323eec34b6e16947eb4d23227af63275",
+    "scripts/trajectory_drift_20261111/close_groot_008_v1.py": "ccfd7262279c893e55299e7416dbf29e5d45f431fcb04f3cd738980f2a155d0a",
+    "scripts/trajectory_drift_20261111/prepare_groot_gptq_v1.py": "07172bff153c07c10034054613067052e239f4a525b48bfc7c6e9f54ddfe79ee",
+    "scripts/trajectory_drift_20261111/summarize_groot_pilots_v1.py": "18a51dcfb41f258243d1b76bd7034713816c78c321f795d5b7155f44caaca004",
+    "tests/test_groot_sq_unfused_v1.py": "f3f6f7cbb4b5422db4bd59fbdc0f6adee6dc8e552b052eb2deb4b2f04d5f4607",
+    "tests/test_groot_drift_summary_v1.py": "c9a3b477e71f71b48602f36e7f20f35d3bed7990342876237e740bb2a714b663"
+  },
+  "GPU_entry_pinned_in_original_plan": [
+    "qvla/groot_drift_20261111_v1.py",
+    "qvla/groot_sq_20261111_v1.py",
+    "scripts/trajectory_drift_20261111/close_groot_008_v1.py"
+  ],
+  "prepared_not_executed": [
+    "scripts/trajectory_drift_20261111/prepare_groot_gptq_v1.py",
+    "scripts/trajectory_drift_20261111/summarize_groot_pilots_v1.py"
+  ]
+}

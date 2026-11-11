@@ -1,0 +1,36 @@
+{
+  "run_id": "20261111-008-groot-reference-sq-v1",
+  "server_id": "008",
+  "server_root": "/root/autodl-tmp/trajectory-drift-20261107",
+  "archive_path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-008-groot-reference-sq-v1/.closure/round.tar.gz",
+  "server_archive_bytes_observed": 37638662,
+  "server_archive_member_count_observed": 283,
+  "server_self_verification_completed": true,
+  "archive_sha256": null,
+  "local_archive_verified": false,
+  "private_github_verified": false,
+  "native_shutdown_receipt_collected": false,
+  "platform_OFF_verified": false,
+  "billing_stopped_verified": false,
+  "last_access": "SSH banner EOF twice after automatic closure window",
+  "completed_reference_suite": "libero_spatial",
+  "completed_development_case": {
+    "task_id": 0,
+    "reset_index": 5,
+    "success": true,
+    "physical_control_steps": 79,
+    "queries": 79
+  },
+  "repeat_and_reset0_calibration_gate": "PASS_GROOT_REFERENCE_REPEAT_AND_CALIBRATION",
+  "quantized_rollouts_completed": 0,
+  "next_steps": [
+    "User opens 008; CPU-only first is sufficient for recovery",
+    "Retrieve status.json, supervisor.log, shutdown-receipt.json, .closure/upload-plan.json and immutable round.tar.gz",
+    "Audit archive full members and transfer budget; relay incrementally to private VLA-Quant-Archives, verify readback SHA",
+    "Save verified backup-receipt.json on parent; do not delete raw originals",
+    "Sync v2 code; use register_groot_resume_v2.py with a new round_id; verify all 29 model members before GPU",
+    "After fresh current authorization/API quota/GPU idle and disk gates, launch qvla.infra; skip completed Spatial reference/repeat/calibration"
+  ],
+  "code_recovery_entry": "scripts/trajectory_drift_20261111/register_groot_resume_v2.py",
+  "windows_shutdown_requested": false
+}

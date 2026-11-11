@@ -1,3 +1,15 @@
+# 当前综合结果（2026-11-11）
+
+核心仍是量化前后轨迹漂移现象诊断，不训练、不改进量化方法、不复现DyQ-VLA代码。以[统一评测标准v7](UNIFIED_EVALUATION_STANDARD_V7_CN.md)为准：用户列出的12个量化配置，BF16单列；按实际模型适配门禁推进，未实现和架构不适用分开，不将旧v5配置数当成当前已完成数。
+
+- OpenVLA-OFT：BF16 37/40，AWQ W4A16 39/40，SQ W4A8 37/40，SQ W4A4 0/20。A4覆盖缺20，不能跨不同覆盖直接排名；均仅初态5，未完成五初态。[模型报告](model_reports/openvla_oft.md)。
+- π0.5：原生JAX参考39/40；JAX→Torch等价门禁仍失败。独立同Torch后端四suite task0/初态5，BF16 4/4，SQ W4A8 3/4（Spatial新增失败）。只有4对pilot，不与JAX相减；SQ4仅产物门禁，GPTQ仅CPU准备。[最终恢复报告](rounds/20261111-084-final-v1/README_CN.md)。
+- GR00T-N1.5：旧Spatial task1成功轨迹单列；11月11日新增Spatial task0/初态5 BF16成功79步，重复/重载与reset0校准完成。Object因旧入口revision常量笔误在模型加载前失败，其他suite及量化未运行。当前没有GR00T量化漂移结论。[本轮结果/备份缺口](rounds/20261111-008-groot-reference-sq-v1/README_CN.md)。
+
+008本轮原始增量包约37.6MB已在服务器逐成员自验，自动收尾窗口后SSH不可达，私有回传、原生execute=true回执与平台OFF均未确认。独立v2已修复revision并加入全四suite预检、父原始包云端恢复门禁和“初始状态已经失败即立即返回”的事件监听测试；下次用户开启后先取包再续，不重跑已完成Spatial。本地Windows保持开启。
+
+以下v5/v4/v3内容保留为历史方案，不再代表当前运行或完成状态。
+
 # 当前任务摘要（v5）
 
 当前只建设独立量化漂移诊断，不复现DyQ代码、不做OPD训练。三模型 × LIBERO四suite × 10任务 × 5初态，每模型每条件200回合；11静态量化配置＋BF16共12条件，QVLA与DyQ动态行排除，完整上限7200自然回合（公共BF16复用）。尚无服务器、新实测或全部方法兼容证据。

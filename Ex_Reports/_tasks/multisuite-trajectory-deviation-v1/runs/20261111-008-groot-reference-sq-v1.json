@@ -1,0 +1,79 @@
+{
+  "round_id": "20261111-008-groot-reference-sq-v1",
+  "server_id": "008",
+  "state": "INTERRUPTED_HARNESS_REVISION_CONSTANT_ERROR",
+  "started_at": "2026-11-11T13:53:04.193384+00:00",
+  "plan_sha256": "aaca1fb889de5f7342141f1b1d6aeebe4b52994f116cd0af5a53c4edba36c10c",
+  "config_sha256": "b5552b8d32632f4dbdc60d8206a09bb1cb66516d9ab0bfd39f91223e5b5410fa",
+  "completed_new_development_episodes": 1,
+  "new_development_success": 1,
+  "paired_quantized_episodes": 0,
+  "spatial_control_steps": 79,
+  "first_noise_shape": [
+    1,
+    16,
+    32
+  ],
+  "actual_execute_first_actions": 1,
+  "repeat_action_gate": true,
+  "reload_action_gate": true,
+  "spatial_full_repeat_and_calibration_gate": true,
+  "failure": "Frozen old suite constants contain three invalid 41-character revisions; original download receipts valid 40-character revisions. Object rejected before loading/query.",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "exit_code": 0
+    },
+    {
+      "id": "eval-libero_object",
+      "exit_code": 1
+    }
+  ],
+  "remaining_stages_not_run": true,
+  "last_actual_observation": {
+    "observed_at": "2026-11-11T14:08:15+00:00",
+    "gpu_used_MiB": 0,
+    "disk_free_bytes": 42857508864,
+    "primary_remaining_percent": 76,
+    "primary_resets_at": 1794415066
+  },
+  "closure": {
+    "run_id": "20261111-008-groot-reference-sq-v1",
+    "server_id": "008",
+    "server_root": "/root/autodl-tmp/trajectory-drift-20261107",
+    "archive_path": "/root/autodl-tmp/trajectory-drift-20261107/rounds/20261111-008-groot-reference-sq-v1/.closure/round.tar.gz",
+    "server_archive_bytes_observed": 37638662,
+    "server_archive_member_count_observed": 283,
+    "server_self_verification_completed": true,
+    "archive_sha256": null,
+    "local_archive_verified": false,
+    "private_github_verified": false,
+    "native_shutdown_receipt_collected": false,
+    "platform_OFF_verified": false,
+    "billing_stopped_verified": false,
+    "last_access": "SSH banner EOF twice after automatic closure window",
+    "completed_reference_suite": "libero_spatial",
+    "completed_development_case": {
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "physical_control_steps": 79,
+      "queries": 79
+    },
+    "repeat_and_reset0_calibration_gate": "PASS_GROOT_REFERENCE_REPEAT_AND_CALIBRATION",
+    "quantized_rollouts_completed": 0,
+    "next_steps": [
+      "User opens 008; CPU-only first is sufficient for recovery",
+      "Retrieve status.json, supervisor.log, shutdown-receipt.json, .closure/upload-plan.json and immutable round.tar.gz",
+      "Audit archive full members and transfer budget; relay incrementally to private VLA-Quant-Archives, verify readback SHA",
+      "Save verified backup-receipt.json on parent; do not delete raw originals",
+      "Sync v2 code; use register_groot_resume_v2.py with a new round_id; verify all 29 model members before GPU",
+      "After fresh current authorization/API quota/GPU idle and disk gates, launch qvla.infra; skip completed Spatial reference/repeat/calibration"
+    ],
+    "code_recovery_entry": "scripts/trajectory_drift_20261111/register_groot_resume_v2.py",
+    "windows_shutdown_requested": false
+  },
+  "observer_bug": "v1 event waiter did not return on an already-terminal initial snapshot; fixed v2 tested; actual 15-minute status read detected failure",
+  "comparison_claim": "No quantized comparison and no trajectory-commonality conclusion",
+  "backup_gap": true
+}
