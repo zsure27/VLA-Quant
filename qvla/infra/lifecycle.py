@@ -37,10 +37,17 @@ def quota_decision(observation, control, current=None):
     remaining, resets_at = observation["remaining_percent"], observation["resets_at"]
     require(type(remaining) in (int, float) and math.isfinite(remaining) and 0 <= remaining <= 100,
             "Invalid quota remaining")
-    require(type(resets_at) in (int, float) and current.timestamp() < resets_at <= current.timestamp() + 18300,
+    require(type(resets_at) in (int, float) and math.isfinite(resets_at) and resets_at <= current.timestamp() + 18300,
             "No inferred refresh; need future actual resets_at")
     if remaining <= control["close_remaining_percent"]:
         return "CLOSE"
+    if resets_at <= current.timestamp():
+        bounded_wait = control.get("refresh_confirmation_wait_seconds", 0)
+        if bounded_wait:
+            # This is explicitly NOT new quota: forbid launches and pause active work
+            # until a real API observation supplies a future window. Never infer 100%.
+            return "WAIT_API_REFRESH" if current.timestamp() - resets_at <= bounded_wait else "CLOSE"
+        raise ValueError("No inferred refresh; need future actual resets_at")
     if remaining <= control["stop_expansion_remaining_percent"]:
         return "STOP_EXPANSION"
     return "CONTINUE"

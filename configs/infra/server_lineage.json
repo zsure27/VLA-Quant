@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "purpose": "Non-secret clone lineage; observation history, not live authorization or a runnable SSH credential table",
+  "nodes": [
+    {
+      "server_id": "061",
+      "parent_server_id": "053",
+      "study_id": "multisuite-trajectory-deviation-v1",
+      "model": "openvla_oft",
+      "ssh_host": "connect.nmb1.seetacloud.com",
+      "ssh_port": 40154,
+      "ssh_user": "root",
+      "credential_storage": "User-provided password in ephemeral local environment only; never in Git",
+      "observed_hostname": "autodl-container-b9be4c9ca8-1852b227",
+      "observed_gpu": "NVIDIA GeForce RTX 4090",
+      "observed_gpu_uuid": "GPU-57fe5e94-17ed-8960-1d47-76090d594f69",
+      "work_root": "/root/autodl-tmp/trajectory-drift-20261107",
+      "clone_gate": "PASS_053_TO_061_CLONE_CONTENT_AND_COMPLETED_CASES",
+      "parent_raw_archive_sha256": "39ad7990c7d8972beffad9b046199fd285b3457153622e7f30b55f5688536a16",
+      "registered_round_id": "20261112-061-oft-initial15-clone-v2",
+      "prior_round_id": "20261111-061-oft-initial15-clone-v1",
+      "prior_round_state": "INTERRUPTED_AT_API_WINDOW_BOUNDARY_COMPLETED_22_REUSED",
+      "observed_at": "2026-11-11T15:52:16.503285+00:00",
+      "authorization_reusable_after_restart": false,
+      "windows_shutdown_authorized": false
+    },
+    {
+      "server_id": "084",
+      "parent_server_id": "216",
+      "study_id": "multisuite-trajectory-deviation-v1",
+      "model": "pi05",
+      "ssh_host": "connect.nmb1.seetacloud.com",
+      "ssh_port": 11175,
+      "ssh_user": "root",
+      "work_root": "/root/autodl-tmp/trajectory-drift-20261107",
+      "last_known_round": "20261111-084-final-v1",
+      "last_shutdown_request_execute": true,
+      "platform_OFF_independently_verified": false,
+      "authorization_reusable_after_restart": false
+    }
+  ],
+  "clone_rules": [
+    "Pin checkpoint, quantization profiles, scientific sources, seeds, suites, task/reset states and execution cadence by content",
+    "Rebind current hostname/GPU UUID/server ID/round and output paths with fresh user authorization and quota",
+    "Deduplicate original runs and continuation control/*/case-runs by scientific case identity, not folder/server name",
+    "Keep old PID/RUNNING/quota exceptions/shutdown receipts as history only"
+  ]
+}

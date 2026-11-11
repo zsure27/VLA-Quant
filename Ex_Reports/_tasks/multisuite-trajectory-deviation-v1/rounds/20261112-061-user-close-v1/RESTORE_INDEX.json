@@ -1,0 +1,447 @@
+{
+  "study_id": "multisuite-trajectory-deviation-v1",
+  "parent_server": "053",
+  "current_server": "061",
+  "hostname": "autodl-container-b9be4c9ca8-1852b227",
+  "work_root": "/root/autodl-tmp/trajectory-drift-20261107",
+  "completed_inherited": 368,
+  "completed_new": 61,
+  "completed_total_unique": 429,
+  "formal_quantized_pairs_cumulative": 357,
+  "bf16_cumulative": 72,
+  "initial15_available_pairs": 157,
+  "remaining_case_slots": 51,
+  "remaining_cases": [
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 15,
+      "initial_state_sha256": "a6cd41d3a9cf563d539bb4bc3d01b60ba964162635ec6c99b5fd23bdc981d95f"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 1,
+      "reset_index": 15,
+      "initial_state_sha256": "2081f0108dd0342f6d988855910777de3564d9f294477cac22590765942f27ae"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 1,
+      "reset_index": 15,
+      "initial_state_sha256": "2081f0108dd0342f6d988855910777de3564d9f294477cac22590765942f27ae"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "initial_state_sha256": "cfc8d05c8752fa81ab4c060beec45a7a37642fe316367a2d14328e05ac7d2c60"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "initial_state_sha256": "cfc8d05c8752fa81ab4c060beec45a7a37642fe316367a2d14328e05ac7d2c60"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "initial_state_sha256": "cfc8d05c8752fa81ab4c060beec45a7a37642fe316367a2d14328e05ac7d2c60"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "initial_state_sha256": "cfc8d05c8752fa81ab4c060beec45a7a37642fe316367a2d14328e05ac7d2c60"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "initial_state_sha256": "cfc8d05c8752fa81ab4c060beec45a7a37642fe316367a2d14328e05ac7d2c60"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "initial_state_sha256": "cfc8d05c8752fa81ab4c060beec45a7a37642fe316367a2d14328e05ac7d2c60"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "initial_state_sha256": "0684c8840637a00464a2691c2cf511694028e8662f6060a893445a6eb4f60d5a"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "initial_state_sha256": "0684c8840637a00464a2691c2cf511694028e8662f6060a893445a6eb4f60d5a"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "initial_state_sha256": "0684c8840637a00464a2691c2cf511694028e8662f6060a893445a6eb4f60d5a"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "initial_state_sha256": "0684c8840637a00464a2691c2cf511694028e8662f6060a893445a6eb4f60d5a"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "initial_state_sha256": "0684c8840637a00464a2691c2cf511694028e8662f6060a893445a6eb4f60d5a"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "initial_state_sha256": "0684c8840637a00464a2691c2cf511694028e8662f6060a893445a6eb4f60d5a"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "initial_state_sha256": "d8e1f6fd54ddf89b241b1e2d065bb75d245ab49e19895d65fad446caf55076c5"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "initial_state_sha256": "d8e1f6fd54ddf89b241b1e2d065bb75d245ab49e19895d65fad446caf55076c5"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "initial_state_sha256": "d8e1f6fd54ddf89b241b1e2d065bb75d245ab49e19895d65fad446caf55076c5"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "initial_state_sha256": "d8e1f6fd54ddf89b241b1e2d065bb75d245ab49e19895d65fad446caf55076c5"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "initial_state_sha256": "d8e1f6fd54ddf89b241b1e2d065bb75d245ab49e19895d65fad446caf55076c5"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "initial_state_sha256": "d8e1f6fd54ddf89b241b1e2d065bb75d245ab49e19895d65fad446caf55076c5"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "initial_state_sha256": "18789855054f53dc0771f9a9bc1a69aee708e48eb4c59626dd484595587f5f04"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "initial_state_sha256": "18789855054f53dc0771f9a9bc1a69aee708e48eb4c59626dd484595587f5f04"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "initial_state_sha256": "18789855054f53dc0771f9a9bc1a69aee708e48eb4c59626dd484595587f5f04"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "initial_state_sha256": "18789855054f53dc0771f9a9bc1a69aee708e48eb4c59626dd484595587f5f04"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "initial_state_sha256": "18789855054f53dc0771f9a9bc1a69aee708e48eb4c59626dd484595587f5f04"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "initial_state_sha256": "18789855054f53dc0771f9a9bc1a69aee708e48eb4c59626dd484595587f5f04"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "initial_state_sha256": "4b46faa0a312ee358ce179d85b4b568aa0ebb6a8f73c08c610db5a653f352410"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "initial_state_sha256": "4b46faa0a312ee358ce179d85b4b568aa0ebb6a8f73c08c610db5a653f352410"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "initial_state_sha256": "4b46faa0a312ee358ce179d85b4b568aa0ebb6a8f73c08c610db5a653f352410"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "initial_state_sha256": "4b46faa0a312ee358ce179d85b4b568aa0ebb6a8f73c08c610db5a653f352410"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "initial_state_sha256": "4b46faa0a312ee358ce179d85b4b568aa0ebb6a8f73c08c610db5a653f352410"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "initial_state_sha256": "4b46faa0a312ee358ce179d85b4b568aa0ebb6a8f73c08c610db5a653f352410"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "initial_state_sha256": "6706f32529b15f587b257a7f83e9f9dee157264afdee7edc73777e0358f97679"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "initial_state_sha256": "6706f32529b15f587b257a7f83e9f9dee157264afdee7edc73777e0358f97679"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "initial_state_sha256": "6706f32529b15f587b257a7f83e9f9dee157264afdee7edc73777e0358f97679"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "initial_state_sha256": "6706f32529b15f587b257a7f83e9f9dee157264afdee7edc73777e0358f97679"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "initial_state_sha256": "6706f32529b15f587b257a7f83e9f9dee157264afdee7edc73777e0358f97679"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "initial_state_sha256": "6706f32529b15f587b257a7f83e9f9dee157264afdee7edc73777e0358f97679"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "initial_state_sha256": "f61035b0fbe8869fd2fd387f57118072503138d60900d156a3b0f0fd5be8f44d"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "initial_state_sha256": "f61035b0fbe8869fd2fd387f57118072503138d60900d156a3b0f0fd5be8f44d"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "initial_state_sha256": "f61035b0fbe8869fd2fd387f57118072503138d60900d156a3b0f0fd5be8f44d"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "initial_state_sha256": "f61035b0fbe8869fd2fd387f57118072503138d60900d156a3b0f0fd5be8f44d"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "initial_state_sha256": "f61035b0fbe8869fd2fd387f57118072503138d60900d156a3b0f0fd5be8f44d"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "initial_state_sha256": "f61035b0fbe8869fd2fd387f57118072503138d60900d156a3b0f0fd5be8f44d"
+    },
+    {
+      "condition": "bf16",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "initial_state_sha256": "71f5da9b9b727811f31b0878fa0037c5d54a233cc16662bea3fbaf554c2888c6"
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "initial_state_sha256": "71f5da9b9b727811f31b0878fa0037c5d54a233cc16662bea3fbaf554c2888c6"
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "initial_state_sha256": "71f5da9b9b727811f31b0878fa0037c5d54a233cc16662bea3fbaf554c2888c6"
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "initial_state_sha256": "71f5da9b9b727811f31b0878fa0037c5d54a233cc16662bea3fbaf554c2888c6"
+    },
+    {
+      "condition": "gptq_w4a16",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "initial_state_sha256": "71f5da9b9b727811f31b0878fa0037c5d54a233cc16662bea3fbaf554c2888c6"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "initial_state_sha256": "71f5da9b9b727811f31b0878fa0037c5d54a233cc16662bea3fbaf554c2888c6"
+    }
+  ],
+  "resume_rules": [
+    "Require next user-opened instance and fresh hostname/GPU/disk/quota authorization",
+    "Verify checkpoint/profile/scientific source content and parent clone lineage",
+    "Merge original runs plus all control/*/case-runs using result SHA and successful raw-audit records",
+    "Never restart old PID/RUNNING or reuse quota exceptions",
+    "Use new round/output, run only remaining Long slots; preserve both old partials",
+    "No automatic reset25/35/45 or new method admission before prerequisite gates"
+  ],
+  "partial_attempts": [
+    {
+      "round": "20261111-061-oft-initial15-clone-v1",
+      "reason": "old API reset expired before fresh observation; Object task1 GPTQ partial excluded, later completed in v2"
+    },
+    {
+      "round": "20261112-061-oft-initial15-clone-v2",
+      "reason": "user closure; Long task0 Omni partial excluded and remains a missing slot"
+    }
+  ],
+  "new_archives": [
+    {
+      "round": "20261111-061-oft-initial15-clone-v1",
+      "server_path": "control/20261111-061-oft-initial15-clone-v1/.closure/round.tar.gz",
+      "bytes": 45308069,
+      "sha256": "7625e4ced36ecd17c2cd4d9ec48175a7ce3a580db2fd7e95f1658589fd747063",
+      "members": 457,
+      "private_download_sha256_verified": true,
+      "remote_receipt": "../20261111-061-oft-initial15-clone-v1/private-archive-rechunk32-verification.json",
+      "remote_release": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+      "parts": [
+        {
+          "name": "sha256-e422634a42e80c0b95278782870b010206730a8a614eb27312034c6a3f062edc.part001-of002",
+          "bytes": 33554432,
+          "sha256": "e422634a42e80c0b95278782870b010206730a8a614eb27312034c6a3f062edc",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-e422634a42e80c0b95278782870b010206730a8a614eb27312034c6a3f062edc.part001-of002"
+        },
+        {
+          "name": "sha256-4795142532f35d5f45d2a35f2aa345e16287ecb8828bfce4693d4bbf43aeeecc.part002-of002",
+          "bytes": 11753637,
+          "sha256": "4795142532f35d5f45d2a35f2aa345e16287ecb8828bfce4693d4bbf43aeeecc",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-4795142532f35d5f45d2a35f2aa345e16287ecb8828bfce4693d4bbf43aeeecc.part002-of002"
+        }
+      ]
+    },
+    {
+      "round": "20261112-061-oft-initial15-clone-v2",
+      "server_path": "control/20261112-061-oft-initial15-clone-v2/.closure/round.tar.gz",
+      "bytes": 102288375,
+      "sha256": "85103a7e17942f269f596b455d16eeb6ec5ff51a0288be7d5b3e5c4666b7cf18",
+      "members": 883,
+      "private_download_sha256_verified": true,
+      "remote_receipt": "../20261112-061-oft-initial15-clone-v2/private-archive-verification.json",
+      "remote_release": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+      "parts": [
+        {
+          "name": "sha256-44e29ad4afd0b3edf46d3e66ab5f827f6de3476c04e42998194828d48e5093d6.part001-of002",
+          "bytes": 67108864,
+          "sha256": "44e29ad4afd0b3edf46d3e66ab5f827f6de3476c04e42998194828d48e5093d6",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-44e29ad4afd0b3edf46d3e66ab5f827f6de3476c04e42998194828d48e5093d6.part001-of002"
+        },
+        {
+          "name": "sha256-a91459c6aee2e0c4c0696bd261ee1184c80359d78258f537a2bf0e588f691202.part002-of002",
+          "bytes": 35179511,
+          "sha256": "a91459c6aee2e0c4c0696bd261ee1184c80359d78258f537a2bf0e588f691202",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-a91459c6aee2e0c4c0696bd261ee1184c80359d78258f537a2bf0e588f691202.part002-of002"
+        }
+      ]
+    }
+  ],
+  "private_new_backup_status": "PASS_BOTH_INCREMENTAL_ARCHIVES_REMOTE_DOWNLOAD_SHA_AND_LOCAL_FULL_MEMBERS",
+  "new_large_parameters": "User-authorized server-only GPTQ/Omni parameters retained unchanged on cloned persistent disk; no cloud/local parameter copy claimed",
+  "windows_shutdown_requested": false,
+  "native_shutdown_receipt_pending": true,
+  "old_1_05GB_raw_cloud_gap": "Original 1,046,506,250-byte 053 archive remains server+local verified; prior private readback incomplete; not retransmitted this run",
+  "unused_failed_layout_note": "V1 original single-part starter asset returned HTTP503; preserved without delete/overwrite. Independent 32MiB two-part receipt verified; V2 successful 64MiB layout reused."
+}

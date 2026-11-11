@@ -1,0 +1,27 @@
+{
+  "server_id": "061",
+  "parent_server_id": "053",
+  "round_id": "20261112-061-oft-initial15-clone-v2",
+  "supervisor_pid": 12160,
+  "plan_sha256": "cc0ba9f483c4e8d6d32b6b7c51a02bb835203bfba1ab08f5ec7d510d9dd217c5",
+  "config_sha256": "ef549268f5a1a79edffebbb9040ca0e562b191d7ae74157a583b54c8075972fe",
+  "started_at": "2026-11-11T16:42:27.181106+00:00",
+  "argv": [
+    "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+    "-u",
+    "-m",
+    "qvla.infra",
+    "run",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-initial15-clone-v2/plan.json",
+    "--authorization",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-initial15-clone-v2/authorization.json",
+    "--round-id",
+    "20261112-061-oft-initial15-clone-v2",
+    "--quota",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-initial15-clone-v2/quota.json",
+    "--execute"
+  ],
+  "identity_gate": "PASS_053_TO_061_CLONE_CONTENT_AND_COMPLETED_CASES",
+  "scientific_case_count": 90,
+  "inherited_unique_complete": 390
+}

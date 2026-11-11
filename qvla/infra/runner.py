@@ -38,6 +38,37 @@ def run_command(argv, cwd, log_path, timeout):
     require(code == 0, f"Closure command failed with exit {code}; see private run log")
 
 
+def confirmed_quota(decision, read_decision, control, publish, requested, child=None):
+    """Opt-in bounded wait, with no launches or active model work on inferred quota."""
+    if decision != "WAIT_API_REFRESH":
+        return decision
+    paused = False
+    try:
+        if child is not None and child.poll() is None:
+            try:
+                os.killpg(child.pid, signal.SIGSTOP)
+                paused = True
+            except ProcessLookupError:
+                pass
+        publish("await-real-primary-api", state="WAITING_PRIMARY_API",
+                reason="old_reset_elapsed_no_new_quota_assumed", model_process_group_paused=paused)
+        deadline = time.monotonic() + control.get("refresh_confirmation_wait_seconds", 0)
+        while decision == "WAIT_API_REFRESH":
+            if requested or time.monotonic() >= deadline:
+                return "CLOSE"
+            time.sleep(1)  # Local atomic quota file only; no network/GPU/log polling.
+            decision = read_decision()
+        return decision
+    finally:
+        if paused:
+            try:
+                os.killpg(child.pid, signal.SIGCONT)
+            except ProcessLookupError:
+                pass
+        publish("primary-api-wait-ended", state="RUNNING" if decision in ("CONTINUE", "STOP_EXPANSION") else "CLOSING",
+                model_process_group_paused=False)
+
+
 def observe(run_dir):
     result = subprocess.run(["nvidia-smi", "--query-gpu=name,memory.total,memory.used,utilization.gpu",
                              "--format=csv,noheader,nounits"], capture_output=True, text=True, timeout=30)
@@ -98,10 +129,10 @@ def execute(plan, authorization_path, round_id, quota_path):
         require(actual["disk_free_bytes"] >= control.get("start_disk_gib", 12) * 1024**3, "Insufficient start disk")
         gpu = subprocess.check_output(["nvidia-smi", "--query-compute-apps=pid", "--format=csv,noheader"], text=True, timeout=30)
         require(not gpu.strip(), "GPU already occupied")
-        require(quota() == "CONTINUE", "No quota for a new GPU expansion")
+        require(confirmed_quota(quota(), quota, control, publish, requested) == "CONTINUE", "No quota for a new GPU expansion")
         publish("admitted", actual=actual, state="RUNNING")
         for stage in plan["stages"]:
-            if requested or quota() != "CONTINUE":
+            if requested or confirmed_quota(quota(), quota, control, publish, requested) != "CONTINUE":
                 publish("stop-new-stages", state="CLOSING", reason="signal_or_quota_no_expansion")
                 break
             Path(run_dir / stage["id"]).mkdir(exist_ok=True)
@@ -124,7 +155,7 @@ def execute(plan, authorization_path, round_id, quota_path):
                     if requested:
                         raise RuntimeError("Stop signal received")
                     if time.monotonic() - last_quota >= 60:
-                        decision = quota()
+                        decision = confirmed_quota(quota(), quota, control, publish, requested, child)
                         if decision == "CLOSE":
                             raise RuntimeError("Primary quota reached closure threshold")
                         if decision == "STOP_EXPANSION":

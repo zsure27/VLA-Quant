@@ -1,0 +1,71 @@
+{
+  "round_id": "20261111-061-oft-initial15-clone-v1",
+  "config_sha256": "a0760ba42267848c17bc0053d59e30b5eceed20a0d3c4ee9a9cf911a8118704e",
+  "plan_sha256": "7c39ba18607663540d94b8728799e91c5891f52d39ffd820ef51cf74a28ecb50",
+  "started_at": "2026-11-11T15:56:12.275721+00:00",
+  "state": "INTERRUPTED",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "-m",
+        "qvla.oft_clone_cases_v1",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261111-061-oft-initial15-clone-v1",
+        "--suite",
+        "libero_spatial"
+      ],
+      "started_at": "2026-11-11T15:56:35.929308+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261111-061-v1:/root/autodl-tmp/trajectory-drift-20261107/code-20261111-061-v1"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 2178.4041246399283,
+      "ended_at": "2026-11-11T16:32:54.333435+00:00"
+    },
+    {
+      "id": "eval-libero_object",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "-m",
+        "qvla.oft_clone_cases_v1",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261111-061-oft-initial15-clone-v1",
+        "--suite",
+        "libero_object"
+      ],
+      "started_at": "2026-11-11T16:32:54.334723+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261111-061-v1:/root/autodl-tmp/trajectory-drift-20261107/code-20261111-061-v1"
+      },
+      "exit_code": -15,
+      "interrupted": true
+    }
+  ],
+  "actual": {
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "gpu": "NVIDIA GeForce RTX 4090, 24564, 16527, 3",
+    "disk_free_bytes": 64391102464
+  },
+  "updated_at": "2026-11-11T16:37:54.661873+00:00",
+  "current_stage": "eval-libero_object",
+  "child_pid": 10794,
+  "reason": "No inferred refresh; need future actual resets_at"
+}

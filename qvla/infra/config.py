@@ -69,6 +69,9 @@ def validate(config):
         require(gate.get("path") and gate.get("expected_gate") and
                 re.fullmatch(r"[a-f0-9]{64}", gate.get("sha256", "")), "Gate path/SHA/expected value required")
     control = config["control"]
+    require(type(control.get("refresh_confirmation_wait_seconds", 0)) is int and
+            0 <= control.get("refresh_confirmation_wait_seconds", 0) <= 120,
+            "Optional real-API refresh wait must be bounded to 0..120 seconds")
     require(type(control.get("heartbeat_seconds")) is int and control["heartbeat_seconds"] >= 60, "Heartbeat minimum 60s; default 900")
     stop, close = control["stop_expansion_remaining_percent"], control["close_remaining_percent"]
     require(all(type(x) in (int, float) and math.isfinite(x) for x in (stop, close)) and

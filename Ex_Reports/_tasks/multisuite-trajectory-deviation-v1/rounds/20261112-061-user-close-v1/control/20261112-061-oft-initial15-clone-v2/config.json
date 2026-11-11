@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "四套件多任务轨迹偏移诊断",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "检验量化是否改变平移分散度、旋转有向漂移，以及是否存在跨初态重复的可补偿窗口；允许无拐点。",
+    "changed_variable": "首轮固定多suite OFT检查点、输入、8动作执行与配对初态，仅改变权重量化档；不训练。"
+  },
+  "model": {
+    "checkpoint": "/root/autodl-tmp/trajectory-drift-20261107/models/openvla_oft",
+    "identity_sha256": "cc743563f5b1d0c1e7fa3f8835e754b352e79a590461334a44d473688f0d08ac"
+  },
+  "quantization": {
+    "method": "none",
+    "weight_bits": 16,
+    "activation_bits": 16
+  },
+  "finetuning": {
+    "method": "none"
+  },
+  "data": {},
+  "evaluation": {
+    "seed": 7,
+    "env_seed": 0,
+    "suites": [
+      {
+        "name": "libero_spatial",
+        "role": "development",
+        "reset_offset": 15,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_object",
+        "role": "development",
+        "reset_offset": 15,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_goal",
+        "role": "development",
+        "reset_offset": 15,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_10",
+        "role": "development",
+        "reset_offset": 15,
+        "resets_per_task": 1
+      }
+    ]
+  },
+  "control": {
+    "server_id": "061",
+    "persistent_root": "/root/autodl-tmp/trajectory-drift-20261107",
+    "heartbeat_seconds": 900,
+    "quota_max_age_seconds": 1020,
+    "start_disk_gib": 8,
+    "runtime_disk_gib": 6,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "shutdown_provider": "autodl_native",
+    "backup_timeout_seconds": 1500,
+    "backup_argv": [
+      "{python}",
+      "{repo}/scripts/trajectory_drift_20261111/close_oft_clone_v1.py",
+      "--run-dir",
+      "{run_dir}"
+    ],
+    "git_sync_argv": [
+      "{python}",
+      "{repo}/scripts/infra_git_sync.py",
+      "--task-id",
+      "multisuite-trajectory-deviation-v1",
+      "--run-dir",
+      "{run_dir}",
+      "--branch",
+      "codex/multisuite-trajectory-diagnostics-v1",
+      "--include",
+      "qvla/oft_clone_cases_v1.py",
+      "--include",
+      "scripts/trajectory_drift_20261111/close_oft_clone_v1.py"
+    ]
+  },
+  "binding": {
+    "id": "oft-unmodified-053-collectors-on-current-clone-v1",
+    "quantizers": [
+      "none"
+    ],
+    "strategies": [
+      "none"
+    ],
+    "verified_suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "gate_files": [
+      {
+        "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-initial15-clone-v2/clone-audit-v3.json",
+        "sha256": "e840e6368eb5473daa2d3c65f7e7975bf68017371946c3f20b32a9b2bd341fdd",
+        "expected_gate": "PASS_053_TO_061_CLONE_CONTENT_AND_COMPLETED_CASES"
+      }
+    ],
+    "evaluation_argv": [
+      "{python}",
+      "-m",
+      "qvla.oft_clone_cases_v1",
+      "--root",
+      "/root/autodl-tmp/trajectory-drift-20261107",
+      "--round-dir",
+      "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-initial15-clone-v2",
+      "--suite",
+      "{suite}"
+    ]
+  },
+  "paired_condition_series": {
+    "conditions": [
+      "bf16",
+      "awq_w4a16",
+      "gptq_w4a16",
+      "omniquant_w4a16",
+      "smoothquant_w4a8",
+      "smoothquant_w4a4"
+    ],
+    "missing_cases": 90,
+    "counts": {
+      "bf16": 8,
+      "awq_w4a16": 8,
+      "gptq_w4a16": 29,
+      "omniquant_w4a16": 29,
+      "smoothquant_w4a8": 8,
+      "smoothquant_w4a4": 8
+    },
+    "all_profiles_frozen": true,
+    "recalibration": false,
+    "clone_control_only": true
+  }
+}
