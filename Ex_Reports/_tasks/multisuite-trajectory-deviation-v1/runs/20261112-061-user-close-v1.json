@@ -1,6 +1,6 @@
 {
   "round_id": "20261112-061-user-close-v1",
-  "state": "USER_CLOSURE_GPU_STOPPED_BACKUPS_VERIFIED_SHUTDOWN_PENDING",
+  "state": "NATIVE_SHUTDOWN_REQUESTED_SSH_CLOSED",
   "new_complete": 61,
   "partial_attempts_excluded": 2,
   "cumulative_unique_complete": 429,
@@ -8,5 +8,16 @@
   "new_private_archives_verified": true,
   "new_archive_members": 1340,
   "windows_shutdown": false,
-  "scientific_conditions_unchanged_across_clone": true
+  "scientific_conditions_unchanged_across_clone": true,
+  "shutdown_receipt": {
+    "time_utc": "2026-11-11T18:12:17.627101+00:00",
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "execute": true,
+    "supervisor_pid": 757,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "platform_off_independently_verified": false,
+    "note": "Native stop request; no Trash deletion, no claim about billing"
+  },
+  "platform_OFF_independently_verified": false,
+  "new_local_raw_caches_removed_bytes": 147596444
 }

@@ -22,7 +22,12 @@
       "prior_round_state": "INTERRUPTED_AT_API_WINDOW_BOUNDARY_COMPLETED_22_REUSED",
       "observed_at": "2026-11-11T15:52:16.503285+00:00",
       "authorization_reusable_after_restart": false,
-      "windows_shutdown_authorized": false
+      "windows_shutdown_authorized": false,
+      "last_shutdown_request_execute": true,
+      "last_shutdown_time_utc": "2026-11-11T18:12:17.627101+00:00",
+      "platform_OFF_independently_verified": false,
+      "current_round_running": false,
+      "next_run_requires_new_user_authorization": true
     },
     {
       "server_id": "084",

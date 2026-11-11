@@ -441,7 +441,25 @@
   "private_new_backup_status": "PASS_BOTH_INCREMENTAL_ARCHIVES_REMOTE_DOWNLOAD_SHA_AND_LOCAL_FULL_MEMBERS",
   "new_large_parameters": "User-authorized server-only GPTQ/Omni parameters retained unchanged on cloned persistent disk; no cloud/local parameter copy claimed",
   "windows_shutdown_requested": false,
-  "native_shutdown_receipt_pending": true,
+  "native_shutdown_receipt_pending": false,
   "old_1_05GB_raw_cloud_gap": "Original 1,046,506,250-byte 053 archive remains server+local verified; prior private readback incomplete; not retransmitted this run",
-  "unused_failed_layout_note": "V1 original single-part starter asset returned HTTP503; preserved without delete/overwrite. Independent 32MiB two-part receipt verified; V2 successful 64MiB layout reused."
+  "unused_failed_layout_note": "V1 original single-part starter asset returned HTTP503; preserved without delete/overwrite. Independent 32MiB two-part receipt verified; V2 successful 64MiB layout reused.",
+  "native_shutdown_receipt": "SHUTDOWN_RECEIPT.json",
+  "native_shutdown_execute": true,
+  "ssh_channel_closed_after_request": true,
+  "platform_OFF_independently_verified": false,
+  "billing_stopped_independently_verified": false,
+  "heartbeat_state": "STOPPED_USER_CLOSURE_NO_APP_AUTOMATION_CREATED",
+  "new_local_raw_transfer_caches_removed": [
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261111-061-clone-v1-raw.tar.gz",
+      "bytes": 45308069,
+      "sha256": "7625e4ced36ecd17c2cd4d9ec48175a7ce3a580db2fd7e95f1658589fd747063"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-clone-v2-raw.tar.gz",
+      "bytes": 102288375,
+      "sha256": "85103a7e17942f269f596b455d16eeb6ec5ff51a0288be7d5b3e5c4666b7cf18"
+    }
+  ]
 }
