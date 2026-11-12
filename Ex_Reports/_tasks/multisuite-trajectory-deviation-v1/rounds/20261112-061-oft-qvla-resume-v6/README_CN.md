@@ -52,3 +52,9 @@ API于北京时间01:10:10实际剩13%，立即停止新病例；当前已起跑
 初态25唯一BF16失败为LIBERO Long（libero_10）task1/initial25；不从成功标签推断物理原因。两份本轮原始增量分别164,764,644与183,120,167字节；后者1782成员/49视频/1307原始query NPZ已本机全SHA通过。参数按用户决定保留服务器；旧1.05GB父包云端缺口仍保留，未宣称此次已修复。恢复入口见[RECOVERY_INDEX.json](RECOVERY_INDEX.json)。
 
 两份原始增量现均已完成私有GitHub六块上传、各块完整下载SHA校验及整包SHA验证，合计347,884,811字节，未删除服务器原件；收据见PRIVATE_V5_INCREMENTAL_VERIFIED.json和PRIVATE_V6_INCREMENTAL_VERIFIED.json。原生关机及Git远端状态另留最后收据。
+
+## 关闭动作与确认缺口
+
+代码/结果已推送并远端SHA核验`ab2a895032c7af04dac9d5ef7742be5790244694`。北京时间01:15:31实际API剩10%，01:18:01实测保护器CLOSING/actual_primary_at_or_below_10，已将私有全校验和Git收据送达以放行原生关闭；随后SSH banner被远端关闭。但监听客户端1000秒通道超时发生在关闭前，未取回本轮execute=true JSON，不能据此宣称原生回执已保存、平台OFF或停止计费。下次用户开机先读取本轮shutdown-receipt.json/guard-close-record.json，不复用旧回执。控制端跟进暂停，Windows保持开启。[精确关闭观察](CLOSURE_OBSERVATION.json)。
+
+私有完整恢复校验和公开Git远端核验后，已按精确绝对路径/大小/SHA清理本轮临时tar、六块读回及中断下载，共795,548,182字节（约759MiB）；服务器原件、工作代码/图表与历史1.05GB缺口原件保留。清单见LOCAL_TEMP_CLEANUP.json。

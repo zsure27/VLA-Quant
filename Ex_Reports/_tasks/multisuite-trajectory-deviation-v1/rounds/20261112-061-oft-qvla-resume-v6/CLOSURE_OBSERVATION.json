@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-12T17:20:37.346781+00:00",
+  "primary_close_observed_at": "2026-11-12T17:15:31Z",
+  "primary_remaining_percent": 10,
+  "guard_closing_observed_at": "2026-11-12T17:18:01.672798+00:00",
+  "guard_reason": "actual_primary_at_or_below_10",
+  "all_experiment_gpu_idle_verified": true,
+  "final_reference_stage": "PAUSED_SERVER_LEFT_ON",
+  "both_private_archives_full_download_sha_verified": true,
+  "public_git_remote_verified_sha": "ab2a895032c7af04dac9d5ef7742be5790244694",
+  "controller_backup_receipt_delivered": true,
+  "ssh_unreachable_after_release": true,
+  "native_execute_true_receipt_observed": false,
+  "platform_off_or_billing_independently_verified": false,
+  "confirmation_gap": "receipt watch SSH channel timed out at1000s before native closure; one direct retrieval after release failed at SSH banner; do not reuse prior shutdown receipt",
+  "next_open_action": "Retrieve current v6/shutdown-receipt.json and guard-close-record.json before new GPU registration",
+  "controller_followup": "PAUSED_AFTER_CONNECTION_CLOSED",
+  "windows_shutdown_requested": false
+}

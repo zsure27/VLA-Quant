@@ -44,5 +44,7 @@
     "new methods need actual backend/input/numeric/scope/finite/reload gates; ActQuant default GPU memory lower-bound block, CPU path not admitted"
   ],
   "no_automatic_resume_old_pid": true,
-  "windows_shutdown_authorized": false
+  "windows_shutdown_authorized": false,
+  "closure_observation": "CLOSURE_OBSERVATION.json",
+  "native_shutdown_receipt_pending_retrieval": true
 }

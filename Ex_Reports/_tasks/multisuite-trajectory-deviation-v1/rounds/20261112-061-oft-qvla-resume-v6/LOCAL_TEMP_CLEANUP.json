@@ -1,0 +1,63 @@
+{
+  "verified_at": "2026-11-13T01:20:37.338993+08:00",
+  "authorized_scope": "this round verified temporary archive and readback copies only",
+  "files": [
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\061-v5-static-readback\\sha256-4d64e21cda9b2f36c0f5e267be9a132e0cf491da80ac89bb97e667c10938906c.part001-of003.readback",
+      "bytes": 67108864,
+      "sha256": "4d64e21cda9b2f36c0f5e267be9a132e0cf491da80ac89bb97e667c10938906c",
+      "reason": "private remote readback verified; concat restoration checked"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\061-v5-static-readback\\sha256-59124e2316ef9f8790ee2f8fc5ad936d7ee89c43132f2b996c92e4aaf07cbbce.part002-of003.readback",
+      "bytes": 67108864,
+      "sha256": "59124e2316ef9f8790ee2f8fc5ad936d7ee89c43132f2b996c92e4aaf07cbbce",
+      "reason": "private remote readback verified; concat restoration checked"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\061-v5-static-readback\\sha256-f68b3afd595aec7835b44a250411aeae3061e4e20c54ab4d922ef97273a6b371.part003-of003.readback",
+      "bytes": 30546916,
+      "sha256": "f68b3afd595aec7835b44a250411aeae3061e4e20c54ab4d922ef97273a6b371",
+      "reason": "private remote readback verified; concat restoration checked"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-qvla-v5-static-raw.tar.gz",
+      "bytes": 164764644,
+      "sha256": "a13071386449b4e9c309748aea3330942b4653e3ee44c1f44e3bb1d970b29491",
+      "reason": "private remote full restoration verified; persistent server original retained"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\061-v6-static-readback\\sha256-3999283c2acc632f1348b4ba86f9433d7957f2c5785d5b6f19bdee664e554eea.part001-of003.readback",
+      "bytes": 67108864,
+      "sha256": "3999283c2acc632f1348b4ba86f9433d7957f2c5785d5b6f19bdee664e554eea",
+      "reason": "private remote readback verified; concat restoration checked"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\061-v6-static-readback\\sha256-2da2f427a45096d1d7596dcec13c5a81cb73a47f90a6d8262858b9848c1481a8.part002-of003.readback",
+      "bytes": 67108864,
+      "sha256": "2da2f427a45096d1d7596dcec13c5a81cb73a47f90a6d8262858b9848c1481a8",
+      "reason": "private remote readback verified; concat restoration checked"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\061-v6-static-readback\\sha256-185864d4731d764d2ccd1f0150d639cdf7f2d97586112dbecc9c92f7e199dd14.part003-of003.readback",
+      "bytes": 48902439,
+      "sha256": "185864d4731d764d2ccd1f0150d639cdf7f2d97586112dbecc9c92f7e199dd14",
+      "reason": "private remote readback verified; concat restoration checked"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-qvla-v6-static-raw.tar.gz",
+      "bytes": 183120167,
+      "sha256": "5218745be5c38347b7387a8abbaae2e75326c15671af803976f9bd76ee07035d",
+      "reason": "private remote full restoration verified; persistent server original retained"
+    },
+    {
+      "path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-qvla-v5-raw.tar.gz",
+      "bytes": 99778560,
+      "sha256": "a2ee642c2b4a6fa291fbc295f30fefe381b20b50fe970f5f16ac444a28b41bc3",
+      "reason": "interrupted temporary download superseded by full all-member verified static v5 incremental; server original retained"
+    }
+  ],
+  "bytes": 795548182,
+  "legacy_parent_1GiB_gap_retained": true,
+  "deletion_completed": true
+}
