@@ -1,0 +1,48 @@
+{
+  "task": "multisuite-trajectory-deviation-v1",
+  "server": "061",
+  "parent_clone": "053 ->061",
+  "hostname": "autodl-container-b9be4c9ca8-1852b227",
+  "gpu_uuid": "GPU-e82e143d-7938-5a2f-aea4-56c7f962e5e3",
+  "same80_matched_cohort": {
+    "bf16": 80,
+    "quantized_conditions": 6,
+    "quantized_pairs": 480
+  },
+  "new_unpaired_bf16_initial25": {
+    "complete": 40,
+    "success": 39,
+    "failed_cases": [
+      {
+        "suite": "libero_10",
+        "task_id": 1,
+        "initial_state_index": 25,
+        "condition": "bf16"
+      }
+    ]
+  },
+  "unique_complete_total": 600,
+  "repeated_control_excluded": 4,
+  "private_v5_verified": "PRIVATE_V5_INCREMENTAL_VERIFIED.json",
+  "private_v6": {
+    "archive_bytes": 183120167,
+    "archive_sha256": "5218745be5c38347b7387a8abbaae2e75326c15671af803976f9bd76ee07035d",
+    "local_members_verified": 1782,
+    "remote_verification_pending": false,
+    "remote_download_sha256_verified": true,
+    "receipt": "PRIVATE_V6_INCREMENTAL_VERIFIED.json"
+  },
+  "retained_cloud_gaps": [
+    "historic1.05GB parent incremental archive remains retained, not newly restored",
+    "GPTQ/Omni full parameters server retained per user transfer decision",
+    "full base model/ActQuant compiled tools/external dependencies indexed, not claimed raw cloud copy"
+  ],
+  "next_open_requirements": [
+    "new explicit server/GPU authorization and actual identity/resource/API check",
+    "verify clone parent model/profile/source/raw case SHA; global complete-case dedup including all control stages",
+    "initial25 reference40 already complete; do not rerun; candidate initial25 and initial35/45 remain",
+    "new methods need actual backend/input/numeric/scope/finite/reload gates; ActQuant default GPU memory lower-bound block, CPU path not admitted"
+  ],
+  "no_automatic_resume_old_pid": true,
+  "windows_shutdown_authorized": false
+}

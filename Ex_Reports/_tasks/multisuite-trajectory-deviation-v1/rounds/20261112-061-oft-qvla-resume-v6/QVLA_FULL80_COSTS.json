@@ -1,0 +1,35 @@
+{
+  "gate": "PASS_QVLA80_COMPLETE_CASE_COSTS",
+  "complete_cases": 80,
+  "original_query_npz": 1678,
+  "wall_seconds": 5059.387764919549,
+  "cost_scope": "sum of each complete-case subprocess wall time, includes loading/first-input bridge/profile verification/trace/video; standalone calibration/admission/CPU analysis and incomplete/control-failed attempts are separate and not zero cost",
+  "groups": [
+    {
+      "stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v4",
+      "completed": 4,
+      "wall_seconds": 246.67278024554253,
+      "original_query_npz": 83
+    },
+    {
+      "stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-complete80-v1",
+      "completed": 14,
+      "wall_seconds": 823.5727514922619,
+      "original_query_npz": 186
+    },
+    {
+      "stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v5/stages/qvla-remaining62-v2",
+      "completed": 53,
+      "wall_seconds": 3333.3183132447302,
+      "original_query_npz": 1059
+    },
+    {
+      "stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1",
+      "completed": 9,
+      "wall_seconds": 655.8239199370146,
+      "original_query_npz": 350
+    }
+  ],
+  "incomplete_attempts_retained_not_counted_as_model_failure": true,
+  "not_int4_kernel_speedup": true
+}

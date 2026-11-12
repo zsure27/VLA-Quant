@@ -1,0 +1,18 @@
+{
+  "gate": "CPU_STATIC_ACTQUANT_DEVICE_DATA_OBJECTIVE_REVIEW_NO_MODEL_RUN",
+  "source": "/root/autodl-tmp/trajectory-drift-20261107/sources/ActQuant-original-b64791125070/tools/fisher-diag/compute_fisher.py",
+  "sha256": "73bb4b0bd7e45d727560c73272253c36d72caf69bf7bf7dea7c40dafc8237eca",
+  "evidence": {
+    "305": "        labels_np[i, end - num_actions:end] = tgt[i]",
+    "338": "    accumulators = {",
+    "367": "        loss.backward()",
+    "633": "    parser.add_argument(\"--device\", type=str, default=\"cuda\")"
+  },
+  "source_load_vla": "def load_vla(checkpoint_path: str, device: str, num_images_in_input: int = 2):\n    \"\"\"Load the full VLA (vision + projector + LLM) and the proprio projector.\n\n    Only LLM 2D weights will have requires_grad=True. Vision/projector params\n    are frozen but run forward so the LLM sees realistic multimodal inputs.\n    \"\"\"\n    from transformers import AutoConfig, AutoImageProcessor, AutoModelForVision2Seq, AutoProcessor\n\n    # Make prismatic modules importable\n    openvla_root = Path(__file__).resolve().parent.parent.parent.parent / \"openvla-oft\"\n    sys.path.insert(0, str(openvla_root))\n    from prismatic.extern.hf.configuration_prismatic import OpenVLAConfig\n    from prismatic.extern.hf.modeling_prismatic import OpenVLAForActionPrediction\n    from prismatic.extern.hf.processing_prismatic import PrismaticImageProcessor, PrismaticProcessor\n\n    AutoConfig.register(\"openvla\", OpenVLAConfig)\n    AutoImageProcessor.register(OpenVLAConfig, PrismaticImageProcessor)\n    AutoProcessor.register(OpenVLAConfig, PrismaticProcessor)\n    AutoModelForVision2Seq.register(OpenVLAConfig, OpenVLAForActionPrediction)\n\n    print(f\"Loading VLA from {checkpoint_path}...\")\n    vla = AutoModelForVision2Seq.from_pretrained(\n        checkpoint_path,\n        torch_dtype=torch.bfloat16,\n        low_cpu_mem_usage=True,\n        trust_remote_code=True,\n    ).to(device)\n    vla.vision_backbone.set_num_images_in_input(num_images_in_input)\n    vla.eval()\n\n    # Load proprio projector if available\n    proprio_projector = None\n    proprio_pattern = \"proprio_projector\"\n    candidates = [\n        os.path.join(checkpoint_path, f)\n        for f in os.listdir(checkpoint_path)\n        if proprio_pattern in f and \"checkpoint\" in f and f.endswith(\".pt\")\n    ]\n    if candidates:\n        from prismatic.models.projectors import ProprioProjector\n        from prismatic.vla.constants import PROPRIO_DIM\n\n        llm_dim = vla.llm_dim\n        proprio_projector = ProprioProjector(llm_dim=llm_dim, proprio_dim=PROPRIO_DIM).to(device)\n        proprio_projector = proprio_projector.to(torch.bfloat16)\n        state_dict = torch.load(candidates[0], weights_only=True)\n        # Strip DDP prefix if present\n        state_dict = {k[7:] if k.startswith(\"module.\") else k: v for k, v in state_dict.items()}\n        proprio_projector.load_state_dict(state_dict)\n        proprio_projector.eval()\n        for p in proprio_projector.parameters():\n            p.requires_grad_(False)\n        print(f\"  Loaded proprio_projector from {candidates[0]}\")\n    else:",
+  "notes": [
+    "Original AMF objective is cross entropy over action token labels, not direct OFT continuous action-head Jacobian. Preserve original method; do not relabel response-SVD/VJP as ActQuant.",
+    "CPU device option exists, but no full model forward/backward, calibration arrays/targets or exported runtime equality has passed here.",
+    "No second model loaded; resource lower bound only blocks default GPU AMF on this4090."
+  ],
+  "no_gpu_started": true
+}

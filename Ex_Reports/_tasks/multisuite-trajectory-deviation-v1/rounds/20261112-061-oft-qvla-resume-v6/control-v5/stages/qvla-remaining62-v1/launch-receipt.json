@@ -1,0 +1,21 @@
+{
+  "round_id": "20261112-061-oft-qvla-resume-v5",
+  "supervisor_pid": 1591,
+  "guard_pid": 1590,
+  "stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v5/stages/qvla-remaining62-v1",
+  "gpu_uuid": "GPU-e82e143d-7938-5a2f-aea4-56c7f962e5e3",
+  "plan_sha256": "7c5a964a216890410c5e1aba344f5dfd58d696a8bf6707266d8d20c82eac0cf8",
+  "config_sha256": "f4c59a7cf97d51fdbf97c37c843e56d8fcfcd50f3b95e3dac1c5032c3ee79a37",
+  "started_at": "2026-11-12T14:51:06.296007+00:00",
+  "new_cases": 62,
+  "parent_complete_qvla": 18,
+  "prior_other_complete": 480,
+  "quota": {
+    "source": "codex_api",
+    "window_minutes": 300,
+    "observed_at": "2026-11-12T14:50:07Z",
+    "remaining_percent": 94,
+    "resets_at": 1794512592
+  },
+  "windows_shutdown_authorized": false
+}

@@ -1,0 +1,56 @@
+{
+  "repository": "zsure27/VLA-Quant-Archives",
+  "release": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+  "archive": {
+    "source_name": "20261112-061-qvla-v6-static-raw.tar.gz",
+    "source_path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-qvla-v6-static-raw.tar.gz",
+    "bytes": 183120167,
+    "sha256": "5218745be5c38347b7387a8abbaae2e75326c15671af803976f9bd76ee07035d",
+    "parts": [
+      {
+        "asset_id": 740356695,
+        "name": "sha256-3999283c2acc632f1348b4ba86f9433d7957f2c5785d5b6f19bdee664e554eea.part001-of003",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-3999283c2acc632f1348b4ba86f9433d7957f2c5785d5b6f19bdee664e554eea.part001-of003",
+        "offset": 0,
+        "bytes": 67108864,
+        "sha256": "3999283c2acc632f1348b4ba86f9433d7957f2c5785d5b6f19bdee664e554eea",
+        "download_verified": true
+      },
+      {
+        "asset_id": 740356803,
+        "name": "sha256-2da2f427a45096d1d7596dcec13c5a81cb73a47f90a6d8262858b9848c1481a8.part002-of003",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-2da2f427a45096d1d7596dcec13c5a81cb73a47f90a6d8262858b9848c1481a8.part002-of003",
+        "offset": 67108864,
+        "bytes": 67108864,
+        "sha256": "2da2f427a45096d1d7596dcec13c5a81cb73a47f90a6d8262858b9848c1481a8",
+        "download_verified": true
+      },
+      {
+        "asset_id": 740357979,
+        "name": "sha256-185864d4731d764d2ccd1f0150d639cdf7f2d97586112dbecc9c92f7e199dd14.part003-of003",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-185864d4731d764d2ccd1f0150d639cdf7f2d97586112dbecc9c92f7e199dd14.part003-of003",
+        "offset": 134217728,
+        "bytes": 48902439,
+        "sha256": "185864d4731d764d2ccd1f0150d639cdf7f2d97586112dbecc9c92f7e199dd14",
+        "download_verified": true
+      }
+    ],
+    "remote_download_sha256_verified": true
+  },
+  "local_verification": {
+    "gate": "PASS_LOCAL_ALL_MEMBERS",
+    "archive_bytes": 183120167,
+    "archive_sha256": "5218745be5c38347b7387a8abbaae2e75326c15671af803976f9bd76ee07035d",
+    "members_verified": 1782,
+    "raw_query_npz_files": 1307,
+    "original_video_files": 49,
+    "bf16_initial25_failed_cases": [
+      {
+        "suite": "libero_10",
+        "task_id": 1,
+        "initial_state_index": 25,
+        "condition": "bf16"
+      }
+    ]
+  }
+}

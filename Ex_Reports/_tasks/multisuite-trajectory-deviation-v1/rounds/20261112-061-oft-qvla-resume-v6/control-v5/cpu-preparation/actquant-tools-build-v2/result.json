@@ -1,0 +1,21 @@
+{
+  "gate": "PASS_ORIGINAL_ACTQUANT_QUANT_TOOLS_CPU_BUILD_ONLY",
+  "source_commit": "b64791125070652fe6b554e244fe809c79ef5246",
+  "build": "/root/autodl-tmp/trajectory-drift-20261107/builds/ActQuant-oft-original-v1",
+  "outputs": [
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/builds/ActQuant-oft-original-v1/bin/llama-quantize",
+      "bytes": 372552,
+      "sha256": "ae2466466376e1f9531b41be3955539d2c9151b41994ea3eb2482442392e5318"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/builds/ActQuant-oft-original-v1/bin/quantize-vision",
+      "bytes": 56128,
+      "sha256": "25d726a790967af554fae787ee9719ed6ab65d19348a12f2db40cadf63a1a6e9"
+    }
+  ],
+  "workers": 2,
+  "gpu_execution": false,
+  "model_loaded": false,
+  "python_runtime_not_built": true
+}

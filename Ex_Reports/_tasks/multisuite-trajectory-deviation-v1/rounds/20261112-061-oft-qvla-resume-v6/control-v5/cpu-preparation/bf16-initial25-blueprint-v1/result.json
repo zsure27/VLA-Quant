@@ -1,0 +1,463 @@
+{
+  "gate": "PASS_CPU_BF16_INITIAL25_REFERENCE_BLUEPRINT_NOT_REGISTERED",
+  "cases": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "270c59a4982faf1124a068e1ede6ed6a2e2c4b782d6662152853c8b37308a777",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "d39dedeb4a7a1d5f7b937db9c174463a89b5019e2b2e3fb3cc4256d2eec8f1b1",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "5d5b2450208eba54e1581541d9ffac4be1569c97a5384845afc00b526fa2672b",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "b3cb958c8ea76d267a5d54ebe4b34c21d625f8ba184f90dc4fbe3c06aada8b2d",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "b5100aef09b3d87b2b93b58bfa06cbb5c61fda7364b64dd7efc9d70e3bfbba81",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "d8d91e52f2e9ca98ebb9fd1b3b7978404fb3bdfad0308e35a45cfa59808e184b",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "e122617d9fa3be784e0ca60cb2e0a6d375b6a5ea54b59c7535b8d8570c5c97e4",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "2b579b50672d9baf9acae29e1feddfd03c89f2cb03bfe5d84a8bb0014f423fa1",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "fe096098d6a030e74debaf2a903dfe806764de660d92272e2bd348ee80abc88c",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "5812abe2c5d424cde29a54cf19f1e651a7213816428783d6a037aebe84da0eaf",
+      "initial_state_shape": [
+        92
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "a6fee7c621bd66fe9d4ccf7de6584332d39ba7c032724ea1b0c2022e703fa913",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 1,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "d5d2feb4d1c1e0ca1b5d0a8128625c9fd459fc4131075ecbba86988f413febfd",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 2,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "ac3cfaa512bca7b60d0b17f8ce2625820644bcc6e64575a7babe9900856312c6",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 3,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "9866ec62c2cf16c6c3b21b25960ab40c6d4fad51552674977c9b2f424769f7a1",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 4,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "bba65d979f3ed7278d756aa0b9530c06667456a1a52a6fe9dbf650902d234fbf",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 5,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "87e12e4f17e0123e33b786a5a4158b21bcde3ed273d13e970ce38cf3f1c6e01d",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 6,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "290c846af46c580e71b94887f2b2f05191ceca72fa5721a0c28efae0d9b4d12c",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 7,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "6e6f1e8151357119be39eb18cba3754ad1f2a328dab97ded47cbab219793cf71",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 8,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "5a8756b5e5d14e7b48f014932137e762a2ddcee69b033cf31743dd82b2cc1da6",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 9,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "d2a124dacb780f822aeefed013046d5263cde24d6256934aa82c4a716c1580f4",
+      "initial_state_shape": [
+        110
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "db1ecb3c1e13d8da29f7fb0309bec30050deae7245652f4b6a22643ca11a0895",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 1,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "3f79a384a0ab740adc60a061e6d53536281c5036a40f7512690510d69b438769",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 2,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "38424078b02bba41bfb54c89c66f7daccd2851d175c3c782f3e96df7bdde8f28",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 3,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "97feb104511d6f17161266f372b904a3fbe10981e154e8068a00365fc5f81587",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 4,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "ca7816606b37c9b398dd11fa688a1d027c9cfde2bda0fd06f3ccd3b0443b3c99",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 5,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "69ed9678d13b9125d678e2198685bf28157f1117416ca73489d7e02a66a5143c",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 6,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "470004d3b266ed9ee3cdc5d9d4e2e0644f06ebb34f36bde88275b1383f0aacb2",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 7,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "474df1080a7e4c20deb3421b1c1dbbb84be7980cbefd9eec3f4751db2f46b6d0",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 8,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "f7f87dd4038bbf2e5305911d6568246fa4eb7e3372138d2479dfa6c950997176",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 9,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "c93b9cd885e542c9058680f7b8cedfbff332a7e7e34efaf68a14812fadf07e18",
+      "initial_state_shape": [
+        79
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "0b82cd37e5548f177701291f9479c5d963a1488cbc29283b7b6d6d4ece5fab23",
+      "initial_state_shape": [
+        123
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "0ca2314972a41b72dba008c7cd449afc1187f9410a9da7a661b7a1aa4b486e77",
+      "initial_state_shape": [
+        123
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "99c8d12bc18142a0b4899030e523b10f0d715932635f241124cd1d15747fc790",
+      "initial_state_shape": [
+        47
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "3e82de4a8d0c74b874a9b3735f7a3003b1820b6498d072b897d7e8d27b94f2cc",
+      "initial_state_shape": [
+        51
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "ce2cf4c27ff01c1dc4b94afe97e647a9a522ce10f0de235c1f4b9e5d1727f814",
+      "initial_state_shape": [
+        84
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "5fe3009d5bef1c8df5e8bbc8aea9a78a16efc447b44b3f34fe73c97b4ab15af6",
+      "initial_state_shape": [
+        45
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "f5682e9f27e313a6e3ba8617cbf299eac4c86899583b9e8a80327aa1ce83e86e",
+      "initial_state_shape": [
+        71
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "e61542d2e5cd865bfab38f8d88092dcd98b096b6ee4d53ae25b39ae7cd3a4a3c",
+      "initial_state_shape": [
+        84
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "010761f0b31429744cba60ab8f53b6830f2c680979dbd4c8877b38b8b31a0faf",
+      "initial_state_shape": [
+        47
+      ],
+      "initial_state_dtype": "float64"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 25,
+      "condition": "bf16",
+      "initial_state_sha256": "f670468d2cadd307dae287f34ad755c1bbdebb715cc39c6a33d8b284410bdba6",
+      "initial_state_shape": [
+        47
+      ],
+      "initial_state_dtype": "float64"
+    }
+  ],
+  "already_complete": {},
+  "missing": 40,
+  "preregistered_target": 40,
+  "role": "development shared BF16 references for originally planned reset5/15/25/35/45; no quantized comparisons until paired candidates complete",
+  "checkpoint_receipt_sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc",
+  "external_frozen_sources": {
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_drift_v3.py": "19db0878252809f595962e187771ebf98fec0900fc5247cd39c0c26cb8f1d8e3",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/on_policy_capture.py": "162744c1fbb51abcc1095ccbeaaef65c6a76b580686adf4dedebe3d80d439b94",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/baseline_contract.py": "8ece721cfd10c694fbb67b9cd5dd8f5fe33f626a2d586c34a28348c3348038c7",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_diagnostics_v1.py": "b439fbed0b3a6d509fba3272e139798c0e69459f0e6c82c77395dfce41dd3bdc",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/native_oft_trace_v1.py": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f"
+  },
+  "model_seed": 7,
+  "actual_native_env_seed": 0,
+  "legacy_env_seed_label": 7,
+  "actions_per_query": 8,
+  "no_gpu_started": true,
+  "activation_requires": "Current QVLA62 raw audit/terminal gate, fresh quota, idle GPU, disk>=8GiB and new per-stage authorization"
+}

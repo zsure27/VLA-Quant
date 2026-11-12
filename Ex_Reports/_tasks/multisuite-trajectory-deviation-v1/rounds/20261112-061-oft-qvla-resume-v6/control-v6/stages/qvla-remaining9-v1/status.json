@@ -1,0 +1,153 @@
+{
+  "round_id": "qvla-remaining9-v1",
+  "config_sha256": "25c2e9d808962d4758b6151c553612d0d2827f63b7ce6acd605e991edb41a5d9",
+  "plan_sha256": "f80adc3ebb34a122233636183d401a0205f8a5d5afebd8ce86e1a3965214b095",
+  "started_at": "2026-11-12T15:58:16.038866+00:00",
+  "state": "PAUSED_SERVER_LEFT_ON",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/run_oft_qvla_cases_v4.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1",
+        "--suite",
+        "libero_spatial"
+      ],
+      "started_at": "2026-11-12T15:58:31.765102+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 1.0037075653672218,
+      "ended_at": "2026-11-12T15:58:32.768811+00:00"
+    },
+    {
+      "id": "eval-libero_object",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/run_oft_qvla_cases_v4.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1",
+        "--suite",
+        "libero_object"
+      ],
+      "started_at": "2026-11-12T15:58:32.771792+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 1.0038062036037445,
+      "ended_at": "2026-11-12T15:58:33.775601+00:00"
+    },
+    {
+      "id": "eval-libero_goal",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/run_oft_qvla_cases_v4.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1",
+        "--suite",
+        "libero_goal"
+      ],
+      "started_at": "2026-11-12T15:58:33.777745+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 1.0039683431386948,
+      "ended_at": "2026-11-12T15:58:34.781718+00:00"
+    },
+    {
+      "id": "eval-libero_10",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/run_oft_qvla_cases_v4.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1",
+        "--suite",
+        "libero_10"
+      ],
+      "started_at": "2026-11-12T15:58:34.784081+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 656.7029492221773,
+      "ended_at": "2026-11-12T16:09:31.487034+00:00"
+    },
+    {
+      "id": "evaluation-audit",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/audit_oft_qvla_pairs_v2.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1",
+        "--output",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1/paired-audit"
+      ],
+      "started_at": "2026-11-12T16:09:31.495246+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 27.028589487075806,
+      "ended_at": "2026-11-12T16:09:58.523842+00:00"
+    }
+  ],
+  "actual": {
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "gpu": "NVIDIA GeForce RTX 4090, 24564, 0, 0",
+    "disk_free_bytes": 61474140160
+  },
+  "updated_at": "2026-11-12T16:09:58.565643+00:00",
+  "current_stage": "evaluation-audit",
+  "child_pid": 30800,
+  "reason": "task_commands_complete",
+  "ended_at": "2026-11-12T16:09:58.527787+00:00",
+  "closure_errors": [],
+  "cloud_sync_deferred": true,
+  "persistent_originals_retained": true,
+  "public_git_sync_deferred": true
+}

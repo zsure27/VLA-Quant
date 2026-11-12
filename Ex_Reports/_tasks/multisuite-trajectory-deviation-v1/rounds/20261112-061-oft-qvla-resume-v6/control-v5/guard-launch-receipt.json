@@ -1,0 +1,12 @@
+{
+  "pid": 1590,
+  "started_at": "2026-11-12T14:51:06.295106+00:00",
+  "argv": [
+    "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+    "-u",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/continuation_quota_guard_v1.py",
+    "--root-control",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v5"
+  ],
+  "source_sha256": "f128da7debf40600c31eb31de98661d53f54343699562c6fd4740cd1bc8e2842"
+}

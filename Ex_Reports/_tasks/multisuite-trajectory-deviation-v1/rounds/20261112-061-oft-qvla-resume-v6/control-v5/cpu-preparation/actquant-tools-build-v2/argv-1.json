@@ -1,0 +1,10 @@
+[
+  "cmake",
+  "--build",
+  "/root/autodl-tmp/trajectory-drift-20261107/builds/ActQuant-oft-original-v1",
+  "--target",
+  "llama-quantize",
+  "quantize-vision",
+  "--parallel",
+  "2"
+]

@@ -1,0 +1,17 @@
+{
+  "time_utc": "2026-11-12T15:52:57.407597+00:00",
+  "reason": "Controller refreshed actual API quota after old1020sdeadline; protection stopped policy before fresh58percent was delivered",
+  "model_failure": false,
+  "old_guard_cancelled_before_native_shutdown": true,
+  "old_guard_pid": 1590,
+  "fresh_actual_quota": {
+    "source": "codex_api",
+    "window_minutes": 300,
+    "observed_at": "2026-11-12T15:50:43Z",
+    "remaining_percent": 58,
+    "resets_at": 1794512593
+  },
+  "old_partial_case_retained": true,
+  "next_control": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6",
+  "no_quota_threshold_override": true
+}

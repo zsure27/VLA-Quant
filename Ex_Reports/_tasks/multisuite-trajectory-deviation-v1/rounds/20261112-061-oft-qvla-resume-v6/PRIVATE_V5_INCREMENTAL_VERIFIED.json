@@ -1,0 +1,51 @@
+{
+  "repository": "zsure27/VLA-Quant-Archives",
+  "release": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+  "release_id": 415605545,
+  "archive": {
+    "source_name": "20261112-061-qvla-v5-static-raw.tar.gz",
+    "source_path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-qvla-v5-static-raw.tar.gz",
+    "bytes": 164764644,
+    "sha256": "a13071386449b4e9c309748aea3330942b4653e3ee44c1f44e3bb1d970b29491",
+    "parts": [
+      {
+        "asset_id": 740242155,
+        "name": "sha256-4d64e21cda9b2f36c0f5e267be9a132e0cf491da80ac89bb97e667c10938906c.part001-of003",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-4d64e21cda9b2f36c0f5e267be9a132e0cf491da80ac89bb97e667c10938906c.part001-of003",
+        "offset": 0,
+        "bytes": 67108864,
+        "sha256": "4d64e21cda9b2f36c0f5e267be9a132e0cf491da80ac89bb97e667c10938906c",
+        "download_verified": true
+      },
+      {
+        "asset_id": 740242264,
+        "name": "sha256-59124e2316ef9f8790ee2f8fc5ad936d7ee89c43132f2b996c92e4aaf07cbbce.part002-of003",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-59124e2316ef9f8790ee2f8fc5ad936d7ee89c43132f2b996c92e4aaf07cbbce.part002-of003",
+        "offset": 67108864,
+        "bytes": 67108864,
+        "sha256": "59124e2316ef9f8790ee2f8fc5ad936d7ee89c43132f2b996c92e4aaf07cbbce",
+        "download_verified": true
+      },
+      {
+        "asset_id": 740248787,
+        "name": "sha256-f68b3afd595aec7835b44a250411aeae3061e4e20c54ab4d922ef97273a6b371.part003-of003",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-f68b3afd595aec7835b44a250411aeae3061e4e20c54ab4d922ef97273a6b371.part003-of003",
+        "offset": 134217728,
+        "bytes": 30546916,
+        "sha256": "f68b3afd595aec7835b44a250411aeae3061e4e20c54ab4d922ef97273a6b371",
+        "download_verified": true
+      }
+    ],
+    "remote_download_sha256_verified": true
+  },
+  "local_member_verification": {
+    "gate": "PASS_LOCAL_ALL_MEMBERS",
+    "archive_bytes": 164764644,
+    "archive_sha256": "a13071386449b4e9c309748aea3330942b4653e3ee44c1f44e3bb1d970b29491",
+    "members_verified": 1541
+  },
+  "raw_npz_files": 1072,
+  "original_video_files": 53,
+  "scope": "v5 new53 complete plus interrupted attempt/control/CPU preparation; does not replace v6 nine remaining or new reference raw data",
+  "retained_external_models": true
+}

@@ -1,0 +1,17 @@
+[
+  "cmake",
+  "-S",
+  "/root/autodl-tmp/trajectory-drift-20261107/sources/ActQuant-original-b64791125070",
+  "-B",
+  "/root/autodl-tmp/trajectory-drift-20261107/builds/ActQuant-oft-original-v1",
+  "-DCMAKE_BUILD_TYPE=Release",
+  "-DGGML_CUDA=ON",
+  "-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.1/bin/nvcc",
+  "-DCMAKE_CUDA_ARCHITECTURES=89",
+  "-DBUILD_PYTHON=OFF",
+  "-DLLAMA_BUILD_TESTS=OFF",
+  "-DLLAMA_BUILD_EXAMPLES=OFF",
+  "-DLLAMA_BUILD_SERVER=OFF",
+  "-DLLAMA_CURL=OFF",
+  "-DLLAMA_BUILD_COMMIT=b64791125070652fe6b554e244fe809c79ef5246"
+]

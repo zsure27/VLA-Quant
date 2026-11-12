@@ -1,0 +1,113 @@
+{
+  "gate": "PASS_QVLA_RAW_QUERY_ACTION_POSE_VIDEO_AND_PAIRED_CASES",
+  "quota_stopped_partial": false,
+  "planned": 9,
+  "completed": 9,
+  "success": 8,
+  "reference_success": 8,
+  "rescue": 0,
+  "break_count": 0,
+  "metrics": [
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 238,
+      "translation_p95_mm": 88.96203967357988,
+      "rotation_p95_deg": 7.086041312287777,
+      "first_same_input_chunk_mse": 0.0008702196537665473
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 217,
+      "translation_p95_mm": 115.36417442595749,
+      "rotation_p95_deg": 16.005569448126252,
+      "first_same_input_chunk_mse": 0.00025070935645908225
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 218,
+      "translation_p95_mm": 71.08777908814984,
+      "rotation_p95_deg": 9.448917915737358,
+      "first_same_input_chunk_mse": 0.003957345476448928
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 286,
+      "translation_p95_mm": 185.48151768145703,
+      "rotation_p95_deg": 12.58552111884809,
+      "first_same_input_chunk_mse": 0.0003278794251994175
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 153,
+      "translation_p95_mm": 128.58736675785798,
+      "rotation_p95_deg": 17.95000188359723,
+      "first_same_input_chunk_mse": 0.0005496741871759336
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 15,
+      "success": false,
+      "reference_success": false,
+      "common_steps": 520,
+      "translation_p95_mm": 45.507455178967014,
+      "rotation_p95_deg": 35.20177105772784,
+      "first_same_input_chunk_mse": 0.00029252020261856033
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 227,
+      "translation_p95_mm": 237.1140010145911,
+      "rotation_p95_deg": 10.151294824773457,
+      "first_same_input_chunk_mse": 0.001092541481174422
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 351,
+      "translation_p95_mm": 141.22543155582022,
+      "rotation_p95_deg": 7.269237629261097,
+      "first_same_input_chunk_mse": 0.0002382772392563152
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 252,
+      "translation_p95_mm": 132.51095193694482,
+      "rotation_p95_deg": 15.687897979222079,
+      "first_same_input_chunk_mse": 0.0009632295703543127
+    }
+  ],
+  "original_frozen_metric_source_sha256": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f",
+  "gates_sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+}

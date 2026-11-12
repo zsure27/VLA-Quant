@@ -1,0 +1,16 @@
+{
+  "gate": "PASS_LOCAL_ALL_MEMBERS",
+  "archive_bytes": 183120167,
+  "archive_sha256": "5218745be5c38347b7387a8abbaae2e75326c15671af803976f9bd76ee07035d",
+  "members_verified": 1782,
+  "raw_query_npz_files": 1307,
+  "original_video_files": 49,
+  "bf16_initial25_failed_cases": [
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "initial_state_index": 25,
+      "condition": "bf16"
+    }
+  ]
+}
