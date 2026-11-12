@@ -1,0 +1,14 @@
+{
+  "server_id": "061",
+  "round_id": "20261112-061-oft-long15-resume-v3",
+  "supervisor_pid": 1466,
+  "plan_sha256": "6a48b284e3e887b00f787107f99512dfd0d2bf7b0661deb4ec1a61031fd66235",
+  "config_sha256": "fbf86c0dd9d11f0cd550d300667894f72e718dcf43baa79dc98d1eae0f2d05b2",
+  "started_at": "2026-11-12T08:40:23.018504+00:00",
+  "gpu_uuid": "GPU-e82e143d-7938-5a2f-aea4-56c7f962e5e3",
+  "missing_cases": 51,
+  "inherited_unique_complete": 429,
+  "heartbeat_seconds": 900,
+  "watch_boundary": "server actual resource observer900s; actual API refreshed by controlling current task; stale quota conservatively closes",
+  "science_unchanged": true
+}

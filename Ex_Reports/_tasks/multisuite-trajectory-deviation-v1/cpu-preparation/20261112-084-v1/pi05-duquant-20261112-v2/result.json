@@ -1,0 +1,23 @@
+{
+  "gate": "PASS_ORIGINAL_DUQUANT_BLOCK128_ROTATION_RELOAD_CPU",
+  "original_repository": "Hsu1023/DuQuant",
+  "original_commit": "d56cfc6fe97c34c0eb100fec82fe439865905679",
+  "generator_git_blob": "ba28805a63bf18cee2bcc23ab042b1c38a84ad15",
+  "generator_sha256": "aa11b175c86d36eb48ecf729a76b57614dd7aab89c0c749cc392dfb035ff1981",
+  "cpu_only_generator_changes": [
+    "device=cpu",
+    "only n=128"
+  ],
+  "rotation_asset_sha256": "a7b613db1d9ceb3ff7005755d7dd727bcd715db688d56f036a4347b81162cbe8",
+  "upstream_quantizer_sha256": "99c2a0d76866e2289658fb85a2b7e2673c23517fb1d9c68642753bf5b9830b1a",
+  "toy_rotation_steps": 4,
+  "paired_transform_identity": true,
+  "activation_toy_mse": {
+    "4": 0.009534626267850399,
+    "8": 3.317083610454574e-05
+  },
+  "save_reload_bitwise": true,
+  "gpu_model_admitted": false,
+  "full_model_adapter_complete": false,
+  "observed_at": "2026-11-12T08:45:52.869296+00:00"
+}

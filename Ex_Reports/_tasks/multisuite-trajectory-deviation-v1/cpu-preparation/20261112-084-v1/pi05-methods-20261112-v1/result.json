@@ -1,0 +1,54 @@
+{
+  "gate": "PASS_PI05_CPU_SCOPE_AND_METHOD_READINESS_INVENTORY",
+  "cpu_only": true,
+  "policy_loaded": false,
+  "gpu_authorized": false,
+  "targets": 414,
+  "component_results": {
+    "awq": {
+      "gate": "PASS_PINNED_AWQ_PRIMITIVE_CPU",
+      "normalized_source_sha256": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+      "source_sha256": "0f4a17c234fde5c422d1328786b29c50dc0d18b8bf1b7d7530eade6313dc0de2",
+      "unchanged_ast_function": true,
+      "shape": [
+        9,
+        128
+      ],
+      "invalid_width_rejected": true,
+      "activation_search_tested": false,
+      "full_model_adapter_complete": false,
+      "method": "awq",
+      "gpu_model_admitted": false,
+      "real_trajectory_completed": false
+    },
+    "omniquant": {
+      "gate": "PASS_ORIGINAL_OMNI_LWC_GRADIENT_FREEZE_RELOAD_CPU",
+      "source_sha256": "df933fc772b97bfee5f48d7fb3b47ab6ebea963ed282c7edea06f94ccb5829dd",
+      "shape": [
+        9,
+        32
+      ],
+      "weight_frozen": true,
+      "clipping_gradient_nonzero": true,
+      "full_block_reconstruction_tested": false,
+      "full_model_adapter_complete": false,
+      "method": "omniquant",
+      "gpu_model_admitted": false,
+      "real_trajectory_completed": false
+    },
+    "duquant": {
+      "gate": "BLOCKED_ORIGINAL_DUQUANT_ROTATION_ASSET",
+      "source_sha256": "99c2a0d76866e2289658fb85a2b7e2673c23517fb1d9c68642753bf5b9830b1a",
+      "missing": "Rot.pkl",
+      "full_model_adapter_complete": false,
+      "model_inapplicability_proven": false,
+      "method": "duquant",
+      "gpu_model_admitted": false,
+      "real_trajectory_completed": false
+    }
+  },
+  "configurations": 12,
+  "all_methods_gpu_ready": false,
+  "observed_at": "2026-11-12T08:43:47.410918+00:00",
+  "source_script_sha256": "bffcfa5482871dc43cc3a934709e6315107ea07d5602af714ebcc0472faf82ec"
+}

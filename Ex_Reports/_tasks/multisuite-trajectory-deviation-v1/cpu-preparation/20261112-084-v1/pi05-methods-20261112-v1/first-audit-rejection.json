@@ -1,0 +1,223 @@
+{
+  "reason": "Blanket group128 divisibility assumption rejected by actual safetensors shapes",
+  "source_or_weights_not_changed": true,
+  "model_admitted": false,
+  "ragged_targets": [
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.1.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.10.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.11.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.12.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.13.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.14.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.15.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.16.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.17.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.18.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.19.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.2.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.20.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.21.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.22.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.23.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.24.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.25.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.26.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.3.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.4.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.5.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.6.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.7.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.8.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    },
+    {
+      "name": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.9.mlp.fc2",
+      "shape": [
+        1152,
+        4304
+      ],
+      "suggested_divisible_group": 16
+    }
+  ]
+}

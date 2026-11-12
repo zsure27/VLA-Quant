@@ -1,0 +1,41 @@
+{
+  "gate": "PASS_ORIGINAL_DUQUANT_DIVISIBLE_BLOCKS_ROTATION_RELOAD_CPU",
+  "original_repository": "Hsu1023/DuQuant",
+  "original_commit": "d56cfc6fe97c34c0eb100fec82fe439865905679",
+  "generator_git_blob": "ba28805a63bf18cee2bcc23ab042b1c38a84ad15",
+  "generator_sha256": "aa11b175c86d36eb48ecf729a76b57614dd7aab89c0c749cc392dfb035ff1981",
+  "cpu_only_generator_changes": [
+    "device=cpu",
+    "only n=16,128"
+  ],
+  "rotation_asset_sha256": "f085c46213293af701a6269aecf88a9c83a67e4a841d6e44b79ed77747c62dda",
+  "upstream_quantizer_sha256": "99c2a0d76866e2289658fb85a2b7e2673c23517fb1d9c68642753bf5b9830b1a",
+  "toy_rotation_steps": 4,
+  "paired_transform_identity": true,
+  "checks": [
+    {
+      "width": 128,
+      "rotation_block": 128,
+      "unquantized_paired_transform_max_abs": 3.814697265625e-05,
+      "activation_toy_mse": {
+        "4": 0.010119589976966381,
+        "8": 3.417951666051522e-05
+      },
+      "save_reload_bitwise": true
+    },
+    {
+      "width": 4304,
+      "rotation_block": 16,
+      "unquantized_paired_transform_max_abs": 0.000194549560546875,
+      "activation_toy_mse": {
+        "4": 0.019264046102762222,
+        "8": 6.607254908885807e-05
+      },
+      "save_reload_bitwise": true
+    }
+  ],
+  "save_reload_bitwise": true,
+  "gpu_model_admitted": false,
+  "full_model_adapter_complete": false,
+  "observed_at": "2026-11-12T09:00:36.796510+00:00"
+}

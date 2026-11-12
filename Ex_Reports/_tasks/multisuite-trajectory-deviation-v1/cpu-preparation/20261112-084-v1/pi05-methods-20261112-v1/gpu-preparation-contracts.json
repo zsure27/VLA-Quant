@@ -1,0 +1,431 @@
+[
+  {
+    "id": "gptq_w4a16",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "awq_w4a16",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "original AWQ block forward/search binding for SigLIP, Gemma and adaptive expert; primitive-only check is insufficient",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "omniquant_w4a16",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "native flow/block reconstruction and bounded teacher cache; LWC primitive alone is insufficient",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "actquant_w4a16",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "pinned applicable original implementation and pi0.5 architecture adapter; do not relabel another method",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "qvla_w4a16",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "pinned applicable original implementation and pi0.5 architecture adapter; do not relabel another method",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "smoothquant_w4a8",
+    "weight_bits": 4,
+    "activation_bits": 8,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "duquant_w4a8",
+    "weight_bits": 4,
+    "activation_bits": 8,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "original rotation asset and model-wide paired activation/weight rotation before quantization",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "quantvla_w4a8",
+    "weight_bits": 4,
+    "activation_bits": 8,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "pinned applicable original implementation and pi0.5 architecture adapter; do not relabel another method",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "smoothquant_w4a4",
+    "weight_bits": 4,
+    "activation_bits": 4,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "duquant_w4a4",
+    "weight_bits": 4,
+    "activation_bits": 4,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "original rotation asset and model-wide paired activation/weight rotation before quantization",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "quantvla_w4a4",
+    "weight_bits": 4,
+    "activation_bits": 4,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "pinned applicable original implementation and pi0.5 architecture adapter; do not relabel another method",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  },
+  {
+    "id": "holoq_vla_w4a4",
+    "weight_bits": 4,
+    "activation_bits": 4,
+    "backend": "openpi-pytorch-original-independent-h10-v2",
+    "target_contract": "target-contract.json",
+    "calibration_resets": [
+      0
+    ],
+    "evaluation_resets": [
+      5,
+      15,
+      25,
+      35,
+      45
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "pilot_tasks": [
+      0
+    ],
+    "finetuning": "none",
+    "gpu_execution_authorized": false,
+    "executable": false,
+    "pending": [
+      "pinned applicable original implementation and pi0.5 architecture adapter; do not relabel another method",
+      "actual full-model target coverage",
+      "same-observation/noise finite action check",
+      "frozen-base and save/reload check",
+      "four-suite task0/reset5 paired pilot"
+    ]
+  }
+]

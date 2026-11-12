@@ -1,0 +1,31 @@
+{
+  "gate": "PASS_PI05_NEXT_GPU_RUNTIME_CLI_AND_GPTQ_CPU",
+  "code": "/root/autodl-tmp/trajectory-drift-20261107/code-084-cpu-prepared-20261112-v1",
+  "runtime_archive_sha256": "9c4daa327553135fee5f1e0047bc3cacb082fe361680aa63908d31560bc01676",
+  "cli_checks": [
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-084-cpu-prepared-20261112-v1/scripts/trajectory_drift_20261111/build_pi05_gptq_v1.py",
+      "sha256": "3a687aa4a420acbfb261ab089b5001aa3b3906b2f753b7ea086a5d0fc27a3f8b",
+      "cli_exit": 0
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-084-cpu-prepared-20261112-v1/qvla/execute_pi05_torch_gptq_episode_v1.py",
+      "sha256": "1c2532381ab1e833c159866ff80bce732f1d974cd610c42f986818478db96145",
+      "cli_exit": 0
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-084-cpu-prepared-20261112-v1/qvla/execute_pi05_torch_sq_episode_v2.py",
+      "sha256": "7643dabcddad79c52a7d0990f5dfe4efefcf2269861bb0fdca99b7239e331e74",
+      "cli_exit": 0
+    }
+  ],
+  "no_gpu_started": true,
+  "no_new_authorization": true,
+  "next_order": [
+    "SQ W4A4 four-suite task0/reset5 same-backend pilot",
+    "GPTQ GPU build, finite/reload guard, same pilot"
+  ],
+  "existing_four_bf16_references_reused": true,
+  "quantizer_method_changes": false,
+  "others_full_model_adapter_pending": true
+}

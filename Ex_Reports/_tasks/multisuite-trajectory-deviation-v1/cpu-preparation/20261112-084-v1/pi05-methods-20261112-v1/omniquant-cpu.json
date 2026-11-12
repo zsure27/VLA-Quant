@@ -1,0 +1,15 @@
+{
+  "gate": "PASS_ORIGINAL_OMNI_LWC_GRADIENT_FREEZE_RELOAD_CPU",
+  "source_sha256": "df933fc772b97bfee5f48d7fb3b47ab6ebea963ed282c7edea06f94ccb5829dd",
+  "shape": [
+    9,
+    32
+  ],
+  "weight_frozen": true,
+  "clipping_gradient_nonzero": true,
+  "full_block_reconstruction_tested": false,
+  "full_model_adapter_complete": false,
+  "method": "omniquant",
+  "gpu_model_admitted": false,
+  "real_trajectory_completed": false
+}

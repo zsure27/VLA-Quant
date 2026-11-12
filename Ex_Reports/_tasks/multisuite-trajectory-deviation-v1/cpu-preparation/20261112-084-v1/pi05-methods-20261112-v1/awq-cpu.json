@@ -1,0 +1,16 @@
+{
+  "gate": "PASS_PINNED_AWQ_PRIMITIVE_CPU",
+  "normalized_source_sha256": "7929ee1f97addde95ce1b9c1d55f027b3b4d13fb1b9e6c850ab8a01736914e6c",
+  "source_sha256": "0f4a17c234fde5c422d1328786b29c50dc0d18b8bf1b7d7530eade6313dc0de2",
+  "unchanged_ast_function": true,
+  "shape": [
+    9,
+    128
+  ],
+  "invalid_width_rejected": true,
+  "activation_search_tested": false,
+  "full_model_adapter_complete": false,
+  "method": "awq",
+  "gpu_model_admitted": false,
+  "real_trajectory_completed": false
+}

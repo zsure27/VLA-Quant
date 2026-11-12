@@ -1,0 +1,40 @@
+{
+  "study_id": "multisuite-trajectory-deviation-v1",
+  "server_id": "061",
+  "parent_server_id": "053",
+  "round_id": "20261112-061-oft-long15-resume-v3",
+  "new_complete": 51,
+  "cumulative_unique_complete": 480,
+  "bf16_cumulative": 80,
+  "quantized_pairs_cumulative": 400,
+  "initial_states_complete": [
+    5,
+    15
+  ],
+  "initial15_pairs": 200,
+  "initial15_remaining_cases": [],
+  "unstarted_initials": [
+    25,
+    35,
+    45
+  ],
+  "raw_archive": {
+    "server_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-long15-resume-v3/.closure/round.tar.gz",
+    "bytes": 283007147,
+    "sha256": "7206d6866723352ad8c4f4a948e936bf6dd6228328372e3c159bd52262286909",
+    "members": 2264,
+    "videos": 51,
+    "private_verified": false
+  },
+  "parent_raw_cloud_gap_preserved": true,
+  "new_large_parameters": "server only per user",
+  "current_gpu_round_finished": true,
+  "shutdown_receipt_pending": true,
+  "windows_shutdown_authorized": false,
+  "next_run_rules": [
+    "Require current user-opened host/GPU and new authorization",
+    "Verify current model/profile/science SHA and all old runs plus every control case-runs",
+    "No repeats of 480 completed cases; preserve prior excluded partial attempts",
+    "Prefer new reasonable method admission; do not call all12 or all5initials complete"
+  ]
+}

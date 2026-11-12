@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-11-12T09:50:37.833396+00:00",
+  "state": "RUNNING",
+  "stage": "eval-libero_10",
+  "reason": null,
+  "completed": 43,
+  "gpu": "GPU-e82e143d-7938-5a2f-aea4-56c7f962e5e3, 16527 MiB, 7 %",
+  "process": "   PID   PPID %CPU     ELAPSED COMMAND\n 19223   1481  100       01:24 python\n",
+  "disk_free_bytes": 63562919936,
+  "quota": {
+    "source": "codex_api",
+    "window_minutes": 300,
+    "observed_at": "2026-11-12T09:50:15+00:00",
+    "remaining_percent": 90,
+    "resets_at": 1794493724
+  }
+}

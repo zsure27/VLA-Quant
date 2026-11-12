@@ -1,0 +1,11 @@
+{
+  "gate": "PASS_ORIGINAL_GPTQ_SMALL_CPU_PACK",
+  "shape": [
+    7,
+    33
+  ],
+  "groups": 3,
+  "ragged_last_group": true,
+  "odd_nibble_count": true,
+  "gpu_model_admitted": false
+}
