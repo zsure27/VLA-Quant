@@ -1,0 +1,49 @@
+{
+  "round_id": "qvla-pilot-v1",
+  "config_sha256": "72fcc415b987e53ac84de6964abc71f993eec14f1cad26e0cc668b2ff059c27a",
+  "plan_sha256": "7d5ea6f51c7eee79b943c7daee17c4e1463558989d89d5d53e3c04054980ceb8",
+  "started_at": "2026-11-12T10:50:59.062498+00:00",
+  "state": "PAUSED_SERVER_LEFT_ON",
+  "stages": [
+    {
+      "id": "model-admission",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4/scripts/trajectory_drift_20261112/admit_oft_qvla_injection_v1.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--gates",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+        "--output",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v1/admission"
+      ],
+      "started_at": "2026-11-12T10:51:15.158478+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4"
+      },
+      "exit_code": 1,
+      "elapsed_seconds": 34.035712882876396,
+      "ended_at": "2026-11-12T10:51:49.194194+00:00"
+    }
+  ],
+  "actual": {
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "gpu": "NVIDIA GeForce RTX 4090, 24564, 0, 0",
+    "disk_free_bytes": 62775861248
+  },
+  "updated_at": "2026-11-12T10:51:49.227859+00:00",
+  "current_stage": "model-admission",
+  "child_pid": 3035,
+  "reason": "Stage model-admission failed: exit 1",
+  "ended_at": "2026-11-12T10:51:49.195544+00:00",
+  "closure_errors": [],
+  "cloud_sync_deferred": true,
+  "persistent_originals_retained": true,
+  "public_git_sync_deferred": true
+}

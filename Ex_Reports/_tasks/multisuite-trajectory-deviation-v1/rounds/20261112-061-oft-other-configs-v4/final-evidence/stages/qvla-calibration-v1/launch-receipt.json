@@ -1,0 +1,12 @@
+{
+  "supervisor_pid": 1979,
+  "guard_pid": 1978,
+  "plan_sha256": "e58f8341ed617b7813187fbccf788cd8d33ebf42b174c7a62a43d168c1a76a47",
+  "config_sha256": "3f25184b78356cfb7705378838c8e92bdbdea60db1f61e735acb55beac044ee0",
+  "root_control": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4",
+  "stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-calibration-v1",
+  "gpu_uuid": "GPU-57fe5e94-17ed-8960-1d47-76090d594f69",
+  "started_at": "2026-11-12T10:42:42.516129+00:00",
+  "stage_success_pauses_for_immediate_continuation": true,
+  "actual_quota_guard_armed": true
+}

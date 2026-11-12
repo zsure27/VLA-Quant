@@ -1,0 +1,49 @@
+{
+  "round_id": "qvla-complete80-v1",
+  "config_sha256": "a36a4f84c627980128f419b0ada3a65ea117ba367457cea3fc5e19abcd111df8",
+  "plan_sha256": "6db3a8a5d2c802f44149c4fa9fae5833abc071bacdc407e78e4591b461350d79",
+  "started_at": "2026-11-12T11:25:44.551203+00:00",
+  "state": "PAUSED_SERVER_LEFT_ON",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4/scripts/trajectory_drift_20261112/run_oft_qvla_cases_v4.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-complete80-v1",
+        "--suite",
+        "libero_spatial"
+      ],
+      "started_at": "2026-11-12T11:25:59.742084+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 823.8640948049724,
+      "ended_at": "2026-11-12T11:39:43.606184+00:00"
+    }
+  ],
+  "actual": {
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "gpu": "NVIDIA GeForce RTX 4090, 24564, 0, 0",
+    "disk_free_bytes": 62744616960
+  },
+  "updated_at": "2026-11-12T11:39:43.648536+00:00",
+  "current_stage": "eval-libero_spatial",
+  "child_pid": 6300,
+  "reason": "signal_or_quota_no_expansion",
+  "ended_at": "2026-11-12T11:39:43.610198+00:00",
+  "closure_errors": [],
+  "cloud_sync_deferred": true,
+  "persistent_originals_retained": true,
+  "public_git_sync_deferred": true
+}

@@ -1,0 +1,62 @@
+{
+  "repository": "zsure27/VLA-Quant-Archives",
+  "release": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+  "release_id": 415605545,
+  "tag": "backup-archive-20261017",
+  "files": {
+    "7206d6866723352ad8c4f4a948e936bf6dd6228328372e3c159bd52262286909": {
+      "source_name": "20261112-061-long15-v3-raw.tar.gz",
+      "source_path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261112-061-long15-v3-raw.tar.gz",
+      "bytes": 283007147,
+      "sha256": "7206d6866723352ad8c4f4a948e936bf6dd6228328372e3c159bd52262286909",
+      "parts": [
+        {
+          "asset_id": 738982035,
+          "name": "sha256-ad981679ba1aac9a77a682710922af0f00211230e65ada4ef380a12bf5b43ed9.part001-of005",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-ad981679ba1aac9a77a682710922af0f00211230e65ada4ef380a12bf5b43ed9.part001-of005",
+          "offset": 0,
+          "bytes": 67108864,
+          "sha256": "ad981679ba1aac9a77a682710922af0f00211230e65ada4ef380a12bf5b43ed9",
+          "download_verified": true
+        },
+        {
+          "asset_id": 738981954,
+          "name": "sha256-ac726b553ab6a036c52d0e1fa130e54fb28f8a98dc8f3829033958dfd65d7e65.part002-of005",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-ac726b553ab6a036c52d0e1fa130e54fb28f8a98dc8f3829033958dfd65d7e65.part002-of005",
+          "offset": 67108864,
+          "bytes": 67108864,
+          "sha256": "ac726b553ab6a036c52d0e1fa130e54fb28f8a98dc8f3829033958dfd65d7e65",
+          "download_verified": true
+        },
+        {
+          "asset_id": 738982158,
+          "name": "sha256-6cb965ba69cf8cec2d5e0244a1670f587c0dbd12cbaae471cf60f307bed16378.part003-of005",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-6cb965ba69cf8cec2d5e0244a1670f587c0dbd12cbaae471cf60f307bed16378.part003-of005",
+          "offset": 134217728,
+          "bytes": 67108864,
+          "sha256": "6cb965ba69cf8cec2d5e0244a1670f587c0dbd12cbaae471cf60f307bed16378",
+          "download_verified": true
+        },
+        {
+          "asset_id": 738982243,
+          "name": "sha256-d4e5e56b12f063cc7158303c7d7b90710e87fdcb67e174d40723c67fd4ec5420.part004-of005",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-d4e5e56b12f063cc7158303c7d7b90710e87fdcb67e174d40723c67fd4ec5420.part004-of005",
+          "offset": 201326592,
+          "bytes": 67108864,
+          "sha256": "d4e5e56b12f063cc7158303c7d7b90710e87fdcb67e174d40723c67fd4ec5420",
+          "download_verified": true
+        },
+        {
+          "asset_id": 739192896,
+          "name": "sha256-374ce9b89242a9a8e62d8cd7e8d9fdfb809477225cb9f0be91d8f23aa9095c1c.part005-of005",
+          "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-374ce9b89242a9a8e62d8cd7e8d9fdfb809477225cb9f0be91d8f23aa9095c1c.part005-of005",
+          "offset": 268435456,
+          "bytes": 14571691,
+          "sha256": "374ce9b89242a9a8e62d8cd7e8d9fdfb809477225cb9f0be91d8f23aa9095c1c",
+          "download_verified": true
+        }
+      ],
+      "remote_download_sha256_verified": true
+    }
+  }
+}

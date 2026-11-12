@@ -1,0 +1,168 @@
+{
+  "gate": "PASS_QVLA_AVAILABLE_RAW_PAIRS_QUOTA_STOP",
+  "quota_stopped_partial": true,
+  "planned": 76,
+  "completed": 14,
+  "success": 14,
+  "reference_success": 13,
+  "rescue": 1,
+  "break_count": 0,
+  "metrics": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 102,
+      "translation_p95_mm": 20.456072686874734,
+      "rotation_p95_deg": 2.9133390578529794,
+      "first_same_input_chunk_mse": 0.0002614841871742175
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 97,
+      "translation_p95_mm": 33.59475577110062,
+      "rotation_p95_deg": 4.376855606914875,
+      "first_same_input_chunk_mse": 0.0009657490779034031
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 82,
+      "translation_p95_mm": 20.844676645639847,
+      "rotation_p95_deg": 14.368620093393126,
+      "first_same_input_chunk_mse": 0.000851821742436707
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 123,
+      "translation_p95_mm": 52.69981283196298,
+      "rotation_p95_deg": 11.580936595620988,
+      "first_same_input_chunk_mse": 0.00045728129015801516
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": false,
+      "common_steps": 90,
+      "translation_p95_mm": 65.94635034124552,
+      "rotation_p95_deg": 12.84823857599134,
+      "first_same_input_chunk_mse": 0.0015496007213723366
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 102,
+      "translation_p95_mm": 73.8213487714381,
+      "rotation_p95_deg": 6.992995269602322,
+      "first_same_input_chunk_mse": 0.0018051961583606224
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 118,
+      "translation_p95_mm": 51.974100230088624,
+      "rotation_p95_deg": 4.035045574422035,
+      "first_same_input_chunk_mse": 0.0008522961098056494
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 95,
+      "translation_p95_mm": 20.22900848169652,
+      "rotation_p95_deg": 2.7145041338531386,
+      "first_same_input_chunk_mse": 0.0014859964462738372
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 118,
+      "translation_p95_mm": 62.20921152929204,
+      "rotation_p95_deg": 10.086755467566011,
+      "first_same_input_chunk_mse": 0.0037400691188210415
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 77,
+      "translation_p95_mm": 21.35595886661686,
+      "rotation_p95_deg": 2.3114421013633724,
+      "first_same_input_chunk_mse": 0.00042045771015285395
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 103,
+      "translation_p95_mm": 42.124099429119475,
+      "rotation_p95_deg": 2.7186471338227913,
+      "first_same_input_chunk_mse": 0.00047858307032905875
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 97,
+      "translation_p95_mm": 46.42443650018969,
+      "rotation_p95_deg": 2.8529178892230274,
+      "first_same_input_chunk_mse": 0.0022077901960394575
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 83,
+      "translation_p95_mm": 27.061624775296075,
+      "rotation_p95_deg": 2.9311594849692604,
+      "first_same_input_chunk_mse": 0.0003220907069259366
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "reset_index": 15,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 119,
+      "translation_p95_mm": 40.05112002814148,
+      "rotation_p95_deg": 12.31394857017589,
+      "first_same_input_chunk_mse": 0.0008158578099701083
+    }
+  ],
+  "original_frozen_metric_source_sha256": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f",
+  "gates_sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+}

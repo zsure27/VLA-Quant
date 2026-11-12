@@ -1,0 +1,79 @@
+{
+  "round_id": "qvla-calibration-v2",
+  "config_sha256": "84f6571ab9ee47914207bc3b1d039c1090a6188661d2361f5e43fedd680f2560",
+  "plan_sha256": "3c7c1caf47d25f2967cdfd84c1b0f3365dc6f36caf84fafa34dd4df3627915f2",
+  "started_at": "2026-11-12T10:46:05.545539+00:00",
+  "state": "PAUSED_SERVER_LEFT_ON",
+  "stages": [
+    {
+      "id": "model-admission",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4/scripts/trajectory_drift_20261112/run_qvla_calibration_libero_v2.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-calibration-v2",
+        "--profile",
+        "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261112-qvla-action4-v2"
+      ],
+      "started_at": "2026-11-12T10:46:21.536206+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 85.08679480478168,
+      "ended_at": "2026-11-12T10:47:46.623007+00:00"
+    },
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/sources/QVLA-official-oft-20261110-v1/openvla-oft/qvla/assign_gates_from_sensitivity.py",
+        "--proxy_pt",
+        "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261112-qvla-action4-v2/proxy.pt",
+        "--bits",
+        "0,4,8,16",
+        "--target_avg_bits",
+        "4",
+        "--max_prune_ratio",
+        "0.01",
+        "--out_json",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json"
+      ],
+      "started_at": "2026-11-12T10:47:46.625326+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4"
+      },
+      "exit_code": 0,
+      "elapsed_seconds": 56.05984288826585,
+      "ended_at": "2026-11-12T10:48:42.685177+00:00"
+    }
+  ],
+  "actual": {
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "gpu": "NVIDIA GeForce RTX 4090, 24564, 0, 0",
+    "disk_free_bytes": 62932520960
+  },
+  "updated_at": "2026-11-12T10:48:42.728589+00:00",
+  "current_stage": "eval-libero_spatial",
+  "child_pid": 2898,
+  "reason": "task_commands_complete",
+  "ended_at": "2026-11-12T10:48:42.690280+00:00",
+  "closure_errors": [],
+  "cloud_sync_deferred": true,
+  "persistent_originals_retained": true,
+  "public_git_sync_deferred": true
+}

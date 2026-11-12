@@ -1,0 +1,123 @@
+{
+  "completed": 18,
+  "success": 18,
+  "reference_success": 17,
+  "rescue": 1,
+  "break_count": 0,
+  "gates_sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b",
+  "by_suite": {
+    "libero_spatial": {
+      "completed": 15,
+      "success": 15,
+      "reference_success": 14
+    },
+    "libero_object": {
+      "completed": 1,
+      "success": 1,
+      "reference_success": 1
+    },
+    "libero_goal": {
+      "completed": 1,
+      "success": 1,
+      "reference_success": 1
+    },
+    "libero_10": {
+      "completed": 1,
+      "success": 1,
+      "reference_success": 1
+    }
+  },
+  "case_keys": [
+    [
+      "libero_10",
+      0,
+      5
+    ],
+    [
+      "libero_goal",
+      0,
+      5
+    ],
+    [
+      "libero_object",
+      0,
+      5
+    ],
+    [
+      "libero_spatial",
+      0,
+      5
+    ],
+    [
+      "libero_spatial",
+      0,
+      15
+    ],
+    [
+      "libero_spatial",
+      1,
+      5
+    ],
+    [
+      "libero_spatial",
+      1,
+      15
+    ],
+    [
+      "libero_spatial",
+      2,
+      5
+    ],
+    [
+      "libero_spatial",
+      2,
+      15
+    ],
+    [
+      "libero_spatial",
+      3,
+      5
+    ],
+    [
+      "libero_spatial",
+      3,
+      15
+    ],
+    [
+      "libero_spatial",
+      4,
+      5
+    ],
+    [
+      "libero_spatial",
+      4,
+      15
+    ],
+    [
+      "libero_spatial",
+      5,
+      5
+    ],
+    [
+      "libero_spatial",
+      6,
+      5
+    ],
+    [
+      "libero_spatial",
+      7,
+      5
+    ],
+    [
+      "libero_spatial",
+      8,
+      5
+    ],
+    [
+      "libero_spatial",
+      9,
+      5
+    ]
+  ],
+  "claim_scope": "available paired development trajectories only; no universal changepoint, no full80 unless count80"
+}

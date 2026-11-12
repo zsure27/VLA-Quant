@@ -1,0 +1,49 @@
+{
+  "round_id": "qvla-pilot-v3",
+  "config_sha256": "71bff88fb769e75c13407b42048a90978989b6c3553c9075099de95fa8acbc8a",
+  "plan_sha256": "57b6e8a9d65195956840dd82891887daa9907837c5fb7a08dcf71c28757d99ff",
+  "started_at": "2026-11-12T11:11:31.663281+00:00",
+  "state": "PAUSED_SERVER_LEFT_ON",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4/scripts/trajectory_drift_20261112/run_oft_qvla_cases_v3.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v3",
+        "--suite",
+        "libero_spatial"
+      ],
+      "started_at": "2026-11-12T11:11:46.701143+00:00",
+      "env": {
+        "PYTHONHASHSEED": "7",
+        "WANDB_MODE": "disabled",
+        "MUJOCO_GL": "egl",
+        "PYOPENGL_PLATFORM": "egl",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4:/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-other-v4"
+      },
+      "exit_code": 1,
+      "elapsed_seconds": 52.05685495957732,
+      "ended_at": "2026-11-12T11:12:38.758004+00:00"
+    }
+  ],
+  "actual": {
+    "hostname": "autodl-container-b9be4c9ca8-1852b227",
+    "gpu": "NVIDIA GeForce RTX 4090, 24564, 0, 0",
+    "disk_free_bytes": 62758862848
+  },
+  "updated_at": "2026-11-12T11:12:38.795133+00:00",
+  "current_stage": "eval-libero_spatial",
+  "child_pid": 4060,
+  "reason": "Stage eval-libero_spatial failed: exit 1",
+  "ended_at": "2026-11-12T11:12:38.759932+00:00",
+  "closure_errors": [],
+  "cloud_sync_deferred": true,
+  "persistent_originals_retained": true,
+  "public_git_sync_deferred": true
+}

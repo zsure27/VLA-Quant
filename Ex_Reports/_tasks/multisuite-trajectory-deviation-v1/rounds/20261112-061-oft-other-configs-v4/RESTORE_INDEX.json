@@ -1,0 +1,127 @@
+{
+  "round_id": "20261112-061-oft-other-configs-v4",
+  "server_id": "061",
+  "source_root": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4",
+  "new_qvla_complete": 18,
+  "prior_unique_complete": 480,
+  "cumulative_unique_complete": 498,
+  "qvla_remaining_same80": 62,
+  "completed_keys": [
+    [
+      "libero_10",
+      0,
+      5
+    ],
+    [
+      "libero_goal",
+      0,
+      5
+    ],
+    [
+      "libero_object",
+      0,
+      5
+    ],
+    [
+      "libero_spatial",
+      0,
+      5
+    ],
+    [
+      "libero_spatial",
+      0,
+      15
+    ],
+    [
+      "libero_spatial",
+      1,
+      5
+    ],
+    [
+      "libero_spatial",
+      1,
+      15
+    ],
+    [
+      "libero_spatial",
+      2,
+      5
+    ],
+    [
+      "libero_spatial",
+      2,
+      15
+    ],
+    [
+      "libero_spatial",
+      3,
+      5
+    ],
+    [
+      "libero_spatial",
+      3,
+      15
+    ],
+    [
+      "libero_spatial",
+      4,
+      5
+    ],
+    [
+      "libero_spatial",
+      4,
+      15
+    ],
+    [
+      "libero_spatial",
+      5,
+      5
+    ],
+    [
+      "libero_spatial",
+      6,
+      5
+    ],
+    [
+      "libero_spatial",
+      7,
+      5
+    ],
+    [
+      "libero_spatial",
+      8,
+      5
+    ],
+    [
+      "libero_spatial",
+      9,
+      5
+    ]
+  ],
+  "raw_archive_bytes": 41209842,
+  "raw_archive_sha256": "de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113",
+  "private_receipt": "private-archive-verification.json",
+  "private_verified": true,
+  "parameters": "original model/server-only; gates and current control/source in private incremental snapshot",
+  "external_dependencies": "final-evidence/RECOVERY_DEPENDENCIES.json",
+  "historical_parent_cloud_gap_retained": true,
+  "shutdown_receipt_pending": false,
+  "windows_shutdown_authorized": false,
+  "next_run": "fresh user-opened host/GPU, SHA check model/profile/source, dedup all legacy runs and every control case-runs, then62 missing QVLA only; never resume old PID/authorization",
+  "shutdown_execute": true,
+  "shutdown_time_utc": "2026-11-12T11:49:49.231944+00:00",
+  "platform_off_independently_verified": false,
+  "heartbeat_stopped": true,
+  "private_parts": [
+    {
+      "asset_id": 739265819,
+      "name": "sha256-de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113.part001-of001",
+      "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113.part001-of001",
+      "offset": 0,
+      "bytes": 41209842,
+      "sha256": "de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113",
+      "download_verified": true
+    }
+  ],
+  "post_snapshot_figure_code": "plot_qvla_available_pairs_v3.py and PNG in public final commit; no raw changes"
+}

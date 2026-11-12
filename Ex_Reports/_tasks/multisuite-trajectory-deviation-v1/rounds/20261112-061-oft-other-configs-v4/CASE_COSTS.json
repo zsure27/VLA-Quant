@@ -1,0 +1,79 @@
+{
+  "complete_cases": 18,
+  "full_process_wall_seconds": 1070.2455317378044,
+  "includes": "load/hash/contract/trace/video; not integer kernel speed",
+  "cases": [
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task1-reset5",
+      "wall_seconds": 58.63560017198324
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task2-reset5",
+      "wall_seconds": 58.519598707556725
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task3-reset5",
+      "wall_seconds": 56.72656925022602
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task4-reset5",
+      "wall_seconds": 61.02621129900217
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task5-reset5",
+      "wall_seconds": 58.34194714576006
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task6-reset5",
+      "wall_seconds": 58.76244838535786
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task7-reset5",
+      "wall_seconds": 60.81371607258916
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task8-reset5",
+      "wall_seconds": 58.45425545796752
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task9-reset5",
+      "wall_seconds": 60.207538191229105
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task0-reset15",
+      "wall_seconds": 56.92728879675269
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task1-reset15",
+      "wall_seconds": 58.987305108457804
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task2-reset15",
+      "wall_seconds": 58.58038932085037
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task3-reset15",
+      "wall_seconds": 57.593493819236755
+    },
+    {
+      "case_id": "qvla-complete80-v1-qvla-libero_spatial-task4-reset15",
+      "wall_seconds": 59.996389765292406
+    },
+    {
+      "case_id": "qvla-pilot-v4-qvla-libero_10-task0-reset5",
+      "wall_seconds": 67.87563844770193
+    },
+    {
+      "case_id": "qvla-pilot-v4-qvla-libero_goal-task0-reset5",
+      "wall_seconds": 58.621587082743645
+    },
+    {
+      "case_id": "qvla-pilot-v4-qvla-libero_object-task0-reset5",
+      "wall_seconds": 63.075633868575096
+    },
+    {
+      "case_id": "qvla-pilot-v4-qvla-libero_spatial-task0-reset5",
+      "wall_seconds": 57.099920846521854
+    }
+  ]
+}

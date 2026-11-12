@@ -1,0 +1,57 @@
+{
+  "gate": "PASS_QVLA_RAW_QUERY_ACTION_POSE_VIDEO_AND_PAIRED_CASES",
+  "planned": 4,
+  "completed": 4,
+  "success": 4,
+  "reference_success": 4,
+  "rescue": 0,
+  "break_count": 0,
+  "metrics": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 77,
+      "translation_p95_mm": 33.47931943380112,
+      "rotation_p95_deg": 4.269746062656522,
+      "first_same_input_chunk_mse": 0.0006947196377338751
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 135,
+      "translation_p95_mm": 34.46366328357451,
+      "rotation_p95_deg": 14.335493457684807,
+      "first_same_input_chunk_mse": 0.0010991913241147615
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 119,
+      "translation_p95_mm": 40.06942451371108,
+      "rotation_p95_deg": 4.862735287537641,
+      "first_same_input_chunk_mse": 0.00043725726038242637
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "reference_success": true,
+      "common_steps": 270,
+      "translation_p95_mm": 69.9474172965659,
+      "rotation_p95_deg": 4.615458061284391,
+      "first_same_input_chunk_mse": 0.0006789581867791188
+    }
+  ],
+  "original_frozen_metric_source_sha256": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f",
+  "gates_sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+}

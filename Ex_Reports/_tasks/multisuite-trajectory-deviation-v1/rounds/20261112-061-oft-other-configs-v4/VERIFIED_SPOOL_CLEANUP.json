@@ -1,0 +1,18 @@
+{
+  "gate": "PASS_EXACT_VERIFIED_INCREMENTAL_SPOOL_CLEANUP",
+  "deleted": [
+    {
+      "path": ".local\\transfer\\20261112-061-qvla-v4-raw.tar.gz",
+      "bytes": 41209842,
+      "sha256": "de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113"
+    },
+    {
+      "path": ".local\\transfer\\061-qvla-v4-readback\\sha256-de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113.part001-of001.readback",
+      "bytes": 41209842,
+      "sha256": "de41da04d39df414fa03a22251ff0ce240336fa45ea5bae85fe8b63befea9113"
+    }
+  ],
+  "bytes": 82419684,
+  "time_utc": "2026-11-12T12:04:38.772339+00:00",
+  "historical_parent_original_retained": true
+}

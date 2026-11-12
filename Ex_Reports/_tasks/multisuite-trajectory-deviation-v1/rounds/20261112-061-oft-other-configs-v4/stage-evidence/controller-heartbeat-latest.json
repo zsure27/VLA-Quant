@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-11-12T11:24:13.661426+00:00",
+  "active_stage": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v4",
+  "state": "PAUSED_SERVER_LEFT_ON",
+  "reason": "task_commands_complete",
+  "substage": "eval-libero_10",
+  "guard": {
+    "state": "CONTINUATION_ARMED",
+    "time_utc": "2026-11-12T11:23:44.725870+00:00",
+    "shutdown_only_on_actual_quota_or_explicit_unrecoverable_close": true
+  },
+  "gpu": "GPU-57fe5e94-17ed-8960-1d47-76090d594f69, 0 MiB, 0 %",
+  "disk_free_bytes": 62744801280,
+  "quota": {
+    "source": "codex_api",
+    "window_minutes": 300,
+    "observed_at": "2026-11-12T11:23:40Z",
+    "remaining_percent": 26,
+    "resets_at": 1794493724
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "external": [
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261112-qvla-action4-v2/proxy.pt",
+      "bytes": 59246670,
+      "sha256": "e6ad69775ec319a4d295938e3190280fd63f4843bdd6c34d530c55111373be9f",
+      "retained_server": true
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/checks/20261110-qvla-official-oft-source-v1.json",
+      "bytes": 50991,
+      "sha256": "e1b7e9cc63228a7975116eba27344102f1afdfb6de9d465b01c5b430bc4ee35e",
+      "retained_server": true
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/calibration/20261109-four-suite-reset0-v1/manifest.json",
+      "bytes": 1738,
+      "sha256": "c5ec220b781e284e7deaddde0225a96d876324663c41902c4f71e818f1b17166",
+      "retained_server": true
+    }
+  ],
+  "base_and_parent_references": "Model/parent BF16 identity in immutable stage preflight, plans and series; prior480 retained; legacy1.05GB cloud gap retained",
+  "gates": "20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+  "no_claim_full_external_cloud_backup": true
+}
