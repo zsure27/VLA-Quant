@@ -52,5 +52,7 @@
     "Prioritize new-method necessary gates/small pilots; admitted missing cases are backup queue, not mandatory all240 expansion"
   ],
   "previous_shutdown_receipt_recovered": "RECOVERED_PREVIOUS_SHUTDOWN_RECEIPT.json",
-  "keep_current_cpu_instance_on": true
+  "keep_current_cpu_instance_on": true,
+  "source_byte_restore_recipe": "SOURCE_BYTE_RESTORE_FROM_GIT.json",
+  "code_results_public_git_verified_sha": "c6323b795f0a52fe25ac3f6ce7c06dcbcb747699"
 }
