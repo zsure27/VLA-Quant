@@ -1,0 +1,155 @@
+{
+  "gate": "PASS_DUQUANT_OFT_CORE_SHAPES_RELOAD_AND_ROLE_CPU",
+  "original_commit": "d56cfc6fe97c34c0eb100fec82fe439865905679",
+  "source_sha256": "99c2a0d76866e2289658fb85a2b7e2673c23517fb1d9c68642753bf5b9830b1a",
+  "generator_git_blob": "ba28805a63bf18cee2bcc23ab042b1c38a84ad15",
+  "rotation_asset_sha256": "f6bb6e62958cbb33c58e70a0b381e11e0b830f69c4e2994675867da2d143ee0e",
+  "binding_sha256": "62b550c652a6f649efecd524bc457218b0971e002e06e01ff7111f75a67187ef",
+  "checks": [
+    {
+      "input_width": 128,
+      "rotation_block": 128,
+      "leading_shape": [
+        2,
+        3
+      ],
+      "quant_disabled_bitwise": true,
+      "all16_transform_max_abs": 1.6093254089355469e-06,
+      "weight4_activation_results": {
+        "8": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        },
+        "4": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        }
+      },
+      "input_and_original_weight_unchanged": true
+    },
+    {
+      "input_width": 4304,
+      "rotation_block": 16,
+      "leading_shape": [
+        2,
+        3
+      ],
+      "quant_disabled_bitwise": true,
+      "all16_transform_max_abs": 9.313225746154785e-07,
+      "weight4_activation_results": {
+        "8": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        },
+        "4": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        }
+      },
+      "input_and_original_weight_unchanged": true
+    },
+    {
+      "input_width": 11008,
+      "rotation_block": 128,
+      "leading_shape": [
+        2,
+        3
+      ],
+      "quant_disabled_bitwise": true,
+      "all16_transform_max_abs": 1.9818544387817383e-06,
+      "weight4_activation_results": {
+        "8": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        },
+        "4": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        }
+      },
+      "input_and_original_weight_unchanged": true
+    },
+    {
+      "input_width": 588,
+      "rotation_block": 4,
+      "leading_shape": [
+        2,
+        3
+      ],
+      "quant_disabled_bitwise": true,
+      "all16_transform_max_abs": 9.5367431640625e-07,
+      "weight4_activation_results": {
+        "8": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        },
+        "4": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        }
+      },
+      "input_and_original_weight_unchanged": true
+    },
+    {
+      "input_width": 768,
+      "rotation_block": 128,
+      "leading_shape": [
+        2,
+        3
+      ],
+      "quant_disabled_bitwise": true,
+      "all16_transform_max_abs": 1.9073486328125e-06,
+      "weight4_activation_results": {
+        "8": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        },
+        "4": {
+          "original_formula_bitwise": true,
+          "save_reload_bitwise": true,
+          "invalid_permutation_rejected": true,
+          "wrong_precision_rejected": true
+        }
+      },
+      "input_and_original_weight_unchanged": true
+    }
+  ],
+  "patch_checks": [
+    {
+      "kernel": 14,
+      "width": 588,
+      "block": 4,
+      "unquantized_unfold_max_abs": 9.5367431640625e-07,
+      "w4a8_w4a4_finite": true
+    },
+    {
+      "kernel": 16,
+      "width": 768,
+      "block": 128,
+      "unquantized_unfold_max_abs": 8.344650268554688e-07,
+      "w4a8_w4a4_finite": true
+    }
+  ],
+  "model_loaded": false,
+  "gpu_started": false,
+  "qualification": "Core primitives only; no LET/LWC or attention-matmul path; 4 fixture rotation steps, not final calibration256; no full422 runtime injection/calibration/native action admission",
+  "model_admitted": false
+}

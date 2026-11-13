@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-11-13T05:40:59.446836+00:00",
+  "hostname": "autodl-container-b9be4c9ca8-1852b227",
+  "gpu_present": false,
+  "gpu_probe_exit": 6,
+  "gpu_probe_text": "No devices were found\n",
+  "memory_limits": {
+    "/sys/fs/cgroup/memory.max": "2147483648"
+  },
+  "authorization": "Current user opened061 withoutGPU: CPU preparation only; no model loading, GPU admission or rollout authorized",
+  "old_running_not_resumed": true
+}

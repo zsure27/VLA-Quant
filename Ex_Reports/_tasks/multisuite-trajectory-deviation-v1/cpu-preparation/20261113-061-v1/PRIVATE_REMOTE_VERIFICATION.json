@@ -1,0 +1,23 @@
+{
+  "repository": "zsure27/VLA-Quant-Archives",
+  "release": "https://github.com/zsure27/VLA-Quant-Archives/releases/tag/backup-archive-20261017",
+  "archive": {
+    "source_name": "20261113-061-cpu-prep-raw.tar.gz",
+    "source_path": "C:\\Users\\zsure\\Documents\\Triton\\.codex-work\\vla-quant-sync-20260915\\.local\\transfer\\20261113-061-cpu-prep-raw.tar.gz",
+    "bytes": 3955456,
+    "sha256": "df8848bc9ea2369a37058bc2f7b3ba0b103d3cf17e0620232beb0cc9942ea19a",
+    "parts": [
+      {
+        "asset_id": 742545794,
+        "name": "sha256-df8848bc9ea2369a37058bc2f7b3ba0b103d3cf17e0620232beb0cc9942ea19a.part001-of001",
+        "url": "https://github.com/zsure27/VLA-Quant-Archives/releases/download/backup-archive-20261017/sha256-df8848bc9ea2369a37058bc2f7b3ba0b103d3cf17e0620232beb0cc9942ea19a.part001-of001",
+        "offset": 0,
+        "bytes": 3955456,
+        "sha256": "df8848bc9ea2369a37058bc2f7b3ba0b103d3cf17e0620232beb0cc9942ea19a",
+        "download_verified": true
+      }
+    ],
+    "remote_download_sha256_verified": true
+  },
+  "scope": "CPU fixtures/rotations/control metadata only; excludes external full models/real trajectory data"
+}

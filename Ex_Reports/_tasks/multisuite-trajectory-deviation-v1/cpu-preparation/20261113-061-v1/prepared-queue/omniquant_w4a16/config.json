@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "task": {
+    "id": "multisuite-trajectory-deviation-v1",
+    "name_zh": "\u56db\u5957\u4ef6\u591a\u4efb\u52a1\u8f68\u8ff9\u504f\u79fb\u8bca\u65ad",
+    "started_at": "2026-11-06T15:04:07+08:00",
+    "hypothesis": "\u68c0\u9a8c\u91cf\u5316\u662f\u5426\u6539\u53d8\u5e73\u79fb\u5206\u6563\u5ea6\u3001\u65cb\u8f6c\u6709\u5411\u6f02\u79fb\uff0c\u4ee5\u53ca\u662f\u5426\u5b58\u5728\u8de8\u521d\u6001\u91cd\u590d\u7684\u53ef\u8865\u507f\u7a97\u53e3\uff1b\u5141\u8bb8\u65e0\u62d0\u70b9\u3002",
+    "changed_variable": "\u9996\u8f6e\u56fa\u5b9a\u591asuite OFT\u68c0\u67e5\u70b9\u3001\u8f93\u5165\u30018\u52a8\u4f5c\u6267\u884c\u4e0e\u914d\u5bf9\u521d\u6001\uff0c\u4ec5\u6539\u53d8\u6743\u91cd\u91cf\u5316\u6863\uff1b\u4e0d\u8bad\u7ec3\u3002"
+  },
+  "model": {
+    "checkpoint": "/root/autodl-tmp/trajectory-drift-20261107/models/openvla_oft",
+    "identity_sha256": "cc743563f5b1d0c1e7fa3f8835e754b352e79a590461334a44d473688f0d08ac",
+    "oft_root": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft",
+    "libero_root": "/root/autodl-tmp/trajectory-drift-20261107/sources/LIBERO"
+  },
+  "quantization": {
+    "method": "omniquant",
+    "weight_bits": 4,
+    "activation_bits": 16,
+    "profiles": [
+      {
+        "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt",
+        "bytes": 4589938380,
+        "sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995"
+      }
+    ]
+  },
+  "finetuning": {
+    "method": "none",
+    "train": false
+  },
+  "data": {},
+  "evaluation": {
+    "seed": 7,
+    "env_seed": 0,
+    "suites": [
+      {
+        "name": "libero_spatial",
+        "role": "development",
+        "reset_offset": 25,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_object",
+        "role": "development",
+        "reset_offset": 25,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_goal",
+        "role": "development",
+        "reset_offset": 25,
+        "resets_per_task": 1
+      },
+      {
+        "name": "libero_10",
+        "role": "development",
+        "reset_offset": 25,
+        "resets_per_task": 1
+      }
+    ]
+  },
+  "control": {
+    "server_id": "061",
+    "persistent_root": "/root/autodl-tmp/trajectory-drift-20261107",
+    "heartbeat_seconds": 900,
+    "quota_max_age_seconds": 1020,
+    "start_disk_gib": 8,
+    "runtime_disk_gib": 6,
+    "stop_expansion_remaining_percent": 15,
+    "close_remaining_percent": 10,
+    "shutdown_provider": "user_pause",
+    "defer_cloud_sync": true,
+    "backup_argv": [
+      "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+      "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/scripts/infra_archive_run.py",
+      "--run-dir",
+      "{run_dir}",
+      "--prepare-only"
+    ],
+    "git_sync_argv": [
+      "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+      "-c",
+      "raise SystemExit('Consolidated sync belongs to the newly authorized controller')"
+    ]
+  },
+  "binding": {
+    "id": "oft-admitted-method-initial25-cpu-template-v1",
+    "verified_suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "quantizers": [
+      "omniquant"
+    ],
+    "strategies": [
+      "none"
+    ],
+    "gate_files": [
+      {
+        "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/inventory/result.json",
+        "sha256": "6b40b51f142f52a58fa473016bc476de6e74083dbb8bc2402608a3079303dfd3",
+        "expected_gate": "PASS_CPU_ASSETS_600_IDENTITIES_AND_240_PENDING_INITIAL25"
+      }
+    ],
+    "evaluation_argv": [
+      "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+      "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py",
+      "--root",
+      "/root/autodl-tmp/trajectory-drift-20261107",
+      "--round-dir",
+      "{run_dir}",
+      "--suite",
+      "{suite}",
+      "--condition",
+      "omniquant_w4a16"
+    ],
+    "evaluation_audit_argv": [
+      "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+      "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/scripts/trajectory_drift_20261113/audit_prepared_pairs_v1.py",
+      "--root",
+      "/root/autodl-tmp/trajectory-drift-20261107",
+      "--series",
+      "{run_dir}/series.json",
+      "--round-dir",
+      "{run_dir}",
+      "--output",
+      "{run_dir}/paired-audit"
+    ]
+  },
+  "scope": {
+    "executable": false,
+    "stage": "CPU template only; no GPU authorization",
+    "cases": 40,
+    "same80_candidates_completed": true,
+    "no_old_runner_or_quota_override": true,
+    "requires_fresh_root_shutdown_guard": true
+  }
+}

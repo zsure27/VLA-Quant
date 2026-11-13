@@ -1,0 +1,55 @@
+{
+  "gate": "PASS_CPU_ASSETS_600_IDENTITIES_AND_240_PENDING_INITIAL25",
+  "observed_at": "2026-11-13T05:53:01.848015+00:00",
+  "model_files_verified": 25,
+  "model_bytes_verified": 15939168050,
+  "checkpoint_receipt_sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc",
+  "profiles": {
+    "awq_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/awq.pt",
+      "bytes": 189535869,
+      "sha256": "8320b575d18991fc58b78189ceec22f028ab520f5d8ce4bfa9429490c78a48ce"
+    },
+    "gptq_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-full-v1/profile.pt",
+      "bytes": 4029453692,
+      "sha256": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a"
+    },
+    "omniquant_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt",
+      "bytes": 4589938380,
+      "sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995"
+    },
+    "smoothquant_w4a4": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt",
+      "bytes": 6195404,
+      "sha256": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522"
+    },
+    "smoothquant_w4a8": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt",
+      "bytes": 6195404,
+      "sha256": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522"
+    },
+    "qvla_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+      "bytes": 16548339,
+      "sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+    }
+  },
+  "complete_case_identities": 600,
+  "repeated_controls_excluded": 4,
+  "global_result_files_checked": 604,
+  "pending_initial25": 240,
+  "source_frozen_files_verified": {
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_drift_v3.py": "19db0878252809f595962e187771ebf98fec0900fc5247cd39c0c26cb8f1d8e3",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/on_policy_capture.py": "162744c1fbb51abcc1095ccbeaaef65c6a76b580686adf4dedebe3d80d439b94",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/baseline_contract.py": "8ece721cfd10c694fbb67b9cd5dd8f5fe33f626a2d586c34a28348c3348038c7",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_diagnostics_v1.py": "b439fbed0b3a6d509fba3272e139798c0e69459f0e6c82c77395dfce41dd3bdc",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/native_oft_trace_v1.py": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f"
+  },
+  "full_raw_reaudit_performed": false,
+  "raw_evidence": "Prior per-query/action/pose/video audits retained by SHA; current pass rechecks complete result identities, all model bytes, profile bytes and sources.",
+  "next_gpu_requires_new_auth": true,
+  "gpu_started": false,
+  "full_model_loaded": false
+}

@@ -1,0 +1,55 @@
+{
+  "gate": "PASS_BF16_AUTOCAST_DUQUANT_CPU_COMPONENT_ONLY",
+  "checks": [
+    {
+      "width": 128,
+      "block": 128,
+      "precisions": {
+        "8": {
+          "finite": true,
+          "output_dtype": "torch.bfloat16",
+          "disabled_bitwise": true
+        },
+        "4": {
+          "finite": true,
+          "output_dtype": "torch.bfloat16",
+          "disabled_bitwise": true
+        }
+      }
+    },
+    {
+      "width": 4304,
+      "block": 16,
+      "precisions": {
+        "8": {
+          "finite": true,
+          "output_dtype": "torch.bfloat16",
+          "disabled_bitwise": true
+        },
+        "4": {
+          "finite": true,
+          "output_dtype": "torch.bfloat16",
+          "disabled_bitwise": true
+        }
+      }
+    },
+    {
+      "width": 588,
+      "block": 4,
+      "precisions": {
+        "8": {
+          "finite": true,
+          "output_dtype": "torch.bfloat16",
+          "disabled_bitwise": true
+        },
+        "4": {
+          "finite": true,
+          "output_dtype": "torch.bfloat16",
+          "disabled_bitwise": true
+        }
+      }
+    }
+  ],
+  "gpu_or_model_admitted": false,
+  "qualification": "Small CPU BF16 autocast fixtures only; GPU full action/rotation equivalence still required"
+}

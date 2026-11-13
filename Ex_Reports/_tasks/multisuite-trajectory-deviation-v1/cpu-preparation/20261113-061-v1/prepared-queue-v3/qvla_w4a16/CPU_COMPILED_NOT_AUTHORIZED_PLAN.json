@@ -1,0 +1,1763 @@
+{
+  "schema_version": 1,
+  "config_sha256": "64771cb7948ce495ac8700aca457a207bb27ecde88dffab027202422124a40c4",
+  "config": {
+    "schema_version": 1,
+    "task": {
+      "id": "multisuite-trajectory-deviation-v1",
+      "name_zh": "\u56db\u5957\u4ef6\u591a\u4efb\u52a1\u8f68\u8ff9\u504f\u79fb\u8bca\u65ad",
+      "started_at": "2026-11-06T15:04:07+08:00",
+      "hypothesis": "\u68c0\u9a8c\u91cf\u5316\u662f\u5426\u6539\u53d8\u5e73\u79fb\u5206\u6563\u5ea6\u3001\u65cb\u8f6c\u6709\u5411\u6f02\u79fb\uff0c\u4ee5\u53ca\u662f\u5426\u5b58\u5728\u8de8\u521d\u6001\u91cd\u590d\u7684\u53ef\u8865\u507f\u7a97\u53e3\uff1b\u5141\u8bb8\u65e0\u62d0\u70b9\u3002",
+      "changed_variable": "\u9996\u8f6e\u56fa\u5b9a\u591asuite OFT\u68c0\u67e5\u70b9\u3001\u8f93\u5165\u30018\u52a8\u4f5c\u6267\u884c\u4e0e\u914d\u5bf9\u521d\u6001\uff0c\u4ec5\u6539\u53d8\u6743\u91cd\u91cf\u5316\u6863\uff1b\u4e0d\u8bad\u7ec3\u3002"
+    },
+    "model": {
+      "checkpoint": "/root/autodl-tmp/trajectory-drift-20261107/models/openvla_oft",
+      "identity_sha256": "cc743563f5b1d0c1e7fa3f8835e754b352e79a590461334a44d473688f0d08ac",
+      "oft_root": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft",
+      "libero_root": "/root/autodl-tmp/trajectory-drift-20261107/sources/LIBERO"
+    },
+    "quantization": {
+      "method": "qvla",
+      "weight_bits": 4,
+      "activation_bits": 16,
+      "profiles": [
+        {
+          "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+          "bytes": 16548339,
+          "sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+        }
+      ]
+    },
+    "finetuning": {
+      "method": "none",
+      "train": false
+    },
+    "data": {},
+    "evaluation": {
+      "seed": 7,
+      "env_seed": 0,
+      "suites": [
+        {
+          "name": "libero_spatial",
+          "role": "development",
+          "reset_offset": 25,
+          "resets_per_task": 1
+        },
+        {
+          "name": "libero_object",
+          "role": "development",
+          "reset_offset": 25,
+          "resets_per_task": 1
+        },
+        {
+          "name": "libero_goal",
+          "role": "development",
+          "reset_offset": 25,
+          "resets_per_task": 1
+        },
+        {
+          "name": "libero_10",
+          "role": "development",
+          "reset_offset": 25,
+          "resets_per_task": 1
+        }
+      ]
+    },
+    "control": {
+      "server_id": "061",
+      "persistent_root": "/root/autodl-tmp/trajectory-drift-20261107",
+      "heartbeat_seconds": 900,
+      "quota_max_age_seconds": 1020,
+      "start_disk_gib": 8,
+      "runtime_disk_gib": 6,
+      "stop_expansion_remaining_percent": 15,
+      "close_remaining_percent": 10,
+      "shutdown_provider": "user_pause",
+      "defer_cloud_sync": true,
+      "backup_argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/scripts/infra_archive_run.py",
+        "--run-dir",
+        "{run_dir}",
+        "--prepare-only"
+      ],
+      "git_sync_argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "-c",
+        "raise SystemExit('Consolidated sync belongs to the newly authorized controller')"
+      ]
+    },
+    "binding": {
+      "id": "oft-admitted-method-initial25-cpu-template-v1",
+      "verified_suites": [
+        "libero_spatial",
+        "libero_object",
+        "libero_goal",
+        "libero_10"
+      ],
+      "quantizers": [
+        "qvla"
+      ],
+      "strategies": [
+        "none"
+      ],
+      "gate_files": [
+        {
+          "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/inventory/result.json",
+          "sha256": "6b40b51f142f52a58fa473016bc476de6e74083dbb8bc2402608a3079303dfd3",
+          "expected_gate": "PASS_CPU_ASSETS_600_IDENTITIES_AND_240_PENDING_INITIAL25"
+        }
+      ],
+      "evaluation_argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "{run_dir}",
+        "--suite",
+        "{suite}",
+        "--condition",
+        "qvla_w4a16"
+      ],
+      "evaluation_audit_argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/scripts/trajectory_drift_20261113/audit_prepared_pairs_v2.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--series",
+        "{run_dir}/series.json",
+        "--round-dir",
+        "{run_dir}",
+        "--output",
+        "{run_dir}/paired-audit"
+      ]
+    },
+    "scope": {
+      "executable": false,
+      "stage": "CPU template only; no GPU authorization",
+      "cases": 40,
+      "same80_candidates_completed": true,
+      "no_old_runner_or_quota_override": true,
+      "requires_fresh_root_shutdown_guard": true
+    }
+  },
+  "run_dir": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16",
+  "repo": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1",
+  "stages": [
+    {
+      "id": "eval-libero_spatial",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16",
+        "--suite",
+        "libero_spatial",
+        "--condition",
+        "qvla_w4a16"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1"
+    },
+    {
+      "id": "eval-libero_object",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16",
+        "--suite",
+        "libero_object",
+        "--condition",
+        "qvla_w4a16"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1"
+    },
+    {
+      "id": "eval-libero_goal",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16",
+        "--suite",
+        "libero_goal",
+        "--condition",
+        "qvla_w4a16"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1"
+    },
+    {
+      "id": "eval-libero_10",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16",
+        "--suite",
+        "libero_10",
+        "--condition",
+        "qvla_w4a16"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1"
+    },
+    {
+      "id": "evaluation-audit",
+      "argv": [
+        "/root/autodl-tmp/trajectory-drift-20261107/envs/oft/bin/python",
+        "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/scripts/trajectory_drift_20261113/audit_prepared_pairs_v2.py",
+        "--root",
+        "/root/autodl-tmp/trajectory-drift-20261107",
+        "--series",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16/series.json",
+        "--round-dir",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16",
+        "--output",
+        "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16/paired-audit"
+      ],
+      "cwd": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+      "bytes": 16548339,
+      "sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/inventory/result.json",
+      "sha256": "6b40b51f142f52a58fa473016bc476de6e74083dbb8bc2402608a3079303dfd3",
+      "expected_gate": "PASS_CPU_ASSETS_600_IDENTITIES_AND_240_PENDING_INITIAL25"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_drift_v3.py",
+      "sha256": "19db0878252809f595962e187771ebf98fec0900fc5247cd39c0c26cb8f1d8e3",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/on_policy_capture.py",
+      "sha256": "162744c1fbb51abcc1095ccbeaaef65c6a76b580686adf4dedebe3d80d439b94",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/baseline_contract.py",
+      "sha256": "8ece721cfd10c694fbb67b9cd5dd8f5fe33f626a2d586c34a28348c3348038c7",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_diagnostics_v1.py",
+      "sha256": "b439fbed0b3a6d509fba3272e139798c0e69459f0e6c82c77395dfce41dd3bdc",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/native_oft_trace_v1.py",
+      "sha256": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_quant_drift_v2.py",
+      "sha256": "0b9cfc028f1f1e4977d818b9ead680d2ffd6f450904b4f77afc8f3dce40eef64",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-gptq-v3/execute_oft_gptq_v2.py",
+      "sha256": "51bdbc2f6652e04fb537a069d8f7e3bf8ef6386a508547eb114c115a532d07e9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-next-stage-v1/execute_oft_omni_lwc_v1.py",
+      "sha256": "e74c5d62ad74ff435cea7cb136407099c88ad8886bf68d476ae124290f1dc464",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/collect_oft_qvla_case_v4.py",
+      "sha256": "313d6619979c574870ba7d4ff5f82498d5df91506c5b4af5dca5f7abf43b6aca",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1/admission/result.json",
+      "sha256": "efec767480b19762b0c0299fd7448a2c3cfcffcd093c333e73090d0539ae74c6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-gptq-v3/gptq_oft_v1.py",
+      "sha256": "895e48532362f0c5a5236943c93c3092a5be7134c750f524e1bae6654e614794",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-omniquant-weight-v1/omni_oft_weight_v1.py",
+      "sha256": "f346e1a5fc197c5391addd0a06cfe44e9b9d4c178c62c2a6d28dd9266847be33",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_official_quant.py",
+      "sha256": "e7441b533ffdedcbf33aac555da1067487796fa48c7274d1bb6a723ce2bb3f8b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/official_quant_adapter.py",
+      "sha256": "6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/__init__.py",
+      "sha256": "f0181bec4593f2623dc0b6d26f763459a7305d0583fc619f2433bf0c2595017d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_component_hook.py",
+      "sha256": "957dd1e664ea796cf5d59ca3a43cb2faf7031a0eb476d728ae02653587e748bc",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/action_jacobian_batch.py",
+      "sha256": "9e182bcfc6616221360d6d8c9216ddcafc797125e9aa3df141f5dfcdf6a5c886",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_component_w.py",
+      "sha256": "6ef5729683a97aeb78cfc2fbcae8fa52f45396493e99d3c601bfd30278692ae5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/aggregate_action_proxy.py",
+      "sha256": "cfc74a7ae4194a831c9c0db34caabf76a78ff99e17542d5fa0bcbe66053eea66",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/inventory_peft_trajectories.py",
+      "sha256": "1bb30c6dd30f22e41ac74b3f61904df0b595139777c7e02ec3dd2c2dff9d6d90",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/assign_gates_from_sensitivity.py",
+      "sha256": "1d7c4d2ca38331b496c0fd899c195446268c63298940cb6dcd0b38609064fa2c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/assign_gates_marginal.py",
+      "sha256": "675ccef0c9c097277da4662f6234a359042121a197d9acda9326fcf2f4622daa",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/model_registry.py",
+      "sha256": "45f292eb3d5a0189d46d8ed697879f3b7a08cbd75353903492f8e44433de137d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/audit_pi05_native_trace_v1.py",
+      "sha256": "31189f7cc19cccced84fff3270d9f3d8c89741f898d867c93da9d78ed5488119",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/awq_block.py",
+      "sha256": "745ae6830080ef11400fb47f3bc9f2ba6a75e1fed80dcd5365189b18d076a0bb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_trajectory_diagnostic_v1.py",
+      "sha256": "f111ff58fae2b6c785f076f34d657e5d83d2701e3a7039880318e424c8f6520e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b3_episode_resume_v2.py",
+      "sha256": "19a8817881ef818f1c25dcab0254c89ab07510de2cef4bab928ee9e8fda7927a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_trajectory_diagnostic_v2.py",
+      "sha256": "3137486bee11c33c607b38b1e165b819b613f7563b716c04f3948f2fb5c4e03c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b3_init_only_091_v1.py",
+      "sha256": "fc509b8e8bb9608d83ed33206d97685f2d59d7ac2c94d188bda00ffffb5a6d3c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/runtime_contract.py",
+      "sha256": "efeadd4c72438c4ca83c36a9fc0f363c9dcf554950988f6e10b76a48f930028f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b3_initialization_v1.py",
+      "sha256": "d820735de5be6851625ddf0c599a3adbfc63e4eb0222c6092f324298d1b7dc44",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_infra_v2.py",
+      "sha256": "4854e15699377084f36ede64fb3a24533ca860292223f0bcfc8fd40d13f199e1",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b4_joint_peft.py",
+      "sha256": "f10b667e5c948f8ede067acc75f45a29df2860859542e23a810f7627145ed8af",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b5_contract.py",
+      "sha256": "9d417a1cc71c14d9dbebb7335b85ad85ffef8766edbe1579be3bcd23c18db804",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b5_expert_bank.py",
+      "sha256": "e40875064ba86e513de80e0a3502797e1e54e590446f5c7eaa5511e24c313bdc",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b5_features.py",
+      "sha256": "b2583295309adf1dfcf5c7a589db02cc89f53cc4ce5c79cdea9f45e8e91f2205",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b5_route_state.py",
+      "sha256": "7756519cb9bf8974e2bdf9ab56000849e0c630a2e82d9772b24fe004b41eb2b9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/b5_runtime.py",
+      "sha256": "261f73944d79d2e35f67769b46cf73bd1efc1ee622711cb0bd09450f2461bc97",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/runtime_error_protocol_v3.py",
+      "sha256": "2e8963562ba6ea905a85eed5f34c28e1c9ac0ca0ff1ea23804bbee3bce68836a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/build_connected_targets.py",
+      "sha256": "5f35086d01030b683f85df45b7c7b13397b0c87a73d765b250d11d824d094155",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/calibrate_multisuite_20261109_v4.py",
+      "sha256": "c46312871babe8ef548d1057deec1a89fea59e020217ea963e9315c0eb4e9467",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/runtime_error_protocol_v4.py",
+      "sha256": "cd836d1f223c6ba26af0ca5b794bd1ea767e823ebd1e73a47b5bb29a8637c35e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/calibrate_official_quant.py",
+      "sha256": "06fe7e46a2702980d37daf3c7f50dcc8605c8d874bc581321d84e39a76fd8ce6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/runtime_study_v5.py",
+      "sha256": "bca570237532323a501f2237aab57fa6143d0302a634950ed87d0d8eb73756ab",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/causal_target_inventory.py",
+      "sha256": "3f2daf031326830714e841f95c1161af25d2be4e80f4cf63c1879f296e2cd51b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/split_scope.py",
+      "sha256": "f3c85e28681bd4aa41440af1e97659d74f0b719c88006c713ed1bfe89a9596ff",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/compare_single_batch.py",
+      "sha256": "0581b479f6276e21119d3358525ca52f134f838f68b36011f490859bf3294935",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/data_roles.py",
+      "sha256": "4005d260b7d9ae48193438f34564a1e96789b607dbf1bfcebc91b5114bd2dcba",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/paired_metrics.py",
+      "sha256": "7021b38da127e6caf104233d814f18496b40b8f94705cbba11168cbfa4c896b6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_groot_bf16_episode_v1.py",
+      "sha256": "2d8191ade4ce642538aecff0921571188503a639c7ef653193ed9bba09f76c44",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_groot_bf16_episode_v2.py",
+      "sha256": "06a6bd6c090387474eab32874f40e4fd4198f1ca2b6e13da7133045cca9221bd",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/pi05_same_input_bridge_v1.py",
+      "sha256": "bd37de325b55bc2d7b93f96f0edf0c20e54cdef062784e8df73ae19cd8c62f3a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_groot_bf16_probe_v1.py",
+      "sha256": "8d14d3566bff7cc321dccc2ea769be0227698ae3c59b14260aa8f0b5d1550022",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/pi05_same_input_bridge_v2.py",
+      "sha256": "89e46818e2d30c4801322a8d6688b44cbde158d21ce9eac91321fa498d5f0d31",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_groot_bf16_probe_v2.py",
+      "sha256": "d13046858adaff72603edfbf9103e8e132faea54c1658a1379961ab768cb13a8",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/state_metadata.py",
+      "sha256": "7a095fecc29e9b3e376944b79994303f60d8a0494ca0ff512a271c7b4fb7c72e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_drift_v1.py",
+      "sha256": "d89749eac50a466b1a403eb77a7795e1605b591e82285b9450f65fd31aaa3c21",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_capture_v1.py",
+      "sha256": "4b676893260feb4a26027d9ad6bb5045b124c8d8c1bebd0e3ddfcf6a80a908fe",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_drift_v2.py",
+      "sha256": "c91c42588a223eef383a5b724bfec3054969be9174c8a15e276e43781a8a25eb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_capture_v2.py",
+      "sha256": "9fc746fba092cb1f7afc0f2ebb25ce8d9e0dc0d5994e8593376ed6db306b6dc4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/pi05_same_input_bridge_v3.py",
+      "sha256": "747cde686d1c6537caf66458938bdba399d68c33fd228efec32d07e7e97e6af4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_quant_drift_v1.py",
+      "sha256": "5f4275e580f7546c1124721f59a8f55021ac9cf4440ee953e046ae369c330c81",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_b4_joint.py",
+      "sha256": "598e2f66e84a1d87d1e09d0fbd3e5d480d4142a14d8a268274e347976b3e7b06",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/pi05_same_input_bridge_v4.py",
+      "sha256": "3e2c23bef78f78689fc5e4dd9bacbc70d10ba645b21985013ddbdda2c51d1f32",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_pi05_bf16_episode_v1.py",
+      "sha256": "ffe4d009fa9a3f66c852c6dd4d658862b0c825907f37f88ba156922239e6997d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/extended_peft.py",
+      "sha256": "038b8f1685a2d8900a25a187b20ff819a09e7bb90e009d3e160c470c21685316",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/extended_proprio.py",
+      "sha256": "3b0b996934c448da3ecaf20bc062ee410477fdd8013dd803ac87e97d3413c2fa",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/query_same_observation_teacher.py",
+      "sha256": "e101dcbf5fe357025cbf68a27d67cc2b362571ab5c86e3d70c66bdfc683cec91",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/extract_balanced_calibration.py",
+      "sha256": "7bb817189be0d2d9556150d4755c843555ab2aeeda43ab2de81e15877f764364",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/extract_trajectory_frames.py",
+      "sha256": "9a7f1aaf22901a232393b7fe9dbf22de7ea4317572ec92fbe496e78c5ca401c3",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/finetune_seeded.py",
+      "sha256": "5bbdf365a2a3f9665f98bfaa1bc2429b9cadc7bd26e4e438f611c6273c5c7262",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/fixed_code_scale.py",
+      "sha256": "18aaa187ea169bce1548c41887c01b3ea0d47043713b170a87fad5c96eac4985",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_diagnostics_v2.py",
+      "sha256": "6e186f8eb023317d4714549b2071aab6233d2f6757a4f13b76569da5a08bd9e5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/forward_target_inventory.py",
+      "sha256": "456abee32da31261f4751b003ea93625c720102b36bf51dd549f76a9a3dbbdb1",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/recover_groot_episode_video_v1.py",
+      "sha256": "ec132721116122a19e0259cf20119f25c2554974b8b43b58147311d37d15cb22",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/recovery_lora.py",
+      "sha256": "2fabd32749f52e7b269e3fe66d0e939b2db17a004e1bc4b504e71191de5891f9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_b3_initialization_v1.py",
+      "sha256": "2f42f8d91217194c06d89db7e416197e92d5d03f77024c7c4e2a54244af663f7",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/relabel_trajectory_teacher_v1.py",
+      "sha256": "0c387dd9eb72e5dc3ab704523d1bc02fa0b746968fcb0ee9e9534739bd5b4c1b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/reproducibility.py",
+      "sha256": "350b2b720c36281f9134649b6f733bf55c83ecb2703e399c9348ddead4c463bf",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_b3_init_only_091_v1.py",
+      "sha256": "b1b15dbea661ad5dd803990b19a8b30b70b151845fca15b5ab3b7b608f54a542",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_b5.py",
+      "sha256": "694676906eb646b6a011d3e2f202cd534b74a7a5fb87d14ab207e236cfd14a02",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/validate_fixed_code_contract.py",
+      "sha256": "67260d008e8944f82b64f8168f01065a5e6bd14ca1ac899e7a2ab2b70d986391",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/__init__.py",
+      "sha256": "6f9ea1dcd14fe7d2ccd2e6ebaf6dc08ba37c680b02ac0f3f80090d02b16463d0",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/__main__.py",
+      "sha256": "f82de6a5b2399cc7dc2418e8f230e35d803ff5ab9a4914a270b1256c095ae02d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/common.py",
+      "sha256": "75bf3b9bbf27e18c448ee07454c9a47eb408ed49078cadff9d16d04b5c095dc0",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/config.py",
+      "sha256": "5bdb514b9cd1341753e2615bc92f1750b9223a744291a74727630af3e2b954fb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/data.py",
+      "sha256": "032c3bab844b36934bfb67135e85a155e845c7d2d6f2f77e649087316d17efe2",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/lifecycle.py",
+      "sha256": "651b3b7e27a164020137da1c983b56231f8ca984d1996b008b10b1fb3aa42b77",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/metrics.py",
+      "sha256": "b44fe5068dc469837f06ccdd01518f71503e84e2c40e0213212d7dbac286c7ef",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/plan.py",
+      "sha256": "95705e9f76088780bffab504454796b97529f5a6406dd5c9a64d649bd2d0a9f4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/registry.py",
+      "sha256": "b9dc5a9d5e4df6793cbd5b6992fb70c4cf55e0d1aed4b18f4fb260abba7a6417",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/report.py",
+      "sha256": "dc75b60b8bb9b709062ab73fe61006ffd8db17cda8ed15a935a92a0d311d0021",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/infra/runner.py",
+      "sha256": "763dfb27357a3062e9781f0c1ae3208aaa5c13a61fa6ee230900c045a48656ab",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/analyze_awq_p0_groups.py",
+      "sha256": "dc933d5fe4bdde5d488b698ee39da876937a7a19d4c69680bd31cfaef1d9f772",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/attention_probe.py",
+      "sha256": "faabe7e3e32acae01ab7bdf8ce3962047f2794dcbe5d167bac03dda75e60d8d4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/audit_awq_p0_run.py",
+      "sha256": "f4ff8433c8eef4a9cfa3393d7a56395a43cf5070727d333c3c42aff2621afedf",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/audit_oft_adapter.py",
+      "sha256": "30668810cb30cfb25159431c69a9d13e95c515f6d556e2cf3124aef8e46d6d23",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/audit_policy_traces.py",
+      "sha256": "37dd8d39bd40cb5ca2807e24824171dcdb534e49d5834f6ab88293c635c8226a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/awq_block_audit.py",
+      "sha256": "925eb11ecab919b844056df1bd366a805cd4e6009645eebaeb43cf6bcb94d945",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/awq_interventions.py",
+      "sha256": "1f728b02028c915bf18dc6c1328d3e7e4a47c24c30c04bf151539b4cab095b41",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/awq_scope_analysis.py",
+      "sha256": "57d8b1f5c34f3d94e20b1a2df311b9ffd08e6b4499c0d27a0d6c7607d2c83d3b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/awq_stage_pair_analysis.py",
+      "sha256": "4e0e884df12e59e586b15bd5709ba270c96462702d8ff201e0bbae963480d19e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/baseline_shard_analysis.py",
+      "sha256": "4354b0af697e2441e5d0e17976e673dd1edd126f32ca7f70a9956e32cdb7a99b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/check_awq_p0_plan.py",
+      "sha256": "80a5a21b0224393247564a0120ee4f60934f922ed07b7a389c73dadcc3541d67",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/check_awq_p0_stage_plan.py",
+      "sha256": "661ccd674b3acfc591de12aa840268edaf3ecec653676112006b13dc0185715f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/compare_scope_candidates.py",
+      "sha256": "b25ea056413b5930b5646219dd3d06883bf9b26ce9178cf919580c18d80cb016",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/compare_w2_clips.py",
+      "sha256": "f00e91027c862271427e90af6a32cb53fcb605cb4bbb235649637972bdad0023",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/derive_awq_language_no_clip.py",
+      "sha256": "8ee2fddb947ac26dc06b65995c8c049f1cee5c2af0825f56fabbf2365915b1d3",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/export_checkpoint_manifest.py",
+      "sha256": "85f13a5acea491e97338a3e1c7edbd9cc66b71f3ff97b352c60bd81874838967",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/export_scope_disagreement_videos.py",
+      "sha256": "a4a11c553cf2158920e0930e22170060e3837777f1f5cd34be6e98f05f6ed1ba",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/export_stage_rollout_videos.py",
+      "sha256": "bdded11a6b17979d11ea3e19e19bf5e85763cabac6a58fc2260b1a3b6d422772",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/fp32_smoothing_pairs.py",
+      "sha256": "e9db615a099fbe7d481b609c9e5df08ec7873b7c0158b69715dcd5c8a64fad78",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/gates.py",
+      "sha256": "0fe8f49c6e40171a3cf6bfae2f66dc839d464334b299c6aa77c1dc9b45de68f4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/low_rank_recovery.py",
+      "sha256": "8cd38967641c0c7bacf6ba3cca859fb55f471b0627dbe0db73bfb39306f99cd7",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/oft_multitask_measured_v1.py",
+      "sha256": "c435237cbff76aa6af3116a07d16864fe1504765a66bb5c32176fe23d8581309",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/oft_native_pilot_v1.py",
+      "sha256": "077ead9dcee13a28ec4c7db610221accac714f16759ad2c8416fb38de225d709",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/paired_video_contact_sheets.py",
+      "sha256": "f706e3673c8536a1fb4246369cb26de53b73690ecfb478a18a31f57f3647a964",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/plot_awq_rollouts.py",
+      "sha256": "e73c538578ff9a923d25b2833005f31a947fb7e8896233b1f603ba75927e51e4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/plot_block_audit.py",
+      "sha256": "27171a540401c1b0c230a48e7c7af42721e26c4af1e3f45e7f9689a79c33321a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/plot_results.py",
+      "sha256": "296943775c3a3344324bc8eaa255ec5009b14098e43ca11f76a046339c96f70f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/probe.py",
+      "sha256": "b63ea50f36b491bbe2cc52ba54aa1f821a43ed44d887767712676c4512505f2d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/runtime_commonality_v3.py",
+      "sha256": "950ec4180c397918c8759b7a5370e689c173407248b7b29d67d15af3293bb78c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/runtime_commonality_v4.py",
+      "sha256": "da96750c1feaee93efef51931a0759fea0c36ec594db150b8633082f65cbdec1",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/scale_peft_recovery.py",
+      "sha256": "bb8c93053c3429d34189e75a4b3e8b4071a2298bd30a6afccbd2bde577e6069c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/self_test.py",
+      "sha256": "22b312420b361fbd18823bb6a1a41caed1362e1b32eb107196f6608bd0cbbd21",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/smoothing_selection.py",
+      "sha256": "84bdefea947e2cd2cdb117b4b6f6cbeb3fdfde53136411c66fb097ff88b8bfd4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/sq_local_equivalence.py",
+      "sha256": "7f1694a892a25dc76406d402982ea53784c54374e9ec6375dc9fbc881651b240",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/summarize_baseline_gate.py",
+      "sha256": "eac9534d53e50db593a598fa69ed1041769c5261c348ff6857e8ac4641a5cc29",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/trajectory_study_v1.py",
+      "sha256": "74c8b26043dce4e10a27e6099a02538faeaf17a443496b2e7144554ae3f6027f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/trajectory_study_v2.py",
+      "sha256": "fa5b8254a249d59dfc689187b8a84def08d6d57f688cd8c5dfc8360a1368f80a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/verify_awq_clip_intervention.py",
+      "sha256": "84172ac117ee2533cf1e539318b2ffad345042b02d2a52a45b0a3c48b44f1f07",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/openvla_utils.py",
+      "sha256": "eed754d7c5f9821aae2fe0531dbe01df8c11df0d5c79b4aeeb9bb4452124bdf5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/robot_utils.py",
+      "sha256": "93541b01edd4de49fcc9a1d9249e11fea008b9502fd755096503aaec93773da0",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/aloha/aloha_utils.py",
+      "sha256": "b9cc26f51b83441f7bb98b1c141de473a1ee5ef24de4c30d2b3b6b39b2ef1a69",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/aloha/constants.py",
+      "sha256": "cd349eb28ec6b784f811e2e47d37c0f23d3c3fe1cef94d4a72e3898fb13c643d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/aloha/preprocess_split_aloha_data.py",
+      "sha256": "edebb17e0784c5dfe911e50714417e98c3a317cd62e7e68670daa61cdbf6026e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/aloha/real_env.py",
+      "sha256": "32f4f8677337c0421eb605fafa4b18a23fb4421a320bde3c765c80acbc156d08",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/aloha/robot_utils.py",
+      "sha256": "d0d93ca3672ab851bbb32d7d655f0470c9c862b145d85127d7aac6d7df4e6d54",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/aloha/run_aloha_eval.py",
+      "sha256": "89700d699135ad247a9beb6e9997bba32cdbfe0f115166df5a0a7f2157f4f8ce",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/libero/libero_utils.py",
+      "sha256": "489c16dc8220845b2936ddb81aafd7469061d2009b0edddb2f85703bc51a204f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/libero/regenerate_libero_dataset.py",
+      "sha256": "f17dd49e61659b515ccd691c0ee57d20fb57909af3b8b53ef7e7e6bee55ceb49",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/experiments/robot/libero/run_libero_eval.py",
+      "sha256": "701a20b6ca2942aa36e0e7d567b25647268b936a23af79c5893534f10bec7802",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/__init__.py",
+      "sha256": "244d4c09ae7b191ae233484aed3a3dfb281bd1eb7af4e24392f047d0d42c6ef9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/conf/__init__.py",
+      "sha256": "d4fbfdcc771e5c66136f8b8287cd7399201e75ab10ac4be00335726cf0548d5e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/conf/datasets.py",
+      "sha256": "e29bbc6d90efee868307a6627493608da1863638784a0081efaa7f8700b3c11c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/conf/models.py",
+      "sha256": "0d42d771e5e5a2ccc7307b56dac87dfa27a6b078c93f8506006594822f4a6504",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/conf/vla.py",
+      "sha256": "40304cdf3956fc152ec94359975436561035985d8900bfd3d51ecef92e25d8bb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/extern/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/extern/hf/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/extern/hf/configuration_prismatic.py",
+      "sha256": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/extern/hf/modeling_prismatic.py",
+      "sha256": "b5431a074c0025a12e46dc954a5e18d1d73477babb5ae42e3a12ab4b907f33a6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/extern/hf/processing_prismatic.py",
+      "sha256": "2474a5c3fdd4ff15234924636dc0ead6419c89f49699193be47dbb87510a5425",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/__init__.py",
+      "sha256": "ca4e2452718f72d278742ca5b7b41dd1e77897e5cbda725a54dcfd8744cdbe0c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/action_heads.py",
+      "sha256": "8e42df65d6407d64d47457286d9be05466d25d8a0f094aa9dfb90de84a9aa7cc",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/film_vit_wrapper.py",
+      "sha256": "5c67e4a375f9cb7928cb5efd588a93fbf607d715dc08317272df662df1e50ff9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/load.py",
+      "sha256": "62958573ff369cbbaeb418bf13208737856828150e2b65e20eeb7c29116c50a9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/materialize.py",
+      "sha256": "b3fca60a822b4765644a1bbbe8402b6a6537f642de43d089faa560658cbb6e49",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/projectors.py",
+      "sha256": "3ac1ef82215b30792bdaf9c980cf8b93046dec1b220597cfc0f536bfe5ebdf42",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/registry.py",
+      "sha256": "eacdeb9201cd9fd1828d7ad7ffe2133f89e0de872c31f76b0038838b8a7dd493",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/__init__.py",
+      "sha256": "94c49353334c38c67f9555d39915ba83e4b712420dfd4bc98cbde10ab20b5897",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/base_llm.py",
+      "sha256": "8f6b06fdd1af22c0d3d8fdbeb6a6bd490f0f3fafa97e9514994d24053453321a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/llama2.py",
+      "sha256": "587e88dec921271a2b8d1de3867d6bf9584a70196176ecf54cf43b14ccfceeb5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/mistral.py",
+      "sha256": "e72025a82d56ded938b6a119d98c81eea8cbf956c8d9f6b2f3bbe9b628fd71e1",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/phi.py",
+      "sha256": "e9ff83d1934c9e588b1ebcb8c755bbd20543125767d261f5eb75cbd07ed7c416",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/prompting/__init__.py",
+      "sha256": "6f532ea1f274096e32a5b4bf9b98648f3e0521f1f7e30599487a3230663d7b92",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/prompting/base_prompter.py",
+      "sha256": "13640ed54b055c0fcd8daf7212be9f4faf76cec779fdd2e0f7ea5a866b0b6d51",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/prompting/llama2_chat_prompter.py",
+      "sha256": "85c7c39fe6f625b05d6b8becc4c1f670373d61f4c0414fc79f63591452306579",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/prompting/mistral_instruct_prompter.py",
+      "sha256": "3d5f57db4028ef84f8d09fb83e07f2049985c90a74cec471c764e353fe0fc617",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/prompting/phi_prompter.py",
+      "sha256": "0cba9b7821d43102ab7c0e53273033d0c53691df44efd10d91ebb037136bb29f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/llm/prompting/vicuna_v15_prompter.py",
+      "sha256": "0a9967daf1ca2e7796fc9cd8830f73b91996b573cf6bb3e0e3a5af1dfa93be39",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/__init__.py",
+      "sha256": "6e2d34cf72a18596dad8e18c3c6e9983588526ec1ee58a49516be88a91d03e17",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/base_vision.py",
+      "sha256": "80aa3fe577d3f23641077eaf358859683dde29fed9a2a8ec373c0cec2896579d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/clip_vit.py",
+      "sha256": "ff8347d818230940059b47a58b997ea6d21f92a9b826b9e1cc50277ecd6dcaa6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/dinoclip_vit.py",
+      "sha256": "05afd1bc7c0bb1fa6d4a5ee16948422375861b80cece854b56086eb81604b213",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/dinosiglip_vit.py",
+      "sha256": "8143262f1b62c1f83739a9142a8feb0c755025ce0751a476a22eb69fe5808131",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/dinov2_vit.py",
+      "sha256": "1b967fe1cba0d585f78ebfc21c904ac412c61fb7464c03c77131cf7a770a0791",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/in1k_vit.py",
+      "sha256": "a53de7f6ba1f82ae5976741740deefc25062901b88ffe5adf890b349720a7a41",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/backbones/vision/siglip_vit.py",
+      "sha256": "c1f3500eaabe361457cb4110e404676587d231a0a0e1d29c1c8a41111ef3c3ec",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/vlas/__init__.py",
+      "sha256": "66dcd212cef04c4ed7e62db5efad417b8019565a5d5f6f5eeeb132a493a45f8a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/vlas/openvla.py",
+      "sha256": "5a54e9f2f7975b7e8fa8676ddfb6ce3320b397f0bdd3632167a7044dbeb9b47b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/vlms/__init__.py",
+      "sha256": "bf58ab5c127b6df35f5d881357ec5aa24e0b46f2916c527612af484b95c7c448",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/vlms/base_vlm.py",
+      "sha256": "ea291ec87810abfc4be2c4fcd942708c33a47b0601aa50ffa9e581a736dcd38c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/models/vlms/prismatic.py",
+      "sha256": "d2dc1b53f715a4f1dd6849842978959250c6f5bf48792d46b93f71c303e7da2f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/overwatch/__init__.py",
+      "sha256": "bd036db0376e394f189a420f798d0fa0b93637b72004419ccaaf316b8b5e757d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/overwatch/overwatch.py",
+      "sha256": "3f2342cd90dec06655e599975eb1a037d96602b453f6b720557125f311b15c8d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/preprocessing/__init__.py",
+      "sha256": "5681e8f6c09e4d86198b8107b9d7251c90b5b455b04080827d28f37d8bf56372",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/preprocessing/download.py",
+      "sha256": "257fda53e11217f3c3cd0b9092c8064fe8a7af5910edf9bd0cb8f7f1d29c1b9d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/preprocessing/materialize.py",
+      "sha256": "f98ab5e3ba03b6cbe348e8a488a41ece3633cb7c46fd82836a20f10484938772",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/preprocessing/datasets/__init__.py",
+      "sha256": "959a9d10e8c8e1605d43f116f26a5ffe8732db4fce45d333328ee771efcf933c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/preprocessing/datasets/datasets.py",
+      "sha256": "24a367bb62c35e36c6e315fd7b547cf557b48cf437ac310cd322aab3e5b916c8",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/__init__.py",
+      "sha256": "e1e171d201818dbd4552f51659d1dd14e8958658c7af12993831f701e075e0fc",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/materialize.py",
+      "sha256": "80d693f2144989ac5687fb243b4ca9a6648e25df10c83cf493f0010b5f657b12",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/metrics.py",
+      "sha256": "8f5900c0e51d50f05d02266caa1772f0640682ce5e4eb8c8fb795c1775660e32",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/train_utils.py",
+      "sha256": "6ecc95436fde63ce023e2ba7151826d96a915b5d5c2ec5698750022580b0e7b3",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/strategies/__init__.py",
+      "sha256": "042da41c24f581b4c84ff63fc5b1ce510a37e4da2c90a5ecc848b8f1244fcae3",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/strategies/base_strategy.py",
+      "sha256": "503ab55f9853b875b1693cceb6d0d6b62a6af21eca7f5436f7b7ef70f243a4cd",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/strategies/ddp.py",
+      "sha256": "0060ab71c4de65773532a5b7c4e16be697a97f2f52199b2dc165157deb67fa90",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/training/strategies/fsdp.py",
+      "sha256": "98b77644f6599400539e08b32f0ee3080a54742630fc7cb1208ac312be0273bd",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/util/__init__.py",
+      "sha256": "8ab7190ed1f1bd087966fcc59f35f9a7b4b315dd7b17f68a6a7ed6e335fc7380",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/util/batching_utils.py",
+      "sha256": "a41d58f7baa40ccefe92be2727c19963a720a41feeada301a09cf01c8b261feb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/util/data_utils.py",
+      "sha256": "431ef4210296c2165142b1226a4adad985d99d0391cd822f1630e98fbb6c9d7d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/util/nn_utils.py",
+      "sha256": "7aa0562eab374f0585bb53639b861f06b6c44b82384e938dda9cd32d844bc0d0",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/util/torch_utils.py",
+      "sha256": "a70e3b8d7e24b15a5d8abfa94f1c596ea70a9a85c86b50e8d8f963af51ff3304",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/__init__.py",
+      "sha256": "bfc31eb7e16374695cc0da879bb1e43451395ee64144da896f00e2187862f069",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/action_tokenizer.py",
+      "sha256": "fdc98fcbf5b0926ef2181db71946d23ffbfa052cf8443dc933d52c42a191352c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/constants.py",
+      "sha256": "5b53c3a07cf1ed27bf94a88da9929e82818792d6fdc32343d133afea1a0acf3d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/materialize.py",
+      "sha256": "dbc1b0c88e3acb926829e7d86f00b7aef52b6679af641f5ad328aa59d99f7ab5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/__init__.py",
+      "sha256": "da5e7fc753267f060b24bafd3bf8867836d2e04ea3a3eb9f3fddf14332781e86",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/datasets.py",
+      "sha256": "b97b61c2b8a6cdc643d2c0f559bb403dde793fa8aba382f31f5aedfb073ed692",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/__init__.py",
+      "sha256": "51cca896330d5fb7b36c1d4741ede338fb4f1f21bcbc461c31bd44ce0d97656e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/dataset.py",
+      "sha256": "af0812949d019e349026f92584a1ebe187ad9f74acc987a9f16ea86ed2e62cf5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/obs_transforms.py",
+      "sha256": "a4fca99160ff5dafa51b6e3a2d466014222c62ac8fa4ac57e57af5731a3afe35",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/traj_transforms.py",
+      "sha256": "921056872f67a35d896f79f2e7f30353fbd94a831f5fb079d9fc1e5b7e58fd08",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/oxe/__init__.py",
+      "sha256": "3c78a9e413a053b7529def791a621ef273d76bc6cc6a32cf1be77d8b77e94d16",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/oxe/configs.py",
+      "sha256": "5763a8f6ce5af801dc90eda78e9c19279296bd9affcb77de5b807877e54b1fb5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/oxe/materialize.py",
+      "sha256": "ee9830de68dee1e4b344d013bbd8e662d7d2f8e4ef5f988dcd41f51229cf6591",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/oxe/mixtures.py",
+      "sha256": "009f4ca6e3ff591c60cc50852d023df147d8b4fcc9fb93c63e43e1d65b30824b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/oxe/transforms.py",
+      "sha256": "68bcaf1c9fd2c25585d00492604414663d135fa81bd36f1932b17ef4dbaa4a67",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/oxe/utils/droid_utils.py",
+      "sha256": "6eddeaf36eb335656435f8773ac715ab966994c2b97cf72f257751140c3c4099",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/utils/data_utils.py",
+      "sha256": "dce2601fce081afe49c9649eb906330a2042c88dd3a5d77a226f7b17731814a4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/utils/goal_relabeling.py",
+      "sha256": "2333b62c507ea1c2b94b9d9cec3c884e92da18ead2f39936b5a2e138501b22d6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/prismatic/vla/datasets/rlds/utils/task_augmentation.py",
+      "sha256": "aa92046aa8dd849a23631ff36d219a1e2588b254049e2f8ed7f51bf6daf7fdfd",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/scripts/extern/convert_prismatic_weights_to_hf.py",
+      "sha256": "75d9921fa41d4c3a5540aa478d8057da47fb4dc324c74737557cb0abd76f23a2",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/scripts/extern/verify_prismatic.py",
+      "sha256": "a0d13b4960997f8d09667139ef170c3dd9257871b44e04cc0d3437dba55bb783",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/vla-scripts/deploy.py",
+      "sha256": "4d00d69b594d694181e05d6da7e675b5a1d57c72c310a7e8706700c49f16aca5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/vla-scripts/finetune.py",
+      "sha256": "1400729cd444559dd914f9c3551868708592c79cbab96462cf80ad8c2bb0699c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/vla-scripts/merge_lora_weights_and_save.py",
+      "sha256": "84bd8d83a511e7e98e9160c1b69d3508ac8e40586f98cc3b9f6b9c781733a7f1",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/vla-scripts/extern/convert_openvla_weights_to_hf.py",
+      "sha256": "625c220eed90bbbe9a197adc5749d78eead17c890f060388753f7bd70a1ebc5f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/openvla-oft/vla-scripts/extern/verify_openvla.py",
+      "sha256": "7e85f32388583c89ef3f6e28d089d22777f264740add29bb96460879fbca9bc4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/entry.py",
+      "sha256": "41feaa68b2141d93b3cfaaed3aff899182a35be02e3c0e6ff821a8407c387306",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/kernels/setup.py",
+      "sha256": "d201f84a468b25e2712a8a34fda7f25c403a3f158b95fc6f0ffe8c7eda6560cb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/kernels/csrc/attention/setup.py",
+      "sha256": "83ba2bfaf280c1800ddd28c297427598fd5aefc76d4c65adc5b410f5f4747a05",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/__init__.py",
+      "sha256": "b14a14fda205a4be838df50a432c01404b7f343b99410b526c91227f127293b5",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/auto_clip.py",
+      "sha256": "ac29b6dfb6045b17e8c76a2d61242fce312dc31085d6d5661b6be39f345d7c28",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/auto_scale.py",
+      "sha256": "647400f5237e6fe1a0c3d322115a519ebdc433330e50821fbd2f47111f0eec13",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/pre_quant.py",
+      "sha256": "5e2aad39b9da9e37939dd6051bcf9332d39067f66095d2b496774b4a64555247",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/qmodule.py",
+      "sha256": "de190575171c72148006124608130d54bd2f9ccdb4e38bafcc051979c90801ac",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/quantizer.py",
+      "sha256": "0f4a17c234fde5c422d1328786b29c50dc0d18b8bf1b7d7530eade6313dc0de2",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/smooth.py",
+      "sha256": "ad07a7f0c00090b1c2465fc140071d19aab0e1937ece9dbe492495d1d2d5c7e0",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/quantize/w8a8_linear.py",
+      "sha256": "89787bc5272c777fe704ddc44c0c2aca438c4500ffab23a5813eb35f661652c4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/utils/calib_data.py",
+      "sha256": "d2ec508f85cd6a0f2082bc79ae2435b826d32f75c2b1ba834ed06aebcc68bcd0",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/utils/lm_eval_adaptor.py",
+      "sha256": "6980a74da2e7e01a00fdad8385b26babeb29559a2b779d94d002fe61cdc96867",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/utils/module.py",
+      "sha256": "8d4c21d9e32e7a4a99ecff2b8664ab9c148c4ff04be5531a85a801ac81abe480",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/utils/parallel.py",
+      "sha256": "29346b0f399f542f1b9db1bf2932be6a35066605b1775b7967ff2619291b7a38",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/llm-awq/awq/utils/utils.py",
+      "sha256": "8a65aa50fca97ce4a5895fb1121b06120fd39c8267f2f4417ae274206497a4fc",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/smoothquant/smoothquant/__init__.py",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/smoothquant/smoothquant/calibration.py",
+      "sha256": "1a4bcec75f8fc276436ce26e075e3ac3f10256e933218426510dba7920c946d9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/smoothquant/smoothquant/fake_quant.py",
+      "sha256": "6b2cc7d1d4dc791f5d34e8c235e3e86d44092a99ded0214b5ec0dbbc4ab78d14",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/smoothquant/smoothquant/opt.py",
+      "sha256": "1fc2feb08982dcae890f712c63d7fbdd93415831da8659c3ccf74d1d09981f21",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/smoothquant/smoothquant/ppl_eval.py",
+      "sha256": "9a8255545295473f6d7697120f0a54e16d244a95a674a4bfb0b0b3cb7e9abad2",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/official-quantization-pinned-v2/smoothquant/smoothquant/smooth.py",
+      "sha256": "ff5c0f178798d0757fc19f060c893d4474353f53eae0743b243c01ae8dc77b6d",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/QVLA-official-oft-20261110-v1/openvla-oft/qvla/quantization.py",
+      "sha256": "7c3be78f7e8bb2527abcca83ba1ea611d3832fe855ab14a81db32955be4ed15a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/awq.pt",
+      "sha256": "8320b575d18991fc58b78189ceec22f028ab520f5d8ce4bfa9429490c78a48ce",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-full-v1/profile.pt",
+      "sha256": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt",
+      "sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt",
+      "sha256": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+      "sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task0-reset25/result.json",
+      "sha256": "3c69dc6d5810f903bf3b3c848c3346f4d53ca80aa30fb1f5fbd19945d6b3d94c",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task1-reset25/result.json",
+      "sha256": "72a792134c1a8c06817307f5d218b2fda1c0fa17881ed2c26603c7fb222b78a2",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task2-reset25/result.json",
+      "sha256": "325f54b1313706126328c392375da64ec808baca415c29c07f753c5517f0c250",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task3-reset25/result.json",
+      "sha256": "45153f324a6ad833e86eb6381bfcebe5769aad41b1d291a91ab1e9b81fe83810",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task4-reset25/result.json",
+      "sha256": "603bccae178dc29b146bf76b4a44ba2c28683e21fff4ccdcd5540aedb1e58527",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task5-reset25/result.json",
+      "sha256": "0664ee8404cf547019213032157182af48501531d3d375231013b3e9b1cba230",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task6-reset25/result.json",
+      "sha256": "9e5cf5403be058c63ca56b696c64268ef6dc8512e20859e92b5fc5b27c7252a7",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task7-reset25/result.json",
+      "sha256": "0d27a675a7708b43a2d2227cb2cc7cec4702038a9704af0adaa72df3c767036e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task8-reset25/result.json",
+      "sha256": "96a35898b2d8a06c431a1f0b1f2482bdc660f4b5a890b805f6409017ba335a90",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task9-reset25/result.json",
+      "sha256": "eb5d974c1fc6bde7ef43b08a2acd3c6bca0e51ed2b36155bd00a4a2f978998e6",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task0-reset25/result.json",
+      "sha256": "d063d22f959aea8fed66323f2013e48c89cc71da65330246603259e2d6e9dd28",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task1-reset25/result.json",
+      "sha256": "ca46c47b6299671fd46481f3d55ef3e40fab325646deed1e9c95b5303d741a70",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task2-reset25/result.json",
+      "sha256": "8abe513c5abebe4fbd1e6dd6780138efee0141223110e370c5b71c279e97ee98",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task3-reset25/result.json",
+      "sha256": "6172f355e89bec0ae594964b6da2aa469983e670e2e5f6b44166aede598ccc49",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task4-reset25/result.json",
+      "sha256": "1695e12446d6191e96dea750a19dedc635d14bc895f6a986bfc7352415f36f76",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task5-reset25/result.json",
+      "sha256": "101b09d3840e7882ae15db91f51a10fe632d7f770dfabaa64b742fdb9a14cdf4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task6-reset25/result.json",
+      "sha256": "e78a26fa3faaa5aa0da0d7989ba076deac7394dcd154fe6c6eb7c3f87cd43ef4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task7-reset25/result.json",
+      "sha256": "d0092d504371266661644fc3520f377396d8a7a4798b7a577fe9f01cf6f88d1a",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task8-reset25/result.json",
+      "sha256": "43eeaa0063bcafffa3ee48d4d79d39762afdc03d437b5160c75c33ad1619f2c7",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task9-reset25/result.json",
+      "sha256": "4a70bf25f0defe8bd18d7393326f1fc27bc10b7e2e1623e2258c2f09e7a968c7",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task0-reset25/result.json",
+      "sha256": "c4b8245c61267387a49bb2993fec1148b195f25dd9ccde3788604ef450f8f26e",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task1-reset25/result.json",
+      "sha256": "06ccb99f36cf2c0d863650d92abeaed08769626736156178af9e6f02fd15b5d3",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task2-reset25/result.json",
+      "sha256": "42ab85e88f54cce56c2a0c44055a5329416b7c3dde5eb0f34f0a88f5dc61519f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task3-reset25/result.json",
+      "sha256": "1e0993b098aa068561a5fe9dfd3bdd036ff0649a43b19439a4c6c728eabb3659",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task4-reset25/result.json",
+      "sha256": "bd955fefd4889a95306add0a6bc427577e77315cb544e84f47046dd3a21e5e79",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task5-reset25/result.json",
+      "sha256": "1145f40db2d21b3bb4c1ed4bcbe9f34d5e226079601b215ba18b545ea4a81c82",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task6-reset25/result.json",
+      "sha256": "a91c7779bdd208c0597e5aff932b3366729cdf4cd2d869962b7ae3cc5e3840fe",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task7-reset25/result.json",
+      "sha256": "0daaee5d2852603e6e00d04ca2a9645938c7e2019819716baceaa0b85402582f",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task8-reset25/result.json",
+      "sha256": "0c0e8e919dbaf5aff52b08875d6dccd79cfb9dff335d93cab4a02571aea02b30",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task9-reset25/result.json",
+      "sha256": "05806d1a69e431e0dad7bc6fc9f37a05d91c69fc210408ec30b7e965f340401b",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task0-reset25/result.json",
+      "sha256": "97d631318ffd1bdedc579b8d11327ef1a1eebd44e34af13dc8a637cec66e0b42",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task1-reset25/result.json",
+      "sha256": "757a072f9a5b4856fa44c8a6236830233ae7f406d6ae24a17cb8b82c4ecb05bb",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task2-reset25/result.json",
+      "sha256": "d41040592c12b9b02d91625b9417517696716bebdac5951bae2b7edcf7dc2584",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task3-reset25/result.json",
+      "sha256": "bcb1b8a07abc06d16ac3d1809218aef21c0b18ba189dd5e73ff618e9f5397899",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task4-reset25/result.json",
+      "sha256": "08f49f59ca1f9f1f5adb8bc5b4a51f49ab2ec348afe74340c6f43978e78bb6d1",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task5-reset25/result.json",
+      "sha256": "7abcaffc61d15fcde8ed9cd039b9bfa1dbda9184a68e3d6486bffd6c283106bf",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task6-reset25/result.json",
+      "sha256": "8cd7175622254a1e79245282543fb52c71f9c79d04983be38e8c923b0f346963",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task7-reset25/result.json",
+      "sha256": "67018af45c01096824e25678e6eb1575f271e75eb44ea36b7d37b14edb207295",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task8-reset25/result.json",
+      "sha256": "1a034a6ee3cea0f17c8555895418ba7b6101f6fcb1c854e102022f37de7bf9f4",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task9-reset25/result.json",
+      "sha256": "243a63b7242d581f2f5a5142c7eaba39178b462cefb946d4c85245a9c6cfd9c9",
+      "role": "frozen scientific/dependency input"
+    },
+    {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3/qvla_w4a16/series.json",
+      "sha256": "aa177185c517dd5ce27a8be0b6b2ac5a77d6df507b215cbaa2851d21ad5721b3"
+    }
+  ],
+  "source_sha256": {
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/__init__.py": "6f9ea1dcd14fe7d2ccd2e6ebaf6dc08ba37c680b02ac0f3f80090d02b16463d0",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/__main__.py": "f82de6a5b2399cc7dc2418e8f230e35d803ff5ab9a4914a270b1256c095ae02d",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/common.py": "75bf3b9bbf27e18c448ee07454c9a47eb408ed49078cadff9d16d04b5c095dc0",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/config.py": "5cf80c4884998b15f9279e2928e7cf8363c12dba5c76eb76119a7602b7840ff7",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/data.py": "032c3bab844b36934bfb67135e85a155e845c7d2d6f2f77e649087316d17efe2",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/lifecycle.py": "423becb949b84b222f6359f33ad67834d72ff20afadc6d066752dea469cb3b8e",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/metrics.py": "b44fe5068dc469837f06ccdd01518f71503e84e2c40e0213212d7dbac286c7ef",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/plan.py": "6b7dea2d193d9536932834b3c1fa70503c42d03f27762dfc16c9c56e9925da9e",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/registry.py": "b9dc5a9d5e4df6793cbd5b6992fb70c4cf55e0d1aed4b18f4fb260abba7a6417",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/report.py": "dc75b60b8bb9b709062ab73fe61006ffd8db17cda8ed15a935a92a0d311d0021",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/infra/runner.py": "12ec0b2850bb21ddcdfb72818600759637037524d0e20cfe3a64a69173d700fe",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/qvla/oft_prepared_queue_v1.py": "da04db332582bb01670cc2caadbea209302c53966efff019d1dec9b58d7b3671",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1/scripts/trajectory_drift_20261113/audit_prepared_pairs_v2.py": "361022c90bc23a567fe1c09a8fd71953f7410d0607bacd5f8f46b7530990f221"
+  },
+  "note": "CPU plan compilation is not a model/numerical gate",
+  "git_commit": "083dae57e0700f92c87d6700872e8f6ba3ae94cd",
+  "plan_sha256": "9a2d6e2c6cd4ca2be13df4672fcb9bfd585ca8d6964684a517ed289c44a4e41c"
+}

@@ -1,0 +1,60 @@
+{
+  "gate": "PASS_CPU_SIX_INFRA_TEMPLATES_AND_AUTH_DEDUP_CONTRACTS",
+  "total_pending": 240,
+  "conditions": 6,
+  "eval_suite_stages": 24,
+  "templates": [
+    {
+      "condition": "awq_w4a16",
+      "cases": 40,
+      "stages": 5,
+      "plan_sha256": "40e1582c777c33fe174c342344893c31daded17a63446afe206a8880245c22c7",
+      "executable": false
+    },
+    {
+      "condition": "gptq_w4a16",
+      "cases": 40,
+      "stages": 5,
+      "plan_sha256": "b7782ba5d3956d897cda20c857114f5aafabcd7cf3cb3ba04e6699f9a8ec7252",
+      "executable": false
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "cases": 40,
+      "stages": 5,
+      "plan_sha256": "22f51bb84bd402fa9820b1e75fc64c610329b51096f098d80dd3e1328c8cec4a",
+      "executable": false
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "cases": 40,
+      "stages": 5,
+      "plan_sha256": "1f290e119225c927cf80b584acf56a1fb8659dcb41a4fea939289c066e999501",
+      "executable": false
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "cases": 40,
+      "stages": 5,
+      "plan_sha256": "e4a87e428544cb1c876ed3d73a52d6ecf8474e067501dd4883216d4d270449c5",
+      "executable": false
+    },
+    {
+      "condition": "qvla_w4a16",
+      "cases": 40,
+      "stages": 5,
+      "plan_sha256": "9a2d6e2c6cd4ca2be13df4672fcb9bfd585ca8d6964684a517ed289c44a4e41c",
+      "executable": false
+    }
+  ],
+  "rejects": [
+    "CPU-only authorization",
+    "other round/config",
+    "other GPU",
+    "authorization predating preparation",
+    "duplicate cases"
+  ],
+  "no_authorization_written": true,
+  "no_gpu_run_started": true,
+  "full_runtime_verify_plan_deferred_to_fresh_gpu_registration": true
+}

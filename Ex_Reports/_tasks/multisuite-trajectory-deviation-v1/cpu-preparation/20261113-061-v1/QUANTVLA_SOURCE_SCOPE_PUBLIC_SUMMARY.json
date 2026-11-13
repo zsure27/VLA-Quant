@@ -1,0 +1,70 @@
+{
+  "gate": "STATIC_SOURCE_SCOPE_REVIEW_NOT_MODEL_ADMISSION",
+  "files_count": 100,
+  "openvla_named_mentions": 0,
+  "architecture_mentions_count": 640,
+  "examples": [
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 3,
+      "text": "Thanks for considering contributing to NVIDIA Isaac-GR00T! Please read this document to learn the various ways you can contribute to this project and how to go about doing it."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 9,
+      "text": "First, do [a quick search](https://github.com/NVIDIA/Isaac-GR00T/issues) to see whether your issue has already been reported."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 12,
+      "text": "Otherwise, open [a new GitHub issue](https://github.com/NVIDIA/Isaac-GR00T/issues/new).  Be sure to include a clear title"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 24,
+      "text": "* Do [a quick search](https://github.com/NVIDIA/Isaac-GR00T/issues) to see whether your feature has already been suggested."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 44,
+      "text": "        git clone https://github.com/USERNAME/Isaac-GR00T.git"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 48,
+      "text": "        git clone git@github.com:USERNAME/Isaac-GR00T.git"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 50,
+      "text": "    At this point the local clone of your fork only knows that it came from *your* repo, github.com/USERNAME/Isaac-GR00T.git, but doesn't know anything the *main* repo, [https://github.com/NVIDIA/Isaac-GR00T.git](https:/"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 56,
+      "text": "        origin https://github.com/USERNAME/Isaac-GR00T.git (fetch)"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 57,
+      "text": "        origin https://github.com/USERNAME/Isaac-GR00T.git (push)"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 59,
+      "text": "    This means that your local clone can only track changes from your fork, but not from the main repo, and so you won't be able to keep your fork up-to-date with the main repo over time. Therefore you'll need to add ano"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 61,
+      "text": "        git remote add upstream https://github.com/NVIDIA/Isaac-GR00T.git"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "line": 65,
+      "text": "        origin https://github.com/USERNAME/Isaac-GR00T.git (fetch)"
+    }
+  ],
+  "qualification": "Text mentions do not prove compatibility or incompatibility; no OFT full422 binding/calibration/actual action gate admitted in this session",
+  "model_admitted": false
+}

@@ -1,0 +1,56 @@
+{
+  "server": "061",
+  "authorization": "CPU-only; GPU not authorized",
+  "source_root": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1",
+  "control_root": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1",
+  "preferred_template_version": "prepared-queue-v3",
+  "complete_real_case_count": 600,
+  "pending_initial25": 240,
+  "new_real_trajectories": 0,
+  "CPU_gates": {
+    "inventory": {
+      "path": "inventory/result.json",
+      "sha256": "6b40b51f142f52a58fa473016bc476de6e74083dbb8bc2402608a3079303dfd3",
+      "gate": "PASS_CPU_ASSETS_600_IDENTITIES_AND_240_PENDING_INITIAL25"
+    },
+    "duquant_core": {
+      "path": "duquant-core-cpu-v1/result.json",
+      "sha256": "444bc8de57a31cf9693037135089cd60d2b25dc0472ce323a10f78fd68858a2d",
+      "gate": "PASS_DUQUANT_OFT_CORE_SHAPES_RELOAD_AND_ROLE_CPU"
+    },
+    "duquant_all_widths": {
+      "path": "duquant-remaining-widths-cpu-v1/result.json",
+      "sha256": "d59bc395fc602f8c2d4441e96a3a71acafcd220f5c72238a0cb4d62ae0e0116e",
+      "gate": "PASS_ALL_SIX_OFT_INPUT_WIDTHS_CPU_COMPONENTS"
+    },
+    "bf16_components": {
+      "path": "DUQUANT_BF16_CPU_DIAGNOSTIC.json",
+      "sha256": "214cd716eac15289a05920c2b2e647a2af5e06af61ebe4038bab2f1191a94bad",
+      "gate": "PASS_BF16_AUTOCAST_DUQUANT_CPU_COMPONENT_ONLY"
+    },
+    "prepared_queue": {
+      "path": "prepared-queue-v3/result.json",
+      "sha256": "66c47d7956508aba73a5e29d9dc1559988b6f2eb2532fa83caf940ea7da88da1",
+      "gate": "PASS_CPU_SIX_INFRA_TEMPLATES_AND_AUTH_DEDUP_CONTRACTS"
+    },
+    "existing_raw24": {
+      "path": "existing24-raw-audit-dispatch-v2/result.json",
+      "sha256": "09ae0dd8f9b2e2a0006a047808876c83e94d5f04c76ad13b31a1bc31fb30173e",
+      "gate": "PASS_EXISTING24_RAW_PAIRS_CPU_NEW_AUDIT_DISPATCH"
+    }
+  },
+  "private_archive_sha256": "df8848bc9ea2369a37058bc2f7b3ba0b103d3cf17e0620232beb0cc9942ea19a",
+  "private_download_verified": true,
+  "public_source_provenance": "FINAL_CPU_SOURCE_INDEX.json plus SOURCE_CAPSULE_PROVENANCE.json; indexed source capsule differs from full upstream checkout",
+  "frozen_legacy_source_dependencies_retained_server": true,
+  "full_external_models_or_parameters_uploaded": false,
+  "old_parent_cloud_gap_not_repaired": true,
+  "next_steps": [
+    "User opens GPU and gives new authorization",
+    "Refresh global dedup; confirm host/GPU/CPU memory/disk/freshprimary; register fresh shutdown guard",
+    "Rebuild separate run directories and recompile/verify prepared configs; never run disabled CPU plans",
+    "Prioritize new-method necessary gates/small pilots; admitted missing cases are backup queue, not mandatory all240 expansion"
+  ],
+  "previous_shutdown_receipt_recovered": "RECOVERED_PREVIOUS_SHUTDOWN_RECEIPT.json",
+  "keep_current_cpu_instance_on": true
+}

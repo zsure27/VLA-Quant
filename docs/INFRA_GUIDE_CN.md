@@ -129,3 +129,7 @@ episode规范见`configs/infra/episodes.example.json`。各后端的原始日志
 当前框架已做7项CPU控制与故障路径验证；本轮没有用户开启的新服务器，因此没有开展真实GPU训练、跨suite数值验证或真实关机测试。下一轮只需对实际新组合补必要门禁。
 
 仅准备备份并检查流量预算：`python scripts/infra_archive_run.py --run-dir RUN --prepare-only`。已准备/中断快照保留后，用原`RUN/.closure/upload-plan.json`和独立回执调用`github_archive_store_v3.py --workers 2`续传，避免重压缩。同步新增代码时，在本轮`git_sync_argv`中以重复`--include 相对文件`列明已审阅路径；未列入的工作文件不被批量提交。
+
+## OFT扩展名称与CPU准备（2026-11-13）
+
+`python -m qvla.infra --plugin qvla.oft_quant_catalog_v1 list`可查看新增GPTQ/OmniQuant/ActQuant/QVLA/DuQuant/QuantVLA/HoloQ名称与精度接口；名称注册不表示模型适配或数值入场。[OFT十二项实际状态](../configs/infra/runtime_commonality_v8/method_catalog_oft.json)与[061CPU准备和开卡边界](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/cpu-preparation/20261113-061-v1/README_CN.md)优先于旧catalog的历史状态。CPU模板无GPU授权，不能直接执行；仍需新的GPU身份、完整运行前校验、新鲜额度和本轮停机保护器。

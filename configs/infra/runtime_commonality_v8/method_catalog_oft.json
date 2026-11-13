@@ -1,0 +1,81 @@
+{
+  "version": 8,
+  "observed_date": "2026-11-13",
+  "scope": "OpenVLA-OFT only; other model statuses are not updated by061CPU preparation",
+  "requested_quantized_configurations": 12,
+  "reference": "BF16 separate",
+  "model_admitted_configurations": 6,
+  "prepared_pending_initial25": 240,
+  "new_gpu_results": 0,
+  "gpu_authorized": false,
+  "methods": [
+    {
+      "method": "GPTQ",
+      "precision": "W4A16",
+      "openvla_oft_status": "ADMITTED_SAME80_PROFILE_REUSABLE"
+    },
+    {
+      "method": "AWQ",
+      "precision": "W4A16",
+      "openvla_oft_status": "ADMITTED_SAME80_PROFILE_REUSABLE"
+    },
+    {
+      "method": "OmniQuant",
+      "precision": "W4A16",
+      "openvla_oft_status": "ADMITTED_SAME80_PROFILE_REUSABLE"
+    },
+    {
+      "method": "ActQuant",
+      "precision": "W4A16",
+      "openvla_oft_status": "DEFAULT_GPU_AMF_MEMORY_BLOCKED_CPU_TOOLS_ONLY"
+    },
+    {
+      "method": "QVLA",
+      "precision": "mixed~W4A16",
+      "openvla_oft_status": "ADMITTED_SAME80_PROFILE_REUSABLE"
+    },
+    {
+      "method": "SmoothQuant",
+      "precision": "W4A8",
+      "openvla_oft_status": "ADMITTED_SAME80_PROFILE_REUSABLE"
+    },
+    {
+      "method": "DuQuant",
+      "precision": "W4A8",
+      "openvla_oft_status": "CPU_CORE_COMPONENTS_ONLY_FULL_METHOD_NOT_ADMITTED"
+    },
+    {
+      "method": "QuantVLA",
+      "precision": "W4A8",
+      "openvla_oft_status": "OFT_BINDING_NOT_IMPLEMENTED"
+    },
+    {
+      "method": "SmoothQuant",
+      "precision": "W4A4",
+      "openvla_oft_status": "ADMITTED_SAME80_PROFILE_REUSABLE"
+    },
+    {
+      "method": "DuQuant",
+      "precision": "W4A4",
+      "openvla_oft_status": "CPU_CORE_COMPONENTS_ONLY_FULL_METHOD_NOT_ADMITTED"
+    },
+    {
+      "method": "QuantVLA",
+      "precision": "W4A4",
+      "openvla_oft_status": "OFT_BINDING_NOT_IMPLEMENTED"
+    },
+    {
+      "method": "HoloQ-VLA",
+      "precision": "W4A4",
+      "openvla_oft_status": "INACTIVE_CURRENT_DIFFUSION_IMPLEMENTATION_NOT_OFT_BINDING"
+    }
+  ],
+  "qualifications": [
+    "Names in qvla.oft_quant_catalog_v1 are capability interfaces, not model admission",
+    "DuQuant core checks use original rotation/permutation/affine quantizer primitives, no LET/LWC/full decoder block or attention-matmul path; do not label them full original DuQuant",
+    "ActQuant default AMF static bound28.30GB exceeds24GiB4090; current CPU memory2GiB also prevents full model CPU AMF/export; source/build/help readiness is distinct",
+    "QuantVLA current source targets GR00T; mentions alone neither prove incompatibility nor establish an OFT binding",
+    "Holo current implementation stays outside the active OFT queue; original requested catalog and evidence retained"
+  ],
+  "evidence": "Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/cpu-preparation/20261113-061-v1/README_CN.md"
+}

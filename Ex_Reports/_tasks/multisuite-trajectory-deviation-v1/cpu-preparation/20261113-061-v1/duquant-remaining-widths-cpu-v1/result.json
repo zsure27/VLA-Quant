@@ -1,0 +1,47 @@
+{
+  "gate": "PASS_ALL_SIX_OFT_INPUT_WIDTHS_CPU_COMPONENTS",
+  "actual_model_input_widths": [
+    588,
+    1024,
+    1152,
+    4096,
+    4304,
+    11008
+  ],
+  "prior_diagnostic": "PASS_BF16_AUTOCAST_DUQUANT_CPU_COMPONENT_ONLY",
+  "checks": [
+    {
+      "width": 1024,
+      "block": 128,
+      "all16_float32_max_abs": 1.2516975402832031e-06,
+      "bf16_autocast_w4a4_w4a8_finite": true,
+      "no_original_input_mutation": true
+    },
+    {
+      "width": 1152,
+      "block": 128,
+      "all16_float32_max_abs": 2.1457672119140625e-06,
+      "bf16_autocast_w4a4_w4a8_finite": true,
+      "no_original_input_mutation": true
+    },
+    {
+      "width": 4096,
+      "block": 128,
+      "all16_float32_max_abs": 1.7881393432617188e-06,
+      "bf16_autocast_w4a4_w4a8_finite": true,
+      "no_original_input_mutation": true
+    },
+    {
+      "width": 11008,
+      "block": 128,
+      "all16_float32_max_abs": 2.1457672119140625e-06,
+      "bf16_autocast_w4a4_w4a8_finite": true,
+      "no_original_input_mutation": true
+    }
+  ],
+  "target_shape_entries": 422,
+  "actual_model_weights_loaded": false,
+  "qualification": "All actual input widths checked on small9-output synthetic modules; not full matrices/422-layer injection, not GPU or native action admission",
+  "gpu_started": false,
+  "model_admitted": false
+}

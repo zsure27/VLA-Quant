@@ -1,0 +1,491 @@
+{
+  "format": "OFT_EXISTING_METHODS_INITIAL25_CPU_PREP_V1",
+  "executable": false,
+  "root_control": null,
+  "prepared_at": "2026-11-13T06:05:44.832648+00:00",
+  "training": "none",
+  "calibration_resets": [
+    0
+  ],
+  "checkpoint_receipt_sha256": "9a2f6e851c3be4ac54bb291ea539af7efc252487c1b6fdda950e685faa592edc",
+  "profiles": {
+    "awq_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/awq.pt",
+      "bytes": 189535869,
+      "sha256": "8320b575d18991fc58b78189ceec22f028ab520f5d8ce4bfa9429490c78a48ce"
+    },
+    "gptq_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-full-v1/profile.pt",
+      "bytes": 4029453692,
+      "sha256": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a"
+    },
+    "omniquant_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt",
+      "bytes": 4589938380,
+      "sha256": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995"
+    },
+    "smoothquant_w4a4": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt",
+      "bytes": 6195404,
+      "sha256": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522"
+    },
+    "smoothquant_w4a8": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt",
+      "bytes": 6195404,
+      "sha256": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522"
+    },
+    "qvla_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json",
+      "bytes": 16548339,
+      "sha256": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b"
+    }
+  },
+  "collectors": {
+    "awq_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_quant_drift_v2.py"
+    },
+    "smoothquant_w4a8": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_quant_drift_v2.py"
+    },
+    "smoothquant_w4a4": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_quant_drift_v2.py"
+    },
+    "gptq_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-gptq-v3/execute_oft_gptq_v2.py"
+    },
+    "omniquant_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-next-stage-v1/execute_oft_omni_lwc_v1.py"
+    },
+    "qvla_w4a16": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/collect_oft_qvla_case_v4.py",
+      "admission": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1/admission/result.json"
+    }
+  },
+  "frozen_files": {
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_drift_v3.py": "19db0878252809f595962e187771ebf98fec0900fc5247cd39c0c26cb8f1d8e3",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/on_policy_capture.py": "162744c1fbb51abcc1095ccbeaaef65c6a76b580686adf4dedebe3d80d439b94",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/baseline_contract.py": "8ece721cfd10c694fbb67b9cd5dd8f5fe33f626a2d586c34a28348c3348038c7",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/trajectory_diagnostics_v1.py": "b439fbed0b3a6d509fba3272e139798c0e69459f0e6c82c77395dfce41dd3bdc",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/diagnostics/native_oft_trace_v1.py": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/execute_oft_quant_drift_v2.py": "0b9cfc028f1f1e4977d818b9ead680d2ffd6f450904b4f77afc8f3dce40eef64",
+    "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-gptq-v3/execute_oft_gptq_v2.py": "51bdbc2f6652e04fb537a069d8f7e3bf8ef6386a508547eb114c115a532d07e9",
+    "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-next-stage-v1/execute_oft_omni_lwc_v1.py": "e74c5d62ad74ff435cea7cb136407099c88ad8886bf68d476ae124290f1dc464",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-20261112-061-qvla-resume-v5/scripts/trajectory_drift_20261112/collect_oft_qvla_case_v4.py": "313d6619979c574870ba7d4ff5f82498d5df91506c5b4af5dca5f7abf43b6aca",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/qvla-remaining9-v1/admission/result.json": "efec767480b19762b0c0299fd7448a2c3cfcffcd093c333e73090d0539ae74c6",
+    "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-gptq-v3/gptq_oft_v1.py": "895e48532362f0c5a5236943c93c3092a5be7134c750f524e1bae6654e614794",
+    "/root/autodl-tmp/trajectory-drift-20261107/method-code/20261110-omniquant-weight-v1/omni_oft_weight_v1.py": "f346e1a5fc197c5391addd0a06cfe44e9b9d4c178c62c2a6d28dd9266847be33",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/run_eval_official_quant.py": "e7441b533ffdedcbf33aac555da1067487796fa48c7274d1bb6a723ce2bb3f8b",
+    "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261109-v1/qvla/official_quant_adapter.py": "6179991b5d92ef4d8f2db956dee9b06851778c02569d5e3299c82843f0ae8171",
+    "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/awq.pt": "8320b575d18991fc58b78189ceec22f028ab520f5d8ce4bfa9429490c78a48ce",
+    "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-gptq-full-v1/profile.pt": "91d60e63602715e49e2fa3d1efa0a9657e7923af5be36333a35b61459365ce4a",
+    "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261110-omni-lwc-full-v2/profile.pt": "5d26ceabd8cf07ba17d35cd1c3f678258082036ec37a223c313418c3d802f995",
+    "/root/autodl-tmp/trajectory-drift-20261107/profiles/20261109-four-suite-reset0-v4/smoothquant.pt": "8246cef2413dbbe961540e2ade7c155aa84c409cf7e5b97e189b69cb3678c522",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/qvla-gates-v2.json": "a9b8d108fa9874e847cb0bce19decb155c28e0298b0274047858c08de187b23b",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task0-reset25/result.json": "3c69dc6d5810f903bf3b3c848c3346f4d53ca80aa30fb1f5fbd19945d6b3d94c",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task1-reset25/result.json": "72a792134c1a8c06817307f5d218b2fda1c0fa17881ed2c26603c7fb222b78a2",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task2-reset25/result.json": "325f54b1313706126328c392375da64ec808baca415c29c07f753c5517f0c250",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task3-reset25/result.json": "45153f324a6ad833e86eb6381bfcebe5769aad41b1d291a91ab1e9b81fe83810",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task4-reset25/result.json": "603bccae178dc29b146bf76b4a44ba2c28683e21fff4ccdcd5540aedb1e58527",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task5-reset25/result.json": "0664ee8404cf547019213032157182af48501531d3d375231013b3e9b1cba230",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task6-reset25/result.json": "9e5cf5403be058c63ca56b696c64268ef6dc8512e20859e92b5fc5b27c7252a7",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task7-reset25/result.json": "0d27a675a7708b43a2d2227cb2cc7cec4702038a9704af0adaa72df3c767036e",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task8-reset25/result.json": "96a35898b2d8a06c431a1f0b1f2482bdc660f4b5a890b805f6409017ba335a90",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task9-reset25/result.json": "eb5d974c1fc6bde7ef43b08a2acd3c6bca0e51ed2b36155bd00a4a2f978998e6",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task0-reset25/result.json": "d063d22f959aea8fed66323f2013e48c89cc71da65330246603259e2d6e9dd28",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task1-reset25/result.json": "ca46c47b6299671fd46481f3d55ef3e40fab325646deed1e9c95b5303d741a70",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task2-reset25/result.json": "8abe513c5abebe4fbd1e6dd6780138efee0141223110e370c5b71c279e97ee98",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task3-reset25/result.json": "6172f355e89bec0ae594964b6da2aa469983e670e2e5f6b44166aede598ccc49",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task4-reset25/result.json": "1695e12446d6191e96dea750a19dedc635d14bc895f6a986bfc7352415f36f76",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task5-reset25/result.json": "101b09d3840e7882ae15db91f51a10fe632d7f770dfabaa64b742fdb9a14cdf4",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task6-reset25/result.json": "e78a26fa3faaa5aa0da0d7989ba076deac7394dcd154fe6c6eb7c3f87cd43ef4",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task7-reset25/result.json": "d0092d504371266661644fc3520f377396d8a7a4798b7a577fe9f01cf6f88d1a",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task8-reset25/result.json": "43eeaa0063bcafffa3ee48d4d79d39762afdc03d437b5160c75c33ad1619f2c7",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task9-reset25/result.json": "4a70bf25f0defe8bd18d7393326f1fc27bc10b7e2e1623e2258c2f09e7a968c7",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task0-reset25/result.json": "c4b8245c61267387a49bb2993fec1148b195f25dd9ccde3788604ef450f8f26e",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task1-reset25/result.json": "06ccb99f36cf2c0d863650d92abeaed08769626736156178af9e6f02fd15b5d3",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task2-reset25/result.json": "42ab85e88f54cce56c2a0c44055a5329416b7c3dde5eb0f34f0a88f5dc61519f",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task3-reset25/result.json": "1e0993b098aa068561a5fe9dfd3bdd036ff0649a43b19439a4c6c728eabb3659",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task4-reset25/result.json": "bd955fefd4889a95306add0a6bc427577e77315cb544e84f47046dd3a21e5e79",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task5-reset25/result.json": "1145f40db2d21b3bb4c1ed4bcbe9f34d5e226079601b215ba18b545ea4a81c82",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task6-reset25/result.json": "a91c7779bdd208c0597e5aff932b3366729cdf4cd2d869962b7ae3cc5e3840fe",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task7-reset25/result.json": "0daaee5d2852603e6e00d04ca2a9645938c7e2019819716baceaa0b85402582f",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task8-reset25/result.json": "0c0e8e919dbaf5aff52b08875d6dccd79cfb9dff335d93cab4a02571aea02b30",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task9-reset25/result.json": "05806d1a69e431e0dad7bc6fc9f37a05d91c69fc210408ec30b7e965f340401b",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task0-reset25/result.json": "97d631318ffd1bdedc579b8d11327ef1a1eebd44e34af13dc8a637cec66e0b42",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task1-reset25/result.json": "757a072f9a5b4856fa44c8a6236830233ae7f406d6ae24a17cb8b82c4ecb05bb",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task2-reset25/result.json": "d41040592c12b9b02d91625b9417517696716bebdac5951bae2b7edcf7dc2584",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task3-reset25/result.json": "bcb1b8a07abc06d16ac3d1809218aef21c0b18ba189dd5e73ff618e9f5397899",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task4-reset25/result.json": "08f49f59ca1f9f1f5adb8bc5b4a51f49ab2ec348afe74340c6f43978e78bb6d1",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task5-reset25/result.json": "7abcaffc61d15fcde8ed9cd039b9bfa1dbda9184a68e3d6486bffd6c283106bf",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task6-reset25/result.json": "8cd7175622254a1e79245282543fb52c71f9c79d04983be38e8c923b0f346963",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task7-reset25/result.json": "67018af45c01096824e25678e6eb1575f271e75eb44ea36b7d37b14edb207295",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task8-reset25/result.json": "1a034a6ee3cea0f17c8555895418ba7b6101f6fcb1c854e102022f37de7bf9f4",
+    "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task9-reset25/result.json": "243a63b7242d581f2f5a5142c7eaba39178b462cefb946d4c85245a9c6cfd9c9"
+  },
+  "cases": [
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task0-reset25/result.json",
+      "reference_sha256": "3c69dc6d5810f903bf3b3c848c3346f4d53ca80aa30fb1f5fbd19945d6b3d94c",
+      "initial_state_sha256": "270c59a4982faf1124a068e1ede6ed6a2e2c4b782d6662152853c8b37308a777"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task1-reset25/result.json",
+      "reference_sha256": "72a792134c1a8c06817307f5d218b2fda1c0fa17881ed2c26603c7fb222b78a2",
+      "initial_state_sha256": "d39dedeb4a7a1d5f7b937db9c174463a89b5019e2b2e3fb3cc4256d2eec8f1b1"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task2-reset25/result.json",
+      "reference_sha256": "325f54b1313706126328c392375da64ec808baca415c29c07f753c5517f0c250",
+      "initial_state_sha256": "5d5b2450208eba54e1581541d9ffac4be1569c97a5384845afc00b526fa2672b"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task3-reset25/result.json",
+      "reference_sha256": "45153f324a6ad833e86eb6381bfcebe5769aad41b1d291a91ab1e9b81fe83810",
+      "initial_state_sha256": "b3cb958c8ea76d267a5d54ebe4b34c21d625f8ba184f90dc4fbe3c06aada8b2d"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task4-reset25/result.json",
+      "reference_sha256": "603bccae178dc29b146bf76b4a44ba2c28683e21fff4ccdcd5540aedb1e58527",
+      "initial_state_sha256": "b5100aef09b3d87b2b93b58bfa06cbb5c61fda7364b64dd7efc9d70e3bfbba81"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task5-reset25/result.json",
+      "reference_sha256": "0664ee8404cf547019213032157182af48501531d3d375231013b3e9b1cba230",
+      "initial_state_sha256": "d8d91e52f2e9ca98ebb9fd1b3b7978404fb3bdfad0308e35a45cfa59808e184b"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task6-reset25/result.json",
+      "reference_sha256": "9e5cf5403be058c63ca56b696c64268ef6dc8512e20859e92b5fc5b27c7252a7",
+      "initial_state_sha256": "e122617d9fa3be784e0ca60cb2e0a6d375b6a5ea54b59c7535b8d8570c5c97e4"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task7-reset25/result.json",
+      "reference_sha256": "0d27a675a7708b43a2d2227cb2cc7cec4702038a9704af0adaa72df3c767036e",
+      "initial_state_sha256": "2b579b50672d9baf9acae29e1feddfd03c89f2cb03bfe5d84a8bb0014f423fa1"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task8-reset25/result.json",
+      "reference_sha256": "96a35898b2d8a06c431a1f0b1f2482bdc660f4b5a890b805f6409017ba335a90",
+      "initial_state_sha256": "fe096098d6a030e74debaf2a903dfe806764de660d92272e2bd348ee80abc88c"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_spatial-task9-reset25/result.json",
+      "reference_sha256": "eb5d974c1fc6bde7ef43b08a2acd3c6bca0e51ed2b36155bd00a4a2f978998e6",
+      "initial_state_sha256": "5812abe2c5d424cde29a54cf19f1e651a7213816428783d6a037aebe84da0eaf"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task0-reset25/result.json",
+      "reference_sha256": "d063d22f959aea8fed66323f2013e48c89cc71da65330246603259e2d6e9dd28",
+      "initial_state_sha256": "a6fee7c621bd66fe9d4ccf7de6584332d39ba7c032724ea1b0c2022e703fa913"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 1,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task1-reset25/result.json",
+      "reference_sha256": "ca46c47b6299671fd46481f3d55ef3e40fab325646deed1e9c95b5303d741a70",
+      "initial_state_sha256": "d5d2feb4d1c1e0ca1b5d0a8128625c9fd459fc4131075ecbba86988f413febfd"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 2,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task2-reset25/result.json",
+      "reference_sha256": "8abe513c5abebe4fbd1e6dd6780138efee0141223110e370c5b71c279e97ee98",
+      "initial_state_sha256": "ac3cfaa512bca7b60d0b17f8ce2625820644bcc6e64575a7babe9900856312c6"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 3,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task3-reset25/result.json",
+      "reference_sha256": "6172f355e89bec0ae594964b6da2aa469983e670e2e5f6b44166aede598ccc49",
+      "initial_state_sha256": "9866ec62c2cf16c6c3b21b25960ab40c6d4fad51552674977c9b2f424769f7a1"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 4,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task4-reset25/result.json",
+      "reference_sha256": "1695e12446d6191e96dea750a19dedc635d14bc895f6a986bfc7352415f36f76",
+      "initial_state_sha256": "bba65d979f3ed7278d756aa0b9530c06667456a1a52a6fe9dbf650902d234fbf"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 5,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task5-reset25/result.json",
+      "reference_sha256": "101b09d3840e7882ae15db91f51a10fe632d7f770dfabaa64b742fdb9a14cdf4",
+      "initial_state_sha256": "87e12e4f17e0123e33b786a5a4158b21bcde3ed273d13e970ce38cf3f1c6e01d"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 6,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task6-reset25/result.json",
+      "reference_sha256": "e78a26fa3faaa5aa0da0d7989ba076deac7394dcd154fe6c6eb7c3f87cd43ef4",
+      "initial_state_sha256": "290c846af46c580e71b94887f2b2f05191ceca72fa5721a0c28efae0d9b4d12c"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 7,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task7-reset25/result.json",
+      "reference_sha256": "d0092d504371266661644fc3520f377396d8a7a4798b7a577fe9f01cf6f88d1a",
+      "initial_state_sha256": "6e6f1e8151357119be39eb18cba3754ad1f2a328dab97ded47cbab219793cf71"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 8,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task8-reset25/result.json",
+      "reference_sha256": "43eeaa0063bcafffa3ee48d4d79d39762afdc03d437b5160c75c33ad1619f2c7",
+      "initial_state_sha256": "5a8756b5e5d14e7b48f014932137e762a2ddcee69b033cf31743dd82b2cc1da6"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_object",
+      "task_id": 9,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_object-task9-reset25/result.json",
+      "reference_sha256": "4a70bf25f0defe8bd18d7393326f1fc27bc10b7e2e1623e2258c2f09e7a968c7",
+      "initial_state_sha256": "d2a124dacb780f822aeefed013046d5263cde24d6256934aa82c4a716c1580f4"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task0-reset25/result.json",
+      "reference_sha256": "c4b8245c61267387a49bb2993fec1148b195f25dd9ccde3788604ef450f8f26e",
+      "initial_state_sha256": "db1ecb3c1e13d8da29f7fb0309bec30050deae7245652f4b6a22643ca11a0895"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task1-reset25/result.json",
+      "reference_sha256": "06ccb99f36cf2c0d863650d92abeaed08769626736156178af9e6f02fd15b5d3",
+      "initial_state_sha256": "3f79a384a0ab740adc60a061e6d53536281c5036a40f7512690510d69b438769"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task2-reset25/result.json",
+      "reference_sha256": "42ab85e88f54cce56c2a0c44055a5329416b7c3dde5eb0f34f0a88f5dc61519f",
+      "initial_state_sha256": "38424078b02bba41bfb54c89c66f7daccd2851d175c3c782f3e96df7bdde8f28"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task3-reset25/result.json",
+      "reference_sha256": "1e0993b098aa068561a5fe9dfd3bdd036ff0649a43b19439a4c6c728eabb3659",
+      "initial_state_sha256": "97feb104511d6f17161266f372b904a3fbe10981e154e8068a00365fc5f81587"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task4-reset25/result.json",
+      "reference_sha256": "bd955fefd4889a95306add0a6bc427577e77315cb544e84f47046dd3a21e5e79",
+      "initial_state_sha256": "ca7816606b37c9b398dd11fa688a1d027c9cfde2bda0fd06f3ccd3b0443b3c99"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task5-reset25/result.json",
+      "reference_sha256": "1145f40db2d21b3bb4c1ed4bcbe9f34d5e226079601b215ba18b545ea4a81c82",
+      "initial_state_sha256": "69ed9678d13b9125d678e2198685bf28157f1117416ca73489d7e02a66a5143c"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task6-reset25/result.json",
+      "reference_sha256": "a91c7779bdd208c0597e5aff932b3366729cdf4cd2d869962b7ae3cc5e3840fe",
+      "initial_state_sha256": "470004d3b266ed9ee3cdc5d9d4e2e0644f06ebb34f36bde88275b1383f0aacb2"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task7-reset25/result.json",
+      "reference_sha256": "0daaee5d2852603e6e00d04ca2a9645938c7e2019819716baceaa0b85402582f",
+      "initial_state_sha256": "474df1080a7e4c20deb3421b1c1dbbb84be7980cbefd9eec3f4751db2f46b6d0"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task8-reset25/result.json",
+      "reference_sha256": "0c0e8e919dbaf5aff52b08875d6dccd79cfb9dff335d93cab4a02571aea02b30",
+      "initial_state_sha256": "f7f87dd4038bbf2e5305911d6568246fa4eb7e3372138d2479dfa6c950997176"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_goal-task9-reset25/result.json",
+      "reference_sha256": "05806d1a69e431e0dad7bc6fc9f37a05d91c69fc210408ec30b7e965f340401b",
+      "initial_state_sha256": "c93b9cd885e542c9058680f7b8cedfbff332a7e7e34efaf68a14812fadf07e18"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task0-reset25/result.json",
+      "reference_sha256": "97d631318ffd1bdedc579b8d11327ef1a1eebd44e34af13dc8a637cec66e0b42",
+      "initial_state_sha256": "0b82cd37e5548f177701291f9479c5d963a1488cbc29283b7b6d6d4ece5fab23"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 1,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task1-reset25/result.json",
+      "reference_sha256": "757a072f9a5b4856fa44c8a6236830233ae7f406d6ae24a17cb8b82c4ecb05bb",
+      "initial_state_sha256": "0ca2314972a41b72dba008c7cd449afc1187f9410a9da7a661b7a1aa4b486e77"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 2,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task2-reset25/result.json",
+      "reference_sha256": "d41040592c12b9b02d91625b9417517696716bebdac5951bae2b7edcf7dc2584",
+      "initial_state_sha256": "99c8d12bc18142a0b4899030e523b10f0d715932635f241124cd1d15747fc790"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 3,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task3-reset25/result.json",
+      "reference_sha256": "bcb1b8a07abc06d16ac3d1809218aef21c0b18ba189dd5e73ff618e9f5397899",
+      "initial_state_sha256": "3e82de4a8d0c74b874a9b3735f7a3003b1820b6498d072b897d7e8d27b94f2cc"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 4,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task4-reset25/result.json",
+      "reference_sha256": "08f49f59ca1f9f1f5adb8bc5b4a51f49ab2ec348afe74340c6f43978e78bb6d1",
+      "initial_state_sha256": "ce2cf4c27ff01c1dc4b94afe97e647a9a522ce10f0de235c1f4b9e5d1727f814"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 5,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task5-reset25/result.json",
+      "reference_sha256": "7abcaffc61d15fcde8ed9cd039b9bfa1dbda9184a68e3d6486bffd6c283106bf",
+      "initial_state_sha256": "5fe3009d5bef1c8df5e8bbc8aea9a78a16efc447b44b3f34fe73c97b4ab15af6"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task6-reset25/result.json",
+      "reference_sha256": "8cd7175622254a1e79245282543fb52c71f9c79d04983be38e8c923b0f346963",
+      "initial_state_sha256": "f5682e9f27e313a6e3ba8617cbf299eac4c86899583b9e8a80327aa1ce83e86e"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task7-reset25/result.json",
+      "reference_sha256": "67018af45c01096824e25678e6eb1575f271e75eb44ea36b7d37b14edb207295",
+      "initial_state_sha256": "e61542d2e5cd865bfab38f8d88092dcd98b096b6ee4d53ae25b39ae7cd3a4a3c"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task8-reset25/result.json",
+      "reference_sha256": "1a034a6ee3cea0f17c8555895418ba7b6101f6fcb1c854e102022f37de7bf9f4",
+      "initial_state_sha256": "010761f0b31429744cba60ab8f53b6830f2c680979dbd4c8877b38b8b31a0faf"
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 25,
+      "reference_result": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-qvla-resume-v6/stages/bf16-initial25-v2/case-runs/bf16-initial25-v2-libero_10-task9-reset25/result.json",
+      "reference_sha256": "243a63b7242d581f2f5a5142c7eaba39178b462cefb946d4c85245a9c6cfd9c9",
+      "initial_state_sha256": "f670468d2cadd307dae287f34ad755c1bbdebb715cc39c6a33d8b284410bdba6"
+    }
+  ],
+  "actual_native_env_seed": 0,
+  "model_seed": 7,
+  "actions_per_query": 8,
+  "reason_not_executable": "No current GPU authorization or UUID. Rebuild missing-case inventory and compile independent round after user opens GPU. Never execute CPU template directly."
+}

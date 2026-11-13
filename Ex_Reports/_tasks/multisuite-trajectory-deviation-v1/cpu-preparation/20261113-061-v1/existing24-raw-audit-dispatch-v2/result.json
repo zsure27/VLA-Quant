@@ -1,0 +1,503 @@
+{
+  "gate": "PASS_EXISTING24_RAW_PAIRS_CPU_NEW_AUDIT_DISPATCH",
+  "completed": 24,
+  "qualification": "24 existing pairs only; zero new rollouts",
+  "raw_geometry_sha256": "b084a872cccbeb839ac83bc74cc88fb93ce0cfa841d616b72addc21b498a576f",
+  "profile_dispatch_only_changed": true,
+  "metrics": [
+    {
+      "condition": "awq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-awq_w4a16-libero_10-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_10-v1/result.json",
+      "common_steps": 273,
+      "position_p95_mm": 27.502945037106095,
+      "rotation_p95_deg": 4.21058165282604,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "gptq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-gptq-reset5-v1-libero_10-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_10-v1/result.json",
+      "common_steps": 263,
+      "position_p95_mm": 129.10454781239272,
+      "rotation_p95_deg": 8.760697783356175,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-omni-lwc-reset5-v1-libero_10-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_10-v1/result.json",
+      "common_steps": 269,
+      "position_p95_mm": 100.50602099068698,
+      "rotation_p95_deg": 8.282343814882706,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a4-libero_10-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_10-v1/result.json",
+      "common_steps": 274,
+      "position_p95_mm": 515.3947494376357,
+      "rotation_p95_deg": 30.50868481686397,
+      "success": false,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a8-libero_10-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_10-v1/result.json",
+      "common_steps": 274,
+      "position_p95_mm": 78.89202986857833,
+      "rotation_p95_deg": 6.480357353808723,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "awq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-awq_w4a16-libero_goal-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_goal-v1/result.json",
+      "common_steps": 119,
+      "position_p95_mm": 77.31093811456707,
+      "rotation_p95_deg": 9.66982896461925,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "gptq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-gptq-reset5-v1-libero_goal-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_goal-v1/result.json",
+      "common_steps": 119,
+      "position_p95_mm": 35.229106863048514,
+      "rotation_p95_deg": 6.977592145724835,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-omni-lwc-reset5-v1-libero_goal-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_goal-v1/result.json",
+      "common_steps": 119,
+      "position_p95_mm": 59.51856222496258,
+      "rotation_p95_deg": 9.951027904072827,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a4-libero_goal-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_goal-v1/result.json",
+      "common_steps": 119,
+      "position_p95_mm": 444.94343762774423,
+      "rotation_p95_deg": 55.17636426863213,
+      "success": false,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a8-libero_goal-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_goal-v1/result.json",
+      "common_steps": 119,
+      "position_p95_mm": 51.52032669072537,
+      "rotation_p95_deg": 11.182667533362554,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "awq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-awq_w4a16-libero_object-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_object-v1/result.json",
+      "common_steps": 135,
+      "position_p95_mm": 77.54587593329003,
+      "rotation_p95_deg": 7.186268481161562,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "gptq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-gptq-reset5-v1-libero_object-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_object-v1/result.json",
+      "common_steps": 135,
+      "position_p95_mm": 49.539614029895205,
+      "rotation_p95_deg": 7.417754744339852,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-omni-lwc-reset5-v1-libero_object-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_object-v1/result.json",
+      "common_steps": 135,
+      "position_p95_mm": 11.41800411539792,
+      "rotation_p95_deg": 3.885849794295399,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a4-libero_object-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_object-v1/result.json",
+      "common_steps": 135,
+      "position_p95_mm": 348.23565408338936,
+      "rotation_p95_deg": 18.510345468647223,
+      "success": false,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a8-libero_object-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_object-v1/result.json",
+      "common_steps": 135,
+      "position_p95_mm": 50.180392374354525,
+      "rotation_p95_deg": 17.43482282363598,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "awq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-awq_w4a16-libero_spatial-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3/result.json",
+      "common_steps": 79,
+      "position_p95_mm": 16.62626873376091,
+      "rotation_p95_deg": 6.896367915921122,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "gptq_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-gptq-reset5-v1-libero_spatial-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3/result.json",
+      "common_steps": 75,
+      "position_p95_mm": 20.418511283389634,
+      "rotation_p95_deg": 2.3876199648454257,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261110-053-omni-lwc-reset5-v1-libero_spatial-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3/result.json",
+      "common_steps": 77,
+      "position_p95_mm": 27.808564304131426,
+      "rotation_p95_deg": 6.445158318408435,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a4-libero_spatial-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3/result.json",
+      "common_steps": 79,
+      "position_p95_mm": 285.78616416514507,
+      "rotation_p95_deg": 13.413590667148181,
+      "success": false,
+      "reference_success": true
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261109-053-smoothquant_w4a8-libero_spatial-task0-reset5-v1/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3/result.json",
+      "common_steps": 79,
+      "position_p95_mm": 32.860016306025756,
+      "rotation_p95_deg": 7.150672901785585,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "qvla_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v4/case-runs/qvla-pilot-v4-qvla-libero_spatial-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-admission-v3/result.json",
+      "common_steps": 77,
+      "position_p95_mm": 33.47931943380112,
+      "rotation_p95_deg": 4.269746062656522,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "qvla_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v4/case-runs/qvla-pilot-v4-qvla-libero_object-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_object-v1/result.json",
+      "common_steps": 135,
+      "position_p95_mm": 34.46366328357451,
+      "rotation_p95_deg": 14.335493457684807,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "qvla_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v4/case-runs/qvla-pilot-v4-qvla-libero_goal-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_goal-v1/result.json",
+      "common_steps": 119,
+      "position_p95_mm": 40.06942451371108,
+      "rotation_p95_deg": 4.862735287537641,
+      "success": true,
+      "reference_success": true
+    },
+    {
+      "condition": "qvla_w4a16",
+      "candidate": "/root/autodl-tmp/trajectory-drift-20261107/control/20261112-061-oft-other-configs-v4/stages/qvla-pilot-v4/case-runs/qvla-pilot-v4-qvla-libero_10-task0-reset5/result.json",
+      "reference": "/root/autodl-tmp/trajectory-drift-20261107/runs/20261108-053-oft-bf16-libero_10-v1/result.json",
+      "common_steps": 270,
+      "position_p95_mm": 69.9474172965659,
+      "rotation_p95_deg": 4.615458061284391,
+      "success": true,
+      "reference_success": true
+    }
+  ],
+  "raw_audits": [
+    {
+      "run": "20261109-053-awq_w4a16-libero_10-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 273,
+      "queries": 35,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261108-053-oft-bf16-libero_10-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 274,
+      "queries": 35,
+      "raw_env_seed_label": 7,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-gptq-reset5-v1-libero_10-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 263,
+      "queries": 33,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-omni-lwc-reset5-v1-libero_10-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 269,
+      "queries": 34,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a4-libero_10-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 520,
+      "queries": 65,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a8-libero_10-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 277,
+      "queries": 35,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-awq_w4a16-libero_goal-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 130,
+      "queries": 17,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261108-053-oft-bf16-libero_goal-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 119,
+      "queries": 15,
+      "raw_env_seed_label": 7,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-gptq-reset5-v1-libero_goal-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 124,
+      "queries": 16,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-omni-lwc-reset5-v1-libero_goal-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 128,
+      "queries": 16,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a4-libero_goal-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 300,
+      "queries": 38,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a8-libero_goal-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 126,
+      "queries": 16,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-awq_w4a16-libero_object-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 146,
+      "queries": 19,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261108-053-oft-bf16-libero_object-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 135,
+      "queries": 17,
+      "raw_env_seed_label": 7,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-gptq-reset5-v1-libero_object-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 139,
+      "queries": 18,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-omni-lwc-reset5-v1-libero_object-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 137,
+      "queries": 18,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a4-libero_object-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 280,
+      "queries": 35,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a8-libero_object-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 151,
+      "queries": 19,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-awq_w4a16-libero_spatial-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 79,
+      "queries": 10,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261108-053-oft-bf16-admission-v3",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 79,
+      "queries": 10,
+      "raw_env_seed_label": 7,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-gptq-reset5-v1-libero_spatial-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 75,
+      "queries": 10,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261110-053-omni-lwc-reset5-v1-libero_spatial-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 77,
+      "queries": 10,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a4-libero_spatial-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 220,
+      "queries": 28,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "20261109-053-smoothquant_w4a8-libero_spatial-task0-reset5-v1",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 84,
+      "queries": 11,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "qvla-pilot-v4-qvla-libero_spatial-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 77,
+      "queries": 10,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "qvla-pilot-v4-qvla-libero_object-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 184,
+      "queries": 23,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "qvla-pilot-v4-qvla-libero_goal-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 126,
+      "queries": 16,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    },
+    {
+      "run": "qvla-pilot-v4-qvla-libero_10-task0-reset5",
+      "gate": "PASS_QUERY_ACTION_POSE_VIDEO",
+      "steps": 270,
+      "queries": 34,
+      "raw_env_seed_label": 0,
+      "actual_native_env_seed": 0,
+      "note": "Pinned native get_libero_env seeds 0; old BF16 label7 retained as metadata discrepancy"
+    }
+  ]
+}

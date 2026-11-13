@@ -1,0 +1,7 @@
+{
+  "gate": "PASS_CPU_PRIVATE_ARCHIVE_ALL_MEMBERS",
+  "archive_bytes": 3955456,
+  "archive_sha256": "df8848bc9ea2369a37058bc2f7b3ba0b103d3cf17e0620232beb0cc9942ea19a",
+  "members_verified": 99,
+  "scope": "CPU fixture tensors/rotation assets/source/config/logs only; no new actual robot trajectories or full model parameters"
+}

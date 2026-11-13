@@ -1,0 +1,52 @@
+{
+  "state": "CPU_PREPARATION_COMPLETE_GPU_NOT_AUTHORIZED",
+  "observed_at": "2026-11-13T06:21:26.355120+00:00",
+  "hostname": "autodl-container-b9be4c9ca8-1852b227",
+  "gpu_present": false,
+  "model_loaded": false,
+  "new_trajectories": 0,
+  "previous_unique_complete": 600,
+  "pending_initial25_candidates": 240,
+  "gates": {
+    "inventory": {
+      "path": "inventory/result.json",
+      "sha256": "6b40b51f142f52a58fa473016bc476de6e74083dbb8bc2402608a3079303dfd3",
+      "gate": "PASS_CPU_ASSETS_600_IDENTITIES_AND_240_PENDING_INITIAL25"
+    },
+    "duquant_core": {
+      "path": "duquant-core-cpu-v1/result.json",
+      "sha256": "444bc8de57a31cf9693037135089cd60d2b25dc0472ce323a10f78fd68858a2d",
+      "gate": "PASS_DUQUANT_OFT_CORE_SHAPES_RELOAD_AND_ROLE_CPU"
+    },
+    "duquant_all_widths": {
+      "path": "duquant-remaining-widths-cpu-v1/result.json",
+      "sha256": "d59bc395fc602f8c2d4441e96a3a71acafcd220f5c72238a0cb4d62ae0e0116e",
+      "gate": "PASS_ALL_SIX_OFT_INPUT_WIDTHS_CPU_COMPONENTS"
+    },
+    "bf16_components": {
+      "path": "DUQUANT_BF16_CPU_DIAGNOSTIC.json",
+      "sha256": "214cd716eac15289a05920c2b2e647a2af5e06af61ebe4038bab2f1191a94bad",
+      "gate": "PASS_BF16_AUTOCAST_DUQUANT_CPU_COMPONENT_ONLY"
+    },
+    "prepared_queue": {
+      "path": "prepared-queue-v3/result.json",
+      "sha256": "66c47d7956508aba73a5e29d9dc1559988b6f2eb2532fa83caf940ea7da88da1",
+      "gate": "PASS_CPU_SIX_INFRA_TEMPLATES_AND_AUTH_DEDUP_CONTRACTS"
+    },
+    "existing_raw24": {
+      "path": "existing24-raw-audit-dispatch-v2/result.json",
+      "sha256": "09ae0dd8f9b2e2a0006a047808876c83e94d5f04c76ad13b31a1bc31fb30173e",
+      "gate": "PASS_EXISTING24_RAW_PAIRS_CPU_NEW_AUDIT_DISPATCH"
+    }
+  },
+  "source_code": "/root/autodl-tmp/trajectory-drift-20261107/code-cpu-prep-20261113-v1",
+  "preferred_templates": "/root/autodl-tmp/trajectory-drift-20261107/control/20261113-061-cpu-quant-ready-v1/prepared-queue-v3",
+  "memory_limit_bytes": 2147483648,
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+  "disk_free_bytes": 60346130432,
+  "shutdown_requested_this_CPU_session": false,
+  "keep_no_gpu_server_on_for_user": true,
+  "controller_checks": "No persistent monitoring task; CPU jobs finished",
+  "previous_shutdown_execute_true_receipt_recovered": true,
+  "previous_platform_off_or_billing_still_not_independently_verified": true
+}
