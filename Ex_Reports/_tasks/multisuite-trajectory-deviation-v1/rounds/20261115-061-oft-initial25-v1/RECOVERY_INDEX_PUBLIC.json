@@ -1,0 +1,33 @@
+{
+  "round_id": "20261115-061-oft-initial25-v1",
+  "model": "OpenVLA-OFT",
+  "new_unique_quantized_trajectories": 240,
+  "reused_bf16_trajectories": 40,
+  "cumulative_unique_complete": 840,
+  "excluded_duplicate_controls": 4,
+  "covered_initial_states": [
+    5,
+    15,
+    25
+  ],
+  "current_round_pending": 0,
+  "full_five_initial_states_complete": false,
+  "all_twelve_quantization_configurations_admitted": false,
+  "checkpoint_identity_sha256": "cc743563f5b1d0c1e7fa3f8835e754b352e79a590461334a44d473688f0d08ac",
+  "science": {
+    "model_seed": 7,
+    "environment_seed": 0,
+    "actions_per_query": 8,
+    "training": false
+  },
+  "private_raw_archive": {
+    "sha256": "a53246a38035fb054024f1cfc4f6faaffd090dbc6768006285b991681373ca52",
+    "bytes": 853230526,
+    "verification": "PASS_LOCAL_ALL_MEMBERS_AND_PRIVATE_ALL_PART_FULL_READBACK",
+    "members": 7289,
+    "raw_videos": 240,
+    "raw_npz": 5668
+  },
+  "external_dependencies": "Full model and large calibration profiles retained on persistent server by explicit user instruction; prior053 and008 cloud gaps are not resolved by this increment",
+  "next_round": "Require fresh user server/GPU authorization, clone/source/profile/reference hashes and completed-case deduplication; do not inherit old PID/RUNNING/quota override"
+}
