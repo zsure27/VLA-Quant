@@ -1,0 +1,483 @@
+{
+  "scope": "Local source working bytes versus normalized Git blobs, not a new server SHA verification",
+  "rule": "Reconstruct recorded line endings and validate the frozen server plan SHA before reuse; new rounds still need new authorization and plans",
+  "files": [
+    {
+      "path": "qvla/pi05_awq_block_calibration_v1.py",
+      "working_bytes": 7569,
+      "working_sha256": "c62087081e6a7e3bf2ff9132fa958ec4d90e616271cad922d241fc6f2860b795",
+      "git_blob_sha256": "c62087081e6a7e3bf2ff9132fa958ec4d90e616271cad922d241fc6f2860b795",
+      "working_crlf_count": 0,
+      "working_lf_count": 141,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_capture_block_v1.py",
+      "working_bytes": 5270,
+      "working_sha256": "9b0a2b01eddb7f1c1c1919a79348744aaf7436a7d716527bd5a6c028eed086f7",
+      "git_blob_sha256": "9b0a2b01eddb7f1c1c1919a79348744aaf7436a7d716527bd5a6c028eed086f7",
+      "working_crlf_count": 0,
+      "working_lf_count": 81,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_capture_block_v2.py",
+      "working_bytes": 6464,
+      "working_sha256": "47a9d31fecd3c2a91467631055259815e60edbc7999c5e6eaff31f158e78e88b",
+      "git_blob_sha256": "d87436b0c43bcd716269b1aa9571136aca075f04934bfc8dfde670667bc2cb86",
+      "working_crlf_count": 98,
+      "working_lf_count": 98,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_episode_admission_v1.py",
+      "working_bytes": 4260,
+      "working_sha256": "e1ef69a76d328bb2175097daf10c83d7dc1718a5dffda5d90c7b70c12419e11f",
+      "git_blob_sha256": "e1ef69a76d328bb2175097daf10c83d7dc1718a5dffda5d90c7b70c12419e11f",
+      "working_crlf_count": 0,
+      "working_lf_count": 63,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_native_components_v1.py",
+      "working_bytes": 5471,
+      "working_sha256": "14d7d6ae02381128e74b41a44d762a457d6c41914c5fabe95874f91016c15988",
+      "git_blob_sha256": "14d7d6ae02381128e74b41a44d762a457d6c41914c5fabe95874f91016c15988",
+      "working_crlf_count": 0,
+      "working_lf_count": 110,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_native_components_v2.py",
+      "working_bytes": 5746,
+      "working_sha256": "be3bdd22d3a4186cdbbafdb60301d4c8da30cb635b29819e6d2dd72deb1d16e6",
+      "git_blob_sha256": "08036a198147eb34501fa23c122e84f3983fa7311be1e7e65e911c36979af2b7",
+      "working_crlf_count": 112,
+      "working_lf_count": 112,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_profile_v1.py",
+      "working_bytes": 2607,
+      "working_sha256": "ca8e015c58c0d6fea0c988143b939a08290a7649a4ef4bf8ec12012bb2636bb3",
+      "git_blob_sha256": "ca8e015c58c0d6fea0c988143b939a08290a7649a4ef4bf8ec12012bb2636bb3",
+      "working_crlf_count": 0,
+      "working_lf_count": 41,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_awq_replay_batch_v1.py",
+      "working_bytes": 4686,
+      "working_sha256": "2914a135f4b30ac5312107ad8da1d74c48a63e4789eb6f93832557bab2ec3058",
+      "git_blob_sha256": "2914a135f4b30ac5312107ad8da1d74c48a63e4789eb6f93832557bab2ec3058",
+      "working_crlf_count": 0,
+      "working_lf_count": 88,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_block_replay_v1.py",
+      "working_bytes": 3241,
+      "working_sha256": "87572e1170cee3323b36f0b38f9c2e664256b17341f2c1e50875199c7890fa5a",
+      "git_blob_sha256": "87572e1170cee3323b36f0b38f9c2e664256b17341f2c1e50875199c7890fa5a",
+      "working_crlf_count": 0,
+      "working_lf_count": 74,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/pi05_block_replay_v2.py",
+      "working_bytes": 3471,
+      "working_sha256": "a62e5b23d739b17dc53933bd90331d7f08dd3e58281da8a4d9729c7ffc93beb4",
+      "git_blob_sha256": "d46d3ee82f89c755a9d4c46f634614c1a7c45e85de81e2978349f0a1ce4099e1",
+      "working_crlf_count": 76,
+      "working_lf_count": 76,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/execute_pi05_torch_awq_episode_v1.py",
+      "working_bytes": 14435,
+      "working_sha256": "a5a8515dc2054072ff8c0f2bbc712a4c28b217a040ca486ea8ebf146f90b5e4b",
+      "git_blob_sha256": "7aa099faf86309b71e957f30258f347026da2a2efa103a7d039e3443c5389051",
+      "working_crlf_count": 250,
+      "working_lf_count": 250,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "qvla/audit_pi05_torch_awq_trace_v1.py",
+      "working_bytes": 6243,
+      "working_sha256": "486ed21d86f63bf55e24f012f48911c09ca4159a3b44750c2c10da480fa4bf51",
+      "git_blob_sha256": "4a04462a5125e64f5a172d21c97082cc0ff732a74fa60b2138010e9450f5f08d",
+      "working_crlf_count": 121,
+      "working_lf_count": 121,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/build_oft_multiview_report_20261116.py",
+      "working_bytes": 23730,
+      "working_sha256": "47c7dcfa55be914653898acbe622b02d31d97aade65a6f107cfafd811e30381f",
+      "git_blob_sha256": "47c7dcfa55be914653898acbe622b02d31d97aade65a6f107cfafd811e30381f",
+      "working_crlf_count": 0,
+      "working_lf_count": 217,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/shutdown_local_084_pi05_20261116_v2.ps1",
+      "working_bytes": 2514,
+      "working_sha256": "d98f258b876226f23e08956fab8790d505f203f7941bba1f041770a6126726cf",
+      "git_blob_sha256": "e9eb9b81a59dba995eaf0450ebac8c6e9a9928c6fc218e72d72a0e7aed0c71d3",
+      "working_crlf_count": 1,
+      "working_lf_count": 24,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/admit_pi05_gptq_existing_shards_v1.py",
+      "working_bytes": 7166,
+      "working_sha256": "e1e27c88481c4de5ae43749a4a61506411191c89bb79534beaeede7a469e006f",
+      "git_blob_sha256": "e1e27c88481c4de5ae43749a4a61506411191c89bb79534beaeede7a469e006f",
+      "working_crlf_count": 0,
+      "working_lf_count": 138,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/analyze_pi05_available_v1.py",
+      "working_bytes": 6445,
+      "working_sha256": "082c618197b126269c78d5368526870ce2def354bff115dc24aaa663aca92ce3",
+      "git_blob_sha256": "082c618197b126269c78d5368526870ce2def354bff115dc24aaa663aca92ce3",
+      "working_crlf_count": 0,
+      "working_lf_count": 100,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/analyze_pi05_available_v2.py",
+      "working_bytes": 6564,
+      "working_sha256": "a52febbf0607b4614524493bf42fa29bbfbf4a64764914e1d21acaf4ce512c6a",
+      "git_blob_sha256": "06357337a1604675a12af347b972e45047f604b4b6f7988df965bd6e5764d252",
+      "working_crlf_count": 100,
+      "working_lf_count": 100,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/analyze_pi05_available_v3.py",
+      "working_bytes": 6688,
+      "working_sha256": "b847457c41e7fe3ec59df7ca23a9bdddead73bd337a17064f881400b828e0ca0",
+      "git_blob_sha256": "7b01daa6eba0fec1f3a419b747a703e3822d758dbf7dafce0085bbc6437bf1f2",
+      "working_crlf_count": 101,
+      "working_lf_count": 101,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/analyze_pi05_available_v4.py",
+      "working_bytes": 7037,
+      "working_sha256": "bb40afca2acd2b1a76009f1edbb08c20bc68827231500d07843121888a44bf4f",
+      "git_blob_sha256": "e01a18e5239e017292a817220114b5df26336236d798a7451e8b278c067c928b",
+      "working_crlf_count": 108,
+      "working_lf_count": 108,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/calibrate_pi05_awq_blocks_v1.py",
+      "working_bytes": 6967,
+      "working_sha256": "ca961888764fba39f089a9d6367347a339285f453524862184f70f675289defe",
+      "git_blob_sha256": "ca961888764fba39f089a9d6367347a339285f453524862184f70f675289defe",
+      "working_crlf_count": 0,
+      "working_lf_count": 93,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/calibrate_pi05_awq_blocks_v2.py",
+      "working_bytes": 8929,
+      "working_sha256": "2e929ae585b40fb3ebbb9946ea69b28d3aa59bc65a6f283975e1d122343d0b3c",
+      "git_blob_sha256": "a08303a9bba7359a46f408fa7c0c59f5ca9264d21c387c3c16d0813543a69b0c",
+      "working_crlf_count": 114,
+      "working_lf_count": 114,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/diagnose_pi05_native_block_replay_gpu_v1.py",
+      "working_bytes": 6399,
+      "working_sha256": "04e782796a2506e5ab4dd102c7169d2481da7de49d5c052b722ee9b0fae9bf6a",
+      "git_blob_sha256": "04e782796a2506e5ab4dd102c7169d2481da7de49d5c052b722ee9b0fae9bf6a",
+      "working_crlf_count": 0,
+      "working_lf_count": 111,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/guard_quota_window_v1.py",
+      "working_bytes": 1707,
+      "working_sha256": "85b909b8a52e07170ac14687b09bfcdbbb9505a00e7b38c2a635f2625c87f963",
+      "git_blob_sha256": "85b909b8a52e07170ac14687b09bfcdbbb9505a00e7b38c2a635f2625c87f963",
+      "working_crlf_count": 0,
+      "working_lf_count": 31,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/prepare_pi05_awq_callgraph_v1.py",
+      "working_bytes": 4361,
+      "working_sha256": "7d0656b1f0625f4e79cd0c86adc73f429c0cd31dd53fb683e182107f0067f61b",
+      "git_blob_sha256": "7d0656b1f0625f4e79cd0c86adc73f429c0cd31dd53fb683e182107f0067f61b",
+      "working_crlf_count": 0,
+      "working_lf_count": 76,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/prepare_pi05_awq_manifest32_v1.py",
+      "working_bytes": 3494,
+      "working_sha256": "f2515383270ae6ae73a1eeba422dc16d3ea49a14d0cb462d4e0e87a743b17433",
+      "git_blob_sha256": "1fcbf0f5d9424db318ad8c4e124fee320d932817f5150a9b7d7c432756bc5bdb",
+      "working_crlf_count": 56,
+      "working_lf_count": 56,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/prepare_pi05_replay_manifest_v1.py",
+      "working_bytes": 3352,
+      "working_sha256": "a550e0b60e0d294df42e9451e09d5df6015bed50fe2444155d858c5105f0b551",
+      "git_blob_sha256": "a550e0b60e0d294df42e9451e09d5df6015bed50fe2444155d858c5105f0b551",
+      "working_crlf_count": 0,
+      "working_lf_count": 55,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/render_pi05_available_report_v1.py",
+      "working_bytes": 7217,
+      "working_sha256": "8a9d7d3ddf27688d8143851f133b091fc231ba067e2f27c0ecbe8eb094a63ef0",
+      "git_blob_sha256": "8a9d7d3ddf27688d8143851f133b091fc231ba067e2f27c0ecbe8eb094a63ef0",
+      "working_crlf_count": 0,
+      "working_lf_count": 72,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/render_pi05_available_report_v2.py",
+      "working_bytes": 7425,
+      "working_sha256": "e131640418f5d747447c68cda97845d18b4d1b5b2e0453cc4e00c7418f8b51ee",
+      "git_blob_sha256": "f5b5735a16c3c000c475fae6883020ceaadb9e6749d6c380d466729019be4b1c",
+      "working_crlf_count": 73,
+      "working_lf_count": 73,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/render_pi05_available_report_v3.py",
+      "working_bytes": 7673,
+      "working_sha256": "a6e3492cfe74fe894f0ff527d65492b30b3b3d8ab81a969014606370aeb312ef",
+      "git_blob_sha256": "d3d805d7d0501842f7d6ccd3876aba3cc912599847a8507249a2e9b3cecce3e9",
+      "working_crlf_count": 75,
+      "working_lf_count": 75,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/run_pi05_awq_cases_v1.py",
+      "working_bytes": 3250,
+      "working_sha256": "30441a75eda18131a153cfa86f0fdada9b8cf588e65eefe7da0d8c5da845c266",
+      "git_blob_sha256": "7db6648e9131f379d4ad6cb78fd0483e586d72b564d01e393edd533a7397417d",
+      "working_crlf_count": 48,
+      "working_lf_count": 48,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_block_calibration_cpu_v1.py",
+      "working_bytes": 4568,
+      "working_sha256": "02a502ecb1201235c4246d7a7dc9a95bfc1acc7ba713c62fa065e11ac01ab830",
+      "git_blob_sha256": "02a502ecb1201235c4246d7a7dc9a95bfc1acc7ba713c62fa065e11ac01ab830",
+      "working_crlf_count": 0,
+      "working_lf_count": 58,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_block_calibration_cpu_v2.py",
+      "working_bytes": 4742,
+      "working_sha256": "6797db4eaa6554470a90cd2f42eef84e9d0c0563ca9d5900e0bf53b9cecbe798",
+      "git_blob_sha256": "838f87830e5b85b133328ee928af788d2fa9b92991b54efc4c31b9e1c79fe050",
+      "working_crlf_count": 61,
+      "working_lf_count": 61,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_block_calibration_cpu_v3.py",
+      "working_bytes": 4782,
+      "working_sha256": "08f071271770e455915b203364493728dd6b2e1e7b5ba53d24089454ec8cffba",
+      "git_blob_sha256": "cb7c7396bc21b06d672f5ce2b694b56c3ca46c389d21188a96df4608b4208d67",
+      "working_crlf_count": 62,
+      "working_lf_count": 62,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_capture_cpu_v1.py",
+      "working_bytes": 3007,
+      "working_sha256": "edc5f38fe410a9d0338a1f4a2c2476806c0873ad6cc425a67c7c51dbd4d2a3ef",
+      "git_blob_sha256": "edc5f38fe410a9d0338a1f4a2c2476806c0873ad6cc425a67c7c51dbd4d2a3ef",
+      "working_crlf_count": 0,
+      "working_lf_count": 36,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_capture_layout_cpu_v2.py",
+      "working_bytes": 5120,
+      "working_sha256": "49f92b3922dd638b339f961403ad92fba51579f32209caf8c7bd9872943adf92",
+      "git_blob_sha256": "49f92b3922dd638b339f961403ad92fba51579f32209caf8c7bd9872943adf92",
+      "working_crlf_count": 0,
+      "working_lf_count": 58,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_episode_contract_cpu_v1.py",
+      "working_bytes": 1904,
+      "working_sha256": "835cabba1d4f087f416e8f8cea2afd9e936d7148de3d395f5e6281b568b3dc86",
+      "git_blob_sha256": "835cabba1d4f087f416e8f8cea2afd9e936d7148de3d395f5e6281b568b3dc86",
+      "working_crlf_count": 0,
+      "working_lf_count": 24,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_episode_contract_cpu_v2.py",
+      "working_bytes": 2007,
+      "working_sha256": "c10f78fcda446b726a93e34afba0a262e94f74f69e965009769087c77590768f",
+      "git_blob_sha256": "b8d85e26c80a153544ed47d5447f3400abc5d4aece606d1362e0c2d868263be5",
+      "working_crlf_count": 24,
+      "working_lf_count": 24,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_native_components_cpu_v1.py",
+      "working_bytes": 5755,
+      "working_sha256": "d7dfd096fa5130a9a3719fffebb18e2e3054b8f333da6f8d42bc9fcbafb4b19a",
+      "git_blob_sha256": "d7dfd096fa5130a9a3719fffebb18e2e3054b8f333da6f8d42bc9fcbafb4b19a",
+      "working_crlf_count": 0,
+      "working_lf_count": 91,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_native_components_cpu_v2.py",
+      "working_bytes": 5911,
+      "working_sha256": "917efdd66d3f80c2ad61f6c8d0f07d3d1f89748160a5e25ac12ef99ae50460be",
+      "git_blob_sha256": "00a3766ebbc8a8a0a334aeb5f8d4bb242ff4e32b3b0f53511ae93b11851d5636",
+      "working_crlf_count": 91,
+      "working_lf_count": 91,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_profile_cpu_v1.py",
+      "working_bytes": 3579,
+      "working_sha256": "adc5aacf247efd6c9077f45ecca7c3700101a4169d4c89d3e7adc6a128ca02a0",
+      "git_blob_sha256": "adc5aacf247efd6c9077f45ecca7c3700101a4169d4c89d3e7adc6a128ca02a0",
+      "working_crlf_count": 0,
+      "working_lf_count": 42,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_replay_batch_cpu_v1.py",
+      "working_bytes": 4104,
+      "working_sha256": "88be045f8c3b879d5e6ef397f638d03fd15ecec93d66023df61f3547ffd0076a",
+      "git_blob_sha256": "88be045f8c3b879d5e6ef397f638d03fd15ecec93d66023df61f3547ffd0076a",
+      "working_crlf_count": 0,
+      "working_lf_count": 46,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_awq_replay_batch_cpu_v2.py",
+      "working_bytes": 4174,
+      "working_sha256": "450b47bf503019b7c75f1d731b3ee0f7c88974910988e73b1bcc85aec0a39f56",
+      "git_blob_sha256": "c4388eec61e452fabe1a6ec5db58e3f7e495ceba77f53c99ee83764485723040",
+      "working_crlf_count": 47,
+      "working_lf_count": 47,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_native_block_replay_cpu_v1.py",
+      "working_bytes": 3498,
+      "working_sha256": "ec627809ff023b23ebd70ffff8052fa1df17a0e9ef12633a68fb91b63b795da5",
+      "git_blob_sha256": "ec627809ff023b23ebd70ffff8052fa1df17a0e9ef12633a68fb91b63b795da5",
+      "working_crlf_count": 0,
+      "working_lf_count": 59,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/test_pi05_native_block_replay_cpu_v2.py",
+      "working_bytes": 4675,
+      "working_sha256": "33247390708656c369388629d27b5a2c0191a135ab5c79986081093d53f7dab2",
+      "git_blob_sha256": "4ef784c42b8089a938798114cc77eb6c6ee54e61fc2f5f8a935aa4d78f86bc74",
+      "working_crlf_count": 76,
+      "working_lf_count": 76,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261116/weekly_quota_gate_v1.py",
+      "working_bytes": 994,
+      "working_sha256": "2ada436d39c805765463f9b9d14469dad74dd284887bc41431069ae3f44c22e3",
+      "git_blob_sha256": "2ada436d39c805765463f9b9d14469dad74dd284887bc41431069ae3f44c22e3",
+      "working_crlf_count": 0,
+      "working_lf_count": 18,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/guard_quota_window_v1.py",
+      "working_bytes": 1707,
+      "working_sha256": "85b909b8a52e07170ac14687b09bfcdbbb9505a00e7b38c2a635f2625c87f963",
+      "git_blob_sha256": "85b909b8a52e07170ac14687b09bfcdbbb9505a00e7b38c2a635f2625c87f963",
+      "working_crlf_count": 0,
+      "working_lf_count": 31,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/launch_awq_calibration_after_reference_v3.py",
+      "working_bytes": 4231,
+      "working_sha256": "ce576077b58191ae1348b3a9ec0e3e3e83183197f2b74fd1c4850f8325aa2121",
+      "git_blob_sha256": "f23e344726d9755640622089fdf2588b8a2445bedf2e9e547776083a4a5ed6e8",
+      "working_crlf_count": 33,
+      "working_lf_count": 33,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/native_primary_guard_v2.py",
+      "working_bytes": 5024,
+      "working_sha256": "1fe8c49526ae44d8afeb1f080dd782aeac8d204dc7a562f81a21fefc55db7730",
+      "git_blob_sha256": "cf5bf983471188e7141bd4b9830367b5e444c4018d5b903d203a7f9259c6b5d2",
+      "working_crlf_count": 85,
+      "working_lf_count": 85,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/observe_and_deliver_primary_current_round_v2.py",
+      "working_bytes": 1936,
+      "working_sha256": "b263722d3372603f4e79e5b0415ac7a38232841dbaed33358ad3bd4e8840cf50",
+      "git_blob_sha256": "3b609fe0f11418585d4c7b066d5382b09e75dca6fa4ca447c75815346853690d",
+      "working_crlf_count": 25,
+      "working_lf_count": 25,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/prepare_awq_calibration_cpu_v3.py",
+      "working_bytes": 6101,
+      "working_sha256": "67eed4b806e86b5e551ac055579ff2d3883231b791a76d510b59a3a4bb3d1c45",
+      "git_blob_sha256": "550793cb5ef9a48d40ad895e0c39207826dd4614e8d336743936404fb487cef0",
+      "working_crlf_count": 52,
+      "working_lf_count": 52,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/prepare_immutable_raw_snapshot_v1.py",
+      "working_bytes": 3547,
+      "working_sha256": "b66c5a615d0330acd77841e391093eeb97f7423261654d9fd7c28df766d52003",
+      "git_blob_sha256": "5476cb027b322cf1d37ab20949a2c8ea68022f8a23a3e9334115c1fdf583fe7c",
+      "working_crlf_count": 45,
+      "working_lf_count": 45,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/register_missing_bf16_current_tree_v4.py",
+      "working_bytes": 6077,
+      "working_sha256": "09ca31b3093e7155426171b8df5eea6c544e37c16b857340e7832b169e6ec7cb",
+      "git_blob_sha256": "8e996e285836b4a42d32548244776ed9fe3aa379d8dd2461ee5d5b61ec6f87c2",
+      "working_crlf_count": 43,
+      "working_lf_count": 43,
+      "git_blob_crlf_count": 0
+    },
+    {
+      "path": "scripts/trajectory_drift_20261117/register_quant_initial25_historical_v4.py",
+      "working_bytes": 8344,
+      "working_sha256": "3dbfffa17b2e4a7fb38a44cd282b345bff4d8bd637abcf671e1676c49865495d",
+      "git_blob_sha256": "9834bf482382b258f1c67cdfd3a235a9920c77fc04b286dfb2f54d364eaa4281",
+      "working_crlf_count": 53,
+      "working_lf_count": 53,
+      "git_blob_crlf_count": 0
+    }
+  ]
+}

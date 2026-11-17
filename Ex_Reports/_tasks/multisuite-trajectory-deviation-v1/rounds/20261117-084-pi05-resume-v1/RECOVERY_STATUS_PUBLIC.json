@@ -1,0 +1,70 @@
+{
+  "round_id": "20261117-084-pi05-resume-v1",
+  "state": "CONTROL_INTERRUPTED_SSH_UNAVAILABLE",
+  "confirmed_before_interrupt": {
+    "bf16": {
+      "success": 119,
+      "complete": 120
+    },
+    "smoothquant_w4a8": {
+      "success": 119,
+      "complete": 120
+    },
+    "gptq_w4a16": {
+      "success": 119,
+      "complete": 120
+    },
+    "smoothquant_w4a4": {
+      "success": 0,
+      "complete": 80,
+      "user_cancelled_future": 120
+    }
+  },
+  "bf16_initial35": {
+    "spatial_exit": 0,
+    "object_exit": 0,
+    "goal_exit": -15,
+    "long_not_started": true,
+    "complete_prefix_count_not_yet_raw_audited": true
+  },
+  "awq": {
+    "full_profile_admitted": false,
+    "formal_episodes": 0,
+    "completed_calibration_blocks": 18,
+    "completed_calibration_projections": 126,
+    "failed_reason": "Fixed calibration exceeds current-block memory budget",
+    "cache_layout_fix_cpu_values_and_artifacts_bitwise": true,
+    "cpu_plan_prepared_not_started": "6c8e03224e952f42efda017781854e082a4c77a12a5047341c6ffe5f3e57ac4e"
+  },
+  "control_interruption": {
+    "last_primary_observation_utc": "2026-11-17T09:35:50Z",
+    "last_primary_remaining": 84,
+    "reason": "Quota observation stale after current-task wait cell aborted/disappeared",
+    "threshold_hit": false,
+    "weekly_monitoring": false
+  },
+  "backup": {
+    "server_snapshot_bytes": 2332964567,
+    "default_upload_budget_bytes": 2147483648,
+    "upload_plan_rejected": true,
+    "private_cloud_verified": false,
+    "snapshot_server_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261117-084-pi05-resume-v1/.closure/pre-recovery-stable-20261117-v1/.closure/round.tar.gz",
+    "parameters_retained_server_per_user": true,
+    "no_unique_data_deleted": true,
+    "prior_unuploaded_raw_increments_included": true
+  },
+  "shutdown": {
+    "gpu_idle_observed": true,
+    "guard_entered_closing_utc": "2026-11-17T09:35:11Z",
+    "current_native_execute_receipt_obtained": false,
+    "platform_off_independently_verified": false,
+    "ssh_unavailable_on_bounded_retries": true,
+    "windows_shutdown_authorized": false,
+    "windows_shutdown_executed": false
+  },
+  "monitoring": {
+    "mode": "current_task_only",
+    "independent_app_automation_created": false,
+    "current_checks_stopped": true
+  }
+}

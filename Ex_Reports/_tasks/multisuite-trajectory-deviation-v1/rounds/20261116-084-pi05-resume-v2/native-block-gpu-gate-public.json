@@ -1,0 +1,206 @@
+{
+  "gate": "PASS_ACTUAL_PI05_NATIVE_BLOCK_REPLAY_CALIBRATION",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "calibration_only": true,
+  "reset_index": 0,
+  "action_checks": [
+    {
+      "suite": "libero_10",
+      "input_sha256": "855e14d4487d9addae14f1047c9be10178d9140380e9c9bfe29ac25ba7622050",
+      "whole_policy_bitwise": true
+    },
+    {
+      "suite": "libero_goal",
+      "input_sha256": "032a959f361fd1dda7ee9b140f1f2384b187c2571c22b7b4c3e7cb9a014024a3",
+      "whole_policy_bitwise": true
+    },
+    {
+      "suite": "libero_object",
+      "input_sha256": "368220b2235d6e7f54c8724035882c8202d33025ddb558b7e7adca44586716d1",
+      "whole_policy_bitwise": true
+    },
+    {
+      "suite": "libero_spatial",
+      "input_sha256": "26fb7e1e2ed90b1eb945dc00567b45cbc6a7a63981f62c774c957f26c7c15e6d",
+      "whole_policy_bitwise": true
+    }
+  ],
+  "block_checks": [
+    {
+      "suite": "libero_10",
+      "component": "vision",
+      "module": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0",
+      "shape": [
+        1,
+        256,
+        1152
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "d36eb3c9b4b99976d5a70b4b8ca7db9c860b83c6596109183d68f60baa349f4c"
+    },
+    {
+      "suite": "libero_10",
+      "component": "prefix",
+      "module": "paligemma_with_expert.paligemma.model.language_model.layers.0",
+      "shape": [
+        1,
+        968,
+        2048
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "090d8e4be81c3e616c2f82118f33fe9fc26825ef0e8d33ad7d83b97020422c94"
+    },
+    {
+      "suite": "libero_10",
+      "component": "expert",
+      "module": "paligemma_with_expert.gemma_expert.model.layers.0",
+      "shape": [
+        1,
+        10,
+        1024
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "10afcc8462d8ac58e963ee64af8a5a5b8096513a0efb9f7f4d2407ce7359477b"
+    },
+    {
+      "suite": "libero_goal",
+      "component": "vision",
+      "module": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0",
+      "shape": [
+        1,
+        256,
+        1152
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "27760b22608664f0b83b84ae0950dce7ef84d7ee3f5269075cb15990d4e17388"
+    },
+    {
+      "suite": "libero_goal",
+      "component": "prefix",
+      "module": "paligemma_with_expert.paligemma.model.language_model.layers.0",
+      "shape": [
+        1,
+        968,
+        2048
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "397ea4ac1fc5a7050464969a3fddc887fc79b7cd117581983ff31141c96354f1"
+    },
+    {
+      "suite": "libero_goal",
+      "component": "expert",
+      "module": "paligemma_with_expert.gemma_expert.model.layers.0",
+      "shape": [
+        1,
+        10,
+        1024
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "6bde8ec524e74fafe1b6172d57702205e127cc843321e3d5bd25b7edba7f0a13"
+    },
+    {
+      "suite": "libero_object",
+      "component": "vision",
+      "module": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0",
+      "shape": [
+        1,
+        256,
+        1152
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "bb90b75453ad8eb026dbd8395e565b215f8e06df37467482a37afd219f47c0d2"
+    },
+    {
+      "suite": "libero_object",
+      "component": "prefix",
+      "module": "paligemma_with_expert.paligemma.model.language_model.layers.0",
+      "shape": [
+        1,
+        968,
+        2048
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "2dc036bd6d5b88ef2a39c740613bfbbda2afa811d1c92bd440dc796184d5b5a9"
+    },
+    {
+      "suite": "libero_object",
+      "component": "expert",
+      "module": "paligemma_with_expert.gemma_expert.model.layers.0",
+      "shape": [
+        1,
+        10,
+        1024
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "dfa044250750a5dc3bdfa93b76d0b148c90b8c807afe56ea21fcdcbb43e59a3f"
+    },
+    {
+      "suite": "libero_spatial",
+      "component": "vision",
+      "module": "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0",
+      "shape": [
+        1,
+        256,
+        1152
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "24c53b3713cb5ba9cd80ccacdb7c4738a40104a7a91798f695fc70369be125e5"
+    },
+    {
+      "suite": "libero_spatial",
+      "component": "prefix",
+      "module": "paligemma_with_expert.paligemma.model.language_model.layers.0",
+      "shape": [
+        1,
+        968,
+        2048
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "97e6b9c5692c37a13b3a385fd91e2b176358cc145e422da28734b165acd70837"
+    },
+    {
+      "suite": "libero_spatial",
+      "component": "expert",
+      "module": "paligemma_with_expert.gemma_expert.model.layers.0",
+      "shape": [
+        1,
+        10,
+        1024
+      ],
+      "original_output_bitwise": true,
+      "repeated_replay_bitwise": true,
+      "max_abs": 0.0,
+      "snapshot_sha256": "0ee2edd1fc5b8687acff9e92d10225d6294126baafd30e4248be915311d47e1b"
+    }
+  ],
+  "parameter_versions_unchanged": true,
+  "parameters_frozen": true,
+  "awq_algorithm_run": false,
+  "quantizer_admitted": false,
+  "formal_episodes": 0,
+  "wall_seconds_including_load": 61.00893781706691,
+  "peak_allocated_bytes": 7670829568,
+  "finished_at": "2026-11-16T19:48:08.282812+00:00"
+}
