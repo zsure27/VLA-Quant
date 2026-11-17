@@ -1,0 +1,43 @@
+{
+  "round_id": "20261117-084-pi05-other-methods-v1",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "awq_complete": 36,
+  "awq_success": 36,
+  "awq_missing": [
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 6,
+      "reset_index": 5
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 7,
+      "reset_index": 5
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 8,
+      "reset_index": 5
+    },
+    {
+      "condition": "awq_w4a16",
+      "suite": "libero_10",
+      "task_id": 9,
+      "reset_index": 5
+    }
+  ],
+  "awq_same_case_bf16_success": 36,
+  "rescue": 0,
+  "breaks": 0,
+  "profile_sha256": "3e6390a2cdb2d1c675f42280fc0d59bedc08c8f8b2fc26549e9e88ea3a4a4492",
+  "stop_reason": "Actual primary 15%; case-boundary refused next case; no model exception",
+  "old_cloud_parent_gap": true,
+  "parameters_retained_server": true,
+  "windows_shutdown_authorized": false,
+  "private_increment_verified": false,
+  "current_native_shutdown_requested": false,
+  "platform_off_independently_verified": false
+}

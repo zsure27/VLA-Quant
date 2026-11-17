@@ -1,0 +1,88 @@
+{
+  "gate": "PASS_AWQ_REGISTERED_CASES_FULL_RAW_AUDIT",
+  "scope": "pilot4",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "profile_sha256": "3e6390a2cdb2d1c675f42280fc0d59bedc08c8f8b2fc26549e9e88ea3a4a4492",
+  "complete": 4,
+  "successes": 4,
+  "rows": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261117-084-other-awq-pilot4-v1-libero_spatial-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_AWQ_TRACE_AUDIT",
+        "round_id": "20261117-084-other-awq-pilot4-v1-libero_spatial-task0-reset5",
+        "plan_sha256": "1b83437331c5a0e2e802d70d6d0b715730714558a5a65c585a37cb1bdea14a83",
+        "result_sha256": "ad79d24b5d5eddecba023dc8da1ceac7f6104963d7c5c3977f921eec030f24ed",
+        "control_steps": 83,
+        "policy_queries": 17,
+        "success": true,
+        "video_sha256": "61e6628c32f89031685ec3e956cf81477da0debaf242c254b000114607bd46a4"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261117-084-pi05-other-methods-v1/stages/20261117-084-other-awq-pilot4-v1/case-runs/20261117-084-other-awq-pilot4-v1-libero_spatial-task0-reset5/result.json",
+      "result_sha256": "ad79d24b5d5eddecba023dc8da1ceac7f6104963d7c5c3977f921eec030f24ed"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261117-084-other-awq-pilot4-v1-libero_object-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_AWQ_TRACE_AUDIT",
+        "round_id": "20261117-084-other-awq-pilot4-v1-libero_object-task0-reset5",
+        "plan_sha256": "b855456430c1efbbbf7c0c64174045a0a2e8334c0471e476eb08acc8d6c86042",
+        "result_sha256": "2383e36359e82a0deabe2fe2a043b639accbbc5b3066b17e6450bd7fcde105eb",
+        "control_steps": 169,
+        "policy_queries": 34,
+        "success": true,
+        "video_sha256": "c258f693fb29d626fc19f9b0c5836179b0f8ef0fd154b064c8252922985e6ed7"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261117-084-pi05-other-methods-v1/stages/20261117-084-other-awq-pilot4-v1/case-runs/20261117-084-other-awq-pilot4-v1-libero_object-task0-reset5/result.json",
+      "result_sha256": "2383e36359e82a0deabe2fe2a043b639accbbc5b3066b17e6450bd7fcde105eb"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261117-084-other-awq-pilot4-v1-libero_goal-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_AWQ_TRACE_AUDIT",
+        "round_id": "20261117-084-other-awq-pilot4-v1-libero_goal-task0-reset5",
+        "plan_sha256": "ae428f8b5fb1af49c16725eaa3cb3484ab3518bfc1a556e0b6295df3a12c787e",
+        "result_sha256": "8516ca42e4c99c7e4ab2154767dd012ba9730e6c709a1c76f1127c1c1a583143",
+        "control_steps": 119,
+        "policy_queries": 24,
+        "success": true,
+        "video_sha256": "618c13ba426fbff93266133ae4ea5887a21693129767bc31867a7c6cf1ad6ae9"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261117-084-pi05-other-methods-v1/stages/20261117-084-other-awq-pilot4-v1/case-runs/20261117-084-other-awq-pilot4-v1-libero_goal-task0-reset5/result.json",
+      "result_sha256": "8516ca42e4c99c7e4ab2154767dd012ba9730e6c709a1c76f1127c1c1a583143"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261117-084-other-awq-pilot4-v1-libero_10-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_AWQ_TRACE_AUDIT",
+        "round_id": "20261117-084-other-awq-pilot4-v1-libero_10-task0-reset5",
+        "plan_sha256": "b2343556f2681b0c6565979001936639e78c8ef0f0482814c6641fcb159abc91",
+        "result_sha256": "c99368bba9840297ef1cfe2c9c845aa6d87eaa4c6fb81f129568834256d610ba",
+        "control_steps": 286,
+        "policy_queries": 58,
+        "success": true,
+        "video_sha256": "0042439ee5b2741b53e36e9fb598f0d34fafe613e5be73ce08446ea73de868b5"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261117-084-pi05-other-methods-v1/stages/20261117-084-other-awq-pilot4-v1/case-runs/20261117-084-other-awq-pilot4-v1-libero_10-task0-reset5/result.json",
+      "result_sha256": "c99368bba9840297ef1cfe2c9c845aa6d87eaa4c6fb81f129568834256d610ba"
+    }
+  ],
+  "scores_not_used_for_continuation": true,
+  "observed_at": "2026-11-17T11:41:46.049329+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "gate": "PASS_PI05_AWQ_NATIVE_414_RELOAD_FINITE",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "profile_sha256": "3e6390a2cdb2d1c675f42280fc0d59bedc08c8f8b2fc26549e9e88ea3a4a4492",
+  "model_identity": "f06af09b35cfb9b6ae6fc4e0d1acf8a1d6952a2cc15b7a4319b7e5f48fafbd07",
+  "calibration_queries": 32,
+  "calibration_only": true,
+  "formal_episodes": 0,
+  "target_blocks": 63,
+  "target_projections": 414,
+  "original_source_algorithms": true,
+  "teacher_actions_restored_bitwise": true,
+  "quantized_repeat_reload_bitwise": true,
+  "parameters_frozen": true,
+  "finite": true,
+  "scales_only_action_differences": [
+    {
+      "suite": "libero_10",
+      "input_sha256": "855e14d4487d9addae14f1047c9be10178d9140380e9c9bfe29ac25ba7622050",
+      "rmse_vs_native_bf16": 0.0019666079733947532,
+      "max_abs_vs_native_bf16": 0.006257143614828653
+    },
+    {
+      "suite": "libero_goal",
+      "input_sha256": "032a959f361fd1dda7ee9b140f1f2384b187c2571c22b7b4c3e7cb9a014024a3",
+      "rmse_vs_native_bf16": 0.0007417697607766345,
+      "max_abs_vs_native_bf16": 0.0031261166709065646
+    },
+    {
+      "suite": "libero_object",
+      "input_sha256": "368220b2235d6e7f54c8724035882c8202d33025ddb558b7e7adca44586716d1",
+      "rmse_vs_native_bf16": 0.0010300996922844657,
+      "max_abs_vs_native_bf16": 0.0033592435231803996
+    },
+    {
+      "suite": "libero_spatial",
+      "input_sha256": "26fb7e1e2ed90b1eb945dc00567b45cbc6a7a63981f62c774c957f26c7c15e6d",
+      "rmse_vs_native_bf16": 0.0010313399821031768,
+      "max_abs_vs_native_bf16": 0.0029432453104256684
+    }
+  ],
+  "quantized_action_differences": [
+    {
+      "suite": "libero_10",
+      "input_sha256": "855e14d4487d9addae14f1047c9be10178d9140380e9c9bfe29ac25ba7622050",
+      "rmse_vs_native_bf16": 0.012775743885195355,
+      "max_abs_vs_native_bf16": 0.03961377377730607
+    },
+    {
+      "suite": "libero_goal",
+      "input_sha256": "032a959f361fd1dda7ee9b140f1f2384b187c2571c22b7b4c3e7cb9a014024a3",
+      "rmse_vs_native_bf16": 0.005753672695579498,
+      "max_abs_vs_native_bf16": 0.013982366974115368
+    },
+    {
+      "suite": "libero_object",
+      "input_sha256": "368220b2235d6e7f54c8724035882c8202d33025ddb558b7e7adca44586716d1",
+      "rmse_vs_native_bf16": 0.012255899546878335,
+      "max_abs_vs_native_bf16": 0.03984536062777044
+    },
+    {
+      "suite": "libero_spatial",
+      "input_sha256": "26fb7e1e2ed90b1eb945dc00567b45cbc6a7a63981f62c774c957f26c7c15e6d",
+      "rmse_vs_native_bf16": 0.010014173859748812,
+      "max_abs_vs_native_bf16": 0.02103615634405598
+    }
+  ],
+  "scales_only_not_assumed_bitwise_equivalent": true,
+  "not_an_int4_execution_kernel": true,
+  "wall_seconds_including_load": 1180.2693665325642,
+  "peak_allocated_bytes": 12161429504,
+  "finished_at": "2026-11-17T11:19:11.876663+00:00"
+}
