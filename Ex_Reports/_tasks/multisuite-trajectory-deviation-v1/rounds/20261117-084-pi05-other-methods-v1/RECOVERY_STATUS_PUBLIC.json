@@ -38,6 +38,15 @@
   "parameters_retained_server": true,
   "windows_shutdown_authorized": false,
   "private_increment_verified": false,
-  "current_native_shutdown_requested": false,
-  "platform_off_independently_verified": false
+  "current_native_shutdown_requested": true,
+  "platform_off_independently_verified": false,
+  "native_shutdown_receipt": {
+    "time_utc": "2026-11-17T12:55:26.221465+00:00",
+    "hostname": "autodl-container-b1f2438ea7-3f2e1d44",
+    "execute": true,
+    "supervisor_pid": 757,
+    "native_shutdown_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+    "platform_off_independently_verified": false,
+    "note": "Native stop request; no Trash deletion, no claim about billing"
+  }
 }
