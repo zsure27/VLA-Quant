@@ -1,0 +1,146 @@
+{
+  "gate": "PASS_NO_GPU_CPU_PREPARATION_AND_OFFLINE_CONTROL_TESTS",
+  "observed_at": "2026-11-19T05:59:56.047718+00:00",
+  "offline_tests": [
+    {
+      "name": "relay",
+      "exit_code": 0,
+      "log_sha256": "629ab63b389fe5b11a40a49bf23b6da1b730e6c32261981a93829b26c08d45d6"
+    },
+    {
+      "name": "reader",
+      "exit_code": 0,
+      "log_sha256": "a9240727300982c79cf8b5ec7288b4c78a495d7fcd47c2cb3fc5c2467a3c6ff8"
+    },
+    {
+      "name": "policy",
+      "exit_code": 0,
+      "log_sha256": "3e1e79fa9a2f37fd36df94af6d546a268db0aecd2fc7a6d9a53a45182561739f"
+    }
+  ],
+  "methods": [
+    {
+      "condition": "bf16",
+      "historical_status": "RAW_AUDIT_COMPLETE",
+      "source_status": "SOURCE_NOT_SPECIFIED_NOT_ADMITTED",
+      "source_files": 0,
+      "source_bytes": 0,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "gptq_w4a16",
+      "historical_status": "GPU_ADMITTED_PARTIAL_TRAJECTORIES",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 35,
+      "source_bytes": 226197,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "awq_w4a16",
+      "historical_status": "GPU_ADMITTED_PARTIAL_TRAJECTORIES",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 57,
+      "source_bytes": 465684,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "omniquant_w4a16",
+      "historical_status": "GPU_ADMITTED_LWC_ONLY_PARTIAL_TRAJECTORIES",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 114,
+      "source_bytes": 642114,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "smoothquant_w4a8",
+      "historical_status": "GPU_ADMITTED_PARTIAL_TRAJECTORIES",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 6,
+      "source_bytes": 45429,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "smoothquant_w4a4",
+      "historical_status": "USER_CANCELLED_FUTURE_CASES",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 6,
+      "source_bytes": 45429,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "duquant_w4a8",
+      "historical_status": "CPU_COMPONENTS_ONLY_FULL_ADAPTER_PENDING",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 118,
+      "source_bytes": 671389,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "duquant_w4a4",
+      "historical_status": "CPU_COMPONENTS_ONLY_FULL_ADAPTER_PENDING",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 118,
+      "source_bytes": 671389,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "qvla_w4a16",
+      "historical_status": "PI05_ADAPTER_PENDING",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 338,
+      "source_bytes": 2538193,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "actquant_w4a16",
+      "historical_status": "RUNTIME_AND_RESOURCE_REVIEW_PENDING",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 551,
+      "source_bytes": 19487238,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "quantvla_w4a8",
+      "historical_status": "PI05_ADAPTER_PENDING",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 100,
+      "source_bytes": 948776,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "quantvla_w4a4",
+      "historical_status": "PI05_ADAPTER_PENDING",
+      "source_status": "SOURCE_BYTES_INDEXED_NOT_ADMITTED",
+      "source_files": 100,
+      "source_bytes": 948776,
+      "gpu_admission_not_implied": true
+    },
+    {
+      "condition": "holoq_w4a4",
+      "historical_status": "FAITHFUL_SOURCE_AND_PI05_ADAPTER_PENDING",
+      "source_status": "SOURCE_NOT_SPECIFIED_NOT_ADMITTED",
+      "source_files": 0,
+      "source_bytes": 0,
+      "gpu_admission_not_implied": true
+    }
+  ],
+  "bf16_reset45": {
+    "complete": 40,
+    "successes": 40,
+    "raw_audit_gate": "PASS_REGISTERED_PI05_CASES_ORIGINAL_RAW_AUDITOR"
+  },
+  "bf16_cumulative": {
+    "complete": 200,
+    "successes": 197
+  },
+  "all_configurations_ready_for_gpu": false,
+  "model_loaded": false,
+  "gpu_started": false,
+  "instance_left_on_for_user": true,
+  "quota_guard_started": false,
+  "quota_relay_started": false,
+  "transfer_archive_bytes": 19355,
+  "portable_test_amendment_bytes": 7246,
+  "transfer_archive_sha256": "70a73b4fd81a1598fb4886f5bb8e5db362fd3f762bfbff1815f6bdfba9538dac",
+  "readiness_file_sha256": "b9a7defbff0c907af04285b7371d9adc2de8db804060b09de140fa4c2575d8f3"
+}

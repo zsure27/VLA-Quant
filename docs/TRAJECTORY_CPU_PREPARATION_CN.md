@@ -1,5 +1,7 @@
 # 无卡准备与开卡采集的分工
 
+2026-11-19最新覆盖：084本次无GPU、2GiB内存，独立CPU准备完成；BF16最后40条原始审计通过，累计197/200。GPTQ/AWQ/Omni LWC/SQ8各120完整，7个待入场配置仍须忠实适配/资源/数值验证。后续优先各项接入及最小pilot，再逐配置补完整轨迹；正常收尾仅五小时primary门限。见[新计划](PI05_ADMISSION_FIRST_PLAN_20261119_CN.md)及[本次CPU结果](../Ex_Reports/_tasks/multisuite-trajectory-deviation-v1/cpu-preparation/20261119-084-admission-first-v1/README_CN.md)。以下旧优先顺序、阻断与状态仅为历史。
+
 本任务只汇总量化前后的轨迹漂移，不训练适配器、不改进量化算法、不做 OPD 补偿。统一目标为三模型 × LIBERO 四 suite × 每 suite 十任务 × 初态 5/15/25/35/45；方法目录为十二个量化配置加 BF16。三份单模型报告完成后形成跨模型总报告，缺项与不适用项保留，不能把方法注册当成实测兼容。
 
 ## 2026-11-13 061最新CPU准备
