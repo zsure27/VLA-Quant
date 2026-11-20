@@ -1,0 +1,78 @@
+{
+  "gate": "PASS_ALL_REQUESTED_CONFIGURATIONS_ADMITTED_OR_DOCUMENTED_BLOCKED",
+  "round_id": "20261120-084-pi05-resume-from452-v1",
+  "task_manifest_sha256": "764005a5cb3cec424d8a51a8a9b405070ea13d3f2fe66162de7d889b914fcaa0",
+  "rows": [
+    {
+      "condition": "duquant_w4a8",
+      "status": "ADMITTED_PILOT_RAW_AUDITED",
+      "pilot_complete": 4,
+      "full_trajectory_complete": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-duquant-a8-pilot4-v1/FULL_RAW_AUDIT.json",
+      "evidence_sha256": "6efc76ff6555e66e742acd0515b8aa7292472c4d06f9f7cbf242f170123db31a"
+    },
+    {
+      "condition": "duquant_w4a4",
+      "status": "ADMITTED_PILOT_RAW_AUDITED",
+      "pilot_complete": 4,
+      "full_trajectory_complete": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-duquant-a4-pilot4-v1/FULL_RAW_AUDIT.json",
+      "evidence_sha256": "18962ac7cb53ad2f6b0d94fecbf166426bd0cbdbcb49199d9e9b5e3a7eb7affa"
+    },
+    {
+      "condition": "qvla_w4a16",
+      "status": "ADAPTER_PENDING_NOT_ADMITTED",
+      "reason": "Native action-graph prerequisite passed; physical-action sensitivity, channel allocation, quantized injection/reload and four-suite pilot remain unimplemented. No Hessian-proxy substitution.",
+      "source_commit": "6d0a074459aa7efa09ef0cc86cfc339ce40d8b06",
+      "source_proof": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/QVLA_ACTION_SOURCE_VERIFICATION_V1.json",
+      "disposition": "DOCUMENTED_BLOCKED_UNRESOLVED",
+      "full_method_admitted": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/REMAINING_METHOD_READINESS_V1.json",
+      "evidence_sha256": "d201d857083545d91d06f553b84c64507c1d4cf23f8b11f193c6e6397b6f07ac",
+      "action_graph_prerequisite_passed": true,
+      "graph_evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-pi05-action-graph-prerequisite-v3/action-graph/result.json",
+      "graph_evidence_sha256": "85d35fcf48d7cb2f8d8a8c20885858725d7f9311cc4d60fda1d12e1d9849c0f9"
+    },
+    {
+      "condition": "actquant_w4a16",
+      "status": "RUNTIME_AND_RESOURCE_PREPARATION_BLOCKED",
+      "reason": "Official pi05 C++/GGUF runtime needs same-checkpoint input/action bridge and full HSIC/Fisher allocation; current 19.7GiB free-disk observation is below documented official full-workflow budget; no alternate checkpoint or plain RTN substitute used",
+      "disposition": "DOCUMENTED_BLOCKED_UNRESOLVED",
+      "full_method_admitted": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/REMAINING_METHOD_READINESS_V1.json",
+      "evidence_sha256": "d201d857083545d91d06f553b84c64507c1d4cf23f8b11f193c6e6397b6f07ac"
+    },
+    {
+      "condition": "quantvla_w4a8",
+      "status": "NATIVE_FLOW_ADAPTER_PENDING",
+      "reason": "Staged official source provides GR00T ATM/OHB path; no same-backend pi05 flow binding, independent numerical gate or pilot yet",
+      "disposition": "DOCUMENTED_BLOCKED_UNRESOLVED",
+      "full_method_admitted": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/REMAINING_METHOD_READINESS_V1.json",
+      "evidence_sha256": "d201d857083545d91d06f553b84c64507c1d4cf23f8b11f193c6e6397b6f07ac"
+    },
+    {
+      "condition": "quantvla_w4a4",
+      "status": "NATIVE_FLOW_ADAPTER_PENDING",
+      "reason": "Same pi05 flow ATM/OHB integration gap as A8; independent A4 gate also required",
+      "disposition": "DOCUMENTED_BLOCKED_UNRESOLVED",
+      "full_method_admitted": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/REMAINING_METHOD_READINESS_V1.json",
+      "evidence_sha256": "d201d857083545d91d06f553b84c64507c1d4cf23f8b11f193c6e6397b6f07ac"
+    },
+    {
+      "condition": "holoq_w4a4",
+      "status": "PROVENANCE_AND_ADAPTER_PENDING",
+      "reason": "Omega-QVLA pi05 source candidate exists, but HoloQ alias and original configuration provenance not primary-source confirmed; no renamed proxy or released weights from unknown checkpoint used",
+      "disposition": "DOCUMENTED_BLOCKED_UNRESOLVED",
+      "full_method_admitted": false,
+      "evidence": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/REMAINING_METHOD_READINESS_V1.json",
+      "evidence_sha256": "d201d857083545d91d06f553b84c64507c1d4cf23f8b11f193c6e6397b6f07ac"
+    }
+  ],
+  "admitted_configurations": 2,
+  "unresolved_configurations": 5,
+  "all_requested_methods_admitted": false,
+  "whole_task_complete": false,
+  "purpose": "Disposition gate only; blocked work remains missing"
+}

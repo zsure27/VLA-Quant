@@ -1,0 +1,89 @@
+{
+  "gate": "PASS_DUQUANT_REGISTERED_CASES_FULL_RAW_AUDIT",
+  "scope": "pilot4",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "profile_sha256": "618cd76ced6fb6257d8cc5b8e82ff1aa2983c9b2a01c6dd379e247915029a4ff",
+  "reset_index": 5,
+  "complete": 4,
+  "successes": 4,
+  "rows": [
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_spatial-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_DUQUANT_TRACE_AUDIT",
+        "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_spatial-task0-reset5",
+        "plan_sha256": "3b4008b00433eea657b1d768ed0d3b1c87af0afd67280e03742dfd69a951c201",
+        "result_sha256": "15ebaed3a5f440a07a06612179dfcc4b2893cbab2c96ef380ff163e2ebb18c99",
+        "control_steps": 72,
+        "policy_queries": 15,
+        "success": true,
+        "video_sha256": "da79e38823fbdc2ef08a25b1b78c4be1ecd5cd7a40273016cdd413a654907ab8"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-duquant-a4-pilot4-v1/case-runs/20261120-084-duquant-a4-pilot4-v1-libero_spatial-task0-reset5/result.json",
+      "result_sha256": "15ebaed3a5f440a07a06612179dfcc4b2893cbab2c96ef380ff163e2ebb18c99"
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_object-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_DUQUANT_TRACE_AUDIT",
+        "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_object-task0-reset5",
+        "plan_sha256": "28f0c765b2c02dcee994687c6c625ab0cf95604ee783fdaaab6242c0ec84dc3c",
+        "result_sha256": "31abed3bee8dec1fe3decc5818a3c55eedaebc25c8aa472bc6800a32da0f6b58",
+        "control_steps": 136,
+        "policy_queries": 28,
+        "success": true,
+        "video_sha256": "2da60475283b64ecf847d70807a3253c6595d5967294eb0260ac4f4e157d9bcf"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-duquant-a4-pilot4-v1/case-runs/20261120-084-duquant-a4-pilot4-v1-libero_object-task0-reset5/result.json",
+      "result_sha256": "31abed3bee8dec1fe3decc5818a3c55eedaebc25c8aa472bc6800a32da0f6b58"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_goal-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_DUQUANT_TRACE_AUDIT",
+        "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_goal-task0-reset5",
+        "plan_sha256": "722cdac6ecd6ce3f4b26723fe8b32b4522ed7375bde8e3a358d6f7791ab72e6b",
+        "result_sha256": "e6e7aa0cad90680f80fbf04b17abf7fe3b27068cea21506280431fc98ebf05d5",
+        "control_steps": 118,
+        "policy_queries": 24,
+        "success": true,
+        "video_sha256": "d0a8f01428ee136380d48cf4fafc8ef0955cd10b27ecd086c143a9bd100f04d7"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-duquant-a4-pilot4-v1/case-runs/20261120-084-duquant-a4-pilot4-v1-libero_goal-task0-reset5/result.json",
+      "result_sha256": "e6e7aa0cad90680f80fbf04b17abf7fe3b27068cea21506280431fc98ebf05d5"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_10-task0-reset5",
+      "success": true,
+      "audit": {
+        "gate": "PASS_PI05_TORCH_DUQUANT_TRACE_AUDIT",
+        "round_id": "20261120-084-duquant-a4-pilot4-v1-libero_10-task0-reset5",
+        "plan_sha256": "b3cd53027bf816ad4c184fb6421ffbf66b30d1fc6caabd15de2664f19bbf9423",
+        "result_sha256": "d364c420bd0049bcd87f05fe129a9c57d9fe04f3c4150c34553613bbbdb65b8c",
+        "control_steps": 254,
+        "policy_queries": 51,
+        "success": true,
+        "video_sha256": "2ba4395a84c41b84f61fac57a9cf529dda0c5586237a92cafa1e9200199e0c1e"
+      },
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-duquant-a4-pilot4-v1/case-runs/20261120-084-duquant-a4-pilot4-v1-libero_10-task0-reset5/result.json",
+      "result_sha256": "d364c420bd0049bcd87f05fe129a9c57d9fe04f3c4150c34553613bbbdb65b8c"
+    }
+  ],
+  "scores_not_used_for_continuation": true,
+  "observed_at": "2026-11-20T11:19:02.043822+00:00"
+}

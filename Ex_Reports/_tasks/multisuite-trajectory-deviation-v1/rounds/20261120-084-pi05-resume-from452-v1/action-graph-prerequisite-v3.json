@@ -1,0 +1,213 @@
+{
+  "gate": "PASS_PI05_NATIVE_TEN_STEP_ACTION_GRAPH_PREREQUISITE",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "checks": [
+    {
+      "suite": "libero_spatial",
+      "calibration_sha256": "26fb7e1e2ed90b1eb945dc00567b45cbc6a7a63981f62c774c957f26c7c15e6d",
+      "native_actions_bitwise": true,
+      "gradient_components": {
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.mlp.fc2": {
+          "calls": 3,
+          "gradients": 3,
+          "finite": true,
+          "squared_norm": 0.010408172383904457
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj": {
+          "calls": 1,
+          "gradients": 1,
+          "finite": true,
+          "squared_norm": 3.981044937972911e-05
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj": {
+          "calls": 10,
+          "gradients": 10,
+          "finite": true,
+          "squared_norm": 2.7101683587049674e-06
+        }
+      },
+      "image_gradients": [
+        {
+          "name": "base_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.07768365740776062,
+          "graph_unused": false
+        },
+        {
+          "name": "left_wrist_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.18409405648708344,
+          "graph_unused": false
+        },
+        {
+          "name": "right_wrist_0_rgb",
+          "valid_camera": false,
+          "finite": true,
+          "squared_norm": 0.0,
+          "graph_unused": false
+        }
+      ],
+      "masked_camera_gradient_exact_zero": true,
+      "noise_vjp_finite_nonzero": true
+    },
+    {
+      "suite": "libero_object",
+      "calibration_sha256": "368220b2235d6e7f54c8724035882c8202d33025ddb558b7e7adca44586716d1",
+      "native_actions_bitwise": true,
+      "gradient_components": {
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.mlp.fc2": {
+          "calls": 3,
+          "gradients": 3,
+          "finite": true,
+          "squared_norm": 0.0010518004855839536
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj": {
+          "calls": 1,
+          "gradients": 1,
+          "finite": true,
+          "squared_norm": 3.1594536267220974e-06
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj": {
+          "calls": 10,
+          "gradients": 10,
+          "finite": true,
+          "squared_norm": 2.347319218859445e-06
+        }
+      },
+      "image_gradients": [
+        {
+          "name": "base_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.003098231041803956,
+          "graph_unused": false
+        },
+        {
+          "name": "left_wrist_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.021161535754799843,
+          "graph_unused": false
+        },
+        {
+          "name": "right_wrist_0_rgb",
+          "valid_camera": false,
+          "finite": true,
+          "squared_norm": 0.0,
+          "graph_unused": false
+        }
+      ],
+      "masked_camera_gradient_exact_zero": true,
+      "noise_vjp_finite_nonzero": true
+    },
+    {
+      "suite": "libero_goal",
+      "calibration_sha256": "032a959f361fd1dda7ee9b140f1f2384b187c2571c22b7b4c3e7cb9a014024a3",
+      "native_actions_bitwise": true,
+      "gradient_components": {
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.mlp.fc2": {
+          "calls": 3,
+          "gradients": 3,
+          "finite": true,
+          "squared_norm": 0.0027336580096744
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj": {
+          "calls": 1,
+          "gradients": 1,
+          "finite": true,
+          "squared_norm": 1.2661065738939214e-05
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj": {
+          "calls": 10,
+          "gradients": 10,
+          "finite": true,
+          "squared_norm": 1.9298469557949005e-06
+        }
+      },
+      "image_gradients": [
+        {
+          "name": "base_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.0051459199748933315,
+          "graph_unused": false
+        },
+        {
+          "name": "left_wrist_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.05714720860123634,
+          "graph_unused": false
+        },
+        {
+          "name": "right_wrist_0_rgb",
+          "valid_camera": false,
+          "finite": true,
+          "squared_norm": 0.0,
+          "graph_unused": false
+        }
+      ],
+      "masked_camera_gradient_exact_zero": true,
+      "noise_vjp_finite_nonzero": true
+    },
+    {
+      "suite": "libero_10",
+      "calibration_sha256": "855e14d4487d9addae14f1047c9be10178d9140380e9c9bfe29ac25ba7622050",
+      "native_actions_bitwise": true,
+      "gradient_components": {
+        "paligemma_with_expert.paligemma.model.vision_tower.vision_model.encoder.layers.0.mlp.fc2": {
+          "calls": 3,
+          "gradients": 3,
+          "finite": true,
+          "squared_norm": 0.009000080113764852
+        },
+        "paligemma_with_expert.paligemma.model.language_model.layers.0.self_attn.q_proj": {
+          "calls": 1,
+          "gradients": 1,
+          "finite": true,
+          "squared_norm": 7.590083259856328e-05
+        },
+        "paligemma_with_expert.gemma_expert.model.layers.0.self_attn.q_proj": {
+          "calls": 10,
+          "gradients": 10,
+          "finite": true,
+          "squared_norm": 1.8374626497910662e-06
+        }
+      },
+      "image_gradients": [
+        {
+          "name": "base_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.014238097704946995,
+          "graph_unused": false
+        },
+        {
+          "name": "left_wrist_0_rgb",
+          "valid_camera": true,
+          "finite": true,
+          "squared_norm": 0.2950219213962555,
+          "graph_unused": false
+        },
+        {
+          "name": "right_wrist_0_rgb",
+          "valid_camera": false,
+          "finite": true,
+          "squared_norm": 0.0,
+          "graph_unused": false
+        }
+      ],
+      "masked_camera_gradient_exact_zero": true,
+      "noise_vjp_finite_nonzero": true
+    }
+  ],
+  "formal_episodes": 0,
+  "qvla_full_admitted": false,
+  "physical_action_score_and_bit_allocation_not_implemented": true,
+  "native_source_sha256": "dcd7b6f508808ce4b7170a1720a4c62c6da04edae3652d16c94a469dca924e16",
+  "peak_allocated_bytes": 7734639616,
+  "wall_seconds": 81.66794810816646,
+  "finished_at": "2026-11-20T11:59:28.154809+00:00"
+}

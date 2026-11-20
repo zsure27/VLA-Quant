@@ -1,0 +1,50 @@
+{
+  "gate": "PASS_PI05_ORIGINAL_DUQUANT_414_FP32_BINDING_RELOAD_FINITE_TRANSFORM",
+  "backend": "openpi-pytorch-original-independent-h10-v2",
+  "activation_bits": 4,
+  "weight_bits": 4,
+  "profile_sha256": "618cd76ced6fb6257d8cc5b8e82ff1aa2983c9b2a01c6dd379e247915029a4ff",
+  "projections": 414,
+  "calibration_queries": 32,
+  "full_policy_admitted": true,
+  "formal_episodes": 0,
+  "source_sha256": {
+    "quantize/quantizer.py": "99c2a0d76866e2289658fb85a2b7e2673c23517fb1d9c68642753bf5b9830b1a",
+    "quantize/int_linear.py": "cd7a68f2120d6883048624b020e5396eea204e5ef70bed2d0cbf34ae1d45ff1f",
+    "quantize/const.py": "813ebddbbf7a6255796b18ce6677d04887a84815b8a065c882c7e7963e635dee",
+    "utils.py": "9907095a77b674725118e2d0ff5041f34eb7e3576158c7df83c5638b7a6ad6dc"
+  },
+  "unquantized_transform_checks": [
+    {
+      "suite": "libero_spatial",
+      "rmse": 0.0010255317013014745,
+      "max_abs": 0.003971857030689696
+    },
+    {
+      "suite": "libero_object",
+      "rmse": 0.0007895423903381047,
+      "max_abs": 0.0024500964735150177
+    },
+    {
+      "suite": "libero_goal",
+      "rmse": 0.0006035168363556007,
+      "max_abs": 0.0016140098001360403
+    },
+    {
+      "suite": "libero_10",
+      "rmse": 0.001039683878165808,
+      "max_abs": 0.00376278277516362
+    }
+  ],
+  "independent_reload_actions_bitwise": true,
+  "base_frozen": true,
+  "native_teacher_restored_bitwise": true,
+  "policy_queries_including_validation": 49,
+  "wall_seconds": 724.5063939914107,
+  "peak_allocated_bytes": 13706919936,
+  "finished_at": "2026-11-20T11:00:17.821008+00:00",
+  "rotation_parent_sha256": null,
+  "rotations_reused_bitwise": false,
+  "production_rotation_calibration": true,
+  "implementation": "Original DuQuant operations; FP32 internal paired products and native output dtype; fresh per-precision rotation calibration unless explicitly reusing diagnostic parent; no INT4 kernel claim"
+}

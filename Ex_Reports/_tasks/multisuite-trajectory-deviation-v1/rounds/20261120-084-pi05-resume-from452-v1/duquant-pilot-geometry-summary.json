@@ -1,0 +1,178 @@
+{
+  "gate": "PASS_AUDITED_DUQUANT_PILOT_PAIRED_GEOMETRY",
+  "paired_cases": 8,
+  "configurations": 2,
+  "tasks_per_suite": 1,
+  "resets_per_task": 1,
+  "pairs": [
+    {
+      "condition": "duquant_w4a8",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 87,
+      "bf16_control_steps": 87,
+      "common_post_steps": 87,
+      "policy_queries": 18,
+      "translation_p95_mm": 11.704789914120678,
+      "rotation_p95_deg": 1.6379471441935964,
+      "signed_translation_mean_mm": [
+        2.9542733985837124,
+        0.8792602151694109,
+        -3.3347850497683744
+      ],
+      "wall_seconds_including_load": 125.90092419087887,
+      "wall_seconds_environment_and_queries": 36.191458500921726
+    },
+    {
+      "condition": "duquant_w4a8",
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 168,
+      "bf16_control_steps": 130,
+      "common_post_steps": 130,
+      "policy_queries": 34,
+      "translation_p95_mm": 79.46595307280451,
+      "rotation_p95_deg": 6.814449183408162,
+      "signed_translation_mean_mm": [
+        -25.38044960731745,
+        -6.3079519478691735,
+        -11.784147503361403
+      ],
+      "wall_seconds_including_load": 152.76210136339068,
+      "wall_seconds_environment_and_queries": 62.889229256659746
+    },
+    {
+      "condition": "duquant_w4a8",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 114,
+      "bf16_control_steps": 113,
+      "common_post_steps": 113,
+      "policy_queries": 23,
+      "translation_p95_mm": 10.30926123864594,
+      "rotation_p95_deg": 1.1077330915046302,
+      "signed_translation_mean_mm": [
+        0.10430600393378821,
+        -1.4923124667046672,
+        2.9107174833652256
+      ],
+      "wall_seconds_including_load": 134.2257357351482,
+      "wall_seconds_environment_and_queries": 43.56509033218026
+    },
+    {
+      "condition": "duquant_w4a8",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 269,
+      "bf16_control_steps": 276,
+      "common_post_steps": 269,
+      "policy_queries": 54,
+      "translation_p95_mm": 15.965235554180207,
+      "rotation_p95_deg": 2.964411953537523,
+      "signed_translation_mean_mm": [
+        -1.281265450792808,
+        1.1926775024241267,
+        1.0609421180853098
+      ],
+      "wall_seconds_including_load": 189.9201547987759,
+      "wall_seconds_environment_and_queries": 99.09747819975019
+    },
+    {
+      "condition": "duquant_w4a4",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 72,
+      "bf16_control_steps": 87,
+      "common_post_steps": 72,
+      "policy_queries": 15,
+      "translation_p95_mm": 56.3088137261395,
+      "rotation_p95_deg": 11.31775475705709,
+      "signed_translation_mean_mm": [
+        11.639417743446913,
+        3.2244384677775937,
+        2.614088533180458
+      ],
+      "wall_seconds_including_load": 119.46647077798843,
+      "wall_seconds_environment_and_queries": 30.611972734332085
+    },
+    {
+      "condition": "duquant_w4a4",
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 136,
+      "bf16_control_steps": 130,
+      "common_post_steps": 130,
+      "policy_queries": 28,
+      "translation_p95_mm": 50.097675230596025,
+      "rotation_p95_deg": 8.671830680567915,
+      "signed_translation_mean_mm": [
+        -17.519697208803162,
+        -0.7082781552515012,
+        -8.771761408129356
+      ],
+      "wall_seconds_including_load": 142.21677695214748,
+      "wall_seconds_environment_and_queries": 52.82799915596843
+    },
+    {
+      "condition": "duquant_w4a4",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 118,
+      "bf16_control_steps": 113,
+      "common_post_steps": 113,
+      "policy_queries": 24,
+      "translation_p95_mm": 40.24053425821013,
+      "rotation_p95_deg": 5.255197886395717,
+      "signed_translation_mean_mm": [
+        -1.2809153811668845,
+        -3.9119622144185917,
+        -1.560449312982672
+      ],
+      "wall_seconds_including_load": 134.3877982646227,
+      "wall_seconds_environment_and_queries": 45.248730801045895
+    },
+    {
+      "condition": "duquant_w4a4",
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 5,
+      "success": true,
+      "bf16_success": true,
+      "control_steps": 254,
+      "bf16_control_steps": 276,
+      "common_post_steps": 254,
+      "policy_queries": 51,
+      "translation_p95_mm": 132.6046042126831,
+      "rotation_p95_deg": 4.909728081295924,
+      "signed_translation_mean_mm": [
+        1.9161050756220213,
+        11.993309470154948,
+        -2.113250281980347
+      ],
+      "wall_seconds_including_load": 184.3526101373136,
+      "wall_seconds_environment_and_queries": 94.64249094948173
+    }
+  ],
+  "qualification": "Admission examples only; not representative 10-task/5-initial coverage. Closed-loop separation includes feedback. No shared changepoint or OPD benefit established. Common-prefix errors stop at earlier termination, without padding."
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "CPU_READINESS_ONLY_NOT_PHASE_A_GATE",
+  "observed_at": "2026-11-20T11:15:33.408339+00:00",
+  "rows": [
+    {
+      "condition": "qvla_w4a16",
+      "status": "ADAPTER_PENDING_NOT_ADMITTED",
+      "reason": "Exact OFT continuous-action scoring/quantizer source now staged; pi05 ten-step graph prerequisite registered, physical-action score, allocation, injection/reload and pilot not yet completed",
+      "source_commit": "6d0a074459aa7efa09ef0cc86cfc339ce40d8b06",
+      "source_proof": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/cpu/QVLA_ACTION_SOURCE_VERIFICATION_V1.json"
+    },
+    {
+      "condition": "actquant_w4a16",
+      "status": "RUNTIME_AND_RESOURCE_PREPARATION_BLOCKED",
+      "reason": "Official pi05 C++/GGUF runtime needs same-checkpoint input/action bridge and full HSIC/Fisher allocation; current 19.7GiB free-disk observation is below documented official full-workflow budget; no alternate checkpoint or plain RTN substitute used"
+    },
+    {
+      "condition": "quantvla_w4a8",
+      "status": "NATIVE_FLOW_ADAPTER_PENDING",
+      "reason": "Staged official source provides GR00T ATM/OHB path; no same-backend pi05 flow binding, independent numerical gate or pilot yet"
+    },
+    {
+      "condition": "quantvla_w4a4",
+      "status": "NATIVE_FLOW_ADAPTER_PENDING",
+      "reason": "Same pi05 flow ATM/OHB integration gap as A8; independent A4 gate also required"
+    },
+    {
+      "condition": "holoq_w4a4",
+      "status": "PROVENANCE_AND_ADAPTER_PENDING",
+      "reason": "Omega-QVLA pi05 source candidate exists, but HoloQ alias and original configuration provenance not primary-source confirmed; no renamed proxy or released weights from unknown checkpoint used"
+    }
+  ],
+  "sources": {
+    "ActQuant": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/preparations/optional-method-sources-20261112-v2/ActQuant/README.md",
+      "sha256": "d6929a77ef4b854ffb765a326187bda54e4249a3c5c83a05f23e22ecdb05ab06",
+      "evidence_line_numbers": [
+        10,
+        21,
+        49,
+        55,
+        64,
+        75,
+        86,
+        125,
+        128,
+        132,
+        156,
+        159
+      ]
+    },
+    "QuantVLA": {
+      "path": "/root/autodl-tmp/trajectory-drift-20261107/sources/QuantVLA-archive-v1/README.md",
+      "sha256": "f3afe86d12105cc27857ff4e7863d46c7a8168d5e7d267b2ed385f96220befc9",
+      "evidence_line_numbers": [
+        45,
+        47,
+        55,
+        92,
+        95,
+        116,
+        123,
+        136,
+        175,
+        177,
+        200,
+        203
+      ]
+    }
+  },
+  "not_architecture_inapplicability_claim": true,
+  "unresolved_methods_not_counted_completed": true,
+  "small_source_transfer_bytes": 13683,
+  "public_derived_summary": true,
+  "private_full_evidence_retained_server": true
+}

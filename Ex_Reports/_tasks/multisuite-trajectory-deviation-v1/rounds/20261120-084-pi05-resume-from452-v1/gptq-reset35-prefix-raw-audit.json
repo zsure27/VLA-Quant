@@ -1,0 +1,429 @@
+{
+  "gate": "PASS_COMPLETE_CASE_PREFIX_RAW_AUDIT",
+  "condition": "gptq_w4a16",
+  "registered": 16,
+  "complete": 13,
+  "successes": 13,
+  "whole_stage_complete": false,
+  "rows": [
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_10-task0-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_10-task0-reset35/result.json",
+      "result_sha256": "d7c87b0dc168ca492a9404c2b88679f1c50a48497c04f4c22a0cd4bad01d4209",
+      "runtime_sha256": "2add1b26d4c164f31d3ef219393722f39487db4cb5e34b12459c0e6394107a96",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_10-task0-reset35",
+        "plan_sha256": "2add1b26d4c164f31d3ef219393722f39487db4cb5e34b12459c0e6394107a96",
+        "result_sha256": "d7c87b0dc168ca492a9404c2b88679f1c50a48497c04f4c22a0cd4bad01d4209",
+        "control_steps": 462,
+        "policy_queries": 93,
+        "success": true,
+        "video_sha256": "f65c561c692e132df195e73217b7239984cb798d2dd084528bb69d6783b505a8"
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task0-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task0-reset35/result.json",
+      "result_sha256": "e0559c8e4f43693feaabf66c11621631c4b74ba808b344583a39042756666f6a",
+      "runtime_sha256": "68ed4b007173e1720227f4d0d9f7cecfe2837ceb35cb4287913fbeb1e188745b",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task0-reset35",
+        "plan_sha256": "68ed4b007173e1720227f4d0d9f7cecfe2837ceb35cb4287913fbeb1e188745b",
+        "result_sha256": "e0559c8e4f43693feaabf66c11621631c4b74ba808b344583a39042756666f6a",
+        "control_steps": 117,
+        "policy_queries": 24,
+        "success": true,
+        "video_sha256": "5829f1c9699fc91c6753b025e206154ac74cdc5d106e462bd4fb4088c4e17cde"
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 1,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task1-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task1-reset35/result.json",
+      "result_sha256": "11a56120ae0eb9291bd7d187df4a21abc7adda5859c03030c7aaeac96a94d36e",
+      "runtime_sha256": "8cc9bffbbbe63db78a41a94103a0623a711636c631fc913ac80cdeaf4758ad6e",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task1-reset35",
+        "plan_sha256": "8cc9bffbbbe63db78a41a94103a0623a711636c631fc913ac80cdeaf4758ad6e",
+        "result_sha256": "11a56120ae0eb9291bd7d187df4a21abc7adda5859c03030c7aaeac96a94d36e",
+        "control_steps": 92,
+        "policy_queries": 19,
+        "success": true,
+        "video_sha256": "6e8344b6c1c52dfd143b554a658794c1f93d880dbd308187a9f424001f2c9cd8"
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 2,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task2-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task2-reset35/result.json",
+      "result_sha256": "d2c8533711d05ad266e9da5b3f566483438824c941b1c19f9ca0165c5189ab27",
+      "runtime_sha256": "a86af00f6f6db607789395f9c8e3d0437da8d73f2c9d88a4409c2cbd8a49b06b",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task2-reset35",
+        "plan_sha256": "a86af00f6f6db607789395f9c8e3d0437da8d73f2c9d88a4409c2cbd8a49b06b",
+        "result_sha256": "d2c8533711d05ad266e9da5b3f566483438824c941b1c19f9ca0165c5189ab27",
+        "control_steps": 94,
+        "policy_queries": 19,
+        "success": true,
+        "video_sha256": "305b330a09d839f0baf1191cc8ecee96dfe85330328d340f7539eb660e86eeed"
+      }
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 3,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task3-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task3-reset35/result.json",
+      "result_sha256": "e893b5b92d3e3fb2c15d8b46fcdc47010aa9e971e5d1d5c408644496c6784182",
+      "runtime_sha256": "c7bdf2155cae96bdd34bd1f04bde0e9c60f84123328b8d4c66e78c92a98b6645",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_goal-task3-reset35",
+        "plan_sha256": "c7bdf2155cae96bdd34bd1f04bde0e9c60f84123328b8d4c66e78c92a98b6645",
+        "result_sha256": "e893b5b92d3e3fb2c15d8b46fcdc47010aa9e971e5d1d5c408644496c6784182",
+        "control_steps": 186,
+        "policy_queries": 38,
+        "success": true,
+        "video_sha256": "08b9b76abd392d46e22f02caf69236f9ab608473097a4b2713b03b2b572ce592"
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task0-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task0-reset35/result.json",
+      "result_sha256": "272e7320671f335fee44c793f3d4854fbc4ac2d27758cdecf298bfd477cd3b18",
+      "runtime_sha256": "a15088b33b4040598e1f82d424217346532d8ee6dad5ab26c1daf0cf9279950f",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task0-reset35",
+        "plan_sha256": "a15088b33b4040598e1f82d424217346532d8ee6dad5ab26c1daf0cf9279950f",
+        "result_sha256": "272e7320671f335fee44c793f3d4854fbc4ac2d27758cdecf298bfd477cd3b18",
+        "control_steps": 188,
+        "policy_queries": 38,
+        "success": true,
+        "video_sha256": "dc0db7556008967d7db0a141254db45a32d0af2472eaf7deaedcc41c88e37f60"
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 1,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task1-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task1-reset35/result.json",
+      "result_sha256": "809392e90c361dca336dff3cef0a2a9338fd9aaf10aac0d228acfc75317d3139",
+      "runtime_sha256": "8fa1a076cb9fb25bc78020957973b2fac78a44d4f2add73e90020eee42f154d2",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task1-reset35",
+        "plan_sha256": "8fa1a076cb9fb25bc78020957973b2fac78a44d4f2add73e90020eee42f154d2",
+        "result_sha256": "809392e90c361dca336dff3cef0a2a9338fd9aaf10aac0d228acfc75317d3139",
+        "control_steps": 127,
+        "policy_queries": 26,
+        "success": true,
+        "video_sha256": "607d1efe0aa82284e6214937673a49737ebb670bba46e65b10c92db7a215a038"
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 2,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task2-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task2-reset35/result.json",
+      "result_sha256": "1e0e702f14e3e69af7fda54bb5128f16baa0c91a2e5e4e50407998d5c83afcfd",
+      "runtime_sha256": "9766bf3b14ab6887925c11f4e9f5055374d6fec58a98f75da22904141ad93a79",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task2-reset35",
+        "plan_sha256": "9766bf3b14ab6887925c11f4e9f5055374d6fec58a98f75da22904141ad93a79",
+        "result_sha256": "1e0e702f14e3e69af7fda54bb5128f16baa0c91a2e5e4e50407998d5c83afcfd",
+        "control_steps": 116,
+        "policy_queries": 24,
+        "success": true,
+        "video_sha256": "c6b74825ac91667942deeb6b5b4f0b57afe49e83493a246d547637878dc16d6f"
+      }
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 3,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task3-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task3-reset35/result.json",
+      "result_sha256": "36c8f5c09aba57d167721afc543cd61330aace7972a55cd875177fe3ad361461",
+      "runtime_sha256": "e928f478135b788521d6b78739df0139f2b326b193d24915acbd9f5d09c5d01d",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_object-task3-reset35",
+        "plan_sha256": "e928f478135b788521d6b78739df0139f2b326b193d24915acbd9f5d09c5d01d",
+        "result_sha256": "36c8f5c09aba57d167721afc543cd61330aace7972a55cd875177fe3ad361461",
+        "control_steps": 151,
+        "policy_queries": 31,
+        "success": true,
+        "video_sha256": "c7582c479ae8a8b5259778ca498d6c21ddcb7affba733d5564181d6f83943af9"
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task0-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task0-reset35/result.json",
+      "result_sha256": "24e81699d1a260fc0cb475903759e56744392315dbc6a93165ea2fc8ec03de8e",
+      "runtime_sha256": "3b57b83bd1cd781148f7e904817818a7432be21a724287e54d3eb035e046fcec",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task0-reset35",
+        "plan_sha256": "3b57b83bd1cd781148f7e904817818a7432be21a724287e54d3eb035e046fcec",
+        "result_sha256": "24e81699d1a260fc0cb475903759e56744392315dbc6a93165ea2fc8ec03de8e",
+        "control_steps": 110,
+        "policy_queries": 22,
+        "success": true,
+        "video_sha256": "c520584ccb98879cf33f7270421762dc3f40f79339bd0a6b7c6a8c04b86f856f"
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task1-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task1-reset35/result.json",
+      "result_sha256": "dc6deef75bfd897af52149f185b2913c529fcd9599a902528e808fdca097bd94",
+      "runtime_sha256": "5580c8f1652f3487c352c75e20ef5857153e22bbaefe57b04cb17c7952bd74bf",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task1-reset35",
+        "plan_sha256": "5580c8f1652f3487c352c75e20ef5857153e22bbaefe57b04cb17c7952bd74bf",
+        "result_sha256": "dc6deef75bfd897af52149f185b2913c529fcd9599a902528e808fdca097bd94",
+        "control_steps": 113,
+        "policy_queries": 23,
+        "success": true,
+        "video_sha256": "bf5ab48890a5bb42c4c1d8dd3936c1604c3527bd3aa01fbca27baeae035a032e"
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task2-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task2-reset35/result.json",
+      "result_sha256": "07907f1ea3b08bf92547a88a664ff1bab7200b9004007c14f6caed198cb27e51",
+      "runtime_sha256": "0f211c821b8ea0254028667ed651f43ebcb1e5ad95be6735a4bb951cbd532540",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task2-reset35",
+        "plan_sha256": "0f211c821b8ea0254028667ed651f43ebcb1e5ad95be6735a4bb951cbd532540",
+        "result_sha256": "07907f1ea3b08bf92547a88a664ff1bab7200b9004007c14f6caed198cb27e51",
+        "control_steps": 95,
+        "policy_queries": 19,
+        "success": true,
+        "video_sha256": "19cce8a04b44bb25b22a730ab6482fca7a3f324d04a20846eb502bc26ae01767"
+      }
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "reset_index": 35,
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task3-reset35",
+      "success": true,
+      "result_path": "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1/case-runs/20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task3-reset35/result.json",
+      "result_sha256": "3f53e8d3147cf74a62a7810d167f272d382fd0afaa96df0967bf2862343a272f",
+      "runtime_sha256": "cd664ad58709b960421af6d3ef5c8eaa83ccb97cdbf3f1e8e45994fa5a9eee2b",
+      "audit": {
+        "gate": "PASS_PI05_TORCH_GPTQ_TRACE_AUDIT",
+        "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_spatial-task3-reset35",
+        "plan_sha256": "cd664ad58709b960421af6d3ef5c8eaa83ccb97cdbf3f1e8e45994fa5a9eee2b",
+        "result_sha256": "3f53e8d3147cf74a62a7810d167f272d382fd0afaa96df0967bf2862343a272f",
+        "control_steps": 86,
+        "policy_queries": 18,
+        "success": true,
+        "video_sha256": "b025c0b044d012a3d6cbb6f75272f15cf186b463016d30c2d342d83654d457c6"
+      }
+    }
+  ],
+  "missing": [
+    {
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_10-task1-reset35",
+      "reason": "not_started"
+    },
+    {
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_10-task2-reset35",
+      "reason": "not_started"
+    },
+    {
+      "round_id": "20261120-084-gptq-reset35-tasks0-3-v1-libero_10-task3-reset35",
+      "reason": "not_started"
+    }
+  ],
+  "original_stage_state": {
+    "round_id": "20261120-084-gptq-reset35-tasks0-3-v1",
+    "config_sha256": "dbd6a3826c322441027633c86fe2b78f55badb7731cff09c21ca1d776ac2de03",
+    "plan_sha256": "ab03d9cce3fed7a3584af0dd6b27767a932770e2e9e7791d90c1086ec3888210",
+    "started_at": "2026-11-20T12:17:03.423151+00:00",
+    "state": "PAUSED_SERVER_LEFT_ON",
+    "stages": [
+      {
+        "id": "eval-libero_spatial",
+        "argv": [
+          "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+          "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1/scripts/trajectory_drift_20261111/run_pi05_gptq_cases_v1.py",
+          "--root",
+          "/root/autodl-tmp/trajectory-drift-20261107",
+          "--round-dir",
+          "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1",
+          "--suite",
+          "libero_spatial",
+          "--role",
+          "development",
+          "--activation-bits",
+          "16"
+        ],
+        "started_at": "2026-11-20T12:17:10.524502+00:00",
+        "env": {
+          "PYTHONHASHSEED": "7",
+          "WANDB_MODE": "disabled",
+          "MUJOCO_GL": "egl",
+          "PYOPENGL_PLATFORM": "egl",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "TOKENIZERS_PARALLELISM": "false",
+          "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1"
+        },
+        "exit_code": 0,
+        "elapsed_seconds": 412.05709647759795,
+        "ended_at": "2026-11-20T12:24:02.581601+00:00"
+      },
+      {
+        "id": "eval-libero_object",
+        "argv": [
+          "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+          "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1/scripts/trajectory_drift_20261111/run_pi05_gptq_cases_v1.py",
+          "--root",
+          "/root/autodl-tmp/trajectory-drift-20261107",
+          "--round-dir",
+          "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1",
+          "--suite",
+          "libero_object",
+          "--role",
+          "development",
+          "--activation-bits",
+          "16"
+        ],
+        "started_at": "2026-11-20T12:24:02.583662+00:00",
+        "env": {
+          "PYTHONHASHSEED": "7",
+          "WANDB_MODE": "disabled",
+          "MUJOCO_GL": "egl",
+          "PYOPENGL_PLATFORM": "egl",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "TOKENIZERS_PARALLELISM": "false",
+          "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1"
+        },
+        "exit_code": 0,
+        "elapsed_seconds": 425.056449405849,
+        "ended_at": "2026-11-20T12:31:07.640115+00:00"
+      },
+      {
+        "id": "eval-libero_goal",
+        "argv": [
+          "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+          "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1/scripts/trajectory_drift_20261111/run_pi05_gptq_cases_v1.py",
+          "--root",
+          "/root/autodl-tmp/trajectory-drift-20261107",
+          "--round-dir",
+          "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1",
+          "--suite",
+          "libero_goal",
+          "--role",
+          "development",
+          "--activation-bits",
+          "16"
+        ],
+        "started_at": "2026-11-20T12:31:07.642482+00:00",
+        "env": {
+          "PYTHONHASHSEED": "7",
+          "WANDB_MODE": "disabled",
+          "MUJOCO_GL": "egl",
+          "PYOPENGL_PLATFORM": "egl",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "TOKENIZERS_PARALLELISM": "false",
+          "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1"
+        },
+        "exit_code": 0,
+        "elapsed_seconds": 424.05690475180745,
+        "ended_at": "2026-11-20T12:38:11.699390+00:00"
+      },
+      {
+        "id": "eval-libero_10",
+        "argv": [
+          "/root/autodl-tmp/trajectory-drift-20261107/envs/pi05/bin/python",
+          "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1/scripts/trajectory_drift_20261111/run_pi05_gptq_cases_v1.py",
+          "--root",
+          "/root/autodl-tmp/trajectory-drift-20261107",
+          "--round-dir",
+          "/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1/stages/20261120-084-gptq-reset35-tasks0-3-v1",
+          "--suite",
+          "libero_10",
+          "--role",
+          "development",
+          "--activation-bits",
+          "16"
+        ],
+        "started_at": "2026-11-20T12:38:11.701661+00:00",
+        "env": {
+          "PYTHONHASHSEED": "7",
+          "WANDB_MODE": "disabled",
+          "MUJOCO_GL": "egl",
+          "PYOPENGL_PLATFORM": "egl",
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "TOKENIZERS_PARALLELISM": "false",
+          "PYTHONPATH": "/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/code-084-pi05-resume-20261120-v1:/root/autodl-tmp/trajectory-drift-20261107/control/20261120-084-pi05-resume-from452-v1"
+        },
+        "exit_code": 1,
+        "elapsed_seconds": 144.01875196769834,
+        "ended_at": "2026-11-20T12:40:35.720417+00:00"
+      }
+    ],
+    "actual": {
+      "hostname": "autodl-container-b1f2438ea7-3f2e1d44",
+      "gpu": "NVIDIA GeForce RTX 4090, 24564, 0, 0",
+      "disk_free_bytes": 20988354560
+    },
+    "updated_at": "2026-11-20T12:40:35.751610+00:00",
+    "current_stage": "eval-libero_10",
+    "child_pid": 8778,
+    "reason": "Stage eval-libero_10 failed: exit 1",
+    "ended_at": "2026-11-20T12:40:35.722751+00:00",
+    "closure_errors": [],
+    "cloud_sync_deferred": true,
+    "persistent_originals_retained": true,
+    "public_git_sync_deferred": true
+  },
+  "observed_at": "2026-11-20T12:42:23.413000+00:00",
+  "failed_or_partial_queries_not_added_to_denominator": true
+}

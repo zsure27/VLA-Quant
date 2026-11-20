@@ -1,0 +1,25 @@
+{
+  "round_id": "20261120-084-pi05-resume-from452-v1",
+  "server_id": "084",
+  "new_complete_cases": 21,
+  "new_by_condition": {
+    "duquant_w4a8": 4,
+    "duquant_w4a4": 4,
+    "gptq_w4a16": 13
+  },
+  "gptq_cumulative": {
+    "complete": 133,
+    "successes": 132
+  },
+  "remaining_gptq": 67,
+  "archive_sha256": "f52530d0f2ccd790c121dc5ab7073983900256df80c7e6725249ed22eb482f44",
+  "archive_bytes": 289425112,
+  "members_verified": 4561,
+  "original_videos": 21,
+  "formal_query_files": 673,
+  "private_cloud_status": "upload_and_readback_in_progress",
+  "private_cloud_verified": false,
+  "parameters_and_historical_parent_gaps_retained_server": true,
+  "current_native_shutdown_receipt_pending": true,
+  "windows_shutdown_authorized": false
+}
