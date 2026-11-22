@@ -1,0 +1,24 @@
+{
+  "gate": "NATIVE_SERVER_STOP_REQUEST_CAPTURED",
+  "time_utc": "2026-11-22T10:39:36.765313+00:00",
+  "server_id": "084",
+  "execute": true,
+  "native_provider_sha256": "0358e83eeeaf542aa98f64ba9e339c91df46f1e025892d52dba159f4fb1cf027",
+  "platform_off_independently_verified": false,
+  "windows_shutdown_requested": false,
+  "public_results_commit": "1816aac565fe2a8fcd7a9d541c61d0b5b6b253b8",
+  "public_branch": "codex/multisuite-trajectory-diagnostics-v1",
+  "server_recovery_index_sha256": "c975a5551f09075542fdee985768acecf5a6ff160c6e1518e3c4c0909c28097c",
+  "server_snapshot": {
+    "bytes": 643724172,
+    "sha256": "684243ea42372954a5bcbf7deaa778188fab4664cab4d1cea3d4787ea99191ac",
+    "members_sha_verified": 30492,
+    "scope": "CURRENT_CONTROL_ROUND_ONLY"
+  },
+  "private_raw_cloud_backup_complete": false,
+  "admitted_quantizers_full200": 6,
+  "bf16_full200": true,
+  "all_requested_quantizers_completed": false,
+  "unresolved_quantizers": 5,
+  "sq4_cancelled_after_failures": 80
+}
