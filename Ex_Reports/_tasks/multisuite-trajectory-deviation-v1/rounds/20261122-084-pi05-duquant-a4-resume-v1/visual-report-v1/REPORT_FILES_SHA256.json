@@ -1,0 +1,85 @@
+{
+  "gate": "PASS_RENDERED_PI05_REPORT_AND_ALL_COPY_SHA",
+  "configurations": 7,
+  "unique_main_cases": 1400,
+  "figures": 6,
+  "user_cancelled_sq4_prefix_cases": 80,
+  "unresolved_configurations": 5,
+  "files": [
+    {
+      "name": "01_success.png",
+      "bytes": 106116,
+      "sha256": "7bc37a3b74a71cfced89dd4844025586b43abec64acaf2a965aa215f068c308b"
+    },
+    {
+      "name": "02_geometry_3d_2d.png",
+      "bytes": 1130833,
+      "sha256": "a4799ff058e776f8f9636e73ecd63aaed02aee148c70010a5614ab38a4875cf7"
+    },
+    {
+      "name": "03_error_curves.png",
+      "bytes": 1051362,
+      "sha256": "63861f59fdd30f8e5516b5d9bee9edcbff6e65719a0832b19a11e9c83d7a3e05"
+    },
+    {
+      "name": "04_center_spread.png",
+      "bytes": 1030072,
+      "sha256": "7e42ad8d4589c1fecd783f605517e4952c9993752fd9161ee24adc616bbfaeff"
+    },
+    {
+      "name": "05_task_heatmaps.png",
+      "bytes": 137081,
+      "sha256": "220504827338d547c651dc4d30899504cda1c1d8acf39e6c6cd2780f991ceff1"
+    },
+    {
+      "name": "06_early_growth.png",
+      "bytes": 145484,
+      "sha256": "804acdf0f3f0b540170042a31e7b6c9bcf17223df64c2c68d247124336ee4862"
+    },
+    {
+      "name": "curves-public.json",
+      "bytes": 663612,
+      "sha256": "df3b061910c02dc13a6e72a598d2034baf254ed0f3eee471a1538711c5cc6de7"
+    },
+    {
+      "name": "early-step-comparison.json",
+      "bytes": 13179,
+      "sha256": "0bbb80c610baf9e50590ce0b95cc79346a4759fa3514a3227b1ee1fcdf8d26c1"
+    },
+    {
+      "name": "error-decomposition-public.json",
+      "bytes": 1289184,
+      "sha256": "e9c929126afd2e8fed18e2c13b26959370a111fce1ec0038a1c9768289a845a6"
+    },
+    {
+      "name": "excluded-sq4-failures.json",
+      "bytes": 13183,
+      "sha256": "6f80faa56df435c6c2110f7dda3b071e81267b72605a4a10fcb79dc53dfb201d"
+    },
+    {
+      "name": "failures.json",
+      "bytes": 2313,
+      "sha256": "29a4e1e3f1b08d97dcac386207358389b083473d116022174986b24a41c821ca"
+    },
+    {
+      "name": "key-metrics-public.json",
+      "bytes": 1778,
+      "sha256": "19898c24848570a72a63c1372088425ba22024c540dd55b2f2251af9554259ec"
+    },
+    {
+      "name": "merge-proof-public.json",
+      "bytes": 1030,
+      "sha256": "e68506c73c4ab20dbb996ee8a7832f9b1f39f355a779f37f1cc559becb59a6b4"
+    },
+    {
+      "name": "summary-public.json",
+      "bytes": 1027670,
+      "sha256": "a558d57c6e22cd38eb59864534f3240a6ae3f8067096d61d69a4843d8c191519"
+    },
+    {
+      "name": "\u03c00.5\u91cf\u5316\u8f68\u8ff9\u6f02\u79fb\u5b9e\u9a8c\u62a5\u544a.html",
+      "bytes": 4810056,
+      "sha256": "67136dc04de61e3f5068990d3735891acd8004051bb1ad94b2c3ff60bd37d2e1"
+    }
+  ]
+}

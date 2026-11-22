@@ -1,0 +1,122 @@
+[
+  {
+    "condition": "smoothquant_w4a8",
+    "suite": "libero_spatial",
+    "task_id": 0,
+    "reset_index": 5
+  },
+  {
+    "condition": "bf16",
+    "suite": "libero_10",
+    "task_id": 8,
+    "reset_index": 5
+  },
+  {
+    "condition": "gptq_w4a16",
+    "suite": "libero_10",
+    "task_id": 1,
+    "reset_index": 25
+  },
+  {
+    "condition": "bf16",
+    "suite": "libero_spatial",
+    "task_id": 5,
+    "reset_index": 35
+  },
+  {
+    "condition": "awq_w4a16",
+    "suite": "libero_object",
+    "task_id": 2,
+    "reset_index": 15
+  },
+  {
+    "condition": "awq_w4a16",
+    "suite": "libero_object",
+    "task_id": 4,
+    "reset_index": 15
+  },
+  {
+    "condition": "omniquant_w4a16",
+    "suite": "libero_object",
+    "task_id": 2,
+    "reset_index": 15
+  },
+  {
+    "condition": "bf16",
+    "suite": "libero_10",
+    "task_id": 9,
+    "reset_index": 35
+  },
+  {
+    "condition": "omniquant_w4a16",
+    "suite": "libero_spatial",
+    "task_id": 8,
+    "reset_index": 45
+  },
+  {
+    "condition": "omniquant_w4a16",
+    "suite": "libero_goal",
+    "task_id": 9,
+    "reset_index": 45
+  },
+  {
+    "condition": "omniquant_w4a16",
+    "suite": "libero_10",
+    "task_id": 8,
+    "reset_index": 45
+  },
+  {
+    "condition": "smoothquant_w4a8",
+    "suite": "libero_object",
+    "task_id": 9,
+    "reset_index": 45
+  },
+  {
+    "condition": "duquant_w4a8",
+    "suite": "libero_10",
+    "task_id": 2,
+    "reset_index": 5
+  },
+  {
+    "condition": "duquant_w4a8",
+    "suite": "libero_object",
+    "task_id": 0,
+    "reset_index": 45
+  },
+  {
+    "condition": "duquant_w4a8",
+    "suite": "libero_10",
+    "task_id": 9,
+    "reset_index": 25
+  },
+  {
+    "condition": "duquant_w4a8",
+    "suite": "libero_10",
+    "task_id": 6,
+    "reset_index": 35
+  },
+  {
+    "condition": "duquant_w4a8",
+    "suite": "libero_spatial",
+    "task_id": 8,
+    "reset_index": 45
+  },
+  {
+    "condition": "duquant_w4a4",
+    "suite": "libero_10",
+    "task_id": 8,
+    "reset_index": 5
+  },
+  {
+    "condition": "duquant_w4a4",
+    "suite": "libero_object",
+    "task_id": 2,
+    "reset_index": 25
+  },
+  {
+    "condition": "duquant_w4a4",
+    "suite": "libero_10",
+    "task_id": 9,
+    "reset_index": 35
+  }
+]
